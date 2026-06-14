@@ -17,11 +17,8 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -68,19 +65,22 @@ fun WorkoutAddButton(
             Box(
                 modifier = Modifier
                     .matchParentSize()
-                    .background(color = Color.Black.copy(alpha = animatedAlpha * 0.4f), shape = CircleShape)
+                    .background(
+                        color = HomeCardStyles.Action.flash().copy(alpha = animatedAlpha * 0.4f),
+                        shape = CircleShape
+                    )
             )
         }
         Box(
             modifier = Modifier
                 .size(innerSizeDp)
-                .background(color = Color(0xFF111114), shape = CircleShape),
+                .background(color = HomeCardStyles.Action.primaryContainer(), shape = CircleShape),
             contentAlignment = Alignment.Center
         ) {
             Icon(
                 imageVector = Icons.Filled.Add,
                 contentDescription = "Add workout",
-                tint = Color.White,
+                tint = HomeCardStyles.Action.primaryContent(),
                 modifier = Modifier.size(iconSizeDp)
             )
         }

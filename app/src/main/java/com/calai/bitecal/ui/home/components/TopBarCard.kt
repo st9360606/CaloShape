@@ -1,6 +1,5 @@
 package com.calai.bitecal.ui.home.components
 
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
@@ -21,7 +20,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.home.ui.card.TitlePrefixTriangle
 
 object TopBarDefaults {
@@ -35,25 +33,22 @@ fun TopBarCard(
     modifier: Modifier = Modifier,
     topBarHeight: Dp = TopBarDefaults.Height,
     topBarTextStyle: TextStyle = MaterialTheme.typography.titleSmall,
-    showWhiteTriangle: Boolean = false,           // Weight 需要
+    showWhiteTriangle: Boolean = false,
     triangleSide: Dp = 6.dp,
     content: @Composable ColumnScope.() -> Unit
 ) {
-    val colors = BiteCalColors.current()
-
     Card(
         modifier = modifier,
-        shape = CardStyles.Corner, // 20.dp 圓角一致
+        shape = CardStyles.Corner,
         colors = CardDefaults.cardColors(
-            containerColor = colors.surface
+            containerColor = HomeCardStyles.Surface.card()
         ),
-        border = BorderStroke(1.2.dp, colors.border)
+        border = HomeCardStyles.Surface.border()
     ) {
         Column(modifier = Modifier.fillMaxSize()) {
-            // 黑底白字頂欄（可選擇顯示白色三角形）
             Surface(
-                color = HomeCardStyles.TopBar.Container,
-                contentColor = HomeCardStyles.TopBar.Content,
+                color = HomeCardStyles.TopBar.container(),
+                contentColor = HomeCardStyles.TopBar.content(),
                 shape = HomeCardStyles.TopBar.Shape,
                 shadowElevation = 0.dp
             ) {
@@ -66,7 +61,7 @@ fun TopBarCard(
                     horizontalArrangement = Arrangement.spacedBy(6.dp)
                 ) {
                     if (showWhiteTriangle) {
-                        TitlePrefixTriangle(side = triangleSide, color = HomeCardStyles.TopBar.Content)
+                        TitlePrefixTriangle(side = triangleSide, color = HomeCardStyles.TopBar.content())
                     }
                     Text(
                         text = title,
@@ -77,7 +72,6 @@ fun TopBarCard(
                 }
             }
 
-            // 卡片內容
             Column(
                 modifier = Modifier
                     .fillMaxSize()

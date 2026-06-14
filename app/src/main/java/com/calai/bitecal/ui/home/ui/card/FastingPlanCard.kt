@@ -68,17 +68,17 @@ fun FastingPlanCard(
             .height(cardHeight),
         shape = CardStyles.Corner,
         colors = CardDefaults.cardColors(
-            containerColor = CardStyles.bg()
+            containerColor = HomeCardStyles.Surface.card()
         ),
-        border = CardStyles.border(),
+        border = HomeCardStyles.Surface.border(),
         onClick = hapticClick
     ){
         Column(modifier = Modifier.fillMaxSize()) {
 
             // ===== 上方：黑底白字標題條（固定高度，垂直置中） =====
             Surface(
-                color = HomeCardStyles.TopBar.Container,
-                contentColor = HomeCardStyles.TopBar.Content,
+                color = HomeCardStyles.TopBar.container(),
+                contentColor = HomeCardStyles.TopBar.content(),
                 shape = HomeCardStyles.TopBar.Shape,
                 shadowElevation = 0.dp
             ) {
@@ -122,7 +122,7 @@ fun FastingPlanCard(
                         text = planName,
                         style = planNameTextStyle,
                         fontSize = planNameFontSize ?: planNameTextStyle.fontSize,
-                        color = HomeCardStyles.Text.Primary,
+                        color = HomeCardStyles.Text.primary(),
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
                         textAlign = TextAlign.Center,
@@ -151,7 +151,7 @@ fun FastingPlanCard(
                     Text(
                         text = startLabel,
                         style = MaterialTheme.typography.labelMedium,
-                        color = HomeCardStyles.Text.Label,
+                        color = HomeCardStyles.Text.label(),
                         maxLines = 1,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
@@ -159,7 +159,7 @@ fun FastingPlanCard(
                     Text(
                         text = startText ?: "—",
                         style = MaterialTheme.typography.bodyMedium,
-                        color = HomeCardStyles.Text.Primary,
+                        color = HomeCardStyles.Text.primary(),
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
                         textAlign = TextAlign.Center,
@@ -169,7 +169,7 @@ fun FastingPlanCard(
                     Text(
                         text = endLabel,
                         style = MaterialTheme.typography.labelMedium,
-                        color = HomeCardStyles.Text.Label,
+                        color = HomeCardStyles.Text.label(),
                         maxLines = 1,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
@@ -177,7 +177,7 @@ fun FastingPlanCard(
                     Text(
                         text = endText ?: "—",
                         style = MaterialTheme.typography.bodyMedium,
-                        color = HomeCardStyles.Text.Primary,
+                        color = HomeCardStyles.Text.primary(),
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
                         textAlign = TextAlign.Center,

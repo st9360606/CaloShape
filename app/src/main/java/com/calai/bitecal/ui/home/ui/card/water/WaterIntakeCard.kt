@@ -109,8 +109,8 @@ fun WaterIntakeCard(
         modifier = Modifier
             .height(cardHeight),
         shape = CardStyles.Corner,
-        border = CardStyles.border(),
-        colors = CardDefaults.cardColors(containerColor = CardStyles.bg())
+        border = HomeCardStyles.Surface.border(),
+        colors = CardDefaults.cardColors(containerColor = HomeCardStyles.Surface.card())
     ) {
         Row(
             modifier = Modifier
@@ -132,7 +132,7 @@ fun WaterIntakeCard(
                     modifier = Modifier
                         .size(60.dp)
                         .background(
-                            color = HomeCardStyles.Palette.Water.copy(alpha = 0.16f),
+                            color = HomeCardStyles.Surface.iconBackground(HomeCardStyles.Palette.water()),
                             shape = RoundedCornerShape(10.dp)
                         ),
                     contentAlignment = Alignment.Center
@@ -159,7 +159,7 @@ fun WaterIntakeCard(
                             modifier = Modifier
                                 .size(6.dp)
                                 .background(
-                                    color = HomeCardStyles.Palette.Water.copy(alpha = 0.9f),
+                                    color = HomeCardStyles.Palette.water().copy(alpha = 0.9f),
                                     shape = CircleShape
                                 )
                         )
@@ -175,7 +175,7 @@ fun WaterIntakeCard(
                                 fontSize = 14.sp,
                                 lineHeight = 16.sp,
                                 letterSpacing = 0.1.sp,
-                                color = HomeCardStyles.Text.Primary.copy(alpha = 0.72f)
+                                color = HomeCardStyles.Text.secondary()
                             )
                         )
                     }
@@ -193,7 +193,7 @@ fun WaterIntakeCard(
                         text = "$mainText $cupsText",
                         style = MaterialTheme.typography.bodyLarge.copy(
                             fontWeight = FontWeight.Bold,
-                            color = HomeCardStyles.Text.Primary
+                            color = HomeCardStyles.Text.primary()
                         )
                     )
                 }
@@ -214,9 +214,9 @@ fun WaterIntakeCard(
                     RoundActionButton(
                         outerSizeDp = 50.dp,   // 點擊/閃光區 (比較大)
                         innerSizeDp = 38.dp,   // 按鈕本體
-                        bgColor = Color.White,
-                        borderColor = Color(0xFF111114),
-                        iconTint = Color(0xFF111114),
+                        bgColor = HomeCardStyles.Action.secondaryContainer(),
+                        borderColor = HomeCardStyles.Action.secondaryBorder(),
+                        iconTint = HomeCardStyles.Action.secondaryContent(),
                         iconVector = Icons.Default.Remove,
                         onClick = onMinus
                     )
@@ -227,9 +227,9 @@ fun WaterIntakeCard(
                     RoundActionButton(
                         outerSizeDp = 50.dp,
                         innerSizeDp = 38.dp,
-                        bgColor = Color(0xFF111114),
+                        bgColor = HomeCardStyles.Action.primaryContainer(),
                         borderColor = null,
-                        iconTint = Color.White,
+                        iconTint = HomeCardStyles.Action.primaryContent(),
                         iconVector = Icons.Default.Add,
                         onClick = onPlus
                     )
@@ -248,6 +248,11 @@ fun WaterIntakeCard(
                     height = 32.dp,
                     leftLabel = "oz",
                     rightLabel = "ml",
+                    trackBg = HomeCardStyles.Surface.raised(),
+                    trackStroke = HomeCardStyles.Surface.borderColor(),
+                    thumbBg = HomeCardStyles.Action.primaryContainer(),
+                    textOn = HomeCardStyles.Action.primaryContent(),
+                    textOff = HomeCardStyles.Text.secondary(),
                 )
             }
         }

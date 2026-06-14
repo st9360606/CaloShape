@@ -120,7 +120,7 @@ fun WeightAndFastingCard(
                         text = primary,
                         style = primaryTextStyle,
                         fontSize = primaryFontSize ?: primaryTextStyle.fontSize,
-                        color = HomeCardStyles.Text.Primary,
+                        color = HomeCardStyles.Text.primary(),
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
                         modifier = Modifier.offset(x = (-2).dp, y = primaryYOffset)
@@ -133,7 +133,7 @@ fun WeightAndFastingCard(
                             text = secondary,
                             style = secondaryTextStyle,
                             fontSize = secondaryFontSize ?: secondaryTextStyle.fontSize,
-                            color = HomeCardStyles.Text.Secondary,
+                            color = HomeCardStyles.Text.secondary(),
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis,
                             modifier = Modifier.offset(y = secondaryYOffset)
@@ -169,7 +169,7 @@ fun WeightAndFastingCard(
                         progress = progress,
                         sizeDp = ringSize,
                         strokeDp = ringStroke,
-                        trackColor = HomeCardStyles.Ring.Track,
+                        trackColor = HomeCardStyles.Ring.track(),
                         progressColor = ringColor,
                         drawTopTick = true,
                         tickColor = ringColor
@@ -177,7 +177,7 @@ fun WeightAndFastingCard(
 
                     // ✅ 中心灰圓底 + bullseye
                     Surface(
-                        color = HomeCardStyles.Ring.CenterFill,
+                        color = HomeCardStyles.Ring.centerFill(),
                         shape = CircleShape,
                         modifier = Modifier.size(centerDisk)
                     ) {
@@ -238,7 +238,7 @@ private fun WeightAddButton(
                 modifier = Modifier
                     .fillMaxSize()
                     .background(
-                        color = Color.Black.copy(alpha = animatedAlpha * 0.4f),
+                        color = HomeCardStyles.Action.flash().copy(alpha = animatedAlpha * 0.4f),
                         shape = CircleShape
                     )
             )
@@ -247,13 +247,13 @@ private fun WeightAddButton(
         Box(
             modifier = Modifier
                 .size(innerSizeDp)
-                .background(Color(0xFF111114), CircleShape),
+                .background(HomeCardStyles.Action.primaryContainer(), CircleShape),
             contentAlignment = Alignment.Center
         ) {
             Icon(
                 imageVector = Icons.Filled.Add,
                 contentDescription = "Add weight log",
-                tint = Color.White,
+                tint = HomeCardStyles.Action.primaryContent(),
                 modifier = Modifier.size(iconSizeDp)
             )
         }

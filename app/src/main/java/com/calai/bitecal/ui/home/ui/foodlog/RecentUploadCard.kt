@@ -65,7 +65,7 @@ import coil.compose.AsyncImage
 import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
-import com.calai.bitecal.ui.home.components.CardStyles
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import com.calai.bitecal.ui.home.model.HomeRecentUploadUi
 import kotlinx.coroutines.launch
 import java.time.LocalTime
@@ -81,42 +81,28 @@ private val ContentEndPadding = 12.dp
 private val DeleteActionColor = Color(0xFFE46A6A)
 private val DeleteActionCorner = RoundedCornerShape(CardCorner)
 
-private val TitleColor = Color(0xFF111827)
-private val SecondaryTextColor = Color(0xFF667085)
-private val TimeColor = Color(0xFF647084)
-private val TimeChipBg = Color(0xFFF3F5F7)
-private val KcalColor = Color(0xFF0F172A)
-private val MacroColor = Color(0xFF344054)
-private val SkeletonBase = Color(0xFFD7D7E0)
-private val SkeletonHighlight = Color(0xFFECECF3)
-private val ThumbPlaceholder = Color(0xFFF2F3F6)
-
 private val TitleTextStyle = TextStyle(
     fontSize = 16.sp,
     lineHeight = 20.sp,
-    fontWeight = FontWeight.Bold,
-    color = TitleColor
+    fontWeight = FontWeight.Bold
 )
 
 private val TimeTextStyle = TextStyle(
     fontSize = 11.sp,
     lineHeight = 14.sp,
-    fontWeight = FontWeight.SemiBold,
-    color = TimeColor
+    fontWeight = FontWeight.SemiBold
 )
 
 private val KcalTextStyle = TextStyle(
     fontSize = 15.sp,
     lineHeight = 19.sp,
-    fontWeight = FontWeight.SemiBold,
-    color = KcalColor
+    fontWeight = FontWeight.SemiBold
 )
 
 private val MacroTextStyle = TextStyle(
     fontSize = 12.sp,
     lineHeight = 16.sp,
-    fontWeight = FontWeight.SemiBold,
-    color = MacroColor
+    fontWeight = FontWeight.SemiBold
 )
 
 @SuppressLint("UnusedBoxWithConstraintsScope")
@@ -254,8 +240,8 @@ private fun RecentUploadCardContent(
     Card(
         modifier = modifier,
         shape = RoundedCornerShape(CardCorner),
-        border = CardStyles.border(),
-        colors = CardDefaults.cardColors(containerColor = CardStyles.bg())
+        border = HomeCardStyles.Surface.border(),
+        colors = CardDefaults.cardColors(containerColor = HomeCardStyles.Surface.card())
     ) {
         Row(
             modifier = Modifier
@@ -323,6 +309,7 @@ private fun LoadingThumb(
     previewUri: String?,
     modifier: Modifier = Modifier
 ) {
+    val ringColor = HomeCardStyles.Loading.ring()
     val transition = rememberInfiniteTransition(label = "recent_upload_loading_ring")
     val angle by transition.animateFloat(
         initialValue = 0f,
@@ -351,7 +338,7 @@ private fun LoadingThumb(
             val strokeWidth = 7.dp.toPx()
 
             drawArc(
-                color = Color.White.copy(alpha = 0.95f),
+                color = ringColor,
                 startAngle = angle - 135f,
                 sweepAngle = 285f,
                 useCenter = false,
@@ -385,10 +372,12 @@ private fun ThumbImage(
     previewUri: String?,
     modifier: Modifier = Modifier
 ) {
+    val placeholderColor = HomeCardStyles.Loading.thumbPlaceholder()
+
     Box(
         modifier = modifier
             .clip(RoundedCornerShape(ThumbCorner))
-            .background(ThumbPlaceholder),
+            .background(placeholderColor),
         contentAlignment = Alignment.Center
     ) {
         if (!previewUri.isNullOrBlank()) {
@@ -431,7 +420,7 @@ private fun PendingContent(
             text = title,
             style = MaterialTheme.typography.titleMedium.copy(
                 fontWeight = FontWeight.SemiBold,
-                color = TitleColor
+                color = HomeCardStyles.Text.primary()
             ),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
@@ -444,7 +433,7 @@ private fun PendingContent(
             Text(
                 text = subtitle,
                 style = MaterialTheme.typography.bodySmall.copy(
-                    color = SecondaryTextColor
+                    color = HomeCardStyles.Text.secondary()
                 ),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
@@ -499,7 +488,7 @@ private fun SuccessContent(
         ) {
             Text(
                 text = displayTitle,
-                style = TitleTextStyle,
+                style = TitleTextStyle.copy(color = HomeCardStyles.Text.primary()),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 modifier = Modifier.weight(1f)
@@ -516,7 +505,7 @@ private fun SuccessContent(
 
         Text(
             text = stringResource(R.string.recent_upload_kcal_text, item.kcal),
-            style = KcalTextStyle,
+            style = KcalTextStyle.copy(color = HomeCardStyles.Text.primary()),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
             modifier = Modifier
@@ -574,13 +563,13 @@ private fun RecentUploadTimeChip(
     Box(
         modifier = modifier
             .clip(RoundedCornerShape(999.dp))
-            .background(TimeChipBg)
+            .background(HomeCardStyles.Surface.raisedAlt())
             .padding(horizontal = 8.dp, vertical = 5.dp),
         contentAlignment = Alignment.Center
     ) {
         Text(
             text = formatDisplayTime(timeText),
-            style = TimeTextStyle,
+            style = TimeTextStyle.copy(color = HomeCardStyles.Text.secondary()),
             maxLines = 1
         )
     }
@@ -593,7 +582,7 @@ private fun MacroText(
 ) {
     Text(
         text = text,
-        style = MacroTextStyle,
+        style = MacroTextStyle.copy(color = HomeCardStyles.Text.secondary()),
         maxLines = 1,
         overflow = TextOverflow.Ellipsis,
         modifier = modifier
@@ -607,6 +596,9 @@ private fun AnimatedSkeletonBar(
     progress: Float,
     modifier: Modifier = Modifier
 ) {
+    val skeletonBase = HomeCardStyles.Loading.skeletonBase()
+    val skeletonHighlight = HomeCardStyles.Loading.skeletonHighlight()
+
     Box(
         modifier = modifier
             .fillMaxWidth(widthFraction)
@@ -618,9 +610,9 @@ private fun AnimatedSkeletonBar(
 
                 val brush = Brush.linearGradient(
                     colors = listOf(
-                        SkeletonBase,
-                        SkeletonHighlight,
-                        SkeletonBase
+                        skeletonBase,
+                        skeletonHighlight,
+                        skeletonBase
                     ),
                     start = Offset(startX, 0f),
                     end = Offset(endX, size.height)

@@ -120,8 +120,8 @@ fun CaloriesCardModern(
             .height(cardHeight)
             .biteCalClickable(role = Role.Button, onClick = onClick),
         shape = CardStyles.Corner,
-        colors = CardDefaults.cardColors(containerColor = CardStyles.bg()),
-        border = CardStyles.border()
+        colors = CardDefaults.cardColors(containerColor = HomeCardStyles.Surface.card()),
+        border = HomeCardStyles.Surface.border()
     ) {
         Row(
             modifier = Modifier
@@ -143,8 +143,8 @@ fun CaloriesCardModern(
                     fontWeight = FontWeight.Normal,
                     letterSpacing = 0.sp
                 ),
-                valueColor = Color(0xFF0F172A),
-                valueSuffixColor = Color(0xFF7C7C85),
+                valueColor = HomeCardStyles.Text.primary(),
+                valueSuffixColor = HomeCardStyles.Text.label(),
                 valueSuffixFontSize = 20.sp,
                 valueSuffixWeight = FontWeight.Medium,
                 valueSuffixOffsetX = 6.dp,
@@ -161,13 +161,13 @@ fun CaloriesCardModern(
                     progress = progress,
                     sizeDp = ringSize,
                     strokeDp = ringStroke,
-                    trackColor = HomeCardStyles.Ring.Track,
-                    progressColor = HomeCardStyles.Palette.Calories,
+                    trackColor = HomeCardStyles.Ring.track(),
+                    progressColor = HomeCardStyles.Palette.calories(),
                     drawTopTick = true,
-                    tickColor = HomeCardStyles.Palette.Calories
+                    tickColor = HomeCardStyles.Palette.calories()
                 )
                 Surface(
-                    color = HomeCardStyles.Ring.CenterFill,
+                    color = HomeCardStyles.Ring.centerFill(),
                     shape = CircleShape,
                     modifier = Modifier.size(centerDisk),
                     content = {}
@@ -175,7 +175,7 @@ fun CaloriesCardModern(
                 Icon(
                     imageVector = Icons.Filled.LocalFireDepartment,
                     contentDescription = null,
-                    tint = HomeCardStyles.Palette.Calories,
+                    tint = HomeCardStyles.Palette.calories(),
                     modifier = Modifier.size(fireIconSize)
                 )
             }
@@ -229,7 +229,7 @@ fun MacroRowModern(
             goalLabel = stringResource(R.string.home_protein_goal_label),
             progressLabel = stringResource(R.string.home_protein_eaten_label),
             showTodayProgress = showTodayProgress,
-            ringColor = HomeCardStyles.Palette.Protein,
+            ringColor = HomeCardStyles.Palette.protein(),
             progress = proteinProgress,
             valueFontSize = valueFontSize,
             labelFontSize = labelFontSize,
@@ -259,7 +259,7 @@ fun MacroRowModern(
             goalLabel = stringResource(R.string.home_carbs_goal_label),
             progressLabel = stringResource(R.string.home_carbs_eaten_label),
             showTodayProgress = showTodayProgress,
-            ringColor = HomeCardStyles.Palette.Carbs,
+            ringColor = HomeCardStyles.Palette.carbs(),
             progress = carbsProgress,
             valueFontSize = valueFontSize,
             labelFontSize = labelFontSize,
@@ -289,7 +289,7 @@ fun MacroRowModern(
             goalLabel = stringResource(R.string.home_fats_goal_label),
             progressLabel = stringResource(R.string.home_fats_eaten_label),
             showTodayProgress = showTodayProgress,
-            ringColor = HomeCardStyles.Palette.Fats,
+            ringColor = HomeCardStyles.Palette.fats(),
             progress = fatsProgress,
             valueFontSize = valueFontSize,
             labelFontSize = labelFontSize,
@@ -339,7 +339,7 @@ fun MicronutrientRowModern(
             goalLabel = stringResource(R.string.home_fiber_goal_label),
             progressLabel = stringResource(R.string.home_fiber_eaten_label),
             showTodayProgress = showTodayProgress,
-            ringColor = HomeCardStyles.Palette.Fiber,
+            ringColor = HomeCardStyles.Palette.fiber(),
             progress = progressOfInt(todayNutrition.eatenFiberG, s.fiberG),
             valueFontSize = valueFontSize,
             labelFontSize = labelFontSize,
@@ -351,7 +351,7 @@ fun MicronutrientRowModern(
                 Icon(
                     imageVector = Icons.Filled.Spa,
                     contentDescription = null,
-                    tint = HomeCardStyles.Palette.Fiber,
+                    tint = HomeCardStyles.Palette.fiber(),
                     modifier = Modifier.size(16.dp)
                 )
             },
@@ -370,7 +370,7 @@ fun MicronutrientRowModern(
             goalLabel = stringResource(R.string.home_sugar_goal_label),
             progressLabel = stringResource(R.string.home_sugar_eaten_label),
             showTodayProgress = showTodayProgress,
-            ringColor = HomeCardStyles.Palette.Sugar,
+            ringColor = HomeCardStyles.Palette.sugar(),
             progress = progressOfInt(todayNutrition.eatenSugarG, s.sugarG),
             valueFontSize = valueFontSize,
             labelFontSize = labelFontSize,
@@ -382,7 +382,7 @@ fun MicronutrientRowModern(
                 Icon(
                     imageVector = Icons.Filled.Icecream,
                     contentDescription = null,
-                    tint = HomeCardStyles.Palette.Sugar,
+                    tint = HomeCardStyles.Palette.sugar(),
                     modifier = Modifier.size(19.dp)
                 )
             },
@@ -401,7 +401,7 @@ fun MicronutrientRowModern(
             goalLabel = stringResource(R.string.home_sodium_goal_label),
             progressLabel = stringResource(R.string.home_sodium_eaten_label),
             showTodayProgress = showTodayProgress,
-            ringColor = HomeCardStyles.Palette.Sodium,
+            ringColor = HomeCardStyles.Palette.sodium(),
             progress = progressOfInt(todayNutrition.eatenSodiumMg, s.sodiumMg),
             valueFontSize = valueFontSize,
             labelFontSize = labelFontSize,
@@ -413,7 +413,7 @@ fun MicronutrientRowModern(
                 Icon(
                     imageVector = Icons.Filled.RiceBowl,
                     contentDescription = null,
-                    tint = HomeCardStyles.Palette.Sodium,
+                    tint = HomeCardStyles.Palette.sodium(),
                     modifier = Modifier.size(17.dp)
                 )
             },
@@ -449,8 +449,8 @@ fun HealthScoreCardModern(
             .fillMaxWidth()
             .height(cardHeight),
         shape = CardStyles.Corner,
-        colors = CardDefaults.cardColors(containerColor = CardStyles.bg()),
-        border = CardStyles.border()
+        colors = CardDefaults.cardColors(containerColor = HomeCardStyles.Surface.card()),
+        border = HomeCardStyles.Surface.border()
     ) {
         Column(
             modifier = Modifier
@@ -465,7 +465,7 @@ fun HealthScoreCardModern(
                 Text(
                     text = stringResource(R.string.home_health_score_title),
                     style = MaterialTheme.typography.titleMedium.copy(
-                        color = Color(0xFF18181B),
+                        color = HomeCardStyles.Text.primary(),
                         fontSize = 16.sp,
                         lineHeight = 20.sp,
                         fontWeight = FontWeight.SemiBold
@@ -475,7 +475,7 @@ fun HealthScoreCardModern(
                 Text(
                     text = stringResource(R.string.home_health_score_value, safeScore),
                     style = MaterialTheme.typography.titleMedium.copy(
-                        color = Color(0xFF18181B),
+                        color = HomeCardStyles.Text.primary(),
                         fontSize = 16.sp,
                         lineHeight = 20.sp,
                         fontWeight = FontWeight.SemiBold
@@ -490,14 +490,14 @@ fun HealthScoreCardModern(
                     .fillMaxWidth()
                     .height(6.dp)
                     .clip(RoundedCornerShape(999.dp))
-                    .background(Color(0xFFF1F2F4))
+                    .background(HomeCardStyles.Progress.track())
             ) {
                 Box(
                     modifier = Modifier
                         .fillMaxWidth(progress)
                         .fillMaxHeight()
                         .clip(RoundedCornerShape(999.dp))
-                        .background(HomeCardStyles.Palette.HealthScore)
+                        .background(HomeCardStyles.Palette.healthScore())
                 )
             }
 
@@ -506,7 +506,7 @@ fun HealthScoreCardModern(
             Text(
                 text = advice,
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    color = Color(0xFF71717A),
+                    color = HomeCardStyles.Text.label(),
                     fontSize = 14.sp,
                     lineHeight = 18.sp,
                     fontWeight = FontWeight.Normal
@@ -543,8 +543,8 @@ private fun MacroStatCardModern(
             .height(cardHeight)
             .biteCalClickable(role = Role.Button, onClick = onClick),
         shape = CardStyles.Corner,
-        colors = CardDefaults.cardColors(containerColor = CardStyles.bg()),
-        border = CardStyles.border()
+        colors = CardDefaults.cardColors(containerColor = HomeCardStyles.Surface.card()),
+        border = HomeCardStyles.Surface.border()
     ) {
         Column(
             modifier = Modifier
@@ -564,8 +564,8 @@ private fun MacroStatCardModern(
                     fontWeight = FontWeight.Normal,
                     letterSpacing = 0.sp
                 ),
-                valueColor = Color(0xFF0F172A),
-                valueSuffixColor = Color(0xFF7C7C85),
+                valueColor = HomeCardStyles.Text.primary(),
+                valueSuffixColor = HomeCardStyles.Text.label(),
                 valueSuffixFontSize = 11.sp,
                 valueSuffixWeight = FontWeight.Medium,
                 valueSuffixOffsetX = 3.dp,
@@ -583,13 +583,13 @@ private fun MacroStatCardModern(
                     progress = progress,
                     sizeDp = ringSize,
                     strokeDp = ringStroke,
-                    trackColor = HomeCardStyles.Ring.Track,
+                    trackColor = HomeCardStyles.Ring.track(),
                     progressColor = ringColor,
                     drawTopTick = true,
                     tickColor = ringColor
                 )
                 Surface(
-                    color = HomeCardStyles.Ring.CenterFill,
+                    color = HomeCardStyles.Ring.centerFill(),
                     shape = CircleShape,
                     modifier = Modifier.size(centerDisk)
                 ) {}
@@ -886,7 +886,7 @@ fun StepsWorkoutRowModern(
             title = stringResource(R.string.steps_card_title),
             primary = stepsPrimary,
             secondary = stepsSecondary,
-            ringColor = HomeCardStyles.Palette.Steps,
+            ringColor = HomeCardStyles.Palette.steps(),
             progress = stepsProgress,
             modifier = Modifier.weight(1f),
             cardHeight = cardHeight,
@@ -950,7 +950,7 @@ fun StepsWorkoutRowModern(
             title = stringResource(R.string.workout_card_title),
             primary = workoutPrimary,
             secondary = null,
-            ringColor = HomeCardStyles.Palette.Workout,
+            ringColor = HomeCardStyles.Palette.workout(),
             progress = workoutProgress,
             modifier = Modifier.weight(1f),
             cardHeight = cardHeight,
@@ -1000,7 +1000,7 @@ private fun WorkoutPrimaryText(
         Text(
             text = kcal.toString(),
             style = numberStyle,
-            color = Color(0xFF0F172A),
+            color = HomeCardStyles.Text.primary(),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )
@@ -1013,7 +1013,7 @@ private fun WorkoutPrimaryText(
                 fontWeight = FontWeight.Normal,
                 baselineShift = BaselineShift(0.28f)
             ),
-            color = Color(0xFF0F172A),
+            color = HomeCardStyles.Text.primary(),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )
@@ -1100,8 +1100,8 @@ fun ActivityStatCardSplit(
             .then(clickableMod)
             .height(cardHeight),
         shape = CardStyles.Corner,
-        colors = CardDefaults.cardColors(containerColor = CardStyles.bg()),
-        border = CardStyles.border()
+        colors = CardDefaults.cardColors(containerColor = HomeCardStyles.Surface.card()),
+        border = HomeCardStyles.Surface.border()
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
 
@@ -1132,7 +1132,7 @@ fun ActivityStatCardSplit(
                             Text(
                                 text = title,
                                 style = titleStyle,
-                                color = Color(0xFF111114),
+                                color = HomeCardStyles.Text.secondary(),
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis
                             )
@@ -1146,7 +1146,7 @@ fun ActivityStatCardSplit(
                             Text(
                                 text = primary,
                                 style = primaryStyle,
-                                color = Color(0xFF0F172A),
+                                color = HomeCardStyles.Text.primary(),
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis
                             )
@@ -1158,7 +1158,7 @@ fun ActivityStatCardSplit(
                             Text(
                                 text = secondary,
                                 style = secondaryStyle,
-                                color = Color(0xFF111114),
+                                color = HomeCardStyles.Text.secondary(),
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis
                             )
@@ -1185,13 +1185,13 @@ fun ActivityStatCardSplit(
                                 progress = progress,
                                 sizeDp = ringSize,
                                 strokeDp = ringStroke,
-                                trackColor = HomeCardStyles.Ring.Track,
+                                trackColor = HomeCardStyles.Ring.track(),
                                 progressColor = ringColor,
                                 drawTopTick = true,
                                 tickColor = ringColor
                             )
                             Surface(
-                                color = HomeCardStyles.Ring.CenterFill,
+                                color = HomeCardStyles.Ring.centerFill(),
                                 shape = CircleShape,
                                 modifier = Modifier.size(centerDisk)
                             ) {}
@@ -1208,7 +1208,7 @@ fun ActivityStatCardSplit(
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(Color.White.copy(alpha = animScrim))
+                        .background(HomeCardStyles.Surface.raisedAlt().copy(alpha = animScrim))
                 )
             }
 
@@ -1249,7 +1249,7 @@ fun WeightFastingRowModern(
         WeightAndFastingCard(
             primary = weightPrimary,
             secondary = stringResource(R.string.weight_card_of_goal),
-            ringColor = HomeCardStyles.Palette.Weight,
+            ringColor = HomeCardStyles.Palette.weight(),
             progress = weightProgress,
             modifier = Modifier
                 .weight(1f)
@@ -1307,9 +1307,9 @@ fun GreenSwitch(
 
     val trackColor by animateColorAsState(
         targetValue = if (checked) {
-            Color(0xFF5ECB7A)
+            HomeCardStyles.Switch.trackOn()
         } else {
-            Color(0xFFE9ECEF)
+            HomeCardStyles.Switch.trackOff()
         },
         label = "iosSwitchTrack"
     )
@@ -1318,7 +1318,7 @@ fun GreenSwitch(
         targetValue = if (checked) {
             Color.Transparent
         } else {
-            Color(0xFFD8DEE5)
+            HomeCardStyles.Switch.borderOff()
         },
         label = "iosSwitchBorder"
     )
@@ -1368,7 +1368,7 @@ fun GreenSwitch(
                     shape = CircleShape,
                     clip = false
                 )
-                .background(Color.White, CircleShape)
+                .background(HomeCardStyles.Switch.thumb(), CircleShape)
         )
     }
 }
