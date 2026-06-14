@@ -38,17 +38,33 @@ import com.calai.bitecal.ui.home.components.HomeCardStyles
 import java.time.DayOfWeek
 import java.time.LocalDate
 
-private object CalendarStripColors {
-    val SelectedBackground = HomeCardStyles.Calendar.SelectedBackground
-    val TodayBackground = HomeCardStyles.Calendar.TodayBackground
-    val ActiveText = HomeCardStyles.Calendar.ActiveText
-    val DisabledText = HomeCardStyles.Calendar.DisabledText
-    val DisabledStroke = HomeCardStyles.Calendar.DisabledStroke
-    val OnTargetStroke = HomeCardStyles.Calendar.OnTargetStroke
-    val SlightlyOverStroke = HomeCardStyles.Calendar.SlightlyOverStroke
-    val FarOverStroke = HomeCardStyles.Calendar.FarOverStroke
-    val NoMealStroke = HomeCardStyles.Calendar.NoMealStroke
-    val TodayNoMealStroke = HomeCardStyles.Calendar.TodayNoMealStroke
+private data class CalendarStripPalette(
+    val selectedBackground: Color,
+    val todayBackground: Color,
+    val activeText: Color,
+    val disabledText: Color,
+    val disabledStroke: Color,
+    val onTargetStroke: Color,
+    val slightlyOverStroke: Color,
+    val farOverStroke: Color,
+    val noMealStroke: Color,
+    val todayNoMealStroke: Color
+)
+
+@Composable
+private fun calendarStripPalette(): CalendarStripPalette {
+    return CalendarStripPalette(
+        selectedBackground = HomeCardStyles.Calendar.selectedBackground(),
+        todayBackground = HomeCardStyles.Calendar.todayBackground(),
+        activeText = HomeCardStyles.Calendar.activeText(),
+        disabledText = HomeCardStyles.Calendar.disabledText(),
+        disabledStroke = HomeCardStyles.Calendar.disabledStroke(),
+        onTargetStroke = HomeCardStyles.Calendar.OnTargetStroke,
+        slightlyOverStroke = HomeCardStyles.Calendar.SlightlyOverStroke,
+        farOverStroke = HomeCardStyles.Calendar.FarOverStroke,
+        noMealStroke = HomeCardStyles.Calendar.noMealStroke(),
+        todayNoMealStroke = HomeCardStyles.Calendar.todayNoMealStroke()
+    )
 }
 
 private enum class DotStyle { Dashed, SolidStroke }
@@ -83,6 +99,7 @@ fun CalendarStrip(
     itemHeight: Dp = 74.dp,
 ) {
     val today = LocalDate.now()
+    val colors = calendarStripPalette()
 
     // 顯示範圍由呼叫端控制，避免元件內部 hard-code 造成 Home 想顯示 30 天時仍被裁切。
     val visibleDays = remember(days) {
@@ -140,7 +157,8 @@ fun CalendarStrip(
                     today = today,
                     enabled = enabled,
                     caloriesByDate = caloriesByDate,
-                    dailyGoalKcal = dailyGoalKcal
+                    dailyGoalKcal = dailyGoalKcal,
+                    colors = colors
                 )
 
                 val baseContainer = Modifier
@@ -159,7 +177,7 @@ fun CalendarStrip(
                                     val chipH = size.height
                                     val left = (size.width - chipW) / 2f
                                     drawRoundRect(
-                                        color = CalendarStripColors.SelectedBackground.copy(alpha = 0.81f),
+                                        color = colors.selectedBackground.copy(alpha = 0.81f),
                                         topLeft = Offset(left, 0f),
                                         size = Size(chipW, chipH),
                                         cornerRadius = CornerRadius(
@@ -177,6 +195,7 @@ fun CalendarStrip(
                                 style = ringStyle.dotStyle,
                                 ringColor = ringStyle.strokeColor,
                                 dashedPath = dashedPath,
+                                colors = colors,
                                 isSelected = true
                             )
                         }
@@ -193,7 +212,7 @@ fun CalendarStrip(
                                     val chipH = size.height
                                     val left = (size.width - chipW) / 2f
                                     drawRoundRect(
-                                        color = CalendarStripColors.TodayBackground.copy(alpha = 0.25f),
+                                        color = colors.todayBackground.copy(alpha = 0.25f),
                                         topLeft = Offset(left, 0f),
                                         size = Size(chipW, chipH),
                                         cornerRadius = CornerRadius(
@@ -210,7 +229,8 @@ fun CalendarStrip(
                                 enabled = enabled,
                                 style = ringStyle.dotStyle,
                                 ringColor = ringStyle.strokeColor,
-                                dashedPath = dashedPath
+                                dashedPath = dashedPath,
+                                colors = colors
                             )
                         }
                     }
@@ -228,7 +248,8 @@ fun CalendarStrip(
                                 enabled = enabled,
                                 style = ringStyle.dotStyle,
                                 ringColor = ringStyle.strokeColor,
-                                dashedPath = dashedPath
+                                dashedPath = dashedPath,
+                                colors = colors
                             )
                         }
                     }
@@ -243,12 +264,13 @@ private fun calendarRingStyleForDate(
     today: LocalDate,
     enabled: Boolean,
     caloriesByDate: Map<LocalDate, Int>,
-    dailyGoalKcal: Int
+    dailyGoalKcal: Int,
+    colors: CalendarStripPalette
 ): CalendarDayRingStyle {
     if (!enabled || date.isAfter(today)) {
         return CalendarDayRingStyle(
             dotStyle = DotStyle.SolidStroke,
-            strokeColor = CalendarStripColors.DisabledStroke
+            strokeColor = colors.disabledStroke
         )
     }
 
@@ -257,18 +279,18 @@ private fun calendarRingStyleForDate(
         return CalendarDayRingStyle(
             dotStyle = DotStyle.Dashed,
             strokeColor = if (date == today) {
-                CalendarStripColors.TodayNoMealStroke
+                colors.todayNoMealStroke
             } else {
-                CalendarStripColors.NoMealStroke
+                colors.noMealStroke
             }
         )
     }
 
     val overGoalKcal = eatenKcal - dailyGoalKcal
     val color = when {
-        overGoalKcal >= 200 -> CalendarStripColors.FarOverStroke
-        overGoalKcal >= 100 -> CalendarStripColors.SlightlyOverStroke
-        else -> CalendarStripColors.OnTargetStroke
+        overGoalKcal >= 200 -> colors.farOverStroke
+        overGoalKcal >= 100 -> colors.slightlyOverStroke
+        else -> colors.onTargetStroke
     }
 
     return CalendarDayRingStyle(
@@ -286,12 +308,13 @@ private fun DayDot(
     style: DotStyle,
     ringColor: Color,
     dashedPath: PathEffect,
+    colors: CalendarStripPalette,
     isSelected: Boolean = false
 ) {
-    val weekdayColor = CalendarStripColors.ActiveText
-    val disabledStrokeColor = CalendarStripColors.DisabledStroke
+    val weekdayColor = colors.activeText
+    val disabledStrokeColor = colors.disabledStroke
 
-    val textColor = if (enabled) Color.Black else CalendarStripColors.DisabledText
+    val textColor = if (enabled) colors.activeText else colors.disabledText
     val alpha = if (enabled) 1f else 0.85f
 
     // 固定 Canvas 外徑，並用 strokeWidth 反推 radius，避免 selected / future 圓圈看起來大小不同。

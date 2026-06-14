@@ -52,6 +52,7 @@ import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
@@ -175,7 +176,7 @@ fun CaloriesCardModern(
                 Icon(
                     imageVector = Icons.Filled.LocalFireDepartment,
                     contentDescription = null,
-                    tint = HomeCardStyles.Palette.calories(),
+                    tint = HomeCardStyles.Palette.caloriesIcon(),
                     modifier = Modifier.size(fireIconSize)
                 )
             }
@@ -899,6 +900,7 @@ fun StepsWorkoutRowModern(
                 Image(
                     painter = painterResource(R.drawable.footstep),
                     contentDescription = "Steps icon",
+                    colorFilter = ColorFilter.tint(HomeCardStyles.Palette.stepsIcon()),
                     modifier = Modifier.size(18.dp)
                 )
             },
@@ -962,6 +964,7 @@ fun StepsWorkoutRowModern(
                 Image(
                     painter = painterResource(R.drawable.fitness),
                     contentDescription = "Workout Icon",
+                    colorFilter = ColorFilter.tint(HomeCardStyles.Palette.workoutIcon()),
                     modifier = Modifier.size(24.dp)
                 )
             },

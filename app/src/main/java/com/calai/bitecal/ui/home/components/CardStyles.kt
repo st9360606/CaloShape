@@ -93,6 +93,9 @@ object HomeCardStyles {
         fun calories(): Color = if (HomeCardStyles.isDark()) Color(0xFF8E87A3) else Calories
 
         @Composable
+        fun caloriesIcon(): Color = if (HomeCardStyles.isDark()) Color(0xFFF7F5FF) else Calories
+
+        @Composable
         fun protein(): Color = if (HomeCardStyles.isDark()) Color(0xFFD66D78) else Protein
 
         @Composable
@@ -111,16 +114,22 @@ object HomeCardStyles {
         fun sodium(): Color = if (HomeCardStyles.isDark()) Color(0xFF74B4DF) else Sodium
 
         @Composable
-        fun healthScore(): Color = if (HomeCardStyles.isDark()) Color(0xFF63C9A1) else HealthScore
+        fun healthScore(): Color = HealthScore
 
         @Composable
         fun workout(): Color = if (HomeCardStyles.isDark()) Color(0xFF9F8BE8) else Workout
 
         @Composable
+        fun workoutIcon(): Color = if (HomeCardStyles.isDark()) Color(0xFFF7F5FF) else Workout
+
+        @Composable
         fun steps(): Color = if (HomeCardStyles.isDark()) Color(0xFF79BDE0) else Steps
 
         @Composable
-        fun weight(): Color = if (HomeCardStyles.isDark()) Color(0xFF71C99C) else Weight
+        fun stepsIcon(): Color = if (HomeCardStyles.isDark()) Color(0xFFF7F5FF) else Steps
+
+        @Composable
+        fun weight(): Color = Weight
 
         @Composable
         fun water(): Color = if (HomeCardStyles.isDark()) Color(0xFF73BFE8) else Water
@@ -174,6 +183,15 @@ object HomeCardStyles {
         fun primaryContent(): Color = if (HomeCardStyles.isDark()) Color(0xFF11131A) else Color.White
 
         @Composable
+        fun addContainer(): Color = if (HomeCardStyles.isDark()) Color(0xFF24212D) else Color(0xFF111114)
+
+        @Composable
+        fun addContent(): Color = if (HomeCardStyles.isDark()) Color(0xFFF7F5FF) else Color.White
+
+        @Composable
+        fun addBorder(): Color = if (HomeCardStyles.isDark()) Color(0xFF34303D) else Color.Transparent
+
+        @Composable
         fun secondaryContainer(): Color = if (HomeCardStyles.isDark()) Color(0xFF24212D) else Color.White
 
         @Composable
@@ -188,7 +206,7 @@ object HomeCardStyles {
 
     object Switch {
         @Composable
-        fun trackOn(): Color = if (HomeCardStyles.isDark()) Color(0xFF5CBF9A) else Color(0xFF5ECB7A)
+        fun trackOn(): Color = Color(0xFF5ECB7A)
 
         @Composable
         fun trackOff(): Color = if (HomeCardStyles.isDark()) Color(0xFF2A2633) else Color(0xFFE9ECEF)
@@ -227,6 +245,27 @@ object HomeCardStyles {
         val FarOverStroke = Color(0xFFD92D20)
         val NoMealStroke = Color(0xFF555A60)
         val TodayNoMealStroke = Color(0xFF2B3037)
+
+        @Composable
+        fun selectedBackground(): Color = SelectedBackground
+
+        @Composable
+        fun todayBackground(): Color = if (HomeCardStyles.isDark()) Color(0xFF2A2633) else TodayBackground
+
+        @Composable
+        fun activeText(): Color = if (HomeCardStyles.isDark()) Color(0xFFF7F5FF) else ActiveText
+
+        @Composable
+        fun disabledText(): Color = if (HomeCardStyles.isDark()) Color(0xFF8F899C) else DisabledText
+
+        @Composable
+        fun disabledStroke(): Color = if (HomeCardStyles.isDark()) Color(0xFF4A4558) else DisabledStroke
+
+        @Composable
+        fun noMealStroke(): Color = if (HomeCardStyles.isDark()) Color(0xFF6F687C) else NoMealStroke
+
+        @Composable
+        fun todayNoMealStroke(): Color = if (HomeCardStyles.isDark()) Color(0xFFC9C4D4) else TodayNoMealStroke
     }
 }
 

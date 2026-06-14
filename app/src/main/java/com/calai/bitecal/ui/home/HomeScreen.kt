@@ -1163,8 +1163,10 @@ private fun TopBarSettingsButton(
     visualSize: Dp = 43.dp,
     iconSize: Dp = 31.dp
 ) {
-    val bg = Color(0xFFE5E7EB)
-    val fg = Color(0xFF979DA7)
+    val isDark = HomeCardStyles.isDark()
+    val bg = if (isDark) HomeCardStyles.Surface.raised() else Color(0xFFE5E7EB)
+    val fg = if (isDark) HomeCardStyles.Text.primary() else Color(0xFF979DA7)
+    val borderColor = if (isDark) HomeCardStyles.Surface.borderColor() else Color.Transparent
 
     Box(
         modifier = modifier.size(touchSize),     // ✅ 48dp 熱區
@@ -1172,7 +1174,10 @@ private fun TopBarSettingsButton(
     ) {
         FilledTonalIconButton(
             onClick = rememberClickWithHaptic(onClick = onClick),
-            modifier = Modifier.size(visualSize), // ✅ 40dp 視覺圓
+            modifier = Modifier
+                .size(visualSize)
+                .border(width = 1.dp, color = borderColor, shape = CircleShape),
+            shape = CircleShape,
             colors = IconButtonDefaults.filledTonalIconButtonColors(
                 containerColor = bg,
                 contentColor = fg

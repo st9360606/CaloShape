@@ -2,6 +2,7 @@ package com.calai.bitecal.ui.home.ui.card
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Spacer
@@ -247,13 +248,14 @@ private fun WeightAddButton(
         Box(
             modifier = Modifier
                 .size(innerSizeDp)
-                .background(HomeCardStyles.Action.primaryContainer(), CircleShape),
+                .background(HomeCardStyles.Action.addContainer(), CircleShape)
+                .border(width = 0.8.dp, color = HomeCardStyles.Action.addBorder(), shape = CircleShape),
             contentAlignment = Alignment.Center
         ) {
             Icon(
                 imageVector = Icons.Filled.Add,
                 contentDescription = "Add weight log",
-                tint = HomeCardStyles.Action.primaryContent(),
+                tint = HomeCardStyles.Action.addContent(),
                 modifier = Modifier.size(iconSizeDp)
             )
         }
