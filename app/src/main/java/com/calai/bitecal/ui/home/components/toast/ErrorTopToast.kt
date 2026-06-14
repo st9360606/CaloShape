@@ -33,6 +33,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.design.BiteCalColors
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 
 /**
  * 頂部置中的白色膠囊錯誤提示。
@@ -51,6 +52,7 @@ fun ErrorTopToast(
     modifier: Modifier = Modifier
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
     val topInset = WindowInsets.statusBars.asPaddingValues().calculateTopPadding()
     val configuration = LocalConfiguration.current
 
@@ -80,7 +82,7 @@ fun ErrorTopToast(
                 )
                 .heightIn(min = 38.dp),
             shape = MaterialTheme.shapes.large,
-            color = colors.surface,
+            color = if (isDark) HomeCardStyles.Dialog.surface() else colors.surface,
             shadowElevation = 8.dp,
             tonalElevation = 0.dp
         ) {
@@ -117,7 +119,7 @@ fun ErrorTopToast(
                     overflow = TextOverflow.Ellipsis,
                     style = MaterialTheme.typography.bodyLarge.copy(
                         fontWeight = FontWeight.SemiBold,
-                        color = colors.textPrimary
+                        color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
                     )
                 )
             }

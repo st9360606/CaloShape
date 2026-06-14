@@ -34,6 +34,7 @@ import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import com.calai.bitecal.ui.home.ui.progress.model.ProgressAverageOverviewUi
 import java.text.NumberFormat
 
@@ -80,6 +81,7 @@ private fun AverageRangeTabs(
     onSelectedDaysChange: (Int) -> Unit
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
     val labels = listOf(
         7 to stringResource(R.string.progress_average_tab_7_days),
         15 to stringResource(R.string.progress_average_tab_15_days),
@@ -92,7 +94,10 @@ private fun AverageRangeTabs(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .background(colors.surfaceMuted, containerShape)
+            .background(
+                if (isDark) HomeCardStyles.Chart.insetSurface() else colors.surfaceMuted,
+                containerShape
+            )
             .padding(horizontal = 6.dp, vertical = 4.dp),
         horizontalArrangement = Arrangement.spacedBy(4.dp),
         verticalAlignment = Alignment.CenterVertically
@@ -113,8 +118,15 @@ private fun AverageRangeTabs(
                                     shape = activeTabShape,
                                     clip = false
                                 )
-                                .background(colors.surface, activeTabShape)
-                                .border(1.dp, colors.border, activeTabShape)
+                                .background(
+                                    if (isDark) HomeCardStyles.Chart.surface() else colors.surface,
+                                    activeTabShape
+                                )
+                                .border(
+                                    1.dp,
+                                    if (isDark) HomeCardStyles.Chart.border() else colors.border,
+                                    activeTabShape
+                                )
                         } else {
                             Modifier.background(Color.Transparent, activeTabShape)
                         }
@@ -125,9 +137,10 @@ private fun AverageRangeTabs(
                 Text(
                     text = label,
                     color = if (active) {
-                        colors.textPrimary
+                        if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
                     } else {
-                        colors.textSecondary.copy(alpha = if (enabled) 1f else 0.42f)
+                        val base = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
+                        base.copy(alpha = if (enabled) 1f else 0.42f)
                     },
                     fontSize = 14.sp,
                     fontWeight = if (active) FontWeight.Bold else FontWeight.SemiBold,
@@ -144,12 +157,20 @@ private fun ProgressAverageOverviewCard(
     item: ProgressAverageOverviewUi
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .background(colors.surface, RoundedCornerShape(28.dp))
-            .border(1.dp, colors.border, RoundedCornerShape(28.dp))
+            .background(
+                if (isDark) HomeCardStyles.Chart.surface() else colors.surface,
+                RoundedCornerShape(28.dp)
+            )
+            .border(
+                1.dp,
+                if (isDark) HomeCardStyles.Chart.border() else colors.border,
+                RoundedCornerShape(28.dp)
+            )
             .padding(horizontal = 18.dp, vertical = 18.dp)
     ) {
         Row(
@@ -160,7 +181,7 @@ private fun ProgressAverageOverviewCard(
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = stringResource(R.string.progress_average_overview_title),
-                    color = colors.textPrimary,
+                    color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                     fontSize = 20.sp,
                     lineHeight = 24.sp,
                     fontWeight = FontWeight.Bold,
@@ -172,7 +193,7 @@ private fun ProgressAverageOverviewCard(
 
                 Text(
                     text = stringResource(R.string.progress_average_overview_subtitle),
-                    color = colors.textSecondary,
+                    color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
                     fontSize = 12.sp,
                     lineHeight = 16.sp,
                     fontWeight = FontWeight.Medium
@@ -181,14 +202,21 @@ private fun ProgressAverageOverviewCard(
 
             Box(
                 modifier = Modifier
-                    .background(Color(0xFFEEF2FF).copy(alpha = if (colors.background == BiteCalColors.Dark.background) 0.18f else 1f), RoundedCornerShape(999.dp))
-                    .border(1.dp, Color(0xFFC7D2FE).copy(alpha = if (colors.background == BiteCalColors.Dark.background) 0.34f else 1f), RoundedCornerShape(999.dp))
+                    .background(
+                        if (isDark) HomeCardStyles.Chart.footerSurface() else Color(0xFFEEF2FF),
+                        RoundedCornerShape(999.dp)
+                    )
+                    .border(
+                        1.dp,
+                        if (isDark) HomeCardStyles.Chart.border() else Color(0xFFC7D2FE),
+                        RoundedCornerShape(999.dp)
+                    )
                     .padding(horizontal = 12.dp, vertical = 7.dp),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
                     text = stringResource(R.string.progress_average_days_badge, item.days),
-                    color = if (colors.background == BiteCalColors.Dark.background) Color(0xFFC7D2FE) else Color(0xFF4338CA),
+                    color = if (isDark) Color(0xFFC7D2FE) else Color(0xFF4338CA),
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Bold
                 )
@@ -312,11 +340,19 @@ private fun AverageMetricTile(
     modifier: Modifier = Modifier
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Row(
         modifier = modifier
-            .background(colors.surfaceMuted, RoundedCornerShape(18.dp))
-            .border(1.dp, colors.border, RoundedCornerShape(18.dp))
+            .background(
+                if (isDark) HomeCardStyles.Chart.insetSurface() else colors.surfaceMuted,
+                RoundedCornerShape(18.dp)
+            )
+            .border(
+                1.dp,
+                if (isDark) HomeCardStyles.Chart.border() else colors.border,
+                RoundedCornerShape(18.dp)
+            )
             .padding(horizontal = 12.dp, vertical = 11.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -334,7 +370,7 @@ private fun AverageMetricTile(
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 text = metric.label,
-                color = colors.textSecondary,
+                color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
                 fontSize = 11.sp,
                 lineHeight = 13.sp,
                 fontWeight = FontWeight.Medium,
@@ -344,7 +380,7 @@ private fun AverageMetricTile(
             Spacer(modifier = Modifier.height(2.dp))
             Text(
                 text = metric.value,
-                color = colors.textPrimary,
+                color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                 fontSize = 14.sp,
                 lineHeight = 17.sp,
                 fontWeight = FontWeight.Bold,
@@ -358,20 +394,28 @@ private fun AverageMetricTile(
 @Composable
 private fun ProgressAverageOverviewLoadingCard() {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .height(178.dp)
-            .background(colors.surface, RoundedCornerShape(28.dp))
-            .border(1.dp, colors.border, RoundedCornerShape(28.dp))
+            .background(
+                if (isDark) HomeCardStyles.Chart.surface() else colors.surface,
+                RoundedCornerShape(28.dp)
+            )
+            .border(
+                1.dp,
+                if (isDark) HomeCardStyles.Chart.border() else colors.border,
+                RoundedCornerShape(28.dp)
+            )
             .padding(20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
         Text(
             text = stringResource(R.string.progress_average_loading),
-            color = colors.textSecondary,
+            color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
             fontSize = 14.sp,
             fontWeight = FontWeight.SemiBold,
             textAlign = TextAlign.Center
@@ -385,18 +429,26 @@ private fun ProgressAverageOverviewErrorCard(
     onRetry: () -> Unit
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .background(colors.surface, RoundedCornerShape(28.dp))
-            .border(1.dp, colors.border, RoundedCornerShape(28.dp))
+            .background(
+                if (isDark) HomeCardStyles.Chart.surface() else colors.surface,
+                RoundedCornerShape(28.dp)
+            )
+            .border(
+                1.dp,
+                if (isDark) HomeCardStyles.Chart.border() else colors.border,
+                RoundedCornerShape(28.dp)
+            )
             .padding(horizontal = 20.dp, vertical = 22.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
             text = message,
-            color = colors.textPrimary,
+            color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
             fontSize = 14.sp,
             textAlign = TextAlign.Center
         )

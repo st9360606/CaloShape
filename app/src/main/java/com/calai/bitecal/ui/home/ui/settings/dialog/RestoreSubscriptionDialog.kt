@@ -34,6 +34,7 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import com.calai.bitecal.ui.home.ui.settings.model.RestoreSubscriptionDialogState
 import com.calai.bitecal.ui.home.ui.settings.model.RestoreSubscriptionUiState
 
@@ -57,6 +58,7 @@ fun RestoreSubscriptionDialog(
     val restoreClick = rememberClickWithHaptic(enabled = !isRestoring, onClick = onRestore)
     val maybeLaterClick = rememberClickWithHaptic(enabled = !isRestoring, onClick = onMaybeLater)
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     val isResultState = when (uiState.dialogState) {
         RestoreSubscriptionDialogState.Restored,
@@ -86,7 +88,7 @@ fun RestoreSubscriptionDialog(
         ) {
             Surface(
                 shape = RoundedCornerShape(16.dp),
-                color = colors.surface,
+                color = if (isDark) HomeCardStyles.Dialog.surface() else colors.surface,
                 tonalElevation = 0.dp,
                 shadowElevation = 0.dp,
                 modifier = Modifier.fillMaxWidth()
@@ -109,7 +111,10 @@ fun RestoreSubscriptionDialog(
                         Box(
                             modifier = Modifier
                                 .size(33.dp)
-                                .background(colors.surfaceMuted, CircleShape),
+                                .background(
+                                    if (isDark) HomeCardStyles.Dialog.panel() else colors.surfaceMuted,
+                                    CircleShape
+                                ),
                             contentAlignment = Alignment.Center
                         ) {
                             IconButton(
@@ -194,9 +199,9 @@ fun RestoreSubscriptionDialog(
                                 shape = RoundedCornerShape(999.dp),
                                 border = BorderStroke(0.8.dp, colors.textPrimary.copy(alpha = 0.62f)),
                                 colors = ButtonDefaults.outlinedButtonColors(
-                                    containerColor = colors.surface,
+                                    containerColor = if (isDark) HomeCardStyles.Dialog.panel() else colors.surface,
                                     contentColor = colors.textPrimary,
-                                    disabledContainerColor = colors.surface,
+                                    disabledContainerColor = if (isDark) HomeCardStyles.Dialog.panel() else colors.surface,
                                     disabledContentColor = colors.textPrimary.copy(alpha = 0.45f)
                                 ),
                                 modifier = Modifier

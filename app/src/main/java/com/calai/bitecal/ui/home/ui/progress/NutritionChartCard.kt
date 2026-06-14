@@ -51,6 +51,7 @@ import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import com.calai.bitecal.ui.home.ui.progress.model.ProgressBarDayUi
 import com.calai.bitecal.ui.home.ui.progress.tooltip.ChartTooltipCard
 import com.calai.bitecal.ui.home.ui.progress.tooltip.ChartTooltipMetricUi
@@ -112,20 +113,28 @@ internal fun ErrorCard(
     modifier: Modifier = Modifier
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Box(
         modifier = modifier
             .fillMaxWidth()
             .height(260.dp)
-            .background(colors.surface, RoundedCornerShape(24.dp))
-            .border(1.dp, colors.border, RoundedCornerShape(24.dp))
+            .background(
+                if (isDark) HomeCardStyles.Chart.surface() else colors.surface,
+                RoundedCornerShape(24.dp)
+            )
+            .border(
+                1.dp,
+                if (isDark) HomeCardStyles.Chart.border() else colors.border,
+                RoundedCornerShape(24.dp)
+            )
             .padding(24.dp),
         contentAlignment = Alignment.Center
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
                 text = message,
-                color = colors.textPrimary,
+                color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                 textAlign = TextAlign.Center
             )
 
@@ -173,6 +182,7 @@ private fun ProgressChartCardFrame(
 ) {
     val valueText = resolveCaloriesValueText(totalCaloriesText)
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     val resolvedDeltaText = deltaDisplayText ?: if (deltaText == "--") {
         stringResource(R.string.progress_chart_delta_placeholder)
@@ -185,8 +195,15 @@ private fun ProgressChartCardFrame(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .background(colors.surface, RoundedCornerShape(28.dp))
-            .border(1.dp, colors.border, RoundedCornerShape(28.dp))
+            .background(
+                if (isDark) HomeCardStyles.Chart.surface() else colors.surface,
+                RoundedCornerShape(28.dp)
+            )
+            .border(
+                1.dp,
+                if (isDark) HomeCardStyles.Chart.border() else colors.border,
+                RoundedCornerShape(28.dp)
+            )
             .padding(horizontal = 26.dp, vertical = 26.dp)
     ) {
         Column(modifier = Modifier.fillMaxWidth()) {
@@ -202,7 +219,7 @@ private fun ProgressChartCardFrame(
                 ) {
                     Text(
                         text = stringResource(R.string.progress_chart_total_calories),
-                        color = colors.textPrimary,
+                        color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.padding(top = 10.dp)
@@ -211,7 +228,7 @@ private fun ProgressChartCardFrame(
                     Row(verticalAlignment = Alignment.Bottom) {
                         Text(
                             text = valueText,
-                            color = colors.textPrimary,
+                            color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                             fontSize = 36.sp,
                             fontWeight = FontWeight.Bold,
                             lineHeight = 36.sp
@@ -221,7 +238,7 @@ private fun ProgressChartCardFrame(
 
                         Text(
                             text = stringResource(R.string.progress_chart_cals),
-                            color = colors.textSecondary,
+                            color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
                             fontSize = 18.sp,
                             fontWeight = FontWeight.Medium,
                             modifier = Modifier.padding(bottom = 4.dp)
@@ -310,14 +327,14 @@ private fun ProgressChartCardFrame(
                     .align(Alignment.CenterHorizontally)
                     .offset(x = 8.dp)
                     .background(
-                        color = Color(0xFFEAF5E8),
+                        color = if (isDark) HomeCardStyles.Chart.footerSurface() else Color(0xFFEAF5E8),
                         shape = RoundedCornerShape(12.dp)
                     )
                     .padding(horizontal = 12.dp, vertical = 6.dp)
             ) {
                 Text(
                     text = stringResource(R.string.progress_keep_it_up),
-                    color = Color(0xFF3C9E45),
+                    color = if (isDark) HomeCardStyles.Status.successText() else Color(0xFF3C9E45),
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center
@@ -335,11 +352,19 @@ private fun NutritionMetricChip(
     modifier: Modifier = Modifier
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Row(
         modifier = modifier
-            .background(colors.surfaceMuted, RoundedCornerShape(14.dp))
-            .border(1.dp, colors.border, RoundedCornerShape(14.dp))
+            .background(
+                if (isDark) HomeCardStyles.Chart.insetSurface() else colors.surfaceMuted,
+                RoundedCornerShape(14.dp)
+            )
+            .border(
+                1.dp,
+                if (isDark) HomeCardStyles.Chart.border() else colors.border,
+                RoundedCornerShape(14.dp)
+            )
             .padding(horizontal = 10.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -355,7 +380,7 @@ private fun NutritionMetricChip(
         Column {
             Text(
                 text = label,
-                color = colors.textSecondary,
+                color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
                 fontSize = 10.sp,
                 lineHeight = 12.sp,
                 fontWeight = FontWeight.Bold
@@ -365,7 +390,7 @@ private fun NutritionMetricChip(
 
             Text(
                 text = value,
-                color = colors.textPrimary,
+                color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                 fontSize = 12.sp,
                 lineHeight = 14.sp,
                 fontWeight = FontWeight.SemiBold
@@ -777,6 +802,7 @@ private fun LegendChip(
     textYOffset: Dp = 0.dp
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Row(
         verticalAlignment = Alignment.CenterVertically
@@ -791,7 +817,7 @@ private fun LegendChip(
 
         Text(
             text = label,
-            color = colors.textPrimary,
+            color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
             fontSize = 14.sp,
             fontWeight = FontWeight.Medium,
             modifier = Modifier.offset(y = textYOffset)

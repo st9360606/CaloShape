@@ -50,6 +50,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.design.BiteCalColors
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import com.calai.bitecal.ui.home.ui.progress.model.ProgressBarDayUi
 import com.calai.bitecal.ui.home.ui.progress.tooltip.ChartTooltipCard
 import com.calai.bitecal.ui.home.ui.progress.tooltip.ChartTooltipMetricUi
@@ -140,15 +141,21 @@ private fun MicronutrientChartCardFrame(
     }
     val resolvedDeltaColor = resolveMicronutrientDeltaColor(resolvedDeltaText)
     val colors = BiteCalColors.current()
-    val footerBg = MicronutrientFooterBg.copy(
-        alpha = if (colors.background == BiteCalColors.Dark.background) 0.18f else 1f
-    )
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val footerBg = if (isDark) HomeCardStyles.Chart.footerSurface() else MicronutrientFooterBg
 
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .background(colors.surface, RoundedCornerShape(28.dp))
-            .border(1.dp, colors.border, RoundedCornerShape(28.dp))
+            .background(
+                if (isDark) HomeCardStyles.Chart.surface() else colors.surface,
+                RoundedCornerShape(28.dp)
+            )
+            .border(
+                1.dp,
+                if (isDark) HomeCardStyles.Chart.border() else colors.border,
+                RoundedCornerShape(28.dp)
+            )
             .padding(horizontal = 22.dp, vertical = 26.dp)
     ) {
         val averageChipWidth = 122.dp
@@ -166,7 +173,7 @@ private fun MicronutrientChartCardFrame(
                 ) {
                     Text(
                         text = title,
-                        color = colors.textPrimary,
+                        color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.padding(top = 10.dp)
@@ -175,7 +182,7 @@ private fun MicronutrientChartCardFrame(
                     Row(verticalAlignment = Alignment.Bottom) {
                         Text(
                             text = headlineValue,
-                            color = colors.textPrimary,
+                            color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                             fontSize = 36.sp,
                             fontWeight = FontWeight.Bold,
                             lineHeight = 36.sp
@@ -185,7 +192,7 @@ private fun MicronutrientChartCardFrame(
 
                         Text(
                             text = unitText,
-                            color = colors.textSecondary,
+                            color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
                             fontSize = 18.sp,
                             fontWeight = FontWeight.Medium,
                             modifier = Modifier.padding(bottom = 4.dp)
@@ -268,7 +275,7 @@ private fun MicronutrientChartCardFrame(
             ) {
                 Text(
                     text = stringResource(R.string.progress_micronutrients_keep_it_up),
-                    color = MicronutrientFooterText,
+                    color = if (isDark) Color(0xFFCBBDF8) else MicronutrientFooterText,
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center
@@ -290,16 +297,24 @@ private fun MicronutrientAverageChip(
     modifier: Modifier = Modifier
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Column(
         modifier = modifier
-            .background(colors.surfaceMuted, RoundedCornerShape(14.dp))
-            .border(1.dp, colors.border, RoundedCornerShape(14.dp))
+            .background(
+                if (isDark) HomeCardStyles.Chart.insetSurface() else colors.surfaceMuted,
+                RoundedCornerShape(14.dp)
+            )
+            .border(
+                1.dp,
+                if (isDark) HomeCardStyles.Chart.border() else colors.border,
+                RoundedCornerShape(14.dp)
+            )
             .padding(horizontal = 10.dp, vertical = 8.dp)
     ) {
         Text(
             text = title,
-            color = colors.textSecondary,
+            color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
             fontSize = 10.sp,
             lineHeight = 12.sp,
             fontWeight = FontWeight.Bold
@@ -338,6 +353,7 @@ private fun MicronutrientAverageMetricRow(
     value: String
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Row(
         verticalAlignment = Alignment.CenterVertically
@@ -353,7 +369,7 @@ private fun MicronutrientAverageMetricRow(
 
         Text(
             text = label,
-            color = colors.textSecondary,
+            color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
             fontSize = 10.sp,
             lineHeight = 12.sp,
             fontWeight = FontWeight.Bold,
@@ -364,7 +380,7 @@ private fun MicronutrientAverageMetricRow(
 
         Text(
             text = value,
-            color = colors.textPrimary,
+            color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
             fontSize = 12.sp,
             lineHeight = 12.sp,
             fontWeight = FontWeight.SemiBold
@@ -725,6 +741,7 @@ private fun ColorLegendChip(
     textYOffset: Dp = 0.dp
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Row(verticalAlignment = Alignment.CenterVertically) {
         Text(
@@ -737,7 +754,7 @@ private fun ColorLegendChip(
 
         Text(
             text = label,
-            color = colors.textPrimary,
+            color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
             fontSize = 14.sp,
             fontWeight = FontWeight.Medium,
             modifier = Modifier.offset(y = textYOffset)

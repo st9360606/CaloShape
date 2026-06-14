@@ -311,10 +311,15 @@ private fun DayDot(
     colors: CalendarStripPalette,
     isSelected: Boolean = false
 ) {
-    val weekdayColor = colors.activeText
+    val selectedTextColor = HomeCardStyles.Calendar.ActiveText
+    val weekdayColor = if (isSelected) selectedTextColor else colors.activeText
     val disabledStrokeColor = colors.disabledStroke
 
-    val textColor = if (enabled) colors.activeText else colors.disabledText
+    val textColor = when {
+        isSelected -> selectedTextColor
+        enabled -> colors.activeText
+        else -> colors.disabledText
+    }
     val alpha = if (enabled) 1f else 0.85f
 
     // 固定 Canvas 外徑，並用 strokeWidth 反推 radius，避免 selected / future 圓圈看起來大小不同。
@@ -364,7 +369,11 @@ private fun DayDot(
                 }
                 val radius = (size.minDimension - strokeWidthPx) / 2f
                 val center = Offset(size.width / 2f, size.height / 2f)
-                val strokeColor = if (enabled) ringColor else disabledStrokeColor
+                val strokeColor = when {
+                    isSelected && style == DotStyle.Dashed -> HomeCardStyles.Calendar.ActiveStroke
+                    enabled -> ringColor
+                    else -> disabledStrokeColor
+                }
 
                 when (style) {
                     DotStyle.Dashed -> {

@@ -87,6 +87,7 @@ import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.ColorFilter
 import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 
 // 色票
 private val Black = Color(0xFF111114)
@@ -174,7 +175,7 @@ fun WorkoutTrackerSheet(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(sheetH)
-                .background(colors.surface)
+                .background(HomeCardStyles.Sheet.surface())
                 .padding(horizontal = 24.dp)
                 .imePadding()
         ) {
@@ -274,6 +275,7 @@ private fun TrackerContent(
 
     var expanded by rememberSaveable { mutableStateOf(false) }
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
     val initialLimit = 20
     val totalCount = uiState.presets.size
     val presetsToShow = if (expanded) uiState.presets else uiState.presets.take(initialLimit)
@@ -295,22 +297,31 @@ private fun TrackerContent(
                 modifier = Modifier
                     .fillMaxWidth()
                     .heightIn(min = 120.dp)
-                    .border(thinBorder, colors.border, RoundedCornerShape(16.dp))
-                    .background(colors.surfaceMuted, RoundedCornerShape(16.dp)),
+                    .border(
+                        thinBorder,
+                        if (isDark) HomeCardStyles.Surface.borderColor() else colors.border,
+                        RoundedCornerShape(16.dp)
+                    )
+                    .background(
+                        if (isDark) HomeCardStyles.Surface.raised() else colors.surfaceMuted,
+                        RoundedCornerShape(16.dp)
+                    ),
                 placeholder = {
                     Text(
                         stringResource(R.string.workout_tracker_example_placeholder),
-                        color = colors.textMuted
+                        color = if (isDark) HomeCardStyles.Text.muted() else colors.textMuted
                     )
                 },
-                textStyle = MaterialTheme.typography.bodyLarge.copy(color = colors.textPrimary),
+                textStyle = MaterialTheme.typography.bodyLarge.copy(
+                    color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+                ),
                 shape = RoundedCornerShape(16.dp),
                 colors = OutlinedTextFieldDefaults.colors(
-                    focusedTextColor = colors.textPrimary,
-                    unfocusedTextColor = colors.textPrimary,
-                    cursorColor = colors.textPrimary,
-                    focusedContainerColor = colors.surfaceMuted,
-                    unfocusedContainerColor = colors.surfaceMuted,
+                    focusedTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
+                    unfocusedTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
+                    cursorColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
+                    focusedContainerColor = if (isDark) HomeCardStyles.Surface.raised() else colors.surfaceMuted,
+                    unfocusedContainerColor = if (isDark) HomeCardStyles.Surface.raised() else colors.surfaceMuted,
                     focusedBorderColor = Color.Transparent,
                     unfocusedBorderColor = Color.Transparent
                 )
@@ -319,6 +330,11 @@ private fun TrackerContent(
             Spacer(Modifier.height(20.dp))
 
             val isEnabled = uiState.textInput.isNotBlank()
+            val addButtonTextColor = if (isEnabled) {
+                if (isDark) Black else Color.White
+            } else {
+                if (isDark) HomeCardStyles.Text.muted() else Color.White
+            }
             Button(
                 onClick = rememberClickWithHaptic(onClick = onAddWorkout),
                 enabled = isEnabled,
@@ -328,16 +344,16 @@ private fun TrackerContent(
                 // ✅ 圓角更大（原本 16.dp → 改 28.dp）
                 shape = RoundedCornerShape(28.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Black,
-                    contentColor = Color.White,
-                    disabledContainerColor = Black,
-                    disabledContentColor = Color.White
+                    containerColor = if (isDark) HomeCardStyles.Text.primary() else Black,
+                    contentColor = if (isDark) Black else Color.White,
+                    disabledContainerColor = if (isDark) HomeCardStyles.Surface.raisedAlt() else Black,
+                    disabledContentColor = if (isDark) HomeCardStyles.Text.muted() else Color.White
                 )
             ) {
                 // ✅ 字體放大（bodyLarge → titleMedium）
                 Text(
                     text = stringResource(R.string.workout_tracker_add_workout),
-                    color = Color.White,
+                    color = addButtonTextColor,
                     // ✅ 稍大一點（bodyLarge）但保持 Medium 字重，不會太粗
                     style = MaterialTheme.typography.bodyLarge.copy(
                         fontWeight = FontWeight.Medium,
@@ -349,14 +365,20 @@ private fun TrackerContent(
             Spacer(Modifier.height(24.dp))
 
             Row(verticalAlignment = Alignment.CenterVertically) {
-                HorizontalDivider(modifier = Modifier.weight(1f), color = DividerGray)
+                HorizontalDivider(
+                    modifier = Modifier.weight(1f),
+                    color = if (isDark) HomeCardStyles.Surface.borderColor() else DividerGray
+                )
                 Text(
                     text = stringResource(R.string.workout_tracker_select_from_list),
                     modifier = Modifier.padding(horizontal = 8.dp),
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Gray600
+                    color = if (isDark) HomeCardStyles.Text.secondary() else Gray600
                 )
-                HorizontalDivider(modifier = Modifier.weight(1f), color = DividerGray)
+                HorizontalDivider(
+                    modifier = Modifier.weight(1f),
+                    color = if (isDark) HomeCardStyles.Surface.borderColor() else DividerGray
+                )
             }
 
             Spacer(Modifier.height(16.dp))
@@ -367,7 +389,7 @@ private fun TrackerContent(
                 preset = preset,
                 onClickPlus = { onClickPresetPlus(preset) }
             )
-            HorizontalDivider(color = Gray300)
+            HorizontalDivider(color = if (isDark) HomeCardStyles.Surface.borderColor() else Gray300)
         }
 
         if (totalCount > initialLimit) {
@@ -380,7 +402,11 @@ private fun TrackerContent(
                         } else {
                             stringResource(R.string.workout_tracker_show_more, remaining)
                         }
-                        Text(text = label, color = Black, style = MaterialTheme.typography.bodyMedium)
+                        Text(
+                            text = label,
+                            color = if (isDark) HomeCardStyles.Text.primary() else Black,
+                            style = MaterialTheme.typography.bodyMedium
+                        )
                     }
                 }
                 Spacer(Modifier.height(8.dp))
@@ -401,6 +427,8 @@ fun CyclingEstimatingLine(
     intervalMs: Int = 1600
 ) {
     val safePhrases = phrases.ifEmpty { listOf(stringResource(R.string.workout_tracker_estimating_fallback)) }
+    val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     var index by remember { mutableIntStateOf(0) }
 
@@ -419,7 +447,7 @@ fun CyclingEstimatingLine(
     ) { i ->
         Text(
             text = safePhrases[i],
-            color = Black,
+            color = if (isDark) HomeCardStyles.Text.primary() else Black,
             textAlign = TextAlign.Center,
             style = MaterialTheme.typography.titleLarge.copy(
                 fontWeight = FontWeight.SemiBold,
@@ -488,6 +516,9 @@ private fun SimpleHeaderBar(
     closeSize: Dp = 32.dp,        // ★ 原 32.dp → 40.dp
     closeIconSize: Dp = 24.dp     // ★ 原 24.dp → 28.dp
 ) {
+    val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -499,7 +530,10 @@ private fun SimpleHeaderBar(
                 .align(Alignment.CenterHorizontally)
                 .width(40.dp)
                 .height(4.dp)
-                .background(color = HandleGray.copy(alpha = 0.5f), shape = RoundedCornerShape(2.dp))
+                .background(
+                    color = if (isDark) HomeCardStyles.Sheet.handle() else HandleGray.copy(alpha = 0.5f),
+                    shape = RoundedCornerShape(2.dp)
+                )
         )
 
         Spacer(Modifier.height(gapAfterHandle)) // ★ 拉開距離
@@ -510,7 +544,7 @@ private fun SimpleHeaderBar(
                 text = title,
                 modifier = Modifier.align(Alignment.Center),
                 style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
-                color = Black
+                color = if (isDark) HomeCardStyles.Text.primary() else Black
             )
 
             Box(
@@ -518,14 +552,14 @@ private fun SimpleHeaderBar(
                     .align(Alignment.CenterEnd)
                     .size(closeSize)                 // ★ 放大按鈕外徑
                     .clip(CircleShape)
-                    .background(Black)
+                    .background(if (isDark) HomeCardStyles.Surface.raisedAlt() else Black)
                     .biteCalClickable { onClose() },
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Filled.Close,
                     contentDescription = "Close workout tracker icon",
-                    tint = Color.White,
+                    tint = if (isDark) HomeCardStyles.Text.primary() else Color.White,
                     modifier = Modifier.size(closeIconSize) // ★ 放大 icon
                 )
             }
@@ -545,10 +579,13 @@ fun EstimatingContent(
     ringSweep: Float = 90f,
     ringDurationMillis: Int = 900
 ) {
+    val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(BiteCalColors.current().surface),
+            .background(if (isDark) HomeCardStyles.Sheet.surface() else colors.surface),
         contentAlignment = Alignment.Center
     ) {
         // 中央：進度環 + 主文案（整組往上）
@@ -580,7 +617,7 @@ fun EstimatingContent(
         // 底部提示（相對底部再往上）
         Text(
             text = stringResource(R.string.workout_tracker_do_not_close),
-            color = Black.copy(alpha = 0.70f),
+            color = if (isDark) HomeCardStyles.Text.secondary() else Black.copy(alpha = 0.70f),
             style = MaterialTheme.typography.bodyMedium,
             modifier = Modifier
                 .align(Alignment.BottomCenter)
@@ -684,11 +721,13 @@ fun ResultContent(
         activityId = result.activityId,
         rawName = result.activityDisplay
     ).ifBlank { stringResource(R.string.workout_tracker_activity_content_label) }
+    val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(BiteCalColors.current().surface)
+            .background(if (isDark) HomeCardStyles.Sheet.surface() else colors.surface)
     ) {
         // 中央內容（整塊上移 centerLift）
         Column(
@@ -717,7 +756,7 @@ fun ResultContent(
             // (2) kcal
             Text(
                 text = stringResource(R.string.workout_tracker_kcal_value, result.kcal ?: 0),
-                color = Black,
+                color = if (isDark) HomeCardStyles.Text.primary() else Black,
                 style = MaterialTheme.typography.displaySmall.copy(
                     fontWeight = FontWeight.Bold,
                     fontSize = kcalTextSize
@@ -729,7 +768,7 @@ fun ResultContent(
             // (3) minutes + activity（單行省略）
             Text(
                 text = stringResource(R.string.workout_tracker_minutes_activity, result.minutes ?: 0, activityLabel),
-                color = Black,
+                color = if (isDark) HomeCardStyles.Text.primary() else Black,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.SemiBold)
@@ -740,8 +779,8 @@ fun ResultContent(
             // (4) 黑圓白勾徽章
             CheckBadge(
                 badgeSize = indicatorSize,
-                bgColor = Black,
-                checkColor = Color.White,
+                bgColor = if (isDark) HomeCardStyles.Surface.raisedAlt() else Black,
+                checkColor = if (isDark) HomeCardStyles.Text.primary() else Color.White,
                 checkStrokePercent = 0.16f,
                 checkScale = 0.60f
             )
@@ -769,8 +808,8 @@ fun ResultContent(
                     .height(buttonHeight),
                 shape = RoundedCornerShape(28.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Black,
-                    contentColor = Color.White
+                    containerColor = if (isDark) HomeCardStyles.Text.primary() else Black,
+                    contentColor = if (isDark) Black else Color.White
                 )
             ) {
                 Text(stringResource(R.string.workout_tracker_add_workout), fontSize = 16.sp, fontWeight = FontWeight.Bold)
@@ -786,8 +825,8 @@ fun ResultContent(
                     .height(buttonHeight),
                 shape = RoundedCornerShape(28.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Gray300,
-                    contentColor = Black
+                    containerColor = if (isDark) HomeCardStyles.Surface.raised() else Gray300,
+                    contentColor = if (isDark) HomeCardStyles.Text.primary() else Black
                 )
             ) {
                 Text(stringResource(R.string.workout_tracker_cancel), fontSize = 16.sp, fontWeight = FontWeight.Bold)
@@ -800,10 +839,13 @@ fun FailedContent(
     onTryAgain: () -> Unit,
     onCancel: () -> Unit
 ) {
+    val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(BiteCalColors.current().surface)
+            .background(if (isDark) HomeCardStyles.Sheet.surface() else colors.surface)
     ) {
         // 中央警示圖示（放大）
         Column(
@@ -826,7 +868,7 @@ fun FailedContent(
                 Icon(
                     imageVector = Icons.Filled.Warning,
                     contentDescription = null,
-                    tint = Color.White,
+                    tint = if (isDark) Black else Color.White,
                     modifier = Modifier.size(64.dp) // ✅ 原本 56 → 放大為 64
                 )
             }
@@ -835,7 +877,7 @@ fun FailedContent(
 
             Text(
                 stringResource(R.string.workout_tracker_scan_failed_title),
-                color = Black,
+                color = if (isDark) HomeCardStyles.Text.primary() else Black,
                 style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold)
             )
 
@@ -843,7 +885,7 @@ fun FailedContent(
 
             Text(
                 stringResource(R.string.workout_tracker_scan_failed_body),
-                color = Black.copy(alpha = 0.6f),
+                color = if (isDark) HomeCardStyles.Text.secondary() else Black.copy(alpha = 0.6f),
                 style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Medium),
                 textAlign = TextAlign.Center,
                 modifier = Modifier.padding(horizontal = 17.dp)
@@ -865,8 +907,8 @@ fun FailedContent(
                     .height(60.dp),
                 shape = RoundedCornerShape(28.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Black,
-                    contentColor = Color.White
+                    containerColor = if (isDark) HomeCardStyles.Text.primary() else Black,
+                    contentColor = if (isDark) Black else Color.White
                 )
             ) {
                 Text(
@@ -886,8 +928,8 @@ fun FailedContent(
                     .height(60.dp),
                 shape = RoundedCornerShape(28.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Gray300,
-                    contentColor = Black
+                    containerColor = if (isDark) HomeCardStyles.Surface.raised() else Gray300,
+                    contentColor = if (isDark) HomeCardStyles.Text.primary() else Black
                 )
             ) {
                 Text(
@@ -909,6 +951,8 @@ private fun HeaderSection(
 ) {
     val resolvedTitle = title ?: stringResource(R.string.workout_tracker_title)
     val resolvedSubtitle = subtitle ?: stringResource(R.string.workout_tracker_subtitle)
+    val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Column(
         modifier = Modifier
@@ -921,7 +965,10 @@ private fun HeaderSection(
                 .align(Alignment.CenterHorizontally)
                 .width(40.dp)
                 .height(4.dp)
-                .background(color = HandleGray.copy(alpha = 0.5f), shape = RoundedCornerShape(2.dp))
+                .background(
+                    color = if (isDark) HomeCardStyles.Sheet.handle() else HandleGray.copy(alpha = 0.5f),
+                    shape = RoundedCornerShape(2.dp)
+                )
         )
 
         Spacer(Modifier.height(20.dp))
@@ -932,7 +979,7 @@ private fun HeaderSection(
                 text = resolvedTitle,
                 modifier = Modifier.align(Alignment.Center),
                 style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
-                color = TextPrimary,
+                color = if (isDark) HomeCardStyles.Text.primary() else TextPrimary,
                 textAlign = TextAlign.Center
             )
 
@@ -942,14 +989,14 @@ private fun HeaderSection(
                     .align(Alignment.CenterEnd)
                     .size(32.dp) // ← 黑圓底更小
                     .clip(CircleShape)
-                    .background(Black)
+                    .background(if (isDark) HomeCardStyles.Surface.raisedAlt() else Black)
                     .biteCalClickable(onClick = onClose),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Filled.Close,
                     contentDescription = "Close workout tracker icon",
-                    tint = Color.White,
+                    tint = if (isDark) HomeCardStyles.Text.primary() else Color.White,
                     modifier = Modifier.size(24.dp) // ← X 更大
                 )
             }
@@ -961,7 +1008,7 @@ private fun HeaderSection(
         Text(
             text = resolvedSubtitle,
             style = MaterialTheme.typography.bodyMedium,
-            color = Gray600,
+            color = if (isDark) HomeCardStyles.Text.secondary() else Gray600,
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth()
         )
@@ -975,6 +1022,8 @@ private fun PresetWorkoutRow(
     onClickPlus: () -> Unit
 ) {
     val presetName = preset.localizedWorkoutName()
+    val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Row(
         modifier = Modifier
@@ -986,7 +1035,7 @@ private fun PresetWorkoutRow(
             modifier = Modifier
                 .size(48.dp)
                 .clip(CircleShape)
-                .background(Color(0xFFB5B5B5)),
+                .background(if (isDark) HomeCardStyles.Surface.raisedAlt() else Color(0xFFB5B5B5)),
             contentAlignment = Alignment.Center
         ) {
             Text(
@@ -1000,13 +1049,13 @@ private fun PresetWorkoutRow(
             Text(
                 text = presetName,
                 style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.SemiBold),
-                color = TextPrimary
+                color = if (isDark) HomeCardStyles.Text.primary() else TextPrimary
             )
             Spacer(Modifier.height(4.dp))
             Text(
                 text = stringResource(R.string.workout_preset_kcal_per_30_min, preset.kcalPer30Min),
                 style = MaterialTheme.typography.bodyMedium,
-                color = TextSecondary
+                color = if (isDark) HomeCardStyles.Text.secondary() else TextSecondary
             )
         }
         Spacer(Modifier.width(16.dp))
@@ -1015,8 +1064,8 @@ private fun PresetWorkoutRow(
             modifier = Modifier.size(32.dp),
             shape = CircleShape,
             colors = IconButtonDefaults.filledIconButtonColors(
-                containerColor = Black,
-                contentColor = Color.White
+                containerColor = if (isDark) HomeCardStyles.Surface.raisedAlt() else Black,
+                contentColor = if (isDark) HomeCardStyles.Text.primary() else Color.White
             )
         ) {
             Icon(

@@ -30,6 +30,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import com.calai.bitecal.ui.common.design.BiteCalColors
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import kotlin.math.roundToInt
 
 internal data class ChartTooltipMetricUi(
@@ -144,25 +145,31 @@ internal fun ChartTooltipCard(
     dayLabelStartPadding: Dp = ChartTooltipDefaults.DayLabelStartPadding
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
     val resolvedBorderColor = if (borderColor == ChartTooltipDefaults.BorderColor) {
-        colors.border
+        if (isDark) HomeCardStyles.Chart.border() else colors.border
     } else {
         borderColor
     }
     val resolvedLabelTextColor = if (labelTextColor == ChartTooltipDefaults.LabelTextColor) {
-        colors.textSecondary
+        if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
     } else {
         labelTextColor
     }
     val resolvedValueTextColor = if (valueTextColor == ChartTooltipDefaults.ValueTextColor) {
-        colors.textPrimary
+        if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
     } else {
         valueTextColor
     }
     val resolvedDayLabelColor = if (dayLabelColor == ChartTooltipDefaults.DayLabelColor) {
-        colors.textMuted
+        if (isDark) HomeCardStyles.Text.muted() else colors.textMuted
     } else {
         dayLabelColor
+    }
+    val resolvedContainerColor = if (isDark) {
+        HomeCardStyles.Chart.tooltipSurface()
+    } else {
+        colors.surface
     }
 
     Column(
@@ -176,7 +183,7 @@ internal fun ChartTooltipCard(
                 clip = false
             )
             .background(
-                color = colors.surface,
+                color = resolvedContainerColor,
                 shape = RoundedCornerShape(ChartTooltipDefaults.CornerRadius)
             )
             .border(

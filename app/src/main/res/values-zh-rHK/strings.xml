@@ -565,7 +565,7 @@
     <string name="weight_chart_tab_90_days">90 天</string>
     <string name="weight_chart_tab_all_time">All time</string>
     <string name="weight_chart_title">體重趨勢</string>
-    <string name="weight_chart_goal_progress_badge">目標進度 %1$d%%</string>
+    <string name="weight_chart_goal_progress_badge">目標進度 %1$s%%</string>
     <string name="weight_chart_goal_label">目標</string>
     <string name="weight_chart_to_goal">距離目標 %1$s</string>
     <string name="weight_goal_chart_empty_hint">記錄體重後，這裡會顯示你的趨勢</string>

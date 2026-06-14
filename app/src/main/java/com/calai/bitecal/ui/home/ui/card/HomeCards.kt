@@ -1252,7 +1252,7 @@ fun WeightFastingRowModern(
         WeightAndFastingCard(
             primary = weightPrimary,
             secondary = stringResource(R.string.weight_card_of_goal),
-            ringColor = HomeCardStyles.Palette.weight(),
+            ringColor = HomeCardStyles.Palette.workout(),
             progress = weightProgress,
             modifier = Modifier
                 .weight(1f)
@@ -1270,6 +1270,8 @@ fun WeightFastingRowModern(
             primaryTopSpacing = 4.dp,
             secondaryYOffset = (-5).dp,
             gapPrimaryToSecondary = 0.dp,
+            centerIconTint = HomeCardStyles.Palette.workoutIcon(),
+            centerDiskColor = HomeCardStyles.Ring.centerFill(),
             onAddWeightClick = onQuickLogWeight        // ★ 按「＋」直接開記錄頁
         )
 

@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import com.calai.bitecal.ui.common.design.BiteCalColors
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import java.time.LocalDate
 
 internal object ProgressChartAxisDefaults {
@@ -18,7 +19,7 @@ internal object ProgressChartAxisDefaults {
     fun gridColor(): Color {
         val colors = BiteCalColors.current()
         return if (colors.background == BiteCalColors.Dark.background) {
-            Color(0xFF34343A)
+            HomeCardStyles.Chart.grid()
         } else {
             GridColor
         }
@@ -28,7 +29,7 @@ internal object ProgressChartAxisDefaults {
     fun idleLabelColor(): Color {
         val colors = BiteCalColors.current()
         return if (colors.background == BiteCalColors.Dark.background) {
-            colors.textMuted
+            HomeCardStyles.Chart.idleLabel()
         } else {
             IdleLabelColor
         }
@@ -38,7 +39,7 @@ internal object ProgressChartAxisDefaults {
     fun todayLabelColor(): Color {
         val colors = BiteCalColors.current()
         return if (colors.background == BiteCalColors.Dark.background) {
-            colors.textPrimary
+            HomeCardStyles.Chart.todayLabel()
         } else {
             TodayLabelColor
         }

@@ -99,6 +99,7 @@ import java.util.concurrent.atomic.AtomicBoolean
 import kotlin.math.min
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 
 enum class CameraMode { FOOD, BARCODE, LABEL }
 
@@ -363,10 +364,10 @@ fun CameraScreen(
     val tileH = 72.dp
     val tileCorner = 14.dp
 
-    val tileBg = Color(0xFFE9EBEF).copy(alpha = 0.92f)
-    val selectedTileBg = Color(0xFF2F3237)
-    val tileText = Color.Black
-    val tileIcon = Color.Black
+    val tileBg = HomeCardStyles.Camera.tile()
+    val selectedTileBg = HomeCardStyles.Camera.selectedTile()
+    val tileText = HomeCardStyles.Camera.tileContent()
+    val tileIcon = HomeCardStyles.Camera.tileContent()
 
     BoxWithConstraints(
         modifier = Modifier
@@ -517,8 +518,8 @@ fun CameraScreen(
                         .testTag("camera_flash")
                         .offset(x = 8.dp, y = (-3).dp),
                     icon = if (torchOn) Icons.Outlined.FlashOn else Icons.Outlined.FlashOff,
-                    tint = Color(0xFF2B2F36).copy(alpha = 0.7f),
-                    bg = Color.White,
+                    tint = HomeCardStyles.Camera.controlTint(),
+                    bg = HomeCardStyles.Camera.controlBg(),
                     size = 37.dp,
                     enabled = flashEnabled,
                     onClick = {
@@ -799,11 +800,11 @@ private fun ModeTile(
     val interactionSource = remember { MutableInteractionSource() }
 
     val containerColor = if (selected) selectedColor else bg
-    val currentTextColor = if (selected) Color.White else textColor
-    val currentIconTint = if (selected) Color.White else iconTint
+    val currentTextColor = if (selected) HomeCardStyles.Camera.selectedTileContent() else textColor
+    val currentIconTint = if (selected) HomeCardStyles.Camera.selectedTileContent() else iconTint
     val border = BorderStroke(
         width = if (selected) 1.6.dp else 1.dp,
-        color = if (selected) Color.White.copy(alpha = 0.24f) else Color.Black.copy(alpha = 0.05f)
+        color = HomeCardStyles.Camera.tileBorder(selected)
     )
 
     Surface(

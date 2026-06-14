@@ -8,7 +8,6 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 /**
@@ -29,7 +28,8 @@ fun PagerDots(
             val active = (i == current)
             val size = if (active) 8.dp else 6.dp
             val alpha = animateFloatAsState(if (active) 1f else 0.5f, label = "dotAlpha").value
-            val color = animateColorAsState(if (active) Color.Black else Color.Black.copy(alpha = 0.5f), label = "dotColor").value
+            val targetColor = if (active) HomeCardStyles.Pager.active() else HomeCardStyles.Pager.inactive()
+            val color = animateColorAsState(targetColor, label = "dotColor").value
             Surface(
                 modifier = Modifier.size(size),
                 color = color.copy(alpha = alpha),

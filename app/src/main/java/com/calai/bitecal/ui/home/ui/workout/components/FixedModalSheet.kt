@@ -23,8 +23,8 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.calai.bitecal.i18n.ProvideComposeLocale
 import com.calai.bitecal.i18n.currentLocaleKey
-import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 
 /**
  * 一個固定在底部、完全不跟隨鍵盤位移的「自製」Modal Sheet」。
@@ -43,7 +43,6 @@ fun FixedModalSheet(
 
     val localeTag = currentLocaleKey()
     val scrimClick = onScrimClick
-    val colors = BiteCalColors.current()
 
     key(localeTag) {
         Dialog(
@@ -76,7 +75,7 @@ fun FixedModalSheet(
                     ) {
                         Surface(
                             modifier = Modifier.fillMaxWidth(),
-                            color = colors.surface,
+                            color = HomeCardStyles.Sheet.surface(),
                             shape = MaterialTheme.shapes.extraLarge,
                             tonalElevation = 0.dp,
                             shadowElevation = 8.dp

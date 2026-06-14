@@ -40,8 +40,8 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
-import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.home.components.CardStyles
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 
 @Immutable
 data class RecentlyUploadedEmptyStyle(
@@ -78,8 +78,6 @@ fun RecentlyUploadedEmptySection(
     lineHeight: TextUnit = 28.sp,
     titleFontWeight: FontWeight = FontWeight.SemiBold
 ) {
-    val colors = BiteCalColors.current()
-
     Column(modifier = modifier.fillMaxWidth()) {
         Text(
             text = stringResource(R.string.recently_uploaded_empty),
@@ -87,7 +85,7 @@ fun RecentlyUploadedEmptySection(
                 fontSize = titleFontSize,
                 lineHeight = lineHeight,
                 fontWeight = titleFontWeight,
-                color = colors.textPrimary
+                color = HomeCardStyles.Text.primary()
             ),
             modifier = Modifier.padding(
                 start = titleStartPadding,
@@ -123,14 +121,15 @@ fun RecentlyUploadedEmptyCard(
 ) {
     val outerShape = RoundedCornerShape(outerCorner)
     val pillShape = RoundedCornerShape(pillCorner)
-    val colors = BiteCalColors.current()
     val resolvedStyle = if (style == RecentlyUploadedEmptyStyle.Default) {
         style.copy(
-            outerContainerColor = colors.surfaceMuted,
-            outerBorderColor = colors.border,
-            innerPillColor = colors.surface,
-            innerPillBorderColor = colors.border,
-            hintColor = colors.textSecondary
+            outerContainerColor = HomeCardStyles.Surface.card(),
+            outerBorderColor = HomeCardStyles.Surface.borderColor(),
+            innerPillColor = HomeCardStyles.Surface.raised(),
+            innerPillBorderColor = HomeCardStyles.Surface.borderColor(),
+            iconBgColor = HomeCardStyles.Surface.raisedAlt(),
+            skeletonColor = HomeCardStyles.Loading.skeletonBase(),
+            hintColor = HomeCardStyles.Text.secondary()
         )
     } else {
         style

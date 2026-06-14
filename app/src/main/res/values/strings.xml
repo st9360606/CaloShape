@@ -563,7 +563,7 @@
     <string name="weight_chart_tab_90_days">90 days</string>
     <string name="weight_chart_tab_all_time">All time</string>
     <string name="weight_chart_title">Weight trend</string>
-    <string name="weight_chart_goal_progress_badge">%1$d%% of goal</string>
+    <string name="weight_chart_goal_progress_badge">%1$s%% of goal</string>
     <string name="weight_chart_goal_label">Goal</string>
     <string name="weight_chart_to_goal">%1$s to goal</string>
     <string name="weight_goal_chart_empty_hint">Log weight to start your trend</string>

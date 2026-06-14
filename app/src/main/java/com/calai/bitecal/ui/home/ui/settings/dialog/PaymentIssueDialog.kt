@@ -39,6 +39,7 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 
 @Composable
 fun PaymentIssueDialog(
@@ -63,6 +64,7 @@ fun PaymentIssueDialog(
     val dismissClick = rememberClickWithHaptic(onClick = onDismiss)
     val updatePaymentClick = rememberClickWithHaptic(onClick = onUpdatePaymentMethod)
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Dialog(
         onDismissRequest = onDismiss,
@@ -80,7 +82,7 @@ fun PaymentIssueDialog(
         ) {
             Surface(
                 shape = RoundedCornerShape(28.dp),
-                color = colors.surface,
+                color = if (isDark) HomeCardStyles.Dialog.surface() else colors.surface,
                 tonalElevation = 0.dp,
                 shadowElevation = 0.dp,
                 modifier = Modifier.fillMaxWidth()
@@ -205,6 +207,7 @@ private fun DialogHeader(
     onDismiss: () -> Unit
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Box(
         modifier = Modifier.fillMaxWidth()
@@ -242,7 +245,7 @@ private fun DialogHeader(
                 modifier = Modifier
                     .size(32.dp)
                     .clip(CircleShape)
-                    .background(colors.surfaceMuted),
+                    .background(if (isDark) HomeCardStyles.Dialog.panel() else colors.surfaceMuted),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
@@ -258,6 +261,7 @@ private fun DialogHeader(
 @Composable
 private fun PaymentIssueHero() {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Box(
         modifier = Modifier
@@ -266,14 +270,14 @@ private fun PaymentIssueHero() {
             .background(
                 brush = Brush.linearGradient(
                     colors = listOf(
-                        colors.surfaceMuted,
-                        colors.border.copy(alpha = 0.70f)
+                        if (isDark) HomeCardStyles.Dialog.panel() else colors.surfaceMuted,
+                        if (isDark) HomeCardStyles.Dialog.border() else colors.border.copy(alpha = 0.70f)
                     )
                 )
             )
             .border(
                 width = 1.dp,
-                color = colors.border,
+                color = if (isDark) HomeCardStyles.Dialog.border() else colors.border,
                 shape = CircleShape
             ),
         contentAlignment = Alignment.Center
@@ -282,10 +286,10 @@ private fun PaymentIssueHero() {
             modifier = Modifier
                 .size(66.dp)
                 .clip(CircleShape)
-                .background(colors.surface)
+                .background(if (isDark) HomeCardStyles.Dialog.surface() else colors.surface)
                 .border(
                     width = 1.dp,
-                    color = colors.border,
+                    color = if (isDark) HomeCardStyles.Dialog.border() else colors.border,
                     shape = CircleShape
                 ),
             contentAlignment = Alignment.Center
@@ -307,15 +311,16 @@ private fun PaymentIssueStatusPanel(
     updatePaymentShortText: String
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(20.dp))
-            .background(colors.surfaceMuted)
+            .background(if (isDark) HomeCardStyles.Dialog.panel() else colors.surfaceMuted)
             .border(
                 width = 1.dp,
-                color = colors.border,
+                color = if (isDark) HomeCardStyles.Dialog.border() else colors.border,
                 shape = RoundedCornerShape(20.dp)
             )
             .padding(horizontal = 16.dp, vertical = 14.dp),
@@ -345,6 +350,7 @@ private fun PaymentIssueInfoRow(
     valueColor: Color
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Row(
         modifier = Modifier.fillMaxWidth(),
@@ -354,10 +360,10 @@ private fun PaymentIssueInfoRow(
             modifier = Modifier
                 .size(32.dp)
                 .clip(CircleShape)
-                .background(colors.surface)
+                .background(if (isDark) HomeCardStyles.Dialog.surface() else colors.surface)
                 .border(
                     width = 1.dp,
-                    color = colors.border,
+                    color = if (isDark) HomeCardStyles.Dialog.border() else colors.border,
                     shape = CircleShape
                 ),
             contentAlignment = Alignment.Center

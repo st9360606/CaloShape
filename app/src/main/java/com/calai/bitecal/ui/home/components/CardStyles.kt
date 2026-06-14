@@ -53,6 +53,25 @@ object HomeCardStyles {
         fun border(): BorderStroke = BorderStroke(1.2.dp, borderColor())
     }
 
+    object Sheet {
+        @Composable
+        fun surface(): Color = if (HomeCardStyles.isDark()) Color(0xFF18151F) else BiteCalColors.current().surface
+
+        @Composable
+        fun handle(): Color = if (HomeCardStyles.isDark()) Color(0xFF6F687C) else Color(0xFF9CA3AF)
+    }
+
+    object Dialog {
+        @Composable
+        fun surface(): Color = if (HomeCardStyles.isDark()) Color(0xFF18151F) else BiteCalColors.current().surface
+
+        @Composable
+        fun panel(): Color = if (HomeCardStyles.isDark()) Color(0xFF24212D) else BiteCalColors.current().surfaceMuted
+
+        @Composable
+        fun border(): Color = if (HomeCardStyles.isDark()) Color(0xFF34303D) else BiteCalColors.current().border
+    }
+
     object PanelHeights {
         val Metric = 132.dp
     }
@@ -175,6 +194,89 @@ object HomeCardStyles {
         fun track(): Color = if (HomeCardStyles.isDark()) Color(0xFF302C3A) else Color(0xFFF1F2F4)
     }
 
+    object Chart {
+        @Composable
+        fun surface(): Color = if (HomeCardStyles.isDark()) Color(0xFF18151F) else BiteCalColors.current().surface
+
+        @Composable
+        fun insetSurface(): Color = if (HomeCardStyles.isDark()) Color(0xFF24212D) else BiteCalColors.current().surfaceMuted
+
+        @Composable
+        fun border(): Color = if (HomeCardStyles.isDark()) Color(0xFF34303D) else BiteCalColors.current().border
+
+        @Composable
+        fun grid(): Color = if (HomeCardStyles.isDark()) Color(0xFF34303D) else Color(0xFFBDBDBD)
+
+        @Composable
+        fun idleLabel(): Color = if (HomeCardStyles.isDark()) Color(0xFF8F899C) else Color(0xFF8A8A8E)
+
+        @Composable
+        fun todayLabel(): Color = if (HomeCardStyles.isDark()) Color(0xFFF7F5FF) else Color(0xFF4B5563)
+
+        @Composable
+        fun footerSurface(): Color = if (HomeCardStyles.isDark()) Color(0xFF24212D) else BiteCalColors.current().surfaceMuted
+
+        @Composable
+        fun tooltipSurface(): Color = if (HomeCardStyles.isDark()) Color(0xFF24212D) else BiteCalColors.current().surface
+    }
+
+    object Status {
+        val Success = Color(0xFF22C55E)
+        val Error = Color(0xFFEF4444)
+        val Warning = Color(0xFFFFC46B)
+
+        @Composable
+        fun successText(): Color = if (HomeCardStyles.isDark()) Color(0xFF7EE2A8) else Color(0xFF166534)
+
+        @Composable
+        fun successBg(): Color = if (HomeCardStyles.isDark()) Color(0xFF143524) else Color(0xFFEAF7EF)
+
+        @Composable
+        fun successBorder(): Color = if (HomeCardStyles.isDark()) Color(0xFF2A6B47) else Color(0xFFCDEBD8)
+
+        @Composable
+        fun neutralBg(): Color = if (HomeCardStyles.isDark()) Color(0xFF2A2633) else Color(0xFFF3F4F6)
+
+        @Composable
+        fun neutralText(): Color = if (HomeCardStyles.isDark()) Color(0xFFC9C4D4) else Color(0xFF4B5563)
+
+        @Composable
+        fun neutralBorder(): Color = if (HomeCardStyles.isDark()) Color(0xFF4A4558) else Color(0xFFDADDE3)
+
+        @Composable
+        fun dangerText(): Color = if (HomeCardStyles.isDark()) Color(0xFFFF8A8A) else Color(0xFFE5484D)
+    }
+
+    object Camera {
+        @Composable
+        fun tile(): Color = if (HomeCardStyles.isDark()) Color(0xFF24212D).copy(alpha = 0.94f) else Color(0xFFE9EBEF).copy(alpha = 0.92f)
+
+        @Composable
+        fun selectedTile(): Color = if (HomeCardStyles.isDark()) Color(0xFFF7F5FF) else Color(0xFF2F3237)
+
+        @Composable
+        fun tileContent(): Color = if (HomeCardStyles.isDark()) Color(0xFFF7F5FF) else Color.Black
+
+        @Composable
+        fun selectedTileContent(): Color = if (HomeCardStyles.isDark()) Color(0xFF111114) else Color.White
+
+        @Composable
+        fun tileBorder(selected: Boolean): Color {
+            return when {
+                selected && HomeCardStyles.isDark() -> Color(0xFFC9C4D4).copy(alpha = 0.44f)
+                selected -> Color.White.copy(alpha = 0.24f)
+                HomeCardStyles.isDark() -> Color(0xFF34303D)
+                else -> Color.Black.copy(alpha = 0.05f)
+            }
+        }
+
+        @Composable
+        fun controlBg(): Color = if (HomeCardStyles.isDark()) Color(0xFF24212D).copy(alpha = 0.86f) else Color.White
+
+        @Composable
+        fun controlTint(): Color = if (HomeCardStyles.isDark()) Color(0xFFF7F5FF) else Color(0xFF2B2F36).copy(alpha = 0.7f)
+    }
+
     object Action {
         @Composable
         fun primaryContainer(): Color = if (HomeCardStyles.isDark()) Color(0xFF73BFE8) else Color(0xFF111114)
@@ -230,6 +332,14 @@ object HomeCardStyles {
 
         @Composable
         fun ring(): Color = if (HomeCardStyles.isDark()) Color(0xFF8E87A3) else Color.White.copy(alpha = 0.95f)
+    }
+
+    object Pager {
+        @Composable
+        fun active(): Color = if (HomeCardStyles.isDark()) Color(0xFFF7F5FF) else Color.Black
+
+        @Composable
+        fun inactive(): Color = if (HomeCardStyles.isDark()) Color(0xFF6F687C) else Color.Black.copy(alpha = 0.5f)
     }
 
     object Calendar {

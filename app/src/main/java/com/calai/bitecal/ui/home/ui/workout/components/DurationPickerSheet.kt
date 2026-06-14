@@ -59,6 +59,7 @@ import com.calai.bitecal.i18n.ProvideComposeLocale
 import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.HapticWheelTickEffect
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import java.util.Locale
 import kotlin.math.abs
 
@@ -77,7 +78,6 @@ fun DurationPickerSheet(
         }
     )
 ) {
-    val colors = BiteCalColors.current()
     val sheetHeight = 546.dp
 
     var hours by remember { mutableIntStateOf(0) }
@@ -113,7 +113,7 @@ fun DurationPickerSheet(
                 onDismissRequest = { onCancel() },
                 dragHandle = null,
                 shape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp),
-                containerColor = colors.surface,
+                containerColor = HomeCardStyles.Sheet.surface(),
                 tonalElevation = 0.dp,
                 contentWindowInsets = { WindowInsets(0, 0, 0, 0) }
             ) {
@@ -135,14 +135,14 @@ fun DurationPickerSheet(
                                 .width(42.dp)
                                 .height(5.dp)
                                 .clip(RoundedCornerShape(999.dp))
-                                .background(colors.border)
+                                .background(HomeCardStyles.Sheet.handle())
                         )
                         Text(
                             text = titleText,
                             style = MaterialTheme.typography.titleLarge.copy(
                                 fontWeight = FontWeight.Bold
                             ),
-                            color = colors.textPrimary,
+                            color = HomeCardStyles.Text.primary(),
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(top = 18.dp),
@@ -152,7 +152,7 @@ fun DurationPickerSheet(
                         Text(
                             text = subtitleText,
                             style = MaterialTheme.typography.bodyMedium,
-                            color = colors.textSecondary,
+                            color = HomeCardStyles.Text.secondary(),
                             modifier = Modifier.fillMaxWidth(),
                             textAlign = TextAlign.Center
                         )
@@ -187,7 +187,7 @@ fun DurationPickerSheet(
                                 Spacer(Modifier.width(8.dp))
                                 Text(
                                     text = hourText,
-                                    color = colors.textSecondary,
+                                    color = HomeCardStyles.Text.secondary(),
                                     fontSize = 21.sp,
                                     fontWeight = FontWeight.Medium
                                 )
@@ -202,7 +202,7 @@ fun DurationPickerSheet(
                                 Spacer(Modifier.width(8.dp))
                                 Text(
                                     text = minuteText,
-                                    color = colors.textSecondary,
+                                    color = HomeCardStyles.Text.secondary(),
                                     fontSize = 21.sp,
                                     fontWeight = FontWeight.Medium
                                 )
@@ -226,8 +226,8 @@ fun DurationPickerSheet(
                                 .height(56.dp),
                             shape = RoundedCornerShape(28.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = colors.primaryButtonContainer,
-                                contentColor = colors.primaryButtonContent
+                                containerColor = BiteCalColors.current().primaryButtonContainer,
+                                contentColor = BiteCalColors.current().primaryButtonContent
                             )
                         ) {
                             Text(
@@ -245,8 +245,8 @@ fun DurationPickerSheet(
                                 .height(56.dp),
                             shape = RoundedCornerShape(28.dp),
                             colors = ButtonDefaults.outlinedButtonColors(
-                                containerColor = colors.surfaceMuted,
-                                contentColor = colors.textPrimary
+                                containerColor = HomeCardStyles.Surface.raised(),
+                                contentColor = HomeCardStyles.Text.primary()
                             )
                         ) {
                             Text(
@@ -273,7 +273,6 @@ private fun DurationWheelColumn(
     selectedFontWeight: FontWeight = FontWeight.Bold,
     unselectedFontWeight: FontWeight = FontWeight.Normal
 ) {
-    val colors = BiteCalColors.current()
     val visibleCount = 5
     val itemHeight = 44.dp
 
@@ -357,9 +356,9 @@ private fun DurationWheelColumn(
                     fontSize = if (isCenter) selectedFontSize else unselectedFontSize,
                     fontWeight = if (isCenter) selectedFontWeight else unselectedFontWeight,
                     color = if (isCenter) {
-                        colors.textPrimary
+                        HomeCardStyles.Text.primary()
                     } else {
-                        colors.textMuted
+                        HomeCardStyles.Text.muted()
                     },
                     textAlign = TextAlign.Center
                 )
@@ -371,11 +370,10 @@ private fun DurationWheelColumn(
 private fun DurationSelectionBandBehind(
     modifier: Modifier = Modifier
 ) {
-    val colors = BiteCalColors.current()
     val bandHeight = 44.dp
     val bandRadius = 10.dp
-    val bandColor = colors.surfaceMuted
-    val lineColor = colors.border
+    val bandColor = HomeCardStyles.Surface.raisedAlt()
+    val lineColor = HomeCardStyles.Surface.borderColor()
 
     Box(modifier = modifier) {
         Box(

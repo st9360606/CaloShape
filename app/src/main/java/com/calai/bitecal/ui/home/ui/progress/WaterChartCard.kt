@@ -47,6 +47,7 @@ import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import com.calai.bitecal.ui.home.ui.progress.model.WaterChartUi
 import com.calai.bitecal.ui.home.ui.progress.model.WaterProgressDayUi
 import com.calai.bitecal.ui.home.ui.progress.tooltip.ChartTooltipCard
@@ -146,17 +147,25 @@ internal fun WaterErrorCard(
     modifier: Modifier = Modifier
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .background(colors.surface, RoundedCornerShape(28.dp))
-            .border(1.dp, colors.border, RoundedCornerShape(28.dp))
+            .background(
+                if (isDark) HomeCardStyles.Chart.surface() else colors.surface,
+                RoundedCornerShape(28.dp)
+            )
+            .border(
+                1.dp,
+                if (isDark) HomeCardStyles.Chart.border() else colors.border,
+                RoundedCornerShape(28.dp)
+            )
             .padding(horizontal = 26.dp, vertical = 26.dp)
     ) {
         Text(
             text = stringResource(R.string.water_chart_title),
-            color = colors.textPrimary,
+            color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold
         )
@@ -169,7 +178,7 @@ internal fun WaterErrorCard(
         ) {
             Text(
                 text = message,
-                color = colors.textPrimary,
+                color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                 fontSize = 14.sp,
                 textAlign = TextAlign.Center
             )
@@ -209,9 +218,12 @@ private fun WaterChartCardFrame(
     chartContent: @Composable () -> Unit
 ) {
     val colors = BiteCalColors.current()
-    val resolvedFooterBackground = footerBackground.copy(
-        alpha = if (colors.background == BiteCalColors.Dark.background) 0.18f else footerBackground.alpha
-    )
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val resolvedFooterBackground = if (isDark) {
+        HomeCardStyles.Chart.footerSurface()
+    } else {
+        footerBackground
+    }
 
     val resolvedDeltaText = if (deltaText == "--") {
         "--%"
@@ -224,8 +236,15 @@ private fun WaterChartCardFrame(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .background(colors.surface, RoundedCornerShape(28.dp))
-            .border(1.dp, colors.border, RoundedCornerShape(28.dp))
+            .background(
+                if (isDark) HomeCardStyles.Chart.surface() else colors.surface,
+                RoundedCornerShape(28.dp)
+            )
+            .border(
+                1.dp,
+                if (isDark) HomeCardStyles.Chart.border() else colors.border,
+                RoundedCornerShape(28.dp)
+            )
             .padding(horizontal = 26.dp, vertical = 26.dp)
     ) {
         val metricChipWidth = 102.dp
@@ -245,7 +264,7 @@ private fun WaterChartCardFrame(
                 ) {
                     Text(
                         text = title,
-                        color = colors.textPrimary,
+                        color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.padding(top = 10.dp)
@@ -256,7 +275,7 @@ private fun WaterChartCardFrame(
                     ) {
                         Text(
                             text = headlineValue,
-                            color = colors.textPrimary,
+                            color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                             fontSize = 36.sp,
                             fontWeight = FontWeight.Bold,
                             lineHeight = 36.sp
@@ -266,7 +285,7 @@ private fun WaterChartCardFrame(
 
                         Text(
                             text = unitText,
-                            color = colors.textSecondary,
+                            color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
                             fontSize = 18.sp,
                             fontWeight = FontWeight.Medium,
                             modifier = Modifier.padding(bottom = 4.dp)
@@ -344,11 +363,19 @@ private fun WaterMetricChip(
     modifier: Modifier = Modifier
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Row(
         modifier = modifier
-            .background(colors.surfaceMuted, RoundedCornerShape(14.dp))
-            .border(1.dp, colors.border, RoundedCornerShape(14.dp))
+            .background(
+                if (isDark) HomeCardStyles.Chart.insetSurface() else colors.surfaceMuted,
+                RoundedCornerShape(14.dp)
+            )
+            .border(
+                1.dp,
+                if (isDark) HomeCardStyles.Chart.border() else colors.border,
+                RoundedCornerShape(14.dp)
+            )
             .padding(horizontal = 10.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -364,7 +391,7 @@ private fun WaterMetricChip(
         Column {
             Text(
                 text = label,
-                color = colors.textSecondary,
+                color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
                 fontSize = 10.sp,
                 lineHeight = 12.sp,
                 fontWeight = FontWeight.Bold
@@ -374,7 +401,7 @@ private fun WaterMetricChip(
 
             Text(
                 text = value,
-                color = colors.textPrimary,
+                color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                 fontSize = 12.sp,
                 lineHeight = 14.sp,
                 fontWeight = FontWeight.SemiBold
@@ -385,6 +412,7 @@ private fun WaterMetricChip(
 @Composable
 private fun WaterLegendRow() {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Row(
         modifier = Modifier.fillMaxWidth(),
@@ -405,7 +433,7 @@ private fun WaterLegendRow() {
 
             Text(
                 text = stringResource(R.string.water_legend_intake),
-                color = colors.textPrimary,
+                color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Medium
             )
@@ -434,7 +462,7 @@ private fun WaterLegendRow() {
 
             Text(
                 text = stringResource(R.string.water_legend_daily_goal),
-                color = colors.textPrimary,
+                color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Medium
             )

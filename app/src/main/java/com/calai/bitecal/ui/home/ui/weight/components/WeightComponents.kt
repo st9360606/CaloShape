@@ -230,18 +230,13 @@ fun WeightComponents(ui: WeightViewModel.UiState) {
             HorizontalDivider(color = divider, thickness = 1.dp)
             Spacer(Modifier.height(10.dp))
 
-            val achievedFractionForLabel: Float =
-                if (unit == UserProfileStore.WeightUnit.KG) {
-                    progress
-                } else {
-                    // ✅ LBS 模式：用 DB lbs 算 ACHIEVED（資料不足就 fallback 回 kg）
-                    computeWeightProgressFractionLbs(
-                        timeSeries = ui.series,
-                        currentLbs = currentLbs,
-                        goalLbs = goalLbs,
-                        profileWeightLbs = ui.profileWeightLbs
-                    ) ?: progress
-                }
+            val achievedFractionForLabel = computeDisplayedWeightGoalProgressFraction(
+                ui = ui,
+                currentKg = currentKg,
+                currentLbs = currentLbs,
+                goalKg = goalKg,
+                goalLbs = goalLbs
+            )
 
             UpperLabel(
                 text = stringResource(
@@ -288,6 +283,32 @@ fun WeightComponents(ui: WeightViewModel.UiState) {
                 )
             }
         }
+    }
+}
+
+private fun computeDisplayedWeightGoalProgressFraction(
+    ui: WeightViewModel.UiState,
+    currentKg: Double?,
+    currentLbs: Double?,
+    goalKg: Double?,
+    goalLbs: Double?
+): Float {
+    val kgProgress = computeWeightProgress(
+        timeSeries = ui.series,
+        currentKg = currentKg,
+        goalKg = goalKg,
+        profileWeightKg = ui.profileWeightKg
+    ).fraction
+
+    return if (ui.unit == UserProfileStore.WeightUnit.KG) {
+        kgProgress
+    } else {
+        computeWeightProgressFractionLbs(
+            timeSeries = ui.series,
+            currentLbs = currentLbs,
+            goalLbs = goalLbs,
+            profileWeightLbs = ui.profileWeightLbs
+        ) ?: kgProgress
     }
 }
 
@@ -520,19 +541,19 @@ fun WeightChartCard(
 ) {
     val unit          = ui.unit
     val currentKg     = ui.current ?: ui.profileWeightKg
+    val currentLbs    = ui.currentLbs ?: ui.profileWeightLbs
     val goalKg        = ui.goal              // ★ 只用 DB user_profiles.goal_weight_kg
-    val profileWeight = ui.profileWeightKg   // 起點仍然用 DB 的 current weight
+    val goalLbs       = ui.goalLbs
 
-    val progressFraction = computeWeightProgress(
-        timeSeries       = ui.series,
-        currentKg        = currentKg,
-        goalKg           = goalKg,
-        profileWeightKg  = profileWeight
-    ).fraction
+    val progressFraction = computeDisplayedWeightGoalProgressFraction(
+        ui = ui,
+        currentKg = currentKg,
+        currentLbs = currentLbs,
+        goalKg = goalKg,
+        goalLbs = goalLbs
+    )
 
-    val progressPercent = (progressFraction * 100f)
-        .toInt()
-        .coerceIn(0, 100)
+    val progressPercentText = formatAchievedPercent1(progressFraction)
     val colors = BiteCalColors.current()
 
     Card(
@@ -566,7 +587,7 @@ fun WeightChartCard(
                 )
                 Spacer(Modifier.width(12.dp))
                 GoalProgressBadge(
-                    progressPercent = progressPercent,
+                    progressPercentText = progressPercentText,
                     onClick = onEditGoalWeight
                 )
             }
@@ -593,7 +614,7 @@ fun WeightChartCard(
 
 @Composable
 private fun GoalProgressBadge(
-    progressPercent: Int,
+    progressPercentText: String,
     modifier: Modifier = Modifier,
     onClick: () -> Unit         // ★ 新增 callback
 ) {
@@ -625,7 +646,7 @@ private fun GoalProgressBadge(
         Text(
             text = stringResource(
                 R.string.weight_chart_goal_progress_badge,
-                progressPercent.coerceIn(0, 100)
+                progressPercentText
             ),
             fontSize = 12.sp,
             fontWeight = FontWeight.SemiBold,

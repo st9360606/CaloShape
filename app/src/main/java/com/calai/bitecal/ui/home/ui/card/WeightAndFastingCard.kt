@@ -76,6 +76,8 @@ fun WeightAndFastingCard(
     centerIconDescription: String = "weight target",
     centerIconTint: Color? = null,                    // Vector 想統一色可給 Color(0xFF111114)
 
+    centerDiskColor: Color = HomeCardStyles.Ring.centerFill(),
+
     topBarTitle: String = "Weight",
     topBarHeight: Dp = TopBarDefaults.Height,
     topBarTextStyle: TextStyle = MaterialTheme.typography.titleSmall,
@@ -178,7 +180,7 @@ fun WeightAndFastingCard(
 
                     // ✅ 中心灰圓底 + bullseye
                     Surface(
-                        color = HomeCardStyles.Ring.centerFill(),
+                        color = centerDiskColor,
                         shape = CircleShape,
                         modifier = Modifier.size(centerDisk)
                     ) {

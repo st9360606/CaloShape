@@ -34,6 +34,7 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 
 @Composable
 fun DeleteAccountDialog(
@@ -55,6 +56,7 @@ fun DeleteAccountDialog(
     val cancelClick = rememberClickWithHaptic(enabled = !deleting, onClick = onCancel)
     val deleteClick = rememberClickWithHaptic(enabled = !deleting, onClick = onDelete)
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Dialog(
         onDismissRequest = { if (!deleting) onDismiss() },
@@ -72,7 +74,7 @@ fun DeleteAccountDialog(
         ) {
             Surface(
                 shape = RoundedCornerShape(16.dp),
-                color = colors.surface,
+                color = if (isDark) HomeCardStyles.Dialog.surface() else colors.surface,
                 tonalElevation = 0.dp,
                 shadowElevation = 0.dp,
                 modifier = Modifier.fillMaxWidth()
@@ -95,7 +97,10 @@ fun DeleteAccountDialog(
                         Box(
                             modifier = Modifier
                                 .size(33.dp)
-                                .background(colors.surfaceMuted, CircleShape),
+                                .background(
+                                    if (isDark) HomeCardStyles.Dialog.panel() else colors.surfaceMuted,
+                                    CircleShape
+                                ),
                             contentAlignment = Alignment.Center
                         ) {
                             IconButton(
@@ -136,7 +141,7 @@ fun DeleteAccountDialog(
                             shape = RoundedCornerShape(999.dp),
                             border = BorderStroke(0.8.dp, colors.textPrimary.copy(alpha = 0.62f)),
                             colors = ButtonDefaults.outlinedButtonColors(
-                                containerColor = colors.surface,
+                                containerColor = if (isDark) HomeCardStyles.Dialog.panel() else colors.surface,
                                 contentColor = colors.textPrimary
                             ),
                             modifier = Modifier

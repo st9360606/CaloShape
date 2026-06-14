@@ -932,8 +932,12 @@ private fun Avatar(
                 modifier = Modifier
                     .size(fallbackCircleSize)
                     .clip(CircleShape)
-                    .background(colors.surface)
-                    .border(1.25.dp, colors.border, CircleShape),
+                    .background(if (HomeCardStyles.isDark()) HomeCardStyles.Surface.raised() else colors.surface)
+                    .border(
+                        1.25.dp,
+                        if (HomeCardStyles.isDark()) HomeCardStyles.Surface.borderColor() else colors.border,
+                        CircleShape
+                    ),
                 contentAlignment = Alignment.Center
             ) {
                 Image(

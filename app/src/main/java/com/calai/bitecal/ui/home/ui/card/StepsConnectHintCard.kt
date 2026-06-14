@@ -17,8 +17,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 
 @Composable
 fun StepsConnectHintCard(
@@ -35,7 +35,6 @@ fun StepsConnectHintCard(
     onClick: (() -> Unit)? = null
 ) {
     val interaction = remember { MutableInteractionSource() }
-    val colors = BiteCalColors.current()
     val clickableMod = if (onClick != null) {
         Modifier.biteCalClickable(
             interactionSource = interaction,
@@ -46,8 +45,8 @@ fun StepsConnectHintCard(
     Card(
         modifier = modifier.then(clickableMod),
         shape = RoundedCornerShape(corner),
-        colors = CardDefaults.cardColors(containerColor = colors.surface),
-        border = BorderStroke(1.dp, colors.border)
+        colors = CardDefaults.cardColors(containerColor = HomeCardStyles.Surface.card()),
+        border = BorderStroke(1.dp, HomeCardStyles.Surface.borderColor())
     ) {
         // ✅ 撐 minHeight + 垂直置中：上下留白一致
         Box(
@@ -72,7 +71,7 @@ fun StepsConnectHintCard(
                     text = text,
                     modifier = Modifier.weight(1f),
                     style = textStyle,
-                    color = colors.textPrimary,
+                    color = HomeCardStyles.Text.primary(),
                     maxLines = maxLines,
                     overflow = TextOverflow.Ellipsis,
                     textAlign = TextAlign.Start
