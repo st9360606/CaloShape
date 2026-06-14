@@ -786,9 +786,13 @@ private fun ProfileSubscriptionBadge(
     subtitle: String,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
+    val isDark = HomeCardStyles.isDark()
     val visual = remember(kind) {
         ProfileSubscriptionVisual.from(kind)
     }
+    val badgeBorderColor = if (isDark) visual.darkBorderColor else visual.borderColor
+    val subtitleColor = if (isDark) colors.textPrimary else visual.subtitleColor
 
     val dotSize = 8.dp
     val dotLabelGap = 7.dp
@@ -808,7 +812,7 @@ private fun ProfileSubscriptionBadge(
                 )
                 .border(
                     width = 1.dp,
-                    color = visual.borderColor,
+                    color = badgeBorderColor,
                     shape = RoundedCornerShape(999.dp)
                 )
                 .padding(horizontal = horizontalPadding),
@@ -850,7 +854,7 @@ private fun ProfileSubscriptionBadge(
             softWrap = false,
             overflow = TextOverflow.Ellipsis,
             style = MaterialTheme.typography.bodySmall.copy(
-                color = visual.subtitleColor,
+                color = subtitleColor,
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 11.5.sp,
                 lineHeight = 14.5.sp
@@ -864,6 +868,7 @@ private data class ProfileSubscriptionVisual(
     @StringRes val fallbackSubtitleRes: Int,
     val backgroundColors: List<Color>,
     val borderColor: Color,
+    val darkBorderColor: Color,
     val dotColor: Color,
     val textColor: Color,
     val subtitleColor: Color,
@@ -881,6 +886,7 @@ private data class ProfileSubscriptionVisual(
                             Color(0xFFFFF1F2)
                         ),
                         borderColor = Color(0xFFFFD6DD),
+                        darkBorderColor = Color(0xFFFF8A8A).copy(alpha = 0.64f),
                         dotColor = Color(0xFFE85D75),
                         textColor = Color(0xFFA94A58),
                         subtitleColor = Color(0xFFC06F7B)
@@ -896,6 +902,7 @@ private data class ProfileSubscriptionVisual(
                             Color(0xFF18181B)
                         ),
                         borderColor = Color(0xFF111114),
+                        darkBorderColor = Color(0xFFE7C873).copy(alpha = 0.58f),
                         dotColor = Color(0xFFE7C873),
                         textColor = Color.White,
                         subtitleColor = Color(0xFF71717A)
@@ -911,6 +918,7 @@ private data class ProfileSubscriptionVisual(
                             Color(0xFFDCFCE7)
                         ),
                         borderColor = Color(0xFFBBF7D0),
+                        darkBorderColor = Color(0xFF5ECB7A).copy(alpha = 0.58f),
                         dotColor = Color.Transparent,
                         textColor = Color(0xFF15803D),
                         subtitleColor = Color(0xFF2F9E5E),
@@ -928,6 +936,7 @@ private data class ProfileSubscriptionVisual(
                             Color(0xFFEFEFF1)
                         ),
                         borderColor = Color(0xFFE4E4E7),
+                        darkBorderColor = Color(0xFF4A4558),
                         dotColor = Color.Transparent,
                         textColor = Color(0xFF3F3F46),
                         subtitleColor = Color(0xFF52525B),
@@ -1406,7 +1415,10 @@ private fun PreferencesCard(
             Column(Modifier.weight(1f)) {
                 Text(
                     text = stringResource(R.string.settings_appearance),
-                    style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.SemiBold)
+                    style = MaterialTheme.typography.titleMedium.copy(
+                        color = if (HomeCardStyles.isDark()) HomeCardStyles.Text.primary() else colors.textPrimary,
+                        fontWeight = FontWeight.SemiBold
+                    )
                 )
             }
 
@@ -1748,19 +1760,15 @@ private fun CaloriesWidgetPreviewCard(
                         .clip(CircleShape)
                         .background(
                             if (isDark) {
-                                HomeCardStyles.Action.addContainer()
+                                Color(0xFF111114)
                             } else {
                                 Color.White
                             }
                         )
-                        .border(
-                            width = if (isDark) 0.8.dp else 0.dp,
-                            color = if (isDark) HomeCardStyles.Action.addBorder() else Color.Transparent,
-                            shape = CircleShape
-                        ),
+                        .border(width = 0.dp, color = Color.Transparent, shape = CircleShape),
                     contentAlignment = Alignment.Center
                 ) {
-                    val plusColor = if (isDark) HomeCardStyles.Action.addContent() else Color(0xFF111114)
+                    val plusColor = if (isDark) Color.White else Color(0xFF111114)
                     Box(
                         modifier = Modifier.size(11.dp),
                         contentAlignment = Alignment.Center

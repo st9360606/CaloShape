@@ -152,6 +152,8 @@ fun CaloriesCardModern(
                 valueSuffixOffsetY = 4.dp,
                 valueToLabelSpacing = 0.dp,
                 labelOffsetY = 0.dp,
+                labelColor = if (HomeCardStyles.isDark()) HomeCardStyles.Text.label() else Color(0xFF3F3F46),
+                labelEmphasisColor = if (HomeCardStyles.isDark()) HomeCardStyles.Text.secondary() else Color(0xFF18181B),
                 modifier = Modifier
                     .weight(1f)
                     .offset(x = 12.dp)
@@ -571,7 +573,9 @@ private fun MacroStatCardModern(
                 valueSuffixWeight = FontWeight.Medium,
                 valueSuffixOffsetX = 3.dp,
                 valueSuffixOffsetY = 2.dp,
-                valueToLabelSpacing = 0.dp
+                valueToLabelSpacing = 0.dp,
+                labelColor = if (HomeCardStyles.isDark()) HomeCardStyles.Text.label() else Color(0xFF3F3F46),
+                labelEmphasisColor = if (HomeCardStyles.isDark()) HomeCardStyles.Text.secondary() else Color(0xFF18181B)
             )
 
             Spacer(Modifier.height(spacingTop))
@@ -900,7 +904,7 @@ fun StepsWorkoutRowModern(
                 Image(
                     painter = painterResource(R.drawable.footstep),
                     contentDescription = "Steps icon",
-                    colorFilter = ColorFilter.tint(HomeCardStyles.Palette.stepsIcon()),
+                    colorFilter = ColorFilter.tint(HomeCardStyles.Palette.steps()),
                     modifier = Modifier.size(18.dp)
                 )
             },
@@ -964,7 +968,7 @@ fun StepsWorkoutRowModern(
                 Image(
                     painter = painterResource(R.drawable.fitness),
                     contentDescription = "Workout Icon",
-                    colorFilter = ColorFilter.tint(HomeCardStyles.Palette.workoutIcon()),
+                    colorFilter = ColorFilter.tint(HomeCardStyles.Palette.workout()),
                     modifier = Modifier.size(24.dp)
                 )
             },
@@ -1243,6 +1247,8 @@ fun WeightFastingRowModern(
     onOpenWeight: () -> Unit,
     onQuickLogWeight: () -> Unit
 ) {
+    val isDark = HomeCardStyles.isDark()
+
     Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
         val dash = stringResource(R.string.common_dash)
         val commonTopBarHeight = 30.dp
@@ -1252,7 +1258,7 @@ fun WeightFastingRowModern(
         WeightAndFastingCard(
             primary = weightPrimary,
             secondary = stringResource(R.string.weight_card_of_goal),
-            ringColor = HomeCardStyles.Palette.workout(),
+            ringColor = HomeCardStyles.Palette.weight(),
             progress = weightProgress,
             modifier = Modifier
                 .weight(1f)
@@ -1270,7 +1276,7 @@ fun WeightFastingRowModern(
             primaryTopSpacing = 4.dp,
             secondaryYOffset = (-5).dp,
             gapPrimaryToSecondary = 0.dp,
-            centerIconTint = HomeCardStyles.Palette.workoutIcon(),
+            centerIconTint = if (isDark) HomeCardStyles.Palette.workoutIcon() else Color(0xFF111114),
             centerDiskColor = HomeCardStyles.Ring.centerFill(),
             onAddWeightClick = onQuickLogWeight        // ★ 按「＋」直接開記錄頁
         )

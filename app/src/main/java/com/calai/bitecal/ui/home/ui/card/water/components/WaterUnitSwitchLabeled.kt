@@ -108,7 +108,7 @@ fun WaterUnitSwitchLabeled(
     // 幾何（thumb 略寬於半寬）
     val innerWidthDp = width - padding * 2
     val halfDp = innerWidthDp / 2
-    val thumbWidthDp = (halfDp + 6.dp).coerceIn(halfDp, innerWidthDp)
+    val thumbWidthDp = halfDp
     val thumbHeightDp = height - padding * 2
     val travelDp = innerWidthDp - thumbWidthDp
 
