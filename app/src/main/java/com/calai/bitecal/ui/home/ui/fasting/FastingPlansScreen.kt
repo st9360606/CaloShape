@@ -75,7 +75,7 @@ import com.calai.bitecal.data.fasting.model.FastingPlan
 import com.calai.bitecal.ui.home.HomeTab
 import com.calai.bitecal.ui.home.components.CardStyles
 import com.calai.bitecal.ui.home.components.MainBottomBar
-import com.calai.bitecal.ui.common.design.BiteCalCommonScreenTokens
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.home.ui.fasting.model.FastingPlanViewModel
 import com.calai.bitecal.ui.common.haptic.HapticWheelTickEffect
@@ -142,14 +142,15 @@ fun FastingPlansScreen(
             else -> onBack()
         }
     }
+    val colors = BiteCalColors.current()
 
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(BiteCalCommonScreenTokens.softGrayBackground)
+            .background(colors.background)
     ) {
         Scaffold(
-            containerColor = BiteCalCommonScreenTokens.softGrayBackground,
+            containerColor = colors.background,
             topBar = {
                 BiteCalTopBar(
                     title = stringResource(R.string.fasting_plan_title),
@@ -167,7 +168,7 @@ fun FastingPlansScreen(
                 modifier = Modifier
                     .padding(p)
                     .fillMaxSize()
-                    .background(BiteCalCommonScreenTokens.softGrayBackground)
+                    .background(colors.background)
                     .verticalScroll(rememberScrollState())
                     .padding(horizontal = 20.dp, vertical = 5.dp)
             ) {
@@ -227,7 +228,7 @@ fun FastingPlansScreen(
                             style = MaterialTheme.typography.titleLarge.copy(
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 20.sp,
-                                color = Color.Black
+                                color = colors.textPrimary
                             ),
                             modifier = Modifier.padding(start = 18.dp)
                         )
@@ -265,7 +266,7 @@ fun FastingPlansScreen(
                         style = MaterialTheme.typography.titleLarge.copy(
                             fontWeight = FontWeight.Bold,
                             fontSize = 20.sp,
-                            color = Color.Black
+                            color = colors.textPrimary
                         ),
                         modifier = Modifier.fillMaxWidth(0.4f),
                         textAlign = TextAlign.Center
@@ -340,20 +341,21 @@ private fun FastingNotificationInfoCard(
     val statusChipBg = if (remindersEnabled) Color(0xFFEAF7EF) else Color(0xFFF3F4F6)
     val statusChipBorder = if (remindersEnabled) Color(0xFFCDEBD8) else Color(0xFFDADDE3)
 
-    val reminderIconBg = Color(0xFFFAFAFA)
+    val colors = BiteCalColors.current()
+    val reminderIconBg = colors.surfaceMuted
     val reminderIconMain = Color(0xFFF97316)
-    val reminderBadgeBg = Color.White
-    val reminderBadgeText = Color(0xFF111114)
-    val reminderBadgeBorder = Color(0xFFDADDE3)
+    val reminderBadgeBg = colors.surface
+    val reminderBadgeText = colors.textPrimary
+    val reminderBadgeBorder = colors.border
 
-    val statusBoxBg = Color(0xFFFAFAFA)
-    val statusBoxBorder = Color(0xFFE5E7EB)
-    val statusBoxText = Color(0xFF374151)
+    val statusBoxBg = colors.surfaceMuted
+    val statusBoxBorder = colors.border
+    val statusBoxText = colors.textSecondary
 
     Card(
         shape = CardStyles.Corner,
-        colors = CardDefaults.cardColors(containerColor = CardStyles.Bg),
-        border = CardStyles.Border
+        colors = CardDefaults.cardColors(containerColor = colors.surface),
+        border = BorderStroke(1.2.dp, colors.border)
     ) {
         Column(
             modifier = Modifier
@@ -371,7 +373,7 @@ private fun FastingNotificationInfoCard(
                         .background(reminderIconBg)
                         .border(
                             width = 1.dp,
-                            color = Color(0xFFE5E7EB),
+                            color = colors.border,
                             shape = RoundedCornerShape(16.dp)
                         ),
                     contentAlignment = Alignment.Center
@@ -430,7 +432,7 @@ private fun FastingNotificationInfoCard(
                             Text(
                                 text = stringResource(R.string.fasting_notification_info_title),
                                 style = MaterialTheme.typography.titleMedium.copy(
-                                    color = Color(0xFF111114),
+                                    color = colors.textPrimary,
                                     fontWeight = FontWeight.ExtraBold,
                                     fontSize = 17.sp,
                                     lineHeight = 21.sp
@@ -446,7 +448,7 @@ private fun FastingNotificationInfoCard(
                                     endText
                                 ),
                                 style = MaterialTheme.typography.bodySmall.copy(
-                                    color = Color(0xFF6B7280),
+                                    color = colors.textSecondary,
                                     fontSize = 13.sp,
                                     lineHeight = 18.sp,
                                     fontWeight = FontWeight.Medium
@@ -497,17 +499,17 @@ private fun FastingNotificationInfoCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(18.dp))
-                    .background(Color(0xFFFAFAFA))
+                    .background(colors.surfaceMuted)
                     .border(
                         width = 1.dp,
-                        color = Color(0xFFE5E7EB),
+                        color = colors.border,
                         shape = RoundedCornerShape(18.dp)
                     )
                     .padding(horizontal = 14.dp, vertical = 14.dp)
             ) {
                 NotificationTimelineRow(
                     stepText = "1",
-                    accentColor = Color(0xFF111114),
+                    accentColor = colors.textPrimary,
                     timeText = stringResource(R.string.fasting_notification_info_at_time, startText),
                     title = stringResource(R.string.fasting_notification_info_start_title),
                     body = stringResource(R.string.fasting_notification_info_start_body),
@@ -516,7 +518,7 @@ private fun FastingNotificationInfoCard(
 
                 NotificationTimelineRow(
                     stepText = "2",
-                    accentColor = Color(0xFF111114),
+                    accentColor = colors.textPrimary,
                     timeText = stringResource(R.string.fasting_notification_info_at_time, endSoonText),
                     title = stringResource(R.string.fasting_notification_info_endsoon_title),
                     body = stringResource(R.string.fasting_notification_info_endsoon_body, endText),
@@ -558,6 +560,8 @@ private fun NotificationTimelineRow(
     body: String,
     isLast: Boolean
 ) {
+    val colors = BiteCalColors.current()
+
     Row(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.Top
@@ -569,10 +573,10 @@ private fun NotificationTimelineRow(
                 modifier = Modifier
                     .size(30.dp)
                     .clip(CircleShape)
-                    .background(Color.White)
+                    .background(colors.surface)
                     .border(
                         width = 1.dp,
-                        color = Color(0xFFDADDE3),
+                        color = colors.border,
                         shape = CircleShape
                     ),
                 contentAlignment = Alignment.Center
@@ -593,7 +597,7 @@ private fun NotificationTimelineRow(
                     modifier = Modifier
                         .width(1.dp)
                         .height(46.dp)
-                        .background(Color(0xFFE5E7EB))
+                        .background(colors.border)
                 )
             }
         }
@@ -608,7 +612,7 @@ private fun NotificationTimelineRow(
             Text(
                 text = timeText,
                 style = MaterialTheme.typography.labelMedium.copy(
-                    color = Color(0xFF111114),
+                    color = colors.textPrimary,
                     fontSize = 12.sp,
                     lineHeight = 15.sp,
                     fontWeight = FontWeight.ExtraBold
@@ -620,7 +624,7 @@ private fun NotificationTimelineRow(
             Text(
                 text = title,
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    color = Color(0xFF111114),
+                    color = colors.textPrimary,
                     fontSize = 14.sp,
                     lineHeight = 18.sp,
                     fontWeight = FontWeight.Bold
@@ -632,7 +636,7 @@ private fun NotificationTimelineRow(
             Text(
                 text = body,
                 style = MaterialTheme.typography.bodySmall.copy(
-                    color = Color(0xFF6B7280),
+                    color = colors.textSecondary,
                     fontSize = 12.sp,
                     lineHeight = 17.sp,
                     fontWeight = FontWeight.Medium
@@ -667,6 +671,7 @@ private fun FastingPlanCard(
         "22:2" -> R.string.fasting_plan_desc_22_2
         else -> null
     }
+    val colors = BiteCalColors.current()
 
     Card(
         modifier = Modifier
@@ -674,8 +679,8 @@ private fun FastingPlanCard(
             .aspectRatio(0.9f)
             .biteCalClickable(role = Role.Button, onClick = onSelect),
         shape = CardStyles.Corner,
-        colors = CardDefaults.cardColors(containerColor = CardStyles.Bg),
-        border = CardStyles.Border
+        colors = CardDefaults.cardColors(containerColor = colors.surface),
+        border = BorderStroke(1.2.dp, colors.border)
     ) {
         Box(
             modifier = Modifier.fillMaxSize()
@@ -781,10 +786,11 @@ private fun CupertinoSwitch(
 
 @Composable
 private fun SelectionBandBehind() {
+    val colors = BiteCalColors.current()
     val bandHeight = 44.dp
     val bandRadius = 10.dp
-    val bandColor = Color(0xFFFAFAFA)
-    val lineColor = Color(0xFFD1D1D6)
+    val bandColor = colors.surfaceMuted
+    val lineColor = colors.border
 
     Box(Modifier.fillMaxSize()) {
         Box(
@@ -828,6 +834,7 @@ private fun WheelColumn(
     selectedFontWeight: FontWeight = FontWeight.Bold,
     unselectedFontWeight: FontWeight = FontWeight.Normal,
 ) {
+    val colors = BiteCalColors.current()
     val visibleCount = 5
     val itemHeight = 44.dp
 
@@ -889,7 +896,7 @@ private fun WheelColumn(
 
             val fontSize = if (isCenter) selectedFontSize else unselectedFontSize
             val weight = if (isCenter) selectedFontWeight else unselectedFontWeight
-            val color = if (isCenter) IOS_TEXT else IOS_TEXT_FADED
+            val color = if (isCenter) colors.textPrimary else colors.textMuted
 
             Box(
                 modifier = Modifier
@@ -929,13 +936,14 @@ private fun FastingPlanTimeValueCard(
     } else {
         Modifier
     }
+    val colors = BiteCalColors.current()
 
     Card(
         modifier = modifier
             .then(clickableModifier),
         shape = CardStyles.Corner,
-        colors = CardDefaults.cardColors(containerColor = CardStyles.Bg),
-        border = CardStyles.Border
+        colors = CardDefaults.cardColors(containerColor = colors.surface),
+        border = BorderStroke(1.2.dp, colors.border)
     ) {
         Box(
             modifier = Modifier.fillMaxSize(),
@@ -946,9 +954,9 @@ private fun FastingPlanTimeValueCard(
                 fontSize = 18.sp,
                 style = MaterialTheme.typography.titleLarge.copy(
                     color = if (enabled) {
-                        Color(0xFF0F172A)
+                        colors.textPrimary
                     } else {
-                        Color(0xFF0F172A).copy(alpha = 0.62f)
+                        colors.textPrimary.copy(alpha = 0.62f)
                     },
                     fontWeight = FontWeight.SemiBold
                 )
@@ -957,9 +965,6 @@ private fun FastingPlanTimeValueCard(
     }
 }
 
-private val IOS_TEXT = Color(0xFF111114)
-private val IOS_TEXT_FADED = Color(0xFF8E8E93)
-
 @Composable
 private fun CupertinoWheelTimePickerSheet(
     initial: LocalTime,
@@ -967,6 +972,7 @@ private fun CupertinoWheelTimePickerSheet(
     onDismiss: () -> Unit,
     onConfirm: (LocalTime) -> Unit
 ) {
+    val colors = BiteCalColors.current()
     var hour by rememberSaveable(initial) { mutableIntStateOf(initial.hour) }
     var minute by rememberSaveable(initial) { mutableIntStateOf(initial.minute) }
 
@@ -998,7 +1004,7 @@ private fun CupertinoWheelTimePickerSheet(
                 .fillMaxWidth()
                 .navigationBarsPadding()
                 .clip(RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp))
-                .background(Color(0xFFF5F5F5))
+                .background(colors.surface)
                 .padding(start = BiteCalScreenFrame.contentHorizontal, end = BiteCalScreenFrame.contentHorizontal, top = BiteCalScreenFrame.contentTop, bottom = BiteCalScreenFrame.contentBottomLarge)
                 .consumeClickWithoutHaptic(),
             horizontalAlignment = Alignment.CenterHorizontally
@@ -1009,14 +1015,14 @@ private fun CupertinoWheelTimePickerSheet(
                     .width(42.dp)
                     .height(5.dp)
                     .clip(RoundedCornerShape(999.dp))
-                    .background(Color(0xFFD1D1D6))
+                    .background(colors.border)
             )
 
             Text(
                 text = stringResource(R.string.fasting_picker_title),
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.Bold,
-                color = Color(0xFF111114),
+                color = colors.textPrimary,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(top = 18.dp),
@@ -1028,7 +1034,7 @@ private fun CupertinoWheelTimePickerSheet(
             Text(
                 text = stringResource(R.string.fasting_picker_subtitle),
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color(0xFF6B7280),
+                color = colors.textSecondary,
                 modifier = Modifier.fillMaxWidth(),
                 textAlign = TextAlign.Center
             )
@@ -1068,7 +1074,7 @@ private fun CupertinoWheelTimePickerSheet(
                                 text = ":",
                                 fontSize = 21.sp,
                                 fontWeight = FontWeight.SemiBold,
-                                color = Color(0xFF1C1C1E)
+                                color = colors.textPrimary
                             )
                         }
 
@@ -1099,8 +1105,8 @@ private fun CupertinoWheelTimePickerSheet(
                         .height(56.dp),
                     shape = RoundedCornerShape(28.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color.Black,
-                        contentColor = Color.White
+                        containerColor = colors.primaryButtonContainer,
+                        contentColor = colors.primaryButtonContent
                     )
                 ) {
                     Text(
@@ -1114,12 +1120,12 @@ private fun CupertinoWheelTimePickerSheet(
                     enabled = !saving,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(56.dp),
+                    .height(56.dp),
                     shape = RoundedCornerShape(28.dp),
-                    border = BorderStroke(1.dp, Color(0xFFE5E5E5)),
+                    border = BorderStroke(1.dp, colors.border),
                     colors = ButtonDefaults.outlinedButtonColors(
-                        containerColor = Color(0xFFE1E4EA),
-                        contentColor = Color(0xFF111114)
+                        containerColor = colors.surfaceMuted,
+                        contentColor = colors.textPrimary
                     )
                 ) {
                     Text(

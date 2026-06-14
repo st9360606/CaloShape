@@ -32,27 +32,10 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 import com.calai.bitecal.ui.home.ui.progress.model.ProgressAverageOverviewUi
 import java.text.NumberFormat
-
-private val AverageTabsContainerBg = Color(0xFFF1F1F3)
-private val AverageTabsActiveBg = Color(0xFFFFFFFF)
-private val AverageTabsActiveBorder = Color(0xFFE2E2E6)
-private val AverageTabsActiveText = Color(0xFF2D2F35)
-private val AverageTabsIdleText = Color(0xFF3A3D43)
-
-private val AverageCardBg = Color.White
-private val AverageBorder = Color(0xFFD9D9DB)
-private val AverageTitle = Color(0xFF1B1B21)
-private val AverageMuted = Color(0xFF74747A)
-private val AverageMetricBg = Color(0xFFF8FAFC)
-private val AverageMetricBorder = Color(0xFFE2E8F0)
-private val AverageBadgeBg = Color(0xFFEEF2FF)
-private val AverageBadgeBorder = Color(0xFFC7D2FE)
-private val AverageBadgeText = Color(0xFF4338CA)
-private val AverageMetricLabel = Color(0xFF64748B)
-private val AverageMetricValue = Color(0xFF0F172A)
 
 @Composable
 internal fun ProgressAverageOverviewSection(
@@ -96,6 +79,7 @@ private fun AverageRangeTabs(
     availableDays: List<Int>,
     onSelectedDaysChange: (Int) -> Unit
 ) {
+    val colors = BiteCalColors.current()
     val labels = listOf(
         7 to stringResource(R.string.progress_average_tab_7_days),
         15 to stringResource(R.string.progress_average_tab_15_days),
@@ -108,7 +92,7 @@ private fun AverageRangeTabs(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .background(AverageTabsContainerBg, containerShape)
+            .background(colors.surfaceMuted, containerShape)
             .padding(horizontal = 6.dp, vertical = 4.dp),
         horizontalArrangement = Arrangement.spacedBy(4.dp),
         verticalAlignment = Alignment.CenterVertically
@@ -129,8 +113,8 @@ private fun AverageRangeTabs(
                                     shape = activeTabShape,
                                     clip = false
                                 )
-                                .background(AverageTabsActiveBg, activeTabShape)
-                                .border(1.dp, AverageTabsActiveBorder, activeTabShape)
+                                .background(colors.surface, activeTabShape)
+                                .border(1.dp, colors.border, activeTabShape)
                         } else {
                             Modifier.background(Color.Transparent, activeTabShape)
                         }
@@ -140,7 +124,11 @@ private fun AverageRangeTabs(
             ) {
                 Text(
                     text = label,
-                    color = if (active) AverageTabsActiveText else AverageTabsIdleText.copy(alpha = if (enabled) 1f else 0.42f),
+                    color = if (active) {
+                        colors.textPrimary
+                    } else {
+                        colors.textSecondary.copy(alpha = if (enabled) 1f else 0.42f)
+                    },
                     fontSize = 14.sp,
                     fontWeight = if (active) FontWeight.Bold else FontWeight.SemiBold,
                     maxLines = 1,
@@ -155,11 +143,13 @@ private fun AverageRangeTabs(
 private fun ProgressAverageOverviewCard(
     item: ProgressAverageOverviewUi
 ) {
+    val colors = BiteCalColors.current()
+
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .background(AverageCardBg, RoundedCornerShape(28.dp))
-            .border(1.dp, AverageBorder, RoundedCornerShape(28.dp))
+            .background(colors.surface, RoundedCornerShape(28.dp))
+            .border(1.dp, colors.border, RoundedCornerShape(28.dp))
             .padding(horizontal = 18.dp, vertical = 18.dp)
     ) {
         Row(
@@ -170,7 +160,7 @@ private fun ProgressAverageOverviewCard(
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = stringResource(R.string.progress_average_overview_title),
-                    color = AverageTitle,
+                    color = colors.textPrimary,
                     fontSize = 20.sp,
                     lineHeight = 24.sp,
                     fontWeight = FontWeight.Bold,
@@ -182,7 +172,7 @@ private fun ProgressAverageOverviewCard(
 
                 Text(
                     text = stringResource(R.string.progress_average_overview_subtitle),
-                    color = AverageMuted,
+                    color = colors.textSecondary,
                     fontSize = 12.sp,
                     lineHeight = 16.sp,
                     fontWeight = FontWeight.Medium
@@ -191,14 +181,14 @@ private fun ProgressAverageOverviewCard(
 
             Box(
                 modifier = Modifier
-                    .background(AverageBadgeBg, RoundedCornerShape(999.dp))
-                    .border(1.dp, AverageBadgeBorder, RoundedCornerShape(999.dp))
+                    .background(Color(0xFFEEF2FF).copy(alpha = if (colors.background == BiteCalColors.Dark.background) 0.18f else 1f), RoundedCornerShape(999.dp))
+                    .border(1.dp, Color(0xFFC7D2FE).copy(alpha = if (colors.background == BiteCalColors.Dark.background) 0.34f else 1f), RoundedCornerShape(999.dp))
                     .padding(horizontal = 12.dp, vertical = 7.dp),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
                     text = stringResource(R.string.progress_average_days_badge, item.days),
-                    color = AverageBadgeText,
+                    color = if (colors.background == BiteCalColors.Dark.background) Color(0xFFC7D2FE) else Color(0xFF4338CA),
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Bold
                 )
@@ -321,10 +311,12 @@ private fun AverageMetricTile(
     metric: AverageMetricUi,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
+
     Row(
         modifier = modifier
-            .background(AverageMetricBg, RoundedCornerShape(18.dp))
-            .border(1.dp, AverageMetricBorder, RoundedCornerShape(18.dp))
+            .background(colors.surfaceMuted, RoundedCornerShape(18.dp))
+            .border(1.dp, colors.border, RoundedCornerShape(18.dp))
             .padding(horizontal = 12.dp, vertical = 11.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -342,7 +334,7 @@ private fun AverageMetricTile(
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 text = metric.label,
-                color = AverageMetricLabel,
+                color = colors.textSecondary,
                 fontSize = 11.sp,
                 lineHeight = 13.sp,
                 fontWeight = FontWeight.Medium,
@@ -352,7 +344,7 @@ private fun AverageMetricTile(
             Spacer(modifier = Modifier.height(2.dp))
             Text(
                 text = metric.value,
-                color = AverageMetricValue,
+                color = colors.textPrimary,
                 fontSize = 14.sp,
                 lineHeight = 17.sp,
                 fontWeight = FontWeight.Bold,
@@ -365,19 +357,21 @@ private fun AverageMetricTile(
 
 @Composable
 private fun ProgressAverageOverviewLoadingCard() {
+    val colors = BiteCalColors.current()
+
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .height(178.dp)
-            .background(AverageCardBg, RoundedCornerShape(28.dp))
-            .border(1.dp, AverageBorder, RoundedCornerShape(28.dp))
+            .background(colors.surface, RoundedCornerShape(28.dp))
+            .border(1.dp, colors.border, RoundedCornerShape(28.dp))
             .padding(20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
         Text(
             text = stringResource(R.string.progress_average_loading),
-            color = AverageMuted,
+            color = colors.textSecondary,
             fontSize = 14.sp,
             fontWeight = FontWeight.SemiBold,
             textAlign = TextAlign.Center
@@ -390,17 +384,19 @@ private fun ProgressAverageOverviewErrorCard(
     message: String,
     onRetry: () -> Unit
 ) {
+    val colors = BiteCalColors.current()
+
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .background(AverageCardBg, RoundedCornerShape(28.dp))
-            .border(1.dp, AverageBorder, RoundedCornerShape(28.dp))
+            .background(colors.surface, RoundedCornerShape(28.dp))
+            .border(1.dp, colors.border, RoundedCornerShape(28.dp))
             .padding(horizontal = 20.dp, vertical = 22.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
             text = message,
-            color = Color(0xFF111114),
+            color = colors.textPrimary,
             fontSize = 14.sp,
             textAlign = TextAlign.Center
         )
@@ -409,13 +405,13 @@ private fun ProgressAverageOverviewErrorCard(
 
         Box(
             modifier = Modifier
-                .background(Color(0xFF111114), RoundedCornerShape(999.dp))
+                .background(colors.primaryButtonContainer, RoundedCornerShape(999.dp))
                 .biteCalClickable { onRetry() }
                 .padding(horizontal = 18.dp, vertical = 10.dp)
         ) {
             Text(
                 text = stringResource(R.string.common_retry),
-                color = Color.White,
+                color = colors.primaryButtonContent,
                 fontWeight = FontWeight.SemiBold
             )
         }

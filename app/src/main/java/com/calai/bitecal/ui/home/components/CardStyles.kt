@@ -2,8 +2,10 @@ package com.calai.bitecal.ui.home.components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.calai.bitecal.ui.common.design.BiteCalColors
 
 /**
  * Home cards style source of truth.
@@ -103,4 +105,10 @@ object CardStyles {
     val BorderColor = HomeCardStyles.Surface.BorderColor
     val Border = HomeCardStyles.Surface.Border
     val Corner = HomeCardStyles.Surface.Corner
+
+    @Composable
+    fun bg(): Color = BiteCalColors.current().surface
+
+    @Composable
+    fun border(): BorderStroke = BorderStroke(1.2.dp, BiteCalColors.current().border)
 }

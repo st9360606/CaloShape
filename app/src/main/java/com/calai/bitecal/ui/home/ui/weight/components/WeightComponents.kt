@@ -40,6 +40,7 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.calai.bitecal.data.profile.repo.UserProfileStore
 import com.calai.bitecal.data.weight.api.WeightItemDto
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.home.components.CardStyles
 import com.calai.bitecal.ui.home.ui.weight.model.WeightViewModel
 import java.time.Instant
@@ -109,10 +110,11 @@ private val NUM_LOCALE: Locale = Locale.US
 val Green = Color(0xFF22C55E)
 @Composable
 fun WeightComponents(ui: WeightViewModel.UiState) {
-    val label   = Color.Black.copy(alpha = 0.60f)
-    val big     = Color(0xFF111114)
-    val divider = Color(0xFFE2E5EA)
-    val trackColor  = Color(0xFFDCE1E7)
+    val colors = BiteCalColors.current()
+    val label   = colors.textSecondary
+    val big     = colors.textPrimary
+    val divider = colors.border
+    val trackColor  = if (colors.background == BiteCalColors.Dark.background) Color(0xFF27272A) else Color(0xFFDCE1E7)
     val stripeColor = Color.White.copy(alpha = 0.35f)
     val fillColor   = Color(0xFFFF8A33).copy(alpha = 0.81f)
 
@@ -158,13 +160,12 @@ fun WeightComponents(ui: WeightViewModel.UiState) {
         lbs = goalLbs,
         unit = unit
     )
-
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .border(CardStyles.Border, CardStyles.Corner),
+            .border(width = 1.2.dp, color = colors.border, shape = CardStyles.Corner),
         shape = CardStyles.Corner,
-        colors = CardDefaults.cardColors(containerColor = CardStyles.Bg)
+        colors = CardDefaults.cardColors(containerColor = colors.surface)
     ) {
         Column(
             Modifier
@@ -532,13 +533,14 @@ fun WeightChartCard(
     val progressPercent = (progressFraction * 100f)
         .toInt()
         .coerceIn(0, 100)
+    val colors = BiteCalColors.current()
 
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .border(CardStyles.Border, CardStyles.Corner),
+            .border(width = 1.2.dp, color = colors.border, shape = CardStyles.Corner),
         shape = CardStyles.Corner,
-        colors = CardDefaults.cardColors(containerColor = CardStyles.Bg)
+        colors = CardDefaults.cardColors(containerColor = colors.surface)
     ) {
         Column(
             modifier = Modifier
@@ -557,7 +559,7 @@ fun WeightChartCard(
                         lineHeight = 23.sp,
                         fontWeight = FontWeight.Bold
                     ),
-                    color = Color(0xFF111114),
+                    color = colors.textPrimary,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.weight(1f)
@@ -595,10 +597,15 @@ private fun GoalProgressBadge(
     modifier: Modifier = Modifier,
     onClick: () -> Unit         // ★ 新增 callback
 ) {
+    val colors = BiteCalColors.current()
+    val badgeBg = Color(0xFFFFF7ED).copy(
+        alpha = if (colors.background == BiteCalColors.Dark.background) 0.18f else 1f
+    )
+
     Row(
         modifier = modifier
             .clip(RoundedCornerShape(999.dp))
-            .background(Color(0xFFFFF7ED))
+            .background(badgeBg)
             .border(
                 width = 1.dp,
                 color = Color(0xFFF59E0B).copy(alpha = 0.36f),
@@ -977,6 +984,7 @@ private fun GoalProgressChart(
     modifier: Modifier = Modifier
 ) {
     // ✅ 保留你原本預設尺寸，但允許 caller 覆蓋（caller 的 modifier 會在最後 then）
+    val colors = BiteCalColors.current()
     val baseModifier = Modifier
         .fillMaxWidth()
         .height(WeightChartHeight)
@@ -1113,16 +1121,16 @@ private fun GoalProgressChart(
 
                         // Brushes（快取）
                         val bgBrush = Brush.verticalGradient(
-                            0f to Color(0xFFECEFF3),
-                            1f to Color(0xFFFAFAFA)
+                            0f to colors.surfaceMuted,
+                            1f to colors.surface
                         )
                         val baseAreaBrush = Brush.verticalGradient(
-                            0f to Color(0xFF111114).copy(alpha = 0.18f),
+                            0f to colors.textPrimary.copy(alpha = 0.18f),
                             1f to Color.Transparent
                         )
                         val rightAreaBrush = Brush.verticalGradient(
-                            0f to Color(0xFF111114).copy(alpha = 0.16f),
-                            0.55f to Color(0xFF111114).copy(alpha = 0.10f),
+                            0f to colors.textPrimary.copy(alpha = 0.16f),
+                            0.55f to colors.textPrimary.copy(alpha = 0.10f),
                             1f to Color.Transparent
                         )
 
@@ -1202,7 +1210,7 @@ private fun GoalProgressChart(
                                     // 基線：未按黑、按下綠（這段依賴 shownIndex，但只是 draw，不會重算 Path）
                                     val isActive = (shownIndex == 0)
                                     drawLine(
-                                        color = if (isActive) highlightGreen else Color(0xFF111114),
+                                        color = if (isActive) highlightGreen else colors.textPrimary,
                                         start = Offset(0f, ySingle),
                                         end = Offset(w, ySingle),
                                         strokeWidth = baseStroke,
@@ -1210,7 +1218,7 @@ private fun GoalProgressChart(
                                     )
 
                                     drawCircle(
-                                        color = if (isActive) highlightGreen else Color(0xFF111114),
+                                        color = if (isActive) highlightGreen else colors.textPrimary,
                                         radius = circleOuter,
                                         center = Offset(xSingle, ySingle)
                                     )
@@ -1251,7 +1259,7 @@ private fun GoalProgressChart(
                                     linePathAll?.let { lp ->
                                         drawPath(
                                             path = lp,
-                                            color = Color(0xFF111114),
+                                            color = colors.textPrimary,
                                             style = Stroke(
                                                 width = baseStroke,
                                                 cap = StrokeCap.Round
@@ -1366,7 +1374,11 @@ private fun GoalProgressChart(
                             y = with(density) { labelY.toDp() }
                         )
                         .clip(RoundedCornerShape(999.dp))
-                        .background(Color(0xFFFFFBEB))
+                        .background(
+                            Color(0xFFFFFBEB).copy(
+                                alpha = if (colors.background == BiteCalColors.Dark.background) 0.18f else 1f
+                            )
+                        )
                         .border(
                             width = 1.dp,
                             color = Color(0xFFF59E0B).copy(alpha = 0.42f),
@@ -1398,7 +1410,7 @@ private fun GoalProgressChart(
                         text = label,
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Medium,
-                        color = Color.Black.copy(alpha = 0.60f),
+                        color = colors.textSecondary,
                         maxLines = 1,
                         textAlign = TextAlign.End,
                         modifier = Modifier.fillMaxWidth()
@@ -1541,7 +1553,7 @@ private fun GoalProgressChart(
                         text = label,
                         fontSize = 11.sp,
                         fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Normal,
-                        color = if (selected) Color(0xFF111114) else Color.Black.copy(alpha = 0.60f),
+                        color = if (selected) colors.textPrimary else colors.textSecondary,
                         modifier = Modifier
                             .align(Alignment.CenterStart)
                             .graphicsLayer { translationX = p.leftPx }
@@ -1647,10 +1659,10 @@ fun HistoryRow(
     modifier: Modifier = Modifier
 ) {
     val shape = RoundedCornerShape(18.dp)
-    val border = Color(0xFFE2E5EA)
-    val label = Color.Black.copy(alpha = 0.55f)
-    val mainText = Color(0xFF111114)
-    val subText = Color.Black.copy(alpha = 0.45f)
+    val colors = BiteCalColors.current()
+    val label = colors.textSecondary
+    val mainText = colors.textPrimary
+    val subText = colors.textMuted
 
     val dateText = remember(item.logDate, item.updatedAtUtc) {
         formatHistoryRowUpdatedTime(item)
@@ -1695,14 +1707,13 @@ fun HistoryRow(
     }
 
     val imgUrl = toAbsoluteUrl(item.photoUrl)
-
     Card(
         modifier = modifier
             .fillMaxWidth()
             .heightIn(min = 85.dp)
-            .border(1.dp, border, shape),
+            .border(1.dp, colors.border, shape),
         shape = shape,
-        colors = CardDefaults.cardColors(containerColor = Color.White)
+        colors = CardDefaults.cardColors(containerColor = colors.surface)
     ) {
         Row(
             modifier = Modifier.padding(horizontal = 14.dp, vertical = 12.dp),

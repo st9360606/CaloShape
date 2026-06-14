@@ -14,6 +14,7 @@ import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -75,6 +76,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.home.ui.settings.details.model.NutritionGoalsUiState
 import com.calai.bitecal.ui.home.ui.settings.details.model.NutritionGoalsViewModel
@@ -186,11 +188,12 @@ private fun EditNutritionGoalsScreen(
     onSodium: (String) -> Unit
 ) {
     val focusManager = LocalFocusManager.current
+    val colors = BiteCalColors.current()
 
     EditNutritionGoalsNoImePanEffect()
 
     Scaffold(
-        containerColor = Color(0xFFF7F7F7),
+        containerColor = colors.background,
         topBar = {
             BiteCalTopBar(
                 title = stringResource(R.string.edit_nutrition_goals_title),
@@ -235,14 +238,14 @@ private fun EditNutritionGoalsScreen(
             if (!ui.error.isNullOrBlank()) {
                 Text(
                     text = ui.error,
-                    color = Color(0xFFB91C1C),
+                    color = colors.error,
                     fontSize = 13.sp,
                     modifier = Modifier.padding(start = 6.dp, bottom = 12.dp)
                 )
             }
 
             GoalRow(
-                ringColor = Color(0xFF1F1A17),
+                ringColor = colors.textPrimary,
                 icon = Icons.Outlined.LocalFireDepartment,
                 label = stringResource(R.string.edit_nutrition_calorie_goal),
                 value = ui.draft.kcal,
@@ -283,10 +286,16 @@ private fun EditNutritionGoalsScreen(
 
             Spacer(Modifier.height(8.dp))
 
+            val microsToggleInteractionSource = remember { MutableInteractionSource() }
+
             Row(
-                Modifier
+                modifier = Modifier
                     .fillMaxWidth()
-                    .biteCalClickable { onToggleMicros() }
+                    .biteCalClickable(
+                        interactionSource = microsToggleInteractionSource,
+                        indication = null,
+                        onClick = onToggleMicros
+                    )
                     .padding(vertical = 8.dp)
                     .padding(start = 18.dp),
                 horizontalArrangement = Arrangement.Center,
@@ -298,7 +307,9 @@ private fun EditNutritionGoalsScreen(
                     color = Color(0xFF606A78),
                     fontWeight = FontWeight.Normal
                 )
+
                 Spacer(Modifier.width(8.dp))
+
                 Text(
                     text = if (ui.expandedMicros) "▴" else "▾",
                     fontSize = 22.sp,
@@ -361,6 +372,7 @@ private fun GoalRow(
 ) {
     val focusRequester = remember { FocusRequester() }
     var focused by remember { mutableStateOf(false) }
+    val colors = BiteCalColors.current()
 
     val hasError = !errorText.isNullOrBlank()
 
@@ -378,33 +390,38 @@ private fun GoalRow(
 
             Spacer(Modifier.width(14.dp))
 
-            val bg = if (focused) Color.White else Color(0xFFECECF0).copy(alpha = 0.9f)
+            val bg = if (focused) colors.surface else colors.surfaceMuted
 
             // ✅ 規則：有錯誤 → 永遠紅框；沒錯誤 → focus 黑框、非 focus 無框
             val borderColor = when {
-                hasError -> Color(0xFFB91C1C)
-                focused -> Color(0xFF111114)
+                hasError -> colors.error
+                focused -> colors.textPrimary
                 else -> Color.Transparent
             }
 
             Box(
                 modifier = Modifier
                     .weight(1f)
-                    .height(64.dp)
+                    .height(67.dp)
                     .clip(RoundedCornerShape(16.dp))
                     .background(bg)
                     .border(1.5.dp, borderColor, RoundedCornerShape(16.dp))
                     .clickWithoutHaptic { focusRequester.requestFocus() }
-                    .padding(horizontal = 16.dp, vertical = 10.dp)
+                    .padding(
+                        start = 16.dp,
+                        top = 9.dp,
+                        end = 16.dp,
+                        bottom = 11.dp
+                    )
             ) {
                 Column {
                     Text(
                         text = label,
                         fontSize = 14.sp,
-                        color = Color(0xFF566171),
+                        color = colors.textSecondary,
                         fontWeight = FontWeight.Normal
                     )
-                    Spacer(Modifier.height(4.dp))
+                    Spacer(Modifier.height(2.dp))
 
                     BasicTextField(
                         value = value,
@@ -413,7 +430,7 @@ private fun GoalRow(
                         textStyle = TextStyle(
                             fontSize = 18.sp,
                             fontWeight = FontWeight.Medium,
-                            color = Color(0xFF111114).copy(alpha = 0.9f)
+                            color = colors.textPrimary.copy(alpha = 0.92f)
                         ),
                         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                         modifier = Modifier
@@ -432,7 +449,7 @@ private fun GoalRow(
             Spacer(Modifier.height(6.dp))
             Text(
                 text = err,
-                color = Color(0xFFB91C1C),
+                color = colors.error,
                 fontSize = 12.sp,
                 fontWeight = FontWeight.Medium,
                 modifier = Modifier.padding(start = 56.dp + 14.dp + 6.dp)
@@ -452,12 +469,13 @@ private fun RingIcon(
     iconSize: Dp = 16.dp
 ) {
     val p = progress.coerceIn(0f, 1f)
+    val colors = BiteCalColors.current()
 
     Box(modifier, contentAlignment = Alignment.Center) {
         Canvas(modifier = Modifier.fillMaxSize()) {
             val stroke = Stroke(width = strokeWidth.toPx(), cap = StrokeCap.Round)
             drawArc(
-                color = Color(0xFFE5E7EB),
+                color = colors.border,
                 startAngle = 0f,
                 sweepAngle = 360f,
                 useCenter = false,
@@ -476,7 +494,7 @@ private fun RingIcon(
             modifier = Modifier
                 .size(innerCircleSize)
                 .clip(CircleShape)
-                .background(Color(0xFFECECF0)),
+                .background(colors.surfaceMuted),
             contentAlignment = Alignment.Center
         ) {
             Icon(
@@ -498,6 +516,8 @@ private fun BottomActionBar(
     onRevert: () -> Unit,
     onDone: () -> Unit
 ) {
+    val colors = BiteCalColors.current()
+
     Surface(color = Color.Transparent) {
         Box(
             Modifier
@@ -517,10 +537,10 @@ private fun BottomActionBar(
                             end = BiteCalScreenFrame.contentHorizontalMedium,
                             top = BiteCalScreenFrame.detailBottom,
                             bottom = BiteCalScreenFrame.detailBottom,
-                        ),
+                    ),
                     height = 55.dp,
-                    borderColor = Color(0xFF111114).copy(alpha = 0.6f),
-                    contentColor = Color(0xFF111114),
+                    borderColor = colors.textPrimary.copy(alpha = 0.6f),
+                    contentColor = colors.textPrimary,
                 )
             } else {
                 BiteCalEditDualActionRow(

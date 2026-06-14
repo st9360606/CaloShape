@@ -25,7 +25,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
@@ -34,6 +33,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalEditBottomActionBar
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
@@ -48,6 +48,7 @@ fun EditGenderScreen(
     onSaved: () -> Unit,
 ) {
     val ui by vm.ui.collectAsState()
+    val colors = BiteCalColors.current()
     val savedGender by vm.genderState.collectAsState() // ✅ 可能是 null
     LaunchedEffect(Unit) { vm.refreshGenderFromServerIfNeeded() }
 
@@ -62,7 +63,7 @@ fun EditGenderScreen(
     }
 
     Scaffold(
-        containerColor = Color(0xFFF5F5F5),
+        containerColor = colors.background,
         topBar = {
             BiteCalTopBar(
                 title = stringResource(R.string.edit_gender_title),
@@ -100,7 +101,7 @@ fun EditGenderScreen(
                 Spacer(Modifier.height(10.dp))
                 Text(
                     text = it,
-                    color = Color(0xFFEF4444),
+                    color = colors.error,
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier
                         .fillMaxWidth()
@@ -121,7 +122,7 @@ fun EditGenderScreen(
             Text(
                 text = stringResource(R.string.edit_gender_privacy_note),
                 fontSize = 12.sp,
-                color = Color(0xFF9AA3AE),
+                color = colors.textMuted,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.fillMaxWidth(0.9f)
             )
@@ -182,8 +183,9 @@ private fun GenderOptionCard(
     corner: Dp,
 ) {
     val shape = RoundedCornerShape(corner)
-    val container = if (selected) Color(0xFF111114) else Color(0xFFE2E5EA)
-    val content = if (selected) Color.White else Color(0xFF111114)
+    val colors = BiteCalColors.current()
+    val container = if (selected) colors.primaryButtonContainer else colors.surfaceMuted
+    val content = if (selected) colors.primaryButtonContent else colors.textPrimary
     val interaction = remember { MutableInteractionSource() }
 
     Box(

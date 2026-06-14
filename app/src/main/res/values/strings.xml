@@ -830,6 +830,11 @@
     <string name="settings_days_label">Days</string>
 
     <string name="settings_appearance_light">Light</string>
+    <string name="settings_appearance_dark">Dark</string>
+    <string name="settings_appearance_mode_title">Choose appearance</string>
+    <string name="settings_appearance_mode_body">Pick how BiteCal looks on this device. Onboarding and subscription screens keep the current light design.</string>
+    <string name="settings_appearance_light_description">Keep the current bright, clean look.</string>
+    <string name="settings_appearance_dark_description">Use a darker, softer interface for everyday tracking.</string>
     <string name="settings_preferences">Preferences</string>
     <string name="settings_appearance">Appearance</string>
 

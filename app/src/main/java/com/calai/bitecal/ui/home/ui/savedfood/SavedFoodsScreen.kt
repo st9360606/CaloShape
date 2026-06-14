@@ -36,7 +36,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
@@ -51,7 +50,7 @@ import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 import com.calai.bitecal.ui.common.CalaiConfirmDialog
 import com.calai.bitecal.ui.home.components.CardStyles
-import com.calai.bitecal.ui.common.design.BiteCalCommonScreenTokens
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalSavedFoodTokens
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.home.ui.savedfood.model.SavedFoodCardUi
@@ -72,6 +71,7 @@ fun SavedFoodsScreen(
 
     var pendingUnsaveFoodLogId by rememberSaveable { mutableStateOf<String?>(null) }
     var unsaveSubmitting by rememberSaveable { mutableStateOf(false) }
+    val colors = BiteCalColors.current()
 
     LaunchedEffect(Unit) {
         vm.loadIfNeeded()
@@ -80,7 +80,7 @@ fun SavedFoodsScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(BiteCalCommonScreenTokens.softGrayBackground)
+            .background(colors.background)
             .testTag("saved_foods_screen")
     ) {
         SavedFoodsTopBar(onBack = onBack)
@@ -93,7 +93,7 @@ fun SavedFoodsScreen(
                 .padding(start = BiteCalScreenFrame.contentHorizontal, end = BiteCalScreenFrame.contentHorizontal, top = 0.dp, bottom = 2.dp),
             fontSize = 14.sp,
             lineHeight = 20.sp,
-            color = BiteCalSavedFoodTokens.SecondaryText,
+            color = colors.textSecondary,
             textAlign = TextAlign.Center
         )
 
@@ -207,6 +207,8 @@ private fun SavedFoodCard(
     onOpenDetail: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
+
     Card(
         modifier = modifier
             .fillMaxWidth()
@@ -214,8 +216,8 @@ private fun SavedFoodCard(
             .testTag("saved_food_card")
             .biteCalClickable(onClick = onOpenDetail),
         shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = CardStyles.Bg),
-        border = CardStyles.Border,
+        colors = CardDefaults.cardColors(containerColor = CardStyles.bg()),
+        border = CardStyles.border(),
     ) {
         Column(modifier = Modifier.fillMaxSize()) {
 
@@ -235,7 +237,7 @@ private fun SavedFoodCard(
                         .offset(x = (-2).dp, y = (-2).dp)
                         .size(30.dp)
                         .clip(CircleShape)
-                        .background(BiteCalSavedFoodTokens.CloseButtonBg)
+                        .background(colors.surfaceMuted)
                         .biteCalClickable(onClick = onRemove)
                         .align(Alignment.TopStart)
                         .testTag("saved_food_remove"),
@@ -245,7 +247,7 @@ private fun SavedFoodCard(
                         imageVector = Icons.Filled.Close,
                         contentDescription = "Remove from saved foods icon",
                         modifier = Modifier.size(14.dp),
-                        tint = BiteCalSavedFoodTokens.CloseIconColor
+                        tint = colors.textSecondary
                     )
                 }
 
@@ -259,7 +261,7 @@ private fun SavedFoodCard(
                         modifier = Modifier
                             .size(100.dp)
                             .clip(CircleShape)
-                            .background(Color(0xFFEAE1E8)),
+                            .background(colors.surfaceMuted),
                         contentAlignment = Alignment.Center
                     ) {
                         if (!item.previewUri.isNullOrBlank()) {
@@ -285,7 +287,7 @@ private fun SavedFoodCard(
                     ) {
                         Text(
                             text = item.displayTitle,
-                            style = BiteCalSavedFoodTokens.TitleTextStyle,
+                            style = BiteCalSavedFoodTokens.TitleTextStyle.copy(color = colors.textPrimary),
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis
                         )
@@ -299,7 +301,7 @@ private fun SavedFoodCard(
                     ) {
                         Text(
                             text = stringResource(R.string.saved_foods_kcal, item.kcal),
-                            style = BiteCalSavedFoodTokens.KcalTextStyle,
+                            style = BiteCalSavedFoodTokens.KcalTextStyle.copy(color = colors.textPrimary),
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis,
                             modifier = Modifier.testTag("recent_upload_kcal")
@@ -343,7 +345,7 @@ private fun SavedFoodCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(36.dp)
-                    .background(BiteCalSavedFoodTokens.ActionBlack)
+                    .background(colors.primaryButtonContainer)
                     .biteCalClickable(onClick = onOpenDetail)
                     .testTag("saved_food_detail"),
                 contentAlignment = Alignment.Center
@@ -356,7 +358,7 @@ private fun SavedFoodCard(
                 ) {
                     Text(
                         text = stringResource(R.string.saved_foods_detail),
-                        color = Color.White,
+                        color = colors.primaryButtonContent,
                         fontSize = 15.sp,
                         lineHeight = 18.sp,
                         fontWeight = FontWeight.SemiBold,
@@ -369,7 +371,7 @@ private fun SavedFoodCard(
 
                     Text(
                         text = "→",
-                        color = Color.White,
+                        color = colors.primaryButtonContent,
                         fontSize = 17.sp,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier
@@ -384,9 +386,11 @@ private fun SavedFoodCard(
 
 @Composable
 private fun MacroValue(text: String) {
+    val colors = BiteCalColors.current()
+
     Text(
         text = text,
-        style = BiteCalSavedFoodTokens.MacroTextStyle,
+        style = BiteCalSavedFoodTokens.MacroTextStyle.copy(color = colors.textSecondary),
         maxLines = 1,
         overflow = TextOverflow.Clip
     )
@@ -397,6 +401,8 @@ private fun SavedFoodsErrorState(
     message: String,
     onRetry: () -> Unit
 ) {
+    val colors = BiteCalColors.current()
+
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -407,13 +413,13 @@ private fun SavedFoodsErrorState(
             text = stringResource(R.string.saved_foods_load_failed_title),
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
-            color = Color(0xFF202124)
+            color = colors.textPrimary
         )
 
         Text(
             text = message,
             fontSize = 15.sp,
-            color = BiteCalSavedFoodTokens.SecondaryText
+            color = colors.textSecondary
         )
 
         TextButton(onClick = rememberClickWithHaptic(onClick = onRetry)) {

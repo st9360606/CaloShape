@@ -34,7 +34,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -44,6 +43,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.design.BiteCalEditBottomActionBar
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.common.haptic.HapticWheelTickEffect
@@ -59,6 +59,7 @@ fun EditAgeScreen(
 ) {
     val ui by vm.ui.collectAsState()
     val initialAge by vm.initialAge.collectAsState()
+    val colors = BiteCalColors.current()
 
     LaunchedEffect(Unit) { vm.initIfNeeded() }
 
@@ -77,7 +78,7 @@ fun EditAgeScreen(
     }
 
     Scaffold(
-        containerColor = Color(0xFFF5F5F5),
+        containerColor = colors.background,
         topBar = {
             BiteCalTopBar(
                 title = stringResource(R.string.edit_age_title),
@@ -110,7 +111,7 @@ fun EditAgeScreen(
                 Spacer(Modifier.height(10.dp))
                 Text(
                     text = msg,
-                    color = Color(0xFFEF4444),
+                    color = colors.error,
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.fillMaxWidth().padding(horizontal = BiteCalScreenFrame.contentHorizontalWide),
                     textAlign = TextAlign.Center
@@ -148,7 +149,7 @@ fun EditAgeScreen(
             Text(
                 text = stringResource(R.string.edit_age_privacy_note),
                 fontSize = 12.sp,
-                color = Color(0xFF9AA3AE),
+                color = colors.textMuted,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.fillMaxWidth().padding(horizontal = BiteCalScreenFrame.contentHorizontalWide)
             )
@@ -169,6 +170,7 @@ private fun NumberWheel(
     unitLabel: String? = null,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
     val VISIBLE_COUNT = 5
     val MID = VISIBLE_COUNT / 2
     val items = remember(range) { range.toList() }
@@ -246,7 +248,7 @@ private fun NumberWheel(
                         text = num.toString(),
                         fontSize = size,
                         fontWeight = weight,
-                        color = Color.Black.copy(alpha = alpha),
+                        color = colors.textPrimary.copy(alpha = alpha),
                         textAlign = TextAlign.Center
                     )
                     if (unitLabel != null && isCenter) {
@@ -254,7 +256,7 @@ private fun NumberWheel(
                         Text(
                             text = unitLabel,
                             fontSize = unitSize,
-                            color = Color(0xFF333333).copy(alpha = alpha),
+                            color = colors.textSecondary.copy(alpha = alpha),
                             fontWeight = FontWeight.Normal
                         )
                     }
@@ -263,7 +265,7 @@ private fun NumberWheel(
         }
 
         // center lines
-        val lineColor = Color(0x11000000)
+        val lineColor = colors.border.copy(alpha = 0.72f)
         val half = rowHeight / 2
         val lineThickness = 1.dp
         Box(

@@ -109,8 +109,8 @@ fun WaterIntakeCard(
         modifier = Modifier
             .height(cardHeight),
         shape = CardStyles.Corner,
-        border = CardStyles.Border,
-        colors = CardDefaults.cardColors(containerColor = CardStyles.Bg)
+        border = CardStyles.border(),
+        colors = CardDefaults.cardColors(containerColor = CardStyles.bg())
     ) {
         Row(
             modifier = Modifier

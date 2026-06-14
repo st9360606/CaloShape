@@ -33,6 +33,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.calai.bitecal.R
+import com.calai.bitecal.ui.common.design.BiteCalColors
 
 /**
  * 頂部置中的白色膠囊成功提示。
@@ -51,6 +52,7 @@ fun SuccessTopToast(
     message: String,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
     val topInset = WindowInsets.statusBars.asPaddingValues().calculateTopPadding()
     val configuration = LocalConfiguration.current
 
@@ -80,7 +82,7 @@ fun SuccessTopToast(
                 )
                 .heightIn(min = 38.dp),
             shape = MaterialTheme.shapes.large,
-            color = Color.White,
+            color = colors.surface,
             shadowElevation = 8.dp,
             tonalElevation = 0.dp
         ) {
@@ -117,7 +119,7 @@ fun SuccessTopToast(
                     overflow = TextOverflow.Ellipsis,
                     style = MaterialTheme.typography.bodyLarge.copy(
                         fontWeight = FontWeight.SemiBold,
-                        color = Color(0xFF111114)
+                        color = colors.textPrimary
                     )
                 )
             }

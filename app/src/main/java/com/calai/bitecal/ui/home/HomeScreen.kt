@@ -86,11 +86,12 @@ import com.calai.bitecal.data.foodlog.repo.HomeTodayNutritionSummary
 import com.calai.bitecal.data.home.repo.HomeSummary
 import com.calai.bitecal.data.profile.repo.UserProfileStore
 import com.calai.bitecal.i18n.currentLocaleKey
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
 import com.calai.bitecal.ui.home.components.HomeCardStyles
-import com.calai.bitecal.ui.home.components.LightHomeBackground
+import com.calai.bitecal.ui.home.components.HomeBackground
 import com.calai.bitecal.ui.home.components.MainBottomBar
 import com.calai.bitecal.ui.home.components.PagerDots
 import com.calai.bitecal.ui.home.components.toast.ErrorTopToast
@@ -556,8 +557,7 @@ fun HomeScreen(
 
     // ========= 「背景」改在這裡放一層即可 =========
     Box(Modifier.fillMaxSize()) {
-        LightHomeBackground() // ← 背景
-//        DarkHomeBackground();
+        HomeBackground() // ← 背景
 
         Scaffold(
             containerColor = Color.Transparent,   // ★ 讓下方漸層透出
@@ -908,6 +908,7 @@ private fun Avatar(
     fallbackIconSize: Dp = 43.dp      // ✅ spoon icon 大小
 ) {
     val interaction = remember { MutableInteractionSource() }
+    val colors = BiteCalColors.current()
 
     Box(
         modifier = Modifier
@@ -931,8 +932,8 @@ private fun Avatar(
                 modifier = Modifier
                     .size(fallbackCircleSize)
                     .clip(CircleShape)
-                    .background(Color.White)
-                    .border(1.25.dp, Color(0xFFCDD5DF), CircleShape),
+                    .background(colors.surface)
+                    .border(1.25.dp, colors.border, CircleShape),
                 contentAlignment = Alignment.Center
             ) {
                 Image(

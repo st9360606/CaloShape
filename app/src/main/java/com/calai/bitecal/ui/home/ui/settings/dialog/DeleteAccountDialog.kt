@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
 
 @Composable
@@ -53,6 +54,7 @@ fun DeleteAccountDialog(
     val dismissClick = rememberClickWithHaptic(enabled = !deleting, onClick = onDismiss)
     val cancelClick = rememberClickWithHaptic(enabled = !deleting, onClick = onCancel)
     val deleteClick = rememberClickWithHaptic(enabled = !deleting, onClick = onDelete)
+    val colors = BiteCalColors.current()
 
     Dialog(
         onDismissRequest = { if (!deleting) onDismiss() },
@@ -70,7 +72,7 @@ fun DeleteAccountDialog(
         ) {
             Surface(
                 shape = RoundedCornerShape(16.dp),
-                color = Color.White,
+                color = colors.surface,
                 tonalElevation = 0.dp,
                 shadowElevation = 0.dp,
                 modifier = Modifier.fillMaxWidth()
@@ -86,14 +88,14 @@ fun DeleteAccountDialog(
                             text = title,
                             fontSize = 20.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color(0xFF111114),
+                            color = colors.textPrimary,
                             modifier = Modifier.weight(1f)
                         )
 
                         Box(
                             modifier = Modifier
                                 .size(33.dp)
-                                .background(Color(0xFFECECEC), CircleShape),
+                                .background(colors.surfaceMuted, CircleShape),
                             contentAlignment = Alignment.Center
                         ) {
                             IconButton(
@@ -104,7 +106,7 @@ fun DeleteAccountDialog(
                                 Icon(
                                     imageVector = Icons.Default.Close,
                                     contentDescription = closeContentDescription,
-                                    tint = Color.Black
+                                    tint = colors.textPrimary
                                 )
                             }
                         }
@@ -118,7 +120,7 @@ fun DeleteAccountDialog(
                         lineHeight = 20.sp,
                         letterSpacing = 0.5.sp,
                         fontWeight = FontWeight.Normal,
-                        color = Color(0xFF2F3A4A),
+                        color = colors.textSecondary,
                         textAlign = TextAlign.Start
                     )
 
@@ -132,10 +134,10 @@ fun DeleteAccountDialog(
                             onClick = { if (!deleting) cancelClick() },
                             enabled = !deleting,
                             shape = RoundedCornerShape(999.dp),
-                            border = BorderStroke(0.8.dp, Color(0xFF24252A)),
+                            border = BorderStroke(0.8.dp, colors.textPrimary.copy(alpha = 0.62f)),
                             colors = ButtonDefaults.outlinedButtonColors(
-                                containerColor = Color.White,
-                                contentColor = Color(0xFF111114)
+                                containerColor = colors.surface,
+                                contentColor = colors.textPrimary
                             ),
                             modifier = Modifier
                                 .weight(1f)

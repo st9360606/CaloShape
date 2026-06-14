@@ -58,6 +58,7 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -86,6 +87,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.window.Dialog
 import androidx.core.content.ContextCompat
 import coil.compose.SubcomposeAsyncImage
 import coil.compose.SubcomposeAsyncImageContent
@@ -95,10 +97,11 @@ import com.calai.bitecal.R
 import com.calai.bitecal.data.foodlog.repo.HomeTodayNutritionSummary
 import com.calai.bitecal.data.home.repo.HomeSummary
 import com.calai.bitecal.i18n.currentLocaleKey
+import com.calai.bitecal.ui.appearance.AppearanceMode
 import com.calai.bitecal.ui.home.HomeTab
 import com.calai.bitecal.ui.home.components.CardStyles
 import com.calai.bitecal.ui.home.components.GaugeRing
-import com.calai.bitecal.ui.home.components.LightHomeBackground
+import com.calai.bitecal.ui.home.components.HomeBackground
 import com.calai.bitecal.ui.home.components.MainBottomBar
 import com.calai.bitecal.ui.home.ui.camera.menu.HomeQuickActionMenu
 import com.calai.bitecal.ui.home.ui.camera.scan.ScanFab
@@ -107,6 +110,7 @@ import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
 import com.calai.bitecal.ui.home.ui.camera.components.CameraPermissionPrefs
 import com.calai.bitecal.ui.home.ui.camera.components.CameraPermissionProxyActivity
 import com.calai.bitecal.ui.home.ui.camera.components.openCameraPermissionSettings
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.home.ui.membership.MembershipDisplayKind
 import com.calai.bitecal.ui.home.ui.settings.dialog.DeleteAccountDialog
@@ -122,6 +126,7 @@ import com.calai.bitecal.ui.common.design.BiteCalSecondaryOutlinedButton
 import com.calai.bitecal.widget.BiteCalHomeWidgetUpdater
 import com.calai.bitecal.widget.BiteCalWidgetSnapshotStore
 import androidx.compose.foundation.Image
+import androidx.compose.material.icons.rounded.KeyboardArrowDown
 import androidx.compose.ui.res.painterResource
 /**
  * ✅ Personal => Settings（你圖上的那個）
@@ -156,6 +161,8 @@ fun SettingsScreen(
     onOpenNotificationInbox: () -> Unit = {},
     onOpenWidgetGuide: () -> Unit = {},
     currentLanguageTag: String = "",
+    appearanceMode: AppearanceMode = AppearanceMode.LIGHT,
+    onAppearanceModeSelected: (AppearanceMode) -> Unit = {},
     onLanguageSelected: (String) -> Unit = {},
     onOpenTerms: () -> Unit = {},
     onOpenPrivacy: () -> Unit = {},
@@ -177,6 +184,7 @@ fun SettingsScreen(
     var showQuickAddMenu by rememberSaveable { mutableStateOf(false) }
     var scanFabGateInFlight by rememberSaveable { mutableStateOf(false) }
     var showLanguageDialog by rememberSaveable { mutableStateOf(false) }
+    var showAppearanceDialog by rememberSaveable { mutableStateOf(false) }
     var languageSwitching by rememberSaveable { mutableStateOf(false) }
 
     val latestOnOpenCamera = rememberUpdatedState(onOpenCamera)
@@ -248,7 +256,7 @@ fun SettingsScreen(
         }
     }
 
-    Box(Modifier.fillMaxSize()) { LightHomeBackground() }
+    Box(Modifier.fillMaxSize()) { HomeBackground() }
 
     Scaffold(
         containerColor = Color.Transparent,
@@ -289,6 +297,8 @@ fun SettingsScreen(
                 onOpenReferral = onOpenReferral,
                 onOpenNotificationInbox = onOpenNotificationInbox,
                 onOpenWidgetGuide = onOpenWidgetGuide,
+                appearanceMode = appearanceMode,
+                onOpenAppearance = { showAppearanceDialog = true },
                 onOpenLanguage = { if (!languageSwitching) showLanguageDialog = true },
                 onOpenTerms = onOpenTerms,
                 onOpenPrivacy = onOpenPrivacy,
@@ -318,6 +328,17 @@ fun SettingsScreen(
             openScanFoodWithPermissionGate()
         }
     )
+
+    if (showAppearanceDialog) {
+        AppearanceModeDialog(
+            currentMode = appearanceMode,
+            onPick = { mode ->
+                showAppearanceDialog = false
+                onAppearanceModeSelected(mode)
+            },
+            onDismiss = { showAppearanceDialog = false }
+        )
+    }
 
     if (showLanguageDialog) {
         LanguageDialog(
@@ -361,6 +382,8 @@ private fun SettingsContent(
     onOpenReferral: () -> Unit,
     onOpenNotificationInbox: () -> Unit,
     onOpenWidgetGuide: () -> Unit,
+    appearanceMode: AppearanceMode,
+    onOpenAppearance: () -> Unit,
     onOpenLanguage: () -> Unit,
     onOpenTerms: () -> Unit,
     onOpenPrivacy: () -> Unit,
@@ -557,7 +580,11 @@ private fun SettingsContent(
         }
 
         Spacer(Modifier.height(18.dp))
-        PreferencesCard(onOpenLanguage = onOpenLanguage)
+        PreferencesCard(
+            appearanceMode = appearanceMode,
+            onOpenAppearance = onOpenAppearance,
+            onOpenLanguage = onOpenLanguage
+        )
         Spacer(Modifier.height(22.dp))
         WidgetsSection(
             summary = homeSummary,
@@ -652,13 +679,14 @@ private fun ProfileCard(
                 Modifier
             }
         }
+    val colors = BiteCalColors.current()
 
     Card(
         shape = shape,
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = colors.surface),
         border = BorderStroke(
             width = 1.dp,
-            color = Color(0xFFE1E4EA)
+            color = colors.border
         ),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -697,7 +725,7 @@ private fun ProfileCard(
                                 modifier = Modifier.weight(weight = 1f, fill = false),
                                 style = MaterialTheme.typography.titleMedium.copy(
                                     fontWeight = FontWeight.SemiBold,
-                                    color = Color(0xFF20242B),
+                                    color = colors.textPrimary,
                                     fontSize = 19.sp,
                                     lineHeight = 23.sp
                                 )
@@ -715,7 +743,7 @@ private fun ProfileCard(
                                 Icon(
                                     imageVector = Icons.Outlined.Edit,
                                     contentDescription = "Edit your name",
-                                    tint = Color(0xFF6B7280),
+                                    tint = colors.textMuted,
                                     modifier = Modifier.size(14.dp)
                                 )
                             }
@@ -728,7 +756,7 @@ private fun ProfileCard(
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis,
                             style = MaterialTheme.typography.bodySmall.copy(
-                                color = Color(0xFF6B7280),
+                                    color = colors.textSecondary,
                                 fontWeight = FontWeight.Medium,
                                 fontSize = 13.sp,
                                 lineHeight = 17.sp
@@ -997,13 +1025,14 @@ private fun InviteFriendsCard(
         ),
         label = "InviteFriendsCardScale"
     )
+    val colors = BiteCalColors.current()
 
     Card(
         shape = outerShape,
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = colors.surface),
         border = BorderStroke(
             width = 1.dp,
-            color = Color(0xFFE1E4EA)
+            color = colors.border
         ),
         modifier = Modifier
             .fillMaxWidth()
@@ -1023,7 +1052,7 @@ private fun InviteFriendsCard(
                 Icon(
                     imageVector = Icons.Outlined.Group,
                     contentDescription = null,
-                    tint = Color(0xFF111114),
+                    tint = colors.textPrimary,
                     modifier = Modifier.size(22.dp)
                 )
 
@@ -1036,7 +1065,7 @@ private fun InviteFriendsCard(
                         text = stringResource(R.string.settings_invite_friends),
                         style = MaterialTheme.typography.titleMedium.copy(
                             fontWeight = FontWeight.SemiBold,
-                            color = Color(0xFF111114),
+                            color = colors.textPrimary,
                             fontSize = 17.sp,
                             lineHeight = 22.sp
                         )
@@ -1289,9 +1318,17 @@ private fun InviteRewardVisual(
 
 @Composable
 private fun PreferencesCard(
+    appearanceMode: AppearanceMode,
+    onOpenAppearance: () -> Unit,
     onOpenLanguage: () -> Unit
 ) {
-    val appearance = stringResource(R.string.settings_appearance_light)
+    val colors = BiteCalColors.current()
+    val appearance = stringResource(
+        when (appearanceMode) {
+            AppearanceMode.LIGHT -> R.string.settings_appearance_light
+            AppearanceMode.DARK -> R.string.settings_appearance_dark
+        }
+    )
 
     SettingsListCard {
         Row(
@@ -1313,14 +1350,14 @@ private fun PreferencesCard(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .biteCalClickable { /* TODO dropdown */ }
+                .biteCalClickable(onClick = onOpenAppearance)
                 .padding(horizontal = 14.dp, vertical = 14.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Icon(
                 imageVector = Icons.Outlined.Palette,
                 contentDescription = null,
-                tint = Color(0xFF111114),
+                tint = colors.textPrimary,
                 modifier = Modifier.size(24.dp)
             )
 
@@ -1335,11 +1372,11 @@ private fun PreferencesCard(
 
             Text(
                 text = appearance,
-                style = MaterialTheme.typography.titleMedium.copy(color = Color(0xFF111114))
+                style = MaterialTheme.typography.titleMedium.copy(color = colors.textPrimary)
             )
-            Text(
-                text = "  ▾",
-                style = MaterialTheme.typography.titleMedium.copy(color = Color(0xFF6B7280))
+
+            PreferencesExpandArrow(
+                modifier = Modifier.padding(start = 8.dp)
             )
         }
 
@@ -1350,6 +1387,173 @@ private fun PreferencesCard(
             title = stringResource(R.string.settings_language),
             onClick = onOpenLanguage
         )
+    }
+}
+
+@Composable
+private fun PreferencesExpandArrow(
+    modifier: Modifier = Modifier
+) {
+    val colors = BiteCalColors.current()
+
+    Box(
+        modifier = modifier
+            .size(22.dp)
+            .clip(CircleShape)
+            .background(colors.surfaceMuted.copy(alpha = 0.78f))
+            .border(
+                width = 1.dp,
+                color = colors.border.copy(alpha = 0.72f),
+                shape = CircleShape
+            ),
+        contentAlignment = Alignment.Center
+    ) {
+        Icon(
+            imageVector = Icons.Rounded.KeyboardArrowDown,
+            contentDescription = null,
+            tint = colors.textMuted,
+            modifier = Modifier.size(18.dp)
+        )
+    }
+}
+
+@Composable
+private fun AppearanceModeDialog(
+    currentMode: AppearanceMode,
+    onPick: (AppearanceMode) -> Unit,
+    onDismiss: () -> Unit
+) {
+    val colors = BiteCalColors.current()
+
+    Dialog(onDismissRequest = onDismiss) {
+        Surface(
+            shape = RoundedCornerShape(28.dp),
+            color = colors.surface,
+            border = BorderStroke(1.dp, colors.border),
+            tonalElevation = 0.dp,
+            shadowElevation = 12.dp
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 18.dp, vertical = 18.dp)
+            ) {
+                Text(
+                    text = stringResource(R.string.settings_appearance_mode_title),
+                    style = MaterialTheme.typography.titleLarge.copy(
+                        color = colors.textPrimary,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 20.sp,
+                        lineHeight = 25.sp
+                    )
+                )
+
+                Spacer(Modifier.height(6.dp))
+
+                Text(
+                    text = stringResource(R.string.settings_appearance_mode_body),
+                    style = MaterialTheme.typography.bodyMedium.copy(
+                        color = colors.textSecondary,
+                        fontWeight = FontWeight.Medium,
+                        fontSize = 14.sp,
+                        lineHeight = 20.sp
+                    )
+                )
+
+                Spacer(Modifier.height(16.dp))
+
+                AppearanceModeOption(
+                    titleRes = R.string.settings_appearance_light,
+                    descriptionRes = R.string.settings_appearance_light_description,
+                    selected = currentMode == AppearanceMode.LIGHT,
+                    onClick = { onPick(AppearanceMode.LIGHT) }
+                )
+
+                Spacer(Modifier.height(10.dp))
+
+                AppearanceModeOption(
+                    titleRes = R.string.settings_appearance_dark,
+                    descriptionRes = R.string.settings_appearance_dark_description,
+                    selected = currentMode == AppearanceMode.DARK,
+                    onClick = { onPick(AppearanceMode.DARK) }
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun AppearanceModeOption(
+    @StringRes titleRes: Int,
+    @StringRes descriptionRes: Int,
+    selected: Boolean,
+    onClick: () -> Unit
+) {
+    val colors = BiteCalColors.current()
+    val accent = if (selected) Color(0xFFFF9F43) else colors.textMuted
+    val container = if (selected) {
+        Color(0xFFFF9F43).copy(alpha = if (colors.background == BiteCalColors.Dark.background) 0.18f else 0.10f)
+    } else {
+        colors.surfaceMuted
+    }
+
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(18.dp))
+            .background(container)
+            .border(
+                width = 1.dp,
+                color = if (selected) accent.copy(alpha = 0.50f) else colors.border,
+                shape = RoundedCornerShape(18.dp)
+            )
+            .biteCalClickable(onClick = onClick)
+            .padding(horizontal = 14.dp, vertical = 13.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Box(
+            modifier = Modifier
+                .size(34.dp)
+                .clip(CircleShape)
+                .background(if (selected) accent.copy(alpha = 0.18f) else colors.surface)
+                .border(
+                    width = 1.dp,
+                    color = if (selected) accent.copy(alpha = 0.48f) else colors.border,
+                    shape = CircleShape
+                ),
+            contentAlignment = Alignment.Center
+        ) {
+            Box(
+                modifier = Modifier
+                    .size(if (selected) 14.dp else 8.dp)
+                    .clip(CircleShape)
+                    .background(accent)
+            )
+        }
+
+        Spacer(Modifier.width(12.dp))
+
+        Column(Modifier.weight(1f)) {
+            Text(
+                text = stringResource(titleRes),
+                style = MaterialTheme.typography.titleMedium.copy(
+                    color = colors.textPrimary,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 16.sp,
+                    lineHeight = 21.sp
+                )
+            )
+            Spacer(Modifier.height(2.dp))
+            Text(
+                text = stringResource(descriptionRes),
+                style = MaterialTheme.typography.bodySmall.copy(
+                    color = colors.textSecondary,
+                    fontWeight = FontWeight.Medium,
+                    fontSize = 13.sp,
+                    lineHeight = 18.sp
+                )
+            )
+        }
     }
 }
 
@@ -1440,13 +1644,14 @@ private fun CaloriesWidgetPreviewCard(
         current = todayNutrition.eatenKcal,
         goal = goalKcal
     )
+    val colors = BiteCalColors.current()
 
     Card(
         modifier = modifier
             .size(width = 148.dp, height = 155.dp),
         shape = CardStyles.Corner,
-        colors = CardDefaults.cardColors(containerColor = CardStyles.Bg),
-        border = CardStyles.Border
+        colors = CardDefaults.cardColors(containerColor = colors.surface),
+        border = BorderStroke(1.2.dp, colors.border)
     ) {
         Box(
             modifier = Modifier
@@ -1539,13 +1744,14 @@ private fun MacroActionsWidgetPreviewCard(
     val proteinLeft = proteinGoal?.let { remainingWidgetValue(it, todayNutrition.eatenProteinG) }
     val carbsLeft = carbsGoal?.let { remainingWidgetValue(it, todayNutrition.eatenCarbsG) }
     val fatsLeft = fatsGoal?.let { remainingWidgetValue(it, todayNutrition.eatenFatsG) }
+    val colors = BiteCalColors.current()
 
     Card(
         modifier = modifier
             .size(width = 364.dp, height = 155.dp),
         shape = CardStyles.Corner,
-        colors = CardDefaults.cardColors(containerColor = CardStyles.Bg),
-        border = CardStyles.Border
+        colors = CardDefaults.cardColors(containerColor = colors.surface),
+        border = BorderStroke(1.2.dp, colors.border)
     ) {
         Row(
             modifier = Modifier
@@ -1923,12 +2129,14 @@ private fun BarcodeGlyph() {
 
 @Composable
 private fun SettingsListCard(content: @Composable () -> Unit) {
+    val colors = BiteCalColors.current()
+
     Card(
         shape = RoundedCornerShape(22.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = colors.surface),
         border = BorderStroke(
             width = 1.dp,
-            color = Color(0xFFE1E4EA)
+            color = colors.border
         ),
         modifier = Modifier.fillMaxWidth()
     ) { content() }
@@ -1947,15 +2155,23 @@ private fun SettingsRow(
             .padding(horizontal = 14.dp, vertical = 16.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Icon(icon, contentDescription = null)
+        val colors = BiteCalColors.current()
+
+        Icon(icon, contentDescription = null, tint = colors.textPrimary)
         Spacer(Modifier.size(12.dp))
-        Text(title, style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.SemiBold))
+        Text(
+            title,
+            style = MaterialTheme.typography.titleMedium.copy(
+                color = colors.textPrimary,
+                fontWeight = FontWeight.SemiBold
+            )
+        )
     }
 }
 
 @Composable
 private fun DividerThin() {
-    HorizontalDivider(color = Color(0xFFE5E7EB), thickness = 1.dp)
+    HorizontalDivider(color = BiteCalColors.current().border, thickness = 1.dp)
 }
 
 @Composable
@@ -1977,8 +2193,8 @@ private fun LogoutButton(
         enabled = enabled,
         height = 56.dp,
         modifier = Modifier.fillMaxWidth(),
-        borderColor = if (enabled) Color(0xFFE1E4EA) else Color(0xFFE5E7EB),
-        contentColor = if (enabled) Color(0xFF111114) else Color(0xFF9CA3AF),
+        borderColor = if (enabled) BiteCalColors.current().border else BiteCalColors.current().border.copy(alpha = 0.62f),
+        contentColor = if (enabled) BiteCalColors.current().textPrimary else BiteCalColors.current().textMuted,
     )
 }
 

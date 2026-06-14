@@ -22,8 +22,8 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.DirectionsWalk
 import androidx.compose.material.icons.outlined.CalendarMonth
-import androidx.compose.material.icons.outlined.DirectionsWalk
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.FitnessCenter
 import androidx.compose.material.icons.outlined.Flag
@@ -56,6 +56,7 @@ import com.calai.bitecal.R
 import com.calai.bitecal.data.profile.api.UserProfileDto
 import com.calai.bitecal.data.profile.repo.UserProfileStore
 import com.calai.bitecal.ui.common.design.BiteCalCompactPillButton
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
@@ -63,10 +64,6 @@ import java.util.Locale
 import kotlin.math.abs
 
 private val PersonalCardShape = RoundedCornerShape(22.dp)
-private val PersonalCardBorderColor = Color(0xFFE1E4EA)
-private val PersonalDividerColor = Color(0xFFE8EAEE)
-private val PersonalPrimaryText = Color(0xFF111114)
-private val PersonalSecondaryText = Color(0xFF6B7280)
 
 @Composable
 fun PersonalDetailsScreen(
@@ -88,9 +85,10 @@ fun PersonalDetailsScreen(
     onEditDailyWorkoutGoal: () -> Unit = {}
 ) {
     val scroll = rememberScrollState()
+    val colors = BiteCalColors.current()
 
     Scaffold(
-        containerColor = Color(0xFFF6F7F9),
+        containerColor = colors.background,
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
             BiteCalTopBar(
@@ -208,7 +206,7 @@ fun PersonalDetailsScreen(
                     title = stringResource(R.string.personal_details_daily_goals_section)
                 ) {
                     PersonalDetailsRow(
-                        icon = Icons.Outlined.DirectionsWalk,
+                        icon = Icons.AutoMirrored.Outlined.DirectionsWalk,
                         iconTint = Color(0xFF5277B8),
                         iconBg = Color(0xFFE7F7F6),
                         title = stringResource(R.string.personal_details_daily_step_goal),
@@ -246,6 +244,11 @@ private fun GoalWeightSummaryCard(
     value: String,
     onChangeGoal: () -> Unit
 ) {
+    val colors = BiteCalColors.current()
+    val iconBackground = Color(0xFFFFF1E7).copy(
+        alpha = if (colors == BiteCalColors.Dark) 0.16f else 1f
+    )
+
     PersonalDetailsSurface {
         Row(
             modifier = Modifier
@@ -258,7 +261,7 @@ private fun GoalWeightSummaryCard(
                 modifier = Modifier
                     .size(46.dp)
                     .clip(CircleShape)
-                    .background(Color(0xFFFFF1E7)),
+                    .background(iconBackground),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
@@ -279,7 +282,7 @@ private fun GoalWeightSummaryCard(
                     overflow = TextOverflow.Ellipsis,
                     style = MaterialTheme.typography.labelLarge.copy(
                         fontWeight = FontWeight.SemiBold,
-                        color = PersonalSecondaryText,
+                        color = colors.textSecondary,
                         fontSize = 13.sp,
                         lineHeight = 16.sp,
                         letterSpacing = 0.sp
@@ -292,7 +295,7 @@ private fun GoalWeightSummaryCard(
                     overflow = TextOverflow.Ellipsis,
                     style = MaterialTheme.typography.headlineSmall.copy(
                         fontWeight = FontWeight.Bold,
-                        color = PersonalPrimaryText,
+                        color = colors.textPrimary,
                         fontSize = 25.sp,
                         lineHeight = 30.sp,
                         letterSpacing = 0.sp
@@ -321,6 +324,8 @@ private fun PersonalSectionCard(
     title: String,
     content: @Composable () -> Unit
 ) {
+    val colors = BiteCalColors.current()
+
     PersonalDetailsSurface {
         Column(modifier = Modifier.fillMaxWidth()) {
             Text(
@@ -329,7 +334,7 @@ private fun PersonalSectionCard(
                 overflow = TextOverflow.Ellipsis,
                 style = MaterialTheme.typography.labelLarge.copy(
                     fontWeight = FontWeight.Bold,
-                    color = PersonalSecondaryText,
+                    color = colors.textSecondary,
                     fontSize = 12.sp,
                     lineHeight = 15.sp,
                     letterSpacing = 0.sp
@@ -343,11 +348,13 @@ private fun PersonalSectionCard(
 
 @Composable
 private fun PersonalDetailsSurface(content: @Composable () -> Unit) {
+    val colors = BiteCalColors.current()
+
     Card(
         shape = PersonalCardShape,
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = colors.surface),
         elevation = CardDefaults.cardElevation(0.dp),
-        border = BorderStroke(1.dp, PersonalCardBorderColor),
+        border = BorderStroke(1.dp, colors.border),
         modifier = Modifier.fillMaxWidth()
     ) {
         content()
@@ -364,6 +371,8 @@ private fun PersonalDetailsRow(
     valueSub: String? = null,
     onClick: () -> Unit
 ) {
+    val colors = BiteCalColors.current()
+
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -401,7 +410,7 @@ private fun PersonalDetailsRow(
                 fontSize = 15.sp,
                 lineHeight = 19.sp,
                 fontWeight = FontWeight.SemiBold,
-                color = Color(0xFF2E333B),
+                color = colors.textPrimary,
                 letterSpacing = 0.sp
             ),
             modifier = Modifier.weight(1f)
@@ -426,7 +435,7 @@ private fun PersonalDetailsRow(
                         lineHeight = 19.sp,
                         letterSpacing = 0.sp
                     ),
-                    color = PersonalPrimaryText
+                    color = colors.textPrimary
                 )
                 if (valueSub != null) {
                     Spacer(Modifier.height(2.dp))
@@ -435,7 +444,7 @@ private fun PersonalDetailsRow(
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
                         style = MaterialTheme.typography.bodySmall.copy(
-                            color = Color(0xFF9CA3AF),
+                            color = colors.textMuted,
                             letterSpacing = 0.sp
                         )
                     )
@@ -445,7 +454,7 @@ private fun PersonalDetailsRow(
             Icon(
                 imageVector = Icons.Outlined.Edit,
                 contentDescription = null,
-                tint = Color(0xFFA3AAB5),
+                tint = colors.textMuted,
                 modifier = Modifier.size(18.dp)
             )
         }
@@ -520,6 +529,6 @@ private fun PersonalRowDivider() {
             .fillMaxWidth()
             .padding(start = 66.dp, end = 16.dp),
         thickness = 1.dp,
-        color = PersonalDividerColor
+        color = BiteCalColors.current().border
     )
 }

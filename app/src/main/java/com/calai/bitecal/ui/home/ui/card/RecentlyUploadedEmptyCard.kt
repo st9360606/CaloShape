@@ -40,6 +40,7 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.home.components.CardStyles
 
 @Immutable
@@ -77,13 +78,16 @@ fun RecentlyUploadedEmptySection(
     lineHeight: TextUnit = 28.sp,
     titleFontWeight: FontWeight = FontWeight.SemiBold
 ) {
+    val colors = BiteCalColors.current()
+
     Column(modifier = modifier.fillMaxWidth()) {
         Text(
             text = stringResource(R.string.recently_uploaded_empty),
             style = TextStyle(
                 fontSize = titleFontSize,
                 lineHeight = lineHeight,
-                fontWeight = titleFontWeight
+                fontWeight = titleFontWeight,
+                color = colors.textPrimary
             ),
             modifier = Modifier.padding(
                 start = titleStartPadding,
@@ -119,14 +123,26 @@ fun RecentlyUploadedEmptyCard(
 ) {
     val outerShape = RoundedCornerShape(outerCorner)
     val pillShape = RoundedCornerShape(pillCorner)
+    val colors = BiteCalColors.current()
+    val resolvedStyle = if (style == RecentlyUploadedEmptyStyle.Default) {
+        style.copy(
+            outerContainerColor = colors.surfaceMuted,
+            outerBorderColor = colors.border,
+            innerPillColor = colors.surface,
+            innerPillBorderColor = colors.border,
+            hintColor = colors.textSecondary
+        )
+    } else {
+        style
+    }
 
     Card(
         modifier = modifier
             .fillMaxWidth()
             .height(cardHeight),
         shape = outerShape,
-        colors = CardDefaults.cardColors(containerColor = style.outerContainerColor),
-        border = BorderStroke(outerBorderWidth, SolidColor(style.outerBorderColor))
+        colors = CardDefaults.cardColors(containerColor = resolvedStyle.outerContainerColor),
+        border = BorderStroke(outerBorderWidth, SolidColor(resolvedStyle.outerBorderColor))
     ) {
         Column(
             modifier = Modifier
@@ -140,8 +156,8 @@ fun RecentlyUploadedEmptyCard(
                     .fillMaxWidth(pillWidthFraction)
                     .height(pillHeight),
                 shape = pillShape,
-                colors = CardDefaults.cardColors(containerColor = style.innerPillColor),
-                border = BorderStroke(pillBorderWidth, SolidColor(style.innerPillBorderColor))
+                colors = CardDefaults.cardColors(containerColor = resolvedStyle.innerPillColor),
+                border = BorderStroke(pillBorderWidth, SolidColor(resolvedStyle.innerPillBorderColor))
             ) {
                 BoxWithConstraints(
                     modifier = Modifier
@@ -166,7 +182,7 @@ fun RecentlyUploadedEmptyCard(
                             modifier = Modifier
                                 .size(iconSize)
                                 .clip(CircleShape)
-                                .background(style.iconBgColor),
+                                .background(resolvedStyle.iconBgColor),
                             contentAlignment = Alignment.Center
                         ) {
                             if (thumbnailPainter != null) {
@@ -191,14 +207,14 @@ fun RecentlyUploadedEmptyCard(
                                 modifier = Modifier
                                     .fillMaxWidth(0.92f)
                                     .testTag("recent_skeleton_1"),
-                                color = style.skeletonColor
+                                color = resolvedStyle.skeletonColor
                             )
                             Spacer(Modifier.height(10.dp))
                             SkeletonLine(
                                 modifier = Modifier
                                     .fillMaxWidth(0.58f)
                                     .testTag("recent_skeleton_2"),
-                                color = style.skeletonColor
+                                color = resolvedStyle.skeletonColor
                             )
                         }
                     }
@@ -210,7 +226,7 @@ fun RecentlyUploadedEmptyCard(
             Text(
                 text = stringResource(R.string.recently_uploaded_empty_hint),
                 style = MaterialTheme.typography.bodyMedium,
-                color = style.hintColor
+                color = resolvedStyle.hintColor
             )
         }
     }

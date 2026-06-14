@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
 import com.calai.bitecal.ui.home.ui.settings.model.RestoreSubscriptionDialogState
 import com.calai.bitecal.ui.home.ui.settings.model.RestoreSubscriptionUiState
@@ -55,6 +56,7 @@ fun RestoreSubscriptionDialog(
     val dismissClick = rememberClickWithHaptic(enabled = !isRestoring, onClick = onDismiss)
     val restoreClick = rememberClickWithHaptic(enabled = !isRestoring, onClick = onRestore)
     val maybeLaterClick = rememberClickWithHaptic(enabled = !isRestoring, onClick = onMaybeLater)
+    val colors = BiteCalColors.current()
 
     val isResultState = when (uiState.dialogState) {
         RestoreSubscriptionDialogState.Restored,
@@ -84,7 +86,7 @@ fun RestoreSubscriptionDialog(
         ) {
             Surface(
                 shape = RoundedCornerShape(16.dp),
-                color = Color.White,
+                color = colors.surface,
                 tonalElevation = 0.dp,
                 shadowElevation = 0.dp,
                 modifier = Modifier.fillMaxWidth()
@@ -100,14 +102,14 @@ fun RestoreSubscriptionDialog(
                             text = title,
                             fontSize = 20.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color(0xFF111114),
+                            color = colors.textPrimary,
                             modifier = Modifier.weight(1f)
                         )
 
                         Box(
                             modifier = Modifier
                                 .size(33.dp)
-                                .background(Color(0xFFECECEC), CircleShape),
+                                .background(colors.surfaceMuted, CircleShape),
                             contentAlignment = Alignment.Center
                         ) {
                             IconButton(
@@ -118,7 +120,7 @@ fun RestoreSubscriptionDialog(
                                 Icon(
                                     imageVector = Icons.Default.Close,
                                     contentDescription = closeText,
-                                    tint = Color.Black
+                                    tint = colors.textPrimary
                                 )
                             }
                         }
@@ -132,7 +134,7 @@ fun RestoreSubscriptionDialog(
                         lineHeight = 20.sp,
                         letterSpacing = 0.5.sp,
                         fontWeight = FontWeight.Normal,
-                        color = Color(0xFF2F3A4A),
+                        color = colors.textSecondary,
                         textAlign = TextAlign.Start
                     )
 
@@ -143,8 +145,8 @@ fun RestoreSubscriptionDialog(
                             onClick = dismissClick,
                             shape = RoundedCornerShape(999.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color(0xFF111114),
-                                contentColor = Color.White
+                                containerColor = colors.primaryButtonContainer,
+                                contentColor = colors.primaryButtonContent
                             ),
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -165,10 +167,10 @@ fun RestoreSubscriptionDialog(
                                 enabled = !isRestoring,
                                 shape = RoundedCornerShape(999.dp),
                                 colors = ButtonDefaults.buttonColors(
-                                    containerColor = Color(0xFF111114),
-                                    contentColor = Color.White,
-                                    disabledContainerColor = Color(0xFF111114).copy(alpha = 0.56f),
-                                    disabledContentColor = Color.White.copy(alpha = 0.86f)
+                                    containerColor = colors.primaryButtonContainer,
+                                    contentColor = colors.primaryButtonContent,
+                                    disabledContainerColor = colors.primaryButtonContainer.copy(alpha = 0.56f),
+                                    disabledContentColor = colors.primaryButtonContent.copy(alpha = 0.86f)
                                 ),
                                 modifier = Modifier
                                     .fillMaxWidth()
@@ -190,12 +192,12 @@ fun RestoreSubscriptionDialog(
                                 onClick = { if (!isRestoring) maybeLaterClick() },
                                 enabled = !isRestoring,
                                 shape = RoundedCornerShape(999.dp),
-                                border = BorderStroke(0.8.dp, Color(0xFF24252A)),
+                                border = BorderStroke(0.8.dp, colors.textPrimary.copy(alpha = 0.62f)),
                                 colors = ButtonDefaults.outlinedButtonColors(
-                                    containerColor = Color.White,
-                                    contentColor = Color(0xFF111114),
-                                    disabledContainerColor = Color.White,
-                                    disabledContentColor = Color(0xFF111114).copy(alpha = 0.45f)
+                                    containerColor = colors.surface,
+                                    contentColor = colors.textPrimary,
+                                    disabledContainerColor = colors.surface,
+                                    disabledContentColor = colors.textPrimary.copy(alpha = 0.45f)
                                 ),
                                 modifier = Modifier
                                     .fillMaxWidth()

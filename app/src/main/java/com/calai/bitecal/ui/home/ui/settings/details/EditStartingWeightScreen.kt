@@ -55,6 +55,7 @@ import com.calai.bitecal.data.profile.repo.UserProfileStore
 import com.calai.bitecal.data.profile.repo.kgToLbs1
 import com.calai.bitecal.data.profile.repo.lbsToKg1
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.home.ui.settings.details.model.EditStartingWeightViewModel
 import kotlinx.coroutines.launch
 import java.math.BigDecimal
@@ -74,6 +75,7 @@ fun EditStartingWeightScreen(
     val ui by vm.ui.collectAsState()
     val scope = rememberCoroutineScope()
     val snackbarHostState = remember { SnackbarHostState() }
+    val colors = BiteCalColors.current()
 
     val kgMin = 20.0
     val kgMax = 800.0
@@ -120,7 +122,7 @@ fun EditStartingWeightScreen(
     )
 
     Scaffold(
-        containerColor = Color(0xFFF5F5F5),
+        containerColor = colors.background,
         topBar = {
             BiteCalTopBar(
                 title = stringResource(R.string.edit_starting_weight_title),
@@ -286,7 +288,7 @@ fun EditStartingWeightScreen(
                     Text(
                         text = stringResource(R.string.edit_start_weight_set_starting),
                         fontSize = 12.sp,
-                        color = Color(0xFF9AA3AE),
+                        color = colors.textMuted,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -294,7 +296,7 @@ fun EditStartingWeightScreen(
                     Text(
                         text = stringResource(R.string.edit_start_weight_baseline_note),
                         fontSize = 12.sp,
-                        color = Color(0xFF9AA3AE),
+                        color = colors.textMuted,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -314,9 +316,10 @@ private fun WeightUnitSegmentedForStart(
     onChange: (Boolean) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
     Surface(
         shape = RoundedCornerShape(40.dp),
-        color = Color(0xFFE2E5EA),
+        color = colors.surfaceMuted,
         modifier = modifier
             .fillMaxWidth(0.55f)
             .heightIn(min = 40.dp)
@@ -326,7 +329,7 @@ private fun WeightUnitSegmentedForStart(
                 text = "lbs",
                 selected = !useMetric,
                 onClick = { onChange(false) },
-                selectedColor = Color.Black,
+                selectedColor = colors.primaryButtonContainer,
                 modifier = Modifier.weight(1f).height(40.dp)
             )
             Spacer(Modifier.width(6.dp))
@@ -334,7 +337,7 @@ private fun WeightUnitSegmentedForStart(
                 text = "kg",
                 selected = useMetric,
                 onClick = { onChange(true) },
-                selectedColor = Color.Black,
+                selectedColor = colors.primaryButtonContainer,
                 modifier = Modifier.weight(1f).height(40.dp)
             )
         }
@@ -349,6 +352,7 @@ private fun SegItemForStart(
     selectedColor: Color,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
     val corner = 22.dp
     val fSize = 18.sp
     Surface(
@@ -368,7 +372,7 @@ private fun SegItemForStart(
                 text = text,
                 fontSize = fSize,
                 fontWeight = FontWeight.SemiBold,
-                color = if (selected) Color.White else Color(0xFF333333),
+                color = if (selected) colors.primaryButtonContent else colors.textPrimary,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.fillMaxWidth()
             )
@@ -391,6 +395,7 @@ private fun NumberWheelForStart(
     modifier: Modifier = Modifier,
     label: (Int) -> String = { it.toString() }
 ) {
+    val colors = BiteCalColors.current()
     val visibleCount = 5
     val mid = visibleCount / 2
     val items = remember(range) { range.toList() }
@@ -454,14 +459,14 @@ private fun NumberWheelForStart(
                         text = label(num),
                         fontSize = size,
                         fontWeight = weight,
-                        color = Color.Black.copy(alpha = alpha),
+                        color = colors.textPrimary.copy(alpha = alpha),
                         textAlign = TextAlign.Center
                     )
                 }
             }
         }
 
-        val lineColor = Color(0x11000000)
+        val lineColor = colors.border.copy(alpha = 0.72f)
         val half = rowHeight / 2
         val lineThickness = 1.dp
         Box(

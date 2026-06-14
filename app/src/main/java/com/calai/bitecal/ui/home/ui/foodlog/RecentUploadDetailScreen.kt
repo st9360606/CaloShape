@@ -65,6 +65,7 @@ import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 import com.calai.bitecal.data.foodlog.model.FoodLogEnvelopeDto
 import com.calai.bitecal.data.foodlog.model.FoodLogStatus
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalEditBottomActionBar
 import com.calai.bitecal.ui.common.design.BiteCalFoodLogDetailTokens
 import com.calai.bitecal.ui.common.design.BiteCalShape
@@ -186,6 +187,7 @@ fun RecentUploadDetailScreen(
     onDeleted: (String) -> Unit
 ) {
     val st by vm.state.collectAsState()
+    val colors = BiteCalColors.current()
 
     val liveEnv = st.envelope?.takeIf { it.foodLogId == foodLogId }
 
@@ -319,7 +321,7 @@ fun RecentUploadDetailScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(BiteCalFoodLogDetailTokens.AppBg)
+            .background(colors.background)
     ) {
         Box(
             modifier = Modifier
@@ -372,7 +374,7 @@ fun RecentUploadDetailScreen(
                 .fillMaxWidth()
                 .fillMaxHeight(0.6f),
             shape = RoundedCornerShape(topStart = 32.dp, topEnd = 32.dp),
-            color = BiteCalFoodLogDetailTokens.SheetBg,
+            color = colors.surface,
             shadowElevation = 10.dp
         ) {
             Column(modifier = Modifier.fillMaxSize()) {
@@ -449,7 +451,7 @@ fun RecentUploadDetailScreen(
                             ),
                             fontSize = 20.sp,
                             fontWeight = FontWeight.Bold,
-                            color = BiteCalFoodLogDetailTokens.TextPrimary
+                            color = colors.textPrimary
                         )
 
                         Box(
@@ -596,10 +598,12 @@ fun RecentUploadDetailScreen(
 private fun RecentUploadDetailLoadingFrame(
     previewUri: String?
 ) {
+    val colors = BiteCalColors.current()
+
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(BiteCalFoodLogDetailTokens.AppBg)
+            .background(colors.background)
     ) {
         Box(
             modifier = Modifier
@@ -643,7 +647,7 @@ private fun RecentUploadDetailLoadingFrame(
                 .fillMaxWidth()
                 .fillMaxHeight(0.6f),
             shape = RoundedCornerShape(topStart = 32.dp, topEnd = 32.dp),
-            color = BiteCalFoodLogDetailTokens.SheetBg,
+            color = colors.surface,
             shadowElevation = 10.dp
         ) {
             Box(
@@ -733,6 +737,8 @@ private fun SaveBadge(
     enabled: Boolean,
     onClick: () -> Unit
 ) {
+    val colors = BiteCalColors.current()
+
     Box(
         modifier = Modifier
             .size(27.dp)
@@ -742,7 +748,7 @@ private fun SaveBadge(
         Icon(
             imageVector = if (isSaved) Icons.Filled.Bookmark else Icons.Outlined.BookmarkBorder,
             contentDescription = "收藏標籤",
-            tint = BiteCalFoodLogDetailTokens.TextPrimary,
+            tint = colors.textPrimary,
             modifier = Modifier.fillMaxSize()
         )
     }
@@ -778,8 +784,10 @@ private fun formatDisplayTime(raw: String): String {
 
 @Composable
 private fun TimeChip(timeText: String) {
+    val colors = BiteCalColors.current()
+
     Surface(
-        color = BiteCalFoodLogDetailTokens.ChipBg,
+        color = colors.surfaceMuted,
         shape = RoundedCornerShape(999.dp)
     ) {
         Text(
@@ -793,7 +801,7 @@ private fun TimeChip(timeText: String) {
                     fontFeatureSettings = "tnum"
                 )
             ),
-            color = Color(0xFF5C667A),
+            color = colors.textSecondary,
             maxLines = 1,
             overflow = TextOverflow.Clip
         )
@@ -807,13 +815,15 @@ private fun Stepper(
     onMinus: () -> Unit,
     onPlus: () -> Unit
 ) {
+    val colors = BiteCalColors.current()
+
     Row(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(12.dp),
         modifier = Modifier
             .height(43.dp)
             .clip(RoundedCornerShape(999.dp))
-            .border(1.dp, BiteCalFoodLogDetailTokens.TextPrimary, RoundedCornerShape(999.dp))
+            .border(1.dp, colors.textPrimary, RoundedCornerShape(999.dp))
             .padding(horizontal = BiteCalScreenFrame.contentHorizontalMedium)
     ) {
         IconButton(
@@ -824,7 +834,7 @@ private fun Stepper(
             Icon(
                 imageVector = Icons.Filled.Remove,
                 contentDescription = "減號按鈕",
-                tint = BiteCalFoodLogDetailTokens.TextPrimary
+                tint = colors.textPrimary
             )
         }
 
@@ -833,7 +843,7 @@ private fun Stepper(
             style = MaterialTheme.typography.titleMedium,
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
-            color = BiteCalFoodLogDetailTokens.TextPrimary
+            color = colors.textPrimary
         )
 
         IconButton(
@@ -844,7 +854,7 @@ private fun Stepper(
             Icon(
                 imageVector = Icons.Outlined.Add,
                 contentDescription = "加號按鈕",
-                tint = BiteCalFoodLogDetailTokens.TextPrimary
+                tint = colors.textPrimary
             )
         }
     }
@@ -852,13 +862,15 @@ private fun Stepper(
 
 @Composable
 private fun CaloriesHeroCard(kcal: Int) {
+    val colors = BiteCalColors.current()
+
     Surface(
         modifier = Modifier
             .fillMaxWidth()
             .height(82.dp),
-        color = Color.White,
+        color = colors.surface,
         shape = RoundedCornerShape(16.dp),
-        border = BorderStroke(1.dp, BiteCalFoodLogDetailTokens.Border)
+        border = BorderStroke(1.dp, colors.border)
     ) {
         Row(
             modifier = Modifier
@@ -869,7 +881,7 @@ private fun CaloriesHeroCard(kcal: Int) {
             Surface(
                 modifier = Modifier.size(54.dp),
                 shape = RoundedCornerShape(18.dp),
-                color = Color(0xFFF5F7F9)
+                color = colors.surfaceMuted
             ) {
                 Box(contentAlignment = Alignment.Center) {
                     Text(
@@ -887,14 +899,14 @@ private fun CaloriesHeroCard(kcal: Int) {
                 Text(
                     text = stringResource(R.string.foodlog_detail_calories),
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color.Black
+                    color = colors.textPrimary
                 )
                 Spacer(modifier = Modifier.height(2.dp))
                 Text(
                     text = kcal.toString(),
-                    fontSize = 27.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = BiteCalFoodLogDetailTokens.TextPrimary
+                fontSize = 27.sp,
+                fontWeight = FontWeight.Bold,
+                color = colors.textPrimary
                 )
             }
         }
@@ -909,11 +921,13 @@ private fun MacroCard(
     tone: Color,
     emoji: String
 ) {
+    val colors = BiteCalColors.current()
+
     Surface(
         modifier = modifier.height(62.dp),
-        color = Color.White,
+        color = colors.surface,
         shape = RoundedCornerShape(16.dp),
-        border = BorderStroke(1.dp, BiteCalFoodLogDetailTokens.Border)
+        border = BorderStroke(1.dp, colors.border)
     ) {
         Row(
             modifier = Modifier
@@ -946,14 +960,14 @@ private fun MacroCard(
                 Text(
                     text = title,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color.Black,
+                    color = colors.textPrimary,
                     maxLines = 1
                 )
 
                 Text(
                     text = value,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = BiteCalFoodLogDetailTokens.TextPrimary,
+                    color = colors.textPrimary,
                     fontWeight = FontWeight.SemiBold,
                     maxLines = 1
                 )
@@ -966,14 +980,15 @@ private fun MacroCard(
 private fun HealthScoreCard(
     score: Int
 ) {
+    val colors = BiteCalColors.current()
     val safeScore = score.coerceIn(0, 10)
     val progress = safeScore / 10f
 
     Surface(
         modifier = Modifier.fillMaxWidth(),
-        color = Color.White,
+        color = colors.surface,
         shape = RoundedCornerShape(20.dp),
-        border = BorderStroke(1.dp, BiteCalFoodLogDetailTokens.Border)
+        border = BorderStroke(1.dp, colors.border)
     ) {
         Row(
             modifier = Modifier
@@ -987,7 +1002,7 @@ private fun HealthScoreCard(
                     .clip(RoundedCornerShape(16.dp))
                     .border(
                         width = 1.dp,
-                        color = Color(0xFFE7E8EC),
+                        color = colors.border,
                         shape = RoundedCornerShape(16.dp)
                     )
                     .padding(1.dp)
@@ -1014,14 +1029,14 @@ private fun HealthScoreCard(
                     Text(
                         text = stringResource(R.string.foodlog_detail_health_score),
                         fontSize = 15.sp,
-                        color = Color.Black,
+                        color = colors.textPrimary,
                         fontWeight = FontWeight.Medium
                     )
 
                     Text(
                         text = "$safeScore/10",
                         style = MaterialTheme.typography.titleMedium,
-                        color = BiteCalFoodLogDetailTokens.TextPrimary,
+                        color = colors.textPrimary,
                         fontWeight = FontWeight.SemiBold
                     )
                 }
@@ -1033,7 +1048,7 @@ private fun HealthScoreCard(
                         .fillMaxWidth()
                         .height(6.dp)
                         .clip(RoundedCornerShape(999.dp))
-                        .background(Color(0xFFE9E7EF))
+                        .background(colors.surfaceMuted)
                 ) {
                     Box(
                         modifier = Modifier

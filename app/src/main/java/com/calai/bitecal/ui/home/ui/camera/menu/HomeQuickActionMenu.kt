@@ -134,9 +134,9 @@ private fun QuickActionCard(
             .testTag(testTag),
         onClick = hapticClick,
         shape = RoundedCornerShape(30.dp),
-        border = CardStyles.Border,
+        border = CardStyles.border(),
         colors = CardDefaults.cardColors(
-            containerColor = CardStyles.Bg
+            containerColor = CardStyles.bg()
         )
     ) {
         Column(

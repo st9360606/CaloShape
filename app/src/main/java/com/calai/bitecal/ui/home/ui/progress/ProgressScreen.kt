@@ -42,14 +42,7 @@ import com.calai.bitecal.ui.home.ui.progress.model.BmiCardUi
 import com.calai.bitecal.ui.home.ui.progress.model.BmiStatusTone
 import com.calai.bitecal.ui.home.ui.progress.model.ProgressViewModel
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
-
-private val ProgressBg = Color(0xFFF5F5F5)
-
-private val WeekTabsContainerBg = Color(0xFFF1F1F3)
-private val WeekTabsActiveBg = Color(0xFFFFFFFF)
-private val WeekTabsActiveBorder = Color(0xFFE2E2E6)
-private val WeekTabsActiveText = Color(0xFF2D2F35)
-private val WeekTabsIdleText = Color(0xFF3A3D43)
+import com.calai.bitecal.ui.common.design.BiteCalColors
 
 @Composable
 fun ProgressScreen(
@@ -59,12 +52,13 @@ fun ProgressScreen(
 ) {
     val ui by vm.ui.collectAsState()
     var selectedAverageDays by remember { mutableStateOf(7) }
+    val colors = BiteCalColors.current()
 
     LaunchedEffect(Unit) { vm.loadIfNeeded() }
     BackHandler { onBack() }
 
     Scaffold(
-        containerColor = ProgressBg,
+        containerColor = colors.background,
         topBar = {
             BiteCalTopBar(
                 title = stringResource(R.string.progress_screen_title),
@@ -78,7 +72,7 @@ fun ProgressScreen(
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
-                .background(ProgressBg)
+                .background(colors.background)
                 .padding(inner),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
@@ -217,6 +211,7 @@ private fun WeekTabs(
     onSelect: (Int) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
     val labels = listOf(
         stringResource(R.string.progress_tab_this_week),
         stringResource(R.string.progress_tab_last_week),
@@ -229,7 +224,7 @@ private fun WeekTabs(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .background(WeekTabsContainerBg, containerShape)
+            .background(colors.surfaceMuted, containerShape)
             .padding(horizontal = 6.dp, vertical = 4.dp),
         horizontalArrangement = Arrangement.spacedBy(4.dp),
         verticalAlignment = Alignment.CenterVertically
@@ -249,8 +244,8 @@ private fun WeekTabs(
                                     shape = activeTabShape,
                                     clip = false
                                 )
-                                .background(WeekTabsActiveBg, activeTabShape)
-                                .border(1.dp, WeekTabsActiveBorder, activeTabShape)
+                                .background(colors.surface, activeTabShape)
+                                .border(1.dp, colors.border, activeTabShape)
                         } else {
                             Modifier.background(Color.Transparent, activeTabShape)
                         }
@@ -260,7 +255,7 @@ private fun WeekTabs(
             ) {
                 Text(
                     text = label,
-                    color = if (active) WeekTabsActiveText else WeekTabsIdleText,
+                    color = if (active) colors.textPrimary else colors.textSecondary,
                     fontSize = 14.sp,
                     fontWeight = if (active) FontWeight.SemiBold else FontWeight.Medium,
                     maxLines = 1

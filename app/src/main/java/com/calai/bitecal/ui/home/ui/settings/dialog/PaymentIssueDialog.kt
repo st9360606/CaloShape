@@ -37,6 +37,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
 
 @Composable
@@ -61,6 +62,7 @@ fun PaymentIssueDialog(
 
     val dismissClick = rememberClickWithHaptic(onClick = onDismiss)
     val updatePaymentClick = rememberClickWithHaptic(onClick = onUpdatePaymentMethod)
+    val colors = BiteCalColors.current()
 
     Dialog(
         onDismissRequest = onDismiss,
@@ -78,7 +80,7 @@ fun PaymentIssueDialog(
         ) {
             Surface(
                 shape = RoundedCornerShape(28.dp),
-                color = Color.White,
+                color = colors.surface,
                 tonalElevation = 0.dp,
                 shadowElevation = 0.dp,
                 modifier = Modifier.fillMaxWidth()
@@ -103,7 +105,7 @@ fun PaymentIssueDialog(
 
                     Text(
                         text = title,
-                        color = Color(0xFF111114),
+                        color = colors.textPrimary,
                         fontSize = 24.sp,
                         lineHeight = 28.sp,
                         fontWeight = FontWeight.Black,
@@ -115,7 +117,7 @@ fun PaymentIssueDialog(
 
                     Text(
                         text = body,
-                        color = Color(0xFF374151),
+                        color = colors.textSecondary,
                         fontSize = 15.sp,
                         lineHeight = 21.sp,
                         fontWeight = FontWeight.Medium,
@@ -129,7 +131,7 @@ fun PaymentIssueDialog(
 
                     Text(
                         text = supportingBody,
-                        color = Color(0xFF71717A),
+                        color = colors.textMuted,
                         fontSize = 13.sp,
                         lineHeight = 18.sp,
                         fontWeight = FontWeight.Medium,
@@ -154,8 +156,8 @@ fun PaymentIssueDialog(
                         onClick = updatePaymentClick,
                         shape = RoundedCornerShape(999.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(0xFF111114),
-                            contentColor = Color.White
+                            containerColor = colors.primaryButtonContainer,
+                            contentColor = colors.primaryButtonContent
                         ),
                         modifier = Modifier
                             .fillMaxWidth()
@@ -177,7 +179,7 @@ fun PaymentIssueDialog(
                         border = null,
                         colors = ButtonDefaults.outlinedButtonColors(
                             containerColor = Color.Transparent,
-                            contentColor = Color(0xFF71717A)
+                            contentColor = colors.textMuted
                         ),
                         modifier = Modifier
                             .fillMaxWidth()
@@ -202,6 +204,8 @@ private fun DialogHeader(
     badgeText: String,
     onDismiss: () -> Unit
 ) {
+    val colors = BiteCalColors.current()
+
     Box(
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -238,13 +242,13 @@ private fun DialogHeader(
                 modifier = Modifier
                     .size(32.dp)
                     .clip(CircleShape)
-                    .background(Color(0xFFF4F4F5)),
+                    .background(colors.surfaceMuted),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.Close,
                     contentDescription = closeText,
-                    tint = Color(0xFF3F3F46),
+                    tint = colors.textPrimary,
                     modifier = Modifier.size(17.dp)
                 )
             }
@@ -253,6 +257,8 @@ private fun DialogHeader(
 }
 @Composable
 private fun PaymentIssueHero() {
+    val colors = BiteCalColors.current()
+
     Box(
         modifier = Modifier
             .size(92.dp)
@@ -260,14 +266,14 @@ private fun PaymentIssueHero() {
             .background(
                 brush = Brush.linearGradient(
                     colors = listOf(
-                        Color(0xFFF8FAFC),
-                        Color(0xFFE5E7EB)
+                        colors.surfaceMuted,
+                        colors.border.copy(alpha = 0.70f)
                     )
                 )
             )
             .border(
                 width = 1.dp,
-                color = Color(0xFFE5E7EB),
+                color = colors.border,
                 shape = CircleShape
             ),
         contentAlignment = Alignment.Center
@@ -276,10 +282,10 @@ private fun PaymentIssueHero() {
             modifier = Modifier
                 .size(66.dp)
                 .clip(CircleShape)
-                .background(Color.White)
+                .background(colors.surface)
                 .border(
                     width = 1.dp,
-                    color = Color(0xFFE5E7EB),
+                    color = colors.border,
                     shape = CircleShape
                 ),
             contentAlignment = Alignment.Center
@@ -287,7 +293,7 @@ private fun PaymentIssueHero() {
             Icon(
                 imageVector = Icons.Outlined.CreditCard,
                 contentDescription = null,
-                tint = Color(0xFF111114),
+                tint = colors.textPrimary,
                 modifier = Modifier.size(34.dp)
             )
         }
@@ -300,14 +306,16 @@ private fun PaymentIssueStatusPanel(
     nextStepText: String,
     updatePaymentShortText: String
 ) {
+    val colors = BiteCalColors.current()
+
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(20.dp))
-            .background(Color(0xFFF8FAFC))
+            .background(colors.surfaceMuted)
             .border(
                 width = 1.dp,
-                color = Color(0xFFE5E7EB),
+                color = colors.border,
                 shape = RoundedCornerShape(20.dp)
             )
             .padding(horizontal = 16.dp, vertical = 14.dp),
@@ -336,6 +344,8 @@ private fun PaymentIssueInfoRow(
     value: String,
     valueColor: Color
 ) {
+    val colors = BiteCalColors.current()
+
     Row(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically
@@ -344,10 +354,10 @@ private fun PaymentIssueInfoRow(
             modifier = Modifier
                 .size(32.dp)
                 .clip(CircleShape)
-                .background(Color.White)
+                .background(colors.surface)
                 .border(
                     width = 1.dp,
-                    color = Color(0xFFE5E7EB),
+                    color = colors.border,
                     shape = CircleShape
                 ),
             contentAlignment = Alignment.Center
@@ -355,7 +365,7 @@ private fun PaymentIssueInfoRow(
             Icon(
                 imageVector = icon,
                 contentDescription = null,
-                tint = Color(0xFF3F3F46),
+                tint = colors.textSecondary,
                 modifier = Modifier.size(17.dp)
             )
         }
@@ -364,7 +374,7 @@ private fun PaymentIssueInfoRow(
 
         Text(
             text = title,
-            color = Color(0xFF52525B),
+            color = colors.textSecondary,
             fontSize = 13.sp,
             lineHeight = 17.sp,
             fontWeight = FontWeight.SemiBold,

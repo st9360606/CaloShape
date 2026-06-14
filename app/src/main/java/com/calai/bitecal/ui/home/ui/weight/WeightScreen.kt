@@ -64,6 +64,7 @@ import com.calai.bitecal.data.weight.api.WeightItemDto
 import com.calai.bitecal.ui.home.components.toast.DeleteFailedTopToast
 import com.calai.bitecal.ui.home.components.toast.DeleteSuccessTopToast
 import com.calai.bitecal.ui.home.components.toast.ErrorTopToast
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.home.ui.weight.components.FilterTabs
 import com.calai.bitecal.ui.home.ui.weight.components.HistoryRow
@@ -89,6 +90,7 @@ fun WeightScreen(
     val error = ui.error
     val deleteToastType = ui.deleteToastType
     val deleteToastTick = ui.deleteToastTick
+    val colors = BiteCalColors.current()
 
     val historySorted = remember(ui.history7) {
         ui.history7.sortedByDescending { dto ->
@@ -98,7 +100,7 @@ fun WeightScreen(
 
     Box(modifier = Modifier.fillMaxSize()) {
         Scaffold(
-            containerColor = Color(0xFFF5F5F5),
+            containerColor = colors.background,
             topBar = {
                 BiteCalTopBar(
                     title = stringResource(R.string.weight_title),
@@ -114,7 +116,7 @@ fun WeightScreen(
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(Color(0xFFF5F5F5))
+                    .background(colors.background)
             ) {
                 LazyColumn(
                     modifier = Modifier
@@ -137,6 +139,7 @@ fun WeightScreen(
                             Text(
                                 text = stringResource(R.string.weight_overview_title),
                                 style = MaterialTheme.typography.titleLarge,
+                                color = colors.textPrimary,
                                 fontWeight = FontWeight.Bold,
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis,
@@ -176,6 +179,7 @@ fun WeightScreen(
                         Text(
                             text = stringResource(R.string.weight_history_title),
                             style = MaterialTheme.typography.titleLarge,
+                            color = colors.textPrimary,
                             fontWeight = FontWeight.Bold,
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis,
@@ -401,10 +405,12 @@ private fun buildProfileWeightFallbackPrevious(
 private fun BottomLogWeightBar(
     onLogClick: () -> Unit
 ) {
+    val colors = BiteCalColors.current()
+
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color(0xFFF5F5F5))
+            .background(colors.background)
             .windowInsetsPadding(WindowInsets.navigationBars)
             .padding(
                 start = 16.dp,
@@ -421,8 +427,8 @@ private fun BottomLogWeightBar(
                 .height(52.dp),
             shape = RoundedCornerShape(999.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color(0xFF111114),
-                contentColor = Color.White
+                containerColor = colors.primaryButtonContainer,
+                contentColor = colors.primaryButtonContent
             ),
             contentPadding = PaddingValues(horizontal = 20.dp)
         ) {

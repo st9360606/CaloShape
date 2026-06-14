@@ -19,7 +19,7 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.HelpOutline
+import androidx.compose.material.icons.automirrored.outlined.HelpOutline
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -39,6 +39,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 
 enum class CommonBmiTone {
@@ -58,12 +59,6 @@ data class CommonBmiCardModel(
     val subtitleText: String = ""
 )
 
-private val CardBg = Color.White
-private val CardBorder = Color(0xFFD9D9DB)
-private val TitleColor = Color(0xFF1B1B21)
-private val PrimaryText = Color(0xFF17171C)
-private val SecondaryText = Color(0xFF74747A)
-private val HelpTint = Color(0xFF2B2E34)
 private val UnknownPill = Color(0xFFB8BDC7)
 
 private val BarBlue = Color(0xFF2D9CDB)
@@ -71,8 +66,6 @@ private val BarGreen = Color(0xFF35C36C)
 private val BarYellow = Color(0xFFF2C94C)
 private val BarOrange = Color(0xFFF2994A)
 private val BarRed = Color(0xFFEB5757)
-private val MarkerColor = Color(0xFF17171C)
-
 @Composable
 fun CommonBmiCard(
     model: CommonBmiCardModel,
@@ -80,17 +73,18 @@ fun CommonBmiCard(
 ) {
     var showBmiInfoDialog by rememberSaveable { mutableStateOf(false) }
     val dialogModel = rememberCommonBmiInfoDialogModel()
+    val colors = BiteCalColors.current()
 
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .background(CardBg, RoundedCornerShape(28.dp))
-            .border(1.dp, CardBorder, RoundedCornerShape(28.dp))
+            .background(colors.surface, RoundedCornerShape(28.dp))
+            .border(1.dp, colors.border, RoundedCornerShape(28.dp))
             .padding(horizontal = 22.dp, vertical = 22.dp)
     ) {
         Text(
             text = model.titleText,
-            color = TitleColor,
+            color = colors.textPrimary,
             fontSize = 24.sp,
             lineHeight = 26.sp,
             fontWeight = FontWeight.Bold,
@@ -110,7 +104,7 @@ fun CommonBmiCard(
             ) {
                 Text(
                     text = model.bmiText,
-                    color = PrimaryText,
+                    color = colors.textPrimary,
                     fontSize = 35.sp,
                     fontWeight = FontWeight.Bold,
                     lineHeight = 35.sp,
@@ -121,7 +115,7 @@ fun CommonBmiCard(
 
                 Text(
                     text = model.subtitleText,
-                    color = SecondaryText,
+                    color = colors.textSecondary,
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Medium,
                     maxLines = 1,
@@ -144,9 +138,9 @@ fun CommonBmiCard(
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
-                    imageVector = Icons.Outlined.HelpOutline,
+                    imageVector = Icons.AutoMirrored.Outlined.HelpOutline,
                     contentDescription = "BMI 說明",
-                    tint = HelpTint,
+                    tint = colors.textSecondary,
                     modifier = Modifier.size(23.dp)
                 )
             }
@@ -282,6 +276,7 @@ private fun CommonBmiRangeBar(
     markerProgress: Float,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
     val clamped = markerProgress.coerceIn(0f, 1f)
     val markerWidth = 3.dp
     val markerHeight = 24.dp
@@ -316,7 +311,7 @@ private fun CommonBmiRangeBar(
                 .offset(x = (maxWidth - markerWidth) * clamped)
                 .width(markerWidth)
                 .height(markerHeight)
-                .background(MarkerColor, RoundedCornerShape(999.dp))
+                .background(colors.textPrimary, RoundedCornerShape(999.dp))
         )
     }
 }
@@ -328,6 +323,7 @@ private fun CommonBmiLegendItem(
     rangeText: String,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
     val dotSize = 8.dp
     val dotGap = 4.dp
 
@@ -347,7 +343,7 @@ private fun CommonBmiLegendItem(
         Column {
             Text(
                 text = label,
-                color = Color(0xFF6F727A),
+                color = colors.textSecondary,
                 fontSize = 12.sp,
                 lineHeight = 14.sp,
                 fontWeight = FontWeight.Medium,
@@ -359,7 +355,7 @@ private fun CommonBmiLegendItem(
 
             Text(
                 text = rangeText,
-                color = Color(0xFF8A8F98),
+                color = colors.textMuted,
                 fontSize = 11.sp,
                 lineHeight = 13.sp,
                 fontWeight = FontWeight.Medium,

@@ -54,6 +54,7 @@ import com.calai.bitecal.R
 import com.calai.bitecal.core.time.UtcTimeFormatter
 import com.calai.bitecal.data.notifications.api.NotificationItemDto
 import com.calai.bitecal.i18n.currentLocaleKey
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
@@ -404,6 +405,8 @@ private fun NotificationInboxErrorState(
     onRetry: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
+
     NotificationCenteredState(
         modifier = modifier,
         title = stringResource(R.string.notification_inbox_error_title),
@@ -414,8 +417,8 @@ private fun NotificationInboxErrorState(
                 onClick = rememberClickWithHaptic(onClick = onRetry),
                 shape = RoundedCornerShape(999.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFF111114),
-                    contentColor = Color.White
+                    containerColor = colors.primaryButtonContainer,
+                    contentColor = colors.primaryButtonContent
                 ),
                 contentPadding = PaddingValues(horizontal = 24.dp, vertical = 0.dp),
                 modifier = Modifier.height(46.dp)

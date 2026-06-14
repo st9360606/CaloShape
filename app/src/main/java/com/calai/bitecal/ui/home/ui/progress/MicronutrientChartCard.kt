@@ -49,6 +49,7 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.home.ui.progress.model.ProgressBarDayUi
 import com.calai.bitecal.ui.home.ui.progress.tooltip.ChartTooltipCard
 import com.calai.bitecal.ui.home.ui.progress.tooltip.ChartTooltipMetricUi
@@ -69,17 +70,9 @@ private val MicronutrientFiberColor = Color(0xFFA78BFA)
 private val MicronutrientSugarColor = Color(0xFFF08AAF)
 private val MicronutrientSodiumColor = Color(0xFF73B6E6)
 
-private val MicronutrientCardBg = Color.White
-private val MicronutrientBorderColor = Color(0xFFD9D9DB)
-private val MicronutrientTitleColor = Color(0xFF1B1B21)
-private val MicronutrientValueColor = Color(0xFF17171C)
 private val MicronutrientMetaColor = Color(0xFF74747A)
 private val MicronutrientFooterBg = Color(0xFFF6F0FF)
 private val MicronutrientFooterText = Color(0xFFA37FE0)
-private val MicronutrientAverageChipBg = Color(0xFFF8FAFC)
-private val MicronutrientAverageChipBorder = Color(0xFFE2E8F0)
-private val MicronutrientAverageChipLabel = Color(0xFF64748B)
-private val MicronutrientAverageChipValue = Color(0xFF0F172A)
 
 @Composable
 internal fun MicronutrientChartCard(
@@ -146,12 +139,16 @@ private fun MicronutrientChartCardFrame(
         deltaText
     }
     val resolvedDeltaColor = resolveMicronutrientDeltaColor(resolvedDeltaText)
+    val colors = BiteCalColors.current()
+    val footerBg = MicronutrientFooterBg.copy(
+        alpha = if (colors.background == BiteCalColors.Dark.background) 0.18f else 1f
+    )
 
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .background(MicronutrientCardBg, RoundedCornerShape(28.dp))
-            .border(1.dp, MicronutrientBorderColor, RoundedCornerShape(28.dp))
+            .background(colors.surface, RoundedCornerShape(28.dp))
+            .border(1.dp, colors.border, RoundedCornerShape(28.dp))
             .padding(horizontal = 22.dp, vertical = 26.dp)
     ) {
         val averageChipWidth = 122.dp
@@ -169,7 +166,7 @@ private fun MicronutrientChartCardFrame(
                 ) {
                     Text(
                         text = title,
-                        color = MicronutrientTitleColor,
+                        color = colors.textPrimary,
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.padding(top = 10.dp)
@@ -178,7 +175,7 @@ private fun MicronutrientChartCardFrame(
                     Row(verticalAlignment = Alignment.Bottom) {
                         Text(
                             text = headlineValue,
-                            color = MicronutrientValueColor,
+                            color = colors.textPrimary,
                             fontSize = 36.sp,
                             fontWeight = FontWeight.Bold,
                             lineHeight = 36.sp
@@ -188,7 +185,7 @@ private fun MicronutrientChartCardFrame(
 
                         Text(
                             text = unitText,
-                            color = MicronutrientMetaColor,
+                            color = colors.textSecondary,
                             fontSize = 18.sp,
                             fontWeight = FontWeight.Medium,
                             modifier = Modifier.padding(bottom = 4.dp)
@@ -264,7 +261,7 @@ private fun MicronutrientChartCardFrame(
                     .align(Alignment.CenterHorizontally)
                     .offset(x = 8.dp)
                     .background(
-                        color = MicronutrientFooterBg,
+                        color = footerBg,
                         shape = RoundedCornerShape(12.dp)
                     )
                     .padding(horizontal = 12.dp, vertical = 6.dp)
@@ -292,15 +289,17 @@ private fun MicronutrientAverageChip(
     sodiumValue: String,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
+
     Column(
         modifier = modifier
-            .background(MicronutrientAverageChipBg, RoundedCornerShape(14.dp))
-            .border(1.dp, MicronutrientAverageChipBorder, RoundedCornerShape(14.dp))
+            .background(colors.surfaceMuted, RoundedCornerShape(14.dp))
+            .border(1.dp, colors.border, RoundedCornerShape(14.dp))
             .padding(horizontal = 10.dp, vertical = 8.dp)
     ) {
         Text(
             text = title,
-            color = MicronutrientAverageChipLabel,
+            color = colors.textSecondary,
             fontSize = 10.sp,
             lineHeight = 12.sp,
             fontWeight = FontWeight.Bold
@@ -338,6 +337,8 @@ private fun MicronutrientAverageMetricRow(
     label: String,
     value: String
 ) {
+    val colors = BiteCalColors.current()
+
     Row(
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -352,7 +353,7 @@ private fun MicronutrientAverageMetricRow(
 
         Text(
             text = label,
-            color = MicronutrientAverageChipLabel,
+            color = colors.textSecondary,
             fontSize = 10.sp,
             lineHeight = 12.sp,
             fontWeight = FontWeight.Bold,
@@ -363,7 +364,7 @@ private fun MicronutrientAverageMetricRow(
 
         Text(
             text = value,
-            color = MicronutrientAverageChipValue,
+            color = colors.textPrimary,
             fontSize = 12.sp,
             lineHeight = 12.sp,
             fontWeight = FontWeight.SemiBold
@@ -442,7 +443,7 @@ private fun MicronutrientStackedBarChart(
 
                     Text(
                         text = formatMicronutrientAxisTick(tick),
-                        color = ProgressChartAxisDefaults.IdleLabelColor,
+                        color = ProgressChartAxisDefaults.idleLabelColor(),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Medium,
                         modifier = Modifier
@@ -479,6 +480,7 @@ private fun MicronutrientStackedBarChart(
                 val tooltipGapXPx = with(density) { 18.dp.toPx() }
                 val tooltipFixedTopPx = with(density) { (-92).dp.toPx() }
                 val tooltipEdgePaddingPx = with(density) { 4.dp.toPx() }
+                val gridLineColor = ProgressChartAxisDefaults.gridColor()
 
                 Canvas(modifier = Modifier.fillMaxSize()) {
                     val dash = PathEffect.dashPathEffect(floatArrayOf(10f, 10f), 0f)
@@ -493,7 +495,7 @@ private fun MicronutrientStackedBarChart(
                         val y = plotBottom - (ratio * plotHeight)
 
                         drawLine(
-                            color = ProgressChartAxisDefaults.GridColor,
+                            color = gridLineColor,
                             start = Offset(0f, y),
                             end = Offset(size.width, y),
                             strokeWidth = strokeWidth,
@@ -654,9 +656,9 @@ private fun MicronutrientStackedBarChart(
                     Text(
                         text = localizedMicronutrientDayLabel(day.dayLabel),
                         color = if (isToday) {
-                            ProgressChartAxisDefaults.TodayLabelColor
+                            ProgressChartAxisDefaults.todayLabelColor()
                         } else {
-                            ProgressChartAxisDefaults.IdleLabelColor
+                            ProgressChartAxisDefaults.idleLabelColor()
                         },
                         fontSize = 13.sp,
                         fontWeight = if (isToday) {
@@ -722,6 +724,8 @@ private fun ColorLegendChip(
     emojiYOffset: Dp = 0.dp,
     textYOffset: Dp = 0.dp
 ) {
+    val colors = BiteCalColors.current()
+
     Row(verticalAlignment = Alignment.CenterVertically) {
         Text(
             text = emoji,
@@ -733,7 +737,7 @@ private fun ColorLegendChip(
 
         Text(
             text = label,
-            color = Color(0xFF17171C),
+            color = colors.textPrimary,
             fontSize = 14.sp,
             fontWeight = FontWeight.Medium,
             modifier = Modifier.offset(y = textYOffset)

@@ -48,6 +48,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.calai.bitecal.R
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 import com.calai.bitecal.ui.home.ui.progress.model.WorkoutChartUi
 import com.calai.bitecal.ui.home.ui.progress.model.WorkoutProgressDayUi
@@ -64,15 +65,6 @@ import kotlin.math.roundToInt
 
 private val WorkoutBarColor = Color(0xFFE9A35F)
 private val WorkoutGoalLineColor = Color(0xFF3C9E45)
-private val WorkoutCardBg = Color.White
-private val WorkoutBorderColor = Color(0xFFD9D9DB)
-private val WorkoutTitleColor = Color(0xFF1B1B21)
-private val WorkoutValueColor = Color(0xFF17171C)
-private val WorkoutMetaColor = Color(0xFF74747A)
-private val WorkoutMetricChipBg = Color(0xFFF8FAFC)
-private val WorkoutMetricChipBorder = Color(0xFFE2E8F0)
-private val WorkoutMetricChipLabelColor = Color(0xFF64748B)
-private val WorkoutMetricChipValueColor = Color(0xFF0F172A)
 private val WorkoutInfoIconText = Color(0xFF6B7078)
 
 @Composable
@@ -114,6 +106,8 @@ internal fun WorkoutChartCard(
 internal fun WorkoutLoadingCard(
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
+
     WorkoutChartCardFrame(
         title = stringResource(R.string.workout_chart_title),
         infoDialogText = stringResource(R.string.workout_chart_info_dialog_body),
@@ -126,8 +120,8 @@ internal fun WorkoutLoadingCard(
         avgText = stringResource(R.string.workout_chart_7day_avg),
         avgValue = "--",
         footerText = stringResource(R.string.workout_chart_loading),
-        footerBackground = Color(0xFFF2F4F7),
-        footerTextColor = Color(0xFF667085),
+        footerBackground = colors.surfaceMuted,
+        footerTextColor = colors.textSecondary,
         modifier = modifier
     ) {
         WorkoutBarChart(
@@ -144,16 +138,18 @@ internal fun WorkoutErrorCard(
     onRetry: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
+
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .background(WorkoutCardBg, RoundedCornerShape(28.dp))
-            .border(1.dp, WorkoutBorderColor, RoundedCornerShape(28.dp))
+            .background(colors.surface, RoundedCornerShape(28.dp))
+            .border(1.dp, colors.border, RoundedCornerShape(28.dp))
             .padding(horizontal = 26.dp, vertical = 26.dp)
     ) {
         Text(
             text = stringResource(R.string.workout_chart_title),
-            color = WorkoutTitleColor,
+            color = colors.textPrimary,
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold
         )
@@ -166,7 +162,7 @@ internal fun WorkoutErrorCard(
         ) {
             Text(
                 text = message,
-                color = Color(0xFF111114),
+                color = colors.textPrimary,
                 fontSize = 14.sp,
                 textAlign = TextAlign.Center
             )
@@ -175,13 +171,13 @@ internal fun WorkoutErrorCard(
 
             Box(
                 modifier = Modifier
-                    .background(Color(0xFF111114), RoundedCornerShape(999.dp))
+                    .background(colors.primaryButtonContainer, RoundedCornerShape(999.dp))
                     .biteCalClickable { onRetry() }
                     .padding(horizontal = 18.dp, vertical = 10.dp)
             ) {
                 Text(
                     text = stringResource(R.string.common_retry),
-                    color = Color.White,
+                    color = colors.primaryButtonContent,
                     fontWeight = FontWeight.SemiBold
                 )
             }
@@ -207,6 +203,10 @@ private fun WorkoutChartCardFrame(
     modifier: Modifier = Modifier,
     chartContent: @Composable () -> Unit
 ) {
+    val colors = BiteCalColors.current()
+    val resolvedFooterBackground = footerBackground.copy(
+        alpha = if (colors.background == BiteCalColors.Dark.background) 0.18f else footerBackground.alpha
+    )
     val resolvedDeltaText = if (deltaText == "--") "--%" else deltaText
     val resolvedDeltaColor = when {
         resolvedDeltaText.startsWith("↑") -> Color(0xFFE56C6C)
@@ -218,8 +218,8 @@ private fun WorkoutChartCardFrame(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .background(WorkoutCardBg, RoundedCornerShape(28.dp))
-            .border(1.dp, WorkoutBorderColor, RoundedCornerShape(28.dp))
+            .background(colors.surface, RoundedCornerShape(28.dp))
+            .border(1.dp, colors.border, RoundedCornerShape(28.dp))
             .padding(horizontal = 26.dp, vertical = 26.dp)
     ) {
         val metricChipWidth = 102.dp
@@ -244,7 +244,7 @@ private fun WorkoutChartCardFrame(
                     ) {
                         Text(
                             text = title,
-                            color = WorkoutTitleColor,
+                            color = colors.textPrimary,
                             fontSize = 20.sp,
                             fontWeight = FontWeight.Bold
                         )
@@ -273,7 +273,7 @@ private fun WorkoutChartCardFrame(
                     Row(verticalAlignment = Alignment.Bottom) {
                         Text(
                             text = headlineValue,
-                            color = WorkoutValueColor,
+                            color = colors.textPrimary,
                             fontSize = 36.sp,
                             fontWeight = FontWeight.Bold,
                             lineHeight = 36.sp
@@ -283,7 +283,7 @@ private fun WorkoutChartCardFrame(
 
                         Text(
                             text = unitText,
-                            color = WorkoutMetaColor,
+                            color = colors.textSecondary,
                             fontSize = 18.sp,
                             fontWeight = FontWeight.Medium,
                             modifier = Modifier.padding(bottom = 4.dp)
@@ -336,7 +336,7 @@ private fun WorkoutChartCardFrame(
             Box(
                 modifier = Modifier
                     .align(Alignment.CenterHorizontally)
-                    .background(footerBackground, RoundedCornerShape(12.dp))
+                    .background(resolvedFooterBackground, RoundedCornerShape(12.dp))
                     .padding(horizontal = 12.dp, vertical = 6.dp)
             ) {
                 Text(
@@ -368,6 +368,8 @@ private fun WorkoutChartInfoDialog(
     closeText: String,
     onDismiss: () -> Unit
 ) {
+    val colors = BiteCalColors.current()
+
     Dialog(
         onDismissRequest = onDismiss,
         properties = DialogProperties(
@@ -382,11 +384,11 @@ private fun WorkoutChartInfoDialog(
         ) {
             Surface(
                 shape = RoundedCornerShape(24.dp),
-                color = Color.White,
+                color = colors.surface,
                 modifier = Modifier
                     .fillMaxWidth(0.86f)
                     .widthIn(min = 280.dp, max = 360.dp)
-                    .border(1.dp, WorkoutBorderColor, RoundedCornerShape(24.dp))
+                    .border(1.dp, colors.border, RoundedCornerShape(24.dp))
             ) {
                 Column(
                     modifier = Modifier
@@ -412,7 +414,7 @@ private fun WorkoutChartInfoDialog(
 
                     Text(
                         text = title,
-                        color = WorkoutTitleColor,
+                        color = colors.textPrimary,
                         fontSize = 20.sp,
                         lineHeight = 24.sp,
                         fontWeight = FontWeight.Bold,
@@ -423,7 +425,7 @@ private fun WorkoutChartInfoDialog(
 
                     Text(
                         text = body,
-                        color = WorkoutMetaColor,
+                        color = colors.textSecondary,
                         fontSize = 14.sp,
                         lineHeight = 20.sp,
                         fontWeight = FontWeight.Medium,
@@ -434,14 +436,14 @@ private fun WorkoutChartInfoDialog(
 
                     Box(
                         modifier = Modifier
-                            .background(Color(0xFF17171C), RoundedCornerShape(999.dp))
+                            .background(colors.primaryButtonContainer, RoundedCornerShape(999.dp))
                             .biteCalClickable { onDismiss() }
                             .padding(horizontal = 26.dp, vertical = 10.dp),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
                             text = closeText,
-                            color = Color.White,
+                            color = colors.primaryButtonContent,
                             fontSize = 14.sp,
                             fontWeight = FontWeight.SemiBold
                         )
@@ -459,10 +461,12 @@ private fun WorkoutMetricChip(
     accentColor: Color,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
+
     Row(
         modifier = modifier
-            .background(WorkoutMetricChipBg, RoundedCornerShape(14.dp))
-            .border(1.dp, WorkoutMetricChipBorder, RoundedCornerShape(14.dp))
+            .background(colors.surfaceMuted, RoundedCornerShape(14.dp))
+            .border(1.dp, colors.border, RoundedCornerShape(14.dp))
             .padding(horizontal = 10.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -478,7 +482,7 @@ private fun WorkoutMetricChip(
         Column {
             Text(
                 text = label,
-                color = WorkoutMetricChipLabelColor,
+                color = colors.textSecondary,
                 fontSize = 10.sp,
                 lineHeight = 12.sp,
                 fontWeight = FontWeight.Bold
@@ -488,7 +492,7 @@ private fun WorkoutMetricChip(
 
             Text(
                 text = value,
-                color = WorkoutMetricChipValueColor,
+                color = colors.textPrimary,
                 fontSize = 12.sp,
                 lineHeight = 14.sp,
                 fontWeight = FontWeight.SemiBold
@@ -498,6 +502,8 @@ private fun WorkoutMetricChip(
 }
 @Composable
 private fun WorkoutLegendRow() {
+    val colors = BiteCalColors.current()
+
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.Center,
@@ -515,7 +521,7 @@ private fun WorkoutLegendRow() {
 
             Text(
                 text = stringResource(R.string.workout_legend_burned),
-                color = WorkoutValueColor,
+                color = colors.textPrimary,
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Medium
             )
@@ -542,7 +548,7 @@ private fun WorkoutLegendRow() {
 
             Text(
                 text = stringResource(R.string.workout_legend_daily_goal),
-                color = WorkoutValueColor,
+                color = colors.textPrimary,
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Medium
             )
@@ -603,7 +609,7 @@ private fun WorkoutBarChart(
 
                     Text(
                         text = tick.roundToInt().toString(),
-                        color = ProgressChartAxisDefaults.IdleLabelColor,
+                        color = ProgressChartAxisDefaults.idleLabelColor(),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Medium,
                         modifier = Modifier
@@ -647,6 +653,7 @@ private fun WorkoutBarChart(
                 val tooltipGapXPx = with(density) { 18.dp.toPx() }
                 val tooltipFixedTopPx = with(density) { (-18).dp.toPx() }
                 val tooltipEdgePaddingPx = with(density) { 4.dp.toPx() }
+                val gridLineColor = ProgressChartAxisDefaults.gridColor()
 
                 Canvas(modifier = Modifier.fillMaxSize()) {
                     val dash = PathEffect.dashPathEffect(floatArrayOf(10f, 10f), 0f)
@@ -661,7 +668,7 @@ private fun WorkoutBarChart(
                         val y = plotBottom - (ratio * plotHeight)
 
                         drawLine(
-                            color = ProgressChartAxisDefaults.GridColor,
+                            color = gridLineColor,
                             start = Offset(0f, y),
                             end = Offset(size.width, y),
                             strokeWidth = strokeWidth,
@@ -800,9 +807,9 @@ private fun WorkoutBarChart(
                     Text(
                         text = localizedWorkoutDayLabel(day.dayLabel),
                         color = if (isToday) {
-                            ProgressChartAxisDefaults.TodayLabelColor
+                            ProgressChartAxisDefaults.todayLabelColor()
                         } else {
-                            ProgressChartAxisDefaults.IdleLabelColor
+                            ProgressChartAxisDefaults.idleLabelColor()
                         },
                         fontSize = 13.sp,
                         fontWeight = if (isToday) {

@@ -1,5 +1,6 @@
 package com.calai.bitecal.ui.home.components
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
@@ -20,6 +21,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.home.ui.card.TitlePrefixTriangle
 
 object TopBarDefaults {
@@ -37,13 +39,15 @@ fun TopBarCard(
     triangleSide: Dp = 6.dp,
     content: @Composable ColumnScope.() -> Unit
 ) {
+    val colors = BiteCalColors.current()
+
     Card(
         modifier = modifier,
         shape = CardStyles.Corner, // 20.dp 圓角一致
         colors = CardDefaults.cardColors(
-            containerColor = CardStyles.Bg // 微暖白，不是死白
+            containerColor = colors.surface
         ),
-        border = CardStyles.Border      // 更明顯的灰邊框
+        border = BorderStroke(1.2.dp, colors.border)
     ) {
         Column(modifier = Modifier.fillMaxSize()) {
             // 黑底白字頂欄（可選擇顯示白色三角形）

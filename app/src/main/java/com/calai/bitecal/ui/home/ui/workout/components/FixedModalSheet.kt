@@ -23,6 +23,7 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.calai.bitecal.i18n.ProvideComposeLocale
 import com.calai.bitecal.i18n.currentLocaleKey
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 
 /**
@@ -42,6 +43,7 @@ fun FixedModalSheet(
 
     val localeTag = currentLocaleKey()
     val scrimClick = onScrimClick
+    val colors = BiteCalColors.current()
 
     key(localeTag) {
         Dialog(
@@ -74,7 +76,7 @@ fun FixedModalSheet(
                     ) {
                         Surface(
                             modifier = Modifier.fillMaxWidth(),
-                            color = Color.White,
+                            color = colors.surface,
                             shape = MaterialTheme.shapes.extraLarge,
                             tonalElevation = 0.dp,
                             shadowElevation = 8.dp

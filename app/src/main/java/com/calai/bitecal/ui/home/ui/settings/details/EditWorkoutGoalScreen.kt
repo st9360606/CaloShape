@@ -48,6 +48,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalEditDualActionRow
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
@@ -63,6 +64,7 @@ fun EditWorkoutGoalScreen(
 ) {
     val ui by vm.ui.collectAsState()
     val focus = LocalFocusManager.current
+    val colors = BiteCalColors.current()
 
     LaunchedEffect(Unit) {
         vm.events.collectLatest { e ->
@@ -73,10 +75,8 @@ fun EditWorkoutGoalScreen(
         }
     }
 
-    val borderLight = Color(0xFFE5E7EB)
-
     Scaffold(
-        containerColor = Color(0xFFF5F5F5),
+        containerColor = colors.background,
         topBar = {
             BiteCalTopBar(
                 title = stringResource(R.string.edit_workout_goal_title),
@@ -98,8 +98,8 @@ fun EditWorkoutGoalScreen(
             Surface(
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(18.dp),
-                color = Color.White,
-                border = BorderStroke(1.dp, borderLight),
+                color = colors.surface,
+                border = BorderStroke(1.dp, colors.border),
                 shadowElevation = 0.dp
             ) {
                 Row(
@@ -118,7 +118,7 @@ fun EditWorkoutGoalScreen(
                             text = ui.previousGoalKcal.toString(),
                             fontSize = 19.sp,
                             fontWeight = FontWeight.SemiBold,
-                            color = Color(0xFF2F3947),
+                            color = colors.textPrimary,
                             modifier = Modifier.padding(start = 20.dp)
                         )
                         Spacer(Modifier.height(3.dp))
@@ -126,7 +126,7 @@ fun EditWorkoutGoalScreen(
                             text = stringResource(R.string.edit_workout_goal_previous_format, ui.previousGoalKcal),
                             fontSize = 13.sp,
                             fontWeight = FontWeight.Normal,
-                            color = Color(0xFF6B7280),
+                            color = colors.textSecondary,
                             modifier = Modifier.padding(start = 20.dp)
                         )
                     }
@@ -166,7 +166,8 @@ private fun WorkoutGoalInputBox(
     isError: Boolean,
     onImeDone: () -> Unit
 ) {
-    val border = if (isError) Color(0xFFEF4444) else Color(0xFF111114)
+    val colors = BiteCalColors.current()
+    val border = if (isError) colors.error else colors.textPrimary
 
     Column(
         modifier = Modifier
@@ -179,7 +180,7 @@ private fun WorkoutGoalInputBox(
             text = stringResource(R.string.edit_workout_goal_input_label),
             fontSize = 13.sp,
             fontWeight = FontWeight.Medium,
-            color = Color(0xFF6B7280)
+            color = colors.textSecondary
         )
         Spacer(Modifier.height(6.dp))
 
@@ -190,7 +191,7 @@ private fun WorkoutGoalInputBox(
             textStyle = TextStyle(
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Normal,
-                color = Color(0xFF111114)
+                color = colors.textPrimary
             ),
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Number,
@@ -206,9 +207,10 @@ private fun WorkoutGoalInputBox(
 
 @Composable
 private fun WorkoutRingIcon(modifier: Modifier = Modifier) {
-    val ringGrey = Color(0xFFD1D5DB)
+    val colors = BiteCalColors.current()
+    val ringGrey = colors.border
     val ringBlack = Color(0xFFA37FE0)
-    val innerBg = Color(0xFFF2F4F7)
+    val innerBg = colors.surfaceMuted
 
     Box(modifier = modifier, contentAlignment = Alignment.Center) {
         Canvas(modifier = Modifier.fillMaxSize()) {
@@ -249,7 +251,7 @@ private fun WorkoutRingIcon(modifier: Modifier = Modifier) {
             androidx.compose.material3.Icon(
                 imageVector = Icons.Outlined.FitnessCenter,
                 contentDescription = null,
-                tint = Color(0xFF111114),
+                tint = colors.textPrimary,
                 modifier = Modifier.size(24.dp)
             )
         }

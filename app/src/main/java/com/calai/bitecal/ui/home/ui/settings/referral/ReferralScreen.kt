@@ -54,9 +54,10 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 import com.calai.bitecal.data.referral.api.ReferralClaimItemDto
-import com.calai.bitecal.ui.home.components.LightHomeBackground
+import com.calai.bitecal.ui.home.components.HomeBackground
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import kotlinx.coroutines.delay
@@ -65,9 +66,6 @@ import com.calai.bitecal.ui.common.design.BiteCalEditBottomActionBar
 import com.calai.bitecal.ui.common.design.BiteCalEditDualActionRow
 import com.calai.bitecal.ui.common.design.BiteCalPrimaryButton
 import com.calai.bitecal.ui.common.design.BiteCalSecondaryOutlinedButton
-private val ReferralPageText = Color(0xFF111114)
-private val ReferralMutedText = Color(0xFF7C8490)
-private val ReferralCardWhite = Color.White
 private val ReferralBlack = Color(0xFF111114)
 private val ReferralGold = Color(0xFFFFE7A3)
 
@@ -97,7 +95,7 @@ fun ReferralScreen(
     }
 
     Box(Modifier.fillMaxSize()) {
-        LightHomeBackground()
+        HomeBackground()
 
         Scaffold(
             containerColor = Color.Transparent,
@@ -512,13 +510,15 @@ private fun ShareReferralButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
+
     BiteCalPrimaryButton(
         text = stringResource(R.string.referral_share),
         onClick = onClick,
         modifier = modifier,
         height = 56.dp,
-        containerColor = ReferralBlack,
-        contentColor = Color.White,
+        containerColor = colors.primaryButtonContainer,
+        contentColor = colors.primaryButtonContent,
         textStyle = MaterialTheme.typography.titleMedium.copy(
             fontWeight = FontWeight.Bold,
             fontSize = 16.sp
@@ -528,9 +528,12 @@ private fun ShareReferralButton(
 
 @Composable
 private fun HowReferralWorksCard() {
+    val colors = BiteCalColors.current()
+
     Card(
         shape = RoundedCornerShape(24.dp),
-        colors = CardDefaults.cardColors(containerColor = ReferralCardWhite),
+        colors = CardDefaults.cardColors(containerColor = colors.surface),
+        border = androidx.compose.foundation.BorderStroke(1.dp, colors.border),
         modifier = Modifier.fillMaxWidth()
     ) {
         Column(
@@ -539,7 +542,7 @@ private fun HowReferralWorksCard() {
             Text(
                 text = stringResource(R.string.referral_how_it_works),
                 style = MaterialTheme.typography.titleMedium.copy(
-                    color = ReferralPageText,
+                    color = colors.textPrimary,
                     fontWeight = FontWeight.Bold,
                     fontSize = 17.sp,
                     lineHeight = 22.sp
@@ -579,9 +582,10 @@ private fun HowReferralWorksCard() {
 private fun ReferralStepRow(
     number: String,
     title: String,
-    subtitle: String,
-    circleColor: Color = ReferralBlack
+    subtitle: String
 ) {
+    val colors = BiteCalColors.current()
+
     Row(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.Top
@@ -590,13 +594,13 @@ private fun ReferralStepRow(
             modifier = Modifier
                 .size(24.dp)
                 .clip(CircleShape)
-                .background(circleColor),
+                .background(colors.primaryButtonContainer),
             contentAlignment = Alignment.Center
         ) {
             Text(
                 text = number,
                 style = MaterialTheme.typography.labelMedium.copy(
-                    color = Color.White,
+                    color = colors.primaryButtonContent,
                     fontWeight = FontWeight.Black,
                     fontSize = 11.sp,
                     lineHeight = 13.sp
@@ -612,7 +616,7 @@ private fun ReferralStepRow(
             Text(
                 text = title,
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    color = ReferralPageText,
+                    color = colors.textPrimary,
                     fontWeight = FontWeight.Bold,
                     fontSize = 14.sp,
                     lineHeight = 18.sp
@@ -624,7 +628,7 @@ private fun ReferralStepRow(
             Text(
                 text = subtitle,
                 style = MaterialTheme.typography.bodySmall.copy(
-                    color = ReferralMutedText,
+                    color = colors.textSecondary,
                     fontWeight = FontWeight.Medium,
                     fontSize = 13.sp,
                     lineHeight = 18.sp

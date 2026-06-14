@@ -45,8 +45,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalPrimaryButton
-import com.calai.bitecal.ui.home.components.LightHomeBackground
+import com.calai.bitecal.ui.home.components.HomeBackground
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 
@@ -55,7 +56,7 @@ fun WidgetGuideScreen(
     onBack: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    Box(Modifier.fillMaxSize()) { LightHomeBackground() }
+    Box(Modifier.fillMaxSize()) { HomeBackground() }
 
     Scaffold(
         containerColor = Color.Transparent,
@@ -92,17 +93,19 @@ fun WidgetGuideScreen(
 
 @Composable
 private fun WidgetGuideHeroCard() {
+    val colors = BiteCalColors.current()
+
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(30.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White)
+        colors = CardDefaults.cardColors(containerColor = colors.surface)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .background(
                     Brush.verticalGradient(
-                        colors = listOf(Color.White, Color(0xFFF7F8FA))
+                        colors = listOf(colors.surface, colors.surfaceMuted)
                     )
                 )
                 .padding(horizontal = 20.dp, vertical = 22.dp),
@@ -116,7 +119,7 @@ private fun WidgetGuideHeroCard() {
                 text = stringResource(R.string.widget_guide_hero_title),
                 textAlign = TextAlign.Center,
                 style = MaterialTheme.typography.headlineSmall.copy(
-                    color = Color(0xFF111114),
+                    color = colors.textPrimary,
                     fontWeight = FontWeight.Black,
                     fontSize = 25.sp,
                     lineHeight = 30.sp
@@ -129,7 +132,7 @@ private fun WidgetGuideHeroCard() {
                 text = stringResource(R.string.widget_guide_hero_body),
                 textAlign = TextAlign.Center,
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    color = Color(0xFF6B7280),
+                    color = colors.textSecondary,
                     fontWeight = FontWeight.Medium,
                     fontSize = 14.sp,
                     lineHeight = 20.sp
@@ -282,6 +285,7 @@ private fun MockLine(
 @Composable
 private fun WidgetGuideStepsCard() {
     val cardShape = RoundedCornerShape(26.dp)
+    val colors = BiteCalColors.current()
 
     val steps = listOf(
         WidgetGuideStep(
@@ -310,7 +314,7 @@ private fun WidgetGuideStepsCard() {
         modifier = Modifier
             .fillMaxWidth(),
         shape = cardShape,
-        colors = CardDefaults.cardColors(containerColor = Color.White)
+        colors = CardDefaults.cardColors(containerColor = colors.surface)
     ) {
         Column(
             modifier = Modifier.padding(horizontal = 18.dp, vertical = 18.dp),
@@ -319,7 +323,7 @@ private fun WidgetGuideStepsCard() {
             Text(
                 text = stringResource(R.string.widget_guide_steps_title),
                 style = MaterialTheme.typography.titleLarge.copy(
-                    color = Color(0xFF111114),
+                    color = colors.textPrimary,
                     fontWeight = FontWeight.Black,
                     fontSize = 20.sp,
                     lineHeight = 24.sp
@@ -343,12 +347,14 @@ private fun WidgetGuideStepRow(
     number: Int,
     step: WidgetGuideStep
 ) {
+    val colors = BiteCalColors.current()
+
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(22.dp))
-            .background(Color(0xFFF7F8FA))
-            .border(1.dp, Color(0xFFE7E9EE), RoundedCornerShape(22.dp))
+            .background(colors.surfaceMuted)
+            .border(1.dp, colors.border, RoundedCornerShape(22.dp))
             .padding(horizontal = 14.dp, vertical = 14.dp),
         verticalAlignment = Alignment.Top
     ) {
@@ -387,7 +393,7 @@ private fun WidgetGuideStepRow(
                 Text(
                     text = stringResource(step.titleRes),
                     style = MaterialTheme.typography.titleMedium.copy(
-                        color = Color(0xFF111114),
+                        color = colors.textPrimary,
                         fontWeight = FontWeight.Bold,
                         fontSize = 15.sp,
                         lineHeight = 19.sp
@@ -398,7 +404,7 @@ private fun WidgetGuideStepRow(
             Text(
                 text = stringResource(step.bodyRes),
                 style = MaterialTheme.typography.bodySmall.copy(
-                    color = Color(0xFF6B7280),
+                    color = colors.textSecondary,
                     fontWeight = FontWeight.Medium,
                     fontSize = 13.sp,
                     lineHeight = 18.sp
@@ -411,12 +417,13 @@ private fun WidgetGuideStepRow(
 @Composable
 private fun WidgetGuideTipCard() {
     val cardShape = RoundedCornerShape(24.dp)
+    val colors = BiteCalColors.current()
 
     Card(
         modifier = Modifier
             .fillMaxWidth(),
         shape = cardShape,
-        colors = CardDefaults.cardColors(containerColor = Color.White)
+        colors = CardDefaults.cardColors(containerColor = colors.surface)
     ) {
         Row(
             modifier = Modifier
@@ -449,7 +456,7 @@ private fun WidgetGuideTipCard() {
                 Text(
                     text = stringResource(R.string.widget_guide_tip_title),
                     style = MaterialTheme.typography.titleMedium.copy(
-                        color = Color(0xFF111114),
+                        color = colors.textPrimary,
                         fontWeight = FontWeight.Black,
                         fontSize = 16.sp,
                         lineHeight = 20.sp
@@ -459,7 +466,7 @@ private fun WidgetGuideTipCard() {
                 Text(
                     text = stringResource(R.string.widget_guide_tip_body),
                     style = MaterialTheme.typography.bodySmall.copy(
-                        color = Color(0xFF5F6672),
+                        color = colors.textSecondary,
                         fontWeight = FontWeight.Medium,
                         fontSize = 13.sp,
                         lineHeight = 19.sp

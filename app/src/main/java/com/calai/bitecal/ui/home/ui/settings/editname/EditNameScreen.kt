@@ -21,7 +21,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.semantics
@@ -33,6 +32,7 @@ import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.common.haptic.hapticOnFocus
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
@@ -50,9 +50,10 @@ fun EditNameScreen(
 ) {
     val focusManager = LocalFocusManager.current
     val scrollState = rememberScrollState()
+    val colors = BiteCalColors.current()
 
     Scaffold(
-        containerColor = Color(0xFFF5F5F5),
+        containerColor = colors.background,
         topBar = {
             BiteCalTopBar(
                 title = stringResource(R.string.settings_edit_your_name_title),
@@ -95,7 +96,7 @@ fun EditNameScreen(
                 Spacer(Modifier.height(10.dp))
                 Text(
                     text = errorText,
-                    color = Color(0xFFEF4444),
+                    color = colors.error,
                     style = MaterialTheme.typography.bodySmall
                 )
             }
@@ -111,6 +112,7 @@ private fun NameField(
     onValueChange: (String) -> Unit,
     onImeDone: () -> Unit
 ) {
+    val colors = BiteCalColors.current()
     val shape = RoundedCornerShape(14.dp)
 
     Box(
@@ -118,7 +120,7 @@ private fun NameField(
             .fillMaxWidth()
             .height(64.dp)
             .clip(shape)
-            .border(width = 2.dp, color = Color(0xFF111114), shape = shape)
+            .border(width = 2.dp, color = colors.textPrimary, shape = shape)
             .padding(horizontal = BiteCalScreenFrame.contentHorizontalCompact),
         contentAlignment = Alignment.CenterStart
     ) {
@@ -128,7 +130,7 @@ private fun NameField(
             singleLine = true,
             textStyle = TextStyle(
                 fontSize = 18.sp,
-                color = Color(0xFF2A3440),
+                color = colors.textPrimary,
                 fontWeight = FontWeight.Normal
             ),
             keyboardOptions = KeyboardOptions(
@@ -145,7 +147,7 @@ private fun NameField(
                     Text(
                         text = stringResource(R.string.edit_name_placeholder),
                         fontSize = 18.sp,
-                        color = Color(0xFF737B88),
+                        color = colors.textMuted,
                         fontWeight = FontWeight.Normal
                     )
                 }

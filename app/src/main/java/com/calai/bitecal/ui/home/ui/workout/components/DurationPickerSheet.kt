@@ -56,6 +56,7 @@ import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
 import com.calai.bitecal.i18n.LanguageManager
 import com.calai.bitecal.i18n.ProvideComposeLocale
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.HapticWheelTickEffect
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
 import java.util.Locale
@@ -76,6 +77,7 @@ fun DurationPickerSheet(
         }
     )
 ) {
+    val colors = BiteCalColors.current()
     val sheetHeight = 546.dp
 
     var hours by remember { mutableIntStateOf(0) }
@@ -111,7 +113,7 @@ fun DurationPickerSheet(
                 onDismissRequest = { onCancel() },
                 dragHandle = null,
                 shape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp),
-                containerColor = Color(0xFFF5F5F5),
+                containerColor = colors.surface,
                 tonalElevation = 0.dp,
                 contentWindowInsets = { WindowInsets(0, 0, 0, 0) }
             ) {
@@ -133,14 +135,14 @@ fun DurationPickerSheet(
                                 .width(42.dp)
                                 .height(5.dp)
                                 .clip(RoundedCornerShape(999.dp))
-                                .background(Color(0xFFD1D1D6))
+                                .background(colors.border)
                         )
                         Text(
                             text = titleText,
                             style = MaterialTheme.typography.titleLarge.copy(
                                 fontWeight = FontWeight.Bold
                             ),
-                            color = Color(0xFF111114),
+                            color = colors.textPrimary,
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(top = 18.dp),
@@ -150,7 +152,7 @@ fun DurationPickerSheet(
                         Text(
                             text = subtitleText,
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color(0xFF6B7280),
+                            color = colors.textSecondary,
                             modifier = Modifier.fillMaxWidth(),
                             textAlign = TextAlign.Center
                         )
@@ -185,7 +187,7 @@ fun DurationPickerSheet(
                                 Spacer(Modifier.width(8.dp))
                                 Text(
                                     text = hourText,
-                                    color = Color(0xFF6B7280),
+                                    color = colors.textSecondary,
                                     fontSize = 21.sp,
                                     fontWeight = FontWeight.Medium
                                 )
@@ -200,7 +202,7 @@ fun DurationPickerSheet(
                                 Spacer(Modifier.width(8.dp))
                                 Text(
                                     text = minuteText,
-                                    color = Color(0xFF6B7280),
+                                    color = colors.textSecondary,
                                     fontSize = 21.sp,
                                     fontWeight = FontWeight.Medium
                                 )
@@ -224,8 +226,8 @@ fun DurationPickerSheet(
                                 .height(56.dp),
                             shape = RoundedCornerShape(28.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color.Black,
-                                contentColor = Color.White
+                                containerColor = colors.primaryButtonContainer,
+                                contentColor = colors.primaryButtonContent
                             )
                         ) {
                             Text(
@@ -243,8 +245,8 @@ fun DurationPickerSheet(
                                 .height(56.dp),
                             shape = RoundedCornerShape(28.dp),
                             colors = ButtonDefaults.outlinedButtonColors(
-                                containerColor = Color(0xFFE1E4EA),
-                                contentColor = Color(0xFF111114)
+                                containerColor = colors.surfaceMuted,
+                                contentColor = colors.textPrimary
                             )
                         ) {
                             Text(
@@ -271,6 +273,7 @@ private fun DurationWheelColumn(
     selectedFontWeight: FontWeight = FontWeight.Bold,
     unselectedFontWeight: FontWeight = FontWeight.Normal
 ) {
+    val colors = BiteCalColors.current()
     val visibleCount = 5
     val itemHeight = 44.dp
 
@@ -354,9 +357,9 @@ private fun DurationWheelColumn(
                     fontSize = if (isCenter) selectedFontSize else unselectedFontSize,
                     fontWeight = if (isCenter) selectedFontWeight else unselectedFontWeight,
                     color = if (isCenter) {
-                        Color(0xFF111114)
+                        colors.textPrimary
                     } else {
-                        Color(0xFF8E8E93)
+                        colors.textMuted
                     },
                     textAlign = TextAlign.Center
                 )
@@ -368,10 +371,11 @@ private fun DurationWheelColumn(
 private fun DurationSelectionBandBehind(
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
     val bandHeight = 44.dp
     val bandRadius = 10.dp
-    val bandColor = Color(0xFFFAFAFA)
-    val lineColor = Color(0xFFD1D1D6)
+    val bandColor = colors.surfaceMuted
+    val lineColor = colors.border
 
     Box(modifier = modifier) {
         Box(

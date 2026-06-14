@@ -254,8 +254,8 @@ private fun RecentUploadCardContent(
     Card(
         modifier = modifier,
         shape = RoundedCornerShape(CardCorner),
-        border = CardStyles.Border,
-        colors = CardDefaults.cardColors(containerColor = CardStyles.Bg)
+        border = CardStyles.border(),
+        colors = CardDefaults.cardColors(containerColor = CardStyles.bg())
     ) {
         Row(
             modifier = Modifier

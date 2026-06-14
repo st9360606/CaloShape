@@ -45,6 +45,7 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 import com.calai.bitecal.ui.home.ui.progress.model.WaterChartUi
 import com.calai.bitecal.ui.home.ui.progress.model.WaterProgressDayUi
@@ -63,23 +64,10 @@ import kotlin.math.roundToInt
 private val WaterBarColor = Color(0xFF73B6E6)
 private val WaterGoalLineColor = Color(0xFF3C9E45)
 
-private val WaterCardBg = Color.White
-private val WaterBorderColor = Color(0xFFD9D9DB)
-private val WaterTitleColor = Color(0xFF1B1B21)
-private val WaterValueColor = Color(0xFF17171C)
-private val WaterMetaColor = Color(0xFF74747A)
-
-private val WaterMetricChipBg = Color(0xFFF8FAFC)
-private val WaterMetricChipBorder = Color(0xFFE2E8F0)
-private val WaterMetricChipLabelColor = Color(0xFF64748B)
-private val WaterMetricChipValueColor = Color(0xFF0F172A)
-
 private val WaterFooterReachedBg = Color(0xFFEAF5E8)
 private val WaterFooterReachedText = Color(0xFF3C9E45)
 private val WaterFooterPendingBg = Color(0xFFEEF5FF)
 private val WaterFooterPendingText = WaterBarColor
-
-private val WaterRetryBg = Color(0xFF111114)
 
 @Composable
 internal fun WaterChartCard(
@@ -127,6 +115,8 @@ internal fun WaterChartCard(
 internal fun WaterLoadingCard(
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
+
     WaterChartCardFrame(
         title = stringResource(R.string.water_chart_title),
         headlineValue = "--",
@@ -137,8 +127,8 @@ internal fun WaterLoadingCard(
         avgText = stringResource(R.string.water_chart_7day_avg),
         avgValue = "--",
         footerText = stringResource(R.string.water_chart_loading),
-        footerBackground = Color(0xFFF2F4F7),
-        footerTextColor = Color(0xFF667085),
+        footerBackground = colors.surfaceMuted,
+        footerTextColor = colors.textSecondary,
         modifier = modifier
     ) {
         WaterBarChart(
@@ -155,16 +145,18 @@ internal fun WaterErrorCard(
     onRetry: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
+
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .background(WaterCardBg, RoundedCornerShape(28.dp))
-            .border(1.dp, WaterBorderColor, RoundedCornerShape(28.dp))
+            .background(colors.surface, RoundedCornerShape(28.dp))
+            .border(1.dp, colors.border, RoundedCornerShape(28.dp))
             .padding(horizontal = 26.dp, vertical = 26.dp)
     ) {
         Text(
             text = stringResource(R.string.water_chart_title),
-            color = WaterTitleColor,
+            color = colors.textPrimary,
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold
         )
@@ -177,7 +169,7 @@ internal fun WaterErrorCard(
         ) {
             Text(
                 text = message,
-                color = Color(0xFF111114),
+                color = colors.textPrimary,
                 fontSize = 14.sp,
                 textAlign = TextAlign.Center
             )
@@ -186,13 +178,13 @@ internal fun WaterErrorCard(
 
             Box(
                 modifier = Modifier
-                    .background(WaterRetryBg, RoundedCornerShape(999.dp))
+                    .background(colors.primaryButtonContainer, RoundedCornerShape(999.dp))
                     .biteCalClickable { onRetry() }
                     .padding(horizontal = 18.dp, vertical = 10.dp)
             ) {
                 Text(
                     text = stringResource(R.string.common_retry),
-                    color = Color.White,
+                    color = colors.primaryButtonContent,
                     fontWeight = FontWeight.SemiBold
                 )
             }
@@ -216,6 +208,11 @@ private fun WaterChartCardFrame(
     modifier: Modifier = Modifier,
     chartContent: @Composable () -> Unit
 ) {
+    val colors = BiteCalColors.current()
+    val resolvedFooterBackground = footerBackground.copy(
+        alpha = if (colors.background == BiteCalColors.Dark.background) 0.18f else footerBackground.alpha
+    )
+
     val resolvedDeltaText = if (deltaText == "--") {
         "--%"
     } else {
@@ -227,8 +224,8 @@ private fun WaterChartCardFrame(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .background(WaterCardBg, RoundedCornerShape(28.dp))
-            .border(1.dp, WaterBorderColor, RoundedCornerShape(28.dp))
+            .background(colors.surface, RoundedCornerShape(28.dp))
+            .border(1.dp, colors.border, RoundedCornerShape(28.dp))
             .padding(horizontal = 26.dp, vertical = 26.dp)
     ) {
         val metricChipWidth = 102.dp
@@ -248,7 +245,7 @@ private fun WaterChartCardFrame(
                 ) {
                     Text(
                         text = title,
-                        color = WaterTitleColor,
+                        color = colors.textPrimary,
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.padding(top = 10.dp)
@@ -259,7 +256,7 @@ private fun WaterChartCardFrame(
                     ) {
                         Text(
                             text = headlineValue,
-                            color = WaterValueColor,
+                            color = colors.textPrimary,
                             fontSize = 36.sp,
                             fontWeight = FontWeight.Bold,
                             lineHeight = 36.sp
@@ -269,7 +266,7 @@ private fun WaterChartCardFrame(
 
                         Text(
                             text = unitText,
-                            color = WaterMetaColor,
+                            color = colors.textSecondary,
                             fontSize = 18.sp,
                             fontWeight = FontWeight.Medium,
                             modifier = Modifier.padding(bottom = 4.dp)
@@ -323,7 +320,7 @@ private fun WaterChartCardFrame(
                 modifier = Modifier
                     .align(Alignment.CenterHorizontally)
                     .background(
-                        color = footerBackground,
+                        color = resolvedFooterBackground,
                         shape = RoundedCornerShape(12.dp)
                     )
                     .padding(horizontal = 12.dp, vertical = 6.dp)
@@ -346,10 +343,12 @@ private fun WaterMetricChip(
     accentColor: Color,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
+
     Row(
         modifier = modifier
-            .background(WaterMetricChipBg, RoundedCornerShape(14.dp))
-            .border(1.dp, WaterMetricChipBorder, RoundedCornerShape(14.dp))
+            .background(colors.surfaceMuted, RoundedCornerShape(14.dp))
+            .border(1.dp, colors.border, RoundedCornerShape(14.dp))
             .padding(horizontal = 10.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -365,7 +364,7 @@ private fun WaterMetricChip(
         Column {
             Text(
                 text = label,
-                color = WaterMetricChipLabelColor,
+                color = colors.textSecondary,
                 fontSize = 10.sp,
                 lineHeight = 12.sp,
                 fontWeight = FontWeight.Bold
@@ -375,7 +374,7 @@ private fun WaterMetricChip(
 
             Text(
                 text = value,
-                color = WaterMetricChipValueColor,
+                color = colors.textPrimary,
                 fontSize = 12.sp,
                 lineHeight = 14.sp,
                 fontWeight = FontWeight.SemiBold
@@ -385,6 +384,8 @@ private fun WaterMetricChip(
 }
 @Composable
 private fun WaterLegendRow() {
+    val colors = BiteCalColors.current()
+
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.Center,
@@ -404,7 +405,7 @@ private fun WaterLegendRow() {
 
             Text(
                 text = stringResource(R.string.water_legend_intake),
-                color = WaterValueColor,
+                color = colors.textPrimary,
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Medium
             )
@@ -433,7 +434,7 @@ private fun WaterLegendRow() {
 
             Text(
                 text = stringResource(R.string.water_legend_daily_goal),
-                color = WaterValueColor,
+                color = colors.textPrimary,
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Medium
             )
@@ -530,7 +531,7 @@ private fun WaterBarChart(
 
                     Text(
                         text = tick.roundToInt().toString(),
-                        color = ProgressChartAxisDefaults.IdleLabelColor,
+                        color = ProgressChartAxisDefaults.idleLabelColor(),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Medium,
                         modifier = Modifier
@@ -574,6 +575,7 @@ private fun WaterBarChart(
                 val tooltipGapXPx = with(density) { 18.dp.toPx() }
                 val tooltipFixedTopPx = with(density) { (-18).dp.toPx() }
                 val tooltipEdgePaddingPx = with(density) { 4.dp.toPx() }
+                val gridLineColor = ProgressChartAxisDefaults.gridColor()
 
                 Canvas(
                     modifier = Modifier.fillMaxSize()
@@ -590,7 +592,7 @@ private fun WaterBarChart(
                         val y = plotBottom - (ratio * plotHeight)
 
                         drawLine(
-                            color = ProgressChartAxisDefaults.GridColor,
+                            color = gridLineColor,
                             start = Offset(0f, y),
                             end = Offset(size.width, y),
                             strokeWidth = strokeWidth,
@@ -734,9 +736,9 @@ private fun WaterBarChart(
                     Text(
                         text = localizedWaterDayLabel(day.dayLabel),
                         color = if (isToday) {
-                            ProgressChartAxisDefaults.TodayLabelColor
+                            ProgressChartAxisDefaults.todayLabelColor()
                         } else {
-                            ProgressChartAxisDefaults.IdleLabelColor
+                            ProgressChartAxisDefaults.idleLabelColor()
                         },
                         fontSize = 13.sp,
                         fontWeight = if (isToday) {

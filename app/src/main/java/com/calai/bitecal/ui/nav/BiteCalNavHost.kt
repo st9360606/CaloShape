@@ -60,6 +60,7 @@ import com.calai.bitecal.i18n.LanguageSessionFlag
 import com.calai.bitecal.i18n.LanguageStore
 import com.calai.bitecal.i18n.LocalLocaleController
 import com.calai.bitecal.i18n.currentLocaleKey
+import com.calai.bitecal.ui.appearance.AppearanceMode
 import com.calai.bitecal.ui.appentry.AppEntryRoute
 import com.calai.bitecal.ui.auth.RequireSignInScreen
 import com.calai.bitecal.ui.auth.SignInSheetHost
@@ -155,6 +156,7 @@ import com.calai.bitecal.ui.onboarding.weight.WeightSelectionScreen
 import com.calai.bitecal.ui.onboarding.weight.WeightSelectionViewModel
 import com.calai.bitecal.ui.subscription.OnboardSubscriptionScreen
 import com.calai.bitecal.ui.subscription.SubscriptionViewModel
+import com.calai.bitecal.ui.theme.CalAITheme
 import com.calai.bitecal.widget.BiteCalWidgetNavigationRequest
 import com.calai.bitecal.widget.BiteCalWidgetPendingIntents
 import dagger.hilt.android.EntryPointAccessors
@@ -434,6 +436,8 @@ fun BiteCalNavHost(
     hostActivity: ComponentActivity,
     modifier: Modifier = Modifier,
     widgetNavigationRequest: BiteCalWidgetNavigationRequest? = null,
+    appearanceMode: AppearanceMode = AppearanceMode.LIGHT,
+    onSetAppearanceMode: (AppearanceMode) -> Unit = {},
     onSetLocale: (String) -> Unit,
 ) {
     val nav = rememberNavController()
@@ -556,15 +560,19 @@ fun BiteCalNavHost(
         }
     }
 
-    NavHost(
-        navController = nav,
-        startDestination = Routes.APP_ENTRY,
-        modifier = modifier,
-        enterTransition = { EnterTransition.None },
-        exitTransition = { ExitTransition.None },
-        popEnterTransition = { EnterTransition.None },
-        popExitTransition = { ExitTransition.None }
-    ) {
+    val useDarkAppearance = appearanceMode == AppearanceMode.DARK &&
+            !isLightOnlyAppearanceRoute(currentRoute)
+
+    CalAITheme(darkTheme = useDarkAppearance) {
+        NavHost(
+            navController = nav,
+            startDestination = Routes.APP_ENTRY,
+            modifier = modifier,
+            enterTransition = { EnterTransition.None },
+            exitTransition = { ExitTransition.None },
+            popEnterTransition = { EnterTransition.None },
+            popExitTransition = { ExitTransition.None }
+        ) {
 
         composable(Routes.APP_ENTRY) {
             AppEntryRoute(
@@ -1586,6 +1594,8 @@ fun BiteCalNavHost(
                         todayNutrition = homeUi.todayNutrition,
                         currentTab = HomeTab.Personal,
                         currentLanguageTag = localeController.tag,
+                        appearanceMode = appearanceMode,
+                        onAppearanceModeSelected = onSetAppearanceMode,
                         onLanguageSelected = { tag ->
                             val normalizedTag = LanguageManager.normalizeTag(tag)
 
@@ -3323,6 +3333,7 @@ fun BiteCalNavHost(
             )
         }
     }
+    }
 }
 
 private fun openNetworkSettings(ctx: Context) {
@@ -3368,4 +3379,14 @@ private fun isAuthOrEntryRoute(route: String?): Boolean {
             route.startsWith(Routes.REQUIRE_SIGN_IN) ||
             route.startsWith(Routes.SIGN_IN_EMAIL_ENTER) ||
             route.startsWith(Routes.SIGN_IN_EMAIL_CODE)
+}
+
+private fun isLightOnlyAppearanceRoute(route: String?): Boolean {
+    if (route.isNullOrBlank()) return true
+
+    return isOnboardingRoute(route) ||
+            isAuthOrEntryRoute(route) ||
+            route == Routes.HOME_SCAN_SUBSCRIPTION ||
+            route == Routes.HOME_WORKOUT_SUBSCRIPTION ||
+            route == Routes.SETTINGS_SCAN_SUBSCRIPTION
 }

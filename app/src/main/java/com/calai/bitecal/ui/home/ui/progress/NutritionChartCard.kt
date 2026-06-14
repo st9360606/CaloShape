@@ -49,6 +49,7 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 import com.calai.bitecal.ui.home.ui.progress.model.ProgressBarDayUi
 import com.calai.bitecal.ui.home.ui.progress.tooltip.ChartTooltipCard
@@ -67,9 +68,6 @@ private val ProteinColor = Color(0xFFE56C6C)
 private val CarbsColor = Color(0xFFD89A62)
 private val FatsColor = Color(0xFF6C93D8)
 
-private val CardBg = Color.White
-private val BorderColor = Color(0xFFE7E7E7)
-private val ChipSelected = Color(0xFF111114)
 @Composable
 internal fun NutritionChartCard(
     totalCaloriesText: String,
@@ -113,19 +111,21 @@ internal fun ErrorCard(
     onRetry: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
+
     Box(
         modifier = modifier
             .fillMaxWidth()
             .height(260.dp)
-            .background(CardBg, RoundedCornerShape(24.dp))
-            .border(1.dp, BorderColor, RoundedCornerShape(24.dp))
+            .background(colors.surface, RoundedCornerShape(24.dp))
+            .border(1.dp, colors.border, RoundedCornerShape(24.dp))
             .padding(24.dp),
         contentAlignment = Alignment.Center
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
                 text = message,
-                color = Color(0xFF111114),
+                color = colors.textPrimary,
                 textAlign = TextAlign.Center
             )
 
@@ -133,13 +133,13 @@ internal fun ErrorCard(
 
             Box(
                 modifier = Modifier
-                    .background(ChipSelected, RoundedCornerShape(999.dp))
+                    .background(colors.primaryButtonContainer, RoundedCornerShape(999.dp))
                     .biteCalClickable { onRetry() }
                     .padding(horizontal = 18.dp, vertical = 10.dp)
             ) {
                 Text(
                     text = stringResource(R.string.common_retry),
-                    color = Color.White,
+                    color = colors.primaryButtonContent,
                     fontWeight = FontWeight.SemiBold
                 )
             }
@@ -172,6 +172,7 @@ private fun ProgressChartCardFrame(
     chartContent: @Composable () -> Unit
 ) {
     val valueText = resolveCaloriesValueText(totalCaloriesText)
+    val colors = BiteCalColors.current()
 
     val resolvedDeltaText = deltaDisplayText ?: if (deltaText == "--") {
         stringResource(R.string.progress_chart_delta_placeholder)
@@ -184,8 +185,8 @@ private fun ProgressChartCardFrame(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .background(CardBg, RoundedCornerShape(28.dp))
-            .border(1.dp, Color(0xFFD9D9DB), RoundedCornerShape(28.dp))
+            .background(colors.surface, RoundedCornerShape(28.dp))
+            .border(1.dp, colors.border, RoundedCornerShape(28.dp))
             .padding(horizontal = 26.dp, vertical = 26.dp)
     ) {
         Column(modifier = Modifier.fillMaxWidth()) {
@@ -201,7 +202,7 @@ private fun ProgressChartCardFrame(
                 ) {
                     Text(
                         text = stringResource(R.string.progress_chart_total_calories),
-                        color = Color(0xFF1B1B21),
+                        color = colors.textPrimary,
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.padding(top = 10.dp)
@@ -210,7 +211,7 @@ private fun ProgressChartCardFrame(
                     Row(verticalAlignment = Alignment.Bottom) {
                         Text(
                             text = valueText,
-                            color = Color(0xFF17171C),
+                            color = colors.textPrimary,
                             fontSize = 36.sp,
                             fontWeight = FontWeight.Bold,
                             lineHeight = 36.sp
@@ -220,7 +221,7 @@ private fun ProgressChartCardFrame(
 
                         Text(
                             text = stringResource(R.string.progress_chart_cals),
-                            color = Color(0xFF74747A),
+                            color = colors.textSecondary,
                             fontSize = 18.sp,
                             fontWeight = FontWeight.Medium,
                             modifier = Modifier.padding(bottom = 4.dp)
@@ -333,10 +334,12 @@ private fun NutritionMetricChip(
     accentColor: Color,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
+
     Row(
         modifier = modifier
-            .background(Color(0xFFF8FAFC), RoundedCornerShape(14.dp))
-            .border(1.dp, Color(0xFFE2E8F0), RoundedCornerShape(14.dp))
+            .background(colors.surfaceMuted, RoundedCornerShape(14.dp))
+            .border(1.dp, colors.border, RoundedCornerShape(14.dp))
             .padding(horizontal = 10.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -352,7 +355,7 @@ private fun NutritionMetricChip(
         Column {
             Text(
                 text = label,
-                color = Color(0xFF64748B),
+                color = colors.textSecondary,
                 fontSize = 10.sp,
                 lineHeight = 12.sp,
                 fontWeight = FontWeight.Bold
@@ -362,7 +365,7 @@ private fun NutritionMetricChip(
 
             Text(
                 text = value,
-                color = Color(0xFF0F172A),
+                color = colors.textPrimary,
                 fontSize = 12.sp,
                 lineHeight = 14.sp,
                 fontWeight = FontWeight.SemiBold
@@ -460,7 +463,7 @@ private fun StackedBarChart(
 
                     Text(
                         text = tick.roundToInt().toString(),
-                        color = ProgressChartAxisDefaults.IdleLabelColor,
+                            color = ProgressChartAxisDefaults.idleLabelColor(),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Medium,
                         modifier = Modifier
@@ -503,6 +506,7 @@ private fun StackedBarChart(
                 val tooltipGapXPx = with(density) { 18.dp.toPx() }
                 val tooltipFixedTopPx = with(density) { (-92).dp.toPx() }
                 val tooltipEdgePaddingPx = with(density) { 4.dp.toPx() }
+                val gridLineColor = ProgressChartAxisDefaults.gridColor()
                 Canvas(
                     modifier = Modifier.fillMaxSize()
                 ) {
@@ -518,7 +522,7 @@ private fun StackedBarChart(
                         val y = plotBottom - (ratio * plotHeight)
 
                         drawLine(
-                            color = ProgressChartAxisDefaults.GridColor,
+                            color = gridLineColor,
                             start = Offset(0f, y),
                             end = Offset(size.width, y),
                             strokeWidth = strokeWidth,
@@ -675,9 +679,9 @@ private fun StackedBarChart(
                     Text(
                         text = localizedDayLabel(day.dayLabel),
                         color = if (isToday) {
-                            ProgressChartAxisDefaults.TodayLabelColor
+                            ProgressChartAxisDefaults.todayLabelColor()
                         } else {
-                            ProgressChartAxisDefaults.IdleLabelColor
+                            ProgressChartAxisDefaults.idleLabelColor()
                         },
                         fontSize = 13.sp,
                         fontWeight = if (isToday) {
@@ -772,6 +776,8 @@ private fun LegendChip(
     emojiYOffset: Dp = 0.dp,
     textYOffset: Dp = 0.dp
 ) {
+    val colors = BiteCalColors.current()
+
     Row(
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -785,7 +791,7 @@ private fun LegendChip(
 
         Text(
             text = label,
-            color = Color(0xFF17171C),
+            color = colors.textPrimary,
             fontSize = 14.sp,
             fontWeight = FontWeight.Medium,
             modifier = Modifier.offset(y = textYOffset)
@@ -795,6 +801,7 @@ private fun LegendChip(
 
 @Composable
 private fun LoadingChartPlaceholder() {
+    val colors = BiteCalColors.current()
     val yLabels = listOf("8", "6", "4", "2", "0")
     val xLabels = listOf(
         stringResource(R.string.progress_day_sun),
@@ -824,7 +831,7 @@ private fun LoadingChartPlaceholder() {
                 yLabels.forEach { label ->
                     Text(
                         text = label,
-                        color = Color(0xFF8A8A8E),
+                        color = colors.textMuted,
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Medium
                     )
@@ -838,17 +845,18 @@ private fun LoadingChartPlaceholder() {
                     .weight(1f)
                     .height(200.dp)
             ) {
+                val gridLineColor = ProgressChartAxisDefaults.gridColor()
+
                 Canvas(
                     modifier = Modifier.fillMaxSize()
                 ) {
                     val dash = PathEffect.dashPathEffect(floatArrayOf(10f, 10f), 0f)
-                    val lineColor = Color(0xFFBDBDBD)
                     val strokeWidth = 2f
 
                     for (i in 0 until 5) {
                         val y = size.height * i / 4f
                         drawLine(
-                            color = lineColor,
+                            color = gridLineColor,
                             start = Offset(0f, y),
                             end = Offset(size.width, y),
                             strokeWidth = strokeWidth,
@@ -915,7 +923,7 @@ private fun LoadingChartPlaceholder() {
             xLabels.forEach { label ->
                 Text(
                     text = label,
-                    color = Color(0xFF8A8A8E),
+                    color = colors.textMuted,
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Medium
                 )

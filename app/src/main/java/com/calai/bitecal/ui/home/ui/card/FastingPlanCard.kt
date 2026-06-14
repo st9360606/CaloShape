@@ -68,9 +68,9 @@ fun FastingPlanCard(
             .height(cardHeight),
         shape = CardStyles.Corner,
         colors = CardDefaults.cardColors(
-            containerColor = CardStyles.Bg
+            containerColor = CardStyles.bg()
         ),
-        border = CardStyles.Border,
+        border = CardStyles.border(),
         onClick = hapticClick
     ){
         Column(modifier = Modifier.fillMaxSize()) {

@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import kotlin.math.roundToInt
 
 internal data class ChartTooltipMetricUi(
@@ -142,6 +143,28 @@ internal fun ChartTooltipCard(
     dayLabelColor: Color = ChartTooltipDefaults.DayLabelColor,
     dayLabelStartPadding: Dp = ChartTooltipDefaults.DayLabelStartPadding
 ) {
+    val colors = BiteCalColors.current()
+    val resolvedBorderColor = if (borderColor == ChartTooltipDefaults.BorderColor) {
+        colors.border
+    } else {
+        borderColor
+    }
+    val resolvedLabelTextColor = if (labelTextColor == ChartTooltipDefaults.LabelTextColor) {
+        colors.textSecondary
+    } else {
+        labelTextColor
+    }
+    val resolvedValueTextColor = if (valueTextColor == ChartTooltipDefaults.ValueTextColor) {
+        colors.textPrimary
+    } else {
+        valueTextColor
+    }
+    val resolvedDayLabelColor = if (dayLabelColor == ChartTooltipDefaults.DayLabelColor) {
+        colors.textMuted
+    } else {
+        dayLabelColor
+    }
+
     Column(
         modifier = modifier
             .zIndex(2f)
@@ -153,12 +176,12 @@ internal fun ChartTooltipCard(
                 clip = false
             )
             .background(
-                color = Color.White,
+                color = colors.surface,
                 shape = RoundedCornerShape(ChartTooltipDefaults.CornerRadius)
             )
             .border(
                 width = 1.dp,
-                color = borderColor,
+                color = resolvedBorderColor,
                 shape = RoundedCornerShape(ChartTooltipDefaults.CornerRadius)
             )
             .padding(
@@ -172,14 +195,14 @@ internal fun ChartTooltipCard(
         metrics.forEach { metric ->
             ChartTooltipMetricRow(
                 metric = metric,
-                labelTextColor = labelTextColor,
-                valueTextColor = valueTextColor
+                labelTextColor = resolvedLabelTextColor,
+                valueTextColor = resolvedValueTextColor
             )
         }
 
         Text(
             text = dayLabel,
-            color = dayLabelColor,
+            color = resolvedDayLabelColor,
             fontSize = 13.sp,
             fontWeight = FontWeight.SemiBold,
             modifier = Modifier

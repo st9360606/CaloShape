@@ -14,7 +14,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
-import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -22,8 +21,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -51,7 +48,6 @@ import com.calai.bitecal.data.profile.repo.cmToFeetInches1
 import com.calai.bitecal.data.profile.repo.feetInchesToCm1
 import com.calai.bitecal.ui.home.ui.settings.details.model.EditHeightViewModel
 import kotlin.math.abs
-import androidx.compose.foundation.layout.size
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.ui.res.stringResource
@@ -62,9 +58,7 @@ import kotlin.math.roundToInt
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.design.BiteCalEditBottomActionBar
-import com.calai.bitecal.ui.common.design.BiteCalEditDualActionRow
-import com.calai.bitecal.ui.common.design.BiteCalPrimaryButton
-import com.calai.bitecal.ui.common.design.BiteCalSecondaryOutlinedButton
+import com.calai.bitecal.ui.common.design.BiteCalColors
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
@@ -75,6 +69,7 @@ fun EditHeightScreen(
 ) {
     val ui by vm.ui.collectAsState()
     val init by vm.initialHeight.collectAsState()
+    val colors = BiteCalColors.current()
 
     LaunchedEffect(Unit) { vm.initIfNeeded() }
 
@@ -106,7 +101,7 @@ fun EditHeightScreen(
     }
 
     Scaffold(
-        containerColor = Color(0xFFF5F5F5),
+        containerColor = colors.background,
         topBar = {
             BiteCalTopBar(
                 title = stringResource(R.string.edit_height_title),
@@ -147,7 +142,7 @@ fun EditHeightScreen(
                 Spacer(Modifier.height(10.dp))
                 Text(
                     text = ui.error!!,
-                    color = Color(0xFFEF4444),
+                    color = colors.error,
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier
                         .fillMaxWidth()
@@ -299,7 +294,7 @@ fun EditHeightScreen(
                     Text(
                         text = stringResource(R.string.edit_height_set_current_height),
                         fontSize = 12.sp,
-                        color = Color(0xFF9AA3AE),
+                        color = colors.textMuted,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -307,7 +302,7 @@ fun EditHeightScreen(
                     Text(
                         text = stringResource(R.string.edit_height_privacy_note),
                         fontSize = 12.sp,
-                        color = Color(0xFF9AA3AE),
+                        color = colors.textMuted,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -324,13 +319,14 @@ private fun HeightUnitSegmentedSameAsGoal(
     onChange: (Boolean) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
     Box(
         modifier = modifier.fillMaxWidth(),
         contentAlignment = Alignment.Center
     ) {
         Surface(
             shape = RoundedCornerShape(40.dp),
-            color = Color(0xFFE2E5EA),
+            color = colors.surfaceMuted,
             modifier = Modifier
                 .fillMaxWidth(0.60f)
                 .heightIn(min = 40.dp)
@@ -340,7 +336,7 @@ private fun HeightUnitSegmentedSameAsGoal(
                     text = "ft",
                     selected = !useMetric,
                     onClick = { onChange(false) },
-                    selectedColor = Color.Black,
+                    selectedColor = colors.primaryButtonContainer,
                     modifier = Modifier
                         .weight(1f)
                         .height(40.dp)
@@ -350,7 +346,7 @@ private fun HeightUnitSegmentedSameAsGoal(
                     text = "cm",
                     selected = useMetric,
                     onClick = { onChange(true) },
-                    selectedColor = Color.Black,
+                    selectedColor = colors.primaryButtonContainer,
                     modifier = Modifier
                         .weight(1f)
                         .height(40.dp)
@@ -368,6 +364,7 @@ private fun SegItemSameAsGoal(
     selectedColor: Color,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
     val corner = 22.dp
     val fSize = 20.sp
 
@@ -388,7 +385,7 @@ private fun SegItemSameAsGoal(
                 text = text,
                 fontSize = fSize,
                 fontWeight = FontWeight.SemiBold,
-                color = if (selected) Color.White else Color(0xFF333333),
+                color = if (selected) colors.primaryButtonContent else colors.textPrimary,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.fillMaxWidth()
             )
@@ -409,6 +406,7 @@ private fun NumberWheel(
     unitLabel: String? = null,
     modifier: Modifier = Modifier
 ) {
+    val colors = BiteCalColors.current()
     val visibleCount = 5
     val mid = visibleCount / 2
     val items = remember(range) { range.toList() }
@@ -488,7 +486,7 @@ private fun NumberWheel(
                         text = num.toString(),
                         fontSize = size,
                         fontWeight = weight,
-                        color = Color.Black.copy(alpha = alpha),
+                        color = colors.textPrimary.copy(alpha = alpha),
                         textAlign = TextAlign.Center
                     )
 
@@ -498,7 +496,7 @@ private fun NumberWheel(
                         Text(
                             text = unitLabel,
                             fontSize = unitSize,
-                            color = Color(0xFF333333).copy(alpha = alpha),
+                            color = colors.textSecondary.copy(alpha = alpha),
                             fontWeight = FontWeight.Normal
                         )
                     }
@@ -507,7 +505,7 @@ private fun NumberWheel(
         }
 
         // center lines（保留你原本的）
-        val lineColor = Color(0x11000000)
+        val lineColor = colors.border.copy(alpha = 0.72f)
         val half = rowHeight / 2
         val lineThickness = 1.dp
         Box(

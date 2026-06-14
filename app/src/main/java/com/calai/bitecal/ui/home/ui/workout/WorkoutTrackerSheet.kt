@@ -85,6 +85,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.ColorFilter
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
 
 // 色票
@@ -159,6 +160,7 @@ fun WorkoutTrackerSheet(
     val onFlowSave: () -> Unit = { vm.confirmSaveFromEstimate() }
     val onFlowTryAgain: () -> Unit = { vm.dismissDialogs() }
     val onFlowCancel: () -> Unit = { vm.dismissDialogs() }
+    val colors = BiteCalColors.current()
 
     // 主固定底部面板
     FixedModalSheet(
@@ -172,7 +174,7 @@ fun WorkoutTrackerSheet(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(sheetH)
-                .background(Color.White)
+                .background(colors.surface)
                 .padding(horizontal = 24.dp)
                 .imePadding()
         ) {
@@ -271,6 +273,7 @@ private fun TrackerContent(
     val bottomPad: Dp = navBottom + 12.dp
 
     var expanded by rememberSaveable { mutableStateOf(false) }
+    val colors = BiteCalColors.current()
     val initialLimit = 20
     val totalCount = uiState.presets.size
     val presetsToShow = if (expanded) uiState.presets else uiState.presets.take(initialLimit)
@@ -292,17 +295,22 @@ private fun TrackerContent(
                 modifier = Modifier
                     .fillMaxWidth()
                     .heightIn(min = 120.dp)
-                    .border(thinBorder, Gray300, RoundedCornerShape(16.dp))
-                    .background(Color.White, RoundedCornerShape(16.dp)),
-                placeholder = { Text(stringResource(R.string.workout_tracker_example_placeholder), color = Gray600) },
-                textStyle = MaterialTheme.typography.bodyLarge.copy(color = Color.Black),
+                    .border(thinBorder, colors.border, RoundedCornerShape(16.dp))
+                    .background(colors.surfaceMuted, RoundedCornerShape(16.dp)),
+                placeholder = {
+                    Text(
+                        stringResource(R.string.workout_tracker_example_placeholder),
+                        color = colors.textMuted
+                    )
+                },
+                textStyle = MaterialTheme.typography.bodyLarge.copy(color = colors.textPrimary),
                 shape = RoundedCornerShape(16.dp),
                 colors = OutlinedTextFieldDefaults.colors(
-                    focusedTextColor = Color.Black,
-                    unfocusedTextColor = Color.Black,
-                    cursorColor = Color.Black,
-                    focusedContainerColor = Color.White,
-                    unfocusedContainerColor = Color.White,
+                    focusedTextColor = colors.textPrimary,
+                    unfocusedTextColor = colors.textPrimary,
+                    cursorColor = colors.textPrimary,
+                    focusedContainerColor = colors.surfaceMuted,
+                    unfocusedContainerColor = colors.surfaceMuted,
                     focusedBorderColor = Color.Transparent,
                     unfocusedBorderColor = Color.Transparent
                 )
@@ -540,7 +548,7 @@ fun EstimatingContent(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.White),
+            .background(BiteCalColors.current().surface),
         contentAlignment = Alignment.Center
     ) {
         // 中央：進度環 + 主文案（整組往上）
@@ -680,7 +688,7 @@ fun ResultContent(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.White)
+            .background(BiteCalColors.current().surface)
     ) {
         // 中央內容（整塊上移 centerLift）
         Column(
@@ -795,7 +803,7 @@ fun FailedContent(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.White)
+            .background(BiteCalColors.current().surface)
     ) {
         // 中央警示圖示（放大）
         Column(

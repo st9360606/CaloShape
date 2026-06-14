@@ -1,7 +1,9 @@
 package com.calai.bitecal.ui.home.ui.progress
 
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import java.time.LocalDate
 
 internal object ProgressChartAxisDefaults {
@@ -11,6 +13,36 @@ internal object ProgressChartAxisDefaults {
 
     val IdleLabelWeight = FontWeight.Normal
     val TodayLabelWeight = FontWeight.Bold
+
+    @Composable
+    fun gridColor(): Color {
+        val colors = BiteCalColors.current()
+        return if (colors.background == BiteCalColors.Dark.background) {
+            Color(0xFF34343A)
+        } else {
+            GridColor
+        }
+    }
+
+    @Composable
+    fun idleLabelColor(): Color {
+        val colors = BiteCalColors.current()
+        return if (colors.background == BiteCalColors.Dark.background) {
+            colors.textMuted
+        } else {
+            IdleLabelColor
+        }
+    }
+
+    @Composable
+    fun todayLabelColor(): Color {
+        val colors = BiteCalColors.current()
+        return if (colors.background == BiteCalColors.Dark.background) {
+            colors.textPrimary
+        } else {
+            TodayLabelColor
+        }
+    }
 
     fun isToday(dateIso: String, dayLabel: String): Boolean {
         val today = LocalDate.now()

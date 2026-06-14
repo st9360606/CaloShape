@@ -14,10 +14,14 @@ import androidx.compose.ui.platform.LocalContext
 import com.calai.bitecal.i18n.LanguageManager
 import com.calai.bitecal.i18n.LanguageStore
 import com.calai.bitecal.i18n.ProvideComposeLocale
+import com.calai.bitecal.ui.appearance.AppearanceMode
+import com.calai.bitecal.ui.appearance.AppearanceStore
 import com.calai.bitecal.ui.nav.BiteCalNavHost
+import com.calai.bitecal.ui.theme.CalAITheme
 import com.calai.bitecal.widget.BiteCalHomeWidgetUpdater
 import com.calai.bitecal.widget.BiteCalWidgetNavigationRequest
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.util.Locale
 
@@ -33,6 +37,9 @@ fun BiteCalApp(
 ) {
     val context = LocalContext.current
     val store = remember(context) { LanguageStore(context) }
+    val appearanceStore = remember(context) { AppearanceStore(context.applicationContext) }
+    val appearanceMode by appearanceStore.modeFlow.collectAsState(initial = AppearanceMode.LIGHT)
+    val appearanceScope = rememberCoroutineScope()
 
     // ✅ 關鍵：等待 DataStore 第一次有值再渲染，避免先用系統語言再跳成使用者語言
     val savedTagOrNull: String? by store.langFlow.collectAsState(initial = null)
@@ -72,10 +79,18 @@ fun BiteCalApp(
 
     // 只透過 ProvideComposeLocale 提供語系；不覆寫 LocalContext
     ProvideComposeLocale(composeLocale) {
-        BiteCalNavHost(
-            hostActivity = hostActivity,
-            widgetNavigationRequest = widgetNavigationRequest,
-            onSetLocale = { tag -> composeLocale = tag } // 切語言只改這個 state
-        )
+        CalAITheme(darkTheme = appearanceMode == AppearanceMode.DARK) {
+            BiteCalNavHost(
+                hostActivity = hostActivity,
+                widgetNavigationRequest = widgetNavigationRequest,
+                appearanceMode = appearanceMode,
+                onSetAppearanceMode = { mode ->
+                    appearanceScope.launch {
+                        appearanceStore.setMode(mode)
+                    }
+                },
+                onSetLocale = { tag -> composeLocale = tag }
+            )
+        }
     }
 }

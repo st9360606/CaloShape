@@ -62,7 +62,7 @@ import com.calai.bitecal.ui.common.haptic.biteCalClickable
 import com.calai.bitecal.data.workout.api.WorkoutHistorySessionDto
 import com.calai.bitecal.ui.home.HomeTab
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
-import com.calai.bitecal.ui.home.components.LightHomeBackground
+import com.calai.bitecal.ui.home.components.HomeBackground
 import com.calai.bitecal.ui.home.components.MainBottomBar
 import com.calai.bitecal.ui.home.components.toast.DeleteFailedTopToast
 import com.calai.bitecal.ui.home.components.toast.DeleteSuccessTopToast
@@ -122,7 +122,7 @@ fun WorkoutHistoryScreen(
 
     Box(modifier = Modifier.fillMaxSize()) {
         // 背景保持不變
-        LightHomeBackground()
+        HomeBackground()
 
         Scaffold(
             containerColor = Color.Transparent,

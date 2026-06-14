@@ -51,7 +51,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
-import com.calai.bitecal.ui.home.components.LightHomeBackground
+import com.calai.bitecal.ui.home.components.HomeBackground
 import com.calai.bitecal.ui.common.design.BiteCalRingColorsExplainedTokens as RingColorsExplainedTheme
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
@@ -72,7 +72,7 @@ fun RingColorsExplainedScreen(
     val scroll = rememberScrollState()
 
     Box(modifier = Modifier.fillMaxSize()) {
-        LightHomeBackground()
+        HomeBackground()
 
         Scaffold(
             containerColor = Color.Transparent,

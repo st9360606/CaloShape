@@ -21,8 +21,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.calai.bitecal.R
-import com.calai.bitecal.ui.home.HomeTab
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
+import com.calai.bitecal.ui.common.design.BiteCalColors
+import com.calai.bitecal.ui.home.HomeTab
 
 /**
  * 共用 BottomBar：Home / Progress / Weight / Fasting / Workout
@@ -32,9 +33,10 @@ fun MainBottomBar(
     current: HomeTab,
     onOpenTab: (HomeTab) -> Unit
 ) {
-    val barSurface = Color(0xFFF5F5F5)
-    val selected = Color(0xFF111114)     // ✅ 選中：全黑
-    val unselected = Color(0xFF9CA3AF)   // 未選中：灰
+    val colors = BiteCalColors.current()
+    val barSurface = colors.background
+    val selected = colors.textPrimary
+    val unselected = colors.textMuted
 
     Column(
         modifier = Modifier
