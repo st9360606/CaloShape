@@ -122,13 +122,22 @@ fun RecentlyUploadedEmptyCard(
     val outerShape = RoundedCornerShape(outerCorner)
     val pillShape = RoundedCornerShape(pillCorner)
     val resolvedStyle = if (style == RecentlyUploadedEmptyStyle.Default) {
+        val isDark = HomeCardStyles.isDark()
         style.copy(
             outerContainerColor = HomeCardStyles.Surface.card(),
             outerBorderColor = HomeCardStyles.Surface.borderColor(),
             innerPillColor = HomeCardStyles.Surface.raised(),
             innerPillBorderColor = HomeCardStyles.Surface.borderColor(),
-            iconBgColor = HomeCardStyles.Surface.raisedAlt(),
-            skeletonColor = HomeCardStyles.Loading.skeletonBase(),
+            iconBgColor = if (isDark) {
+                HomeCardStyles.Surface.borderColor()
+            } else {
+                HomeCardStyles.Surface.raisedAlt()
+            },
+            skeletonColor = if (isDark) {
+                HomeCardStyles.Loading.skeletonHighlight()
+            } else {
+                HomeCardStyles.Loading.skeletonBase()
+            },
             hintColor = HomeCardStyles.Text.secondary()
         )
     } else {

@@ -480,6 +480,8 @@ fun BiteCalSecondaryOutlinedButton(
     height: Dp = BiteCalSize.editInlineButtonHeight,
     borderColor: Color = BiteCalColors.current().textPrimary.copy(alpha = 0.45f),
     contentColor: Color = BiteCalColors.current().textPrimary,
+    containerColor: Color = BiteCalColors.current().surface,
+    disabledContainerColor: Color = containerColor,
 ) {
     OutlinedButton(
         onClick = rememberClickWithHaptic(enabled = enabled, onClick = onClick),
@@ -488,9 +490,9 @@ fun BiteCalSecondaryOutlinedButton(
         shape = BiteCalShape.button,
         border = BorderStroke(1.2.dp, borderColor),
         colors = ButtonDefaults.outlinedButtonColors(
-            containerColor = BiteCalColors.current().surface,
+            containerColor = containerColor,
             contentColor = contentColor,
-            disabledContainerColor = BiteCalColors.current().surface,
+            disabledContainerColor = disabledContainerColor,
             disabledContentColor = contentColor.copy(alpha = 0.45f),
         ),
         contentPadding = PaddingValues(horizontal = 18.dp, vertical = 0.dp),

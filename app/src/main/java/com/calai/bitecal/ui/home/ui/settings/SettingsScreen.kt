@@ -102,6 +102,7 @@ import com.calai.bitecal.ui.home.HomeTab
 import com.calai.bitecal.ui.home.components.CardStyles
 import com.calai.bitecal.ui.home.components.GaugeRing
 import com.calai.bitecal.ui.home.components.HomeBackground
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import com.calai.bitecal.ui.home.components.MainBottomBar
 import com.calai.bitecal.ui.home.ui.camera.menu.HomeQuickActionMenu
 import com.calai.bitecal.ui.home.ui.camera.scan.ScanFab
@@ -683,11 +684,8 @@ private fun ProfileCard(
 
     Card(
         shape = shape,
-        colors = CardDefaults.cardColors(containerColor = colors.surface),
-        border = BorderStroke(
-            width = 1.dp,
-            color = colors.border
-        ),
+        colors = CardDefaults.cardColors(containerColor = settingsHomeAlignedCardContainer()),
+        border = settingsHomeAlignedCardBorder(lightWidth = 1.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
         Row(
@@ -1029,11 +1027,8 @@ private fun InviteFriendsCard(
 
     Card(
         shape = outerShape,
-        colors = CardDefaults.cardColors(containerColor = colors.surface),
-        border = BorderStroke(
-            width = 1.dp,
-            color = colors.border
-        ),
+        colors = CardDefaults.cardColors(containerColor = settingsHomeAlignedCardContainer()),
+        border = settingsHomeAlignedCardBorder(lightWidth = 1.dp),
         modifier = Modifier
             .fillMaxWidth()
             .scale(cardScale)
@@ -1190,7 +1185,22 @@ private fun InviteFriendsCard(
                             .fillMaxWidth()
                             .height(44.dp)
                             .clip(RoundedCornerShape(999.dp))
-                            .background(Color.White)
+                            .background(
+                                if (HomeCardStyles.isDark()) {
+                                    HomeCardStyles.Action.secondaryContainer()
+                                } else {
+                                    Color.White
+                                }
+                            )
+                            .border(
+                                width = if (HomeCardStyles.isDark()) 1.dp else 0.dp,
+                                color = if (HomeCardStyles.isDark()) {
+                                    HomeCardStyles.Action.secondaryBorder()
+                                } else {
+                                    Color.Transparent
+                                },
+                                shape = RoundedCornerShape(999.dp)
+                            )
                             .padding(horizontal = BiteCalScreenFrame.contentHorizontalMedium),
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.Center
@@ -1198,7 +1208,11 @@ private fun InviteFriendsCard(
                         Text(
                             text = stringResource(R.string.settings_get_30_days_free),
                             style = MaterialTheme.typography.labelLarge.copy(
-                                color = Color(0xFF111114),
+                                color = if (HomeCardStyles.isDark()) {
+                                    HomeCardStyles.Action.secondaryContent()
+                                } else {
+                                    Color(0xFF111114)
+                                },
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 14.sp
                             )
@@ -1210,13 +1224,32 @@ private fun InviteFriendsCard(
                             modifier = Modifier
                                 .size(24.dp)
                                 .clip(CircleShape)
-                                .background(Color(0xFF111114)),
+                                .background(
+                                    if (HomeCardStyles.isDark()) {
+                                        HomeCardStyles.Action.addContainer()
+                                    } else {
+                                        Color(0xFF111114)
+                                    }
+                                )
+                                .border(
+                                    width = if (HomeCardStyles.isDark()) 0.8.dp else 0.dp,
+                                    color = if (HomeCardStyles.isDark()) {
+                                        HomeCardStyles.Action.addBorder()
+                                    } else {
+                                        Color.Transparent
+                                    },
+                                    shape = CircleShape
+                                ),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
                                 imageVector = Icons.AutoMirrored.Rounded.ArrowForward,
                                 contentDescription = null,
-                                tint = Color.White,
+                                tint = if (HomeCardStyles.isDark()) {
+                                    HomeCardStyles.Action.addContent()
+                                } else {
+                                    Color.White
+                                },
                                 modifier = Modifier.size(15.dp)
                             )
                         }
@@ -1337,11 +1370,18 @@ private fun PreferencesCard(
                 .padding(horizontal = 14.dp, vertical = 12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Icon(Icons.Outlined.Settings, contentDescription = null)
+            Icon(
+                imageVector = Icons.Outlined.Settings,
+                contentDescription = null,
+                tint = colors.textPrimary
+            )
             Spacer(Modifier.size(10.dp))
             Text(
                 text = stringResource(R.string.settings_preferences),
-                style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.SemiBold)
+                style = MaterialTheme.typography.titleMedium.copy(
+                    color = colors.textPrimary,
+                    fontWeight = FontWeight.SemiBold
+                )
             )
         }
 
@@ -1400,10 +1440,20 @@ private fun PreferencesExpandArrow(
         modifier = modifier
             .size(22.dp)
             .clip(CircleShape)
-            .background(colors.surfaceMuted.copy(alpha = 0.78f))
+            .background(
+                if (HomeCardStyles.isDark()) {
+                    HomeCardStyles.Surface.raisedAlt()
+                } else {
+                    colors.surfaceMuted.copy(alpha = 0.78f)
+                }
+            )
             .border(
                 width = 1.dp,
-                color = colors.border.copy(alpha = 0.72f),
+                color = if (HomeCardStyles.isDark()) {
+                    HomeCardStyles.Surface.borderColor()
+                } else {
+                    colors.border.copy(alpha = 0.72f)
+                },
                 shape = CircleShape
             ),
         contentAlignment = Alignment.Center
@@ -1564,6 +1614,7 @@ private fun WidgetsSection(
     onOpenWidgetGuide: () -> Unit
 ) {
     val context = LocalContext.current.applicationContext
+    val isDark = HomeCardStyles.isDark()
 
     LaunchedEffect(summary, todayNutrition) {
         val widgetSnapshotChanged = BiteCalWidgetSnapshotStore.saveFrom(
@@ -1587,7 +1638,7 @@ private fun WidgetsSection(
             text = stringResource(R.string.settings_widgets_title),
             style = MaterialTheme.typography.titleLarge.copy(
                 fontWeight = FontWeight.Medium,
-                color = Color(0xFF5B6472),
+                color = if (isDark) HomeCardStyles.Text.primary() else Color(0xFF5B6472),
                 fontSize = 19.sp,
                 lineHeight = 24.sp
             )
@@ -1596,7 +1647,7 @@ private fun WidgetsSection(
         Text(
             text = stringResource(R.string.settings_widgets_how_to_add),
             style = MaterialTheme.typography.titleMedium.copy(
-                color = Color(0xFF2F3137),
+                color = if (isDark) HomeCardStyles.Text.primary() else Color(0xFF2F3137),
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 16.sp,
                 lineHeight = 24.sp
@@ -1644,14 +1695,15 @@ private fun CaloriesWidgetPreviewCard(
         current = todayNutrition.eatenKcal,
         goal = goalKcal
     )
-    val colors = BiteCalColors.current()
+    val isDark = HomeCardStyles.isDark()
+    val logFoodShape = RoundedCornerShape(999.dp)
 
     Card(
         modifier = modifier
             .size(width = 148.dp, height = 155.dp),
         shape = CardStyles.Corner,
-        colors = CardDefaults.cardColors(containerColor = colors.surface),
-        border = BorderStroke(1.2.dp, colors.border)
+        colors = CardDefaults.cardColors(containerColor = settingsHomeAlignedCardContainer()),
+        border = settingsHomeAlignedCardBorder(lightWidth = 1.2.dp)
     ) {
         Box(
             modifier = Modifier
@@ -1674,8 +1726,19 @@ private fun CaloriesWidgetPreviewCard(
                     .align(Alignment.BottomCenter)
                     .fillMaxWidth()
                     .height(30.dp)
-                    .clip(RoundedCornerShape(999.dp))
-                    .background(Color(0xFF111114))
+                    .clip(logFoodShape)
+                    .background(
+                        if (isDark) {
+                            HomeCardStyles.Action.secondaryContainer()
+                        } else {
+                            Color(0xFF111114)
+                        }
+                    )
+                    .border(
+                        width = if (isDark) 1.dp else 0.dp,
+                        color = if (isDark) HomeCardStyles.Action.secondaryBorder() else Color.Transparent,
+                        shape = logFoodShape
+                    )
             ) {
                 Box(
                     modifier = Modifier
@@ -1683,9 +1746,21 @@ private fun CaloriesWidgetPreviewCard(
                         .padding(start = 5.dp)
                         .size(21.dp)
                         .clip(CircleShape)
-                        .background(Color.White),
+                        .background(
+                            if (isDark) {
+                                HomeCardStyles.Action.addContainer()
+                            } else {
+                                Color.White
+                            }
+                        )
+                        .border(
+                            width = if (isDark) 0.8.dp else 0.dp,
+                            color = if (isDark) HomeCardStyles.Action.addBorder() else Color.Transparent,
+                            shape = CircleShape
+                        ),
                     contentAlignment = Alignment.Center
                 ) {
+                    val plusColor = if (isDark) HomeCardStyles.Action.addContent() else Color(0xFF111114)
                     Box(
                         modifier = Modifier.size(11.dp),
                         contentAlignment = Alignment.Center
@@ -1695,21 +1770,21 @@ private fun CaloriesWidgetPreviewCard(
                                 .width(11.dp)
                                 .height(2.dp)
                                 .clip(RoundedCornerShape(999.dp))
-                                .background(Color(0xFF111114))
+                                .background(plusColor)
                         )
                         Box(
                             modifier = Modifier
                                 .width(2.dp)
                                 .height(11.dp)
                                 .clip(RoundedCornerShape(999.dp))
-                                .background(Color(0xFF111114))
+                                .background(plusColor)
                         )
                     }
                 }
 
                 Text(
                     text = stringResource(R.string.log_your_food),
-                    color = Color.White,
+                    color = if (isDark) HomeCardStyles.Action.secondaryContent() else Color.White,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                     textAlign = TextAlign.Center,
@@ -1744,14 +1819,14 @@ private fun MacroActionsWidgetPreviewCard(
     val proteinLeft = proteinGoal?.let { remainingWidgetValue(it, todayNutrition.eatenProteinG) }
     val carbsLeft = carbsGoal?.let { remainingWidgetValue(it, todayNutrition.eatenCarbsG) }
     val fatsLeft = fatsGoal?.let { remainingWidgetValue(it, todayNutrition.eatenFatsG) }
-    val colors = BiteCalColors.current()
+    val isDark = HomeCardStyles.isDark()
 
     Card(
         modifier = modifier
             .size(width = 364.dp, height = 155.dp),
         shape = CardStyles.Corner,
-        colors = CardDefaults.cardColors(containerColor = colors.surface),
-        border = BorderStroke(1.2.dp, colors.border)
+        colors = CardDefaults.cardColors(containerColor = settingsHomeAlignedCardContainer()),
+        border = settingsHomeAlignedCardBorder(lightWidth = 1.2.dp)
     ) {
         Row(
             modifier = Modifier
@@ -1783,8 +1858,8 @@ private fun MacroActionsWidgetPreviewCard(
                 ) {
                     WidgetMacroStatRow(
                         iconRes = R.drawable.ic_widget_protein,
-                        iconTint = Color(0xFFE56C6C),
-                        iconBackground = Color(0xFFF7F5F7),
+                        iconTint = if (isDark) HomeCardStyles.Palette.protein() else Color(0xFFE56C6C),
+                        iconBackground = if (isDark) HomeCardStyles.Ring.centerFill() else Color(0xFFF7F5F7),
                         value = proteinLeft?.let { "${it}g" } ?: dash,
                         label = stringResource(R.string.settings_protein_goal_label),
                         progress = widgetNutritionProgress(
@@ -1795,8 +1870,8 @@ private fun MacroActionsWidgetPreviewCard(
                     )
                     WidgetMacroStatRow(
                         iconRes = R.drawable.ic_widget_carbs,
-                        iconTint = Color(0xFFD89A62),
-                        iconBackground = Color(0xFFF8F6F3),
+                        iconTint = if (isDark) HomeCardStyles.Palette.carbs() else Color(0xFFD89A62),
+                        iconBackground = if (isDark) HomeCardStyles.Ring.centerFill() else Color(0xFFF8F6F3),
                         value = carbsLeft?.let { "${it}g" } ?: dash,
                         label = stringResource(R.string.settings_carbs_goal_label),
                         progress = widgetNutritionProgress(
@@ -1807,8 +1882,8 @@ private fun MacroActionsWidgetPreviewCard(
                     )
                     WidgetMacroStatRow(
                         iconRes = R.drawable.ic_widget_fats,
-                        iconTint = Color(0xFF6C93D8),
-                        iconBackground = Color(0xFFF3F6FB),
+                        iconTint = if (isDark) HomeCardStyles.Palette.fats() else Color(0xFF6C93D8),
+                        iconBackground = if (isDark) HomeCardStyles.Ring.centerFill() else Color(0xFFF3F6FB),
                         value = fatsLeft?.let { "${it}g" } ?: dash,
                         label = stringResource(R.string.settings_fats_goal_label),
                         progress = widgetNutritionProgress(
@@ -1825,7 +1900,13 @@ private fun MacroActionsWidgetPreviewCard(
                 modifier = Modifier
                     .fillMaxHeight()
                     .width(1.dp)
-                    .background(Color(0xFFE9EAEE))
+                    .background(
+                        if (isDark) {
+                            HomeCardStyles.Surface.borderColor()
+                        } else {
+                            Color(0xFFE9EAEE)
+                        }
+                    )
             )
 
             Spacer(Modifier.size(14.dp))
@@ -1856,6 +1937,12 @@ private fun WidgetCaloriesRing(
     ringSize: Dp,
     modifier: Modifier = Modifier
 ) {
+    val isDark = HomeCardStyles.isDark()
+    val ringTrackColor = if (isDark) HomeCardStyles.Ring.track() else Color(0xFFEAEAED)
+    val ringProgressColor = if (isDark) HomeCardStyles.Palette.calories() else Color(0xFF111114)
+    val valueColor = if (isDark) HomeCardStyles.Text.primary() else Color(0xFF111114)
+    val labelColor = if (isDark) HomeCardStyles.Text.label() else Color(0xFF8D9198)
+
     Box(
         modifier = modifier,
         contentAlignment = Alignment.Center
@@ -1864,10 +1951,10 @@ private fun WidgetCaloriesRing(
             progress = progress,
             sizeDp = ringSize,
             strokeDp = 7.3.dp,
-            trackColor = Color(0xFFEAEAED),
-            progressColor = Color(0xFF111114),
+            trackColor = ringTrackColor,
+            progressColor = ringProgressColor,
             drawTopTick = true,
-            tickColor = Color(0xFF111114)
+            tickColor = ringProgressColor
         )
 
         Column(
@@ -1876,7 +1963,7 @@ private fun WidgetCaloriesRing(
             Text(
                 text = value,
                 style = MaterialTheme.typography.headlineMedium.copy(
-                    color = Color(0xFF111114),
+                    color = valueColor,
                     fontWeight = FontWeight.Bold,
                     fontSize = 24.sp,
                     lineHeight = 26.sp
@@ -1887,7 +1974,7 @@ private fun WidgetCaloriesRing(
                 text = label,
                 maxLines = 1,
                 style = MaterialTheme.typography.bodySmall.copy(
-                    color = Color(0xFF8D9198),
+                    color = labelColor,
                     fontWeight = FontWeight.Medium,
                     fontSize = 10.sp,
                     lineHeight = 12.sp
@@ -1907,6 +1994,11 @@ private fun WidgetMacroStatRow(
     progress: Float,
     iconSize: Dp = 16.dp
 ) {
+    val isDark = HomeCardStyles.isDark()
+    val ringTrackColor = if (isDark) HomeCardStyles.Ring.track() else Color(0xFFEAEAED)
+    val valueColor = if (isDark) HomeCardStyles.Text.primary() else Color(0xFF111114)
+    val labelColor = if (isDark) HomeCardStyles.Text.secondary() else Color(0xFF2F3136)
+
     Row(
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -1918,7 +2010,7 @@ private fun WidgetMacroStatRow(
                 progress = progress,
                 sizeDp = 30.dp,
                 strokeDp = 2.8.dp,
-                trackColor = Color(0xFFEAEAED),
+                trackColor = ringTrackColor,
                 progressColor = iconTint,
                 drawTopTick = true,
                 tickColor = iconTint,
@@ -1947,7 +2039,7 @@ private fun WidgetMacroStatRow(
             Text(
                 text = value,
                 style = MaterialTheme.typography.titleMedium.copy(
-                    color = Color(0xFF111114),
+                    color = valueColor,
                     fontWeight = FontWeight.Bold,
                     fontSize = 13.sp,
                     lineHeight = 15.sp
@@ -1958,7 +2050,7 @@ private fun WidgetMacroStatRow(
                 text = label,
                 maxLines = 1,
                 style = MaterialTheme.typography.bodySmall.copy(
-                    color = Color(0xFF2F3136),
+                    color = labelColor,
                     fontWeight = FontWeight.Medium,
                     fontSize = 10.sp,
                     lineHeight = 12.sp
@@ -1984,12 +2076,25 @@ private fun WidgetActionTile(
     label: String,
     icon: @Composable () -> Unit
 ) {
+    val isDark = HomeCardStyles.isDark()
+
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .height(60.dp)
             .clip(RoundedCornerShape(18.dp))
-            .background(Color(0xFFF7F7F8))
+            .background(
+                if (isDark) {
+                    HomeCardStyles.Surface.raised()
+                } else {
+                    Color(0xFFF7F7F8)
+                }
+            )
+            .border(
+                width = if (isDark) 0.8.dp else 0.dp,
+                color = if (isDark) HomeCardStyles.Surface.borderColor() else Color.Transparent,
+                shape = RoundedCornerShape(18.dp)
+            )
             .padding(vertical = 6.dp, horizontal = 6.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
@@ -1998,7 +2103,13 @@ private fun WidgetActionTile(
             modifier = Modifier
                 .size(32.dp)
                 .clip(CircleShape)
-                .background(Color(0xFFF1F2F4)),
+                .background(
+                    if (isDark) {
+                        HomeCardStyles.Ring.centerFill()
+                    } else {
+                        Color(0xFFF1F2F4)
+                    }
+                ),
             contentAlignment = Alignment.Center
         ) {
             icon()
@@ -2011,7 +2122,7 @@ private fun WidgetActionTile(
             maxLines = 1,
             textAlign = TextAlign.Center,
             style = MaterialTheme.typography.bodyMedium.copy(
-                color = Color(0xFF111114),
+                color = if (isDark) HomeCardStyles.Text.secondary() else Color(0xFF111114),
                 fontWeight = FontWeight.Medium,
                 fontSize = 11.sp,
                 lineHeight = 13.sp
@@ -2021,7 +2132,7 @@ private fun WidgetActionTile(
 }
 @Composable
 private fun ScanFocusGlyph() {
-    val ink = Color(0xFF111114)
+    val ink = if (HomeCardStyles.isDark()) HomeCardStyles.Action.addContent() else Color(0xFF111114)
 
     Box(
         modifier = Modifier.size(16.dp)
@@ -2086,7 +2197,7 @@ private fun ScanFocusGlyph() {
 
 @Composable
 private fun BarcodeGlyph() {
-    val ink = Color(0xFF111114)
+    val ink = if (HomeCardStyles.isDark()) HomeCardStyles.Action.addContent() else Color(0xFF111114)
 
     Row(
         modifier = Modifier.size(width = 18.dp, height = 16.dp),
@@ -2129,17 +2240,34 @@ private fun BarcodeGlyph() {
 
 @Composable
 private fun SettingsListCard(content: @Composable () -> Unit) {
-    val colors = BiteCalColors.current()
-
     Card(
         shape = RoundedCornerShape(22.dp),
-        colors = CardDefaults.cardColors(containerColor = colors.surface),
-        border = BorderStroke(
-            width = 1.dp,
-            color = colors.border
-        ),
+        colors = CardDefaults.cardColors(containerColor = settingsHomeAlignedCardContainer()),
+        border = settingsHomeAlignedCardBorder(lightWidth = 1.dp),
         modifier = Modifier.fillMaxWidth()
     ) { content() }
+}
+
+@Composable
+private fun settingsHomeAlignedCardContainer(): Color {
+    val colors = BiteCalColors.current()
+    return if (HomeCardStyles.isDark()) HomeCardStyles.Surface.card() else colors.surface
+}
+
+@Composable
+private fun settingsHomeAlignedCardBorder(lightWidth: Dp = 1.dp): BorderStroke {
+    val colors = BiteCalColors.current()
+    return if (HomeCardStyles.isDark()) {
+        HomeCardStyles.Surface.border()
+    } else {
+        BorderStroke(width = lightWidth, color = colors.border)
+    }
+}
+
+@Composable
+private fun settingsHomeAlignedDividerColor(): Color {
+    val colors = BiteCalColors.current()
+    return if (HomeCardStyles.isDark()) HomeCardStyles.Surface.borderColor() else colors.border
 }
 
 @Composable
@@ -2171,7 +2299,7 @@ private fun SettingsRow(
 
 @Composable
 private fun DividerThin() {
-    HorizontalDivider(color = BiteCalColors.current().border, thickness = 1.dp)
+    HorizontalDivider(color = settingsHomeAlignedDividerColor(), thickness = 1.dp)
 }
 
 @Composable
@@ -2180,6 +2308,15 @@ private fun LogoutButton(
     onLogout: () -> Unit
 ) {
     val enabled = !loading
+    val colors = BiteCalColors.current()
+    val isDark = HomeCardStyles.isDark()
+    val containerColor = if (isDark) HomeCardStyles.Surface.card() else colors.surface
+    val borderColor = if (isDark) HomeCardStyles.Surface.borderColor() else colors.border
+    val contentColor = if (enabled) {
+        if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    } else {
+        if (isDark) HomeCardStyles.Text.muted() else colors.textMuted
+    }
 
     BiteCalSecondaryOutlinedButton(
         text = stringResource(
@@ -2193,8 +2330,10 @@ private fun LogoutButton(
         enabled = enabled,
         height = 56.dp,
         modifier = Modifier.fillMaxWidth(),
-        borderColor = if (enabled) BiteCalColors.current().border else BiteCalColors.current().border.copy(alpha = 0.62f),
-        contentColor = if (enabled) BiteCalColors.current().textPrimary else BiteCalColors.current().textMuted,
+        borderColor = if (enabled) borderColor else borderColor.copy(alpha = 0.62f),
+        contentColor = contentColor,
+        containerColor = containerColor,
+        disabledContainerColor = containerColor,
     )
 }
 

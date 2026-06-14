@@ -1169,7 +1169,7 @@ private fun TopBarSettingsButton(
 ) {
     val isDark = HomeCardStyles.isDark()
     val bg = if (isDark) HomeCardStyles.Surface.raised() else Color(0xFFE5E7EB)
-    val fg = if (isDark) HomeCardStyles.Text.primary() else Color(0xFF979DA7)
+    val fg = if (isDark) HomeCardStyles.Text.secondary() else Color(0xFF979DA7)
     val borderColor = if (isDark) HomeCardStyles.Surface.borderColor() else Color.Transparent
 
     Box(
