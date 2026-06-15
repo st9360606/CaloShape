@@ -2,6 +2,7 @@ package com.calai.bitecal.ui.home.ui.settings.details
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -64,6 +65,36 @@ import java.util.Locale
 import kotlin.math.abs
 
 private val PersonalCardShape = RoundedCornerShape(22.dp)
+
+@Composable
+private fun personalDetailsIconBackground(): Color {
+    val colors = BiteCalColors.current()
+    return if (colors == BiteCalColors.Dark) {
+        Color(0xFF2A2633)
+    } else {
+        Color(0xFFF3F4F7)
+    }
+}
+
+@Composable
+private fun personalDetailsIconBorder(): Color {
+    val colors = BiteCalColors.current()
+    return if (colors == BiteCalColors.Dark) {
+        Color(0xFF4A4558)
+    } else {
+        Color(0xFFE1E4EA)
+    }
+}
+
+@Composable
+private fun personalDetailsIconTint(): Color {
+    val colors = BiteCalColors.current()
+    return if (colors == BiteCalColors.Dark) {
+        Color(0xFFF7F5FF)
+    } else {
+        Color(0xFF343840)
+    }
+}
 
 @Composable
 fun PersonalDetailsScreen(
@@ -156,8 +187,6 @@ fun PersonalDetailsScreen(
                 ) {
                     PersonalDetailsRow(
                         icon = Icons.Outlined.Tune,
-                        iconTint = Color(0xFF4F8F64),
-                        iconBg = Color(0xFFEAF7EF),
                         title = stringResource(R.string.personal_details_current_weight),
                         valueMain = curMain,
                         onClick = onEditCurrentWeight
@@ -165,8 +194,6 @@ fun PersonalDetailsScreen(
                     PersonalRowDivider()
                     PersonalDetailsRow(
                         icon = Icons.Outlined.Height,
-                        iconTint = Color(0xFF367C7A),
-                        iconBg = Color(0xFFEAF1FF),
                         title = stringResource(R.string.personal_details_height),
                         valueMain = formatHeight(profile),
                         onClick = onEditHeight
@@ -174,8 +201,6 @@ fun PersonalDetailsScreen(
                     PersonalRowDivider()
                     PersonalDetailsRow(
                         icon = Icons.Outlined.CalendarMonth,
-                        iconTint = Color(0xFF9A6A2F),
-                        iconBg = Color(0xFFFFF4E3),
                         title = stringResource(R.string.personal_details_age),
                         valueMain = ageText,
                         onClick = onEditAge
@@ -183,8 +208,6 @@ fun PersonalDetailsScreen(
                     PersonalRowDivider()
                     PersonalDetailsRow(
                         icon = Icons.Outlined.Person,
-                        iconTint = Color(0xFF7C5DA6),
-                        iconBg = Color(0xFFF2ECFF),
                         title = stringResource(R.string.personal_details_gender),
                         valueMain = formatGenderLabel(profile?.gender),
                         onClick = onEditGender
@@ -192,8 +215,6 @@ fun PersonalDetailsScreen(
                     PersonalRowDivider()
                     PersonalDetailsRow(
                         icon = Icons.Outlined.MonitorWeight,
-                        iconTint = Color(0xFFB46B34),
-                        iconBg = Color(0xFFFFF1E7),
                         title = stringResource(R.string.personal_details_starting_weight),
                         valueMain = startMain,
                         onClick = onEditStartingWeight
@@ -207,8 +228,6 @@ fun PersonalDetailsScreen(
                 ) {
                     PersonalDetailsRow(
                         icon = Icons.AutoMirrored.Outlined.DirectionsWalk,
-                        iconTint = Color(0xFF5277B8),
-                        iconBg = Color(0xFFE7F7F6),
                         title = stringResource(R.string.personal_details_daily_step_goal),
                         valueMain = stepText,
                         onClick = onEditDailyStepGoal
@@ -216,8 +235,6 @@ fun PersonalDetailsScreen(
                     PersonalRowDivider()
                     PersonalDetailsRow(
                         icon = Icons.Outlined.WaterDrop,
-                        iconTint = Color(0xFF3974A6),
-                        iconBg = Color(0xFFE8F4FF),
                         title = stringResource(R.string.personal_details_daily_water_goal),
                         valueMain = waterText,
                         onClick = onEditDailyWaterGoal
@@ -225,8 +242,6 @@ fun PersonalDetailsScreen(
                     PersonalRowDivider()
                     PersonalDetailsRow(
                         icon = Icons.Outlined.FitnessCenter,
-                        iconTint = Color(0xFF8260C7),
-                        iconBg = Color(0xFFF1ECFF),
                         title = stringResource(R.string.personal_details_daily_workout_goal),
                         valueMain = workoutGoalText,
                         onClick = onEditDailyWorkoutGoal
@@ -245,9 +260,9 @@ private fun GoalWeightSummaryCard(
     onChangeGoal: () -> Unit
 ) {
     val colors = BiteCalColors.current()
-    val iconBackground = Color(0xFFFFF1E7).copy(
-        alpha = if (colors == BiteCalColors.Dark) 0.16f else 1f
-    )
+    val iconBackground = personalDetailsIconBackground()
+    val iconBorder = personalDetailsIconBorder()
+    val iconTint = personalDetailsIconTint()
 
     PersonalDetailsSurface {
         Row(
@@ -261,13 +276,14 @@ private fun GoalWeightSummaryCard(
                 modifier = Modifier
                     .size(46.dp)
                     .clip(CircleShape)
-                    .background(iconBackground),
+                    .background(iconBackground)
+                    .border(1.dp, iconBorder, CircleShape),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Outlined.Flag,
                     contentDescription = null,
-                    tint = Color(0xFFB46B34),
+                    tint = iconTint,
                     modifier = Modifier.size(23.dp)
                 )
             }
@@ -364,14 +380,15 @@ private fun PersonalDetailsSurface(content: @Composable () -> Unit) {
 @Composable
 private fun PersonalDetailsRow(
     icon: ImageVector,
-    iconTint: Color,
-    iconBg: Color,
     title: String,
     valueMain: String,
     valueSub: String? = null,
     onClick: () -> Unit
 ) {
     val colors = BiteCalColors.current()
+    val resolvedIconBg = personalDetailsIconBackground()
+    val resolvedIconBorder = personalDetailsIconBorder()
+    val resolvedIconTint = personalDetailsIconTint()
 
     Row(
         modifier = Modifier
@@ -389,13 +406,14 @@ private fun PersonalDetailsRow(
             modifier = Modifier
                 .size(38.dp)
                 .clip(CircleShape)
-                .background(iconBg),
+                .background(resolvedIconBg)
+                .border(1.dp, resolvedIconBorder, CircleShape),
             contentAlignment = Alignment.Center
         ) {
             Icon(
                 imageVector = icon,
                 contentDescription = null,
-                tint = iconTint,
+                tint = resolvedIconTint,
                 modifier = Modifier.size(19.dp)
             )
         }
@@ -454,7 +472,7 @@ private fun PersonalDetailsRow(
             Icon(
                 imageVector = Icons.Outlined.Edit,
                 contentDescription = null,
-                tint = colors.textMuted,
+                tint = colors.textMuted.copy(alpha = 0.74f),
                 modifier = Modifier.size(18.dp)
             )
         }
