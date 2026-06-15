@@ -287,6 +287,11 @@ private fun EditNutritionGoalsScreen(
             Spacer(Modifier.height(8.dp))
 
             val microsToggleInteractionSource = remember { MutableInteractionSource() }
+            val microsToggleTextColor = if (colors == BiteCalColors.Dark) {
+                colors.textPrimary
+            } else {
+                Color(0xFF606A78)
+            }
 
             Row(
                 modifier = Modifier
@@ -304,7 +309,7 @@ private fun EditNutritionGoalsScreen(
                 Text(
                     text = stringResource(R.string.edit_nutrition_view_micronutrients),
                     fontSize = 15.sp,
-                    color = Color(0xFF606A78),
+                    color = microsToggleTextColor,
                     fontWeight = FontWeight.Normal
                 )
 
@@ -313,7 +318,7 @@ private fun EditNutritionGoalsScreen(
                 Text(
                     text = if (ui.expandedMicros) "▴" else "▾",
                     fontSize = 22.sp,
-                    color = Color(0xFF606A78),
+                    color = microsToggleTextColor,
                     fontWeight = FontWeight.Bold
                 )
             }
