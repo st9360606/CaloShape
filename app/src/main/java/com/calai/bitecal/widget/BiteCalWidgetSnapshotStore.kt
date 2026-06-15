@@ -17,10 +17,11 @@ object BiteCalWidgetSnapshotStore {
      * Increase this when widget XML / RemoteViews rendering changes but visible nutrition data does not.
      * This forces one refresh so existing desktop widget instances pick up the new UI.
      */
-    private const val WIDGET_RENDER_VERSION = 31
+    private const val WIDGET_RENDER_VERSION = 32
 
     private const val KEY_HAS_SNAPSHOT = "has_snapshot"
     private const val KEY_RENDER_VERSION = "render_version"
+    private const val KEY_IS_DARK_APPEARANCE = "is_dark_appearance"
     private const val KEY_GOAL_KCAL = "goal_kcal"
     private const val KEY_EATEN_KCAL = "eaten_kcal"
     private const val KEY_PROTEIN_GOAL_G = "protein_goal_g"
@@ -41,7 +42,8 @@ object BiteCalWidgetSnapshotStore {
     fun saveFrom(
         context: Context,
         summary: HomeSummary?,
-        todayNutrition: HomeTodayNutritionSummary
+        todayNutrition: HomeTodayNutritionSummary,
+        isDarkAppearance: Boolean = false
     ): Boolean {
         if (summary == null) return false
 
@@ -60,6 +62,7 @@ object BiteCalWidgetSnapshotStore {
         val unchanged =
             prefs.getBoolean(KEY_HAS_SNAPSHOT, false) &&
                 prefs.getInt(KEY_RENDER_VERSION, 0) == WIDGET_RENDER_VERSION &&
+                prefs.getBoolean(KEY_IS_DARK_APPEARANCE, false) == isDarkAppearance &&
                 prefs.getInt(KEY_GOAL_KCAL, DEFAULT_GOAL_KCAL) == goalKcal &&
                 prefs.getInt(KEY_EATEN_KCAL, DEFAULT_EATEN_KCAL) == eatenKcal &&
                 prefs.getInt(KEY_PROTEIN_GOAL_G, DEFAULT_PROTEIN_GOAL_G) == proteinGoalG &&
@@ -74,6 +77,7 @@ object BiteCalWidgetSnapshotStore {
         prefs.edit {
             putBoolean(KEY_HAS_SNAPSHOT, true)
             putInt(KEY_RENDER_VERSION, WIDGET_RENDER_VERSION)
+            putBoolean(KEY_IS_DARK_APPEARANCE, isDarkAppearance)
             putInt(KEY_GOAL_KCAL, goalKcal)
             putInt(KEY_EATEN_KCAL, eatenKcal)
             putInt(KEY_PROTEIN_GOAL_G, proteinGoalG)
@@ -99,6 +103,7 @@ object BiteCalWidgetSnapshotStore {
             eatenCarbsG = prefs.getInt(KEY_EATEN_CARBS_G, DEFAULT_EATEN_CARBS_G),
             fatsGoalG = prefs.getInt(KEY_FATS_GOAL_G, DEFAULT_FATS_GOAL_G),
             eatenFatsG = prefs.getInt(KEY_EATEN_FATS_G, DEFAULT_EATEN_FATS_G),
+            isDarkAppearance = prefs.getBoolean(KEY_IS_DARK_APPEARANCE, false),
             updatedAtMs = prefs.getLong(KEY_UPDATED_AT_MS, 0L)
         )
     }
@@ -122,6 +127,7 @@ data class BiteCalWidgetSnapshot(
     val eatenCarbsG: Int,
     val fatsGoalG: Int,
     val eatenFatsG: Int,
+    val isDarkAppearance: Boolean,
     val updatedAtMs: Long
 ) {
     val caloriesLeft: Int = goalKcal.coerceAtLeast(0) - eatenKcal.coerceAtLeast(0)

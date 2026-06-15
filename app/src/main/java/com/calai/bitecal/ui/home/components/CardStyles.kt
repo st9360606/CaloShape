@@ -166,6 +166,9 @@ object HomeCardStyles {
         fun primary(): Color = if (HomeCardStyles.isDark()) Color(0xFFF7F5FF) else Primary
 
         @Composable
+        fun metricPrimary(): Color = if (HomeCardStyles.isDark()) Color.White else Primary
+
+        @Composable
         fun secondary(): Color = if (HomeCardStyles.isDark()) Color(0xFFC9C4D4) else Secondary
 
         @Composable

@@ -86,6 +86,7 @@ import com.calai.bitecal.data.foodlog.repo.HomeTodayNutritionSummary
 import com.calai.bitecal.data.home.repo.HomeSummary
 import com.calai.bitecal.data.profile.repo.UserProfileStore
 import com.calai.bitecal.i18n.currentLocaleKey
+import com.calai.bitecal.ui.appearance.AppearanceMode
 import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
@@ -159,6 +160,7 @@ fun HomeScreen(
     openWorkoutSheetRequestTick: Long = 0L,
     onConsumeOpenWorkoutSheetRequest: () -> Unit = {},
     onWorkoutSavedGoHome: () -> Unit = {},
+    appearanceMode: AppearanceMode = AppearanceMode.LIGHT,
 ) {
     val ui by vm.ui.collectAsState()
     val waterState by waterVm.ui.collectAsState()
@@ -573,11 +575,12 @@ fun HomeScreen(
         ) { inner ->
             val s = ui.summary ?: return@Scaffold
 
-            LaunchedEffect(s, ui.todayNutrition) {
+            LaunchedEffect(s, ui.todayNutrition, appearanceMode) {
                 val widgetSnapshotChanged = BiteCalWidgetSnapshotStore.saveFrom(
                     context = ctx,
                     summary = s,
-                    todayNutrition = ui.todayNutrition
+                    todayNutrition = ui.todayNutrition,
+                    isDarkAppearance = appearanceMode == AppearanceMode.DARK
                 )
                 if (widgetSnapshotChanged) {
                     BiteCalHomeWidgetUpdater.updateAll(ctx)

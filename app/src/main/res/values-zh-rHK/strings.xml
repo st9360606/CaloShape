@@ -845,12 +845,12 @@
     <string name="settings_widgets_how_to_add">如何添加？</string>
     <string name="log_your_food">記錄你的食物</string>
 
-    <string name="settings_calories_goal_label">剩餘卡路里</string>
-    <string name="settings_protein_goal_label">剩餘蛋白質</string>
-    <string name="settings_carbs_goal_label">剩餘碳水</string>
-    <string name="settings_fats_goal_label">剩餘脂肪</string>
-    <string name="settings_widget_scan_food">Scan food</string>
-    <string name="settings_widget_barcode">Barcode</string>
+    <string name="settings_calories_goal_label">卡路里 剩餘</string>
+    <string name="settings_protein_goal_label">蛋白質 剩餘</string>
+    <string name="settings_carbs_goal_label">碳水 剩餘</string>
+    <string name="settings_fats_goal_label">脂肪 剩餘</string>
+    <string name="settings_widget_scan_food">掃描食物</string>
+    <string name="settings_widget_barcode">條碼</string>
 
     <string name="settings_logout_loading">登出中…</string>
     <string name="settings_logout">登出</string>

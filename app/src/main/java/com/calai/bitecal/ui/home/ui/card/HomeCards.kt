@@ -119,7 +119,12 @@ fun CaloriesCardModern(
     Card(
         modifier = modifier
             .height(cardHeight)
-            .biteCalClickable(role = Role.Button, onClick = onClick),
+            .biteCalClickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+                role = Role.Button,
+                onClick = onClick
+            ),
         shape = CardStyles.Corner,
         colors = CardDefaults.cardColors(containerColor = HomeCardStyles.Surface.card()),
         border = HomeCardStyles.Surface.border()
@@ -144,7 +149,7 @@ fun CaloriesCardModern(
                     fontWeight = FontWeight.Normal,
                     letterSpacing = 0.sp
                 ),
-                valueColor = HomeCardStyles.Text.primary(),
+                valueColor = HomeCardStyles.Text.metricPrimary(),
                 valueSuffixColor = HomeCardStyles.Text.label(),
                 valueSuffixFontSize = 20.sp,
                 valueSuffixWeight = FontWeight.Medium,
@@ -165,9 +170,9 @@ fun CaloriesCardModern(
                     sizeDp = ringSize,
                     strokeDp = ringStroke,
                     trackColor = HomeCardStyles.Ring.track(),
-                    progressColor = HomeCardStyles.Palette.calories(),
+                    progressColor = HomeCardStyles.Palette.caloriesIcon(),
                     drawTopTick = true,
-                    tickColor = HomeCardStyles.Palette.calories()
+                    tickColor = HomeCardStyles.Palette.caloriesIcon()
                 )
                 Surface(
                     color = HomeCardStyles.Ring.centerFill(),
@@ -262,7 +267,7 @@ fun MacroRowModern(
             goalLabel = stringResource(R.string.home_carbs_goal_label),
             progressLabel = stringResource(R.string.home_carbs_eaten_label),
             showTodayProgress = showTodayProgress,
-            ringColor = HomeCardStyles.Palette.carbs(),
+            ringColor = HomeCardStyles.Palette.Carbs,
             progress = carbsProgress,
             valueFontSize = valueFontSize,
             labelFontSize = labelFontSize,
@@ -544,7 +549,12 @@ private fun MacroStatCardModern(
     Card(
         modifier = modifier
             .height(cardHeight)
-            .biteCalClickable(role = Role.Button, onClick = onClick),
+            .biteCalClickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+                role = Role.Button,
+                onClick = onClick
+            ),
         shape = CardStyles.Corner,
         colors = CardDefaults.cardColors(containerColor = HomeCardStyles.Surface.card()),
         border = HomeCardStyles.Surface.border()
@@ -567,7 +577,7 @@ private fun MacroStatCardModern(
                     fontWeight = FontWeight.Normal,
                     letterSpacing = 0.sp
                 ),
-                valueColor = HomeCardStyles.Text.primary(),
+                valueColor = HomeCardStyles.Text.metricPrimary(),
                 valueSuffixColor = HomeCardStyles.Text.label(),
                 valueSuffixFontSize = 11.sp,
                 valueSuffixWeight = FontWeight.Medium,

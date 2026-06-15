@@ -81,9 +81,12 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -590,6 +593,7 @@ private fun SettingsContent(
         WidgetsSection(
             summary = homeSummary,
             todayNutrition = todayNutrition,
+            appearanceMode = appearanceMode,
             onOpenWidgetGuide = onOpenWidgetGuide
         )
         Spacer(Modifier.height(28.dp))
@@ -1623,16 +1627,18 @@ private fun AppearanceModeOption(
 private fun WidgetsSection(
     summary: HomeSummary?,
     todayNutrition: HomeTodayNutritionSummary,
+    appearanceMode: AppearanceMode,
     onOpenWidgetGuide: () -> Unit
 ) {
     val context = LocalContext.current.applicationContext
     val isDark = HomeCardStyles.isDark()
 
-    LaunchedEffect(summary, todayNutrition) {
+    LaunchedEffect(summary, todayNutrition, appearanceMode) {
         val widgetSnapshotChanged = BiteCalWidgetSnapshotStore.saveFrom(
             context = context,
             summary = summary,
-            todayNutrition = todayNutrition
+            todayNutrition = todayNutrition,
+            isDarkAppearance = appearanceMode == AppearanceMode.DARK
         )
         if (widgetSnapshotChanged) {
             BiteCalHomeWidgetUpdater.updateAll(context)
@@ -1878,7 +1884,7 @@ private fun MacroActionsWidgetPreviewCard(
                     )
                     WidgetMacroStatRow(
                         iconRes = R.drawable.ic_widget_carbs,
-                        iconTint = if (isDark) HomeCardStyles.Palette.carbs() else Color(0xFFD89A62),
+                        iconTint = HomeCardStyles.Palette.Carbs,
                         iconBackground = if (isDark) HomeCardStyles.Ring.centerFill() else Color(0xFFF8F6F3),
                         value = carbsLeft?.let { "${it}g" } ?: dash,
                         label = stringResource(R.string.settings_carbs_goal_label),
@@ -1947,9 +1953,10 @@ private fun WidgetCaloriesRing(
 ) {
     val isDark = HomeCardStyles.isDark()
     val ringTrackColor = if (isDark) HomeCardStyles.Ring.track() else Color(0xFFEAEAED)
-    val ringProgressColor = if (isDark) HomeCardStyles.Palette.calories() else Color(0xFF111114)
-    val valueColor = if (isDark) HomeCardStyles.Text.primary() else Color(0xFF111114)
-    val labelColor = if (isDark) HomeCardStyles.Text.label() else Color(0xFF8D9198)
+    val ringProgressColor = HomeCardStyles.Palette.caloriesIcon()
+    val valueColor = HomeCardStyles.Text.metricPrimary()
+    val labelColor = if (isDark) HomeCardStyles.Text.label() else Color(0xFF3F3F46)
+    val labelEmphasisColor = if (isDark) HomeCardStyles.Text.secondary() else Color(0xFF18181B)
 
     Box(
         modifier = modifier,
@@ -1978,11 +1985,11 @@ private fun WidgetCaloriesRing(
                 )
             )
             Spacer(Modifier.height(2.dp))
-            Text(
+            WidgetRemainingLabel(
                 text = label,
-                maxLines = 1,
+                color = labelColor,
+                emphasisColor = labelEmphasisColor,
                 style = MaterialTheme.typography.bodySmall.copy(
-                    color = labelColor,
                     fontWeight = FontWeight.Medium,
                     fontSize = 10.sp,
                     lineHeight = 12.sp
@@ -2004,8 +2011,9 @@ private fun WidgetMacroStatRow(
 ) {
     val isDark = HomeCardStyles.isDark()
     val ringTrackColor = if (isDark) HomeCardStyles.Ring.track() else Color(0xFFEAEAED)
-    val valueColor = if (isDark) HomeCardStyles.Text.primary() else Color(0xFF111114)
-    val labelColor = if (isDark) HomeCardStyles.Text.secondary() else Color(0xFF2F3136)
+    val valueColor = HomeCardStyles.Text.metricPrimary()
+    val labelColor = if (isDark) HomeCardStyles.Text.label() else Color(0xFF3F3F46)
+    val labelEmphasisColor = if (isDark) HomeCardStyles.Text.secondary() else Color(0xFF18181B)
 
     Row(
         verticalAlignment = Alignment.CenterVertically
@@ -2054,11 +2062,11 @@ private fun WidgetMacroStatRow(
                 )
             )
             Spacer(Modifier.height(1.dp))
-            Text(
+            WidgetRemainingLabel(
                 text = label,
-                maxLines = 1,
+                color = labelColor,
+                emphasisColor = labelEmphasisColor,
                 style = MaterialTheme.typography.bodySmall.copy(
-                    color = labelColor,
                     fontWeight = FontWeight.Medium,
                     fontSize = 10.sp,
                     lineHeight = 12.sp
@@ -2066,6 +2074,51 @@ private fun WidgetMacroStatRow(
             )
         }
     }
+}
+
+@Composable
+private fun WidgetRemainingLabel(
+    text: String,
+    color: Color,
+    emphasisColor: Color,
+    style: androidx.compose.ui.text.TextStyle
+) {
+    val splitIndex = text.lastIndexOf(' ')
+    if (splitIndex <= 0 || splitIndex >= text.lastIndex) {
+        Text(
+            text = text,
+            color = emphasisColor,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+            style = style.copy(fontWeight = FontWeight.SemiBold)
+        )
+        return
+    }
+
+    Text(
+        text = buildAnnotatedString {
+            withStyle(
+                SpanStyle(
+                    color = color,
+                    fontWeight = FontWeight.Medium
+                )
+            ) {
+                append(text.take(splitIndex))
+                append(" ")
+            }
+            withStyle(
+                SpanStyle(
+                    color = emphasisColor,
+                    fontWeight = FontWeight.SemiBold
+                )
+            ) {
+                append(text.drop(splitIndex + 1))
+            }
+        },
+        maxLines = 1,
+        overflow = TextOverflow.Ellipsis,
+        style = style
+    )
 }
 
 private fun widgetNutritionProgress(current: Int?, goal: Int?): Float {

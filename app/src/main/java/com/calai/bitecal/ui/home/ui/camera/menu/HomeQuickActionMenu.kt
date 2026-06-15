@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import com.calai.bitecal.ui.home.components.CardStyles
 import com.calai.bitecal.ui.home.ui.camera.scan.ScanCameraIcon
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
@@ -126,6 +127,7 @@ private fun QuickActionCard(
     icon: @Composable () -> Unit
 ) {
     val hapticClick = rememberClickWithHaptic(onClick = onClick)
+    val labelColor = if (HomeCardStyles.isDark()) Color.White else LabelColor
 
     Card(
         modifier = Modifier
@@ -161,7 +163,7 @@ private fun QuickActionCard(
 
             Text(
                 text = label,
-                color = LabelColor,
+                color = labelColor,
                 fontSize = 18.sp,
                 fontWeight = FontWeight.SemiBold
             )

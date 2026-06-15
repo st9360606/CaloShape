@@ -1281,6 +1281,7 @@ fun BiteCalNavHost(
                             nav.goHome()
                         }
                     },
+                    appearanceMode = appearanceMode,
                 )
 
                 key(restoreLocaleKey) {
