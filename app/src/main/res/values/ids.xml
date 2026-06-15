@@ -3,4 +3,9 @@
     <string name="google_web_client_id" translatable="false">
         575775859979-nuhb6lmchca4sn5719193uke61eda7pq.apps.googleusercontent.com
     </string>
+
+    <item name="widget_scan_food_icon_bg" type="id" />
+    <item name="widget_scan_food_icon" type="id" />
+    <item name="widget_barcode_icon_bg" type="id" />
+    <item name="widget_barcode_icon" type="id" />
 </resources>

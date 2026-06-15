@@ -17,7 +17,7 @@ object BiteCalWidgetSnapshotStore {
      * Increase this when widget XML / RemoteViews rendering changes but visible nutrition data does not.
      * This forces one refresh so existing desktop widget instances pick up the new UI.
      */
-    private const val WIDGET_RENDER_VERSION = 37
+    private const val WIDGET_RENDER_VERSION = 40
 
     private const val KEY_HAS_SNAPSHOT = "has_snapshot"
     private const val KEY_RENDER_VERSION = "render_version"

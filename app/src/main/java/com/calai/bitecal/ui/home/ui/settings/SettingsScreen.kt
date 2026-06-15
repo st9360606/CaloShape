@@ -2176,7 +2176,7 @@ private fun WidgetActionTile(
                     if (isDark) {
                         Color(0xFF3A3544)
                     } else {
-                        Color(0xFFF1F2F4)
+                        Color(0xFFEEF1F6)
                     }
                 ),
             contentAlignment = Alignment.Center
