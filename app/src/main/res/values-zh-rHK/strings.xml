@@ -328,24 +328,24 @@
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">剩餘卡路里</string>
-    <string name="home_calories_eaten_label">已攝取卡路里</string>
+    <string name="home_calories_goal_label">卡路里 剩餘</string>
+    <string name="home_calories_eaten_label">卡路里 已攝入</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
-    <string name="home_protein_goal_label">剩餘蛋白質</string>
-    <string name="home_protein_eaten_label">已攝取蛋白質</string>
-    <string name="home_carbs_goal_label">剩餘碳水</string>
-    <string name="home_carbs_eaten_label">已攝取碳水</string>
-    <string name="home_fats_goal_label">剩餘脂肪</string>
-    <string name="home_fats_eaten_label">已攝取脂肪</string>
-    <string name="home_fiber_goal_label">剩餘纖維</string>
-    <string name="home_fiber_eaten_label">已攝取纖維</string>
-    <string name="home_sugar_goal_label">剩餘糖</string>
-    <string name="home_sugar_eaten_label">已攝取糖</string>
-    <string name="home_sodium_goal_label">剩餘鈉</string>
-    <string name="home_sodium_eaten_label">已攝取鈉</string>
+    <string name="home_protein_goal_label">蛋白質 剩餘</string>
+    <string name="home_protein_eaten_label">蛋白質 已攝入</string>
+    <string name="home_carbs_goal_label">碳水 剩餘</string>
+    <string name="home_carbs_eaten_label">碳水 已攝入</string>
+    <string name="home_fats_goal_label">脂肪 剩餘</string>
+    <string name="home_fats_eaten_label">脂肪 已攝入</string>
+    <string name="home_fiber_goal_label">纖維 剩餘</string>
+    <string name="home_fiber_eaten_label">纖維 已攝入</string>
+    <string name="home_sugar_goal_label">糖 剩餘</string>
+    <string name="home_sugar_eaten_label">糖 已攝入</string>
+    <string name="home_sodium_goal_label">鈉 剩餘</string>
+    <string name="home_sodium_eaten_label">鈉 已攝入</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
