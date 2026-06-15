@@ -79,6 +79,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
@@ -182,6 +183,7 @@ fun SettingsScreen(
     onLogout: () -> Unit = {}
 ) {
     val ctx = LocalContext.current
+    val screenHeight = LocalConfiguration.current.screenHeightDp.dp
     val registryOwner = LocalActivityResultRegistryOwner.current
     val scope = rememberCoroutineScope()
 
@@ -261,6 +263,11 @@ fun SettingsScreen(
     }
 
     Box(Modifier.fillMaxSize()) { HomeBackground() }
+    val scanFabLift = when {
+        screenHeight < 700.dp -> 0.dp
+        screenHeight > 860.dp -> 16.dp
+        else -> 6.dp
+    }
 
     Scaffold(
         containerColor = Color.Transparent,
@@ -272,6 +279,7 @@ fun SettingsScreen(
         },
         floatingActionButton = {
             ScanFab(
+                modifier = Modifier.offset(y = -scanFabLift),
                 onClick = {
                     handleScanFabClick()
                 }
@@ -796,7 +804,7 @@ private fun ProfileSubscriptionBadge(
         ProfileSubscriptionVisual.from(kind)
     }
     val badgeBorderColor = if (isDark) visual.darkBorderColor else visual.borderColor
-    val subtitleColor = if (isDark) colors.textPrimary else visual.subtitleColor
+    val subtitleColor = if (isDark) colors.textPrimary else colors.textSecondary
 
     val dotSize = 8.dp
     val dotLabelGap = 7.dp
@@ -850,7 +858,7 @@ private fun ProfileSubscriptionBadge(
             )
         }
 
-        Spacer(Modifier.height(5.dp))
+        Spacer(Modifier.height(6.dp))
 
         Text(
             text = subtitle.ifBlank { stringResource(visual.fallbackSubtitleRes) },

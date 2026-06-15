@@ -26,6 +26,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.pager.HorizontalPager
@@ -60,6 +61,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.PointerEventPass
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -252,6 +254,7 @@ fun HomeScreen(
     val dailyReady by vm.dailyReady.collectAsState()
 
     val ctx = LocalContext.current
+    val screenHeight = LocalConfiguration.current.screenHeightDp.dp
     val timeFmt = remember { DateTimeFormatter.ofPattern("HH:mm") }
 
     // ⚠️ 關鍵：先拿 owner；可能為 null（某些 Nav/容器或 Preview）
@@ -561,11 +564,19 @@ fun HomeScreen(
     // ========= 「背景」改在這裡放一層即可 =========
     Box(Modifier.fillMaxSize()) {
         HomeBackground() // ← 背景
+        val scanFabLift = when {
+            screenHeight < 700.dp -> 0.dp
+            screenHeight > 860.dp -> 16.dp
+            else -> 6.dp
+        }
 
         Scaffold(
             containerColor = Color.Transparent,   // ★ 讓下方漸層透出
             floatingActionButton = {
-                ScanFab(onClick = onFabClick)
+                ScanFab(
+                    onClick = onFabClick,
+                    modifier = Modifier.offset(y = -scanFabLift)
+                )
             },
             bottomBar = {
                 MainBottomBar(

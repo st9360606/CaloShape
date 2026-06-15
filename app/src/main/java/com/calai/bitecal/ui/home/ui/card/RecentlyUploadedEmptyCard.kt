@@ -111,7 +111,7 @@ fun RecentlyUploadedEmptyCard(
     style: RecentlyUploadedEmptyStyle = RecentlyUploadedEmptyStyle.Default,
 
     contentPaddingV: Dp = 10.dp,
-    pillHeight: Dp = 62.dp,
+    pillHeight: Dp = 68.dp,
     pillWidthFraction: Float = 0.82f,
     outerCorner: Dp = 20.dp,
     pillCorner: Dp = 18.dp,
