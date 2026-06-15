@@ -86,6 +86,7 @@ import com.calai.bitecal.ui.common.haptic.hapticOnFocus
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.design.BiteCalEditDualActionRow
 import com.calai.bitecal.ui.common.design.BiteCalSecondaryOutlinedButton
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -245,7 +246,7 @@ private fun EditNutritionGoalsScreen(
             }
 
             GoalRow(
-                ringColor = colors.textPrimary,
+                ringColor = HomeCardStyles.Palette.caloriesIcon(),
                 icon = Icons.Outlined.LocalFireDepartment,
                 label = stringResource(R.string.edit_nutrition_calorie_goal),
                 value = ui.draft.kcal,
@@ -255,7 +256,7 @@ private fun EditNutritionGoalsScreen(
             Spacer(Modifier.height(GoalRowGap))
 
             GoalRow(
-                ringColor = Color(0xFFE56C6C),
+                ringColor = HomeCardStyles.Palette.protein(),
                 icon = Icons.Filled.EggAlt,
                 label = stringResource(R.string.edit_nutrition_protein_goal),
                 value = ui.draft.proteinG,
@@ -265,7 +266,7 @@ private fun EditNutritionGoalsScreen(
             Spacer(Modifier.height(GoalRowGap))
 
             GoalRow(
-                ringColor = Color(0xFFD89A62),
+                ringColor = HomeCardStyles.Palette.Carbs,
                 icon = Icons.Filled.BakeryDining,
                 label = stringResource(R.string.edit_nutrition_carb_goal),
                 value = ui.draft.carbsG,
@@ -276,7 +277,7 @@ private fun EditNutritionGoalsScreen(
             Spacer(Modifier.height(GoalRowGap))
 
             GoalRow(
-                ringColor = Color(0xFF6C93D8),
+                ringColor = HomeCardStyles.Palette.fats(),
                 icon = Icons.Filled.Opacity,
                 label = stringResource(R.string.edit_nutrition_fat_goal),
                 value = ui.draft.fatG,
@@ -332,7 +333,7 @@ private fun EditNutritionGoalsScreen(
                     Spacer(Modifier.height(6.dp))
 
                     GoalRow(
-                        ringColor = Color(0xFFA78BFA),
+                        ringColor = HomeCardStyles.Palette.fiber(),
                         icon = Icons.Filled.Spa,
                         label = stringResource(R.string.edit_nutrition_fiber_goal),
                         value = ui.draft.fiberG,
@@ -342,7 +343,7 @@ private fun EditNutritionGoalsScreen(
                     Spacer(Modifier.height(GoalRowGap))
 
                     GoalRow(
-                        ringColor = Color(0xFFF08AAF),
+                        ringColor = HomeCardStyles.Palette.sugar(),
                         icon = Icons.Filled.Icecream,
                         label = stringResource(R.string.edit_nutrition_sugar_goal),
                         value = ui.draft.sugarG,
@@ -352,7 +353,7 @@ private fun EditNutritionGoalsScreen(
                     Spacer(Modifier.height(GoalRowGap))
 
                     GoalRow(
-                        ringColor = Color(0xFF73B6E6),
+                        ringColor = HomeCardStyles.Palette.sodium(),
                         icon = Icons.Filled.RiceBowl,
                         label = stringResource(R.string.edit_nutrition_sodium_goal),
                         value = ui.draft.sodiumMg,
@@ -474,13 +475,14 @@ private fun RingIcon(
     iconSize: Dp = 16.dp
 ) {
     val p = progress.coerceIn(0f, 1f)
-    val colors = BiteCalColors.current()
+    val trackColor = HomeCardStyles.Ring.track()
+    val centerFillColor = HomeCardStyles.Ring.centerFill()
 
     Box(modifier, contentAlignment = Alignment.Center) {
         Canvas(modifier = Modifier.fillMaxSize()) {
             val stroke = Stroke(width = strokeWidth.toPx(), cap = StrokeCap.Round)
             drawArc(
-                color = colors.border,
+                color = trackColor,
                 startAngle = 0f,
                 sweepAngle = 360f,
                 useCenter = false,
@@ -499,7 +501,7 @@ private fun RingIcon(
             modifier = Modifier
                 .size(innerCircleSize)
                 .clip(CircleShape)
-                .background(colors.surfaceMuted),
+                .background(centerFillColor),
             contentAlignment = Alignment.Center
         ) {
             Icon(
