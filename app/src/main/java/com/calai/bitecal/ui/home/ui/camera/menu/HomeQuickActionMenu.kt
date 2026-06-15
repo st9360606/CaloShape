@@ -27,6 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -133,8 +134,13 @@ private fun QuickActionCard(
         modifier = Modifier
             .width(170.dp)
             .height(125.dp)
-            .testTag(testTag),
-        onClick = hapticClick,
+            .testTag(testTag)
+            .biteCalClickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+                role = Role.Button,
+                onClick = hapticClick
+            ),
         shape = RoundedCornerShape(30.dp),
         border = CardStyles.border(),
         colors = CardDefaults.cardColors(

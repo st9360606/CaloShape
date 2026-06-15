@@ -144,6 +144,7 @@ fun HomeScreen(
     workoutVm: WorkoutViewModel,
     weightVm: WeightViewModel,
     onOpenCamera: () -> Unit,
+    onOpenCameraAfterQuickAddGate: () -> Unit = onOpenCamera,
     onOpenSavedFoods: () -> Unit,
     onOpenTab: (HomeTab) -> Unit,
     onOpenFastingPlans: () -> Unit,
@@ -404,7 +405,7 @@ fun HomeScreen(
     }
 
     val pendingOpenCamera by vm.pendingOpenCamera.collectAsState()
-    val latestOnOpenCamera = rememberUpdatedState(onOpenCamera)
+    val latestOnOpenCameraAfterQuickAddGate = rememberUpdatedState(onOpenCameraAfterQuickAddGate)
 
     var showQuickAddMenu by rememberSaveable { mutableStateOf(false) }
     var recentUploadDeleteTargetId by rememberSaveable { mutableStateOf<String?>(null) }
@@ -522,7 +523,7 @@ fun HomeScreen(
     LaunchedEffect(hasCameraPerm.value, pendingOpenCamera) {
         if (hasCameraPerm.value && pendingOpenCamera) {
             vm.clearPendingOpenCamera()
-            latestOnOpenCamera.value.invoke()
+            latestOnOpenCameraAfterQuickAddGate.value.invoke()
         }
     }
 
@@ -530,7 +531,7 @@ fun HomeScreen(
     val onScanFoodClick: () -> Unit = remember(
         ctx,
         requestCameraPermLauncher,
-        onOpenCamera,
+        onOpenCameraAfterQuickAddGate,
         vm
     ) {
         {
@@ -541,7 +542,7 @@ fun HomeScreen(
 
             if (grantedNow) {
                 CameraPermissionPrefs.resetCameraDeniedCount(ctx)
-                onOpenCamera()
+                onOpenCameraAfterQuickAddGate()
             } else {
                 vm.markPendingOpenCamera()
                 if (deniedCount >= 2) {

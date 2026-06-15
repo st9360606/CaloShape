@@ -227,6 +227,7 @@ object Routes {
     const val SETTINGS_SCAN_SUBSCRIPTION = "settings_scan_subscription"
     const val MEMBERSHIP_REFRESH_TICK = "membership_refresh_tick"
     const val OPEN_WORKOUT_SHEET_TICK = "open_workout_sheet_tick"
+    const val CAMERA_GATE_PASSED_ONCE = "camera_gate_passed_once"
     const val REQUIRE_SIGN_IN = "require_sign_in"
 
     const val REQUIRE_SIGN_IN_ROUTE =
@@ -1210,6 +1211,15 @@ fun BiteCalNavHost(
                                     restoreState = false
                                 }
                             }
+                        }
+                    },
+                    onOpenCameraAfterQuickAddGate = {
+                        nav.currentBackStackEntry
+                            ?.savedStateHandle
+                            ?.set(Routes.CAMERA_GATE_PASSED_ONCE, true)
+                        nav.navigate(Routes.CAMERA) {
+                            launchSingleTop = true
+                            restoreState = true
                         }
                     },
                     onOpenSavedFoods = {
@@ -2322,11 +2332,22 @@ fun BiteCalNavHost(
             val cameraFallbackPaywallRoute = remember(backStackEntry) {
                 nav.resolveCameraFallbackPaywallRoute()
             }
+            val quickAddGatePassedOnce = remember(backStackEntry) {
+                nav.previousBackStackEntry
+                    ?.savedStateHandle
+                    ?.remove<Boolean>(Routes.CAMERA_GATE_PASSED_ONCE) == true
+            }
 
-            var cameraGateResolved by rememberSaveable { mutableStateOf(false) }
-            var cameraAllowed by rememberSaveable { mutableStateOf(false) }
+            var cameraGateResolved by rememberSaveable {
+                mutableStateOf(quickAddGatePassedOnce)
+            }
+            var cameraAllowed by rememberSaveable {
+                mutableStateOf(quickAddGatePassedOnce)
+            }
 
-            LaunchedEffect(Unit) {
+            LaunchedEffect(quickAddGatePassedOnce) {
+                if (quickAddGatePassedOnce) return@LaunchedEffect
+
                 val hasActiveAccess = withContext(Dispatchers.IO) {
                     entitlementSyncer.hasActivePremiumAccess()
                 }
