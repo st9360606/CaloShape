@@ -92,6 +92,7 @@
                     android:contentDescription="@null" />
 
                 <ImageView
+                    android:id="@+id/widget_protein_icon"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="center"
@@ -155,6 +156,7 @@
                     android:contentDescription="@null" />
 
                 <ImageView
+                    android:id="@+id/widget_carbs_icon"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="center"
@@ -218,6 +220,7 @@
                     android:contentDescription="@null" />
 
                 <ImageView
+                    android:id="@+id/widget_fats_icon"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="center"
@@ -294,11 +297,13 @@
             android:padding="5dp">
 
             <FrameLayout
+                android:id="@+id/widget_scan_food_icon_bg"
                 android:layout_width="38dp"
                 android:layout_height="38dp"
                 android:background="@drawable/widget_circle_gray_bg">
 
                 <ImageView
+                    android:id="@+id/widget_scan_food_icon"
                     android:layout_width="26dp"
                     android:layout_height="26dp"
                     android:layout_gravity="center"
@@ -332,11 +337,13 @@
             android:padding="5dp">
 
             <FrameLayout
+                android:id="@+id/widget_barcode_icon_bg"
                 android:layout_width="38dp"
                 android:layout_height="38dp"
                 android:background="@drawable/widget_circle_gray_bg">
 
                 <ImageView
+                    android:id="@+id/widget_barcode_icon"
                     android:layout_width="26dp"
                     android:layout_height="26dp"
                     android:layout_gravity="center"

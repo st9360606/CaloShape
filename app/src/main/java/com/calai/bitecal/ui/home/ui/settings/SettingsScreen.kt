@@ -1747,7 +1747,7 @@ private fun CaloriesWidgetPreviewCard(
                     .clip(logFoodShape)
                     .background(
                         if (isDark) {
-                            HomeCardStyles.Action.secondaryContainer()
+                            Color(0xFF3A3544)
                         } else {
                             Color(0xFF111114)
                         }
@@ -2166,7 +2166,7 @@ private fun WidgetActionTile(
                 .clip(CircleShape)
                 .background(
                     if (isDark) {
-                        HomeCardStyles.Ring.centerFill()
+                        Color(0xFF3A3544)
                     } else {
                         Color(0xFFF1F2F4)
                     }

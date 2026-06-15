@@ -29,11 +29,17 @@ class BiteCalMacroActionsWidgetReceiver : AppWidgetProvider() {
             val isDark = snapshot.isDarkAppearance
             val metricTextColor = if (isDark) BiteCalWidgetColors.DARK_METRIC_TEXT else BiteCalWidgetColors.LIGHT_METRIC_TEXT
             val labelTextColor = if (isDark) BiteCalWidgetColors.DARK_LABEL_TEXT else BiteCalWidgetColors.LIGHT_LABEL_TEXT
+            val labelEmphasisTextColor = if (isDark) {
+                BiteCalWidgetColors.DARK_LABEL_EMPHASIS_TEXT
+            } else {
+                BiteCalWidgetColors.LIGHT_LABEL_EMPHASIS_TEXT
+            }
             val caloriesProgressColor = if (isDark) BiteCalWidgetColors.DARK_CALORIES_ACCENT else BiteCalWidgetColors.LIGHT_CALORIES_ACCENT
             val ringTrackColor = if (isDark) BiteCalWidgetColors.DARK_RING_TRACK else BiteCalWidgetColors.LIGHT_RING_TRACK
             val proteinColor = if (isDark) BiteCalWidgetColors.DARK_PROTEIN else BiteCalWidgetColors.LIGHT_PROTEIN
             val carbsColor = if (isDark) BiteCalWidgetColors.DARK_CARBS else BiteCalWidgetColors.LIGHT_CARBS
             val fatsColor = if (isDark) BiteCalWidgetColors.DARK_FATS else BiteCalWidgetColors.LIGHT_FATS
+            val actionIconColor = if (isDark) BiteCalWidgetColors.DARK_ACTION_ICON else BiteCalWidgetColors.LIGHT_ACTION_ICON
             val views = RemoteViews(appContext.packageName, R.layout.widget_macro_actions).apply {
                 setInt(
                     R.id.widget_macro_card,
@@ -57,8 +63,14 @@ class BiteCalMacroActionsWidgetReceiver : AppWidgetProvider() {
                 )
                 setTextViewText(R.id.widget_macro_calories_value, snapshot.caloriesLeft.toString())
                 setTextColor(R.id.widget_macro_calories_value, metricTextColor)
-                setTextViewText(R.id.widget_macro_calories_label, localizedContext.getString(R.string.widget_calories_left))
-                setTextColor(R.id.widget_macro_calories_label, labelTextColor)
+                setTextViewText(
+                    R.id.widget_macro_calories_label,
+                    BiteCalWidgetText.remainingLabel(
+                        text = localizedContext.getString(R.string.widget_calories_left),
+                        labelColor = labelTextColor,
+                        emphasisColor = labelEmphasisTextColor
+                    )
+                )
                 setImageViewBitmap(
                     R.id.widget_macro_calories_ring,
                     BiteCalWidgetRingRenderer.render(
@@ -73,8 +85,19 @@ class BiteCalMacroActionsWidgetReceiver : AppWidgetProvider() {
 
                 setTextViewText(R.id.widget_protein_value, localizedContext.getString(R.string.widget_grams_format, snapshot.proteinLeftG))
                 setTextColor(R.id.widget_protein_value, metricTextColor)
-                setTextViewText(R.id.widget_protein_label, localizedContext.getString(R.string.widget_protein_left))
-                setTextColor(R.id.widget_protein_label, labelTextColor)
+                setTextViewText(
+                    R.id.widget_protein_label,
+                    BiteCalWidgetText.remainingLabel(
+                        text = localizedContext.getString(R.string.widget_protein_left),
+                        labelColor = labelTextColor,
+                        emphasisColor = labelEmphasisTextColor
+                    )
+                )
+                setInt(
+                    R.id.widget_protein_icon,
+                    "setBackgroundResource",
+                    if (isDark) R.drawable.widget_circle_dark_bg else R.drawable.widget_circle_protein_bg
+                )
                 setImageViewBitmap(
                     R.id.widget_protein_ring,
                     BiteCalWidgetRingRenderer.render(
@@ -90,8 +113,19 @@ class BiteCalMacroActionsWidgetReceiver : AppWidgetProvider() {
 
                 setTextViewText(R.id.widget_carbs_value, localizedContext.getString(R.string.widget_grams_format, snapshot.carbsLeftG))
                 setTextColor(R.id.widget_carbs_value, metricTextColor)
-                setTextViewText(R.id.widget_carbs_label, localizedContext.getString(R.string.widget_carbs_left))
-                setTextColor(R.id.widget_carbs_label, labelTextColor)
+                setTextViewText(
+                    R.id.widget_carbs_label,
+                    BiteCalWidgetText.remainingLabel(
+                        text = localizedContext.getString(R.string.widget_carbs_left),
+                        labelColor = labelTextColor,
+                        emphasisColor = labelEmphasisTextColor
+                    )
+                )
+                setInt(
+                    R.id.widget_carbs_icon,
+                    "setBackgroundResource",
+                    if (isDark) R.drawable.widget_circle_dark_bg else R.drawable.widget_circle_carbs_bg
+                )
                 setImageViewBitmap(
                     R.id.widget_carbs_ring,
                     BiteCalWidgetRingRenderer.render(
@@ -107,8 +141,19 @@ class BiteCalMacroActionsWidgetReceiver : AppWidgetProvider() {
 
                 setTextViewText(R.id.widget_fats_value, localizedContext.getString(R.string.widget_grams_format, snapshot.fatsLeftG))
                 setTextColor(R.id.widget_fats_value, metricTextColor)
-                setTextViewText(R.id.widget_fats_label, localizedContext.getString(R.string.widget_fats_left))
-                setTextColor(R.id.widget_fats_label, labelTextColor)
+                setTextViewText(
+                    R.id.widget_fats_label,
+                    BiteCalWidgetText.remainingLabel(
+                        text = localizedContext.getString(R.string.widget_fats_left),
+                        labelColor = labelTextColor,
+                        emphasisColor = labelEmphasisTextColor
+                    )
+                )
+                setInt(
+                    R.id.widget_fats_icon,
+                    "setBackgroundResource",
+                    if (isDark) R.drawable.widget_circle_dark_bg else R.drawable.widget_circle_fats_bg
+                )
                 setImageViewBitmap(
                     R.id.widget_fats_ring,
                     BiteCalWidgetRingRenderer.render(
@@ -123,9 +168,21 @@ class BiteCalMacroActionsWidgetReceiver : AppWidgetProvider() {
                 )
 
                 setTextViewText(R.id.widget_scan_food_text, localizedContext.getString(R.string.widget_scan_food))
-                setTextColor(R.id.widget_scan_food_text, if (isDark) metricTextColor else BiteCalWidgetColors.LIGHT_LABEL_TEXT)
+                setTextColor(R.id.widget_scan_food_text, if (isDark) BiteCalWidgetColors.DARK_LABEL_EMPHASIS_TEXT else BiteCalWidgetColors.LIGHT_ACTION_ICON)
+                setInt(
+                    R.id.widget_scan_food_icon_bg,
+                    "setBackgroundResource",
+                    if (isDark) R.drawable.widget_action_icon_circle_dark_bg else R.drawable.widget_circle_gray_bg
+                )
+                setInt(R.id.widget_scan_food_icon, "setColorFilter", actionIconColor)
                 setTextViewText(R.id.widget_barcode_text, localizedContext.getString(R.string.widget_barcode))
-                setTextColor(R.id.widget_barcode_text, if (isDark) metricTextColor else BiteCalWidgetColors.LIGHT_LABEL_TEXT)
+                setTextColor(R.id.widget_barcode_text, if (isDark) BiteCalWidgetColors.DARK_LABEL_EMPHASIS_TEXT else BiteCalWidgetColors.LIGHT_ACTION_ICON)
+                setInt(
+                    R.id.widget_barcode_icon_bg,
+                    "setBackgroundResource",
+                    if (isDark) R.drawable.widget_action_icon_circle_dark_bg else R.drawable.widget_circle_gray_bg
+                )
+                setInt(R.id.widget_barcode_icon, "setColorFilter", actionIconColor)
 
                 setOnClickPendingIntent(R.id.widget_macro_root, BiteCalWidgetPendingIntents.openHome(appContext))
                 setOnClickPendingIntent(R.id.widget_scan_food_tile, BiteCalWidgetPendingIntents.scanFood(appContext))
