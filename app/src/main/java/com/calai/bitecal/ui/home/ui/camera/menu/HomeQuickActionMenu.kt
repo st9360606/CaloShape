@@ -1,6 +1,7 @@
 package com.calai.bitecal.ui.home.ui.camera.menu
 
 import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -8,8 +9,11 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -25,6 +29,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
@@ -39,11 +44,14 @@ import com.calai.bitecal.ui.home.ui.camera.scan.ScanCameraIcon
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
 
 private val ScrimColor = Color.Black.copy(alpha = 0.16f)
-private val TileColor = Color(0xFFF0F1F6)
-private val LabelColor = Color(0xFF202124)
+private val DarkMenuCardColor = Color(0xFF3A3544)
+private val LightTileColor = Color(0xFFF0F1F6)
+private val DarkTileColor = Color.White.copy(alpha = 0.14f)
+private val LightContentColor = Color(0xFF202124)
+private val DarkContentColor = Color.White
 
 private val MenuSidePadding = 20.dp
-private val MenuBottomPadding = 116.dp
+private val MenuBaseBottomPadding = 78.dp
 private val MenuCardSpacing = 12.dp
 
 @Composable
@@ -58,11 +66,21 @@ fun HomeQuickActionMenu(
 
     BackHandler(enabled = visible, onBack = onDismiss)
 
+    val screenHeight = LocalConfiguration.current.screenHeightDp.dp
+
     Box(
         modifier = modifier
             .fillMaxSize()
             .testTag("quick_add_menu")
     ) {
+        val navigationBottomPadding = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
+        val screenAwareLift = when {
+            screenHeight < 700.dp -> (-18).dp
+            screenHeight > 860.dp -> 18.dp
+            else -> 0.dp
+        }
+        val menuBottomPadding = MenuBaseBottomPadding + navigationBottomPadding + screenAwareLift
+
         Box(
             modifier = Modifier
                 .matchParentSize()
@@ -80,7 +98,7 @@ fun HomeQuickActionMenu(
                 .padding(
                     start = MenuSidePadding,
                     end = MenuSidePadding,
-                    bottom = MenuBottomPadding
+                    bottom = menuBottomPadding
                 ),
             horizontalArrangement = Arrangement.spacedBy(MenuCardSpacing)
         ) {
@@ -92,7 +110,7 @@ fun HomeQuickActionMenu(
                     Icon(
                         imageVector = Icons.Filled.Bookmark,
                         contentDescription = null,
-                        tint = Color(0xFF202124),
+                        tint = if (HomeCardStyles.isDark()) DarkContentColor else LightContentColor,
                         modifier = Modifier.size(28.dp)
                     )
                 }
@@ -112,7 +130,7 @@ fun HomeQuickActionMenu(
                         frameAlpha = 0.62f,
                         plusSizeRatio = 0.44f,
                         plusStrokeWidth = 1.8.dp,
-                        color = Color(0xFF202124)
+                        color = if (HomeCardStyles.isDark()) DarkContentColor else LightContentColor
                     )
                 }
             )
@@ -128,7 +146,15 @@ private fun QuickActionCard(
     icon: @Composable () -> Unit
 ) {
     val hapticClick = rememberClickWithHaptic(onClick = onClick)
-    val labelColor = if (HomeCardStyles.isDark()) Color.White else LabelColor
+    val isDark = HomeCardStyles.isDark()
+    val cardColor = if (isDark) DarkMenuCardColor else CardStyles.bg()
+    val contentColor = if (isDark) DarkContentColor else LightContentColor
+    val tileColor = if (isDark) DarkTileColor else LightTileColor
+    val cardBorder = if (isDark) {
+        BorderStroke(1.dp, Color.White.copy(alpha = 0.18f))
+    } else {
+        BorderStroke(1.5.dp, Color(0xFFC6CBD4))
+    }
 
     Card(
         modifier = Modifier
@@ -140,11 +166,12 @@ private fun QuickActionCard(
                 indication = null,
                 role = Role.Button,
                 onClick = hapticClick
-            ),
+        ),
         shape = RoundedCornerShape(30.dp),
-        border = CardStyles.border(),
+        border = cardBorder,
+        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
         colors = CardDefaults.cardColors(
-            containerColor = CardStyles.bg()
+            containerColor = cardColor
         )
     ) {
         Column(
@@ -157,7 +184,7 @@ private fun QuickActionCard(
                 modifier = Modifier
                     .size(52.dp)
                     .background(
-                        color = TileColor,
+                        color = tileColor,
                         shape = RoundedCornerShape(14.dp)
                     ),
                 contentAlignment = Alignment.Center
@@ -169,7 +196,7 @@ private fun QuickActionCard(
 
             Text(
                 text = label,
-                color = labelColor,
+                color = contentColor,
                 fontSize = 16.sp,
                 fontWeight = FontWeight.SemiBold
             )
