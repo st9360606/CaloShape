@@ -164,7 +164,7 @@ private fun QuickActionCard(
             Text(
                 text = label,
                 color = labelColor,
-                fontSize = 18.sp,
+                fontSize = 16.sp,
                 fontWeight = FontWeight.SemiBold
             )
         }
