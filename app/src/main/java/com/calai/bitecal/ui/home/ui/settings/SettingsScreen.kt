@@ -1912,7 +1912,7 @@ private fun MacroActionsWidgetPreviewCard(
                             current = todayNutrition.eatenFatsG,
                             goal = fatsGoal
                         ),
-                        iconSize = 16.dp
+                        iconSize = 15.dp
                     )
                 }
             }

@@ -206,9 +206,9 @@ fun MacroRowModern(
     ringStroke: Dp = HomeCardStyles.Ring.Stroke,
     centerDisk: Dp = HomeCardStyles.Ring.CenterDisk,
     spacingTop: Dp = 12.dp,
-    proteinIconSize: Dp = 21.dp,
+    proteinIconSize: Dp = 20.dp,
     carbsIconSize: Dp = 24.dp,
-    fatsIconSize: Dp = 19.dp
+    fatsIconSize: Dp = 17.dp
 ) {
     val proteinProgress = progressOfInt(
         current = todayNutrition.eatenProteinG,

@@ -5,11 +5,45 @@
     android:viewportWidth="24"
     android:viewportHeight="24">
 
-    <path
-        android:fillColor="#FF6C93D8"
-        android:pathData="M12,3.25C8.15,7.8 6.1,11.05 6.1,14.25C6.1,17.85 8.75,20.75 12,20.75C15.25,20.75 17.9,17.85 17.9,14.25C17.9,11.05 15.85,7.8 12,3.25Z" />
+    <group
+        android:pivotX="12"
+        android:pivotY="12"
+        android:scaleX="0.94"
+        android:scaleY="0.94">
 
     <path
-        android:fillColor="#FFF1F6FF"
-        android:pathData="M9.35,15.05C9.75,16.35 10.8,17.15 12.15,17.15C12.55,17.15 12.85,17.45 12.85,17.85C12.85,18.25 12.55,18.55 12.15,18.55C10.15,18.55 8.55,17.35 8,15.45C7.9,15.05 8.1,14.7 8.5,14.6C8.9,14.5 9.25,14.7 9.35,15.05Z" />
+        android:fillColor="#00FFFFFF"
+        android:strokeColor="#FF5D86CC"
+        android:strokeWidth="2.35"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="
+            M12.15,2.35
+            C9.05,2.35 8.05,5.45 7.25,8.45
+            C6.25,10.55 4.45,13.45 4.75,16.55
+            C5.1,20.3 8.05,22.15 11.95,22.15
+            C16.05,22.15 19.0,20.2 19.25,16.35
+            C19.45,13.3 17.65,10.65 16.6,8.45
+            C15.65,5.25 14.95,2.35 12.15,2.35
+            Z" />
+
+    <path
+        android:fillColor="#FF5D86CC"
+        android:pathData="
+            M12.35,10.0
+            C10.75,10.0 9.65,11.55 9.65,13.55
+            C9.65,15.55 10.78,16.95 12.33,16.95
+            C13.92,16.95 15.05,15.5 15.05,13.52
+            C15.05,11.55 13.92,10.0 12.35,10.0
+            Z" />
+
+    <path
+        android:fillColor="#00FFFFFF"
+        android:strokeColor="#00FFFFFF"
+        android:strokeWidth="1.25"
+        android:strokeLineCap="round"
+        android:pathData="
+            M13.35,10.9
+            C14.25,11.45 14.75,12.35 14.82,13.45" />
+    </group>
 </vector>

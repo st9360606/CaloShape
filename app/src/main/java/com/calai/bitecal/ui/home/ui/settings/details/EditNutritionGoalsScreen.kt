@@ -38,7 +38,6 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Icecream
-import androidx.compose.material.icons.filled.Opacity
 import androidx.compose.material.icons.filled.RiceBowl
 import androidx.compose.material.icons.filled.Spa
 import androidx.compose.material.icons.outlined.LocalFireDepartment
@@ -282,9 +281,11 @@ private fun EditNutritionGoalsScreen(
 
             GoalRow(
                 ringColor = HomeCardStyles.Palette.fats(),
-                icon = Icons.Filled.Opacity,
+                iconDrawableRes = R.drawable.ic_widget_fats,
+                tintDrawableIcon = false,
                 label = stringResource(R.string.edit_nutrition_fat_goal),
                 value = ui.draft.fatG,
+                iconSize = 17.dp,
                 errorText = ui.fieldErrors[NutritionGoalsUiState.Field.FAT],
                 onValueChange = onFat
             )
