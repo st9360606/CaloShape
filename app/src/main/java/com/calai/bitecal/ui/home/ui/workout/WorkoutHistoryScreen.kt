@@ -137,6 +137,7 @@ fun WorkoutHistoryScreen(
     val history = ui.recentHistory
     val sessions = history?.sessions.orEmpty()
     val totalKcal = history?.totalKcal ?: 0
+    val waitingForInitialHistory = history == null && !ui.historyError
 
     val todayTotalKcal = ui.today?.totalKcalToday ?: 0
     val averageDailyKcal = (totalKcal.toDouble() / WorkoutHistoryRangeDays).roundToInt()
@@ -192,7 +193,7 @@ fun WorkoutHistoryScreen(
 
                 // 2. 狀態或歷史列表
                 when {
-                    ui.historyLoading -> {
+                    ui.historyLoading || waitingForInitialHistory -> {
                         item {
                             WorkoutHistoryStateCard(
                                 title = stringResource(R.string.workout_history_loading_title),
@@ -418,8 +419,8 @@ private fun WorkoutHistorySummaryMetric(
         ) {
             Text(
                 text = label,
-                style = MaterialTheme.typography.labelSmall.copy(
-                    color = workoutHistoryMutedTextColor(),
+                style = MaterialTheme.typography.labelMedium.copy(
+                    color = workoutHistorySecondaryTextColor(),
                     fontWeight = FontWeight.Medium
                 ),
                 maxLines = 1,
