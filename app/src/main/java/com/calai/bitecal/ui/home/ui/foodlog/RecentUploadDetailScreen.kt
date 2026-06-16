@@ -18,6 +18,7 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -742,7 +743,12 @@ private fun SaveBadge(
     Box(
         modifier = Modifier
             .size(27.dp)
-            .biteCalClickable(enabled = enabled, onClick = onClick),
+            .biteCalClickable(
+                enabled = enabled,
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+                onClick = onClick
+            ),
         contentAlignment = Alignment.Center
     ) {
         Icon(
@@ -1069,7 +1075,7 @@ private fun FooterSaveBar(
     onSave: () -> Unit
 ) {
     BiteCalEditBottomActionBar(
-        primaryText = stringResource(R.string.common_close),
+        primaryText = stringResource(R.string.common_save),
         onPrimaryClick = onSave,
         primaryEnabled = enabled,
         primaryLoading = false

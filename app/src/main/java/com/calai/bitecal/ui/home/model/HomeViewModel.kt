@@ -39,6 +39,7 @@ import kotlinx.coroutines.withContext
 import retrofit2.HttpException
 import java.io.File
 import java.time.DayOfWeek
+import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId
 import java.time.temporal.TemporalAdjusters
@@ -319,6 +320,16 @@ class HomeViewModel @Inject constructor(
             capturedAtUtc = env.capturedAtUtc,
             capturedLocalDate = env.capturedLocalDate
         ).ifBlank { fallbackTimeText }
+    }
+
+    private fun isWithinRecentUploadWindow(env: FoodLogEnvelopeDto): Boolean {
+        val createdAt = env.createdAtUtc
+            ?.takeIf { it.isNotBlank() }
+            ?.let { raw -> runCatching { Instant.parse(raw) }.getOrNull() }
+            ?: return true
+
+        val cutoff = Instant.now().minusMillis(TimeUnit.DAYS.toMillis(recentUploadLookBackDays))
+        return !createdAt.isBefore(cutoff)
     }
 
     fun clearRecentUpload() {
@@ -655,15 +666,19 @@ class HomeViewModel @Inject constructor(
         when (env.status) {
             FoodLogStatus.DRAFT,
             FoodLogStatus.SAVED -> {
-                upsertRecentUpload(
-                    item = HomeRecentUploadMapper.success(
-                        foodLogId = env.foodLogId,
-                        previewUri = resolvedPreviewUri,
-                        timeText = resolvedTimeText,
-                        env = env
-                    ),
-                    moveExistingToTop = moveExistingToTop
-                )
+                if (isWithinRecentUploadWindow(env)) {
+                    upsertRecentUpload(
+                        item = HomeRecentUploadMapper.success(
+                            foodLogId = env.foodLogId,
+                            previewUri = resolvedPreviewUri,
+                            timeText = resolvedTimeText,
+                            env = env
+                        ),
+                        moveExistingToTop = moveExistingToTop
+                    )
+                } else {
+                    removeRecentUpload(env.foodLogId)
+                }
                 refreshAfterFoodLogMutation(env)
                 recentUploadRestoreJob?.cancel()
                 recentUploadRestoreJob = null
