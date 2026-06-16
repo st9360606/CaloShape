@@ -1105,7 +1105,6 @@ private fun CupertinoWheelTimePickerSheet(
 
             val actionButtonTextStyle = MaterialTheme.typography.labelLarge.copy(
                 fontSize = 16.sp,
-                lineHeight = 20.sp,
                 fontWeight = FontWeight.SemiBold
             )
 

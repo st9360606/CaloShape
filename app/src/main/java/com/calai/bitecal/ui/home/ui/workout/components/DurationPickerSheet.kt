@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.res.Configuration
 import android.os.LocaleList
 import androidx.annotation.StringRes
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
@@ -79,6 +80,8 @@ fun DurationPickerSheet(
     )
 ) {
     val sheetHeight = 546.dp
+    val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     var hours by remember { mutableIntStateOf(0) }
     var minutes by remember { mutableIntStateOf(30) }
@@ -215,7 +218,6 @@ fun DurationPickerSheet(
 
                     val actionButtonTextStyle = MaterialTheme.typography.labelLarge.copy(
                         fontSize = 16.sp,
-                        lineHeight = 20.sp,
                         fontWeight = FontWeight.SemiBold
                     )
 
@@ -252,9 +254,13 @@ fun DurationPickerSheet(
                                 .fillMaxWidth()
                                 .height(56.dp),
                             shape = RoundedCornerShape(28.dp),
-                            colors = ButtonDefaults.buttonColors(
-                                containerColor = HomeCardStyles.Surface.raised(),
-                                contentColor = HomeCardStyles.Text.primary()
+                            border = BorderStroke(
+                                1.dp,
+                                if (isDark) HomeCardStyles.Surface.borderColor() else colors.border
+                            ),
+                            colors = ButtonDefaults.outlinedButtonColors(
+                                containerColor = if (isDark) HomeCardStyles.Surface.raised() else colors.surfaceMuted,
+                                contentColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
                             )
                         ) {
                             Text(
