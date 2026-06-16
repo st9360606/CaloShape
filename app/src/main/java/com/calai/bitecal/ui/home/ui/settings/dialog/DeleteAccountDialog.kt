@@ -75,6 +75,7 @@ fun DeleteAccountDialog(
             Surface(
                 shape = RoundedCornerShape(16.dp),
                 color = if (isDark) HomeCardStyles.Dialog.surface() else colors.surface,
+                border = if (isDark) BorderStroke(1.2.dp, HomeCardStyles.Dialog.border()) else null,
                 tonalElevation = 0.dp,
                 shadowElevation = 0.dp,
                 modifier = Modifier.fillMaxWidth()
