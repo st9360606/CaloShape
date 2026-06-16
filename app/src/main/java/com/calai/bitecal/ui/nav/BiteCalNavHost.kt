@@ -2230,9 +2230,12 @@ fun BiteCalNavHost(
 
             composable(Routes.AUTO_GENERATE_EXERCISE_FREQUENCY) { backStackEntry ->
                 val activity = (LocalContext.current.findActivity() ?: hostActivity)
+                val flowBackStackEntry = remember(backStackEntry) {
+                    nav.getBackStackEntry(Routes.AUTO_GENERATE_FLOW)
+                }
                 val vm: ExerciseFrequencyViewModel = viewModel(
-                    viewModelStoreOwner = backStackEntry,
-                    factory = HiltViewModelFactory(activity, backStackEntry)
+                    viewModelStoreOwner = flowBackStackEntry,
+                    factory = HiltViewModelFactory(activity, flowBackStackEntry)
                 )
 
                 ExerciseFrequencyScreen(
@@ -2244,9 +2247,12 @@ fun BiteCalNavHost(
 
             composable(Routes.AUTO_GENERATE_HEIGHT) { backStackEntry ->
                 val activity = (LocalContext.current.findActivity() ?: hostActivity)
+                val flowBackStackEntry = remember(backStackEntry) {
+                    nav.getBackStackEntry(Routes.AUTO_GENERATE_FLOW)
+                }
                 val vm: HeightSelectionViewModel = viewModel(
-                    viewModelStoreOwner = backStackEntry,
-                    factory = HiltViewModelFactory(activity, backStackEntry)
+                    viewModelStoreOwner = flowBackStackEntry,
+                    factory = HiltViewModelFactory(activity, flowBackStackEntry)
                 )
 
                 HeightSelectionScreen(
@@ -2258,9 +2264,12 @@ fun BiteCalNavHost(
 
             composable(Routes.AUTO_GENERATE_WEIGHT) { backStackEntry ->
                 val activity = (LocalContext.current.findActivity() ?: hostActivity)
+                val flowBackStackEntry = remember(backStackEntry) {
+                    nav.getBackStackEntry(Routes.AUTO_GENERATE_FLOW)
+                }
                 val vm: WeightSelectionViewModel = viewModel(
-                    viewModelStoreOwner = backStackEntry,
-                    factory = HiltViewModelFactory(activity, backStackEntry)
+                    viewModelStoreOwner = flowBackStackEntry,
+                    factory = HiltViewModelFactory(activity, flowBackStackEntry)
                 )
 
                 WeightSelectionScreen(
@@ -2273,9 +2282,12 @@ fun BiteCalNavHost(
 
             composable(Routes.AUTO_GENERATE_GOALS) { backStackEntry ->
                 val activity = (LocalContext.current.findActivity() ?: hostActivity)
+                val flowBackStackEntry = remember(backStackEntry) {
+                    nav.getBackStackEntry(Routes.AUTO_GENERATE_FLOW)
+                }
                 val vm: GoalSelectionViewModel = viewModel(
-                    viewModelStoreOwner = backStackEntry,
-                    factory = HiltViewModelFactory(activity, backStackEntry)
+                    viewModelStoreOwner = flowBackStackEntry,
+                    factory = HiltViewModelFactory(activity, flowBackStackEntry)
                 )
 
                 GoalSelectionScreen(
