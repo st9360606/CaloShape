@@ -1093,9 +1093,9 @@ private fun TwoPagePager(
                                 centerDisk = 28.dp,
                                 ringStroke = 5.dp,
                                 spacingTop = 15.dp,
-                                proteinIconSize = 20.dp,
-                                carbsIconSize = 24.dp,
-                                fatsIconSize = 17.dp
+                                proteinIconSize = 22.dp,
+                                carbsIconSize = 26.dp,
+                                fatsIconSize = 20.dp
                             )
                         }
 

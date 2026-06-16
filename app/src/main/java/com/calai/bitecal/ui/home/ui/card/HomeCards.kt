@@ -206,9 +206,9 @@ fun MacroRowModern(
     ringStroke: Dp = HomeCardStyles.Ring.Stroke,
     centerDisk: Dp = HomeCardStyles.Ring.CenterDisk,
     spacingTop: Dp = 12.dp,
-    proteinIconSize: Dp = 20.dp,
-    carbsIconSize: Dp = 24.dp,
-    fatsIconSize: Dp = 17.dp
+    proteinIconSize: Dp = 22.dp,
+    carbsIconSize: Dp = 26.dp,
+    fatsIconSize: Dp = 20.dp
 ) {
     val proteinProgress = progressOfInt(
         current = todayNutrition.eatenProteinG,
@@ -360,7 +360,7 @@ fun MicronutrientRowModern(
                     imageVector = Icons.Filled.Spa,
                     contentDescription = null,
                     tint = HomeCardStyles.Palette.fiber(),
-                    modifier = Modifier.size(16.dp)
+                    modifier = Modifier.size(17.dp)
                 )
             },
             modifier = Modifier.weight(1f),
@@ -391,7 +391,7 @@ fun MicronutrientRowModern(
                     imageVector = Icons.Filled.Icecream,
                     contentDescription = null,
                     tint = HomeCardStyles.Palette.sugar(),
-                    modifier = Modifier.size(19.dp)
+                    modifier = Modifier.size(20.dp)
                 )
             },
             modifier = Modifier.weight(1f),
@@ -422,7 +422,7 @@ fun MicronutrientRowModern(
                     imageVector = Icons.Filled.RiceBowl,
                     contentDescription = null,
                     tint = HomeCardStyles.Palette.sodium(),
-                    modifier = Modifier.size(17.dp)
+                    modifier = Modifier.size(18.dp)
                 )
             },
             modifier = Modifier.weight(1f),
