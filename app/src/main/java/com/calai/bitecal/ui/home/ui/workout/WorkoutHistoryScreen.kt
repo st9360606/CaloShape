@@ -63,6 +63,7 @@ import com.calai.bitecal.data.workout.api.WorkoutHistorySessionDto
 import com.calai.bitecal.ui.home.HomeTab
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.home.components.HomeBackground
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import com.calai.bitecal.ui.home.components.MainBottomBar
 import com.calai.bitecal.ui.home.components.toast.DeleteFailedTopToast
 import com.calai.bitecal.ui.home.components.toast.DeleteSuccessTopToast
@@ -82,12 +83,41 @@ private val WorkoutAccent = Color(0xFFF59E0B)
 private val WorkoutTimelineBar = Color(0xFF18181B)
 private val WorkoutDurationBlue = Color(0xFF3B82F6)
 private val WorkoutBurnRed = Color(0xFFF43F5E)
+private val WorkoutDarkPurple = Color(0xFF9F8BE8)
 
 private val WorkoutMetricPrimarySoft = Color(0xFFF5F5F6)
 private val WorkoutMetricPrimaryInk = Color(0xFF2F2F33)
 private val WorkoutMetricSecondarySoft = Color(0xFFF5F5F6)
 private val WorkoutMetricSecondaryInk = Color(0xFF2F2F33)
 private const val WorkoutHistoryRangeDays = 7
+
+@Composable
+private fun workoutHistoryCardColor(): Color =
+    if (HomeCardStyles.isDark()) HomeCardStyles.Surface.card() else WorkoutCardWhite
+
+@Composable
+private fun workoutHistoryRaisedColor(lightColor: Color = WorkoutSubtle): Color =
+    if (HomeCardStyles.isDark()) HomeCardStyles.Surface.raised() else lightColor
+
+@Composable
+private fun workoutHistoryPrimaryTextColor(): Color =
+    if (HomeCardStyles.isDark()) HomeCardStyles.Text.primary() else WorkoutInk
+
+@Composable
+private fun workoutHistorySecondaryTextColor(): Color =
+    if (HomeCardStyles.isDark()) HomeCardStyles.Text.secondary() else WorkoutMuted
+
+@Composable
+private fun workoutHistoryMutedTextColor(): Color =
+    if (HomeCardStyles.isDark()) HomeCardStyles.Text.label() else WorkoutMuted
+
+@Composable
+private fun workoutHistoryAccentColor(lightColor: Color): Color =
+    if (HomeCardStyles.isDark()) HomeCardStyles.Palette.workout() else lightColor
+
+@Composable
+private fun workoutHistoryBarbellIconColor(): Color =
+    if (HomeCardStyles.isDark()) HomeCardStyles.Palette.workout() else WorkoutDarkPurple
 
 @Composable
 fun WorkoutHistoryScreen(
@@ -167,7 +197,7 @@ fun WorkoutHistoryScreen(
                             WorkoutHistoryStateCard(
                                 title = stringResource(R.string.workout_history_loading_title),
                                 body = stringResource(R.string.workout_history_loading),
-                                iconTint = WorkoutAccent
+                                iconTint = workoutHistoryBarbellIconColor()
                             )
                         }
                     }
@@ -183,9 +213,18 @@ fun WorkoutHistoryScreen(
                                         onClick = rememberClickWithHaptic(onClick = vm::refreshRecentHistory),
                                         enabled = !ui.historyLoading,
                                         shape = RoundedCornerShape(16.dp), // 更現代的按鈕圓角
+                                        border = if (HomeCardStyles.isDark()) HomeCardStyles.Surface.border() else null,
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = WorkoutInk,
-                                            contentColor = Color.White
+                                            containerColor = if (HomeCardStyles.isDark()) {
+                                                HomeCardStyles.Surface.raisedAlt()
+                                            } else {
+                                                WorkoutInk
+                                            },
+                                            contentColor = if (HomeCardStyles.isDark()) {
+                                                HomeCardStyles.Text.primary()
+                                            } else {
+                                                Color.White
+                                            }
                                         ),
                                         contentPadding = PaddingValues(horizontal = 24.dp, vertical = 14.dp)
                                     ) {
@@ -201,7 +240,7 @@ fun WorkoutHistoryScreen(
                             WorkoutHistoryStateCard(
                                 title = stringResource(R.string.workout_history_empty_title),
                                 body = stringResource(R.string.workout_history_empty),
-                                iconTint = WorkoutMuted
+                                iconTint = workoutHistoryBarbellIconColor()
                             )
                         }
                     }
@@ -275,9 +314,10 @@ private fun WorkoutHistorySummaryCard(
     Surface(
         modifier = Modifier.fillMaxWidth(),
         shape = cardShape,
-        color = WorkoutCardWhite,
-        shadowElevation = 8.dp,
-        tonalElevation = 4.dp // 增加些微層次感
+        color = if (HomeCardStyles.isDark()) HomeCardStyles.Surface.card() else WorkoutCardWhite,
+        border = if (HomeCardStyles.isDark()) HomeCardStyles.Surface.border() else null,
+        shadowElevation = if (HomeCardStyles.isDark()) 0.dp else 8.dp,
+        tonalElevation = 0.dp
     ) {
         Column(
             modifier = Modifier.padding(24.dp)
@@ -285,7 +325,7 @@ private fun WorkoutHistorySummaryCard(
             Text(
                 text = stringResource(R.string.workout_history_summary_label),
                 style = MaterialTheme.typography.titleMedium.copy(
-                    color = WorkoutInk,
+                    color = workoutHistoryPrimaryTextColor(),
                     fontWeight = FontWeight.Bold
                 )
             )
@@ -294,7 +334,7 @@ private fun WorkoutHistorySummaryCard(
 
             Text(
                 text = stringResource(R.string.workout_history_summary_body),
-                style = MaterialTheme.typography.bodyMedium.copy(color = WorkoutMuted)
+                style = MaterialTheme.typography.bodyMedium.copy(color = workoutHistorySecondaryTextColor())
             )
 
             Spacer(Modifier.height(18.dp))
@@ -317,7 +357,7 @@ private fun WorkoutHistorySummaryCard(
                         Text(
                             text = todayTotalKcal.toString(),
                             style = MaterialTheme.typography.displayLarge.copy(
-                                color = WorkoutInk,
+                                color = workoutHistoryPrimaryTextColor(),
                                 fontWeight = FontWeight.Black
                             ),
                             maxLines = 1
@@ -326,7 +366,7 @@ private fun WorkoutHistorySummaryCard(
                         Text(
                             text = stringResource(R.string.workout_history_unit_kcal),
                             style = MaterialTheme.typography.titleMedium.copy(
-                                color = WorkoutMuted,
+                                color = workoutHistoryMutedTextColor(),
                                 fontWeight = FontWeight.Bold
                             ),
                             modifier = Modifier.padding(bottom = 8.dp)
@@ -342,7 +382,7 @@ private fun WorkoutHistorySummaryCard(
                     label = stringResource(R.string.workout_history_avg_daily_label),
                     value = stringResource(R.string.workout_history_avg_daily_value, averageDailyKcal),
                     containerColor = WorkoutMetricPrimarySoft,
-                    valueColor = WorkoutMetricPrimaryInk,
+                    valueColor = if (HomeCardStyles.isDark()) HomeCardStyles.Text.primary() else WorkoutMetricPrimaryInk,
                     modifier = Modifier.weight(1f)
                 )
 
@@ -350,7 +390,7 @@ private fun WorkoutHistorySummaryCard(
                     label = stringResource(R.string.workout_history_avg_label),
                     value = stringResource(R.string.workout_history_avg_value, averageKcal),
                     containerColor = WorkoutMetricSecondarySoft,
-                    valueColor = WorkoutMetricSecondaryInk,
+                    valueColor = if (HomeCardStyles.isDark()) HomeCardStyles.Text.primary() else WorkoutMetricSecondaryInk,
                     modifier = Modifier.weight(1f)
                 )
             }
@@ -369,7 +409,8 @@ private fun WorkoutHistorySummaryMetric(
     Surface(
         modifier = modifier,
         shape = RoundedCornerShape(20.dp),
-        color = containerColor
+        color = workoutHistoryRaisedColor(containerColor),
+        border = if (HomeCardStyles.isDark()) HomeCardStyles.Surface.border() else null
     ) {
         Column(
             modifier = Modifier.padding(16.dp),
@@ -378,7 +419,7 @@ private fun WorkoutHistorySummaryMetric(
             Text(
                 text = label,
                 style = MaterialTheme.typography.labelSmall.copy(
-                    color = WorkoutMuted,
+                    color = workoutHistoryMutedTextColor(),
                     fontWeight = FontWeight.Medium
                 ),
                 maxLines = 1,
@@ -403,7 +444,7 @@ private fun WorkoutHistorySectionHeader(title: String) {
     Text(
         text = title,
         style = MaterialTheme.typography.titleLarge.copy(
-            color = WorkoutInk,
+            color = workoutHistoryPrimaryTextColor(),
             fontWeight = FontWeight.ExtraBold
         ),
         modifier = Modifier.padding(top = 8.dp, bottom = 4.dp)
@@ -421,8 +462,9 @@ private fun WorkoutHistoryStateCard(
     Surface(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(28.dp),
-        color = WorkoutCardWhite,
-        shadowElevation = 4.dp
+        color = workoutHistoryCardColor(),
+        border = if (HomeCardStyles.isDark()) HomeCardStyles.Surface.border() else null,
+        shadowElevation = if (HomeCardStyles.isDark()) 0.dp else 4.dp
     ) {
         Column(
             modifier = Modifier.padding(32.dp),
@@ -431,7 +473,7 @@ private fun WorkoutHistoryStateCard(
             Box(
                 modifier = Modifier
                     .size(64.dp)
-                    .background(WorkoutSubtle, CircleShape),
+                    .background(workoutHistoryRaisedColor(), CircleShape),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
@@ -445,7 +487,7 @@ private fun WorkoutHistoryStateCard(
             Text(
                 text = title,
                 style = MaterialTheme.typography.titleMedium.copy(
-                    color = WorkoutInk,
+                    color = workoutHistoryPrimaryTextColor(),
                     fontWeight = FontWeight.ExtraBold
                 ),
                 textAlign = TextAlign.Center
@@ -454,7 +496,7 @@ private fun WorkoutHistoryStateCard(
             Text(
                 text = body,
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    color = WorkoutMuted
+                    color = workoutHistorySecondaryTextColor()
                 ),
                 textAlign = TextAlign.Center
             )
@@ -503,7 +545,7 @@ private fun SwipeToDeleteWorkoutSessionTile(
             Box(
                 modifier = Modifier
                     .matchParentSize()
-                    .background(Color(0xFFE46A6A))
+                    .background(if (HomeCardStyles.isDark()) Color(0xFF7F2D3A) else Color(0xFFE46A6A))
             )
 
             Box(
@@ -590,8 +632,9 @@ private fun WorkoutHistorySessionTile(
     Surface(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(22.dp),
-        color = WorkoutCardWhite,
-        shadowElevation = 2.dp
+        color = workoutHistoryCardColor(),
+        border = if (HomeCardStyles.isDark()) HomeCardStyles.Surface.border() else null,
+        shadowElevation = if (HomeCardStyles.isDark()) 0.dp else 2.dp
     ) {
         Row(
             modifier = Modifier
@@ -604,7 +647,7 @@ private fun WorkoutHistorySessionTile(
                     .width(4.dp)
                     .height(44.dp)
                     .clip(RoundedCornerShape(999.dp))
-                    .background(WorkoutTimelineBar)
+                    .background(workoutHistoryAccentColor(WorkoutTimelineBar))
             )
 
             Spacer(Modifier.width(16.dp))
@@ -613,7 +656,7 @@ private fun WorkoutHistorySessionTile(
                 Text(
                     text = localizedWorkoutName(rawName = session.name),
                     style = MaterialTheme.typography.titleMedium.copy(
-                        color = WorkoutInk,
+                        color = workoutHistoryPrimaryTextColor(),
                         fontWeight = FontWeight.Bold
                     ),
                     maxLines = 1,
@@ -625,7 +668,7 @@ private fun WorkoutHistorySessionTile(
                 Text(
                     text = stringResource(R.string.workout_history_date_time, session.dateLabel, session.timeLabel),
                     style = MaterialTheme.typography.bodySmall.copy(
-                        color = WorkoutMuted,
+                        color = workoutHistoryMutedTextColor(),
                         fontWeight = FontWeight.Medium
                     ),
                     maxLines = 1,
@@ -655,7 +698,7 @@ private fun WorkoutHistorySessionTile(
                             session.kcal
                         ),
                         style = MaterialTheme.typography.labelLarge.copy(
-                            color = WorkoutInk,
+                            color = workoutHistoryPrimaryTextColor(),
                             fontWeight = FontWeight.ExtraBold
                         ),
                         maxLines = 1
@@ -668,7 +711,7 @@ private fun WorkoutHistorySessionTile(
                     Icon(
                         imageVector = Icons.Filled.Schedule,
                         contentDescription = null,
-                        tint = WorkoutDurationBlue,
+                        tint = workoutHistoryAccentColor(WorkoutDurationBlue),
                         modifier = Modifier.size(14.dp)
                     )
 
@@ -680,7 +723,7 @@ private fun WorkoutHistorySessionTile(
                             session.minutes
                         ),
                         style = MaterialTheme.typography.labelLarge.copy(
-                            color = WorkoutMuted,
+                            color = workoutHistoryMutedTextColor(),
                             fontWeight = FontWeight.SemiBold
                         ),
                         maxLines = 1
