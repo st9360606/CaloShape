@@ -369,7 +369,8 @@ fun SettingsScreen(
                 if (!languageSwitching) showLanguageDialog = false
             },
             widthFraction = 0.92f,
-            maxHeightFraction = 0.60f
+            maxHeightFraction = 0.60f,
+            useDarkStyle = HomeCardStyles.isDark()
         )
     }
 }

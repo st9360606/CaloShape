@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeightIn
 import androidx.compose.foundation.layout.size
@@ -42,6 +43,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.calai.bitecal.R
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 import com.calai.bitecal.i18n.LanguageManager
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
@@ -95,15 +97,21 @@ fun LanguageDialog(
     onDismiss: () -> Unit,
     lang: List<LangItem> = LANGS,
     widthFraction: Float = 0.92f,
-    maxHeightFraction: Float = 0.60f
+    maxHeightFraction: Float = 0.60f,
+    useDarkStyle: Boolean = false
 ) {
     val screenH = LocalConfiguration.current.screenHeightDp.dp
     val maxHeight = screenH * maxHeightFraction
-    val surface = Color.White
-    val onSurface = Color(0xFF111114)
-    val selectedContainer = Color(0xFF111114)
-    val selectedContent = Color.White
-    val outline = Color(0xFFE5E7EB)
+    val themeColors = BiteCalColors.current()
+    val isDark = useDarkStyle && themeColors.background == BiteCalColors.Dark.background
+    val surface = if (isDark) Color(0xFF18151F) else Color.White
+    val rowSurface = if (isDark) Color(0xFF24212D) else surface
+    val onSurface = if (isDark) Color(0xFFF7F5FF) else Color(0xFF111114)
+    val unselectedContent = if (isDark) Color(0xFFC9C4D4) else onSurface
+    val selectedContainer = if (isDark) Color(0xFF2A2633) else Color(0xFF111114)
+    val selectedContent = if (isDark) Color(0xFFF7F5FF) else Color.White
+    val outline = if (isDark) Color(0xFF34303D) else Color(0xFFE5E7EB)
+    val selectedOutline = if (isDark) Color(0xFF6F687C) else Color.Transparent
 
     Dialog(
         onDismissRequest = onDismiss,
@@ -120,8 +128,9 @@ fun LanguageDialog(
                 .requiredHeightIn(max = maxHeight),
             shape = RoundedCornerShape(22.dp),
             color = surface,
+            border = if (isDark) BorderStroke(1.2.dp, outline) else null,
             tonalElevation = 0.dp,
-            shadowElevation = 8.dp
+            shadowElevation = if (isDark) 16.dp else 8.dp
         ) {
             Column(Modifier.padding(16.dp)) {
                 Box(
@@ -142,12 +151,14 @@ fun LanguageDialog(
                         onClick = rememberClickWithHaptic(onClick = onDismiss),
                         modifier = Modifier
                             .align(Alignment.CenterEnd)
+                            .offset(y = 2.dp)
                             .size(36.dp)
                     ) {
                         Icon(
                             imageVector = Icons.Filled.Close,
                             contentDescription = stringResource(R.string.common_close),
-                            tint = onSurface
+                            tint = if (isDark) unselectedContent else onSurface,
+                            modifier = Modifier.size(20.dp)
                         )
                     }
                 }
@@ -166,9 +177,9 @@ fun LanguageDialog(
                             optionTag = langItem.tag,
                             currentTag = currentTag
                         )
-                        val bg = if (selected) selectedContainer else surface
-                        val fg = if (selected) selectedContent else onSurface
-                        val border = if (selected) Color.Transparent else outline
+                        val bg = if (selected) selectedContainer else rowSurface
+                        val fg = if (selected) selectedContent else unselectedContent
+                        val border = if (selected) selectedOutline else outline
 
                         Row(
                             modifier = Modifier
