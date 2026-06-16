@@ -288,10 +288,10 @@ object BiteCalTextStyles {
     )
 
     @Composable
-    fun editActionButton(): TextStyle = MaterialTheme.typography.bodyLarge.copy(
+    fun editActionButton(): TextStyle = MaterialTheme.typography.labelLarge.copy(
         fontSize = 15.sp,
         lineHeight = 19.sp,
-        fontWeight = FontWeight.Medium,
+        fontWeight = FontWeight.SemiBold,
         letterSpacing = 0.1.sp,
     )
 }
