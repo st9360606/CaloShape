@@ -3403,22 +3403,21 @@ private fun isAuthOrEntryRoute(route: String?): Boolean {
             route.startsWith(Routes.SIGN_IN_EMAIL_CODE)
 }
 
-private fun isAutoGenerateGoalsFlowRoute(route: String?): Boolean {
+private fun isAutoGenerateGoalsInputRoute(route: String?): Boolean {
     if (route.isNullOrBlank()) return false
 
     return route == Routes.AUTO_GENERATE_FLOW ||
             route == Routes.AUTO_GENERATE_EXERCISE_FREQUENCY ||
             route == Routes.AUTO_GENERATE_HEIGHT ||
             route == Routes.AUTO_GENERATE_WEIGHT ||
-            route == Routes.AUTO_GENERATE_GOALS ||
-            route == Routes.AUTO_GENERATE_GOALS_CALC
+            route == Routes.AUTO_GENERATE_GOALS
 }
 
 private fun isLightOnlyAppearanceRoute(route: String?): Boolean {
     if (route.isNullOrBlank()) return true
 
     return isOnboardingRoute(route) ||
-            isAutoGenerateGoalsFlowRoute(route) ||
+            isAutoGenerateGoalsInputRoute(route) ||
             isAuthOrEntryRoute(route) ||
             route == Routes.HOME_SCAN_SUBSCRIPTION ||
             route == Routes.HOME_WORKOUT_SUBSCRIPTION ||

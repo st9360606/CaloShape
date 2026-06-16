@@ -28,6 +28,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -46,6 +47,7 @@ import com.calai.bitecal.ui.common.design.BiteCalOnboardingBottomBar
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingTopBar
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
+import kotlinx.coroutines.launch
 
 // 與推薦來源頁一致：item 寬度佔螢幕 90%
 private const val OPTION_WIDTH_FRACTION = 0.86f
@@ -66,6 +68,7 @@ fun ExerciseFrequencyScreen(
 ) {
     val state by vm.uiState.collectAsState()
     var isContinuing by rememberSaveable { mutableStateOf(false) }
+    val scope = rememberCoroutineScope()
 
     val options = listOf(
         ExerciseUiOption(
@@ -118,8 +121,17 @@ fun ExerciseFrequencyScreen(
                     }
 
                     isContinuing = true
-                    vm.saveSelected()
-                    onNext()
+                    scope.launch {
+                        try {
+                            val saved = vm.saveSelectedNow()
+                            if (saved) {
+                                onNext()
+                            }
+                        } finally {
+                            // 這個 Composable 會留在 back stack；返回本頁時必須恢復可點擊狀態。
+                            isContinuing = false
+                        }
+                    }
                 }
             )
         },

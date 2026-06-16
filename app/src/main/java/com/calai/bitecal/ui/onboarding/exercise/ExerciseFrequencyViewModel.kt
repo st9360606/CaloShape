@@ -61,10 +61,17 @@ class ExerciseFrequencyViewModel @Inject constructor(
 
     /** 寫入 DataStore（僅在非空時）；仍以 Int 0..7 儲存，保持相容 */
     fun saveSelected() {
-        val sel = _uiState.value.selected ?: return
-        viewModelScope.launch {
-            // 代表值已是 0/2/4/6/7，額外 coerceIn 做保護
-            store.setExerciseFreqPerWeek(sel.coerceIn(0, 7))
-        }
+        viewModelScope.launch { saveSelectedNow() }
+    }
+
+    /**
+     * 用於需要「先確定寫入完成，再往下一頁」的流程。
+     * 回傳 false 代表目前沒有選項，不應繼續導航。
+     */
+    suspend fun saveSelectedNow(): Boolean {
+        val sel = _uiState.value.selected ?: return false
+        // 代表值已是 0/2/4/6/7，額外 coerceIn 做保護
+        store.setExerciseFreqPerWeek(sel.coerceIn(0, 7))
+        return true
     }
 }
