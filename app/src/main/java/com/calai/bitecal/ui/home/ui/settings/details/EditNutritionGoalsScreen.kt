@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.ContextWrapper
 import android.view.WindowManager
 import androidx.activity.compose.BackHandler
+import androidx.annotation.DrawableRes
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.expandVertically
@@ -12,6 +13,7 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -35,7 +37,6 @@ import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.BakeryDining
 import androidx.compose.material.icons.filled.EggAlt
 import androidx.compose.material.icons.filled.Icecream
 import androidx.compose.material.icons.filled.Opacity
@@ -68,6 +69,7 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalView
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -267,7 +269,8 @@ private fun EditNutritionGoalsScreen(
 
             GoalRow(
                 ringColor = HomeCardStyles.Palette.Carbs,
-                icon = Icons.Filled.BakeryDining,
+                iconDrawableRes = R.drawable.ic_widget_carbs,
+                tintDrawableIcon = false,
                 label = stringResource(R.string.edit_nutrition_carb_goal),
                 value = ui.draft.carbsG,
                 errorText = ui.fieldErrors[NutritionGoalsUiState.Field.CARBS],
@@ -369,7 +372,9 @@ private fun EditNutritionGoalsScreen(
 @Composable
 private fun GoalRow(
     ringColor: Color,
-    icon: ImageVector,
+    icon: ImageVector? = null,
+    @DrawableRes iconDrawableRes: Int? = null,
+    tintDrawableIcon: Boolean = true,
     label: String,
     value: String,
     errorText: String?,
@@ -390,6 +395,8 @@ private fun GoalRow(
             RingIcon(
                 color = ringColor,
                 icon = icon,
+                iconDrawableRes = iconDrawableRes,
+                tintDrawableIcon = tintDrawableIcon,
                 modifier = Modifier.size(56.dp),
                 iconSize = iconSize
             )
@@ -467,7 +474,9 @@ private fun GoalRow(
 @Composable
 private fun RingIcon(
     color: Color,
-    icon: ImageVector,
+    icon: ImageVector? = null,
+    @DrawableRes iconDrawableRes: Int? = null,
+    tintDrawableIcon: Boolean = true,
     modifier: Modifier = Modifier,
     progress: Float = 0.5f,
     innerCircleSize: Dp = 30.dp,
@@ -504,12 +513,29 @@ private fun RingIcon(
                 .background(centerFillColor),
             contentAlignment = Alignment.Center
         ) {
-            Icon(
-                imageVector = icon,
-                contentDescription = null,
-                tint = color,
-                modifier = Modifier.size(iconSize)
-            )
+            if (iconDrawableRes != null) {
+                if (tintDrawableIcon) {
+                    Icon(
+                        painter = painterResource(iconDrawableRes),
+                        contentDescription = null,
+                        tint = color,
+                        modifier = Modifier.size(iconSize)
+                    )
+                } else {
+                    Image(
+                        painter = painterResource(iconDrawableRes),
+                        contentDescription = null,
+                        modifier = Modifier.size(iconSize)
+                    )
+                }
+            } else if (icon != null) {
+                Icon(
+                    imageVector = icon,
+                    contentDescription = null,
+                    tint = color,
+                    modifier = Modifier.size(iconSize)
+                )
+            }
         }
     }
 }
