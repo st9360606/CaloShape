@@ -211,6 +211,14 @@ fun DurationPickerSheet(
                         Spacer(Modifier.height(42.dp))
                     }
 
+                    val colors = BiteCalColors.current()
+
+                    val actionButtonTextStyle = MaterialTheme.typography.labelLarge.copy(
+                        fontSize = 16.sp,
+                        lineHeight = 20.sp,
+                        fontWeight = FontWeight.SemiBold
+                    )
+
                     Column(
                         modifier = Modifier
                             .align(Alignment.BottomCenter)
@@ -226,13 +234,13 @@ fun DurationPickerSheet(
                                 .height(56.dp),
                             shape = RoundedCornerShape(28.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = BiteCalColors.current().primaryButtonContainer,
-                                contentColor = BiteCalColors.current().primaryButtonContent
+                                containerColor = colors.primaryButtonContainer,
+                                contentColor = colors.primaryButtonContent
                             )
                         ) {
                             Text(
                                 text = saveText,
-                                fontSize = 16.sp
+                                style = actionButtonTextStyle
                             )
                         }
 
@@ -244,14 +252,14 @@ fun DurationPickerSheet(
                                 .fillMaxWidth()
                                 .height(56.dp),
                             shape = RoundedCornerShape(28.dp),
-                            colors = ButtonDefaults.outlinedButtonColors(
+                            colors = ButtonDefaults.buttonColors(
                                 containerColor = HomeCardStyles.Surface.raised(),
                                 contentColor = HomeCardStyles.Text.primary()
                             )
                         ) {
                             Text(
                                 text = cancelText,
-                                fontSize = 16.sp
+                                style = actionButtonTextStyle
                             )
                         }
                     }
