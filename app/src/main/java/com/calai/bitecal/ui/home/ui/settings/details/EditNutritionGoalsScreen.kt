@@ -37,7 +37,6 @@ import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.EggAlt
 import androidx.compose.material.icons.filled.Icecream
 import androidx.compose.material.icons.filled.Opacity
 import androidx.compose.material.icons.filled.RiceBowl
@@ -259,9 +258,11 @@ private fun EditNutritionGoalsScreen(
 
             GoalRow(
                 ringColor = HomeCardStyles.Palette.protein(),
-                icon = Icons.Filled.EggAlt,
+                iconDrawableRes = R.drawable.ic_widget_protein,
+                tintDrawableIcon = false,
                 label = stringResource(R.string.edit_nutrition_protein_goal),
                 value = ui.draft.proteinG,
+                iconSize = 19.dp,
                 errorText = ui.fieldErrors[NutritionGoalsUiState.Field.PROTEIN],
                 onValueChange = onProtein
             )
@@ -340,6 +341,7 @@ private fun EditNutritionGoalsScreen(
                         icon = Icons.Filled.Spa,
                         label = stringResource(R.string.edit_nutrition_fiber_goal),
                         value = ui.draft.fiberG,
+                        iconSize = 15.dp,
                         errorText = ui.fieldErrors[NutritionGoalsUiState.Field.FIBER],
                         onValueChange = onFiber
                     )
@@ -350,6 +352,7 @@ private fun EditNutritionGoalsScreen(
                         icon = Icons.Filled.Icecream,
                         label = stringResource(R.string.edit_nutrition_sugar_goal),
                         value = ui.draft.sugarG,
+                        iconSize = 18.dp,
                         errorText = ui.fieldErrors[NutritionGoalsUiState.Field.SUGAR],
                         onValueChange = onSugar
                     )

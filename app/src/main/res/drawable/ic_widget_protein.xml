@@ -5,27 +5,28 @@
     android:viewportWidth="24"
     android:viewportHeight="24">
 
-    <!-- Minimal steak body: rounded, compact, widget-friendly -->
-    <path
-        android:fillColor="#FFE56C6C"
-        android:pathData="
-            M10.15,5.15
-            C7.25,5.25 5.1,7.25 4.85,10.35
-            C4.55,14.05 7.1,17.25 10.85,18.05
-            C13.7,18.65 16.25,17.45 17.1,15.25
-            C17.55,14.1 18.2,13.25 19.25,12.75
-            C20.85,12 21.15,10.1 20.1,8.45
-            C18.65,6.15 15.35,5 10.15,5.15
-            Z" />
-
-    <!-- Fat hole -->
-    <path
-        android:fillColor="#FFFFF4F4"
-        android:pathData="
-            M14.15,8.55
-            C13.05,8.55 12.2,9.4 12.2,10.5
-            C12.2,11.6 13.05,12.45 14.15,12.45
-            C15.25,12.45 16.1,11.6 16.1,10.5
-            C16.1,9.4 15.25,8.55 14.15,8.55
-            Z" />
+    <group
+        android:pivotX="12"
+        android:pivotY="12"
+        android:scaleX="0.78"
+        android:scaleY="0.78">
+        <path
+            android:fillColor="#FFE56C6C"
+            android:fillType="evenOdd"
+            android:pathData="
+                M19,9
+                C17,7 15.99,2 9.97,2
+                C4.95,2 1.94,6 2,11.52
+                C2.06,17.04 6.96,19 9.97,19
+                C11.98,19 11.98,22 15.99,22
+                C19,22 22,19 22,15.02
+                C22,12 21.01,11 19,9
+                Z
+                M12,15.5
+                C10.07,15.5 8.5,13.93 8.5,12
+                C8.5,10.07 10.07,8.5 12,8.5
+                C13.93,8.5 15.5,10.07 15.5,12
+                C15.5,13.93 13.93,15.5 12,15.5
+                Z" />
+    </group>
 </vector>
