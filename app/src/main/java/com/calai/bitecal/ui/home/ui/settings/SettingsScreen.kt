@@ -1888,7 +1888,7 @@ private fun MacroActionsWidgetPreviewCard(
                             current = todayNutrition.eatenProteinG,
                             goal = proteinGoal
                         ),
-                        iconSize = 20.dp
+                        iconSize = 18.dp
                     )
                     WidgetMacroStatRow(
                         iconRes = R.drawable.ic_widget_carbs,
