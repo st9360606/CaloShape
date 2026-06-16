@@ -20,6 +20,7 @@ import com.calai.bitecal.data.foodlog.repo.HomeTodayNutritionSummary
 import com.calai.bitecal.data.health.HealthConnectRepository
 import com.calai.bitecal.data.home.repo.HomeRepository
 import com.calai.bitecal.data.home.repo.HomeSummary
+import com.calai.bitecal.data.common.RepoInvalidationBus
 import com.calai.bitecal.data.profile.repo.ProfileRepository
 import com.calai.bitecal.data.profile.repo.UserProfileStore
 import com.calai.bitecal.ui.home.ui.foodlog.FoodLogTimeResolver
@@ -93,6 +94,7 @@ class HomeViewModel @Inject constructor(
     private val zoneId: ZoneId,
     private val foodLogsRepository: FoodLogsRepository,
     private val foodLogMutationBus: FoodLogMutationBus,
+    private val repoInvalidationBus: RepoInvalidationBus,
     @ApplicationContext private val appContext: Context,
     private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
@@ -238,6 +240,12 @@ class HomeViewModel @Inject constructor(
         viewModelScope.launch {
             profileStore.dailyWorkoutGoalUiFlow.collectLatest { v ->
                 _dailyWorkoutGoalKcal.value = v
+            }
+        }
+
+        viewModelScope.launch {
+            repoInvalidationBus.profile.collectLatest {
+                refresh()
             }
         }
     }

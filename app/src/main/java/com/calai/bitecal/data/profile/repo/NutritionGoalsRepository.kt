@@ -1,5 +1,6 @@
 package com.calai.bitecal.data.profile.repo
 
+import com.calai.bitecal.data.common.RepoInvalidationBus
 import com.calai.bitecal.data.profile.api.NutritionGoalsManualRequest
 import com.calai.bitecal.data.profile.api.ProfileApi
 import com.calai.bitecal.data.profile.api.UserProfileDto
@@ -12,7 +13,8 @@ import javax.inject.Singleton
 
 @Singleton
 class NutritionGoalsRepository @Inject constructor(
-    private val profileApi: ProfileApi
+    private val profileApi: ProfileApi,
+    private val bus: RepoInvalidationBus
 ) {
     private companion object {
         const val TIMEOUT_MS = 10_000L
@@ -31,6 +33,8 @@ class NutritionGoalsRepository @Inject constructor(
 
     suspend fun setManualGoalsAndRefresh(req: NutritionGoalsManualRequest): UserProfileDto {
         withTimeout(TIMEOUT_MS) { profileApi.setManualNutritionGoals(req) }
-        return withTimeout(TIMEOUT_MS) { profileApi.getMyProfile() }
+        val profile = withTimeout(TIMEOUT_MS) { profileApi.getMyProfile() }
+        bus.invalidateProfile()
+        return profile
     }
 }
