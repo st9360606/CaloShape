@@ -148,8 +148,12 @@ fun HeightSelectionScreen(
                 BiteCalOnboardingPrimaryButton(
                     text = stringResource(R.string.common_continue_btn),
                     onClick = {
+                        if (isSaving || isWheelScrolling) {
+                            return@BiteCalOnboardingPrimaryButton
+                        }
+
+                        isSaving = true
                         scope.launch {
-                            isSaving = true
                             try {
                                 val cmToSave = (cmToTenths(cmVal) / 10f)
                                     .coerceIn(cmMin.toFloat(), cmMax.toFloat())
@@ -167,7 +171,7 @@ fun HeightSelectionScreen(
                             }
                         }
                     },
-                    enabled = !isSaving && !isWheelScrolling,
+                    enabled = !isWheelScrolling,
                     loading = isSaving
                 )
             }

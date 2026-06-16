@@ -226,8 +226,11 @@ fun WeightSelectionScreen(
                 BiteCalOnboardingPrimaryButton(
                     text = stringResource(R.string.common_continue_btn),
                     onClick = {
+                        if (isSaving || valueKg <= 0.0 || isWheelScrolling) return@BiteCalOnboardingPrimaryButton
+
+                        isSaving = true
+
                         scope.launch {
-                            isSaving = true
                             try {
                                 val kgToSave: Float
                                 val lbsToSaveOrNull: Float?
@@ -289,7 +292,7 @@ fun WeightSelectionScreen(
                             }
                         }
                     },
-                    enabled = valueKg > 0.0 && !isSaving && !isWheelScrolling,
+                    enabled = valueKg > 0.0 && !isWheelScrolling,
                     loading = isSaving
                 )
             }
