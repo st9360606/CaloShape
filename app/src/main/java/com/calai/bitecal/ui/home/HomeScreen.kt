@@ -764,7 +764,8 @@ fun HomeScreen(
                             style = TextStyle(
                                 fontSize = 22.sp,
                                 lineHeight = 30.sp,
-                                fontWeight = FontWeight.Bold
+                                fontWeight = FontWeight.Bold,
+                                color = HomeCardStyles.Text.primary()
                             ),
                             modifier = Modifier.padding(
                                 start = recentSectionTitleStart,

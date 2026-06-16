@@ -441,9 +441,11 @@ private fun RecordWeightScreenContent(
                     } else {
                         Text(
                             text = stringResource(R.string.common_save),
-                            style = MaterialTheme.typography.bodyLarge.copy(
-                                fontWeight = FontWeight.Medium,
-                                letterSpacing = 0.2.sp
+                            style = MaterialTheme.typography.labelLarge.copy(
+                                fontSize = 16.sp,
+                                lineHeight = 20.sp,
+                                fontWeight = FontWeight.SemiBold,
+                                letterSpacing = 0.1.sp,
                             )
                         )
                     }

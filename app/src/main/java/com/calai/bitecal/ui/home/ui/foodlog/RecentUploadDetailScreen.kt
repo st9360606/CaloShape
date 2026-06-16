@@ -1078,6 +1078,8 @@ private fun FooterSaveBar(
         primaryText = stringResource(R.string.common_save),
         onPrimaryClick = onSave,
         primaryEnabled = enabled,
-        primaryLoading = false
+        primaryLoading = false,
+        buttonHeight = 52.dp,
+        bottomPadding = 24.dp
     )
 }

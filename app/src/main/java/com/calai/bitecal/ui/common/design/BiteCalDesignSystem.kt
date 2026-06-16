@@ -289,8 +289,8 @@ object BiteCalTextStyles {
 
     @Composable
     fun editActionButton(): TextStyle = MaterialTheme.typography.labelLarge.copy(
-        fontSize = 15.sp,
-        lineHeight = 19.sp,
+        fontSize = 16.sp,
+        lineHeight = 20.sp,
         fontWeight = FontWeight.SemiBold,
         letterSpacing = 0.1.sp,
     )
@@ -552,6 +552,8 @@ fun BiteCalEditBottomActionBar(
     primaryEnabled: Boolean = true,
     primaryLoading: Boolean = false,
     useImePadding: Boolean = false,
+    buttonHeight: Dp = BiteCalSize.editActionButtonHeight,
+    bottomPadding: Dp = BiteCalScreenFrame.bottomActionSingle,
 ) {
     Column(
         modifier = modifier
@@ -561,7 +563,7 @@ fun BiteCalEditBottomActionBar(
             .padding(
                 start = BiteCalScreenFrame.contentHorizontal,
                 end = BiteCalScreenFrame.contentHorizontal,
-                bottom = BiteCalScreenFrame.bottomActionSingle,
+                bottom = bottomPadding,
             ),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
@@ -570,7 +572,7 @@ fun BiteCalEditBottomActionBar(
             enabled = primaryEnabled,
             loading = primaryLoading,
             onClick = onPrimaryClick,
-            height = BiteCalSize.editActionButtonHeight,
+            height = buttonHeight,
             textStyle = BiteCalTextStyles.editActionButton(),
         )
     }

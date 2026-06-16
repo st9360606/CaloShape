@@ -151,7 +151,7 @@ fun DeleteAccountDialog(
                         ) {
                             Text(
                                 text = cancelText,
-                                fontSize = 17.sp,
+                                fontSize = 15.sp,
                                 fontWeight = FontWeight.SemiBold
                             )
                         }
@@ -170,7 +170,7 @@ fun DeleteAccountDialog(
                         ) {
                             Text(
                                 text = if (deleting) deletingText else deleteText,
-                                fontSize = 17.sp,
+                                fontSize = 15.sp,
                                 fontWeight = FontWeight.SemiBold
                             )
                         }

@@ -160,8 +160,9 @@ fun RestoreSubscriptionDialog(
                         ) {
                             Text(
                                 text = closeText,
-                                fontSize = 17.sp,
-                                fontWeight = FontWeight.SemiBold
+                                fontSize = 15.sp,
+                                fontWeight = FontWeight.Bold,
+                                textAlign = TextAlign.Center
                             )
                         }
                     } else {
@@ -180,15 +181,13 @@ fun RestoreSubscriptionDialog(
                                 ),
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .heightIn(min = 50.dp)
+                                    .heightIn(min = 53.dp)
                             ) {
                                 Text(
                                     text = if (isRestoring) restoringText else restoreText,
-                                    fontSize = 16.sp,
-                                    lineHeight = 19.sp,
-                                    fontWeight = FontWeight.SemiBold,
-                                    textAlign = TextAlign.Center,
-                                    maxLines = 2
+                                    fontSize = 15.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    textAlign = TextAlign.Center
                                 )
                             }
 
@@ -207,15 +206,13 @@ fun RestoreSubscriptionDialog(
                                 ),
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .heightIn(min = 50.dp)
+                                    .heightIn(min = 53.dp)
                             ) {
                                 Text(
                                     text = maybeLaterText,
                                     fontSize = 15.sp,
-                                    lineHeight = 18.sp,
                                     fontWeight = FontWeight.SemiBold,
-                                    textAlign = TextAlign.Center,
-                                    maxLines = 2
+                                    textAlign = TextAlign.Center
                                 )
                             }
                         }
