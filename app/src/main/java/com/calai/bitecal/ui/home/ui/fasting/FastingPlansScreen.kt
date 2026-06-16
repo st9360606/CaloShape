@@ -1103,6 +1103,12 @@ private fun CupertinoWheelTimePickerSheet(
 
             Spacer(Modifier.height(10.dp))
 
+            val actionButtonTextStyle = MaterialTheme.typography.labelLarge.copy(
+                fontSize = 16.sp,
+                lineHeight = 20.sp,
+                fontWeight = FontWeight.SemiBold
+            )
+
             Column(
                 modifier = Modifier.fillMaxWidth(),
                 verticalArrangement = Arrangement.spacedBy(12.dp)
@@ -1120,8 +1126,8 @@ private fun CupertinoWheelTimePickerSheet(
                     )
                 ) {
                     Text(
-                        text = stringResource(R.string.common_close),
-                        fontSize = 16.sp
+                        text = stringResource(R.string.common_save),
+                        style = actionButtonTextStyle
                     )
                 }
 
@@ -1130,7 +1136,7 @@ private fun CupertinoWheelTimePickerSheet(
                     enabled = !saving,
                     modifier = Modifier
                         .fillMaxWidth()
-                    .height(56.dp),
+                        .height(56.dp),
                     shape = RoundedCornerShape(28.dp),
                     border = BorderStroke(
                         1.dp,
@@ -1143,7 +1149,7 @@ private fun CupertinoWheelTimePickerSheet(
                 ) {
                     Text(
                         text = stringResource(R.string.common_cancel),
-                        fontSize = 16.sp
+                        style = actionButtonTextStyle
                     )
                 }
             }
