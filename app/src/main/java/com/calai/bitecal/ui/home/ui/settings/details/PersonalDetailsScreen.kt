@@ -61,6 +61,8 @@ import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
+import com.calai.bitecal.ui.home.components.HomeBackground
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import java.util.Locale
 import kotlin.math.abs
 
@@ -118,25 +120,36 @@ fun PersonalDetailsScreen(
     val scroll = rememberScrollState()
     val colors = BiteCalColors.current()
 
-    Scaffold(
-        containerColor = colors.background,
-        contentWindowInsets = WindowInsets(0, 0, 0, 0),
-        topBar = {
-            BiteCalTopBar(
-                title = stringResource(R.string.settings_personal_details),
-                onBack = onBack
+    val isDark = colors.background == BiteCalColors.Dark.background
+
+    Box(modifier = Modifier.fillMaxSize()) {
+        if (isDark) {
+            HomeBackground(
+                modifier = Modifier.fillMaxSize(),
+                darkTheme = true,
+                enableNoise = false
             )
-        },
-        modifier = Modifier.fillMaxSize()
-    ) { inner ->
-        Box(
-            modifier = Modifier
-                .padding(inner)
-                .fillMaxSize(),
-            contentAlignment = Alignment.TopCenter
-        ) {
-            Column(
+        }
+
+        Scaffold(
+            containerColor = if (isDark) Color.Transparent else colors.background,
+            contentWindowInsets = WindowInsets(0, 0, 0, 0),
+            topBar = {
+                BiteCalTopBar(
+                    title = stringResource(R.string.settings_personal_details),
+                    onBack = onBack
+                )
+            },
+            modifier = Modifier.fillMaxSize()
+        ) { inner ->
+            Box(
                 modifier = Modifier
+                    .padding(inner)
+                    .fillMaxSize(),
+                contentAlignment = Alignment.TopCenter
+            ) {
+                Column(
+                    modifier = Modifier
                     .fillMaxWidth()
                     .widthIn(max = 520.dp)
                     .verticalScroll(scroll)
@@ -253,6 +266,7 @@ fun PersonalDetailsScreen(
         }
     }
 }
+}
 
 @Composable
 private fun GoalWeightSummaryCard(
@@ -260,6 +274,10 @@ private fun GoalWeightSummaryCard(
     onChangeGoal: () -> Unit
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val sectionTextColor = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
+    val primaryTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val changeGoalPillHeight = if (isDark) 32.dp else 36.dp
     val iconBackground = personalDetailsIconBackground()
     val iconBorder = personalDetailsIconBorder()
     val iconTint = personalDetailsIconTint()
@@ -284,7 +302,7 @@ private fun GoalWeightSummaryCard(
                     imageVector = Icons.Outlined.Flag,
                     contentDescription = null,
                     tint = iconTint,
-                    modifier = Modifier.size(23.dp)
+                    modifier = Modifier.size(20.dp)
                 )
             }
 
@@ -298,7 +316,7 @@ private fun GoalWeightSummaryCard(
                     overflow = TextOverflow.Ellipsis,
                     style = MaterialTheme.typography.labelLarge.copy(
                         fontWeight = FontWeight.SemiBold,
-                        color = colors.textSecondary,
+                        color = sectionTextColor,
                         fontSize = 13.sp,
                         lineHeight = 16.sp,
                         letterSpacing = 0.sp
@@ -311,7 +329,7 @@ private fun GoalWeightSummaryCard(
                     overflow = TextOverflow.Ellipsis,
                     style = MaterialTheme.typography.headlineSmall.copy(
                         fontWeight = FontWeight.Bold,
-                        color = colors.textPrimary,
+                        color = primaryTextColor,
                         fontSize = 25.sp,
                         lineHeight = 30.sp,
                         letterSpacing = 0.sp
@@ -323,7 +341,7 @@ private fun GoalWeightSummaryCard(
                 text = stringResource(R.string.personal_details_change_goal),
                 onClick = onChangeGoal,
                 modifier = Modifier.widthIn(min = 104.dp, max = 168.dp),
-                height = 36.dp,
+                height = changeGoalPillHeight,
                 textStyle = MaterialTheme.typography.labelSmall.copy(
                     fontSize = 12.sp,
                     lineHeight = 14.sp,
@@ -341,6 +359,8 @@ private fun PersonalSectionCard(
     content: @Composable () -> Unit
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val sectionTitleColor = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
 
     PersonalDetailsSurface {
         Column(modifier = Modifier.fillMaxWidth()) {
@@ -350,7 +370,7 @@ private fun PersonalSectionCard(
                 overflow = TextOverflow.Ellipsis,
                 style = MaterialTheme.typography.labelLarge.copy(
                     fontWeight = FontWeight.Bold,
-                    color = colors.textSecondary,
+                    color = sectionTitleColor,
                     fontSize = 12.sp,
                     lineHeight = 15.sp,
                     letterSpacing = 0.sp
@@ -365,12 +385,15 @@ private fun PersonalSectionCard(
 @Composable
 private fun PersonalDetailsSurface(content: @Composable () -> Unit) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val containerColor = if (isDark) HomeCardStyles.Surface.card() else colors.surface
+    val borderColor = if (isDark) HomeCardStyles.Surface.borderColor() else colors.border
 
     Card(
         shape = PersonalCardShape,
-        colors = CardDefaults.cardColors(containerColor = colors.surface),
+        colors = CardDefaults.cardColors(containerColor = containerColor),
         elevation = CardDefaults.cardElevation(0.dp),
-        border = BorderStroke(1.dp, colors.border),
+        border = BorderStroke(1.dp, borderColor),
         modifier = Modifier.fillMaxWidth()
     ) {
         content()
@@ -386,6 +409,9 @@ private fun PersonalDetailsRow(
     onClick: () -> Unit
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val primaryTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val mutedTextColor = if (isDark) HomeCardStyles.Text.muted() else colors.textMuted
     val resolvedIconBg = personalDetailsIconBackground()
     val resolvedIconBorder = personalDetailsIconBorder()
     val resolvedIconTint = personalDetailsIconTint()
@@ -404,7 +430,7 @@ private fun PersonalDetailsRow(
     ) {
         Box(
             modifier = Modifier
-                .size(38.dp)
+                .size(32.dp)
                 .clip(CircleShape)
                 .background(resolvedIconBg)
                 .border(1.dp, resolvedIconBorder, CircleShape),
@@ -414,7 +440,7 @@ private fun PersonalDetailsRow(
                 imageVector = icon,
                 contentDescription = null,
                 tint = resolvedIconTint,
-                modifier = Modifier.size(19.dp)
+                modifier = Modifier.size(18.dp)
             )
         }
 
@@ -428,7 +454,7 @@ private fun PersonalDetailsRow(
                 fontSize = 15.sp,
                 lineHeight = 19.sp,
                 fontWeight = FontWeight.SemiBold,
-                color = colors.textPrimary,
+                color = primaryTextColor,
                 letterSpacing = 0.sp
             ),
             modifier = Modifier.weight(1f)
@@ -453,7 +479,7 @@ private fun PersonalDetailsRow(
                         lineHeight = 19.sp,
                         letterSpacing = 0.sp
                     ),
-                    color = colors.textPrimary
+                    color = primaryTextColor
                 )
                 if (valueSub != null) {
                     Spacer(Modifier.height(2.dp))
@@ -462,7 +488,7 @@ private fun PersonalDetailsRow(
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
                         style = MaterialTheme.typography.bodySmall.copy(
-                            color = colors.textMuted,
+                            color = mutedTextColor,
                             letterSpacing = 0.sp
                         )
                     )
@@ -542,11 +568,14 @@ private fun emptyValue(): String = "--"
 
 @Composable
 private fun PersonalRowDivider() {
+    val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+
     HorizontalDivider(
         modifier = Modifier
             .fillMaxWidth()
             .padding(start = 66.dp, end = 16.dp),
         thickness = 1.dp,
-        color = BiteCalColors.current().border
+        color = if (isDark) HomeCardStyles.Surface.borderColor() else colors.border
     )
 }
