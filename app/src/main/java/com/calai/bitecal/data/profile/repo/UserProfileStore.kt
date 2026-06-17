@@ -67,7 +67,7 @@ class UserProfileStore @Inject constructor(
         const val DEFAULT_WATER_GOAL_ML = 2000
         const val MAX_WATER_GOAL_ML = 20000
         const val DEFAULT_DAILY_WORKOUT_GOAL_KCAL = 450
-        const val MAX_DAILY_WORKOUT_GOAL_KCAL = 5000
+        const val MAX_DAILY_WORKOUT_GOAL_KCAL = 20000
     }
 
     private val dateFmt: DateTimeFormatter = DateTimeFormatter.ISO_LOCAL_DATE

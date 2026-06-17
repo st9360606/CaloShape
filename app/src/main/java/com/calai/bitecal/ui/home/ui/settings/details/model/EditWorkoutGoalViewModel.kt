@@ -24,7 +24,7 @@ class EditWorkoutGoalViewModel @Inject constructor(
 
     private companion object {
         const val DEFAULT_DAILY_WORKOUT_GOAL_KCAL = 450
-        const val MAX_DAILY_WORKOUT_GOAL_KCAL = 5000
+        const val MAX_DAILY_WORKOUT_GOAL_KCAL = 20000
     }
 
     data class UiState(
@@ -74,7 +74,7 @@ class EditWorkoutGoalViewModel @Inject constructor(
     }
 
     fun onInputChange(raw: String) {
-        val digitsOnly = raw.filter { it.isDigit() }.take(4) // 5000 最多 4 位
+        val digitsOnly = raw.filter { it.isDigit() }.take(5) // 20000 最多 5 位
         _ui.update { it.copy(input = digitsOnly, error = null) }
     }
 

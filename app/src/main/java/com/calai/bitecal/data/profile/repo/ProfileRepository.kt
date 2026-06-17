@@ -562,7 +562,7 @@ class ProfileRepository @Inject constructor(
     }
 
     suspend fun updateDailyWorkoutGoalOnly(kcal: Int): Result<UserProfileDto> = runCatching {
-        val safe = kcal.coerceIn(0, 5000)
+        val safe = kcal.coerceIn(0, 20000)
 
         val req = UpsertProfileRequest(
             gender = null,
