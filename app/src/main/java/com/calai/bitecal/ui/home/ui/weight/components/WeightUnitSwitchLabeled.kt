@@ -2,6 +2,7 @@ package com.calai.bitecal.ui.home.ui.weight.components
 
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -52,7 +53,9 @@ fun WeightUnitSwitchLabeled(
     textOff: Color = Color(0xFF111114),       // 外層（未選）
     textStyle: TextStyle = MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.SemiBold),
     pillExtraWidth: Dp = 6.dp,                // 膠囊比半寬多一點
-    labelPadding: Dp = 6.dp                   // 外層文字左右內距，避免靠中線太擠
+    labelPadding: Dp = 6.dp,                  // 外層文字左右內距，避免靠中線太擠
+    trackBorderColor: Color? = null,
+    trackBorderWidth: Dp = 0.dp
 ) {
     val isRtl = LocalLayoutDirection.current == LayoutDirection.Rtl
     val outerCorner = RoundedCornerShape(height / 2)
@@ -77,6 +80,13 @@ fun WeightUnitSwitchLabeled(
     Box(
         modifier = modifier
             .size(width, height)
+            .then(
+                if (trackBorderColor != null && trackBorderWidth > 0.dp) {
+                    Modifier.border(trackBorderWidth, trackBorderColor, outerCorner)
+                } else {
+                    Modifier
+                }
+            )
             .clip(outerCorner)
             .background(trackBase)
             .semantics(mergeDescendants = true) {

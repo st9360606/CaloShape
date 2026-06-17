@@ -66,6 +66,8 @@ import com.calai.bitecal.ui.home.components.toast.DeleteSuccessTopToast
 import com.calai.bitecal.ui.home.components.toast.ErrorTopToast
 import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
+import com.calai.bitecal.ui.home.components.HomeBackground
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import com.calai.bitecal.ui.home.ui.weight.components.FilterTabs
 import com.calai.bitecal.ui.home.ui.weight.components.HistoryRow
 import com.calai.bitecal.ui.home.ui.weight.components.SegmentedButtons
@@ -91,6 +93,7 @@ fun WeightScreen(
     val deleteToastType = ui.deleteToastType
     val deleteToastTick = ui.deleteToastTick
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     val historySorted = remember(ui.history7) {
         ui.history7.sortedByDescending { dto ->
@@ -99,8 +102,12 @@ fun WeightScreen(
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
+        if (isDark) {
+            HomeBackground()
+        }
+
         Scaffold(
-            containerColor = colors.background,
+            containerColor = if (isDark) Color.Transparent else colors.background,
             topBar = {
                 BiteCalTopBar(
                     title = stringResource(R.string.weight_title),
@@ -116,7 +123,7 @@ fun WeightScreen(
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(colors.background)
+                    .background(if (isDark) Color.Transparent else colors.background)
             ) {
                 LazyColumn(
                     modifier = Modifier
@@ -139,7 +146,7 @@ fun WeightScreen(
                             Text(
                                 text = stringResource(R.string.weight_overview_title),
                                 style = MaterialTheme.typography.titleLarge,
-                                color = colors.textPrimary,
+                                color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                                 fontWeight = FontWeight.Bold,
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis,
@@ -406,11 +413,12 @@ private fun BottomLogWeightBar(
     onLogClick: () -> Unit
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .background(colors.background)
+            .background(if (isDark) Color.Transparent else colors.background)
             .windowInsetsPadding(WindowInsets.navigationBars)
             .padding(
                 start = 16.dp,
@@ -426,9 +434,10 @@ private fun BottomLogWeightBar(
                 .width(158.dp)
                 .height(52.dp),
             shape = RoundedCornerShape(999.dp),
+            border = if (isDark) androidx.compose.foundation.BorderStroke(1.dp, HomeCardStyles.Action.addBorder()) else null,
             colors = ButtonDefaults.buttonColors(
-                containerColor = colors.primaryButtonContainer,
-                contentColor = colors.primaryButtonContent
+                containerColor = if (isDark) HomeCardStyles.Action.addContainer() else colors.primaryButtonContainer,
+                contentColor = if (isDark) HomeCardStyles.Action.addContent() else colors.primaryButtonContent
             ),
             contentPadding = PaddingValues(horizontal = 20.dp)
         ) {

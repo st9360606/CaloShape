@@ -42,6 +42,7 @@ import com.calai.bitecal.data.profile.repo.UserProfileStore
 import com.calai.bitecal.data.weight.api.WeightItemDto
 import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.home.components.CardStyles
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import com.calai.bitecal.ui.home.ui.weight.model.WeightViewModel
 import java.time.Instant
 import java.time.LocalDate
@@ -111,10 +112,13 @@ val Green = Color(0xFF22C55E)
 @Composable
 fun WeightComponents(ui: WeightViewModel.UiState) {
     val colors = BiteCalColors.current()
-    val label   = colors.textSecondary
-    val big     = colors.textPrimary
-    val divider = colors.border
-    val trackColor  = if (colors.background == BiteCalColors.Dark.background) Color(0xFF27272A) else Color(0xFFDCE1E7)
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val label = if (isDark) HomeCardStyles.Text.label() else colors.textSecondary
+    val big = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val divider = if (isDark) HomeCardStyles.Surface.borderColor() else colors.border
+    val cardContainer = if (isDark) HomeCardStyles.Surface.card() else colors.surface
+    val cardBorder = if (isDark) HomeCardStyles.Surface.borderColor() else colors.border
+    val trackColor  = if (isDark) HomeCardStyles.Progress.track() else Color(0xFFDCE1E7)
     val stripeColor = Color.White.copy(alpha = 0.35f)
     val fillColor   = Color(0xFFFF8A33).copy(alpha = 0.81f)
 
@@ -163,9 +167,9 @@ fun WeightComponents(ui: WeightViewModel.UiState) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .border(width = 1.2.dp, color = colors.border, shape = CardStyles.Corner),
+            .border(width = 1.2.dp, color = cardBorder, shape = CardStyles.Corner),
         shape = CardStyles.Corner,
-        colors = CardDefaults.cardColors(containerColor = colors.surface)
+        colors = CardDefaults.cardColors(containerColor = cardContainer)
     ) {
         Column(
             Modifier
@@ -480,11 +484,17 @@ fun FilterTabs(
 
     val containerShape = RoundedCornerShape(18.dp)
     val activeTabShape = RoundedCornerShape(14.dp)
+    val isDark = HomeCardStyles.isDark()
+    val containerBg = if (isDark) HomeCardStyles.Surface.raisedAlt() else WeightFilterTabsContainerBg
+    val activeBg = if (isDark) HomeCardStyles.Surface.card() else WeightFilterTabsActiveBg
+    val activeBorder = if (isDark) HomeCardStyles.Surface.borderColor() else WeightFilterTabsActiveBorder
+    val activeText = if (isDark) HomeCardStyles.Text.primary() else WeightFilterTabsActiveText
+    val idleText = if (isDark) HomeCardStyles.Text.label() else WeightFilterTabsIdleText
 
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .background(WeightFilterTabsContainerBg, containerShape)
+            .background(containerBg, containerShape)
             .padding(horizontal = 6.dp, vertical = 4.dp),
         horizontalArrangement = Arrangement.spacedBy(4.dp),
         verticalAlignment = Alignment.CenterVertically
@@ -504,8 +514,8 @@ fun FilterTabs(
                                     shape = activeTabShape,
                                     clip = false
                                 )
-                                .background(WeightFilterTabsActiveBg, activeTabShape)
-                                .border(1.dp, WeightFilterTabsActiveBorder, activeTabShape)
+                                .background(activeBg, activeTabShape)
+                                .border(1.dp, activeBorder, activeTabShape)
                         } else {
                             Modifier.background(Color.Transparent, activeTabShape)
                         }
@@ -516,9 +526,9 @@ fun FilterTabs(
                 Text(
                     text = stringResource(tab.labelRes),
                     color = if (isSelected) {
-                        WeightFilterTabsActiveText
+                        activeText
                     } else {
-                        WeightFilterTabsIdleText
+                        idleText
                     },
                     fontSize = 14.sp,
                     fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Medium,
@@ -555,13 +565,16 @@ fun WeightChartCard(
 
     val progressPercentText = formatAchievedPercent1(progressFraction)
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val cardContainer = if (isDark) HomeCardStyles.Surface.card() else colors.surface
+    val cardBorder = if (isDark) HomeCardStyles.Surface.borderColor() else colors.border
 
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .border(width = 1.2.dp, color = colors.border, shape = CardStyles.Corner),
+            .border(width = 1.2.dp, color = cardBorder, shape = CardStyles.Corner),
         shape = CardStyles.Corner,
-        colors = CardDefaults.cardColors(containerColor = colors.surface)
+        colors = CardDefaults.cardColors(containerColor = cardContainer)
     ) {
         Column(
             modifier = Modifier
@@ -580,7 +593,7 @@ fun WeightChartCard(
                         lineHeight = 23.sp,
                         fontWeight = FontWeight.Bold
                     ),
-                    color = colors.textPrimary,
+                    color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.weight(1f)
@@ -619,9 +632,11 @@ private fun GoalProgressBadge(
     onClick: () -> Unit         // ★ 新增 callback
 ) {
     val colors = BiteCalColors.current()
-    val badgeBg = Color(0xFFFFF7ED).copy(
-        alpha = if (colors.background == BiteCalColors.Dark.background) 0.18f else 1f
-    )
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val badgeBg = if (isDark) Color(0xFF3A2A1D) else Color(0xFFFFF7ED)
+    val badgeBorder = Color(0xFFF59E0B).copy(alpha = if (isDark) 0.50f else 0.36f)
+    val badgeContent = if (isDark) Color(0xFFFFC46B) else Color(0xFFB45309)
+    val badgeIcon = if (isDark) Color(0xFFFFC46B) else Color(0xFFD97706)
 
     Row(
         modifier = modifier
@@ -629,7 +644,7 @@ private fun GoalProgressBadge(
             .background(badgeBg)
             .border(
                 width = 1.dp,
-                color = Color(0xFFF59E0B).copy(alpha = 0.36f),
+                color = badgeBorder,
                 shape = RoundedCornerShape(999.dp)
             )
             .biteCalClickable { onClick() }    // ★ 讓整個膠囊可以點
@@ -640,7 +655,7 @@ private fun GoalProgressBadge(
             imageVector = Icons.Filled.Flag,
             contentDescription = null,
             modifier = Modifier.size(14.dp),
-            tint = Color(0xFFD97706)
+            tint = badgeIcon
         )
         Spacer(Modifier.width(6.dp))
         Text(
@@ -650,7 +665,7 @@ private fun GoalProgressBadge(
             ),
             fontSize = 12.sp,
             fontWeight = FontWeight.SemiBold,
-            color = Color(0xFFB45309)
+            color = badgeContent
         )
         // ★ 文字後面的鉛筆圖示
         Spacer(Modifier.width(4.dp))
@@ -658,7 +673,7 @@ private fun GoalProgressBadge(
             imageVector = Icons.Filled.Edit,
             contentDescription = "Edit goal weight icon",
             modifier = Modifier.size(13.dp),
-            tint = Color(0xFFD97706)
+            tint = badgeIcon
         )
     }
 }
@@ -1006,6 +1021,14 @@ private fun GoalProgressChart(
 ) {
     // ✅ 保留你原本預設尺寸，但允許 caller 覆蓋（caller 的 modifier 會在最後 then）
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val chartTopSurface = if (isDark) HomeCardStyles.Chart.insetSurface() else colors.surfaceMuted
+    val chartBottomSurface = if (isDark) HomeCardStyles.Chart.surface() else colors.surface
+    val chartGridColor = if (isDark) HomeCardStyles.Chart.grid() else Color(0xFFD8DEE6)
+    val chartBaseColor = if (isDark) HomeCardStyles.Text.secondary() else colors.textPrimary
+    val chartGoalBg = if (isDark) Color(0xFF3A2A1D) else Color(0xFFFFFBEB)
+    val chartGoalText = if (isDark) Color(0xFFFFC46B) else Color(0xFFB45309)
+    val chartEmptyText = if (isDark) HomeCardStyles.Text.label() else Color(0xFF6B7280)
     val baseModifier = Modifier
         .fillMaxWidth()
         .height(WeightChartHeight)
@@ -1142,16 +1165,16 @@ private fun GoalProgressChart(
 
                         // Brushes（快取）
                         val bgBrush = Brush.verticalGradient(
-                            0f to colors.surfaceMuted,
-                            1f to colors.surface
+                            0f to chartTopSurface,
+                            1f to chartBottomSurface
                         )
                         val baseAreaBrush = Brush.verticalGradient(
-                            0f to colors.textPrimary.copy(alpha = 0.18f),
+                            0f to chartBaseColor.copy(alpha = 0.18f),
                             1f to Color.Transparent
                         )
                         val rightAreaBrush = Brush.verticalGradient(
-                            0f to colors.textPrimary.copy(alpha = 0.16f),
-                            0.55f to colors.textPrimary.copy(alpha = 0.10f),
+                            0f to chartBaseColor.copy(alpha = 0.16f),
+                            0.55f to chartBaseColor.copy(alpha = 0.10f),
                             1f to Color.Transparent
                         )
 
@@ -1201,7 +1224,7 @@ private fun GoalProgressChart(
                                 // 網格
                                 for (y in gridYs) {
                                     drawLine(
-                                            color = Color(0xFFD8DEE6),
+                                            color = chartGridColor,
                                         start = Offset(0f, y),
                                         end = Offset(w, y),
                                         strokeWidth = gridStroke
@@ -1231,7 +1254,7 @@ private fun GoalProgressChart(
                                     // 基線：未按黑、按下綠（這段依賴 shownIndex，但只是 draw，不會重算 Path）
                                     val isActive = (shownIndex == 0)
                                     drawLine(
-                                        color = if (isActive) highlightGreen else colors.textPrimary,
+                                        color = if (isActive) highlightGreen else chartBaseColor,
                                         start = Offset(0f, ySingle),
                                         end = Offset(w, ySingle),
                                         strokeWidth = baseStroke,
@@ -1239,7 +1262,7 @@ private fun GoalProgressChart(
                                     )
 
                                     drawCircle(
-                                        color = if (isActive) highlightGreen else colors.textPrimary,
+                                        color = if (isActive) highlightGreen else chartBaseColor,
                                         radius = circleOuter,
                                         center = Offset(xSingle, ySingle)
                                     )
@@ -1280,7 +1303,7 @@ private fun GoalProgressChart(
                                     linePathAll?.let { lp ->
                                         drawPath(
                                             path = lp,
-                                            color = colors.textPrimary,
+                                            color = chartBaseColor,
                                             style = Stroke(
                                                 width = baseStroke,
                                                 cap = StrokeCap.Round
@@ -1373,7 +1396,7 @@ private fun GoalProgressChart(
                     text = stringResource(R.string.weight_goal_chart_empty_hint),
                     fontSize = 13.sp,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color(0xFF6B7280),
+                    color = chartEmptyText,
                     modifier = Modifier.align(Alignment.Center)
                 )
             }
@@ -1396,9 +1419,7 @@ private fun GoalProgressChart(
                         )
                         .clip(RoundedCornerShape(999.dp))
                         .background(
-                            Color(0xFFFFFBEB).copy(
-                                alpha = if (colors.background == BiteCalColors.Dark.background) 0.18f else 1f
-                            )
+                            chartGoalBg
                         )
                         .border(
                             width = 1.dp,
@@ -1411,7 +1432,7 @@ private fun GoalProgressChart(
                         text = stringResource(R.string.weight_chart_goal_label),
                         fontSize = 11.sp,
                         fontWeight = FontWeight.SemiBold,
-                        color = Color(0xFFB45309)
+                        color = chartGoalText
                     )
                 }
             }
@@ -1431,7 +1452,7 @@ private fun GoalProgressChart(
                         text = label,
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Medium,
-                        color = colors.textSecondary,
+                        color = if (isDark) HomeCardStyles.Text.label() else colors.textSecondary,
                         maxLines = 1,
                         textAlign = TextAlign.End,
                         modifier = Modifier.fillMaxWidth()
@@ -1574,7 +1595,11 @@ private fun GoalProgressChart(
                         text = label,
                         fontSize = 11.sp,
                         fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Normal,
-                        color = if (selected) colors.textPrimary else colors.textSecondary,
+                        color = if (selected) {
+                            if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+                        } else {
+                            if (isDark) HomeCardStyles.Text.label() else colors.textSecondary
+                        },
                         modifier = Modifier
                             .align(Alignment.CenterStart)
                             .graphicsLayer { translationX = p.leftPx }
@@ -1594,8 +1619,9 @@ fun MotivationBanner(
     text: String,
     modifier: Modifier = Modifier
 ) {
-    val bg = Color(0xFFEFF9F4)
-    val fg = Color(0xFF12823B)
+    val isDark = HomeCardStyles.isDark()
+    val bg = if (isDark) HomeCardStyles.Status.successBg() else Color(0xFFEFF9F4)
+    val fg = if (isDark) HomeCardStyles.Status.successText() else Color(0xFF12823B)
 
     Box(
         modifier = modifier
@@ -1681,9 +1707,12 @@ fun HistoryRow(
 ) {
     val shape = RoundedCornerShape(18.dp)
     val colors = BiteCalColors.current()
-    val label = colors.textSecondary
-    val mainText = colors.textPrimary
-    val subText = colors.textMuted
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val label = if (isDark) HomeCardStyles.Text.label() else colors.textSecondary
+    val mainText = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val subText = if (isDark) HomeCardStyles.Text.muted() else colors.textMuted
+    val cardContainer = if (isDark) HomeCardStyles.Surface.card() else colors.surface
+    val cardBorder = if (isDark) HomeCardStyles.Surface.borderColor() else colors.border
 
     val dateText = remember(item.logDate, item.updatedAtUtc) {
         formatHistoryRowUpdatedTime(item)
@@ -1696,26 +1725,27 @@ fun HistoryRow(
     )
 
     val delta = computeDelta(current = item, previous = previous, unit = unit)
-    val (trend, deltaColor) = classifyTrendAndColor(delta)
+    val (trend, rawDeltaColor) = classifyTrendAndColor(delta)
+    val deltaColor = if (isDark && delta == null) HomeCardStyles.Text.label() else rawDeltaColor
     val deltaText = delta?.let { formatSigned1(it, unit) } ?: "—"
 
     val (chipText, chipBg, chipFg) = when (trend) {
         TrendTag.LOSS -> Triple(
             stringResource(R.string.weight_history_trend_loss),
-            Color(0xFFEFF9F4),
-            Color(0xFF12823B)
+            if (isDark) HomeCardStyles.Status.successBg() else Color(0xFFEFF9F4),
+            if (isDark) HomeCardStyles.Status.successText() else Color(0xFF12823B)
         )
 
         TrendTag.GAIN -> Triple(
             stringResource(R.string.weight_history_trend_gain),
-            Color(0xFFFEE2E2),
-            Color(0xFFEF4444)
+            if (isDark) Color(0xFF3A1D1D) else Color(0xFFFEE2E2),
+            if (isDark) Color(0xFFFF8A8A) else Color(0xFFEF4444)
         )
 
         TrendTag.STABLE -> Triple(
             stringResource(R.string.weight_history_trend_stable),
-            Color(0xFFDBEAFE),
-            Color(0xFF3B82F6)
+            if (isDark) Color(0xFF1E2D4A) else Color(0xFFDBEAFE),
+            if (isDark) Color(0xFF93C5FD) else Color(0xFF3B82F6)
         )
     }
 
@@ -1731,31 +1761,36 @@ fun HistoryRow(
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .heightIn(min = 85.dp)
-            .border(1.dp, colors.border, shape),
+            .height(85.dp)
+            .border(1.dp, cardBorder, shape),
         shape = shape,
-        colors = CardDefaults.cardColors(containerColor = colors.surface)
+        colors = CardDefaults.cardColors(containerColor = cardContainer)
     ) {
         Row(
             modifier = Modifier.padding(horizontal = 14.dp, vertical = 12.dp),
-            verticalAlignment = Alignment.Top
+            verticalAlignment = Alignment.CenterVertically
         ) {
-            // 左側圖片
+            // 左側圖片：固定 58dp，但由外層 Box 垂直置中，避免 Dark card 內看起來偏上。
             val imageShape = RoundedCornerShape(14.dp)
-            if (item.photoUrl != null) {
-                AsyncImage(
-                    model = imgUrl,
-                    contentDescription = null,
-                    modifier = Modifier.size(58.dp).clip(imageShape),
-                    contentScale = ContentScale.Crop
-                )
-            } else {
-                Image(
-                    painter = painterResource(R.drawable.weight_image),
-                    contentDescription = null,
-                    modifier = Modifier.size(58.dp).clip(imageShape),
-                    contentScale = ContentScale.Crop
-                )
+            Box(
+                modifier = Modifier.size(58.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                if (item.photoUrl != null) {
+                    AsyncImage(
+                        model = imgUrl,
+                        contentDescription = null,
+                        modifier = Modifier.size(58.dp).clip(imageShape),
+                        contentScale = ContentScale.Crop
+                    )
+                } else {
+                    Image(
+                        painter = painterResource(R.drawable.weight_image),
+                        contentDescription = null,
+                        modifier = Modifier.size(58.dp).clip(imageShape),
+                        contentScale = ContentScale.Crop
+                    )
+                }
             }
 
             Spacer(Modifier.width(12.dp))
@@ -1841,13 +1876,16 @@ private fun RightMetaColumn(
     modifier: Modifier = Modifier
 ) {
     Column(
-        modifier = modifier.widthIn(min = 88.dp),
+        modifier = modifier
+            .widthIn(min = 88.dp, max = 106.dp)
+            .height(58.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Top
+        verticalArrangement = Arrangement.Center
     ) {
         Text(
             text = stringResource(R.string.weight_history_change_label),
-            fontSize = 11.sp,
+            fontSize = 10.5.sp,
+            lineHeight = 13.sp,
             letterSpacing = 0.6.sp,
             fontWeight = FontWeight.SemiBold,
             color = labelColor,
@@ -1858,15 +1896,16 @@ private fun RightMetaColumn(
         Text(
             text = deltaText,
             fontSize = 14.sp,
+            lineHeight = 16.sp,
             fontWeight = FontWeight.Bold,
             color = deltaColor,
             textAlign = TextAlign.Center,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
-            modifier = Modifier.offset(y = 5.dp)
+            modifier = Modifier.offset(y = 2.dp)
         )
 
-        Spacer(Modifier.height(12.dp))
+        Spacer(Modifier.height(4.dp))
 
         MiniChip(text = chipText, bg = chipBg, fg = chipFg)
     }
@@ -1881,16 +1920,22 @@ private fun MiniChip(
 ) {
     Box(
         modifier = modifier
-            .clip(RoundedCornerShape(999.dp))
+            .widthIn(min = 58.dp, max = 108.dp)
+            .height(22.dp)
+            .clip(RoundedCornerShape(9.dp))
             .background(bg)
-            .padding(horizontal = 10.dp, vertical = 5.dp),
+            .padding(horizontal = 10.dp, vertical = 2.dp),
         contentAlignment = Alignment.Center
     ) {
         Text(
             text = text,
-            fontSize = 12.sp,
+            fontSize = 11.sp,
+            lineHeight = 13.sp,
             fontWeight = FontWeight.SemiBold,
-            color = fg
+            color = fg,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+            textAlign = TextAlign.Center
         )
     }
 }
