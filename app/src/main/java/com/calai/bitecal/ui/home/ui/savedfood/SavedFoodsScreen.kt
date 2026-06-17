@@ -36,6 +36,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
@@ -50,6 +51,8 @@ import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 import com.calai.bitecal.ui.common.CalaiConfirmDialog
 import com.calai.bitecal.ui.home.components.CardStyles
+import com.calai.bitecal.ui.home.components.HomeBackground
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalSavedFoodTokens
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
@@ -77,25 +80,38 @@ fun SavedFoodsScreen(
         vm.loadIfNeeded()
     }
 
-    Column(
-        modifier = modifier
-            .fillMaxSize()
-            .background(colors.background)
-            .testTag("saved_foods_screen")
-    ) {
-        SavedFoodsTopBar(onBack = onBack)
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val screenBackground = if (isDark) Color.Transparent else colors.background
+    val hintTextColor = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
 
-        Text(
-            text = stringResource(R.string.saved_foods_keep_15_days_hint),
+    Box(modifier = modifier.fillMaxSize()) {
+        if (isDark) {
+            HomeBackground(
+                modifier = Modifier.matchParentSize(),
+                darkTheme = true,
+                enableNoise = false
+            )
+        }
+
+        Column(
             modifier = Modifier
-                .fillMaxWidth()
-                .offset(y = (-8).dp)
-                .padding(start = BiteCalScreenFrame.contentHorizontal, end = BiteCalScreenFrame.contentHorizontal, top = 0.dp, bottom = 2.dp),
-            fontSize = 14.sp,
-            lineHeight = 20.sp,
-            color = colors.textSecondary,
-            textAlign = TextAlign.Center
-        )
+                .fillMaxSize()
+                .background(screenBackground)
+                .testTag("saved_foods_screen")
+        ) {
+            SavedFoodsTopBar(onBack = onBack)
+
+            Text(
+                text = stringResource(R.string.saved_foods_keep_15_days_hint),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .offset(y = (-8).dp)
+                    .padding(start = BiteCalScreenFrame.contentHorizontal, end = BiteCalScreenFrame.contentHorizontal, top = 0.dp, bottom = 2.dp),
+                fontSize = 14.sp,
+                lineHeight = 20.sp,
+                color = hintTextColor,
+                textAlign = TextAlign.Center
+            )
 
         when {
             ui.loading -> {
@@ -105,7 +121,11 @@ fun SavedFoodsScreen(
                         .padding(top = 24.dp),
                     contentAlignment = Alignment.TopCenter
                 ) {
-                    CircularProgressIndicator()
+                    if (isDark) {
+                        CircularProgressIndicator(color = HomeCardStyles.Text.primary())
+                    } else {
+                        CircularProgressIndicator()
+                    }
                 }
             }
 
@@ -152,6 +172,8 @@ fun SavedFoodsScreen(
                 }
             }
         }
+    }
+
     }
 
     CalaiConfirmDialog(
@@ -208,6 +230,15 @@ private fun SavedFoodCard(
     modifier: Modifier = Modifier
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val cardContainer = if (isDark) HomeCardStyles.Surface.raised() else CardStyles.bg()
+    val cardBorder = if (isDark) HomeCardStyles.Surface.border() else CardStyles.border()
+    val primaryText = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val mutedText = if (isDark) HomeCardStyles.Text.muted() else colors.textSecondary
+    val mediaSurface = if (isDark) HomeCardStyles.Surface.raisedAlt() else colors.surfaceMuted
+    val removeSurface = if (isDark) HomeCardStyles.Surface.raisedAlt() else colors.surfaceMuted
+    val detailContainer = if (isDark) Color.White.copy(alpha = 0.88f) else colors.primaryButtonContainer
+    val detailContent = if (isDark) Color(0xFF111114) else colors.primaryButtonContent
 
     Card(
         modifier = modifier
@@ -216,8 +247,8 @@ private fun SavedFoodCard(
             .testTag("saved_food_card")
             .biteCalClickable(onClick = onOpenDetail),
         shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = CardStyles.bg()),
-        border = CardStyles.border(),
+        colors = CardDefaults.cardColors(containerColor = cardContainer),
+        border = cardBorder,
     ) {
         Column(modifier = Modifier.fillMaxSize()) {
 
@@ -237,7 +268,7 @@ private fun SavedFoodCard(
                         .offset(x = (-2).dp, y = (-2).dp)
                         .size(30.dp)
                         .clip(CircleShape)
-                        .background(colors.surfaceMuted)
+                        .background(removeSurface)
                         .biteCalClickable(onClick = onRemove)
                         .align(Alignment.TopStart)
                         .testTag("saved_food_remove"),
@@ -247,7 +278,7 @@ private fun SavedFoodCard(
                         imageVector = Icons.Filled.Close,
                         contentDescription = "Remove from saved foods icon",
                         modifier = Modifier.size(14.dp),
-                        tint = colors.textSecondary
+                        tint = mutedText
                     )
                 }
 
@@ -261,7 +292,7 @@ private fun SavedFoodCard(
                         modifier = Modifier
                             .size(100.dp)
                             .clip(CircleShape)
-                            .background(colors.surfaceMuted),
+                            .background(mediaSurface),
                         contentAlignment = Alignment.Center
                     ) {
                         if (!item.previewUri.isNullOrBlank()) {
@@ -287,7 +318,7 @@ private fun SavedFoodCard(
                     ) {
                         Text(
                             text = item.displayTitle,
-                            style = BiteCalSavedFoodTokens.TitleTextStyle.copy(color = colors.textPrimary),
+                            style = BiteCalSavedFoodTokens.TitleTextStyle.copy(color = primaryText),
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis
                         )
@@ -301,7 +332,7 @@ private fun SavedFoodCard(
                     ) {
                         Text(
                             text = stringResource(R.string.saved_foods_kcal, item.kcal),
-                            style = BiteCalSavedFoodTokens.KcalTextStyle.copy(color = colors.textPrimary),
+                            style = BiteCalSavedFoodTokens.KcalTextStyle.copy(color = primaryText),
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis,
                             modifier = Modifier.testTag("recent_upload_kcal")
@@ -345,7 +376,7 @@ private fun SavedFoodCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(36.dp)
-                    .background(colors.primaryButtonContainer)
+                    .background(detailContainer)
                     .biteCalClickable(onClick = onOpenDetail)
                     .testTag("saved_food_detail"),
                 contentAlignment = Alignment.Center
@@ -358,7 +389,7 @@ private fun SavedFoodCard(
                 ) {
                     Text(
                         text = stringResource(R.string.saved_foods_detail),
-                        color = colors.primaryButtonContent,
+                        color = detailContent,
                         fontSize = 15.sp,
                         lineHeight = 18.sp,
                         fontWeight = FontWeight.SemiBold,
@@ -371,7 +402,7 @@ private fun SavedFoodCard(
 
                     Text(
                         text = "→",
-                        color = colors.primaryButtonContent,
+                        color = detailContent,
                         fontSize = 17.sp,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier
@@ -387,10 +418,12 @@ private fun SavedFoodCard(
 @Composable
 private fun MacroValue(text: String) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val textColor = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
 
     Text(
         text = text,
-        style = BiteCalSavedFoodTokens.MacroTextStyle.copy(color = colors.textSecondary),
+        style = BiteCalSavedFoodTokens.MacroTextStyle.copy(color = textColor),
         maxLines = 1,
         overflow = TextOverflow.Clip
     )
@@ -402,6 +435,9 @@ private fun SavedFoodsErrorState(
     onRetry: () -> Unit
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val titleColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val messageColor = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
 
     Column(
         modifier = Modifier
@@ -413,13 +449,13 @@ private fun SavedFoodsErrorState(
             text = stringResource(R.string.saved_foods_load_failed_title),
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
-            color = colors.textPrimary
+            color = titleColor
         )
 
         Text(
             text = message,
             fontSize = 15.sp,
-            color = colors.textSecondary
+            color = messageColor
         )
 
         TextButton(onClick = rememberClickWithHaptic(onClick = onRetry)) {

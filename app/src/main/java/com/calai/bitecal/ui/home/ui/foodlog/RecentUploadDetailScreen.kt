@@ -87,6 +87,8 @@ import java.util.Locale
 import kotlin.math.roundToInt
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
+import com.calai.bitecal.ui.home.components.HomeBackground
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 
 
 private val recentUploadDetailDateTimeFormatter: DateTimeFormatter =
@@ -189,6 +191,9 @@ fun RecentUploadDetailScreen(
 ) {
     val st by vm.state.collectAsState()
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val sheetSurface = if (isDark) HomeCardStyles.Chart.surface() else colors.surface
+    val sheetBorder = if (isDark) HomeCardStyles.Chart.border() else Color.Transparent
 
     val liveEnv = st.envelope?.takeIf { it.foodLogId == foodLogId }
 
@@ -267,10 +272,22 @@ fun RecentUploadDetailScreen(
 
     if (env == null) {
         Box(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier
+                .fillMaxSize()
+                .background(if (isDark) Color.Transparent else colors.background),
             contentAlignment = Alignment.Center
         ) {
-            Text(text = st.error ?: stringResource(R.string.foodlog_detail_load_failed))
+            if (isDark) {
+                HomeBackground(
+                    modifier = Modifier.matchParentSize(),
+                    darkTheme = true,
+                    enableNoise = false
+                )
+            }
+            Text(
+                text = st.error ?: stringResource(R.string.foodlog_detail_load_failed),
+                color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+            )
         }
         return
     }
@@ -322,8 +339,15 @@ fun RecentUploadDetailScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(colors.background)
+            .background(if (isDark) Color.Transparent else colors.background)
     ) {
+        if (isDark) {
+            HomeBackground(
+                modifier = Modifier.matchParentSize(),
+                darkTheme = true,
+                enableNoise = false
+            )
+        }
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -375,8 +399,9 @@ fun RecentUploadDetailScreen(
                 .fillMaxWidth()
                 .fillMaxHeight(0.6f),
             shape = RoundedCornerShape(topStart = 32.dp, topEnd = 32.dp),
-            color = colors.surface,
-            shadowElevation = 10.dp
+            color = sheetSurface,
+            border = if (isDark) BorderStroke(1.dp, sheetBorder) else null,
+            shadowElevation = if (isDark) 0.dp else 10.dp
         ) {
             Column(modifier = Modifier.fillMaxSize()) {
                 Column(
@@ -452,7 +477,7 @@ fun RecentUploadDetailScreen(
                             ),
                             fontSize = 20.sp,
                             fontWeight = FontWeight.Bold,
-                            color = colors.textPrimary
+                            color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
                         )
 
                         Box(
@@ -600,12 +625,22 @@ private fun RecentUploadDetailLoadingFrame(
     previewUri: String?
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val sheetSurface = if (isDark) HomeCardStyles.Chart.surface() else colors.surface
+    val sheetBorder = if (isDark) HomeCardStyles.Chart.border() else Color.Transparent
 
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(colors.background)
+            .background(if (isDark) Color.Transparent else colors.background)
     ) {
+        if (isDark) {
+            HomeBackground(
+                modifier = Modifier.matchParentSize(),
+                darkTheme = true,
+                enableNoise = false
+            )
+        }
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -648,8 +683,9 @@ private fun RecentUploadDetailLoadingFrame(
                 .fillMaxWidth()
                 .fillMaxHeight(0.6f),
             shape = RoundedCornerShape(topStart = 32.dp, topEnd = 32.dp),
-            color = colors.surface,
-            shadowElevation = 10.dp
+            color = sheetSurface,
+            border = if (isDark) BorderStroke(1.dp, sheetBorder) else null,
+            shadowElevation = if (isDark) 0.dp else 10.dp
         ) {
             Box(
                 modifier = Modifier.fillMaxSize(),
@@ -669,8 +705,14 @@ private fun RecentUploadDetailTopBar(
     onDeleteClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val legacyButtonBackground = Color.White.copy(alpha = 0.6f)
-    val legacyIconColor = BiteCalFoodLogDetailTokens.TextPrimary
+    val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val legacyButtonBackground = if (isDark) {
+        HomeCardStyles.Surface.raised().copy(alpha = 0.88f)
+    } else {
+        Color.White.copy(alpha = 0.6f)
+    }
+    val legacyIconColor = if (isDark) HomeCardStyles.Text.primary() else BiteCalFoodLogDetailTokens.TextPrimary
 
     CenterAlignedTopAppBar(
         modifier = modifier.padding(
@@ -739,6 +781,8 @@ private fun SaveBadge(
     onClick: () -> Unit
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val iconTint = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
 
     Box(
         modifier = Modifier
@@ -754,7 +798,7 @@ private fun SaveBadge(
         Icon(
             imageVector = if (isSaved) Icons.Filled.Bookmark else Icons.Outlined.BookmarkBorder,
             contentDescription = "收藏標籤",
-            tint = colors.textPrimary,
+            tint = iconTint,
             modifier = Modifier.fillMaxSize()
         )
     }
@@ -791,10 +835,15 @@ private fun formatDisplayTime(raw: String): String {
 @Composable
 private fun TimeChip(timeText: String) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val chipSurface = if (isDark) HomeCardStyles.Surface.raisedAlt() else colors.surfaceMuted
+    val chipBorder = if (isDark) HomeCardStyles.Surface.borderColor() else Color.Transparent
+    val chipText = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
 
     Surface(
-        color = colors.surfaceMuted,
-        shape = RoundedCornerShape(999.dp)
+        color = chipSurface,
+        shape = RoundedCornerShape(999.dp),
+        border = if (isDark) BorderStroke(1.dp, chipBorder) else null
     ) {
         Text(
             text = formatDisplayTime(timeText),
@@ -807,7 +856,7 @@ private fun TimeChip(timeText: String) {
                     fontFeatureSettings = "tnum"
                 )
             ),
-            color = colors.textSecondary,
+            color = chipText,
             maxLines = 1,
             overflow = TextOverflow.Clip
         )
@@ -822,6 +871,9 @@ private fun Stepper(
     onPlus: () -> Unit
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val borderColor = if (isDark) HomeCardStyles.Surface.borderColor() else colors.textPrimary
+    val contentColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
 
     Row(
         verticalAlignment = Alignment.CenterVertically,
@@ -829,7 +881,7 @@ private fun Stepper(
         modifier = Modifier
             .height(43.dp)
             .clip(RoundedCornerShape(999.dp))
-            .border(1.dp, colors.textPrimary, RoundedCornerShape(999.dp))
+            .border(1.dp, borderColor, RoundedCornerShape(999.dp))
             .padding(horizontal = BiteCalScreenFrame.contentHorizontalMedium)
     ) {
         IconButton(
@@ -840,7 +892,7 @@ private fun Stepper(
             Icon(
                 imageVector = Icons.Filled.Remove,
                 contentDescription = "減號按鈕",
-                tint = colors.textPrimary
+                tint = contentColor
             )
         }
 
@@ -849,7 +901,7 @@ private fun Stepper(
             style = MaterialTheme.typography.titleMedium,
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
-            color = colors.textPrimary
+            color = contentColor
         )
 
         IconButton(
@@ -860,7 +912,7 @@ private fun Stepper(
             Icon(
                 imageVector = Icons.Outlined.Add,
                 contentDescription = "加號按鈕",
-                tint = colors.textPrimary
+                tint = contentColor
             )
         }
     }
@@ -869,14 +921,20 @@ private fun Stepper(
 @Composable
 private fun CaloriesHeroCard(kcal: Int) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val cardSurface = if (isDark) HomeCardStyles.Surface.raised() else colors.surface
+    val iconSurface = if (isDark) HomeCardStyles.Surface.raisedAlt() else colors.surfaceMuted
+    val cardBorder = if (isDark) HomeCardStyles.Surface.borderColor() else colors.border
+    val primaryText = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val secondaryText = if (isDark) HomeCardStyles.Text.secondary() else colors.textPrimary
 
     Surface(
         modifier = Modifier
             .fillMaxWidth()
             .height(82.dp),
-        color = colors.surface,
+        color = cardSurface,
         shape = RoundedCornerShape(16.dp),
-        border = BorderStroke(1.dp, colors.border)
+        border = BorderStroke(1.dp, cardBorder)
     ) {
         Row(
             modifier = Modifier
@@ -887,7 +945,8 @@ private fun CaloriesHeroCard(kcal: Int) {
             Surface(
                 modifier = Modifier.size(54.dp),
                 shape = RoundedCornerShape(18.dp),
-                color = colors.surfaceMuted
+                color = iconSurface,
+                border = if (isDark) BorderStroke(1.dp, cardBorder) else null
             ) {
                 Box(contentAlignment = Alignment.Center) {
                     Text(
@@ -905,14 +964,14 @@ private fun CaloriesHeroCard(kcal: Int) {
                 Text(
                     text = stringResource(R.string.foodlog_detail_calories),
                     style = MaterialTheme.typography.bodyMedium,
-                    color = colors.textPrimary
+                    color = secondaryText
                 )
                 Spacer(modifier = Modifier.height(2.dp))
                 Text(
                     text = kcal.toString(),
-                fontSize = 27.sp,
-                fontWeight = FontWeight.Bold,
-                color = colors.textPrimary
+                    fontSize = 27.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = primaryText
                 )
             }
         }
@@ -928,12 +987,17 @@ private fun MacroCard(
     emoji: String
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val cardSurface = if (isDark) HomeCardStyles.Surface.raised() else colors.surface
+    val cardBorder = if (isDark) HomeCardStyles.Surface.borderColor() else colors.border
+    val titleColor = if (isDark) HomeCardStyles.Text.secondary() else colors.textPrimary
+    val valueColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
 
     Surface(
         modifier = modifier.height(62.dp),
-        color = colors.surface,
+        color = cardSurface,
         shape = RoundedCornerShape(16.dp),
-        border = BorderStroke(1.dp, colors.border)
+        border = BorderStroke(1.dp, cardBorder)
     ) {
         Row(
             modifier = Modifier
@@ -946,7 +1010,7 @@ private fun MacroCard(
                     .size(22.dp)
                     .offset(y = (-8).dp),
                 shape = CircleShape,
-                color = tone.copy(alpha = 0.14f)
+                color = tone.copy(alpha = if (isDark) 0.20f else 0.14f)
             ) {
                 Box(contentAlignment = Alignment.Center) {
                     Text(
@@ -966,14 +1030,14 @@ private fun MacroCard(
                 Text(
                     text = title,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = colors.textPrimary,
+                    color = titleColor,
                     maxLines = 1
                 )
 
                 Text(
                     text = value,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = colors.textPrimary,
+                    color = valueColor,
                     fontWeight = FontWeight.SemiBold,
                     maxLines = 1
                 )
@@ -987,14 +1051,20 @@ private fun HealthScoreCard(
     score: Int
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
     val safeScore = score.coerceIn(0, 10)
     val progress = safeScore / 10f
+    val cardSurface = if (isDark) HomeCardStyles.Surface.raised() else colors.surface
+    val cardBorder = if (isDark) HomeCardStyles.Surface.borderColor() else colors.border
+    val primaryText = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val secondaryText = if (isDark) HomeCardStyles.Text.secondary() else colors.textPrimary
+    val progressTrack = if (isDark) HomeCardStyles.Progress.track() else colors.surfaceMuted
 
     Surface(
         modifier = Modifier.fillMaxWidth(),
-        color = colors.surface,
+        color = cardSurface,
         shape = RoundedCornerShape(20.dp),
-        border = BorderStroke(1.dp, colors.border)
+        border = BorderStroke(1.dp, cardBorder)
     ) {
         Row(
             modifier = Modifier
@@ -1008,7 +1078,7 @@ private fun HealthScoreCard(
                     .clip(RoundedCornerShape(16.dp))
                     .border(
                         width = 1.dp,
-                        color = colors.border,
+                        color = cardBorder,
                         shape = RoundedCornerShape(16.dp)
                     )
                     .padding(1.dp)
@@ -1035,14 +1105,14 @@ private fun HealthScoreCard(
                     Text(
                         text = stringResource(R.string.foodlog_detail_health_score),
                         fontSize = 15.sp,
-                        color = colors.textPrimary,
+                        color = secondaryText,
                         fontWeight = FontWeight.Medium
                     )
 
                     Text(
                         text = "$safeScore/10",
                         style = MaterialTheme.typography.titleMedium,
-                        color = colors.textPrimary,
+                        color = primaryText,
                         fontWeight = FontWeight.SemiBold
                     )
                 }
@@ -1054,7 +1124,7 @@ private fun HealthScoreCard(
                         .fillMaxWidth()
                         .height(6.dp)
                         .clip(RoundedCornerShape(999.dp))
-                        .background(colors.surfaceMuted)
+                        .background(progressTrack)
                 ) {
                     Box(
                         modifier = Modifier
