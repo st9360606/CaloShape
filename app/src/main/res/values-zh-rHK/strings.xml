@@ -220,7 +220,7 @@
     <string name="plan_cta_start">開始使用</string>
     <string name="plan_title_congrats">恭喜!</string>
     <string name="plan_subtitle_ready">你的個人健康計畫已完成！</string>
-    <string name="plan_disclaimer">計算以可信學術研究為基礎。可至「個人檔案 &gt; 健康資訊來源」查看來源。</string>
+    <string name="plan_disclaimer">來源請看下方「See all references ›」。</string>
     <string name="plan_unit_kcal_day">kcal / 天</string>
 
     <string name="plan_macros_proteins">蛋白質</string>

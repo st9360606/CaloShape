@@ -11,6 +11,7 @@ import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -174,8 +175,10 @@ fun HealthPlanScreen(
             ) {
                 Text(
                     text = stringResource(R.string.plan_subtitle_ready),
-                    color = HealthPlanTokens.NeutralText,
-                    fontSize = 16.sp,
+                    color = Color(0xFF596272),
+                    fontSize = 15.sp,
+                    lineHeight = 20.sp,
+                    fontWeight = FontWeight.Medium,
                     textAlign = TextAlign.Center
                 )
             }
@@ -221,6 +224,7 @@ fun HealthPlanScreen(
                 text = stringResource(R.string.plan_disclaimer),
                 color = Color(0xFF9AA3AF),
                 fontSize = 12.sp,
+                lineHeight = 15.sp,
                 textAlign = TextAlign.Center,
                 modifier = Modifier
                     .fillMaxWidth()
@@ -304,7 +308,13 @@ private fun DonutMacros(
 
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(kcal.toString(), fontSize = 44.sp, fontWeight = FontWeight.ExtraBold)
-            Text(stringResource(R.string.plan_unit_kcal_day), color = HealthPlanTokens.NeutralText, fontSize = 18.sp)
+            Text(
+                text = stringResource(R.string.plan_unit_kcal_day),
+                color = Color(0xFF7C8493),
+                fontSize = 14.sp,
+                lineHeight = 18.sp,
+                fontWeight = FontWeight.Medium
+            )
         }
     }
 }
@@ -468,7 +478,14 @@ private fun MacroRingItem(
             )
         }
         Spacer(Modifier.height(6.dp))
-        Text(title, color = HealthPlanTokens.NeutralText, fontSize = 12.sp, textAlign = TextAlign.Center)
+        Text(
+            text = title,
+            color = Color(0xFF4F5968),
+            fontSize = 13.sp,
+            lineHeight = 16.sp,
+            fontWeight = FontWeight.SemiBold,
+            textAlign = TextAlign.Center
+        )
     }
 }
 
@@ -641,8 +658,8 @@ private fun SourcesHeader(
             Text(
                 text = text,
                 color = Color(0xFF9AA3AF),
-                fontSize = 13.sp,
-                lineHeight = 18.sp,
+                fontSize = 12.sp,
+                lineHeight = 15.sp,
                 textAlign = TextAlign.Center,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
@@ -680,10 +697,11 @@ fun ResearchSourcesBlock(
             nudgeLeft = 16.dp
         )
 
-        Spacer(Modifier.height(6.dp))
+        Spacer(Modifier.height(4.dp))
 
         val toggleLabel =
             if (expanded) stringResource(R.string.plan_sources_hide) else stringResource(R.string.plan_sources_more)
+        val sourcesToggleInteraction = remember { MutableInteractionSource() }
 
         Box(
             modifier = Modifier
@@ -698,9 +716,12 @@ fun ResearchSourcesBlock(
             Text(
                 text = toggleLabel,
                 color = Color(0xFF9AA3AF),
-                fontSize = 13.sp,
+                fontSize = 12.sp,
                 textAlign = TextAlign.Center,
-                modifier = Modifier.biteCalClickable {
+                modifier = Modifier.biteCalClickable(
+                    interactionSource = sourcesToggleInteraction,
+                    indication = null
+                ) {
                     val next = !expanded
                     expanded = next
                     if (next) onSeeMore()

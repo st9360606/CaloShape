@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -82,15 +83,37 @@ fun CommonBmiCard(
             .border(1.dp, colors.border, RoundedCornerShape(28.dp))
             .padding(horizontal = 22.dp, vertical = 22.dp)
     ) {
-        Text(
-            text = model.titleText,
-            color = colors.textPrimary,
-            fontSize = 24.sp,
-            lineHeight = 26.sp,
-            fontWeight = FontWeight.Bold,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis
-        )
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = model.titleText,
+                color = colors.textPrimary,
+                fontSize = 24.sp,
+                lineHeight = 26.sp,
+                fontWeight = FontWeight.Bold,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f)
+            )
+
+            Box(
+                modifier = Modifier
+                    .size(36.dp)
+                    .clip(CircleShape)
+                    .biteCalClickable { showBmiInfoDialog = true },
+                contentAlignment = Alignment.Center
+            ) {
+                Icon(
+                    imageVector = Icons.AutoMirrored.Outlined.HelpOutline,
+                    contentDescription = stringResource(R.string.bmi_info_title),
+                    tint = colors.textSecondary,
+                    modifier = Modifier.size(23.dp)
+                )
+            }
+        }
 
         Spacer(modifier = Modifier.height(12.dp))
 
@@ -127,21 +150,6 @@ fun CommonBmiCard(
                 CommonBmiStatusPill(
                     text = model.statusText,
                     tone = model.statusTone
-                )
-            }
-
-            Box(
-                modifier = Modifier
-                    .size(30.dp)
-                    .clip(CircleShape)
-                    .biteCalClickable { showBmiInfoDialog = true },
-                contentAlignment = Alignment.Center
-            ) {
-                Icon(
-                    imageVector = Icons.AutoMirrored.Outlined.HelpOutline,
-                    contentDescription = "BMI 說明",
-                    tint = colors.textSecondary,
-                    modifier = Modifier.size(23.dp)
                 )
             }
         }
@@ -254,9 +262,10 @@ private fun CommonBmiStatusPill(
 
     Box(
         modifier = Modifier
-            .widthIn(max = 96.dp)
+            .widthIn(min = 72.dp, max = 132.dp)
+            .heightIn(min = 28.dp)
             .background(bg, RoundedCornerShape(999.dp))
-            .padding(horizontal = 8.dp, vertical = 5.dp),
+            .padding(horizontal = 14.dp, vertical = 6.dp),
         contentAlignment = Alignment.Center
     ) {
         Text(
@@ -279,18 +288,18 @@ private fun CommonBmiRangeBar(
     val colors = BiteCalColors.current()
     val clamped = markerProgress.coerceIn(0f, 1f)
     val markerWidth = 3.dp
-    val markerHeight = 24.dp
+    val markerHeight = 18.dp
 
     BoxWithConstraints(
         modifier = modifier
             .fillMaxWidth()
-            .height(34.dp),
+            .height(24.dp),
         contentAlignment = Alignment.CenterStart
     ) {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(12.dp)
+                .height(10.dp)
                 .background(
                     brush = Brush.horizontalGradient(
                         colorStops = arrayOf(
