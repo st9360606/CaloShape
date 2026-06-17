@@ -33,7 +33,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
@@ -57,6 +56,8 @@ import com.calai.bitecal.ui.common.design.BiteCalEditDualActionRow
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.common.haptic.hapticOnFocus
+import com.calai.bitecal.ui.home.components.HomeBackground
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import com.calai.bitecal.ui.home.ui.settings.details.model.EditDailyStepGoalViewModel
 import kotlinx.coroutines.flow.collectLatest
 
@@ -69,6 +70,12 @@ fun EditDailyStepGoalScreen(
     val ui by vm.ui.collectAsState()
     val focus = LocalFocusManager.current
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val screenBackground = if (isDark) Color.Transparent else colors.background
+    val cardContainerColor = if (isDark) HomeCardStyles.Surface.card() else colors.surface
+    val cardBorderColor = if (isDark) HomeCardStyles.Surface.borderColor() else colors.border
+    val primaryTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val secondaryTextColor = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
 
     LaunchedEffect(Unit) {
         vm.events.collectLatest { e ->
@@ -79,92 +86,102 @@ fun EditDailyStepGoalScreen(
         }
     }
 
-    Scaffold(
-        containerColor = colors.background,
-        topBar = {
-            BiteCalTopBar(
-                title = stringResource(R.string.edit_step_goal_title),
-                onBack = onBack
+    Box(modifier = Modifier.fillMaxSize()) {
+        if (isDark) {
+            HomeBackground(
+                modifier = Modifier.fillMaxSize(),
+                darkTheme = true,
+                enableNoise = false
             )
         }
-    ) { inner ->
-        Column(
-            modifier = Modifier
-                .padding(inner)
-                .fillMaxSize()
-                .imePadding()
-                .navigationBarsPadding()
-                .padding(horizontal = BiteCalScreenFrame.contentHorizontalComfort)
-                .padding(top = BiteCalScreenFrame.detailContentTopNudged, bottom = BiteCalScreenFrame.detailBottom)
-        ) {
 
-            Spacer(Modifier.height(45.dp))
-
-            // --- previous goal card ---
-            Surface(
-                modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(18.dp),
-                color = colors.surface,
-                border = BorderStroke(1.dp, colors.border),
-                shadowElevation = 0.dp
+        Scaffold(
+            containerColor = screenBackground,
+            topBar = {
+                BiteCalTopBar(
+                    title = stringResource(R.string.edit_step_goal_title),
+                    onBack = onBack
+                )
+            }
+        ) { inner ->
+            Column(
+                modifier = Modifier
+                    .padding(inner)
+                    .fillMaxSize()
+                    .imePadding()
+                    .navigationBarsPadding()
+                    .padding(horizontal = BiteCalScreenFrame.contentHorizontalComfort)
+                    .padding(top = BiteCalScreenFrame.detailContentTopNudged, bottom = BiteCalScreenFrame.detailBottom)
             ) {
-                Row(
-                    modifier = Modifier.padding(horizontal = 18.dp, vertical = 17.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(16.dp)
-                ) {
-                    StepRingIcon(
-                        modifier = Modifier
-                            .size(78.dp)
-                            .offset(x = 7.dp)
-                    )
 
-                    Column {
-                        Text(
-                            text = ui.previousGoal.toString(),
-                            fontSize = 19.sp,
-                            fontWeight = FontWeight.SemiBold,
-                            color = colors.textPrimary,
-                            modifier = Modifier.padding(start = 20.dp)
+                Spacer(Modifier.height(45.dp))
+
+                // --- previous goal card ---
+                Surface(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(18.dp),
+                    color = cardContainerColor,
+                    border = BorderStroke(1.dp, cardBorderColor),
+                    shadowElevation = 0.dp
+                ) {
+                    Row(
+                        modifier = Modifier.padding(horizontal = 18.dp, vertical = 17.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(16.dp)
+                    ) {
+                        StepRingIcon(
+                            modifier = Modifier
+                                .size(78.dp)
+                                .offset(x = 7.dp)
                         )
-                        Spacer(Modifier.height(3.dp))
-                        Text(
-                            text = stringResource(R.string.edit_daily_step_goal_previous_format, ui.previousGoal),
-                            fontSize = 13.sp,
-                            fontWeight = FontWeight.Normal,
-                            color = colors.textSecondary,
-                            modifier = Modifier.padding(start = 20.dp)
-                        )
+
+                        Column {
+                            Text(
+                                text = ui.previousGoal.toString(),
+                                fontSize = 19.sp,
+                                fontWeight = FontWeight.SemiBold,
+                                color = primaryTextColor,
+                                modifier = Modifier.padding(start = 20.dp)
+                            )
+                            Spacer(Modifier.height(3.dp))
+                            Text(
+                                text = stringResource(R.string.edit_daily_step_goal_previous_format, ui.previousGoal),
+                                fontSize = 13.sp,
+                                fontWeight = FontWeight.Normal,
+                                color = secondaryTextColor,
+                                modifier = Modifier.padding(start = 20.dp)
+                            )
+                        }
                     }
                 }
+
+                Spacer(Modifier.height(22.dp))
+
+                // --- input box (thick black border, label inside) ---
+                StepGoalInputBox(
+                    label = stringResource(R.string.edit_daily_step_goal_input_label),
+                    value = ui.input,
+                    onValueChange = vm::onInputChange,
+                    isError = ui.error != null,
+                    onImeDone = {
+                        if (ui.canSave()) vm.save()
+                        focus.clearFocus()
+                    }
+                )
+
+                Spacer(Modifier.height(22.dp))
+
+                val enabled = ui.canSave()
+                BiteCalEditDualActionRow(
+                    secondaryText = stringResource(R.string.common_revert),
+                    onSecondaryClick = { vm.revert() },
+                    primaryText = stringResource(R.string.common_save),
+                    onPrimaryClick = { vm.save() },
+                    primaryEnabled = enabled,
+                )
+
+                // （圖片沒有顯示錯誤提示；你要 1:1 就先不畫紅字，保留 state 方便之後加）
             }
-
-            Spacer(Modifier.height(22.dp))
-
-            // --- input box (thick black border, label inside) ---
-            StepGoalInputBox(
-                label = stringResource(R.string.edit_daily_step_goal_input_label),
-                value = ui.input,
-                onValueChange = vm::onInputChange,
-                isError = ui.error != null,
-                onImeDone = {
-                    if (ui.canSave()) vm.save()
-                    focus.clearFocus()
-                }
-            )
-
-            Spacer(Modifier.height(22.dp))
-
-            val enabled = ui.canSave()
-            BiteCalEditDualActionRow(
-                secondaryText = stringResource(R.string.common_revert),
-                onSecondaryClick = { vm.revert() },
-                primaryText = stringResource(R.string.common_save),
-                onPrimaryClick = { vm.save() },
-                primaryEnabled = enabled,
-            )
-
-            // （圖片沒有顯示錯誤提示；你要 1:1 就先不畫紅字，保留 state 方便之後加）
         }
     }
 }
@@ -178,12 +195,23 @@ private fun StepGoalInputBox(
     onImeDone: () -> Unit
 ) {
     val colors = BiteCalColors.current()
-    val border = if (isError) colors.error else colors.textPrimary
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val border = when {
+        isError && isDark -> HomeCardStyles.Status.dangerText()
+        isError -> colors.error
+        isDark -> HomeCardStyles.Surface.borderColor()
+        else -> colors.textPrimary
+    }
+    val containerColor = if (isDark) HomeCardStyles.Surface.raisedAlt() else Color.Transparent
+    val labelColor = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
+    val inputColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
 
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .border(width = 2.dp, color = border, shape = RoundedCornerShape(12.dp))
+            .clip(RoundedCornerShape(12.dp))
+            .background(containerColor)
+            .border(width = if (isDark) 1.2.dp else 2.dp, color = border, shape = RoundedCornerShape(12.dp))
             .padding(horizontal = 16.dp, vertical = 18.dp)
             .padding(start = 3.dp)
     ) {
@@ -191,7 +219,7 @@ private fun StepGoalInputBox(
             text = label,
             fontSize = 13.sp,
             fontWeight = FontWeight.Medium,
-            color = colors.textSecondary
+            color = labelColor
         )
         Spacer(Modifier.height(6.dp))
 
@@ -202,9 +230,9 @@ private fun StepGoalInputBox(
             textStyle = TextStyle(
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Normal,
-                color = colors.textPrimary
+                color = inputColor
             ),
-            cursorBrush = SolidColor(colors.textPrimary),
+            cursorBrush = SolidColor(inputColor),
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Number,
                 imeAction = ImeAction.Done

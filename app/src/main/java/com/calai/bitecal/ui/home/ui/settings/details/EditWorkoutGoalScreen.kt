@@ -54,6 +54,8 @@ import com.calai.bitecal.ui.common.design.BiteCalEditDualActionRow
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.common.haptic.hapticOnFocus
+import com.calai.bitecal.ui.home.components.HomeBackground
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import com.calai.bitecal.ui.home.ui.settings.details.model.EditWorkoutGoalViewModel
 import kotlinx.coroutines.flow.collectLatest
 
@@ -66,6 +68,12 @@ fun EditWorkoutGoalScreen(
     val ui by vm.ui.collectAsState()
     val focus = LocalFocusManager.current
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val screenBackground = if (isDark) Color.Transparent else colors.background
+    val cardContainerColor = if (isDark) HomeCardStyles.Surface.card() else colors.surface
+    val cardBorderColor = if (isDark) HomeCardStyles.Surface.borderColor() else colors.border
+    val primaryTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val secondaryTextColor = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
 
     LaunchedEffect(Unit) {
         vm.events.collectLatest { e ->
@@ -76,31 +84,40 @@ fun EditWorkoutGoalScreen(
         }
     }
 
-    Scaffold(
-        containerColor = colors.background,
-        topBar = {
-            BiteCalTopBar(
-                title = stringResource(R.string.edit_workout_goal_title),
-                onBack = onBack
+    Box(modifier = Modifier.fillMaxSize()) {
+        if (isDark) {
+            HomeBackground(
+                modifier = Modifier.fillMaxSize(),
+                darkTheme = true,
+                enableNoise = false
             )
         }
-    ) { inner ->
-        Column(
-            modifier = Modifier
-                .padding(inner)
-                .fillMaxSize()
-                .imePadding()
-                .navigationBarsPadding()
-                .padding(horizontal = BiteCalScreenFrame.contentHorizontalComfort)
-                .padding(top = BiteCalScreenFrame.detailContentTopNudged, bottom = BiteCalScreenFrame.detailBottom)
-        ) {
+
+        Scaffold(
+            containerColor = screenBackground,
+            topBar = {
+                BiteCalTopBar(
+                    title = stringResource(R.string.edit_workout_goal_title),
+                    onBack = onBack
+                )
+            }
+        ) { inner ->
+            Column(
+                modifier = Modifier
+                    .padding(inner)
+                    .fillMaxSize()
+                    .imePadding()
+                    .navigationBarsPadding()
+                    .padding(horizontal = BiteCalScreenFrame.contentHorizontalComfort)
+                    .padding(top = BiteCalScreenFrame.detailContentTopNudged, bottom = BiteCalScreenFrame.detailBottom)
+            ) {
             Spacer(Modifier.height(45.dp))
 
             Surface(
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(18.dp),
-                color = colors.surface,
-                border = BorderStroke(1.dp, colors.border),
+                color = cardContainerColor,
+                border = BorderStroke(1.dp, cardBorderColor),
                 shadowElevation = 0.dp
             ) {
                 Row(
@@ -119,7 +136,7 @@ fun EditWorkoutGoalScreen(
                             text = ui.previousGoalKcal.toString(),
                             fontSize = 19.sp,
                             fontWeight = FontWeight.SemiBold,
-                            color = colors.textPrimary,
+                            color = primaryTextColor,
                             modifier = Modifier.padding(start = 20.dp)
                         )
                         Spacer(Modifier.height(3.dp))
@@ -127,7 +144,7 @@ fun EditWorkoutGoalScreen(
                             text = stringResource(R.string.edit_workout_goal_previous_format, ui.previousGoalKcal),
                             fontSize = 13.sp,
                             fontWeight = FontWeight.Normal,
-                            color = colors.textSecondary,
+                            color = secondaryTextColor,
                             modifier = Modifier.padding(start = 20.dp)
                         )
                     }
@@ -159,6 +176,7 @@ fun EditWorkoutGoalScreen(
         }
     }
 }
+}
 
 @Composable
 private fun WorkoutGoalInputBox(
@@ -168,12 +186,23 @@ private fun WorkoutGoalInputBox(
     onImeDone: () -> Unit
 ) {
     val colors = BiteCalColors.current()
-    val border = if (isError) colors.error else colors.textPrimary
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val border = when {
+        isError && isDark -> HomeCardStyles.Status.dangerText()
+        isError -> colors.error
+        isDark -> HomeCardStyles.Surface.borderColor()
+        else -> colors.textPrimary
+    }
+    val containerColor = if (isDark) HomeCardStyles.Surface.raisedAlt() else Color.Transparent
+    val labelColor = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
+    val inputColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
 
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .border(width = 2.dp, color = border, shape = RoundedCornerShape(12.dp))
+            .clip(RoundedCornerShape(12.dp))
+            .background(containerColor)
+            .border(width = if (isDark) 1.2.dp else 2.dp, color = border, shape = RoundedCornerShape(12.dp))
             .padding(horizontal = 16.dp, vertical = 18.dp)
             .padding(start = 3.dp)
     ) {
@@ -181,7 +210,7 @@ private fun WorkoutGoalInputBox(
             text = stringResource(R.string.edit_workout_goal_input_label),
             fontSize = 13.sp,
             fontWeight = FontWeight.Medium,
-            color = colors.textSecondary
+            color = labelColor
         )
         Spacer(Modifier.height(6.dp))
 
@@ -192,9 +221,9 @@ private fun WorkoutGoalInputBox(
             textStyle = TextStyle(
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Normal,
-                color = colors.textPrimary
+                color = inputColor
             ),
-            cursorBrush = SolidColor(colors.textPrimary),
+            cursorBrush = SolidColor(inputColor),
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Number,
                 imeAction = ImeAction.Done
