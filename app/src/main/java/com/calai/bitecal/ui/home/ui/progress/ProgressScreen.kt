@@ -3,6 +3,7 @@ package com.calai.bitecal.ui.home.ui.progress
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -232,6 +233,8 @@ private fun WeekTabs(
         labels.forEachIndexed { index, label ->
             val active = index == selected
 
+            val interactionSource = remember { MutableInteractionSource() }
+
             Box(
                 modifier = Modifier
                     .weight(1f)
@@ -250,7 +253,11 @@ private fun WeekTabs(
                             Modifier.background(Color.Transparent, activeTabShape)
                         }
                     )
-                    .biteCalClickable { onSelect(index) },
+                    .biteCalClickable(
+                        interactionSource = interactionSource,
+                        indication = null,
+                        onClick = { onSelect(index) }
+                    ),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
