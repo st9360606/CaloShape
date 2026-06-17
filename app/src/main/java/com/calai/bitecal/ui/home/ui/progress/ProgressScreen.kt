@@ -37,6 +37,8 @@ import com.calai.bitecal.ui.common.bmi.CommonBmiCard
 import com.calai.bitecal.ui.common.bmi.CommonBmiCardModel
 import com.calai.bitecal.ui.common.bmi.CommonBmiTone
 import com.calai.bitecal.ui.home.HomeTab
+import com.calai.bitecal.ui.home.components.HomeBackground
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import com.calai.bitecal.ui.home.components.MainBottomBar
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.home.ui.progress.model.BmiCardUi
@@ -54,29 +56,35 @@ fun ProgressScreen(
     val ui by vm.ui.collectAsState()
     var selectedAverageDays by remember { mutableStateOf(7) }
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     LaunchedEffect(Unit) { vm.loadIfNeeded() }
     BackHandler { onBack() }
 
-    Scaffold(
-        containerColor = colors.background,
-        topBar = {
-            BiteCalTopBar(
-                title = stringResource(R.string.progress_screen_title),
-                onBack = onBack
-            )
-        },
-        bottomBar = {
-            MainBottomBar(current = HomeTab.Progress, onOpenTab = onOpenTab)
+    Box(modifier = Modifier.fillMaxSize()) {
+        if (isDark) {
+            HomeBackground()
         }
-    ) { inner ->
-        LazyColumn(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(colors.background)
-                .padding(inner),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
-        ) {
+
+        Scaffold(
+            containerColor = if (isDark) Color.Transparent else colors.background,
+            topBar = {
+                BiteCalTopBar(
+                    title = stringResource(R.string.progress_screen_title),
+                    onBack = onBack
+                )
+            },
+            bottomBar = {
+                MainBottomBar(current = HomeTab.Progress, onOpenTab = onOpenTab)
+            }
+        ) { inner ->
+            LazyColumn(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(if (isDark) Color.Transparent else colors.background)
+                    .padding(inner),
+                verticalArrangement = Arrangement.spacedBy(16.dp)
+            ) {
             item {
                 CommonBmiCard(
                     model = rememberProgressBmiCardModel(ui.bmiCard),
@@ -201,7 +209,8 @@ fun ProgressScreen(
                 )
             }
 
-            item { Spacer(modifier = Modifier.height(5.dp)) }
+                item { Spacer(modifier = Modifier.height(5.dp)) }
+            }
         }
     }
 }
@@ -213,6 +222,12 @@ private fun WeekTabs(
     modifier: Modifier = Modifier
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val containerBg = if (isDark) HomeCardStyles.Chart.insetSurface() else colors.surfaceMuted
+    val activeBg = if (isDark) HomeCardStyles.Chart.surface() else colors.surface
+    val activeBorder = if (isDark) HomeCardStyles.Chart.border() else colors.border
+    val activeText = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val idleText = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
     val labels = listOf(
         stringResource(R.string.progress_tab_this_week),
         stringResource(R.string.progress_tab_last_week),
@@ -225,14 +240,13 @@ private fun WeekTabs(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .background(colors.surfaceMuted, containerShape)
+            .background(containerBg, containerShape)
             .padding(horizontal = 6.dp, vertical = 4.dp),
         horizontalArrangement = Arrangement.spacedBy(4.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         labels.forEachIndexed { index, label ->
             val active = index == selected
-
             val interactionSource = remember { MutableInteractionSource() }
 
             Box(
@@ -247,8 +261,8 @@ private fun WeekTabs(
                                     shape = activeTabShape,
                                     clip = false
                                 )
-                                .background(colors.surface, activeTabShape)
-                                .border(1.dp, colors.border, activeTabShape)
+                                .background(activeBg, activeTabShape)
+                                .border(1.dp, activeBorder, activeTabShape)
                         } else {
                             Modifier.background(Color.Transparent, activeTabShape)
                         }
@@ -262,7 +276,7 @@ private fun WeekTabs(
             ) {
                 Text(
                     text = label,
-                    color = if (active) colors.textPrimary else colors.textSecondary,
+                    color = if (active) activeText else idleText,
                     fontSize = 14.sp,
                     fontWeight = if (active) FontWeight.SemiBold else FontWeight.Medium,
                     maxLines = 1

@@ -39,6 +39,7 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 
 data class CommonBmiInfoDialogModel(
     val title: String,
@@ -68,11 +69,16 @@ fun CommonBmiInfoDialog(
 ) {
     val dismissClick = rememberClickWithHaptic(onClick = onDismiss)
     val colors = BiteCalColors.current()
-    val sectionBg = colors.surfaceMuted
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val dialogSurface = if (isDark) HomeCardStyles.Chart.surface() else colors.surface
+    val dialogBorder = if (isDark) HomeCardStyles.Chart.border() else colors.border
+    val sectionBg = if (isDark) HomeCardStyles.Chart.insetSurface() else colors.surfaceMuted
+    val primaryText = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val secondaryText = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
     val noteBg = Color(0xFFFFF7E8).copy(
-        alpha = if (colors.background == BiteCalColors.Dark.background) 0.16f else 1f
+        alpha = if (isDark) 0.16f else 1f
     )
-    val noteText = if (colors.background == BiteCalColors.Dark.background) {
+    val noteText = if (isDark) {
         Color(0xFFFFD991)
     } else {
         Color(0xFF7A5A12)
@@ -92,17 +98,17 @@ fun CommonBmiInfoDialog(
         ) {
             Surface(
                 shape = RoundedCornerShape(28.dp),
-                color = colors.surface,
+                color = dialogSurface,
                 modifier = Modifier
-                    .offset(y = (-24).dp)
+                    .offset(y = (-60).dp)
                     .fillMaxWidth(0.92f)
                     .widthIn(min = 280.dp, max = 420.dp)
-                    .border(1.dp, colors.border, RoundedCornerShape(28.dp))
+                    .border(1.dp, dialogBorder, RoundedCornerShape(28.dp))
             ) {
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .heightIn(max = 620.dp)
+                        .heightIn(max = 690.dp)
                         .verticalScroll(rememberScrollState())
                         .padding(horizontal = 24.dp, vertical = 24.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
@@ -119,7 +125,7 @@ fun CommonBmiInfoDialog(
                         Icon(
                             imageVector = Icons.AutoMirrored.Outlined.HelpOutline,
                             contentDescription = null,
-                            tint = colors.textSecondary,
+                            tint = secondaryText,
                             modifier = Modifier.size(24.dp)
                         )
                     }
@@ -128,7 +134,7 @@ fun CommonBmiInfoDialog(
 
                     Text(
                         text = model.title,
-                        color = colors.textPrimary,
+                        color = primaryText,
                         fontSize = 22.sp,
                         fontWeight = FontWeight.Bold,
                         textAlign = TextAlign.Center
@@ -138,7 +144,7 @@ fun CommonBmiInfoDialog(
 
                     Text(
                         text = model.subtitle,
-                        color = colors.textSecondary,
+                        color = secondaryText,
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Medium,
                         textAlign = TextAlign.Center
@@ -160,7 +166,7 @@ fun CommonBmiInfoDialog(
 
                             Text(
                                 text = model.formulaValue,
-                                color = colors.textPrimary,
+                                color = primaryText,
                                 fontSize = 18.sp,
                                 fontWeight = FontWeight.Bold,
                                 textAlign = TextAlign.Center,
@@ -177,7 +183,7 @@ fun CommonBmiInfoDialog(
 
                     Text(
                         text = model.meaningBody,
-                        color = colors.textPrimary,
+                        color = primaryText,
                         fontSize = 14.sp,
                         lineHeight = 22.sp,
                         textAlign = TextAlign.Start,
@@ -280,10 +286,11 @@ private fun BmiInfoSectionTitle(
     text: String
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
 
     Text(
         text = text,
-        color = colors.textPrimary,
+        color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
         fontSize = 14.sp,
         fontWeight = FontWeight.SemiBold,
         modifier = Modifier

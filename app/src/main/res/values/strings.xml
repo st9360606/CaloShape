@@ -464,7 +464,7 @@
     <string name="progress_tooltip_fats">Fats</string>
     <string name="progress_tooltip_label_format">%1$s:</string>
     <string name="progress_tooltip_grams_value">%1$d g</string>
-    <string name="progress_tooltip_plain_value">%1$d</string>
+    <string name="progress_tooltip_plain_value">%1$d kcal</string>
 
 
     <!-- =========================

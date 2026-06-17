@@ -43,6 +43,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.TextUnit
@@ -158,7 +159,7 @@ private fun MicronutrientChartCardFrame(
             )
             .padding(horizontal = 22.dp, vertical = 26.dp)
     ) {
-        val averageChipWidth = 122.dp
+        val averageChipWidth = 146.dp
 
         Column(modifier = Modifier.fillMaxWidth()) {
             Row(
@@ -317,7 +318,9 @@ private fun MicronutrientAverageChip(
             color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
             fontSize = 10.sp,
             lineHeight = 12.sp,
-            fontWeight = FontWeight.Bold
+            fontWeight = FontWeight.Bold,
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis
         )
 
         Spacer(modifier = Modifier.height(6.dp))
@@ -373,6 +376,8 @@ private fun MicronutrientAverageMetricRow(
             fontSize = 10.sp,
             lineHeight = 12.sp,
             fontWeight = FontWeight.Bold,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
             modifier = Modifier.weight(1f)
         )
 
@@ -383,7 +388,9 @@ private fun MicronutrientAverageMetricRow(
             color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
             fontSize = 12.sp,
             lineHeight = 12.sp,
-            fontWeight = FontWeight.SemiBold
+            fontWeight = FontWeight.SemiBold,
+            maxLines = 1,
+            softWrap = false
         )
     }
 }

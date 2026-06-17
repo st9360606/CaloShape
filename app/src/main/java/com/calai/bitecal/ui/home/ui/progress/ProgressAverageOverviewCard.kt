@@ -7,6 +7,7 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -105,6 +106,7 @@ private fun AverageRangeTabs(
         labels.forEach { (days, label) ->
             val active = selectedDays == days
             val enabled = availableDays.contains(days)
+            val interactionSource = remember { MutableInteractionSource() }
 
             Box(
                 modifier = Modifier
@@ -131,7 +133,12 @@ private fun AverageRangeTabs(
                             Modifier.background(Color.Transparent, activeTabShape)
                         }
                     )
-                    .biteCalClickable(enabled = enabled) { onSelectedDaysChange(days) },
+                    .biteCalClickable(
+                        enabled = enabled,
+                        interactionSource = interactionSource,
+                        indication = null,
+                        onClick = { onSelectedDaysChange(days) }
+                    ),
                 contentAlignment = Alignment.Center
             ) {
                 Text(

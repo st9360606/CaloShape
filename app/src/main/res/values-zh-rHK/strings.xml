@@ -465,8 +465,8 @@
     <string name="progress_tooltip_carbs">碳水</string>
     <string name="progress_tooltip_fats">脂肪</string>
     <string name="progress_tooltip_label_format">%1$s：</string>
-    <string name="progress_tooltip_grams_value">%1$d g</string>
-    <string name="progress_tooltip_plain_value">%1$d</string>
+    <string name="progress_tooltip_grams_value">%1$d 克</string>
+    <string name="progress_tooltip_plain_value">%1$d 大卡</string>
 
 
     <!-- =========================
@@ -482,7 +482,7 @@
     <string name="progress_tooltip_fiber">纖維</string>
     <string name="progress_tooltip_sugar">糖</string>
     <string name="progress_tooltip_sodium">鈉</string>
-    <string name="progress_tooltip_mg_value">%1$d mg</string>
+    <string name="progress_tooltip_mg_value">%1$d 毫克</string>
 
 
     <!-- =========================

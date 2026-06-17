@@ -42,6 +42,7 @@ import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 
 enum class CommonBmiTone {
     Underweight,
@@ -75,12 +76,17 @@ fun CommonBmiCard(
     var showBmiInfoDialog by rememberSaveable { mutableStateOf(false) }
     val dialogModel = rememberCommonBmiInfoDialogModel()
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val cardContainer = if (isDark) HomeCardStyles.Chart.surface() else colors.surface
+    val cardBorder = if (isDark) HomeCardStyles.Chart.border() else colors.border
+    val primaryText = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val secondaryText = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
 
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .background(colors.surface, RoundedCornerShape(28.dp))
-            .border(1.dp, colors.border, RoundedCornerShape(28.dp))
+            .background(cardContainer, RoundedCornerShape(28.dp))
+            .border(1.dp, cardBorder, RoundedCornerShape(28.dp))
             .padding(start = 22.dp, top = 22.dp, end = 22.dp, bottom = 0.dp)
     ) {
         Row(
@@ -90,7 +96,7 @@ fun CommonBmiCard(
         ) {
             Text(
                 text = model.titleText,
-                color = colors.textPrimary,
+                color = primaryText,
                 fontSize = 24.sp,
                 lineHeight = 26.sp,
                 fontWeight = FontWeight.Bold,
@@ -110,7 +116,7 @@ fun CommonBmiCard(
                 Icon(
                     imageVector = Icons.AutoMirrored.Outlined.HelpOutline,
                     contentDescription = stringResource(R.string.bmi_info_title),
-                    tint = colors.textSecondary,
+                    tint = secondaryText,
                     modifier = Modifier.size(23.dp)
                 )
             }
@@ -128,7 +134,7 @@ fun CommonBmiCard(
             ) {
                 Text(
                     text = model.bmiText,
-                    color = colors.textPrimary,
+                    color = primaryText,
                     fontSize = 35.sp,
                     fontWeight = FontWeight.Bold,
                     lineHeight = 35.sp,
@@ -139,7 +145,7 @@ fun CommonBmiCard(
 
                 Text(
                     text = model.subtitleText,
-                    color = colors.textSecondary,
+                    color = secondaryText,
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Medium,
                     maxLines = 1,
@@ -336,6 +342,9 @@ private fun CommonBmiLegendItem(
     modifier: Modifier = Modifier
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val labelText = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
+    val rangeLabelText = if (isDark) HomeCardStyles.Text.muted() else colors.textMuted
     val dotSize = 8.dp
     val dotGap = 4.dp
 
@@ -355,7 +364,7 @@ private fun CommonBmiLegendItem(
         Column {
             Text(
                 text = label,
-                color = colors.textSecondary,
+                color = labelText,
                 fontSize = 12.sp,
                 lineHeight = 14.sp,
                 fontWeight = FontWeight.Medium,
@@ -367,7 +376,7 @@ private fun CommonBmiLegendItem(
 
             Text(
                 text = rangeText,
-                color = colors.textMuted,
+                color = rangeLabelText,
                 fontSize = 11.sp,
                 lineHeight = 13.sp,
                 fontWeight = FontWeight.Medium,
