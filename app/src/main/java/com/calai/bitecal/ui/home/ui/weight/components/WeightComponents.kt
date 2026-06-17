@@ -2,6 +2,7 @@ package com.calai.bitecal.ui.home.ui.weight.components
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
@@ -454,12 +455,6 @@ fun formatWeightCard(
 // Filter Tabs
 // ----------------------------------------------------------
 
-private val WeightFilterTabsContainerBg = Color(0xFFF1F1F3)
-private val WeightFilterTabsActiveBg = Color(0xFFFFFFFF)
-private val WeightFilterTabsActiveBorder = Color(0xFFE2E2E6)
-private val WeightFilterTabsActiveText = Color(0xFF2D2F35)
-private val WeightFilterTabsIdleText = Color(0xFF3A3D43)
-
 private data class RangeTab(
     val key: String,
     val labelRes: Int
@@ -484,12 +479,13 @@ fun FilterTabs(
 
     val containerShape = RoundedCornerShape(18.dp)
     val activeTabShape = RoundedCornerShape(14.dp)
-    val isDark = HomeCardStyles.isDark()
-    val containerBg = if (isDark) HomeCardStyles.Surface.raisedAlt() else WeightFilterTabsContainerBg
-    val activeBg = if (isDark) HomeCardStyles.Surface.card() else WeightFilterTabsActiveBg
-    val activeBorder = if (isDark) HomeCardStyles.Surface.borderColor() else WeightFilterTabsActiveBorder
-    val activeText = if (isDark) HomeCardStyles.Text.primary() else WeightFilterTabsActiveText
-    val idleText = if (isDark) HomeCardStyles.Text.label() else WeightFilterTabsIdleText
+    val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val containerBg = if (isDark) HomeCardStyles.Surface.raisedAlt() else colors.surfaceMuted
+    val activeBg = if (isDark) HomeCardStyles.Surface.card() else colors.surface
+    val activeBorder = if (isDark) HomeCardStyles.Surface.borderColor() else colors.border
+    val activeText = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val idleText = if (isDark) HomeCardStyles.Text.label() else colors.textSecondary
 
     Row(
         modifier = modifier
@@ -501,6 +497,7 @@ fun FilterTabs(
     ) {
         tabs.forEachIndexed { index, tab ->
             val isSelected = index == selectedIndex
+            val interactionSource = remember { MutableInteractionSource() }
 
             Box(
                 modifier = Modifier
@@ -520,7 +517,11 @@ fun FilterTabs(
                             Modifier.background(Color.Transparent, activeTabShape)
                         }
                     )
-                    .biteCalClickable { onSelect(tab.key) },
+                    .biteCalClickable(
+                        interactionSource = interactionSource,
+                        indication = null,
+                        onClick = { onSelect(tab.key) }
+                    ),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
@@ -1761,7 +1762,7 @@ fun HistoryRow(
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .height(85.dp)
+            .height(94.dp)
             .border(1.dp, cardBorder, shape),
         shape = shape,
         colors = CardDefaults.cardColors(containerColor = cardContainer)
@@ -1820,7 +1821,7 @@ fun HistoryRow(
                         overflow = TextOverflow.Ellipsis
                     )
 
-                    Spacer(Modifier.height(6.dp))
+                    Spacer(Modifier.height(7.dp))
 
                     Text(
                         text = weightText,
@@ -1877,8 +1878,8 @@ private fun RightMetaColumn(
 ) {
     Column(
         modifier = modifier
-            .widthIn(min = 88.dp, max = 106.dp)
-            .height(58.dp),
+            .widthIn(min = 92.dp, max = 116.dp)
+            .height(66.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
@@ -1893,6 +1894,9 @@ private fun RightMetaColumn(
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )
+
+        Spacer(Modifier.height(7.dp))
+
         Text(
             text = deltaText,
             fontSize = 14.sp,
@@ -1901,11 +1905,10 @@ private fun RightMetaColumn(
             color = deltaColor,
             textAlign = TextAlign.Center,
             maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-            modifier = Modifier.offset(y = 2.dp)
+            overflow = TextOverflow.Ellipsis
         )
 
-        Spacer(Modifier.height(4.dp))
+        Spacer(Modifier.height(7.dp))
 
         MiniChip(text = chipText, bg = chipBg, fg = chipFg)
     }
