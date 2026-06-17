@@ -131,8 +131,11 @@ import com.calai.bitecal.ui.common.design.BiteCalSecondaryOutlinedButton
 import com.calai.bitecal.widget.BiteCalHomeWidgetUpdater
 import com.calai.bitecal.widget.BiteCalWidgetSnapshotStore
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.material.icons.rounded.KeyboardArrowDown
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.window.DialogProperties
+
 /**
  * ✅ Personal => Settings（你圖上的那個）
  * - 內容可捲動
@@ -342,14 +345,27 @@ fun SettingsScreen(
     )
 
     if (showAppearanceDialog) {
-        AppearanceModeDialog(
-            currentMode = appearanceMode,
-            onPick = { mode ->
-                showAppearanceDialog = false
-                onAppearanceModeSelected(mode)
-            },
-            onDismiss = { showAppearanceDialog = false }
-        )
+        val appearanceDialogTitle = stringResource(R.string.settings_appearance_mode_title)
+        val appearanceLightTitle = stringResource(R.string.settings_appearance_light)
+        val appearanceLightDescription = stringResource(R.string.settings_appearance_light_description)
+        val appearanceDarkTitle = stringResource(R.string.settings_appearance_dark)
+        val appearanceDarkDescription = stringResource(R.string.settings_appearance_dark_description)
+
+        key(localeKey, appearanceMode) {
+            AppearanceModeDialog(
+                currentMode = appearanceMode,
+                titleText = appearanceDialogTitle,
+                lightTitle = appearanceLightTitle,
+                lightDescription = appearanceLightDescription,
+                darkTitle = appearanceDarkTitle,
+                darkDescription = appearanceDarkDescription,
+                onPick = { mode ->
+                    showAppearanceDialog = false
+                    onAppearanceModeSelected(mode)
+                },
+                onDismiss = { showAppearanceDialog = false }
+            )
+        }
     }
 
     if (showLanguageDialog) {
@@ -1495,60 +1511,68 @@ private fun PreferencesExpandArrow(
 @Composable
 private fun AppearanceModeDialog(
     currentMode: AppearanceMode,
+    titleText: String,
+    lightTitle: String,
+    lightDescription: String,
+    darkTitle: String,
+    darkDescription: String,
     onPick: (AppearanceMode) -> Unit,
     onDismiss: () -> Unit
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val dialogSurface = if (isDark) HomeCardStyles.Dialog.surface() else colors.surface
+    val dialogBorder = if (isDark) HomeCardStyles.Dialog.border() else colors.border
+    val titleColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
 
-    Dialog(onDismissRequest = onDismiss) {
+    Dialog(
+        onDismissRequest = onDismiss,
+        properties = DialogProperties(
+            usePlatformDefaultWidth = false
+        )
+    ) {
         Surface(
+            modifier = Modifier
+                .fillMaxWidth(0.84f)
+                .widthIn(max = 390.dp)
+                .heightIn(min = 310.dp),
             shape = RoundedCornerShape(28.dp),
-            color = colors.surface,
-            border = BorderStroke(1.dp, colors.border),
+            color = dialogSurface,
+            border = BorderStroke(1.2.dp, dialogBorder),
             tonalElevation = 0.dp,
-            shadowElevation = 12.dp
+            shadowElevation = if (isDark) 0.dp else 12.dp
         ) {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 18.dp, vertical = 18.dp)
+                    .padding(horizontal = 28.dp, vertical = 28.dp)
             ) {
                 Text(
-                    text = stringResource(R.string.settings_appearance_mode_title),
+                    text = titleText,
+                    modifier = Modifier.fillMaxWidth(),
                     style = MaterialTheme.typography.titleLarge.copy(
-                        color = colors.textPrimary,
+                        color = titleColor,
                         fontWeight = FontWeight.Bold,
                         fontSize = 20.sp,
                         lineHeight = 25.sp
-                    )
+                    ),
+                    textAlign = TextAlign.Center
                 )
 
-                Spacer(Modifier.height(6.dp))
-
-                Text(
-                    text = stringResource(R.string.settings_appearance_mode_body),
-                    style = MaterialTheme.typography.bodyMedium.copy(
-                        color = colors.textSecondary,
-                        fontWeight = FontWeight.Medium,
-                        fontSize = 14.sp,
-                        lineHeight = 20.sp
-                    )
-                )
-
-                Spacer(Modifier.height(16.dp))
+                Spacer(Modifier.height(22.dp))
 
                 AppearanceModeOption(
-                    titleRes = R.string.settings_appearance_light,
-                    descriptionRes = R.string.settings_appearance_light_description,
+                    title = lightTitle,
+                    description = lightDescription,
                     selected = currentMode == AppearanceMode.LIGHT,
                     onClick = { onPick(AppearanceMode.LIGHT) }
                 )
 
-                Spacer(Modifier.height(10.dp))
+                Spacer(Modifier.height(14.dp))
 
                 AppearanceModeOption(
-                    titleRes = R.string.settings_appearance_dark,
-                    descriptionRes = R.string.settings_appearance_dark_description,
+                    title = darkTitle,
+                    description = darkDescription,
                     selected = currentMode == AppearanceMode.DARK,
                     onClick = { onPick(AppearanceMode.DARK) }
                 )
@@ -1559,18 +1583,32 @@ private fun AppearanceModeDialog(
 
 @Composable
 private fun AppearanceModeOption(
-    @StringRes titleRes: Int,
-    @StringRes descriptionRes: Int,
+    title: String,
+    description: String,
     selected: Boolean,
     onClick: () -> Unit
 ) {
     val colors = BiteCalColors.current()
-    val accent = if (selected) Color(0xFFFF9F43) else colors.textMuted
-    val container = if (selected) {
-        Color(0xFFFF9F43).copy(alpha = if (colors.background == BiteCalColors.Dark.background) 0.18f else 0.10f)
-    } else {
-        colors.surfaceMuted
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val accent = if (selected) Color(0xFFFFB86B) else if (isDark) HomeCardStyles.Text.muted() else colors.textMuted
+    val container = when {
+        selected && isDark -> Color(0xFFFFB86B).copy(alpha = 0.16f)
+        selected -> Color(0xFFFF9F43).copy(alpha = 0.10f)
+        isDark -> HomeCardStyles.Dialog.panel()
+        else -> colors.surfaceMuted
     }
+    val optionBorder = when {
+        selected -> accent.copy(alpha = if (isDark) 0.58f else 0.50f)
+        isDark -> HomeCardStyles.Dialog.border()
+        else -> colors.border
+    }
+    val iconContainer = when {
+        selected -> accent.copy(alpha = if (isDark) 0.20f else 0.18f)
+        isDark -> HomeCardStyles.Surface.raisedAlt()
+        else -> colors.surface
+    }
+    val titleColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val descriptionColor = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
 
     Row(
         modifier = Modifier
@@ -1579,21 +1617,21 @@ private fun AppearanceModeOption(
             .background(container)
             .border(
                 width = 1.dp,
-                color = if (selected) accent.copy(alpha = 0.50f) else colors.border,
+                color = optionBorder,
                 shape = RoundedCornerShape(18.dp)
             )
             .biteCalClickable(onClick = onClick)
-            .padding(horizontal = 14.dp, vertical = 13.dp),
+            .padding(horizontal = 16.dp, vertical = 15.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Box(
             modifier = Modifier
                 .size(34.dp)
                 .clip(CircleShape)
-                .background(if (selected) accent.copy(alpha = 0.18f) else colors.surface)
+                .background(iconContainer)
                 .border(
                     width = 1.dp,
-                    color = if (selected) accent.copy(alpha = 0.48f) else colors.border,
+                    color = if (selected) accent.copy(alpha = 0.48f) else optionBorder,
                     shape = CircleShape
                 ),
             contentAlignment = Alignment.Center
@@ -1606,23 +1644,23 @@ private fun AppearanceModeOption(
             )
         }
 
-        Spacer(Modifier.width(12.dp))
+        Spacer(Modifier.width(14.dp))
 
         Column(Modifier.weight(1f)) {
             Text(
-                text = stringResource(titleRes),
+                text = title,
                 style = MaterialTheme.typography.titleMedium.copy(
-                    color = colors.textPrimary,
+                    color = titleColor,
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 16.sp,
                     lineHeight = 21.sp
                 )
             )
-            Spacer(Modifier.height(2.dp))
+            Spacer(Modifier.height(3.dp))
             Text(
-                text = stringResource(descriptionRes),
+                text = description,
                 style = MaterialTheme.typography.bodySmall.copy(
-                    color = colors.textSecondary,
+                    color = descriptionColor,
                     fontWeight = FontWeight.Medium,
                     fontSize = 13.sp,
                     lineHeight = 18.sp
