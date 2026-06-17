@@ -162,7 +162,9 @@ fun HealthPlanScreen(
 
             Text(
                 text = stringResource(R.string.plan_title_congrats),
-                fontSize = 32.sp,
+                color = Color(0xFF111114),
+                fontSize = 31.sp,
+                lineHeight = 37.sp,
                 fontWeight = FontWeight.ExtraBold,
                 textAlign = TextAlign.Center
             )
@@ -175,9 +177,9 @@ fun HealthPlanScreen(
             ) {
                 Text(
                     text = stringResource(R.string.plan_subtitle_ready),
-                    color = Color(0xFF596272),
+                    color = Color(0xFF667085),
                     fontSize = 15.sp,
-                    lineHeight = 20.sp,
+                    lineHeight = 21.sp,
                     fontWeight = FontWeight.Medium,
                     textAlign = TextAlign.Center
                 )
@@ -222,9 +224,10 @@ fun HealthPlanScreen(
 
             Text(
                 text = stringResource(R.string.plan_disclaimer),
-                color = Color(0xFF9AA3AF),
+                color = Color(0xFF8A94A6),
                 fontSize = 12.sp,
-                lineHeight = 15.sp,
+                lineHeight = 16.sp,
+                fontWeight = FontWeight.Medium,
                 textAlign = TextAlign.Center,
                 modifier = Modifier
                     .fillMaxWidth()
@@ -307,10 +310,16 @@ private fun DonutMacros(
         }
 
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(kcal.toString(), fontSize = 44.sp, fontWeight = FontWeight.ExtraBold)
+            Text(
+                text = kcal.toString(),
+                color = Color(0xFF111114),
+                fontSize = 44.sp,
+                lineHeight = 48.sp,
+                fontWeight = FontWeight.ExtraBold
+            )
             Text(
                 text = stringResource(R.string.plan_unit_kcal_day),
-                color = Color(0xFF7C8493),
+                color = Color(0xFF667085),
                 fontSize = 14.sp,
                 lineHeight = 18.sp,
                 fontWeight = FontWeight.Medium
@@ -472,19 +481,25 @@ private fun MacroRingItem(
             }
             Text(
                 text = centerText,
-                fontSize = 16.sp,
+                color = Color(0xFF111114),
+                fontSize = 15.sp,
+                lineHeight = 18.sp,
                 fontWeight = FontWeight.Bold,
-                textAlign = TextAlign.Center
+                textAlign = TextAlign.Center,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
             )
         }
         Spacer(Modifier.height(6.dp))
         Text(
             text = title,
-            color = Color(0xFF4F5968),
-            fontSize = 13.sp,
-            lineHeight = 16.sp,
+            color = Color(0xFF667085),
+            fontSize = 12.sp,
+            lineHeight = 15.sp,
             fontWeight = FontWeight.SemiBold,
-            textAlign = TextAlign.Center
+            textAlign = TextAlign.Center,
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis
         )
     }
 }
@@ -519,7 +534,8 @@ fun GoalsHowToSection(
             ) {
                 Text(
                     text = stringResource(R.string.plan_goals_title),
-                    fontSize = 32.sp,
+                    color = Color(0xFF111114),
+                    fontSize = 30.sp,
                     fontWeight = FontWeight.ExtraBold,
                     lineHeight = 34.sp,
                     textAlign = TextAlign.Center
@@ -621,9 +637,12 @@ private fun FeatureCard(
 
             Text(
                 text = stringResource(titleRes),
+                color = Color(0xFF1F2937),
                 fontSize = 16.sp,
                 fontWeight = FontWeight.SemiBold,
-                lineHeight = 20.sp
+                lineHeight = 21.sp,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis
             )
         }
     }
@@ -657,9 +676,10 @@ private fun SourcesHeader(
             Spacer(Modifier.width(10.dp))
             Text(
                 text = text,
-                color = Color(0xFF9AA3AF),
+                color = Color(0xFF7C8493),
                 fontSize = 12.sp,
-                lineHeight = 15.sp,
+                lineHeight = 16.sp,
+                fontWeight = FontWeight.Medium,
                 textAlign = TextAlign.Center,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
@@ -715,8 +735,10 @@ fun ResearchSourcesBlock(
         ) {
             Text(
                 text = toggleLabel,
-                color = Color(0xFF9AA3AF),
+                color = Color(0xFF7C8493),
                 fontSize = 12.sp,
+                lineHeight = 16.sp,
+                fontWeight = FontWeight.Medium,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.biteCalClickable(
                     interactionSource = sourcesToggleInteraction,
@@ -746,9 +768,10 @@ fun ResearchSourcesBlock(
                 links.forEach { (label, url) ->
                     Text(
                         text = label,
-                        color = Color(0xFF9AA3AF),
+                        color = Color(0xFF667085),
                         fontSize = 13.sp,
                         lineHeight = 18.sp,
+                        fontWeight = FontWeight.Medium,
                         textAlign = TextAlign.Center,
                         style = TextStyle(textDecoration = TextDecoration.Underline),
                         modifier = Modifier

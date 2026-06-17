@@ -145,7 +145,7 @@ fun CommonBmiCard(
                     modifier = Modifier.widthIn(min = 92.dp)
                 )
 
-                Spacer(modifier = Modifier.width(6.dp))
+                Spacer(modifier = Modifier.width(8.dp))
 
                 CommonBmiStatusPill(
                     text = model.statusText,
@@ -262,16 +262,17 @@ private fun CommonBmiStatusPill(
 
     Box(
         modifier = Modifier
-            .widthIn(min = 72.dp, max = 132.dp)
-            .heightIn(min = 28.dp)
+            .widthIn(min = 64.dp, max = 136.dp)
+            .heightIn(min = 24.dp)
             .background(bg, RoundedCornerShape(999.dp))
-            .padding(horizontal = 14.dp, vertical = 6.dp),
+            .padding(horizontal = 11.dp, vertical = 3.dp),
         contentAlignment = Alignment.Center
     ) {
         Text(
             text = text,
             color = Color.White,
-            fontSize = 12.sp,
+            fontSize = 11.sp,
+            lineHeight = 13.sp,
             fontWeight = FontWeight.SemiBold,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
