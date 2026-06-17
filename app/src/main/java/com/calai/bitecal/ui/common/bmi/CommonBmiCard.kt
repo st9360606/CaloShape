@@ -81,7 +81,7 @@ fun CommonBmiCard(
             .fillMaxWidth()
             .background(colors.surface, RoundedCornerShape(28.dp))
             .border(1.dp, colors.border, RoundedCornerShape(28.dp))
-            .padding(horizontal = 22.dp, vertical = 22.dp)
+            .padding(start = 22.dp, top = 22.dp, end = 22.dp, bottom = 0.dp)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -101,6 +101,7 @@ fun CommonBmiCard(
 
             Box(
                 modifier = Modifier
+                    .offset(x = 6.dp)
                     .size(36.dp)
                     .clip(CircleShape)
                     .biteCalClickable { showBmiInfoDialog = true },
@@ -160,7 +161,7 @@ fun CommonBmiCard(
             markerProgress = model.markerProgress
         )
 
-        Spacer(modifier = Modifier.height(18.dp))
+        Spacer(modifier = Modifier.height(20.dp))
 
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -188,6 +189,7 @@ fun CommonBmiCard(
                 rangeText = stringResource(R.string.bmi_range_obese)
             )
         }
+        Spacer(modifier = Modifier.height(24.dp))
     }
 
     if (showBmiInfoDialog) {
