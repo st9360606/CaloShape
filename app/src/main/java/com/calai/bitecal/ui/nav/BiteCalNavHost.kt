@@ -99,6 +99,7 @@ import com.calai.bitecal.ui.home.ui.settings.details.EditStartingWeightScreen
 import com.calai.bitecal.ui.home.ui.settings.details.EditWaterGoalScreen
 import com.calai.bitecal.ui.home.ui.settings.details.EditWorkoutGoalScreen
 import com.calai.bitecal.ui.home.ui.settings.details.PersonalDetailsScreen
+import com.calai.bitecal.ui.home.ui.settings.details.model.AutoGenEvent
 import com.calai.bitecal.ui.home.ui.settings.details.model.AutoGenerateGoalsCalcViewModel
 import com.calai.bitecal.ui.home.ui.settings.details.model.EditAgeViewModel
 import com.calai.bitecal.ui.home.ui.settings.details.model.EditDailyStepGoalViewModel
@@ -2282,6 +2283,7 @@ fun BiteCalNavHost(
 
             composable(Routes.AUTO_GENERATE_GOALS) { backStackEntry ->
                 val activity = (LocalContext.current.findActivity() ?: hostActivity)
+                val context = LocalContext.current
                 val flowBackStackEntry = remember(backStackEntry) {
                     nav.getBackStackEntry(Routes.AUTO_GENERATE_FLOW)
                 }
@@ -2289,11 +2291,46 @@ fun BiteCalNavHost(
                     viewModelStoreOwner = flowBackStackEntry,
                     factory = HiltViewModelFactory(activity, flowBackStackEntry)
                 )
+                val calcVm: AutoGenerateGoalsCalcViewModel = viewModel(
+                    viewModelStoreOwner = backStackEntry,
+                    factory = HiltViewModelFactory(activity, backStackEntry)
+                )
+                val committing by calcVm.committing.collectAsState()
+
+                LaunchedEffect(calcVm) {
+                    calcVm.events.collectLatest { ev ->
+                        when (ev) {
+                            is AutoGenEvent.Success -> {
+                                val target = runCatching {
+                                    nav.getBackStackEntry(Routes.EDIT_NUTRITION_GOALS)
+                                }.getOrNull()
+                                target?.savedStateHandle?.set(NavResults.AUTO_GEN_RELOAD, true)
+                                target?.savedStateHandle?.set(NavResults.SUCCESS_TOAST, ev.message)
+
+                                val popped = nav.popBackStack(
+                                    Routes.EDIT_NUTRITION_GOALS,
+                                    inclusive = false
+                                )
+                                if (!popped) {
+                                    nav.navigate(Routes.EDIT_NUTRITION_GOALS) {
+                                        launchSingleTop = true
+                                        restoreState = false
+                                    }
+                                }
+                            }
+
+                            is AutoGenEvent.Error -> {
+                                Toast.makeText(context, ev.message, Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    }
+                }
 
                 GoalSelectionScreen(
                     vm = vm,
                     onBack = { nav.popBackStack() },
-                    onNext = { nav.navigate(Routes.AUTO_GENERATE_GOALS_CALC) }
+                    onNext = { calcVm.commit() },
+                    primaryLoading = committing
                 )
             }
 

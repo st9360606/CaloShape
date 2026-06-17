@@ -38,8 +38,11 @@ class GoalSelectionViewModel @Inject constructor(
         _uiState.update { it.copy(selected = key) }
     }
 
-    fun saveSelected() {
+    fun saveSelected(onSaved: () -> Unit = {}) {
         val sel = _uiState.value.selected ?: return
-        viewModelScope.launch { store.setGoal(sel.name) }
+        viewModelScope.launch {
+            store.setGoal(sel.name)
+            onSaved()
+        }
     }
 }

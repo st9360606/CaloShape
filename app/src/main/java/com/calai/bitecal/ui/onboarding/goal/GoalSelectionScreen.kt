@@ -41,6 +41,7 @@ import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 fun GoalSelectionScreen(
     onBack: () -> Unit,
     onNext: () -> Unit,
+    primaryLoading: Boolean = false,
     vm: GoalSelectionViewModel = hiltViewModel()
 ) {
     val state by vm.uiState.collectAsState()
@@ -57,10 +58,12 @@ fun GoalSelectionScreen(
         bottomBar = {
             BiteCalOnboardingBottomBar(
                 primaryText = stringResource(R.string.common_continue_btn),
-                primaryEnabled = state.selected != null,
+                primaryEnabled = state.selected != null && !primaryLoading,
+                primaryLoading = primaryLoading,
                 onPrimaryClick = {
-                    vm.saveSelected()
-                    onNext()
+                    vm.saveSelected {
+                        onNext()
+                    }
                 }
             )
         },
