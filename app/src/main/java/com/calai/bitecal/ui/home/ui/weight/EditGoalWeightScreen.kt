@@ -1,5 +1,6 @@
 package com.calai.bitecal.ui.home.ui.weight
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
@@ -69,6 +70,8 @@ import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.common.haptic.HapticWheelTickEffect
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
+import com.calai.bitecal.ui.home.components.HomeBackground
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
@@ -81,6 +84,12 @@ fun EditGoalWeightScreen(
     val scope = rememberCoroutineScope()
     val snackbarHostState = remember { SnackbarHostState() }
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val screenBackground = if (isDark) Color.Transparent else colors.background
+    val helperTextColor = if (isDark) HomeCardStyles.Text.muted() else colors.textMuted
+    val wheelAccentTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val buttonContainerColor = if (isDark) Color.White.copy(alpha = 0.92f) else colors.primaryButtonContainer
+    val buttonContentColor = if (isDark) Color(0xFF111114) else colors.primaryButtonContent
 
     val kgMin = 20.0
     val kgMax = 800.0
@@ -137,8 +146,17 @@ fun EditGoalWeightScreen(
     var isSaving by remember { mutableStateOf(false) }
     val updateGoalWeightFailedMessage = stringResource(R.string.edit_goal_update_failed)
 
-    Scaffold(
-        containerColor = colors.background,
+    Box(modifier = Modifier.fillMaxSize()) {
+        if (isDark) {
+            HomeBackground(
+                modifier = Modifier.matchParentSize(),
+                darkTheme = true,
+                enableNoise = false
+            )
+        }
+
+        Scaffold(
+            containerColor = screenBackground,
         topBar = {
             BiteCalTopBar(
                 title = stringResource(R.string.edit_goal_weight_title),
@@ -192,15 +210,17 @@ fun EditGoalWeightScreen(
                         enabled = !isSaving,
                         shape = RoundedCornerShape(28.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = colors.primaryButtonContainer,
-                            contentColor = colors.primaryButtonContent
+                            containerColor = buttonContainerColor,
+                            contentColor = buttonContentColor,
+                            disabledContainerColor = buttonContainerColor.copy(alpha = if (isDark) 0.72f else 0.38f),
+                            disabledContentColor = buttonContentColor.copy(alpha = if (isDark) 0.62f else 0.38f)
                         )
                     ) {
                         if (isSaving) {
                             CircularProgressIndicator(
                                 modifier = Modifier.size(18.dp),
                                 strokeWidth = 2.dp,
-                                color = colors.primaryButtonContent
+                                color = buttonContentColor
                             )
                         } else {
                             Text(
@@ -260,7 +280,12 @@ fun EditGoalWeightScreen(
                             .width(120.dp)
                             .padding(start = 35.dp)
                     )
-                    Text(".", fontSize = 34.sp, modifier = Modifier.padding(horizontal = 6.dp))
+                    Text(
+                        text = ".",
+                        fontSize = 34.sp,
+                        color = wheelAccentTextColor,
+                        modifier = Modifier.padding(horizontal = 6.dp)
+                    )
                     NumberWheelForGoal(
                         range = 0..9,
                         value = kgDecSel,
@@ -280,7 +305,12 @@ fun EditGoalWeightScreen(
                             .padding(end = 7.dp)
                     )
                     Spacer(Modifier.width(10.dp))
-                    Text("kg", fontSize = 22.sp, fontWeight = FontWeight.SemiBold)
+                    Text(
+                        text = "kg",
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = wheelAccentTextColor
+                    )
                 }
             } else {
                 Row(
@@ -307,7 +337,12 @@ fun EditGoalWeightScreen(
                             .width(120.dp)
                             .padding(start = 35.dp)
                     )
-                    Text(".", fontSize = 34.sp, modifier = Modifier.padding(horizontal = 6.dp))
+                    Text(
+                        text = ".",
+                        fontSize = 34.sp,
+                        color = wheelAccentTextColor,
+                        modifier = Modifier.padding(horizontal = 6.dp)
+                    )
                     NumberWheelForGoal(
                         range = 0..9,
                         value = lbsDecSel,
@@ -326,7 +361,12 @@ fun EditGoalWeightScreen(
                             .padding(end = 7.dp)
                     )
                     Spacer(Modifier.width(8.dp))
-                    Text("lbs", fontSize = 22.sp, fontWeight = FontWeight.SemiBold)
+                    Text(
+                        text = "lbs",
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = wheelAccentTextColor
+                    )
                 }
             }
 
@@ -338,17 +378,9 @@ fun EditGoalWeightScreen(
                     modifier = Modifier.fillMaxWidth(0.8f)
                 ) {
                     Text(
-                        text = stringResource(R.string.edit_goal_weight_set_goal),
-                        fontSize = 12.sp,
-                        color = colors.textMuted,
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.fillMaxWidth()
-                    )
-                    Spacer(Modifier.height(4.dp))
-                    Text(
                         text = stringResource(R.string.edit_goal_weight_progress_note),
                         fontSize = 12.sp,
-                        color = colors.textMuted,
+                        color = helperTextColor,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -357,6 +389,7 @@ fun EditGoalWeightScreen(
 
             Spacer(Modifier.height(40.dp))
         }
+    }
     }
 }
 
@@ -369,10 +402,17 @@ private fun WeightUnitSegmentedForGoal(
     modifier: Modifier = Modifier
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val containerColor = if (isDark) HomeCardStyles.Surface.raisedAlt() else colors.surfaceMuted
+    val containerBorder = if (isDark) HomeCardStyles.Surface.borderColor() else Color.Transparent
+    val selectedColor = if (isDark) HomeCardStyles.Camera.selectedTile() else colors.primaryButtonContainer
+    val selectedContentColor = if (isDark) HomeCardStyles.Camera.selectedTileContent() else colors.primaryButtonContent
+    val idleContentColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
 
     Surface(
         shape = RoundedCornerShape(40.dp),
-        color = colors.surfaceMuted,
+        color = containerColor,
+        border = if (isDark) BorderStroke(1.dp, containerBorder) else null,
         modifier = modifier
             .fillMaxWidth(0.55f)
             .heightIn(min = 40.dp)
@@ -382,7 +422,9 @@ private fun WeightUnitSegmentedForGoal(
                 text = "lbs",
                 selected = !useMetric,
                 onClick = { onChange(false) },
-                selectedColor = colors.primaryButtonContainer,
+                selectedColor = selectedColor,
+                selectedContentColor = selectedContentColor,
+                idleContentColor = idleContentColor,
                 modifier = Modifier.weight(1f).height(40.dp)
             )
             Spacer(Modifier.width(6.dp))
@@ -390,7 +432,9 @@ private fun WeightUnitSegmentedForGoal(
                 text = "kg",
                 selected = useMetric,
                 onClick = { onChange(true) },
-                selectedColor = colors.primaryButtonContainer,
+                selectedColor = selectedColor,
+                selectedContentColor = selectedContentColor,
+                idleContentColor = idleContentColor,
                 modifier = Modifier.weight(1f).height(40.dp)
             )
         }
@@ -403,9 +447,10 @@ private fun SegItemForGoal(
     selected: Boolean,
     onClick: () -> Unit,
     selectedColor: Color,
+    selectedContentColor: Color,
+    idleContentColor: Color,
     modifier: Modifier = Modifier
 ) {
-    val colors = BiteCalColors.current()
     val corner = 22.dp
     val fSize = 18.sp
     Surface(
@@ -425,7 +470,7 @@ private fun SegItemForGoal(
                 text = text,
                 fontSize = fSize,
                 fontWeight = FontWeight.SemiBold,
-                color = if (selected) colors.primaryButtonContent else colors.textPrimary,
+                color = if (selected) selectedContentColor else idleContentColor,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.fillMaxWidth()
             )
@@ -449,6 +494,13 @@ private fun NumberWheelForGoal(
     label: (Int) -> String = { it.toString() }
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val numberTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val centerLineColor = if (isDark) {
+        HomeCardStyles.Surface.borderColor().copy(alpha = 0.88f)
+    } else {
+        colors.border.copy(alpha = 0.72f)
+    }
     val visibleCount = 5
     val mid = visibleCount / 2
     val items = remember(range) { range.toList() }
@@ -512,14 +564,14 @@ private fun NumberWheelForGoal(
                         text = label(num),
                         fontSize = size,
                         fontWeight = weight,
-                        color = colors.textPrimary.copy(alpha = alpha),
+                        color = numberTextColor.copy(alpha = alpha),
                         textAlign = TextAlign.Center
                     )
                 }
             }
         }
 
-        val lineColor = colors.border.copy(alpha = 0.72f)
+        val lineColor = centerLineColor
         val half = rowHeight / 2
         val lineThickness = 1.dp
         Box(

@@ -1,5 +1,6 @@
 package com.calai.bitecal.ui.home.ui.settings.details
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
@@ -48,7 +49,6 @@ import com.calai.bitecal.data.profile.repo.cmToFeetInches1
 import com.calai.bitecal.data.profile.repo.feetInchesToCm1
 import com.calai.bitecal.ui.home.ui.settings.details.model.EditHeightViewModel
 import kotlin.math.abs
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.ui.res.stringResource
 import com.calai.bitecal.R
@@ -59,6 +59,8 @@ import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.design.BiteCalEditBottomActionBar
 import com.calai.bitecal.ui.common.design.BiteCalColors
+import com.calai.bitecal.ui.home.components.HomeBackground
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
@@ -70,6 +72,11 @@ fun EditHeightScreen(
     val ui by vm.ui.collectAsState()
     val init by vm.initialHeight.collectAsState()
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val screenBackground = if (isDark) Color.Transparent else colors.background
+    val errorColor = if (isDark) HomeCardStyles.Status.dangerText() else colors.error
+    val helperTextColor = if (isDark) HomeCardStyles.Text.muted() else colors.textMuted
+    val wheelAccentTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
 
     LaunchedEffect(Unit) { vm.initIfNeeded() }
 
@@ -100,8 +107,17 @@ fun EditHeightScreen(
         }
     }
 
-    Scaffold(
-        containerColor = colors.background,
+    Box(modifier = Modifier.fillMaxSize()) {
+        if (isDark) {
+            HomeBackground(
+                modifier = Modifier.matchParentSize(),
+                darkTheme = true,
+                enableNoise = false
+            )
+        }
+
+        Scaffold(
+        containerColor = screenBackground,
         topBar = {
             BiteCalTopBar(
                 title = stringResource(R.string.edit_height_title),
@@ -142,7 +158,7 @@ fun EditHeightScreen(
                 Spacer(Modifier.height(10.dp))
                 Text(
                     text = ui.error!!,
-                    color = colors.error,
+                    color = errorColor,
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier
                         .fillMaxWidth()
@@ -207,6 +223,7 @@ fun EditHeightScreen(
                         Text(
                             text = ".",
                             fontSize = 34.sp,
+                            color = wheelAccentTextColor,
                             modifier = Modifier.offset(x = 5.dp)
                         )
                     }
@@ -232,7 +249,8 @@ fun EditHeightScreen(
                     Text(
                         text = "cm",
                         fontSize = 22.sp,
-                        fontWeight = FontWeight.SemiBold
+                        fontWeight = FontWeight.SemiBold,
+                        color = wheelAccentTextColor
                     )
                 }
             } else {
@@ -292,17 +310,9 @@ fun EditHeightScreen(
                     modifier = Modifier.fillMaxWidth(0.8f)
                 ) {
                     Text(
-                        text = stringResource(R.string.edit_height_set_current_height),
-                        fontSize = 12.sp,
-                        color = colors.textMuted,
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.fillMaxWidth()
-                    )
-                    Spacer(Modifier.height(4.dp))
-                    Text(
                         text = stringResource(R.string.edit_height_privacy_note),
                         fontSize = 12.sp,
-                        color = colors.textMuted,
+                        color = helperTextColor,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -312,6 +322,7 @@ fun EditHeightScreen(
         }
     }
 }
+}
 
 @Composable
 private fun HeightUnitSegmentedSameAsGoal(
@@ -320,13 +331,18 @@ private fun HeightUnitSegmentedSameAsGoal(
     modifier: Modifier = Modifier
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val containerColor = if (isDark) HomeCardStyles.Surface.raisedAlt() else colors.surfaceMuted
+    val containerBorder = if (isDark) HomeCardStyles.Surface.borderColor() else Color.Transparent
+
     Box(
         modifier = modifier.fillMaxWidth(),
         contentAlignment = Alignment.Center
     ) {
         Surface(
             shape = RoundedCornerShape(40.dp),
-            color = colors.surfaceMuted,
+            color = containerColor,
+            border = if (isDark) BorderStroke(1.dp, containerBorder) else null,
             modifier = Modifier
                 .fillMaxWidth(0.60f)
                 .heightIn(min = 40.dp)
@@ -336,7 +352,9 @@ private fun HeightUnitSegmentedSameAsGoal(
                     text = "ft",
                     selected = !useMetric,
                     onClick = { onChange(false) },
-                    selectedColor = colors.primaryButtonContainer,
+                    selectedColor = if (isDark) HomeCardStyles.Camera.selectedTile() else colors.primaryButtonContainer,
+                    selectedContentColor = if (isDark) HomeCardStyles.Camera.selectedTileContent() else colors.primaryButtonContent,
+                    idleContentColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                     modifier = Modifier
                         .weight(1f)
                         .height(40.dp)
@@ -346,7 +364,9 @@ private fun HeightUnitSegmentedSameAsGoal(
                     text = "cm",
                     selected = useMetric,
                     onClick = { onChange(true) },
-                    selectedColor = colors.primaryButtonContainer,
+                    selectedColor = if (isDark) HomeCardStyles.Camera.selectedTile() else colors.primaryButtonContainer,
+                    selectedContentColor = if (isDark) HomeCardStyles.Camera.selectedTileContent() else colors.primaryButtonContent,
+                    idleContentColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                     modifier = Modifier
                         .weight(1f)
                         .height(40.dp)
@@ -362,9 +382,10 @@ private fun SegItemSameAsGoal(
     selected: Boolean,
     onClick: () -> Unit,
     selectedColor: Color,
+    selectedContentColor: Color,
+    idleContentColor: Color,
     modifier: Modifier = Modifier
 ) {
-    val colors = BiteCalColors.current()
     val corner = 22.dp
     val fSize = 20.sp
 
@@ -385,7 +406,7 @@ private fun SegItemSameAsGoal(
                 text = text,
                 fontSize = fSize,
                 fontWeight = FontWeight.SemiBold,
-                color = if (selected) colors.primaryButtonContent else colors.textPrimary,
+                color = if (selected) selectedContentColor else idleContentColor,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.fillMaxWidth()
             )
@@ -407,6 +428,14 @@ private fun NumberWheel(
     modifier: Modifier = Modifier
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val numberTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val unitTextColor = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
+    val centerLineColor = if (isDark) {
+        HomeCardStyles.Surface.borderColor().copy(alpha = 0.88f)
+    } else {
+        colors.border.copy(alpha = 0.72f)
+    }
     val visibleCount = 5
     val mid = visibleCount / 2
     val items = remember(range) { range.toList() }
@@ -486,7 +515,7 @@ private fun NumberWheel(
                         text = num.toString(),
                         fontSize = size,
                         fontWeight = weight,
-                        color = colors.textPrimary.copy(alpha = alpha),
+                        color = numberTextColor.copy(alpha = alpha),
                         textAlign = TextAlign.Center
                     )
 
@@ -496,7 +525,7 @@ private fun NumberWheel(
                         Text(
                             text = unitLabel,
                             fontSize = unitSize,
-                            color = colors.textSecondary.copy(alpha = alpha),
+                            color = unitTextColor.copy(alpha = alpha),
                             fontWeight = FontWeight.Normal
                         )
                     }
@@ -505,7 +534,7 @@ private fun NumberWheel(
         }
 
         // center lines（保留你原本的）
-        val lineColor = colors.border.copy(alpha = 0.72f)
+        val lineColor = centerLineColor
         val half = rowHeight / 2
         val lineThickness = 1.dp
         Box(

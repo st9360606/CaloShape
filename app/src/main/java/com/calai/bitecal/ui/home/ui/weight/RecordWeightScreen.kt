@@ -19,6 +19,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -42,7 +43,6 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.CalendarMonth
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -111,6 +111,8 @@ import com.calai.bitecal.ui.common.haptic.HapticWheelTickEffect
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
 import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
+import com.calai.bitecal.ui.home.components.HomeBackground
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 
 /* =========================================================
  * 外層 wrapper：負責找 ActivityResultRegistryOwner 並塞進 Local
@@ -172,6 +174,12 @@ private fun RecordWeightScreenContent(
     val scope = rememberCoroutineScope()
     val snackbarHostState = remember { SnackbarHostState() }
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val screenBackground = if (isDark) Color.Transparent else colors.background
+    val helperTextColor = if (isDark) HomeCardStyles.Text.muted() else colors.textMuted
+    val wheelAccentTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val buttonContainerColor = if (isDark) Color.White.copy(alpha = 0.92f) else colors.primaryButtonContainer
+    val buttonContentColor = if (isDark) Color(0xFF111114) else colors.primaryButtonContent
 
     // 1) KG / LBS 範圍
     val kgMin = 20.0
@@ -367,9 +375,18 @@ private fun RecordWeightScreenContent(
         }
     )
 
-    Scaffold(
-        snackbarHost = { SnackbarHost(hostState = snackbarHostState) },
-        containerColor = colors.background,
+    Box(modifier = Modifier.fillMaxSize()) {
+        if (isDark) {
+            HomeBackground(
+                modifier = Modifier.matchParentSize(),
+                darkTheme = true,
+                enableNoise = false
+            )
+        }
+
+        Scaffold(
+            snackbarHost = { SnackbarHost(hostState = snackbarHostState) },
+            containerColor = screenBackground,
         topBar = {
             BiteCalTopBar(
                 title = stringResource(R.string.record_weight_title),
@@ -427,16 +444,25 @@ private fun RecordWeightScreenContent(
                         .height(56.dp),
                     enabled = valueKg > 0.0 && !ui.saving,
                     shape = RoundedCornerShape(28.dp),
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = colors.primaryButtonContainer,
-                        contentColor = colors.primaryButtonContent
-                    )
+                    colors = if (isDark) {
+                        ButtonDefaults.buttonColors(
+                            containerColor = buttonContainerColor,
+                            contentColor = buttonContentColor,
+                            disabledContainerColor = buttonContainerColor.copy(alpha = 0.72f),
+                            disabledContentColor = buttonContentColor.copy(alpha = 0.62f)
+                        )
+                    } else {
+                        ButtonDefaults.buttonColors(
+                            containerColor = colors.primaryButtonContainer,
+                            contentColor = colors.primaryButtonContent
+                        )
+                    }
                 ) {
                     if (ui.saving) {
                         CircularProgressIndicator(
                             modifier = Modifier.size(18.dp),
                             strokeWidth = 2.dp,
-                            color = colors.primaryButtonContent
+                            color = buttonContentColor
                         )
                     } else {
                         Text(
@@ -512,7 +538,12 @@ private fun RecordWeightScreenContent(
                             .width(120.dp)
                             .padding(start = 31.dp)
                     )
-                    Text(".", fontSize = 34.sp, modifier = Modifier.padding(horizontal = 6.dp))
+                    Text(
+                        text = ".",
+                        fontSize = 34.sp,
+                        color = wheelAccentTextColor,
+                        modifier = Modifier.padding(horizontal = 6.dp)
+                    )
                     NumberWheelRecord(
                         range = 0..9,
                         value = kgDecSel,
@@ -532,7 +563,12 @@ private fun RecordWeightScreenContent(
                             .padding(end = 7.dp)
                     )
                     Spacer(Modifier.width(8.dp))
-                    Text("kg", fontSize = 22.sp, fontWeight = FontWeight.SemiBold)
+                    Text(
+                        text = "kg",
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = wheelAccentTextColor
+                    )
                 }
             } else {
                 Row(
@@ -560,7 +596,12 @@ private fun RecordWeightScreenContent(
                             .width(120.dp)
                             .padding(start = 35.dp)
                     )
-                    Text(".", fontSize = 34.sp, modifier = Modifier.padding(horizontal = 6.dp))
+                    Text(
+                        text = ".",
+                        fontSize = 34.sp,
+                        color = wheelAccentTextColor,
+                        modifier = Modifier.padding(horizontal = 6.dp)
+                    )
                     NumberWheelRecord(
                         range = 0..9,
                         value = lbsDecSel,
@@ -580,7 +621,12 @@ private fun RecordWeightScreenContent(
                             .padding(end = 2.dp)
                     )
                     Spacer(Modifier.width(8.dp))
-                    Text("lbs", fontSize = 22.sp, fontWeight = FontWeight.SemiBold)
+                    Text(
+                        text = "lbs",
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = wheelAccentTextColor
+                    )
                 }
             }
 
@@ -593,12 +639,13 @@ private fun RecordWeightScreenContent(
                         selectedDate.format(dateFormatterDisplay)
                     ),
                     style = MaterialTheme.typography.bodySmall.copy(fontSize = 12.sp),
-                    color = colors.textMuted,
+                    color = helperTextColor,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth(0.8f)
                 )
             }
         }
+    }
     }
 }
 
@@ -611,6 +658,9 @@ private fun DateHeader(
     modifier: Modifier = Modifier
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val dateTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val iconTint = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
 
     Box(modifier = modifier, contentAlignment = Alignment.Center) {
         Row(
@@ -626,7 +676,7 @@ private fun DateHeader(
                 text = dateText,
                 fontSize = 18.sp,
                 fontWeight = FontWeight.SemiBold,
-                color = colors.textPrimary
+                color = dateTextColor
             )
 
             Spacer(Modifier.width(6.dp))
@@ -634,7 +684,7 @@ private fun DateHeader(
             Icon(
                 imageVector = Icons.Outlined.Edit,
                 contentDescription = "Edit date icon",
-                tint = colors.textSecondary,
+                tint = iconTint,
                 modifier = Modifier.size(17.dp)
             )
         }
@@ -650,12 +700,19 @@ private fun WeightUnitSegmentedRecord(
     modifier: Modifier = Modifier
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val containerColor = if (isDark) HomeCardStyles.Surface.raisedAlt() else colors.surfaceMuted
+    val containerBorder = if (isDark) HomeCardStyles.Surface.borderColor() else Color.Transparent
+    val selectedColor = if (isDark) HomeCardStyles.Camera.selectedTile() else colors.primaryButtonContainer
+    val selectedContentColor = if (isDark) HomeCardStyles.Camera.selectedTileContent() else colors.primaryButtonContent
+    val idleContentColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
 
     Surface(
         shape = RoundedCornerShape(40.dp),
-        color = colors.surfaceMuted,
+        color = containerColor,
+        border = if (isDark) BorderStroke(1.dp, containerBorder) else null,
         modifier = modifier
-            .fillMaxWidth(0.51f)
+            .fillMaxWidth(if (isDark) 0.55f else 0.51f)
             .height(52.dp)
     ) {
         Row(
@@ -667,7 +724,9 @@ private fun WeightUnitSegmentedRecord(
                 text = "lbs",
                 selected = !useMetric,
                 onClick = { onChange(false) },
-                selectedColor = colors.primaryButtonContainer,
+                selectedColor = selectedColor,
+                selectedContentColor = selectedContentColor,
+                idleContentColor = idleContentColor,
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxHeight()
@@ -677,7 +736,9 @@ private fun WeightUnitSegmentedRecord(
                 text = "kg",
                 selected = useMetric,
                 onClick = { onChange(true) },
-                selectedColor = colors.primaryButtonContainer,
+                selectedColor = selectedColor,
+                selectedContentColor = selectedContentColor,
+                idleContentColor = idleContentColor,
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxHeight()
@@ -692,9 +753,10 @@ private fun SegItemRecord(
     selected: Boolean,
     onClick: () -> Unit,
     selectedColor: Color,
+    selectedContentColor: Color,
+    idleContentColor: Color,
     modifier: Modifier = Modifier
 ) {
-    val colors = BiteCalColors.current()
     val corner = 22.dp
     val fontSize = 18.sp
 
@@ -715,7 +777,7 @@ private fun SegItemRecord(
                 text = text,
                 fontSize = fontSize,
                 fontWeight = FontWeight.SemiBold,
-                color = if (selected) colors.primaryButtonContent else colors.textPrimary,
+                color = if (selected) selectedContentColor else idleContentColor,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.fillMaxWidth()
             )
@@ -744,8 +806,15 @@ private fun NumberWheelRecord(
     sideFontWeight: FontWeight = FontWeight.Normal
 ) {
     val colors = BiteCalColors.current()
-    val resolvedSelectedTextColor = selectedTextColor ?: colors.textPrimary
-    val resolvedUnselectedTextColor = unselectedTextColor ?: colors.textPrimary.copy(alpha = sideAlpha)
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val numberTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val centerLineColor = if (isDark) {
+        HomeCardStyles.Surface.borderColor().copy(alpha = 0.88f)
+    } else {
+        colors.border.copy(alpha = 0.72f)
+    }
+    val resolvedSelectedTextColor = selectedTextColor ?: numberTextColor
+    val resolvedUnselectedTextColor = unselectedTextColor ?: numberTextColor.copy(alpha = sideAlpha)
     val visibleCount = 5
     val mid = visibleCount / 2
     val items = remember(range) { range.toList() }
@@ -822,7 +891,7 @@ private fun NumberWheelRecord(
         }
 
         if (showSelectionLines) {
-            val lineColor = colors.border.copy(alpha = 0.72f)
+            val lineColor = centerLineColor
             val half = rowHeight / 2
             val lineThickness = 1.dp
             Box(
@@ -858,6 +927,15 @@ private fun WeighingDateSheet(
 ) {
     if (!visible) return
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val sheetSurfaceColor = if (isDark) HomeCardStyles.Sheet.surface() else colors.surface
+    val sheetHandleColor = if (isDark) HomeCardStyles.Sheet.handle() else colors.border
+    val sheetTitleColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val sheetSubtitleColor = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
+    val sheetPrimaryButtonContainer = if (isDark) Color.White.copy(alpha = 0.92f) else colors.primaryButtonContainer
+    val sheetPrimaryButtonContent = if (isDark) Color(0xFF111114) else colors.primaryButtonContent
+    val sheetCancelButtonContainer = if (isDark) HomeCardStyles.Surface.raised() else colors.surfaceMuted
+    val sheetCancelButtonContent = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
 
     val sheetState = rememberModalBottomSheetState(
         skipPartiallyExpanded = true,
@@ -951,7 +1029,7 @@ private fun WeighingDateSheet(
         sheetState = sheetState,
         dragHandle = null,
         shape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp),
-        containerColor = colors.surface,
+        containerColor = sheetSurfaceColor,
         tonalElevation = 0.dp,
         contentWindowInsets = { WindowInsets(0, 0, 0, 0) }
     ) {
@@ -973,14 +1051,14 @@ private fun WeighingDateSheet(
                         .width(42.dp)
                         .height(5.dp)
                         .clip(RoundedCornerShape(999.dp))
-                        .background(colors.border)
+                        .background(sheetHandleColor)
                 )
                 Text(
                     text = titleText,
                     style = MaterialTheme.typography.titleLarge.copy(
                         fontWeight = FontWeight.Bold
                     ),
-                    color = colors.textPrimary,
+                    color = sheetTitleColor,
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(top = 18.dp),
@@ -990,7 +1068,7 @@ private fun WeighingDateSheet(
                 Text(
                     text = subtitleText,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = colors.textSecondary,
+                    color = sheetSubtitleColor,
                     modifier = Modifier.fillMaxWidth(),
                     textAlign = TextAlign.Center
                 )
@@ -1023,8 +1101,8 @@ private fun WeighingDateSheet(
                             sideAlpha = 1f,
                             modifier = Modifier.width(64.dp),
                             showSelectionLines = false,
-                            selectedTextColor = colors.textPrimary,
-                            unselectedTextColor = colors.textMuted,
+                            selectedTextColor = sheetTitleColor,
+                            unselectedTextColor = if (isDark) HomeCardStyles.Text.muted() else colors.textMuted,
                             centerFontWeight = FontWeight.Bold
                         )
                         Spacer(Modifier.width(10.dp))
@@ -1039,8 +1117,8 @@ private fun WeighingDateSheet(
                             modifier = Modifier.width(142.dp),
                             label = { idx -> months[idx - 1] },
                             showSelectionLines = false,
-                            selectedTextColor = colors.textPrimary,
-                            unselectedTextColor = colors.textMuted,
+                            selectedTextColor = sheetTitleColor,
+                            unselectedTextColor = if (isDark) HomeCardStyles.Text.muted() else colors.textMuted,
                             centerFontWeight = FontWeight.Bold
                         )
                         Spacer(Modifier.width(10.dp))
@@ -1054,8 +1132,8 @@ private fun WeighingDateSheet(
                             sideAlpha = 1f,
                             modifier = Modifier.width(86.dp),
                             showSelectionLines = false,
-                            selectedTextColor = colors.textPrimary,
-                            unselectedTextColor = colors.textMuted,
+                            selectedTextColor = sheetTitleColor,
+                            unselectedTextColor = if (isDark) HomeCardStyles.Text.muted() else colors.textMuted,
                             centerFontWeight = FontWeight.Bold
                         )
                     }
@@ -1077,8 +1155,8 @@ private fun WeighingDateSheet(
                         .height(56.dp),
                     shape = RoundedCornerShape(28.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = colors.primaryButtonContainer,
-                        contentColor = colors.primaryButtonContent
+                        containerColor = sheetPrimaryButtonContainer,
+                        contentColor = sheetPrimaryButtonContent
                     )
                 ) {
                     Text(
@@ -1097,8 +1175,8 @@ private fun WeighingDateSheet(
                         .height(56.dp),
                     shape = RoundedCornerShape(28.dp),
                     colors = ButtonDefaults.outlinedButtonColors(
-                        containerColor = colors.surfaceMuted,
-                        contentColor = colors.textPrimary
+                        containerColor = sheetCancelButtonContainer,
+                        contentColor = sheetCancelButtonContent
                     )
                 ) {
                     Text(
@@ -1117,10 +1195,11 @@ private fun DateSelectionBandBehind(
     modifier: Modifier = Modifier
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
     val bandHeight = 44.dp
     val bandRadius = 10.dp
-    val bandColor = colors.surfaceMuted
-    val lineColor = colors.border
+    val bandColor = if (isDark) HomeCardStyles.Surface.raisedAlt() else colors.surfaceMuted
+    val lineColor = if (isDark) HomeCardStyles.Surface.borderColor().copy(alpha = 0.88f) else colors.border
 
     Box(modifier = modifier) {
         Box(
@@ -1161,6 +1240,12 @@ private fun PhotoPickerBlock(
     onPickPhoto: () -> Unit
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val photoContainerColor = if (isDark) HomeCardStyles.Surface.raisedAlt() else colors.surfaceMuted
+    val photoBorderColor = if (isDark) HomeCardStyles.Surface.borderColor() else Color.Transparent
+    val photoIconTint = if (isDark) HomeCardStyles.Text.muted() else colors.textMuted
+    val photoTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val photoDisabledTextColor = if (isDark) HomeCardStyles.Text.muted() else colors.textMuted
     val uri = photoUriString?.takeIf { it.isNotBlank() }?.toUri()
 
     Column(
@@ -1171,7 +1256,8 @@ private fun PhotoPickerBlock(
             modifier = Modifier
                 .size(156.dp)
                 .clip(RoundedCornerShape(26.dp))
-                .background(colors.surfaceMuted)
+                .background(photoContainerColor)
+                .then(if (isDark) Modifier.border(1.dp, photoBorderColor, RoundedCornerShape(26.dp)) else Modifier)
                 .biteCalClickable(onClick = onPickPhoto),
             contentAlignment = Alignment.Center
         ) {
@@ -1186,7 +1272,7 @@ private fun PhotoPickerBlock(
                 Icon(
                     painter = painterResource(id = R.drawable.weight_image_2),
                     contentDescription = "Add weight photo",
-                    tint = colors.textMuted,
+                    tint = photoIconTint,
                     modifier = Modifier.size(48.dp)
                 )
             }
@@ -1200,7 +1286,7 @@ private fun PhotoPickerBlock(
                 uri == null -> stringResource(R.string.record_weight_take_photo)
                 else -> stringResource(R.string.record_weight_retake_photo)
             },
-            color = if (cameraAvailable) colors.textPrimary else colors.textMuted,
+            color = if (cameraAvailable) photoTextColor else photoDisabledTextColor,
             fontSize = 15.sp,
             fontWeight = FontWeight.SemiBold
         )

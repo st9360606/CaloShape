@@ -1,5 +1,6 @@
 package com.calai.bitecal.ui.home.ui.settings.details
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
@@ -64,6 +65,8 @@ import kotlin.math.abs
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.design.BiteCalEditBottomActionBar
+import com.calai.bitecal.ui.home.components.HomeBackground
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
@@ -76,6 +79,10 @@ fun EditStartingWeightScreen(
     val scope = rememberCoroutineScope()
     val snackbarHostState = remember { SnackbarHostState() }
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val screenBackground = if (isDark) Color.Transparent else colors.background
+    val helperTextColor = if (isDark) HomeCardStyles.Text.muted() else colors.textMuted
+    val wheelAccentTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
 
     val kgMin = 20.0
     val kgMax = 800.0
@@ -121,8 +128,17 @@ fun EditStartingWeightScreen(
         R.string.edit_starting_weight_update_failed
     )
 
-    Scaffold(
-        containerColor = colors.background,
+    Box(modifier = Modifier.fillMaxSize()) {
+        if (isDark) {
+            HomeBackground(
+                modifier = Modifier.matchParentSize(),
+                darkTheme = true,
+                enableNoise = false
+            )
+        }
+
+        Scaffold(
+        containerColor = screenBackground,
         topBar = {
             BiteCalTopBar(
                 title = stringResource(R.string.edit_starting_weight_title),
@@ -208,7 +224,12 @@ fun EditStartingWeightScreen(
                             .width(120.dp)
                             .padding(start = 35.dp)
                     )
-                    Text(".", fontSize = 34.sp, modifier = Modifier.padding(horizontal = 6.dp))
+                    Text(
+                        text = ".",
+                        fontSize = 34.sp,
+                        color = wheelAccentTextColor,
+                        modifier = Modifier.padding(horizontal = 6.dp)
+                    )
                     NumberWheelForStart(
                         range = 0..9,
                         value = kgDecSel,
@@ -228,7 +249,12 @@ fun EditStartingWeightScreen(
                             .padding(end = 7.dp)
                     )
                     Spacer(Modifier.width(10.dp))
-                    Text("kg", fontSize = 22.sp, fontWeight = FontWeight.SemiBold)
+                    Text(
+                        text = "kg",
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = wheelAccentTextColor
+                    )
                 }
             } else {
                 Row(
@@ -255,7 +281,12 @@ fun EditStartingWeightScreen(
                             .width(120.dp)
                             .padding(start = 35.dp)
                     )
-                    Text(".", fontSize = 34.sp, modifier = Modifier.padding(horizontal = 6.dp))
+                    Text(
+                        text = ".",
+                        fontSize = 34.sp,
+                        color = wheelAccentTextColor,
+                        modifier = Modifier.padding(horizontal = 6.dp)
+                    )
                     NumberWheelForStart(
                         range = 0..9,
                         value = lbsDecSel,
@@ -274,7 +305,12 @@ fun EditStartingWeightScreen(
                             .padding(end = 7.dp)
                     )
                     Spacer(Modifier.width(8.dp))
-                    Text("lbs", fontSize = 22.sp, fontWeight = FontWeight.SemiBold)
+                    Text(
+                        text = "lbs",
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = wheelAccentTextColor
+                    )
                 }
             }
 
@@ -286,17 +322,9 @@ fun EditStartingWeightScreen(
                     modifier = Modifier.fillMaxWidth(0.8f)
                 ) {
                     Text(
-                        text = stringResource(R.string.edit_start_weight_set_starting),
-                        fontSize = 12.sp,
-                        color = colors.textMuted,
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.fillMaxWidth()
-                    )
-                    Spacer(Modifier.height(4.dp))
-                    Text(
                         text = stringResource(R.string.edit_start_weight_baseline_note),
                         fontSize = 12.sp,
-                        color = colors.textMuted,
+                        color = helperTextColor,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -305,6 +333,7 @@ fun EditStartingWeightScreen(
 
             Spacer(Modifier.height(40.dp))
         }
+    }
     }
 }
 
@@ -317,9 +346,17 @@ private fun WeightUnitSegmentedForStart(
     modifier: Modifier = Modifier
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val containerColor = if (isDark) HomeCardStyles.Surface.raisedAlt() else colors.surfaceMuted
+    val containerBorder = if (isDark) HomeCardStyles.Surface.borderColor() else Color.Transparent
+    val selectedColor = if (isDark) HomeCardStyles.Camera.selectedTile() else colors.primaryButtonContainer
+    val selectedContentColor = if (isDark) HomeCardStyles.Camera.selectedTileContent() else colors.primaryButtonContent
+    val idleContentColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+
     Surface(
         shape = RoundedCornerShape(40.dp),
-        color = colors.surfaceMuted,
+        color = containerColor,
+        border = if (isDark) BorderStroke(1.dp, containerBorder) else null,
         modifier = modifier
             .fillMaxWidth(0.55f)
             .heightIn(min = 40.dp)
@@ -329,7 +366,9 @@ private fun WeightUnitSegmentedForStart(
                 text = "lbs",
                 selected = !useMetric,
                 onClick = { onChange(false) },
-                selectedColor = colors.primaryButtonContainer,
+                selectedColor = selectedColor,
+                selectedContentColor = selectedContentColor,
+                idleContentColor = idleContentColor,
                 modifier = Modifier.weight(1f).height(40.dp)
             )
             Spacer(Modifier.width(6.dp))
@@ -337,7 +376,9 @@ private fun WeightUnitSegmentedForStart(
                 text = "kg",
                 selected = useMetric,
                 onClick = { onChange(true) },
-                selectedColor = colors.primaryButtonContainer,
+                selectedColor = selectedColor,
+                selectedContentColor = selectedContentColor,
+                idleContentColor = idleContentColor,
                 modifier = Modifier.weight(1f).height(40.dp)
             )
         }
@@ -350,9 +391,10 @@ private fun SegItemForStart(
     selected: Boolean,
     onClick: () -> Unit,
     selectedColor: Color,
+    selectedContentColor: Color,
+    idleContentColor: Color,
     modifier: Modifier = Modifier
 ) {
-    val colors = BiteCalColors.current()
     val corner = 22.dp
     val fSize = 18.sp
     Surface(
@@ -372,7 +414,7 @@ private fun SegItemForStart(
                 text = text,
                 fontSize = fSize,
                 fontWeight = FontWeight.SemiBold,
-                color = if (selected) colors.primaryButtonContent else colors.textPrimary,
+                color = if (selected) selectedContentColor else idleContentColor,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.fillMaxWidth()
             )
@@ -396,6 +438,13 @@ private fun NumberWheelForStart(
     label: (Int) -> String = { it.toString() }
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val numberTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val centerLineColor = if (isDark) {
+        HomeCardStyles.Surface.borderColor().copy(alpha = 0.88f)
+    } else {
+        colors.border.copy(alpha = 0.72f)
+    }
     val visibleCount = 5
     val mid = visibleCount / 2
     val items = remember(range) { range.toList() }
@@ -459,14 +508,14 @@ private fun NumberWheelForStart(
                         text = label(num),
                         fontSize = size,
                         fontWeight = weight,
-                        color = colors.textPrimary.copy(alpha = alpha),
+                        color = numberTextColor.copy(alpha = alpha),
                         textAlign = TextAlign.Center
                     )
                 }
             }
         }
 
-        val lineColor = colors.border.copy(alpha = 0.72f)
+        val lineColor = centerLineColor
         val half = rowHeight / 2
         val lineThickness = 1.dp
         Box(

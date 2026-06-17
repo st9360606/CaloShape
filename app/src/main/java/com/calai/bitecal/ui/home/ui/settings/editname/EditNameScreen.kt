@@ -1,5 +1,6 @@
 package com.calai.bitecal.ui.home.ui.settings.editname
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -21,6 +22,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
@@ -38,6 +40,8 @@ import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.common.haptic.hapticOnFocus
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.design.BiteCalEditBottomActionBar
+import com.calai.bitecal.ui.home.components.HomeBackground
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 
 @Composable
 fun EditNameScreen(
@@ -52,57 +56,70 @@ fun EditNameScreen(
     val focusManager = LocalFocusManager.current
     val scrollState = rememberScrollState()
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val screenBackground = if (isDark) Color.Transparent else colors.background
+    val errorColor = if (isDark) HomeCardStyles.Status.dangerText() else colors.error
 
-    Scaffold(
-        containerColor = colors.background,
-        topBar = {
-            BiteCalTopBar(
-                title = stringResource(R.string.settings_edit_your_name_title),
-                onBack = onBack
-            )
-        },
-        bottomBar = {
-            BiteCalEditBottomActionBar(
-                primaryText = stringResource(R.string.common_save),
-                onPrimaryClick = onSaved,
-                primaryEnabled = canSave && !isSaving,
-                primaryLoading = isSaving,
-                useImePadding = true,
-                modifier = Modifier.semantics { testTag = "doneButton" }
+    Box(modifier = Modifier.fillMaxSize()) {
+        if (isDark) {
+            HomeBackground(
+                modifier = Modifier.matchParentSize(),
+                darkTheme = true,
+                enableNoise = false
             )
         }
-    ) { inner ->
-        Column(
-            modifier = Modifier
-                .padding(inner)
-                .fillMaxSize()
-                .verticalScroll(scrollState)
-                .padding(horizontal = BiteCalScreenFrame.contentHorizontalComfort)
-                .padding(top = BiteCalScreenFrame.detailTop, bottom = BiteCalScreenFrame.detailBottom)
-        ) {
-            Spacer(Modifier.height(30.dp))
 
-            NameField(
-                value = input,
-                onValueChange = onInputChange,
-                onImeDone = {
-                    if (canSave && !isSaving) {
-                        focusManager.clearFocus()
-                        onSaved()
-                    }
-                }
-            )
-
-            if (!errorText.isNullOrBlank()) {
-                Spacer(Modifier.height(10.dp))
-                Text(
-                    text = errorText,
-                    color = colors.error,
-                    style = MaterialTheme.typography.bodySmall
+        Scaffold(
+            containerColor = screenBackground,
+            topBar = {
+                BiteCalTopBar(
+                    title = stringResource(R.string.settings_edit_your_name_title),
+                    onBack = onBack
+                )
+            },
+            bottomBar = {
+                BiteCalEditBottomActionBar(
+                    primaryText = stringResource(R.string.common_save),
+                    onPrimaryClick = onSaved,
+                    primaryEnabled = canSave && !isSaving,
+                    primaryLoading = isSaving,
+                    useImePadding = true,
+                    modifier = Modifier.semantics { testTag = "doneButton" }
                 )
             }
+        ) { inner ->
+            Column(
+                modifier = Modifier
+                    .padding(inner)
+                    .fillMaxSize()
+                    .verticalScroll(scrollState)
+                    .padding(horizontal = BiteCalScreenFrame.contentHorizontalComfort)
+                    .padding(top = BiteCalScreenFrame.detailTop, bottom = BiteCalScreenFrame.detailBottom)
+            ) {
+                Spacer(Modifier.height(30.dp))
 
-            Spacer(Modifier.height(24.dp))
+                NameField(
+                    value = input,
+                    onValueChange = onInputChange,
+                    onImeDone = {
+                        if (canSave && !isSaving) {
+                            focusManager.clearFocus()
+                            onSaved()
+                        }
+                    }
+                )
+
+                if (!errorText.isNullOrBlank()) {
+                    Spacer(Modifier.height(10.dp))
+                    Text(
+                        text = errorText,
+                        color = errorColor,
+                        style = MaterialTheme.typography.bodySmall
+                    )
+                }
+
+                Spacer(Modifier.height(24.dp))
+            }
         }
     }
 }
@@ -114,14 +131,20 @@ private fun NameField(
     onImeDone: () -> Unit
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
     val shape = RoundedCornerShape(14.dp)
+    val fieldSurface = if (isDark) HomeCardStyles.Surface.raised() else Color.Transparent
+    val fieldBorder = if (isDark) HomeCardStyles.Surface.borderColor() else colors.textPrimary
+    val inputTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val placeholderColor = if (isDark) HomeCardStyles.Text.muted() else colors.textMuted
 
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .height(64.dp)
             .clip(shape)
-            .border(width = 2.dp, color = colors.textPrimary, shape = shape)
+            .background(fieldSurface, shape)
+            .border(width = if (isDark) 1.2.dp else 2.dp, color = fieldBorder, shape = shape)
             .padding(horizontal = BiteCalScreenFrame.contentHorizontalCompact),
         contentAlignment = Alignment.CenterStart
     ) {
@@ -131,10 +154,10 @@ private fun NameField(
             singleLine = true,
             textStyle = TextStyle(
                 fontSize = 18.sp,
-                color = colors.textPrimary,
+                color = inputTextColor,
                 fontWeight = FontWeight.Normal
             ),
-            cursorBrush = SolidColor(colors.textPrimary),
+            cursorBrush = SolidColor(inputTextColor),
             keyboardOptions = KeyboardOptions(
                 capitalization = KeyboardCapitalization.Words,
                 imeAction = ImeAction.Done
@@ -149,7 +172,7 @@ private fun NameField(
                     Text(
                         text = stringResource(R.string.edit_name_placeholder),
                         fontSize = 18.sp,
-                        color = colors.textMuted,
+                        color = placeholderColor,
                         fontWeight = FontWeight.Normal
                     )
                 }

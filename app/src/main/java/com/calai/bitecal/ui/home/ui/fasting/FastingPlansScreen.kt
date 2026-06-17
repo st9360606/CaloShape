@@ -75,6 +75,7 @@ import com.calai.bitecal.data.fasting.model.FastingPlan
 import com.calai.bitecal.ui.home.HomeTab
 import com.calai.bitecal.ui.home.components.CardStyles
 import com.calai.bitecal.ui.home.components.HomeCardStyles
+import com.calai.bitecal.ui.home.components.HomeBackground
 import com.calai.bitecal.ui.home.components.MainBottomBar
 import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
@@ -144,14 +145,24 @@ fun FastingPlansScreen(
         }
     }
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val screenBackground = if (isDark) Color.Transparent else colors.background
 
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(colors.background)
+            .background(screenBackground)
     ) {
+        if (isDark) {
+            HomeBackground(
+                modifier = Modifier.matchParentSize(),
+                darkTheme = true,
+                enableNoise = false
+            )
+        }
+
         Scaffold(
-            containerColor = colors.background,
+            containerColor = screenBackground,
             topBar = {
                 BiteCalTopBar(
                     title = stringResource(R.string.fasting_plan_title),
@@ -169,7 +180,7 @@ fun FastingPlansScreen(
                 modifier = Modifier
                     .padding(p)
                     .fillMaxSize()
-                    .background(colors.background)
+                    .background(screenBackground)
                     .verticalScroll(rememberScrollState())
                     .padding(horizontal = 20.dp, vertical = 5.dp)
             ) {
@@ -1120,8 +1131,8 @@ private fun CupertinoWheelTimePickerSheet(
                         .height(56.dp),
                     shape = RoundedCornerShape(28.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = colors.primaryButtonContainer,
-                        contentColor = colors.primaryButtonContent
+                        containerColor = if (isDark) Color.White.copy(alpha = 0.92f) else colors.primaryButtonContainer,
+                        contentColor = if (isDark) Color(0xFF111114) else colors.primaryButtonContent
                     )
                 ) {
                     Text(

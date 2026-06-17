@@ -63,6 +63,7 @@ import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalFocusManager
@@ -87,6 +88,7 @@ import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.design.BiteCalEditDualActionRow
 import com.calai.bitecal.ui.common.design.BiteCalSecondaryOutlinedButton
 import com.calai.bitecal.ui.home.components.HomeCardStyles
+import com.calai.bitecal.ui.home.components.HomeBackground
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -190,11 +192,23 @@ private fun EditNutritionGoalsScreen(
 ) {
     val focusManager = LocalFocusManager.current
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val screenBackground = if (isDark) Color.Transparent else colors.background
+    val errorColor = if (isDark) HomeCardStyles.Status.dangerText() else colors.error
 
     EditNutritionGoalsNoImePanEffect()
 
-    Scaffold(
-        containerColor = colors.background,
+    Box(modifier = Modifier.fillMaxSize()) {
+        if (isDark) {
+            HomeBackground(
+                modifier = Modifier.matchParentSize(),
+                darkTheme = true,
+                enableNoise = false
+            )
+        }
+
+        Scaffold(
+        containerColor = screenBackground,
         topBar = {
             BiteCalTopBar(
                 title = stringResource(R.string.edit_nutrition_goals_title),
@@ -239,7 +253,7 @@ private fun EditNutritionGoalsScreen(
             if (!ui.error.isNullOrBlank()) {
                 Text(
                     text = ui.error,
-                    color = colors.error,
+                    color = errorColor,
                     fontSize = 13.sp,
                     modifier = Modifier.padding(start = 6.dp, bottom = 12.dp)
                 )
@@ -293,8 +307,8 @@ private fun EditNutritionGoalsScreen(
             Spacer(Modifier.height(8.dp))
 
             val microsToggleInteractionSource = remember { MutableInteractionSource() }
-            val microsToggleTextColor = if (colors == BiteCalColors.Dark) {
-                colors.textPrimary
+            val microsToggleTextColor = if (isDark) {
+                HomeCardStyles.Text.secondary()
             } else {
                 Color(0xFF606A78)
             }
@@ -372,6 +386,7 @@ private fun EditNutritionGoalsScreen(
         }
     }
 }
+}
 
 @Composable
 private fun GoalRow(
@@ -388,6 +403,14 @@ private fun GoalRow(
     val focusRequester = remember { FocusRequester() }
     var focused by remember { mutableStateOf(false) }
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val fieldFocusedSurface = if (isDark) HomeCardStyles.Surface.raised() else colors.surface
+    val fieldIdleSurface = if (isDark) HomeCardStyles.Surface.raisedAlt() else colors.surfaceMuted
+    val fieldFocusedBorder = if (isDark) HomeCardStyles.Surface.borderColor() else colors.textPrimary
+    val fieldIdleBorder = if (isDark) HomeCardStyles.Surface.borderColor().copy(alpha = 0.82f) else Color.Transparent
+    val labelColor = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
+    val inputColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary.copy(alpha = 0.92f)
+    val errorColor = if (isDark) HomeCardStyles.Status.dangerText() else colors.error
 
     val hasError = !errorText.isNullOrBlank()
 
@@ -407,13 +430,13 @@ private fun GoalRow(
 
             Spacer(Modifier.width(14.dp))
 
-            val bg = if (focused) colors.surface else colors.surfaceMuted
+            val bg = if (focused) fieldFocusedSurface else fieldIdleSurface
 
             // ✅ 規則：有錯誤 → 永遠紅框；沒錯誤 → focus 黑框、非 focus 無框
             val borderColor = when {
-                hasError -> colors.error
-                focused -> colors.textPrimary
-                else -> Color.Transparent
+                hasError -> errorColor
+                focused -> fieldFocusedBorder
+                else -> fieldIdleBorder
             }
 
             Box(
@@ -422,7 +445,7 @@ private fun GoalRow(
                     .height(67.dp)
                     .clip(RoundedCornerShape(16.dp))
                     .background(bg)
-                    .border(1.5.dp, borderColor, RoundedCornerShape(16.dp))
+                    .border(if (isDark) 1.2.dp else 1.5.dp, borderColor, RoundedCornerShape(16.dp))
                     .clickWithoutHaptic { focusRequester.requestFocus() }
                     .padding(
                         start = 16.dp,
@@ -435,7 +458,7 @@ private fun GoalRow(
                     Text(
                         text = label,
                         fontSize = 14.sp,
-                        color = colors.textSecondary,
+                        color = labelColor,
                         fontWeight = FontWeight.Normal
                     )
                     Spacer(Modifier.height(2.dp))
@@ -447,8 +470,9 @@ private fun GoalRow(
                         textStyle = TextStyle(
                             fontSize = 18.sp,
                             fontWeight = FontWeight.Medium,
-                            color = colors.textPrimary.copy(alpha = 0.92f)
+                            color = inputColor
                         ),
+                        cursorBrush = SolidColor(inputColor),
                         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                         modifier = Modifier
                             .fillMaxWidth()
@@ -466,7 +490,7 @@ private fun GoalRow(
             Spacer(Modifier.height(6.dp))
             Text(
                 text = err,
-                color = colors.error,
+                color = errorColor,
                 fontSize = 12.sp,
                 fontWeight = FontWeight.Medium,
                 modifier = Modifier.padding(start = 56.dp + 14.dp + 6.dp)
@@ -554,6 +578,10 @@ private fun BottomActionBar(
     onDone: () -> Unit
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val autoGenerateBorder = if (isDark) HomeCardStyles.Surface.borderColor() else colors.textPrimary.copy(alpha = 0.6f)
+    val autoGenerateContent = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val autoGenerateContainer = if (isDark) HomeCardStyles.Surface.raisedAlt() else colors.surface
 
     Surface(color = Color.Transparent) {
         Box(
@@ -576,8 +604,9 @@ private fun BottomActionBar(
                             bottom = BiteCalScreenFrame.detailBottom,
                     ),
                     height = 55.dp,
-                    borderColor = colors.textPrimary.copy(alpha = 0.6f),
-                    contentColor = colors.textPrimary,
+                    borderColor = autoGenerateBorder,
+                    contentColor = autoGenerateContent,
+                    containerColor = autoGenerateContainer,
                 )
             } else {
                 BiteCalEditDualActionRow(

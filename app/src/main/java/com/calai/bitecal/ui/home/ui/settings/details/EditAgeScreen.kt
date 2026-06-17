@@ -33,6 +33,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -47,6 +48,8 @@ import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.common.haptic.HapticWheelTickEffect
+import com.calai.bitecal.ui.home.components.HomeBackground
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import com.calai.bitecal.ui.home.ui.settings.details.model.EditAgeViewModel
 import kotlin.math.abs
 
@@ -60,6 +63,10 @@ fun EditAgeScreen(
     val ui by vm.ui.collectAsState()
     val initialAge by vm.initialAge.collectAsState()
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val screenBackground = if (isDark) Color.Transparent else colors.background
+    val errorColor = if (isDark) HomeCardStyles.Status.dangerText() else colors.error
+    val privacyTextColor = if (isDark) HomeCardStyles.Text.muted() else colors.textMuted
 
     LaunchedEffect(Unit) { vm.initIfNeeded() }
 
@@ -77,24 +84,33 @@ fun EditAgeScreen(
         }
     }
 
-    Scaffold(
-        containerColor = colors.background,
-        topBar = {
-            BiteCalTopBar(
-                title = stringResource(R.string.edit_age_title),
-                onBack = onBack
+    Box(modifier = Modifier.fillMaxSize()) {
+        if (isDark) {
+            HomeBackground(
+                modifier = Modifier.matchParentSize(),
+                darkTheme = true,
+                enableNoise = false
             )
-        },
-        bottomBar = {
-            BiteCalEditBottomActionBar(
+        }
+
+        Scaffold(
+            containerColor = screenBackground,
+            topBar = {
+                BiteCalTopBar(
+                    title = stringResource(R.string.edit_age_title),
+                    onBack = onBack
+                )
+            },
+            bottomBar = {
+                BiteCalEditBottomActionBar(
                 primaryText = stringResource(R.string.common_save),
                 onPrimaryClick = { vm.saveAndSyncAge(ageYears = age, onSuccess = onSaved) },
                 primaryEnabled = !ui.saving && !ui.initializing,
-                primaryLoading = ui.saving,
-            )
-        }
-    ) { innerPadding ->
-        Column(
+                    primaryLoading = ui.saving,
+                )
+            }
+        ) { innerPadding ->
+            Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(innerPadding)
@@ -111,7 +127,7 @@ fun EditAgeScreen(
                 Spacer(Modifier.height(10.dp))
                 Text(
                     text = msg,
-                    color = colors.error,
+                    color = errorColor,
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.fillMaxWidth().padding(horizontal = BiteCalScreenFrame.contentHorizontalWide),
                     textAlign = TextAlign.Center
@@ -124,7 +140,14 @@ fun EditAgeScreen(
                 contentAlignment = Alignment.Center
             ) {
                 if (ui.initializing) {
-                    CircularProgressIndicator(strokeWidth = 2.dp)
+                    if (isDark) {
+                        CircularProgressIndicator(
+                            strokeWidth = 2.dp,
+                            color = HomeCardStyles.Text.primary()
+                        )
+                    } else {
+                        CircularProgressIndicator(strokeWidth = 2.dp)
+                    }
                 } else {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
@@ -149,12 +172,13 @@ fun EditAgeScreen(
             Text(
                 text = stringResource(R.string.edit_age_privacy_note),
                 fontSize = 12.sp,
-                color = colors.textMuted,
+                color = privacyTextColor,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.fillMaxWidth().padding(horizontal = BiteCalScreenFrame.contentHorizontalWide)
             )
         }
     }
+}
 }
 
 @OptIn(ExperimentalFoundationApi::class)
@@ -171,6 +195,14 @@ private fun NumberWheel(
     modifier: Modifier = Modifier
 ) {
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val numberTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val unitTextColor = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
+    val centerLineColor = if (isDark) {
+        HomeCardStyles.Surface.borderColor().copy(alpha = 0.88f)
+    } else {
+        colors.border.copy(alpha = 0.72f)
+    }
     val VISIBLE_COUNT = 5
     val MID = VISIBLE_COUNT / 2
     val items = remember(range) { range.toList() }
@@ -248,7 +280,7 @@ private fun NumberWheel(
                         text = num.toString(),
                         fontSize = size,
                         fontWeight = weight,
-                        color = colors.textPrimary.copy(alpha = alpha),
+                        color = numberTextColor.copy(alpha = alpha),
                         textAlign = TextAlign.Center
                     )
                     if (unitLabel != null && isCenter) {
@@ -256,7 +288,7 @@ private fun NumberWheel(
                         Text(
                             text = unitLabel,
                             fontSize = unitSize,
-                            color = colors.textSecondary.copy(alpha = alpha),
+                            color = unitTextColor.copy(alpha = alpha),
                             fontWeight = FontWeight.Normal
                         )
                     }
@@ -265,7 +297,7 @@ private fun NumberWheel(
         }
 
         // center lines
-        val lineColor = colors.border.copy(alpha = 0.72f)
+        val lineColor = centerLineColor
         val half = rowHeight / 2
         val lineThickness = 1.dp
         Box(

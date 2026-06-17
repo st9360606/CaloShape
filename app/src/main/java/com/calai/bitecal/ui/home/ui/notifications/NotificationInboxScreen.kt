@@ -59,6 +59,7 @@ import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
+import com.calai.bitecal.ui.home.components.HomeBackground
 import com.calai.bitecal.ui.home.components.HomeCardStyles
 import java.time.LocalDate
 import java.time.ZoneId
@@ -76,56 +77,66 @@ fun NotificationInboxScreen(
     onMarkRead: (Long) -> Unit,
     onBack: () -> Unit
 ) {
-    val colorScheme = MaterialTheme.colorScheme
-    val isDark = colorScheme.background.luminanceForUi() < 0.45f
-    val bg = if (isDark) colorScheme.background else Color(0xFFF6F7F9)
+    val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val screenBackground = if (isDark) Color.Transparent else Color(0xFFF6F7F9)
     val backClick = rememberDebouncedClick(onClick = onBack)
     val retryClick = rememberDebouncedClick(onClick = onRetry)
 
-    Scaffold(
-        containerColor = bg,
-        contentWindowInsets = WindowInsets(0, 0, 0, 0),
-        topBar = {
-            BiteCalTopBar(
-                title = stringResource(R.string.notification_inbox_title),
-                onBack = backClick
+    Box(modifier = Modifier.fillMaxSize()) {
+        if (isDark) {
+            HomeBackground(
+                modifier = Modifier.matchParentSize(),
+                darkTheme = true,
+                enableNoise = false
             )
         }
-    ) { inner ->
-        Box(
-            modifier = Modifier
-                .padding(inner)
-                .fillMaxSize(),
-            contentAlignment = Alignment.TopCenter
-        ) {
-            when {
-                loading -> NotificationInboxLoadingState(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .widthIn(max = NotificationInboxMaxWidth)
-                )
 
-                error != null -> NotificationInboxErrorState(
-                    onRetry = retryClick,
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .widthIn(max = NotificationInboxMaxWidth)
+        Scaffold(
+            containerColor = screenBackground,
+            contentWindowInsets = WindowInsets(0, 0, 0, 0),
+            topBar = {
+                BiteCalTopBar(
+                    title = stringResource(R.string.notification_inbox_title),
+                    onBack = backClick
                 )
+            }
+        ) { inner ->
+            Box(
+                modifier = Modifier
+                    .padding(inner)
+                    .fillMaxSize(),
+                contentAlignment = Alignment.TopCenter
+            ) {
+                when {
+                    loading -> NotificationInboxLoadingState(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .widthIn(max = NotificationInboxMaxWidth)
+                    )
 
-                items.isEmpty() -> NotificationInboxEmptyState(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .widthIn(max = NotificationInboxMaxWidth)
-                )
+                    error != null -> NotificationInboxErrorState(
+                        onRetry = retryClick,
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .widthIn(max = NotificationInboxMaxWidth)
+                    )
 
-                else -> NotificationInboxSuccessState(
-                    items = items,
-                    markingReadIds = markingReadIds,
-                    onMarkRead = onMarkRead,
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .widthIn(max = NotificationInboxMaxWidth)
-                )
+                    items.isEmpty() -> NotificationInboxEmptyState(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .widthIn(max = NotificationInboxMaxWidth)
+                    )
+
+                    else -> NotificationInboxSuccessState(
+                        items = items,
+                        markingReadIds = markingReadIds,
+                        onMarkRead = onMarkRead,
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .widthIn(max = NotificationInboxMaxWidth)
+                    )
+                }
             }
         }
     }
@@ -188,7 +199,7 @@ private fun NotificationInboxHeaderCard() {
                 Icon(
                     imageVector = Icons.Outlined.Notifications,
                     contentDescription = null,
-                    tint = notificationBellIconColor(isDark),
+                    tint = Color(0xFFD99017),
                     modifier = Modifier.size(22.dp)
                 )
             }
@@ -379,10 +390,18 @@ private fun NotificationInboxLoadingState(
         title = stringResource(R.string.notification_inbox_loading_title),
         body = stringResource(R.string.notification_inbox_loading),
         icon = {
-            CircularProgressIndicator(
-                modifier = Modifier.size(30.dp),
-                strokeWidth = 3.dp
-            )
+            if (HomeCardStyles.isDark()) {
+                CircularProgressIndicator(
+                    modifier = Modifier.size(30.dp),
+                    color = HomeCardStyles.Text.primary(),
+                    strokeWidth = 3.dp
+                )
+            } else {
+                CircularProgressIndicator(
+                    modifier = Modifier.size(30.dp),
+                    strokeWidth = 3.dp
+                )
+            }
         },
         action = null
     )

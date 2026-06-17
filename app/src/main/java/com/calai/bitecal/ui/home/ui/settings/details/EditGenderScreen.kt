@@ -1,6 +1,7 @@
 package com.calai.bitecal.ui.home.ui.settings.details
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -25,6 +26,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
@@ -38,6 +40,8 @@ import com.calai.bitecal.ui.common.design.BiteCalEditBottomActionBar
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.design.BiteCalTopBar
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
+import com.calai.bitecal.ui.home.components.HomeBackground
+import com.calai.bitecal.ui.home.components.HomeCardStyles
 import com.calai.bitecal.ui.home.ui.settings.details.model.EditGenderViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -49,6 +53,10 @@ fun EditGenderScreen(
 ) {
     val ui by vm.ui.collectAsState()
     val colors = BiteCalColors.current()
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val screenBackground = if (isDark) Color.Transparent else colors.background
+    val errorColor = if (isDark) HomeCardStyles.Status.dangerText() else colors.error
+    val privacyTextColor = if (isDark) HomeCardStyles.Text.muted() else colors.textMuted
     val savedGender by vm.genderState.collectAsState() // ✅ 可能是 null
     LaunchedEffect(Unit) { vm.refreshGenderFromServerIfNeeded() }
 
@@ -62,70 +70,81 @@ fun EditGenderScreen(
         }
     }
 
-    Scaffold(
-        containerColor = colors.background,
-        topBar = {
-            BiteCalTopBar(
-                title = stringResource(R.string.edit_gender_title),
-                onBack = onBack
-            )
-        },
-        bottomBar = {
-            BiteCalEditBottomActionBar(
-                primaryText = stringResource(R.string.common_save),
-                onPrimaryClick = {
-                    selected?.let { sel ->
-                        vm.saveAndSyncGender(selected = sel, onSuccess = onSaved)
-                    }
-                },
-                primaryEnabled = !ui.saving && selected != null,
-                primaryLoading = ui.saving,
+    Box(modifier = Modifier.fillMaxSize()) {
+        if (isDark) {
+            HomeBackground(
+                modifier = Modifier.matchParentSize(),
+                darkTheme = true,
+                enableNoise = false
             )
         }
-    ) { innerPadding ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(innerPadding)
-                .padding(
-                    start = BiteCalScreenFrame.detailHorizontal,
-                    top = BiteCalScreenFrame.detailContentTopNudged,
-                    end = BiteCalScreenFrame.detailHorizontal,
-                    bottom = BiteCalScreenFrame.detailBottom
-                ),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Spacer(Modifier.height(170.dp))
 
-            ui.error?.let {
-                Spacer(Modifier.height(10.dp))
-                Text(
-                    text = it,
-                    color = colors.error,
-                    style = MaterialTheme.typography.bodyMedium,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = BiteCalScreenFrame.contentHorizontalWide),
-                    textAlign = TextAlign.Center
+        Scaffold(
+            containerColor = screenBackground,
+            topBar = {
+                BiteCalTopBar(
+                    title = stringResource(R.string.edit_gender_title),
+                    onBack = onBack
+                )
+            },
+            bottomBar = {
+                BiteCalEditBottomActionBar(
+                    primaryText = stringResource(R.string.common_save),
+                    onPrimaryClick = {
+                        selected?.let { sel ->
+                            vm.saveAndSyncGender(selected = sel, onSuccess = onSaved)
+                        }
+                    },
+                    primaryEnabled = !ui.saving && selected != null,
+                    primaryLoading = ui.saving,
                 )
             }
+        ) { innerPadding ->
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(screenBackground)
+                    .padding(innerPadding)
+                    .padding(
+                        start = BiteCalScreenFrame.detailHorizontal,
+                        top = BiteCalScreenFrame.detailContentTopNudged,
+                        end = BiteCalScreenFrame.detailHorizontal,
+                        bottom = BiteCalScreenFrame.detailBottom
+                    ),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Spacer(Modifier.height(170.dp))
 
-            // ✅ 載入中：不選任何項目（不會先亮 OTHER）
-            GenderSegmented(
-                selected = selected,
-                onSelect = { selected = it },
-                modifier = Modifier.fillMaxWidth(0.88f)
-            )
+                ui.error?.let {
+                    Spacer(Modifier.height(10.dp))
+                    Text(
+                        text = it,
+                        color = errorColor,
+                        style = MaterialTheme.typography.bodyMedium,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = BiteCalScreenFrame.contentHorizontalWide),
+                        textAlign = TextAlign.Center
+                    )
+                }
 
-            Spacer(Modifier.height(22.dp))
+                // ✅ 載入中：不選任何項目（不會先亮 OTHER）
+                GenderSegmented(
+                    selected = selected,
+                    onSelect = { selected = it },
+                    modifier = Modifier.fillMaxWidth(0.88f)
+                )
 
-            Text(
-                text = stringResource(R.string.edit_gender_privacy_note),
-                fontSize = 12.sp,
-                color = colors.textMuted,
-                textAlign = TextAlign.Center,
-                modifier = Modifier.fillMaxWidth(0.9f)
-            )
+                Spacer(Modifier.height(22.dp))
+
+                Text(
+                    text = stringResource(R.string.edit_gender_privacy_note),
+                    fontSize = 12.sp,
+                    color = privacyTextColor,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth(0.9f)
+                )
+            }
         }
     }
 }
@@ -184,8 +203,24 @@ private fun GenderOptionCard(
 ) {
     val shape = RoundedCornerShape(corner)
     val colors = BiteCalColors.current()
-    val container = if (selected) colors.primaryButtonContainer else colors.surfaceMuted
-    val content = if (selected) colors.primaryButtonContent else colors.textPrimary
+    val isDark = colors.background == BiteCalColors.Dark.background
+    val container = when {
+        selected && isDark -> HomeCardStyles.Camera.selectedTile()
+        selected -> colors.primaryButtonContainer
+        isDark -> HomeCardStyles.Surface.raisedAlt()
+        else -> colors.surfaceMuted
+    }
+    val content = when {
+        selected && isDark -> HomeCardStyles.Camera.selectedTileContent()
+        selected -> colors.primaryButtonContent
+        isDark -> HomeCardStyles.Text.primary()
+        else -> colors.textPrimary
+    }
+    val borderColor = when {
+        selected && isDark -> HomeCardStyles.Camera.tileBorder(selected = true)
+        isDark -> HomeCardStyles.Surface.borderColor()
+        else -> Color.Transparent
+    }
     val interaction = remember { MutableInteractionSource() }
 
     Box(
@@ -194,6 +229,11 @@ private fun GenderOptionCard(
             .height(height)
             .clip(shape)
             .background(container)
+            .border(
+                width = if (isDark) 1.2.dp else 0.dp,
+                color = borderColor,
+                shape = shape
+            )
             .biteCalClickable(
                 interactionSource = interaction,
                 indication = null,

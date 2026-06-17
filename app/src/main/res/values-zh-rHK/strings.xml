@@ -907,7 +907,6 @@
 
     <!-- EditGoalWeightScreen -->
     <string name="edit_goal_weight_title">編輯目標體重</string>
-    <string name="edit_goal_weight_set_goal">設定你的目標體重</string>
     <string name="edit_goal_weight_progress_note">我們會用這個目標來計算你的進度。</string>
     <string name="edit_goal_update_failed">更新目標體重失敗</string>
 
@@ -946,8 +945,7 @@
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">編輯身高</string>
-    <string name="edit_height_set_current_height">設定你目前的身高</string>
-    <string name="edit_height_privacy_note">你的身高僅用於提升熱量估算準確度。</string>
+    <string name="edit_height_privacy_note">我們只會用你的身高來改善體驗與熱量估算準確度。</string>
 
 
     <!-- EditAgeScreen -->
@@ -962,7 +960,6 @@
 
     <!-- EditStartingWeightScreen -->
     <string name="edit_starting_weight_title">編輯起始體重</string>
-    <string name="edit_start_weight_set_starting">設定你的起始體重</string>
     <string name="edit_start_weight_baseline_note">我們會把它作為進度比較的基準</string>
     <string name="edit_starting_weight_update_failed">更新起始體重失敗</string>
 

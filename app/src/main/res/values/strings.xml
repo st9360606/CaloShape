@@ -909,7 +909,6 @@
 
     <!-- EditGoalWeightScreen -->
     <string name="edit_goal_weight_title">Edit Goal Weight</string>
-    <string name="edit_goal_weight_set_goal">Set your goal weight</string>
     <string name="edit_goal_weight_progress_note">We will use this goal to calculate your progress.</string>
     <string name="edit_goal_update_failed">Failed to update goal weight</string>
 
@@ -924,7 +923,7 @@
 
     <string name="record_weight_title">Record Weight</string>
     <string name="record_weight_save_failed">Save failed</string>
-    <string name="record_weight_date_note">This weight will be recorded for %1$s.</string>
+    <string name="record_weight_date_note">This weight will be recorded for %1$s</string>
 
     <string name="weight_date_sheet_title">Select your weighing date</string>
     <string name="weight_date_sheet_subtitle">When did you step on the scale?</string>
@@ -948,8 +947,7 @@
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Edit Your Height</string>
-    <string name="edit_height_set_current_height">Set your current height</string>
-    <string name="edit_height_privacy_note">Your height is used only to improve calorie estimate accuracy.</string>
+    <string name="edit_height_privacy_note">We only use your height to improve your experience and calorie estimation accuracy.</string>
 
 
     <!-- EditAgeScreen -->
@@ -964,7 +962,6 @@
 
     <!-- EditStartingWeightScreen -->
     <string name="edit_starting_weight_title">Edit Starting Weight</string>
-    <string name="edit_start_weight_set_starting">Set your starting weight</string>
     <string name="edit_start_weight_baseline_note">We will use it as your baseline for progress.</string>
     <string name="edit_starting_weight_update_failed">Failed to update starting weight</string>
 
