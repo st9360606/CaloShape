@@ -42,6 +42,8 @@ fun GoalSelectionScreen(
     onBack: () -> Unit,
     onNext: () -> Unit,
     primaryLoading: Boolean = false,
+    progressStepIndex: Int = 7,
+    progressTotalSteps: Int = 12,
     vm: GoalSelectionViewModel = hiltViewModel()
 ) {
     val state by vm.uiState.collectAsState()
@@ -50,8 +52,8 @@ fun GoalSelectionScreen(
         containerColor = Color.White,
         topBar = {
             BiteCalOnboardingTopBar(
-                stepIndex = 7,
-                totalSteps = 12,
+                stepIndex = progressStepIndex,
+                totalSteps = progressTotalSteps,
                 onBack = onBack
             )
         },

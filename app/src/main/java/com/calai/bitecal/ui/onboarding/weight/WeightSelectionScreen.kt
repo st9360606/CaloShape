@@ -89,7 +89,9 @@ private fun currentIsZhByAppLocale(): Boolean {
 fun WeightSelectionScreen(
     vm: WeightSelectionViewModel,
     onBack: () -> Unit,
-    onNext: () -> Unit
+    onNext: () -> Unit,
+    progressStepIndex: Int = 5,
+    progressTotalSteps: Int = 12
 ) {
     val weightKg by vm.weightKgState.collectAsState()
     val savedUnit by vm.weightUnitState.collectAsState()
@@ -216,8 +218,8 @@ fun WeightSelectionScreen(
         containerColor = Color.White,
         topBar = {
             BiteCalOnboardingTopBar(
-                stepIndex = 5,
-                totalSteps = 12,
+                stepIndex = progressStepIndex,
+                totalSteps = progressTotalSteps,
                 onBack = onBack
             )
         },

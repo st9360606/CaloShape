@@ -71,7 +71,9 @@ import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 fun HeightSelectionScreen(
     vm: HeightSelectionViewModel,
     onBack: () -> Unit,
-    onNext: () -> Unit
+    onNext: () -> Unit,
+    progressStepIndex: Int = 4,
+    progressTotalSteps: Int = 12
 ) {
     val heightCm by vm.heightCmState.collectAsState()
     val savedUnit by vm.heightUnitState.collectAsState()
@@ -138,8 +140,8 @@ fun HeightSelectionScreen(
         containerColor = Color.White,
         topBar = {
             BiteCalOnboardingTopBar(
-                stepIndex = 4,
-                totalSteps = 12,
+                stepIndex = progressStepIndex,
+                totalSteps = progressTotalSteps,
                 onBack = onBack
             )
         },

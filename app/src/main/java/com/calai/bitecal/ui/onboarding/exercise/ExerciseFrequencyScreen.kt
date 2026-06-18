@@ -64,7 +64,9 @@ private data class ExerciseUiOption(
 fun ExerciseFrequencyScreen(
     vm: ExerciseFrequencyViewModel,
     onBack: () -> Unit,
-    onNext: () -> Unit
+    onNext: () -> Unit,
+    progressStepIndex: Int = 6,
+    progressTotalSteps: Int = 12
 ) {
     val state by vm.uiState.collectAsState()
     var isContinuing by rememberSaveable { mutableStateOf(false) }
@@ -106,8 +108,8 @@ fun ExerciseFrequencyScreen(
         containerColor = Color.White,
         topBar = {
             BiteCalOnboardingTopBar(
-                stepIndex = 6,
-                totalSteps = 12,
+                stepIndex = progressStepIndex,
+                totalSteps = progressTotalSteps,
                 onBack = onBack
             )
         },

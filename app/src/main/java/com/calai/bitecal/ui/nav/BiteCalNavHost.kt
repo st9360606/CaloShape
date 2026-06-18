@@ -2242,7 +2242,9 @@ fun BiteCalNavHost(
                 ExerciseFrequencyScreen(
                     vm = vm,
                     onBack = { nav.popBackStack() }, // 回 EditNutritionGoals
-                    onNext = { nav.navigate(Routes.AUTO_GENERATE_HEIGHT) }
+                    onNext = { nav.navigate(Routes.AUTO_GENERATE_HEIGHT) },
+                    progressStepIndex = 1,
+                    progressTotalSteps = 4
                 )
             }
 
@@ -2259,7 +2261,9 @@ fun BiteCalNavHost(
                 HeightSelectionScreen(
                     vm = vm,
                     onBack = { nav.popBackStack() },
-                    onNext = { nav.navigate(Routes.AUTO_GENERATE_WEIGHT) }
+                    onNext = { nav.navigate(Routes.AUTO_GENERATE_WEIGHT) },
+                    progressStepIndex = 2,
+                    progressTotalSteps = 4
                 )
             }
 
@@ -2276,7 +2280,9 @@ fun BiteCalNavHost(
                 WeightSelectionScreen(
                     vm = vm,
                     onBack = { nav.popBackStack() },
-                    onNext = { nav.navigate(Routes.AUTO_GENERATE_GOALS) }
+                    onNext = { nav.navigate(Routes.AUTO_GENERATE_GOALS) },
+                    progressStepIndex = 3,
+                    progressTotalSteps = 4
                 )
 
             }
@@ -2330,7 +2336,9 @@ fun BiteCalNavHost(
                     vm = vm,
                     onBack = { nav.popBackStack() },
                     onNext = { calcVm.commit() },
-                    primaryLoading = committing
+                    primaryLoading = committing,
+                    progressStepIndex = 4,
+                    progressTotalSteps = 4
                 )
             }
 
