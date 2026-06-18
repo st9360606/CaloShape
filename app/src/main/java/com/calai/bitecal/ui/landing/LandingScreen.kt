@@ -8,7 +8,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
@@ -228,7 +227,7 @@ private fun LandingBottomBar(
                     fontSize = 16.sp,
                     lineHeight = 16.sp,
                     fontWeight = FontWeight.SemiBold,
-                    color = MaterialTheme.colorScheme.primary
+                    color = Color(0xFF111114)
                 ),
                 textAlign = TextAlign.Center,
                 modifier = Modifier.clickable(
