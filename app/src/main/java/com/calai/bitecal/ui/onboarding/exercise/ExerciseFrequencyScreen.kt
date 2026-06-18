@@ -4,6 +4,7 @@ import androidx.annotation.DrawableRes
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -44,6 +45,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingBottomBar
+import com.calai.bitecal.ui.common.design.BiteCalOnboardingColors
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingTopBar
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
@@ -105,7 +107,7 @@ fun ExerciseFrequencyScreen(
     )
 
     Scaffold(
-        containerColor = Color.White,
+        containerColor = BiteCalOnboardingColors.background(),
         topBar = {
             BiteCalOnboardingTopBar(
                 stepIndex = progressStepIndex,
@@ -149,7 +151,7 @@ fun ExerciseFrequencyScreen(
                 fontSize = 34.sp,
                 fontWeight = FontWeight.ExtraBold,
                 lineHeight = 40.sp,
-                color = Color(0xFF111114),
+                color = BiteCalOnboardingColors.title(),
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = BiteCalScreenFrame.contentHorizontalMedium),
@@ -161,7 +163,7 @@ fun ExerciseFrequencyScreen(
             Text(
                 text = stringResource(R.string.onboard_ex_freq_subtitle),
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    color = Color(0xFF9AA3AF),
+                    color = BiteCalOnboardingColors.subtitle(),
                     lineHeight = 20.sp
                 ),
                 modifier = Modifier
@@ -203,17 +205,34 @@ private fun ExerciseOptionItem(
     modifier: Modifier = Modifier
 ) {
     val bg by animateColorAsState(
-        targetValue = if (selected) Color.Black else Color(0xFFF1F3F7),
+        targetValue = if (BiteCalOnboardingColors.isDark()) {
+            BiteCalOnboardingColors.optionContainer(selected)
+        } else if (selected) {
+            Color.Black
+        } else {
+            Color(0xFFF1F3F7)
+        },
         label = "exercise-bg"
     )
-    val fg = if (selected) Color.White else Color.Black
+    val fg = if (BiteCalOnboardingColors.isDark()) {
+        BiteCalOnboardingColors.optionContent(selected)
+    } else if (selected) {
+        Color.White
+    } else {
+        Color.Black
+    }
+    val iconBg = Color.White
     val interaction = remember { MutableInteractionSource() }
+    val isDark = BiteCalOnboardingColors.isDark()
+    val shape = RoundedCornerShape(14.dp)
+    val borderColor = if (isDark) BiteCalOnboardingColors.optionBorder(selected) else Color.Transparent
 
     Row(
         modifier = modifier
             .height(80.dp)
-            .clip(RoundedCornerShape(14.dp))
+            .clip(shape)
             .background(bg)
+            .border(width = if (isDark) 1.2.dp else 0.dp, color = borderColor, shape = shape)
             .biteCalClickable(
                 interactionSource = interaction,
                 indication = null,
@@ -227,7 +246,7 @@ private fun ExerciseOptionItem(
             modifier = Modifier
                 .size(44.dp)
                 .clip(CircleShape)
-                .background(Color.White),
+                .background(iconBg),
             contentAlignment = Alignment.Center
         ) {
             Image(

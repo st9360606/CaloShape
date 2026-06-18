@@ -42,6 +42,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingBottomBar
+import com.calai.bitecal.ui.common.design.BiteCalOnboardingColors
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingTopBar
 import com.calai.bitecal.ui.common.haptic.HapticWheelTickEffect
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
@@ -62,7 +63,7 @@ fun AgeSelectionScreen(
     }
 
     Scaffold(
-        containerColor = Color.White,
+        containerColor = BiteCalOnboardingColors.background(),
         topBar = {
             BiteCalOnboardingTopBar(
                 stepIndex = 3,
@@ -91,7 +92,7 @@ fun AgeSelectionScreen(
                 fontSize = 34.sp,
                 fontWeight = FontWeight.ExtraBold,
                 lineHeight = 40.sp,
-                color = Color(0xFF111114),
+                color = BiteCalOnboardingColors.title(),
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = BiteCalScreenFrame.contentHorizontalMedium),
@@ -103,7 +104,7 @@ fun AgeSelectionScreen(
             Text(
                 text = stringResource(R.string.onboard_age_subtitle),
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    color = Color(0xFF9AA3AF),
+                    color = BiteCalOnboardingColors.subtitle(),
                     lineHeight = 20.sp
                 ),
                 modifier = Modifier
@@ -198,6 +199,7 @@ private fun AgeWheel(
                 val alpha = if (isCenter) 1f else sideAlpha
                 val size = if (isCenter) centerTextSize else 26.sp
                 val weight = if (isCenter) FontWeight.SemiBold else FontWeight.Normal
+                val textColor = BiteCalOnboardingColors.title().copy(alpha = alpha)
 
                 Box(
                     modifier = Modifier
@@ -209,7 +211,7 @@ private fun AgeWheel(
                         text = age.toString(),
                         fontSize = size,
                         fontWeight = weight,
-                        color = Color.Black.copy(alpha = alpha),
+                        color = textColor,
                         textAlign = TextAlign.Center
                     )
                 }
@@ -217,7 +219,11 @@ private fun AgeWheel(
         }
 
         // 中心框線：中心 ± 半格
-        val lineColor = Color(0x11000000)
+        val lineColor = if (BiteCalOnboardingColors.isDark()) {
+            BiteCalOnboardingColors.softBorder()
+        } else {
+            Color(0x11000000)
+        }
         val half = rowHeight / 2
         val lineThickness = 1.dp
         Box(

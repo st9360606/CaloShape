@@ -20,6 +20,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.calai.bitecal.ui.common.design.BiteCalOnboardingColors
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
 
 /**
@@ -52,7 +53,7 @@ internal fun HealthConnectRationaleTextBlock(
                 fontWeight = FontWeight.ExtraBold,
                 lineHeight = 42.sp
             ),
-            color = Color(0xFF111114),
+            color = BiteCalOnboardingColors.title(),
             textAlign = titleTextAlign,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
@@ -66,7 +67,7 @@ internal fun HealthConnectRationaleTextBlock(
                 fontWeight = FontWeight.ExtraBold,
                 lineHeight = 42.sp
             ),
-            color = Color(0xFF111114),
+            color = BiteCalOnboardingColors.title(),
             textAlign = titleTextAlign,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
@@ -81,7 +82,7 @@ internal fun HealthConnectRationaleTextBlock(
                 fontSize = 16.sp,
                 lineHeight = 22.sp
             ),
-            color = Color(0xFF8F98A3),
+            color = BiteCalOnboardingColors.subtitle(),
             textAlign = bodyTextAlign
         )
     }
@@ -99,7 +100,7 @@ internal fun HealthConnectPermissionRationaleContent(
     MaterialTheme {
         Surface(
             modifier = modifier.fillMaxSize(),
-            color = Color.White
+            color = BiteCalOnboardingColors.background()
         ) {
             Box(
                 modifier = Modifier

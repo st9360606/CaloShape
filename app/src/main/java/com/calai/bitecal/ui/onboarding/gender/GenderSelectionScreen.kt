@@ -1,6 +1,7 @@
 package com.calai.bitecal.ui.onboarding.gender
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -43,6 +44,7 @@ import com.calai.bitecal.i18n.LocalLocaleController
 import com.calai.bitecal.i18n.flagAndLabelFromTag
 import com.calai.bitecal.ui.common.FlagChip
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingBottomBar
+import com.calai.bitecal.ui.common.design.BiteCalOnboardingColors
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingTopBar
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 import com.calai.bitecal.ui.landing.LanguageDialog
@@ -71,7 +73,7 @@ fun GenderSelectionScreen(
     var switching by rememberSaveable { mutableStateOf(false) }
     val closeLangDialog = remember { { showLang = false } }
     Scaffold(
-        containerColor = Color.White,
+        containerColor = BiteCalOnboardingColors.background(),
         topBar = {
             BiteCalOnboardingTopBar(
                 stepIndex = 1,
@@ -111,7 +113,7 @@ fun GenderSelectionScreen(
                 fontSize = 34.sp,
                 fontWeight = FontWeight.ExtraBold,
                 lineHeight = 40.sp,
-                color = Color(0xFF111114),
+                color = BiteCalOnboardingColors.title(),
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = BiteCalScreenFrame.contentHorizontalMedium),
@@ -123,7 +125,7 @@ fun GenderSelectionScreen(
             Text(
                 text = stringResource(R.string.onboard_gender_subtitle),
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    color = Color(0xFF9AA3AF),
+                    color = BiteCalOnboardingColors.subtitle(),
                     lineHeight = 20.sp
                 ),
                 modifier = Modifier
@@ -203,10 +205,24 @@ private fun GenderOption(
     corner: Dp
 ) {
     val shape = RoundedCornerShape(corner)
-    val container = if (selected) Color(0xFF111114) else Color(0xFFF1F3F7)
-    val content = if (selected) Color.White else Color.Black
+    val container = if (BiteCalOnboardingColors.isDark()) {
+        BiteCalOnboardingColors.optionContainer(selected)
+    } else if (selected) {
+        Color(0xFF111114)
+    } else {
+        Color(0xFFF1F3F7)
+    }
+    val content = if (BiteCalOnboardingColors.isDark()) {
+        BiteCalOnboardingColors.optionContent(selected)
+    } else if (selected) {
+        Color.White
+    } else {
+        Color.Black
+    }
 
     val interaction = remember { MutableInteractionSource() }
+    val isDark = BiteCalOnboardingColors.isDark()
+    val borderColor = if (isDark) BiteCalOnboardingColors.optionBorder(selected) else Color.Transparent
 
     Box(
         modifier = Modifier
@@ -214,6 +230,7 @@ private fun GenderOption(
             .height(height)
             .clip(shape)
             .background(container)
+            .border(width = if (isDark) 1.2.dp else 0.dp, color = borderColor, shape = shape)
             .biteCalClickable(
                 interactionSource = interaction,
                 indication = null,

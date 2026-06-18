@@ -13,6 +13,7 @@ import androidx.activity.result.ActivityResultRegistryOwner
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -80,6 +81,7 @@ import com.calai.bitecal.BuildConfig
 import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingBottomContainer
 import com.calai.bitecal.ui.common.design.BiteCalNotificationPreviewTokens as NotifCardSpec
+import com.calai.bitecal.ui.common.design.BiteCalOnboardingColors
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingPrimaryButton
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingSecondaryTextButton
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingTopBar
@@ -120,7 +122,7 @@ fun NotificationPermissionScreen(
     }
 
     Scaffold(
-        containerColor = Color.White,
+        containerColor = BiteCalOnboardingColors.background(),
         topBar = {
             BiteCalOnboardingTopBar(
                 stepIndex = 10,
@@ -230,7 +232,8 @@ fun NotificationPermissionScreen(
                     val titleStyle = MaterialTheme.typography.headlineLarge.copy(
                         fontSize = 42.sp,
                         fontWeight = FontWeight.ExtraBold,
-                        lineHeight = 45.sp
+                        lineHeight = 45.sp,
+                        color = BiteCalOnboardingColors.title()
                     )
 
                     NotifTitleWithEndImageInline(
@@ -254,7 +257,7 @@ fun NotificationPermissionScreen(
                             fontSize = 16.sp,
                             lineHeight = 22.sp
                         ),
-                        color = Color(0xFF8F98A3),
+                        color = BiteCalOnboardingColors.subtitle(),
                         modifier = Modifier.fillMaxWidth(0.80f),
                     )
                 }
@@ -329,22 +332,32 @@ private fun LockscreenPanel(
     batteryPercent: Int = 87,
     content: @Composable ColumnScope.() -> Unit
 ) {
+    val isDark = BiteCalOnboardingColors.isDark()
+    val panelBrush = if (isDark) {
+        Brush.verticalGradient(
+            listOf(Color(0xFF18151F), Color(0xFF24212D))
+        )
+    } else {
+        Brush.verticalGradient(
+            listOf(Color(0xFFFAFCFF), Color(0xFFEEF3FA))
+        )
+    }
+    val resolvedFrameBorder = if (isDark) BiteCalOnboardingColors.softBorder() else frameBorderColor
+    val resolvedStatusTint = if (isDark) BiteCalOnboardingColors.subtitle() else statusTint
+    val resolvedClockColor = if (isDark) BiteCalOnboardingColors.title() else clockColor
+
     Box(
         modifier = modifier
-            .border(frameBorderWidth, frameBorderColor, RoundedCornerShape(corner))
+            .border(frameBorderWidth, resolvedFrameBorder, RoundedCornerShape(corner))
             .clip(RoundedCornerShape(corner))
-            .background(
-                Brush.verticalGradient(
-                    listOf(Color(0xFFFAFCFF), Color(0xFFEEF3FA))
-                )
-            )
+            .background(panelBrush)
     ) {
         if (showStatusIcons) {
             StatusBarIcons(
                 modifier = Modifier
                     .align(Alignment.TopEnd)
                     .padding(top = 10.dp, end = 12.dp),
-                tint = statusTint,
+                tint = resolvedStatusTint,
                 batteryPercent = batteryPercent
             )
         }
@@ -360,7 +373,7 @@ private fun LockscreenPanel(
                 text = buildClockAnnotated(bigClock),
                 fontSize = clockSizeSp.sp,
                 fontWeight = FontWeight.ExtraBold,
-                color = clockColor.copy(alpha = clockAlpha)
+                color = resolvedClockColor.copy(alpha = clockAlpha)
             )
             Spacer(Modifier.height(clockContentGap))
             Column(
@@ -474,15 +487,18 @@ private fun NotificationCardIOS(
     @DrawableRes appIconRes: Int,
     modifier: Modifier = Modifier
 ) {
-    val metaColor = Color(0xFF748092)
-    val bodyColor = Color(0xFF667085)
-    val titleColor = Color(0xFF111114)
+    val isDark = BiteCalOnboardingColors.isDark()
+    val metaColor = if (isDark) BiteCalOnboardingColors.subtitle() else Color(0xFF748092)
+    val bodyColor = if (isDark) BiteCalOnboardingColors.subtitle() else Color(0xFF667085)
+    val titleColor = if (isDark) BiteCalOnboardingColors.title() else Color(0xFF111114)
+    val cardColor = if (isDark) Color(0xFF18151F) else Color.White
 
     Surface(
         shape = RoundedCornerShape(NotifCardSpec.corner),
-        color = Color.White,
+        color = cardColor,
+        border = if (isDark) BorderStroke(1.2.dp, BiteCalOnboardingColors.softBorder()) else null,
         tonalElevation = 0.dp,
-        shadowElevation = 14.dp,
+        shadowElevation = if (isDark) 0.dp else 14.dp,
         modifier = modifier.fillMaxWidth(0.98f)
     ) {
         Column(

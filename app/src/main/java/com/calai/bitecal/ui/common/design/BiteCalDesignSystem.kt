@@ -123,6 +123,68 @@ object BiteCalColors {
     }
 }
 
+object BiteCalOnboardingColors {
+    @Composable
+    fun isDark(): Boolean = BiteCalColors.current() == BiteCalColors.Dark
+
+    @Composable
+    fun background(): Color = if (isDark()) Color.Transparent else Color(0xFFF5F5F5)
+
+    @Composable
+    fun title(): Color = if (isDark()) Color(0xFFF7F5FF) else Color(0xFF111114)
+
+    @Composable
+    fun subtitle(): Color = if (isDark()) Color(0xFFC9C4D4) else Color(0xFF9AA3AF)
+
+    @Composable
+    fun optionContainer(selected: Boolean): Color {
+        return when {
+            isDark() && selected -> Color(0xFFF7F5FF)
+            isDark() -> Color(0xFF24212D)
+            selected -> Color(0xFF111114)
+            else -> Color(0xFFF1F3F7)
+        }
+    }
+
+    @Composable
+    fun optionContent(selected: Boolean): Color {
+        return when {
+            isDark() && selected -> Color(0xFF111114)
+            isDark() -> Color(0xFFF7F5FF)
+            selected -> Color.White
+            else -> Color(0xFF111114)
+        }
+    }
+
+    @Composable
+    fun optionBorder(selected: Boolean): Color {
+        return when {
+            isDark() && selected -> Color(0xFFC9C4D4).copy(alpha = 0.44f)
+            isDark() -> Color(0xFF34303D)
+            else -> Color.Transparent
+        }
+    }
+
+    @Composable
+    fun wheelText(selected: Boolean): Color {
+        return when {
+            isDark() && selected -> Color(0xFFF7F5FF)
+            isDark() -> Color(0xFF8F899C)
+            selected -> Color.White
+            else -> Color(0xFF333333)
+        }
+    }
+
+    @Composable
+    fun cardSurface(): Color = if (isDark()) Color(0xFF18151F) else Color.White
+
+    @Composable
+    fun inputSurface(): Color = if (isDark()) Color(0xFF24212D) else Color(0xFFFAFAFC)
+
+    @Composable
+    fun softBorder(): Color = if (isDark()) Color(0xFF34303D) else Color(0xFFF1F1F4)
+}
+
 private fun Color.luminanceCompat(): Float {
     return (0.299f * red + 0.587f * green + 0.114f * blue)
 }
@@ -406,7 +468,7 @@ fun BiteCalProgressTopBar(
     TopAppBar(
         modifier = modifier.padding(start = BiteCalSpacing.topBarHorizontal, end = BiteCalSpacing.topBarHorizontal),
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = BiteCalColors.current().background,
+            containerColor = BiteCalOnboardingColors.background(),
             navigationIconContentColor = BiteCalColors.current().textPrimary,
         ),
         navigationIcon = { BiteCalBackButton(onClick = onBack) },
@@ -709,7 +771,7 @@ fun BiteCalOnboardingTopBar(
             end = BiteCalSpacing.topBarHorizontal,
         ),
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = BiteCalColors.current().background,
+            containerColor = BiteCalOnboardingColors.background(),
             navigationIconContentColor = BiteCalColors.current().textPrimary,
         ),
         navigationIcon = {
@@ -743,12 +805,15 @@ fun BiteCalOnboardingPrimaryButton(
     enabled: Boolean = true,
     loading: Boolean = false,
 ) {
+    val isDark = BiteCalOnboardingColors.isDark()
     BiteCalPrimaryButton(
         text = text,
         enabled = enabled,
         loading = loading,
         onClick = onClick,
         modifier = modifier,
+        containerColor = if (isDark) Color.White else null,
+        contentColor = if (isDark) Color.Black else null,
     )
 }
 
@@ -759,13 +824,18 @@ fun BiteCalOnboardingSecondaryTextButton(
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
 ) {
+    val contentColor = if (BiteCalOnboardingColors.isDark()) {
+        Color(0xFFC9C4D4)
+    } else {
+        BiteCalColors.current().secondaryButtonContent
+    }
     TextButton(
         onClick = rememberClickWithHaptic(enabled = enabled, onClick = onClick),
         enabled = enabled,
         modifier = modifier.height(BiteCalSize.secondaryTextButtonHeight),
         colors = ButtonDefaults.textButtonColors(
-            contentColor = BiteCalColors.current().secondaryButtonContent,
-            disabledContentColor = BiteCalColors.current().secondaryButtonContent.copy(alpha = 0.45f),
+            contentColor = contentColor,
+            disabledContentColor = contentColor.copy(alpha = 0.45f),
         ),
     ) {
         Text(
@@ -811,18 +881,27 @@ fun BiteCalOnboardingBottomBar(
     onSecondaryClick: (() -> Unit)? = null,
     secondaryEnabled: Boolean = true,
 ) {
-    BiteCalBottomActionBar(
-        primaryText = primaryText,
-        onPrimaryClick = onPrimaryClick,
+    BiteCalOnboardingBottomContainer(
         modifier = modifier,
-        primaryEnabled = primaryEnabled,
-        primaryLoading = primaryLoading,
-        secondaryText = secondaryText,
-        onSecondaryClick = onSecondaryClick,
-        secondaryEnabled = secondaryEnabled,
-        compactBottomPadding = compactBottom || (secondaryText != null && onSecondaryClick != null),
+        hasSecondaryAction = compactBottom || (secondaryText != null && onSecondaryClick != null),
         useImePadding = useImePadding,
-    )
+    ) {
+        BiteCalOnboardingPrimaryButton(
+            text = primaryText,
+            enabled = primaryEnabled,
+            loading = primaryLoading,
+            onClick = onPrimaryClick,
+        )
+
+        if (secondaryText != null && onSecondaryClick != null) {
+            Spacer(Modifier.height(BiteCalSpacing.bottomButtonToSecondary))
+            BiteCalOnboardingSecondaryTextButton(
+                text = secondaryText,
+                onClick = onSecondaryClick,
+                enabled = secondaryEnabled && !primaryLoading,
+            )
+        }
+    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -863,7 +942,7 @@ fun BiteCalLandingLanguageTopBar(
         modifier = modifier,
         title = {},
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = BiteCalColors.current().background,
+            containerColor = BiteCalOnboardingColors.background(),
             navigationIconContentColor = BiteCalColors.current().textPrimary,
         ),
         actions = {

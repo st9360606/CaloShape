@@ -1,6 +1,7 @@
 package com.calai.bitecal.ui.onboarding.comparison
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -29,6 +30,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingBottomBar
+import com.calai.bitecal.ui.common.design.BiteCalOnboardingColors
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingTopBar
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 
@@ -41,7 +43,7 @@ fun WeightLossComparisonScreen(
 ) {
     Scaffold(
         modifier = modifier,
-        containerColor = Color.White,
+        containerColor = BiteCalOnboardingColors.background(),
         topBar = {
             BiteCalOnboardingTopBar(
                 stepIndex = 9,
@@ -67,7 +69,7 @@ fun WeightLossComparisonScreen(
 
             Text(
                 text = stringResource(R.string.onboard_weight_loss_comparison_title),
-                color = Color(0xFF111114),
+                color = BiteCalOnboardingColors.title(),
                 fontSize = 32.sp,
                 fontWeight = FontWeight.ExtraBold,
                 lineHeight = 38.sp,
@@ -92,19 +94,33 @@ fun WeightLossComparisonScreen(
 private fun ComparisonCard(
     modifier: Modifier = Modifier,
 ) {
+    val isDark = BiteCalOnboardingColors.isDark()
+    val cardShape = RoundedCornerShape(28.dp)
+    val cardBorderColor = if (isDark) BiteCalOnboardingColors.softBorder() else Color.Transparent
+    val cardBrush = if (isDark) {
+        Brush.linearGradient(
+            colors = listOf(
+                BiteCalOnboardingColors.cardSurface(),
+                Color(0xFF1E1B24),
+                Color(0xFF24212D)
+            )
+        )
+    } else {
+        Brush.linearGradient(
+            colors = listOf(
+                Color(0xFFF4F5F5),
+                Color(0xFFF4F4F4),
+                Color(0xFFFFF4F9)
+            )
+        )
+    }
+
     Box(
         modifier = modifier
             .height(380.dp)
-            .clip(RoundedCornerShape(28.dp))
-            .background(
-                Brush.linearGradient(
-                    colors = listOf(
-                        Color(0xFFF4F5F5),
-                        Color(0xFFF4F4F4),
-                        Color(0xFFFFF4F9)
-                    )
-                )
-            )
+            .clip(cardShape)
+            .background(cardBrush)
+            .border(width = if (isDark) 1.2.dp else 0.dp, color = cardBorderColor, shape = cardShape)
             .padding(horizontal = 28.dp, vertical = 42.dp)
     ) {
         Column(
@@ -119,8 +135,8 @@ private fun ComparisonCard(
                 ComparisonPillar(
                     title = stringResource(R.string.onboard_weight_loss_comparison_without_ai),
                     value = stringResource(R.string.onboard_weight_loss_comparison_twenty_percent),
-                    valueContainerColor = Color(0xFFE1E1E1),
-                    valueTextColor = Color(0xFF111114),
+                    valueContainerColor = if (isDark) Color(0xFF4A4558) else Color(0xFFE1E1E1),
+                    valueTextColor = if (isDark) BiteCalOnboardingColors.title() else Color(0xFF111114),
                     bottomBlockHeight = 51.dp
                 )
 
@@ -129,8 +145,8 @@ private fun ComparisonCard(
                 ComparisonPillar(
                     title = stringResource(R.string.onboard_weight_loss_comparison_with_ai),
                     value = stringResource(R.string.onboard_weight_loss_comparison_two_times),
-                    valueContainerColor = Color(0xFF1C1822),
-                    valueTextColor = Color.White,
+                    valueContainerColor = if (isDark) Color(0xFFF7F5FF) else Color(0xFF1C1822),
+                    valueTextColor = if (isDark) Color(0xFF111114) else Color.White,
                     bottomBlockHeight = 122.dp
                 )
             }
@@ -139,7 +155,7 @@ private fun ComparisonCard(
 
             Text(
                 text = stringResource(R.string.onboard_weight_loss_comparison_caption),
-                color = Color(0xFF57575D),
+                color = if (isDark) BiteCalOnboardingColors.subtitle() else Color(0xFF57575D),
                 fontSize = 17.sp,
                 fontWeight = FontWeight.Medium,
                 lineHeight = 24.sp,
@@ -159,18 +175,35 @@ private fun ComparisonPillar(
     bottomBlockHeight: Dp,
     modifier: Modifier = Modifier,
 ) {
+    val pillarBg = if (BiteCalOnboardingColors.isDark()) {
+        Color(0xFF24212D)
+    } else {
+        Color.White
+    }
+    val titleColor = BiteCalOnboardingColors.title()
+    val pillarBorderColor = if (BiteCalOnboardingColors.isDark()) {
+        BiteCalOnboardingColors.softBorder()
+    } else {
+        Color.Transparent
+    }
+
     Column(
         modifier = modifier
             .width(104.dp)
             .height(202.dp)
             .clip(RoundedCornerShape(18.dp))
-            .background(Color.White),
+            .background(pillarBg)
+            .border(
+                width = if (BiteCalOnboardingColors.isDark()) 1.dp else 0.dp,
+                color = pillarBorderColor,
+                shape = RoundedCornerShape(18.dp)
+            ),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Bottom
     ) {
         Text(
             text = title,
-            color = Color(0xFF111114),
+            color = titleColor,
             fontSize = 17.sp,
             fontWeight = FontWeight.ExtraBold,
             lineHeight = 24.sp,

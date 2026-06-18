@@ -45,6 +45,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingBottomBar
+import com.calai.bitecal.ui.common.design.BiteCalOnboardingColors
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingTopBar
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
@@ -52,8 +53,6 @@ import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 private val ReferralText = Color(0xFF111114)
 private val ReferralMuted = Color(0xFFB8BAC2)
 private val ReferralBorder = Color(0xFF111114)
-private val ReferralSoftBorder = Color(0xFFF1F1F4)
-private val ReferralInputBg = Color(0xFFFAFAFC)
 private val ReferralDisabledButton = Color(0xFFDADBE2)
 
 @Composable
@@ -86,7 +85,7 @@ fun OnboardReferralCodeScreen(
 ) {
     Scaffold(
         modifier = modifier,
-        containerColor = Color.White,
+        containerColor = BiteCalOnboardingColors.background(),
         topBar = {
             BiteCalOnboardingTopBar(
                 stepIndex = 12,
@@ -121,7 +120,7 @@ fun OnboardReferralCodeScreen(
                 fontSize = 34.sp,
                 fontWeight = FontWeight.ExtraBold,
                 lineHeight = 41.sp,
-                color = ReferralText,
+                color = BiteCalOnboardingColors.title(),
                 letterSpacing = 0.1.sp,
             )
 
@@ -132,7 +131,11 @@ fun OnboardReferralCodeScreen(
                 fontSize = 19.sp,
                 fontWeight = FontWeight.Normal,
                 lineHeight = 26.sp,
-                color = ReferralText.copy(alpha = 0.88f),
+                color = if (BiteCalOnboardingColors.isDark()) {
+                    BiteCalOnboardingColors.subtitle()
+                } else {
+                    ReferralText.copy(alpha = 0.88f)
+                },
             )
 
             Spacer(Modifier.weight(0.78f))
@@ -155,7 +158,11 @@ fun OnboardReferralCodeScreen(
                 Spacer(Modifier.height(14.dp))
                 Text(
                     text = referralErrorMessage(errorCode),
-                    color = Color(0xFFCC3D3D),
+                    color = if (BiteCalOnboardingColors.isDark()) {
+                        Color(0xFFFF7A7A)
+                    } else {
+                        Color(0xFFCC3D3D)
+                    },
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Medium,
                     lineHeight = 19.sp,
@@ -182,10 +189,13 @@ private fun ReferralCodeInputCard(
 
     val expanded = focused || code.isNotBlank() || applied
     val shape = RoundedCornerShape(20.dp)
+    val textColor = BiteCalOnboardingColors.title()
+    val mutedColor = if (BiteCalOnboardingColors.isDark()) BiteCalOnboardingColors.subtitle() else ReferralMuted
+    val inputBg = BiteCalOnboardingColors.inputSurface()
 
     val borderColor = when {
-        applied -> ReferralSoftBorder
-        expanded -> ReferralBorder
+        applied -> BiteCalOnboardingColors.softBorder()
+        expanded -> if (BiteCalOnboardingColors.isDark()) BiteCalOnboardingColors.title() else ReferralBorder
         else -> Color.Transparent
     }
 
@@ -196,9 +206,9 @@ private fun ReferralCodeInputCard(
             .clip(shape)
             .background(
                 if (applied || !expanded) {
-                    ReferralInputBg
+                    inputBg
                 } else {
-                    Color.White
+                    if (BiteCalOnboardingColors.isDark()) BiteCalOnboardingColors.cardSurface() else Color.White
                 }
             )
             .border(
@@ -216,9 +226,9 @@ private fun ReferralCodeInputCard(
             singleLine = true,
             textStyle = TextStyle(
                 color = if (applied) {
-                    ReferralText.copy(alpha = 0.56f)
+                    textColor.copy(alpha = 0.56f)
                 } else {
-                    ReferralText
+                    textColor
                 },
                 fontSize = if (expanded) 20.sp else 19.sp,
                 fontWeight = FontWeight.Normal,
@@ -242,7 +252,7 @@ private fun ReferralCodeInputCard(
                     ) {
                         Text(
                             text = stringResource(R.string.onboard_referral_code_input_label),
-                            color = ReferralMuted,
+                            color = mutedColor,
                             fontSize = 15.sp,
                             fontWeight = FontWeight.Medium,
                             lineHeight = 18.sp,
@@ -264,7 +274,7 @@ private fun ReferralCodeInputCard(
                     ) {
                         Text(
                             text = stringResource(R.string.onboard_referral_code_placeholder),
-                            color = ReferralMuted.copy(alpha = 0.72f),
+                            color = mutedColor.copy(alpha = 0.72f),
                             fontSize = 19.sp,
                             fontWeight = FontWeight.Medium,
                         )
@@ -284,8 +294,8 @@ private fun ReferralCodeInputCard(
                     .height(48.dp),
                 shape = RoundedCornerShape(999.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = ReferralText,
-                    contentColor = Color.White,
+                    containerColor = BiteCalOnboardingColors.optionContainer(selected = true),
+                    contentColor = BiteCalOnboardingColors.optionContent(selected = true),
                     disabledContainerColor = ReferralDisabledButton,
                     disabledContentColor = Color.White,
                 ),
@@ -318,7 +328,7 @@ private fun ReferralAppliedRow() {
             modifier = Modifier
                 .size(20.dp)
                 .clip(CircleShape)
-                .background(ReferralText),
+                .background(BiteCalOnboardingColors.title()),
             contentAlignment = Alignment.Center,
         ) {
             Icon(
@@ -333,7 +343,7 @@ private fun ReferralAppliedRow() {
 
         Text(
             text = stringResource(R.string.onboard_referral_code_applied),
-            color = ReferralText,
+            color = BiteCalOnboardingColors.title(),
             fontSize = 18.sp,
             fontWeight = FontWeight.SemiBold,
             letterSpacing = 0.2.sp,

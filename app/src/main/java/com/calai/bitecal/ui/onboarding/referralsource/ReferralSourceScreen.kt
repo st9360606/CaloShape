@@ -2,6 +2,7 @@ package com.calai.bitecal.ui.onboarding.referralsource
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -40,6 +41,7 @@ import androidx.compose.ui.zIndex
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingBottomBar
+import com.calai.bitecal.ui.common.design.BiteCalOnboardingColors
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingTopBar
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 import kotlinx.coroutines.launch
@@ -59,7 +61,7 @@ fun ReferralSourceScreen(
     val scope = rememberCoroutineScope()
 
     Scaffold(
-        containerColor = Color.White,
+        containerColor = BiteCalOnboardingColors.background(),
         topBar = {
             BiteCalOnboardingTopBar(
                 stepIndex = 2,
@@ -91,7 +93,7 @@ fun ReferralSourceScreen(
                 fontSize = 34.sp,
                 fontWeight = FontWeight.ExtraBold,
                 lineHeight = 40.sp,
-                color = Color(0xFF111114),
+                color = BiteCalOnboardingColors.title(),
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = BiteCalScreenFrame.contentHorizontalMedium),
@@ -134,17 +136,34 @@ private fun ReferralOptionItem(
     modifier: Modifier = Modifier
 ) {
     val bg by animateColorAsState(
-        targetValue = if (selected) Color.Black else Color(0xFFF1F3F7),
+        targetValue = if (BiteCalOnboardingColors.isDark()) {
+            BiteCalOnboardingColors.optionContainer(selected)
+        } else if (selected) {
+            Color.Black
+        } else {
+            Color(0xFFF1F3F7)
+        },
         label = "referral-bg"
     )
-    val fg = if (selected) Color.White else Color.Black
+    val fg = if (BiteCalOnboardingColors.isDark()) {
+        BiteCalOnboardingColors.optionContent(selected)
+    } else if (selected) {
+        Color.White
+    } else {
+        Color.Black
+    }
+    val iconBg = Color.White
     val interaction = remember { MutableInteractionSource() }
+    val isDark = BiteCalOnboardingColors.isDark()
+    val shape = RoundedCornerShape(14.dp)
+    val borderColor = if (isDark) BiteCalOnboardingColors.optionBorder(selected) else Color.Transparent
 
     Row(
         modifier = modifier
             .height(75.dp)
-            .clip(RoundedCornerShape(14.dp))
+            .clip(shape)
             .background(bg)
+            .border(width = if (isDark) 1.2.dp else 0.dp, color = borderColor, shape = shape)
             .biteCalClickable(
                 interactionSource = interaction,
                 indication = null,
@@ -158,7 +177,7 @@ private fun ReferralOptionItem(
             modifier = Modifier
                 .size(44.dp)
                 .clip(CircleShape)
-                .background(Color.White)
+                .background(iconBg)
                 .zIndex(1f),
             contentAlignment = Alignment.Center
         ) {

@@ -56,6 +56,7 @@ import com.calai.bitecal.data.profile.repo.UserProfileStore
 import com.calai.bitecal.data.profile.repo.roundKg1
 import com.calai.bitecal.i18n.LocalLocaleController
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingBottomContainer
+import com.calai.bitecal.ui.common.design.BiteCalOnboardingColors
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingPrimaryButton
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingTopBar
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
@@ -215,7 +216,7 @@ fun WeightSelectionScreen(
     }
 
     Scaffold(
-        containerColor = Color.White,
+        containerColor = BiteCalOnboardingColors.background(),
         topBar = {
             BiteCalOnboardingTopBar(
                 stepIndex = progressStepIndex,
@@ -311,7 +312,7 @@ fun WeightSelectionScreen(
                 fontSize = 34.sp,
                 fontWeight = FontWeight.ExtraBold,
                 lineHeight = 40.sp,
-                color = Color(0xFF111114),
+                color = BiteCalOnboardingColors.title(),
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = BiteCalScreenFrame.contentHorizontalMedium),
@@ -323,7 +324,7 @@ fun WeightSelectionScreen(
             Text(
                 text = stringResource(R.string.onboard_weight_subtitle),
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    color = Color(0xFF9AA3AF),
+                    color = BiteCalOnboardingColors.subtitle(),
                     lineHeight = 20.sp
                 ),
                 modifier = Modifier
@@ -388,6 +389,7 @@ fun WeightSelectionScreen(
                         Text(
                             text = ".",
                             fontSize = 34.sp,
+                            color = BiteCalOnboardingColors.title(),
                             modifier = Modifier.offset(x = 2.dp))
                     }
 
@@ -409,7 +411,12 @@ fun WeightSelectionScreen(
                             .padding(start = 6.dp)
                     )
                     Spacer(Modifier.width(10.dp))
-                    Text("kg", fontSize = 22.sp, fontWeight = FontWeight.SemiBold)
+                    Text(
+                        "kg",
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = BiteCalOnboardingColors.title()
+                    )
                 }
             } else {
                 Row(
@@ -447,6 +454,7 @@ fun WeightSelectionScreen(
                         Text(
                             text = ".",
                             fontSize = 34.sp,
+                            color = BiteCalOnboardingColors.title(),
                             modifier = Modifier.offset(x = 4.dp)
                         )
                     }
@@ -472,7 +480,12 @@ fun WeightSelectionScreen(
                             .padding(start = 9.dp)
                     )
                     Spacer(Modifier.width(8.dp))
-                    Text("lbs", fontSize = 22.sp, fontWeight = FontWeight.SemiBold)
+                    Text(
+                        "lbs",
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = BiteCalOnboardingColors.title()
+                    )
                 }
             }
 
@@ -482,7 +495,7 @@ fun WeightSelectionScreen(
                 Text(
                     text = stringResource(R.string.onboard_weight_hint),
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(0xFF9AA3AE),
+                    color = BiteCalOnboardingColors.subtitle(),
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth(0.62f)
                 )
@@ -501,7 +514,11 @@ private fun WeightUnitSegmented(
 ) {
     Surface(
         shape = RoundedCornerShape(40.dp),
-        color = Color(0xFFE2E5EA),
+        color = if (BiteCalOnboardingColors.isDark()) {
+            BiteCalOnboardingColors.cardSurface()
+        } else {
+            Color(0xFFE2E5EA)
+        },
         modifier = modifier
             .fillMaxWidth(0.55f)
             .heightIn(min = 40.dp)
@@ -511,7 +528,11 @@ private fun WeightUnitSegmented(
                 text = "lbs",
                 selected = !useMetric,
                 onClick = { onChange(false) },
-                selectedColor = Color.Black,
+                selectedColor = if (BiteCalOnboardingColors.isDark()) {
+                    BiteCalOnboardingColors.optionContainer(selected = true)
+                } else {
+                    Color.Black
+                },
                 modifier = Modifier
                     .weight(1f)
                     .height(40.dp)
@@ -521,7 +542,11 @@ private fun WeightUnitSegmented(
                 text = "kg",
                 selected = useMetric,
                 onClick = { onChange(true) },
-                selectedColor = Color.Black,
+                selectedColor = if (BiteCalOnboardingColors.isDark()) {
+                    BiteCalOnboardingColors.optionContainer(selected = true)
+                } else {
+                    Color.Black
+                },
                 modifier = Modifier
                     .weight(1f)
                     .height(40.dp)
@@ -558,7 +583,13 @@ private fun SegItem(
                 text = text,
                 fontSize = fSize,
                 fontWeight = FontWeight.SemiBold,
-                color = if (selected) Color.White else Color(0xFF333333),
+                color = if (BiteCalOnboardingColors.isDark()) {
+                    BiteCalOnboardingColors.optionContent(selected)
+                } else if (selected) {
+                    Color.White
+                } else {
+                    Color(0xFF333333)
+                },
                 textAlign = TextAlign.Center,
                 modifier = Modifier.fillMaxWidth()
             )
@@ -671,6 +702,7 @@ private fun NumberWheel(
                 val size = if (isCenter) centerTextSize else textSize
                 val weight = if (isCenter) FontWeight.SemiBold else FontWeight.Normal
                 val unitSize = if (isCenter) 20.sp else 18.sp
+                val textColor = BiteCalOnboardingColors.title().copy(alpha = alpha)
 
                 Row(
                     modifier = Modifier
@@ -688,7 +720,7 @@ private fun NumberWheel(
                         text = numOrNull.toString(),
                         fontSize = size,
                         fontWeight = weight,
-                        color = Color.Black.copy(alpha = alpha),
+                        color = textColor,
                         textAlign = TextAlign.Center
                     )
 
@@ -697,7 +729,7 @@ private fun NumberWheel(
                         Text(
                             text = unitLabel,
                             fontSize = unitSize,
-                            color = Color(0xFF333333).copy(alpha = alpha),
+                            color = textColor,
                             fontWeight = FontWeight.Normal
                         )
                     }
@@ -705,7 +737,11 @@ private fun NumberWheel(
             }
         }
 
-        val lineColor = Color(0x11000000)
+        val lineColor = if (BiteCalOnboardingColors.isDark()) {
+            BiteCalOnboardingColors.softBorder()
+        } else {
+            Color(0x11000000)
+        }
         val half = rowHeight / 2
         val lineThickness = 1.dp
 

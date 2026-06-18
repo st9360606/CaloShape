@@ -50,6 +50,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
+import com.calai.bitecal.ui.common.design.BiteCalOnboardingColors
 import com.calai.bitecal.ui.common.design.BiteCalComputationProgressTokens as ProgressTokens
 import com.calai.bitecal.ui.common.design.BiteCalScreenSpacing
 import kotlinx.coroutines.delay
@@ -81,11 +82,14 @@ fun ComputationProgressScreen(
         animationSpec = tween(durationMillis = 450, easing = FastOutSlowInEasing),
         label = "progress_ring"
     )
+    val backgroundColor = BiteCalOnboardingColors.background()
+    val titleColor = BiteCalOnboardingColors.title()
+    val subtitleColor = BiteCalOnboardingColors.subtitle()
 
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.White)
+            .background(backgroundColor)
             .statusBarsPadding()
             .navigationBarsPadding()
     ) {
@@ -111,7 +115,7 @@ fun ComputationProgressScreen(
                 fontSize = 28.sp,
                 lineHeight = 34.sp,
                 fontWeight = FontWeight.Bold,
-                color = ProgressTokens.TextPrimary,
+                color = titleColor,
                 textAlign = TextAlign.Center,
                 style = LocalTextStyle.current.copy(
                     platformStyle = PlatformTextStyle(includeFontPadding = false),
@@ -129,7 +133,7 @@ fun ComputationProgressScreen(
                 fontSize = 15.sp,
                 lineHeight = 22.sp,
                 fontWeight = FontWeight.Medium,
-                color = ProgressTokens.TextSecondary,
+                color = subtitleColor,
                 textAlign = TextAlign.Center
             )
 
@@ -147,7 +151,7 @@ fun ComputationProgressScreen(
                 text = stringResource(R.string.progress_footer_hint),
                 fontSize = 15.sp,
                 lineHeight = 22.sp,
-                color = ProgressTokens.TextSecondary,
+                color = subtitleColor,
                 textAlign = TextAlign.Center
             )
         }
@@ -159,6 +163,14 @@ private fun HeroProgressRing(
     progress: Float,
     percent: Int
 ) {
+    val trackColor = if (BiteCalOnboardingColors.isDark()) {
+        BiteCalOnboardingColors.softBorder()
+    } else {
+        ProgressTokens.ProgressTrack
+    }
+    val titleColor = BiteCalOnboardingColors.title()
+    val subtitleColor = BiteCalOnboardingColors.subtitle()
+
     Box(
         modifier = Modifier.size(214.dp),
         contentAlignment = Alignment.Center
@@ -167,7 +179,7 @@ private fun HeroProgressRing(
             val stroke = 14.dp.toPx()
 
             drawCircle(
-                color = ProgressTokens.ProgressTrack,
+                color = trackColor,
                 style = Stroke(width = stroke)
             )
 
@@ -192,7 +204,7 @@ private fun HeroProgressRing(
             Text(
                 text = "${percent.coerceIn(0, 100)}%",
                 modifier = Modifier.fillMaxWidth(),
-                color = ProgressTokens.TextPrimary,
+                color = titleColor,
                 fontSize = 42.sp,
                 lineHeight = 46.sp,
                 fontWeight = FontWeight.SemiBold,
@@ -210,7 +222,7 @@ private fun HeroProgressRing(
 
             Text(
                 text = stringResource(R.string.progress_center_caption),
-                color = ProgressTokens.TextSecondary,
+                color = subtitleColor,
                 fontSize = 15.sp,
                 lineHeight = 18.sp,
                 textAlign = TextAlign.Center
@@ -253,8 +265,8 @@ private fun ProgressChecklistCard(
     Surface(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(28.dp),
-        color = ProgressTokens.CardBg,
-        shadowElevation = 8.dp
+        color = BiteCalOnboardingColors.cardSurface(),
+        shadowElevation = if (BiteCalOnboardingColors.isDark()) 0.dp else 8.dp
     ) {
         Column(
             modifier = Modifier.padding(horizontal = 18.dp, vertical = 18.dp),
@@ -265,7 +277,7 @@ private fun ProgressChecklistCard(
                 fontSize = 16.sp,
                 lineHeight = 20.sp,
                 fontWeight = FontWeight.Bold,
-                color = ProgressTokens.TextPrimary
+                color = BiteCalOnboardingColors.title()
             )
 
             buildChecklistRows(ui).forEach { row ->
@@ -395,9 +407,9 @@ private fun ProgressChecklistRow(
         Text(
             text = title,
             color = when (state) {
-                ItemVisualState.DONE -> ProgressTokens.TextPrimary
-                ItemVisualState.ACTIVE -> ProgressTokens.TextPrimary
-                ItemVisualState.PENDING -> ProgressTokens.TextSecondary
+                ItemVisualState.DONE -> BiteCalOnboardingColors.title()
+                ItemVisualState.ACTIVE -> BiteCalOnboardingColors.title()
+                ItemVisualState.PENDING -> BiteCalOnboardingColors.subtitle()
             },
             fontSize = 15.sp,
             lineHeight = 20.sp,

@@ -50,6 +50,7 @@ import androidx.health.connect.client.records.SleepSessionRecord
 import androidx.health.connect.client.records.StepsRecord
 import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingBottomBar
+import com.calai.bitecal.ui.common.design.BiteCalOnboardingColors
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingTopBar
 import kotlinx.coroutines.launch
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
@@ -75,7 +76,7 @@ fun HealthConnectIntroScreen(
     }
 
     Scaffold(
-        containerColor = Color.White,
+        containerColor = BiteCalOnboardingColors.background(),
         topBar = {
             BiteCalOnboardingTopBar(
                 stepIndex = 11,
@@ -160,6 +161,8 @@ fun HealthConnectIntroScreen(
             val cardHeight = 148.dp
             val cardWidthFraction = 0.42f
             val cardBorderWidth = 2.3.dp
+            val cardBg = BiteCalOnboardingColors.cardSurface()
+            val cardBorder = BiteCalOnboardingColors.softBorder()
 
             val checkSize = 30.dp
             val checkStroke = 4.dp
@@ -176,10 +179,10 @@ fun HealthConnectIntroScreen(
                     .fillMaxWidth(cardWidthFraction)
                     .height(cardHeight)
                     .clip(RoundedCornerShape(cardCorner))
-                    .background(Color.White)
+                    .background(cardBg)
                     .border(
                         width = cardBorderWidth,
-                        color = Color(0xFFE2E8F0),
+                        color = cardBorder,
                         shape = RoundedCornerShape(cardCorner)
                     )
 

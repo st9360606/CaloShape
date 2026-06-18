@@ -56,6 +56,7 @@ import com.calai.bitecal.data.profile.repo.UserProfileStore
 import com.calai.bitecal.data.profile.repo.cmToFeetInches1
 import com.calai.bitecal.data.profile.repo.feetInchesToCm1
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingBottomContainer
+import com.calai.bitecal.ui.common.design.BiteCalOnboardingColors
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingPrimaryButton
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingTopBar
 import com.calai.bitecal.ui.common.haptic.HapticWheelTickEffect
@@ -137,7 +138,7 @@ fun HeightSelectionScreen(
     }
 
     Scaffold(
-        containerColor = Color.White,
+        containerColor = BiteCalOnboardingColors.background(),
         topBar = {
             BiteCalOnboardingTopBar(
                 stepIndex = progressStepIndex,
@@ -190,7 +191,7 @@ fun HeightSelectionScreen(
                 fontSize = 34.sp,
                 fontWeight = FontWeight.ExtraBold,
                 lineHeight = 40.sp,
-                color = Color(0xFF111114),
+                color = BiteCalOnboardingColors.title(),
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = BiteCalScreenFrame.contentHorizontalMedium),
@@ -202,7 +203,7 @@ fun HeightSelectionScreen(
             Text(
                 text = stringResource(R.string.onboard_height_subtitle),
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    color = Color(0xFF9AA3AF),
+                    color = BiteCalOnboardingColors.subtitle(),
                     lineHeight = 20.sp
                 ),
                 modifier = Modifier
@@ -270,6 +271,7 @@ fun HeightSelectionScreen(
                         Text(
                             text = ".",
                             fontSize = 34.sp,
+                            color = BiteCalOnboardingColors.title(),
                             modifier = Modifier.offset(x = 8.dp)
                         )
                     }
@@ -300,6 +302,7 @@ fun HeightSelectionScreen(
                         text = "cm",
                         fontSize = 22.sp,
                         fontWeight = FontWeight.SemiBold,
+                        color = BiteCalOnboardingColors.title(),
                         textAlign = TextAlign.Center
                     )
                 }
@@ -367,7 +370,7 @@ fun HeightSelectionScreen(
                 Text(
                     text = stringResource(R.string.onboard_height_hint),
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(0xFF9AA3AE),
+                    color = BiteCalOnboardingColors.subtitle(),
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth(0.62f)
                 )
@@ -391,7 +394,11 @@ private fun UnitSegmented(
     ) {
         Surface(
             shape = RoundedCornerShape(40.dp),
-            color = Color(0xFFE2E5EA),
+            color = if (BiteCalOnboardingColors.isDark()) {
+                BiteCalOnboardingColors.cardSurface()
+            } else {
+                Color(0xFFE2E5EA)
+            },
             modifier = Modifier
                 .fillMaxWidth(0.55f)
                 .heightIn(min = 40.dp)
@@ -401,7 +408,11 @@ private fun UnitSegmented(
                     text = "ft",
                     selected = !useMetric,
                     onClick = { onChange(false) },
-                    selectedColor = Color.Black,
+                    selectedColor = if (BiteCalOnboardingColors.isDark()) {
+                        BiteCalOnboardingColors.optionContainer(selected = true)
+                    } else {
+                        Color.Black
+                    },
                     modifier = Modifier
                         .weight(1f)
                         .height(40.dp)
@@ -411,7 +422,11 @@ private fun UnitSegmented(
                     text = "cm",
                     selected = useMetric,
                     onClick = { onChange(true) },
-                    selectedColor = Color.Black,
+                    selectedColor = if (BiteCalOnboardingColors.isDark()) {
+                        BiteCalOnboardingColors.optionContainer(selected = true)
+                    } else {
+                        Color.Black
+                    },
                     modifier = Modifier
                         .weight(1f)
                         .height(40.dp)
@@ -449,7 +464,13 @@ private fun SegItem(
                 text = text,
                 fontSize = fSize,
                 fontWeight = FontWeight.SemiBold,
-                color = if (selected) Color.White else Color(0xFF333333),
+                color = if (BiteCalOnboardingColors.isDark()) {
+                    BiteCalOnboardingColors.optionContent(selected)
+                } else if (selected) {
+                    Color.White
+                } else {
+                    Color(0xFF333333)
+                },
                 textAlign = TextAlign.Center,
                 modifier = Modifier.fillMaxWidth()
             )
@@ -555,6 +576,7 @@ private fun NumberWheel(
                 val size = if (isCenter) centerTextSize else textSize
                 val weight = if (isCenter) FontWeight.SemiBold else FontWeight.Normal
                 val unitSize = if (isCenter) 20.sp else 18.sp
+                val textColor = BiteCalOnboardingColors.title().copy(alpha = alpha)
 
                 Row(
                     modifier = Modifier
@@ -574,7 +596,7 @@ private fun NumberWheel(
                         text = numOrNull.toString(),
                         fontSize = size,
                         fontWeight = weight,
-                        color = Color.Black.copy(alpha = alpha),
+                        color = textColor,
                         textAlign = TextAlign.Center
                     )
 
@@ -583,7 +605,7 @@ private fun NumberWheel(
                         Text(
                             text = unitLabel,
                             fontSize = unitSize,
-                            color = Color(0xFF333333).copy(alpha = alpha),
+                            color = textColor,
                             fontWeight = FontWeight.Normal
                         )
                     }
@@ -591,7 +613,11 @@ private fun NumberWheel(
             }
         }
 
-        val lineColor = Color(0x11000000)
+        val lineColor = if (BiteCalOnboardingColors.isDark()) {
+            BiteCalOnboardingColors.softBorder()
+        } else {
+            Color(0x11000000)
+        }
         val half = rowHeight / 2
         val lineThickness = 1.dp
 

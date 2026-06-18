@@ -69,6 +69,7 @@ import com.calai.bitecal.ui.auth.email.EmailEnterScreen
 import com.calai.bitecal.ui.auth.email.EmailSignInViewModel
 import com.calai.bitecal.ui.home.HomeScreen
 import com.calai.bitecal.ui.home.HomeTab
+import com.calai.bitecal.ui.home.components.HomeBackground
 import com.calai.bitecal.ui.home.components.toast.ErrorTopToast
 import com.calai.bitecal.ui.home.components.toast.SuccessTopToast
 import com.calai.bitecal.ui.home.model.HomeViewModel
@@ -566,15 +567,20 @@ fun BiteCalNavHost(
             !isLightOnlyAppearanceRoute(currentRoute)
 
     CalAITheme(darkTheme = useDarkAppearance) {
-        NavHost(
-            navController = nav,
-            startDestination = Routes.APP_ENTRY,
-            modifier = modifier,
-            enterTransition = { EnterTransition.None },
-            exitTransition = { ExitTransition.None },
-            popEnterTransition = { EnterTransition.None },
-            popExitTransition = { ExitTransition.None }
-        ) {
+        Box(modifier = modifier.fillMaxSize()) {
+            if (isOnboardingRoute(currentRoute)) {
+                HomeBackground()
+            }
+
+            NavHost(
+                navController = nav,
+                startDestination = Routes.APP_ENTRY,
+                modifier = Modifier.fillMaxSize(),
+                enterTransition = { EnterTransition.None },
+                exitTransition = { ExitTransition.None },
+                popEnterTransition = { EnterTransition.None },
+                popExitTransition = { ExitTransition.None }
+            ) {
 
         composable(Routes.APP_ENTRY) {
             AppEntryRoute(
@@ -3411,7 +3417,8 @@ fun BiteCalNavHost(
                 onBack = { nav.popBackStack() }
             )
         }
-    }
+            }
+        }
     }
 }
 
@@ -3471,10 +3478,9 @@ private fun isAutoGenerateGoalsInputRoute(route: String?): Boolean {
 }
 
 private fun isLightOnlyAppearanceRoute(route: String?): Boolean {
-    if (route.isNullOrBlank()) return true
+    if (route.isNullOrBlank()) return false
 
-    return isOnboardingRoute(route) ||
-            isAutoGenerateGoalsInputRoute(route) ||
+    return isAutoGenerateGoalsInputRoute(route) ||
             isAuthOrEntryRoute(route) ||
             route == Routes.HOME_SCAN_SUBSCRIPTION ||
             route == Routes.HOME_WORKOUT_SUBSCRIPTION ||

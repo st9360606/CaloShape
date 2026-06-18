@@ -80,6 +80,7 @@ import com.calai.bitecal.ui.common.bmi.CommonBmiCard
 import com.calai.bitecal.ui.common.bmi.CommonBmiCardModel
 import com.calai.bitecal.ui.common.bmi.CommonBmiTone
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingBottomContainer
+import com.calai.bitecal.ui.common.design.BiteCalOnboardingColors
 import com.calai.bitecal.ui.common.design.BiteCalHealthPlanTokens as HealthPlanTokens
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingPrimaryButton
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
@@ -97,8 +98,13 @@ fun HealthPlanScreen(
 ) {
     val ui = vm.ui.collectAsStateWithLifecycle().value
     if (ui.loading || ui.plan == null || ui.inputs == null) {
-        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-            CircularProgressIndicator()
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(BiteCalOnboardingColors.background()),
+            contentAlignment = Alignment.Center
+        ) {
+            CircularProgressIndicator(color = BiteCalOnboardingColors.title())
         }
         return
     }
@@ -126,7 +132,7 @@ fun HealthPlanScreen(
     }
 
     Scaffold(
-        containerColor = Color.White,
+        containerColor = BiteCalOnboardingColors.background(),
         bottomBar = {
             BiteCalOnboardingBottomContainer {
                 BiteCalOnboardingPrimaryButton(
@@ -162,7 +168,7 @@ fun HealthPlanScreen(
 
             Text(
                 text = stringResource(R.string.plan_title_congrats),
-                color = Color(0xFF111114),
+                color = BiteCalOnboardingColors.title(),
                 fontSize = 31.sp,
                 lineHeight = 37.sp,
                 fontWeight = FontWeight.ExtraBold,
@@ -177,7 +183,11 @@ fun HealthPlanScreen(
             ) {
                 Text(
                     text = stringResource(R.string.plan_subtitle_ready),
-                    color = Color(0xFF667085),
+                    color = if (BiteCalOnboardingColors.isDark()) {
+                        BiteCalOnboardingColors.subtitle()
+                    } else {
+                        Color(0xFF667085)
+                    },
                     fontSize = 15.sp,
                     lineHeight = 21.sp,
                     fontWeight = FontWeight.Medium,
@@ -224,7 +234,11 @@ fun HealthPlanScreen(
 
             Text(
                 text = stringResource(R.string.plan_disclaimer),
-                color = Color(0xFF8A94A6),
+                color = if (BiteCalOnboardingColors.isDark()) {
+                    BiteCalOnboardingColors.subtitle()
+                } else {
+                    Color(0xFF8A94A6)
+                },
                 fontSize = 12.sp,
                 lineHeight = 16.sp,
                 fontWeight = FontWeight.Medium,
@@ -266,6 +280,11 @@ private fun DonutMacros(
     val carbsPct = carbsK / total
     val proteinPct = proteinK / total
     val fatPct = fatK / total
+    val ringTrackColor = if (BiteCalOnboardingColors.isDark()) {
+        BiteCalOnboardingColors.softBorder()
+    } else {
+        HealthPlanTokens.RingTrack
+    }
 
     Box(
         modifier = Modifier
@@ -280,7 +299,7 @@ private fun DonutMacros(
             val topLeft = Offset(padding, padding)
 
             drawArc(
-                color = HealthPlanTokens.RingTrack,
+                color = ringTrackColor,
                 startAngle = -90f,
                 sweepAngle = 360f,
                 useCenter = false,
@@ -312,14 +331,18 @@ private fun DonutMacros(
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
                 text = kcal.toString(),
-                color = Color(0xFF111114),
+                color = BiteCalOnboardingColors.title(),
                 fontSize = 44.sp,
                 lineHeight = 48.sp,
                 fontWeight = FontWeight.ExtraBold
             )
             Text(
                 text = stringResource(R.string.plan_unit_kcal_day),
-                color = Color(0xFF667085),
+                color = if (BiteCalOnboardingColors.isDark()) {
+                    BiteCalOnboardingColors.subtitle()
+                } else {
+                    Color(0xFF667085)
+                },
                 fontSize = 14.sp,
                 lineHeight = 18.sp,
                 fontWeight = FontWeight.Medium
@@ -447,6 +470,12 @@ private fun MacroRingItem(
     color: Color,
     progress: Float
 ) {
+    val ringTrackColor = if (BiteCalOnboardingColors.isDark()) {
+        BiteCalOnboardingColors.softBorder()
+    } else {
+        HealthPlanTokens.RingTrack
+    }
+
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         Box(
             modifier = Modifier.size(92.dp),
@@ -459,7 +488,7 @@ private fun MacroRingItem(
                 val topLeft = Offset(padding, padding)
 
                 drawArc(
-                    color = HealthPlanTokens.RingTrack,
+                    color = ringTrackColor,
                     startAngle = -90f,
                     sweepAngle = 360f,
                     useCenter = false,
@@ -481,7 +510,7 @@ private fun MacroRingItem(
             }
             Text(
                 text = centerText,
-                color = Color(0xFF111114),
+                color = BiteCalOnboardingColors.title(),
                 fontSize = 15.sp,
                 lineHeight = 18.sp,
                 fontWeight = FontWeight.Bold,
@@ -493,7 +522,11 @@ private fun MacroRingItem(
         Spacer(Modifier.height(6.dp))
         Text(
             text = title,
-            color = Color(0xFF667085),
+            color = if (BiteCalOnboardingColors.isDark()) {
+                BiteCalOnboardingColors.subtitle()
+            } else {
+                Color(0xFF667085)
+            },
             fontSize = 12.sp,
             lineHeight = 15.sp,
             fontWeight = FontWeight.SemiBold,
@@ -522,7 +555,13 @@ fun GoalsHowToSection(
                 modifier = Modifier
                     .size(72.dp)
                     .clip(CircleShape)
-                    .background(Color(0xFFFFE4E0)),
+                    .background(
+                        if (BiteCalOnboardingColors.isDark()) {
+                            BiteCalOnboardingColors.cardSurface()
+                        } else {
+                            Color(0xFFFFE4E0)
+                        }
+                    ),
                 contentAlignment = Alignment.Center
             ) {
                 Text("🎯", fontSize = 40.sp)
@@ -534,7 +573,7 @@ fun GoalsHowToSection(
             ) {
                 Text(
                     text = stringResource(R.string.plan_goals_title),
-                    color = Color(0xFF111114),
+                    color = BiteCalOnboardingColors.title(),
                     fontSize = 30.sp,
                     fontWeight = FontWeight.ExtraBold,
                     lineHeight = 34.sp,
@@ -603,10 +642,14 @@ private fun FeatureCard(
     iconSize: Dp = 44.dp,
     emojiFontSp: Int = 30
 ) {
+    val isDark = BiteCalOnboardingColors.isDark()
+    val cardColor = if (isDark) BiteCalOnboardingColors.cardSurface() else Color.White
+    val resolvedEmojiBg = if (isDark) emojiBg.copy(alpha = 0.18f) else emojiBg
+
     Surface(
         shape = RoundedCornerShape(20.dp),
-        color = Color.White,
-        shadowElevation = 8.dp,
+        color = cardColor,
+        shadowElevation = if (isDark) 0.dp else 8.dp,
         modifier = modifier
     ) {
         Row(
@@ -619,7 +662,7 @@ private fun FeatureCard(
                 modifier = Modifier
                     .size(64.dp)
                     .clip(RoundedCornerShape(16.dp))
-                    .background(emojiBg),
+                    .background(resolvedEmojiBg),
                 contentAlignment = Alignment.Center
             ) {
                 if (iconRes != null) {
@@ -637,7 +680,7 @@ private fun FeatureCard(
 
             Text(
                 text = stringResource(titleRes),
-                color = Color(0xFF1F2937),
+                color = if (isDark) BiteCalOnboardingColors.title() else Color(0xFF1F2937),
                 fontSize = 16.sp,
                 fontWeight = FontWeight.SemiBold,
                 lineHeight = 21.sp,
@@ -676,7 +719,11 @@ private fun SourcesHeader(
             Spacer(Modifier.width(10.dp))
             Text(
                 text = text,
-                color = Color(0xFF7C8493),
+                color = if (BiteCalOnboardingColors.isDark()) {
+                    BiteCalOnboardingColors.subtitle()
+                } else {
+                    Color(0xFF7C8493)
+                },
                 fontSize = 12.sp,
                 lineHeight = 16.sp,
                 fontWeight = FontWeight.Medium,
@@ -735,7 +782,11 @@ fun ResearchSourcesBlock(
         ) {
             Text(
                 text = toggleLabel,
-                color = Color(0xFF7C8493),
+                color = if (BiteCalOnboardingColors.isDark()) {
+                    BiteCalOnboardingColors.subtitle()
+                } else {
+                    Color(0xFF7C8493)
+                },
                 fontSize = 12.sp,
                 lineHeight = 16.sp,
                 fontWeight = FontWeight.Medium,
@@ -768,7 +819,11 @@ fun ResearchSourcesBlock(
                 links.forEach { (label, url) ->
                     Text(
                         text = label,
-                        color = Color(0xFF667085),
+                        color = if (BiteCalOnboardingColors.isDark()) {
+                            BiteCalOnboardingColors.subtitle()
+                        } else {
+                            Color(0xFF667085)
+                        },
                         fontSize = 13.sp,
                         lineHeight = 18.sp,
                         fontWeight = FontWeight.Medium,

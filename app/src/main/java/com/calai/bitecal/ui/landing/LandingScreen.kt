@@ -5,7 +5,6 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
@@ -14,7 +13,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.PlatformTextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -26,10 +24,11 @@ import com.calai.bitecal.i18n.flagAndLabelFromTag
 import com.calai.bitecal.ui.landing.device.DeviceFrameIPhone
 import androidx.compose.ui.platform.LocalContext
 import com.calai.bitecal.R
-import com.calai.bitecal.ui.common.haptic.biteCalClickable
+import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.design.BiteCalLandingLanguageTopBar
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingBottomContainer
-import com.calai.bitecal.ui.common.design.BiteCalPrimaryButton
+import com.calai.bitecal.ui.common.design.BiteCalOnboardingColors
+import com.calai.bitecal.ui.common.design.BiteCalOnboardingPrimaryButton
 import com.calai.bitecal.ui.common.design.BiteCalSize
 import com.calai.bitecal.ui.common.design.BiteCalSpacing
 import com.calai.bitecal.ui.common.design.BiteCalTextStyles
@@ -60,12 +59,16 @@ fun LandingScreen(
     }
     val currentTag = composeLocale.tag.ifBlank { systemTag }
     val (flagEmoji, langLabel) = remember(currentTag) { flagAndLabelFromTag(currentTag) }
+    val colors = BiteCalColors.current()
+    val isDark = colors == BiteCalColors.Dark
+    val phoneFrameColor = if (isDark) Color(0xFF34303D) else Color(0xFFB7B9C0)
+    val phoneButtonColor = if (isDark) Color(0xFF4A4558) else Color(0xFF9DA1A8)
 
     val isRoot = navController.previousBackStackEntry == null
     BackHandler(enabled = isRoot) { /* stay */ }
 
     Scaffold(
-        containerColor = Color.White,
+        containerColor = BiteCalOnboardingColors.background(),
         topBar = {
             BiteCalLandingLanguageTopBar(
                 flag = flagEmoji,
@@ -115,6 +118,8 @@ fun LandingScreen(
                     islandStrokeColor = Color.White,
                     frontCameraDotAlignRight = true,
                     frontCameraDotRightInset = 5.dp,
+                    frameColor = phoneFrameColor,
+                    buttonColor = phoneButtonColor,
                     contentTopExtraPadding = 10.dp,
                     contentBottomExtraPadding = 3.dp,
                     powerButtonLengthFraction = 0.10f,
@@ -155,6 +160,7 @@ fun LandingScreen(
                     fontWeight = FontWeight.ExtraBold,
                     fontSize = titleSize,
                     lineHeight = titleLineHeight,
+                    color = if (isDark) colors.textPrimary else Color.Unspecified,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth(titleWidthFraction),
                 )
@@ -188,13 +194,17 @@ private fun LandingBottomBar(
     onStart: () -> Unit,
     onLogin: () -> Unit,
 ) {
+    val colors = BiteCalColors.current()
+    val isDark = colors == BiteCalColors.Dark
+    val secondaryTextColor = if (isDark) colors.textSecondary else Color(0xFF111114)
+    val loginTextColor = if (isDark) colors.textPrimary else Color(0xFF111114)
+
     BiteCalOnboardingBottomContainer(
         hasSecondaryAction = true
     ) {
-        BiteCalPrimaryButton(
+        BiteCalOnboardingPrimaryButton(
             text = stringResource(R.string.cta_get_started),
             onClick = onStart,
-            height = BiteCalSize.primaryButtonHeight
         )
 
         Spacer(Modifier.height(BiteCalSpacing.bottomButtonToLanding))
@@ -214,7 +224,7 @@ private fun LandingBottomBar(
                     fontSize = 16.sp,
                     lineHeight = 16.sp,
                     fontWeight = FontWeight.Normal,
-                    color = Color(0xFF111114)
+                    color = secondaryTextColor
                 ),
                 textAlign = TextAlign.Center
             )
@@ -227,7 +237,7 @@ private fun LandingBottomBar(
                     fontSize = 16.sp,
                     lineHeight = 16.sp,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color(0xFF111114)
+                    color = loginTextColor
                 ),
                 textAlign = TextAlign.Center,
                 modifier = Modifier.clickable(
