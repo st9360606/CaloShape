@@ -1,6 +1,7 @@
 package com.calai.bitecal.ui.auth
 
 import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -19,21 +20,17 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.outlined.Email
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -52,8 +49,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
+import com.calai.bitecal.ui.common.design.BiteCalOnboardingColors
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingTopBar
-import com.calai.bitecal.ui.common.design.BiteCalScreenSpacing
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 
 private enum class PrimaryAuthMethod { Google, Email }
@@ -67,13 +64,25 @@ fun RequireSignInScreen(
     snackBarHostState: SnackbarHostState,
     ctaVerticalOffset: Dp = (-24).dp
 ) {
-    val ink = Color(0xFF111114)
+    val isDark = BiteCalOnboardingColors.isDark()
+    val ink = if (isDark) BiteCalOnboardingColors.title() else Color(0xFF111114)
+    val screenBackground = if (isDark) BiteCalOnboardingColors.background() else Color.White
+    val selectedContainer = if (isDark) Color.White else ink
+    val selectedContent = if (isDark) Color.Black else Color.White
+    val outlinedContainer = if (isDark) BiteCalOnboardingColors.inputSurface() else Color.Transparent
+    val outlinedBorder = if (isDark) BiteCalOnboardingColors.softBorder() else Color(0xFFE5E5EA)
+    val outlinedButtonBorder = if (isDark) {
+        BorderStroke(1.2.dp, outlinedBorder)
+    } else {
+        ButtonDefaults.outlinedButtonBorder(enabled = true)
+    }
+    val googleCircleBg = if (isDark) Color.White else Color(0xFFF1F3F7)
     var primaryAuth by remember { mutableStateOf(PrimaryAuthMethod.Google) }
 
     BackHandler { onBack() }
 
     Scaffold(
-        containerColor = Color.White,
+        containerColor = screenBackground,
         snackbarHost = { SnackbarHost(hostState = snackBarHostState) },
         topBar = {
             BiteCalOnboardingTopBar(
@@ -133,8 +142,8 @@ fun RequireSignInScreen(
                                 .height(64.dp),
                             shape = RoundedCornerShape(100.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = ink,
-                                contentColor = Color.White
+                                containerColor = selectedContainer,
+                                contentColor = selectedContent
                             ),
                             contentPadding = PaddingValues(horizontal = 20.dp)
                         ) {
@@ -177,7 +186,11 @@ fun RequireSignInScreen(
                                 .height(64.dp),
                             shape = RoundedCornerShape(100.dp),
                             contentPadding = PaddingValues(horizontal = 20.dp),
-                            colors = ButtonDefaults.outlinedButtonColors(contentColor = ink)
+                            border = outlinedButtonBorder,
+                            colors = ButtonDefaults.outlinedButtonColors(
+                                containerColor = outlinedContainer,
+                                contentColor = ink
+                            )
                         ) {
                             Row(
                                 verticalAlignment = Alignment.CenterVertically,
@@ -188,7 +201,7 @@ fun RequireSignInScreen(
                                     modifier = Modifier
                                         .size(32.dp)
                                         .clip(CircleShape)
-                                        .background(Color(0xFFF1F3F7)),
+                                        .background(googleCircleBg),
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Icon(
@@ -223,8 +236,8 @@ fun RequireSignInScreen(
                                 .height(64.dp),
                             shape = RoundedCornerShape(100.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = ink,
-                                contentColor = Color.White
+                                containerColor = selectedContainer,
+                                contentColor = selectedContent
                             ),
                             contentPadding = PaddingValues(horizontal = 20.dp)
                         ) {
@@ -258,7 +271,11 @@ fun RequireSignInScreen(
                                 .height(64.dp),
                             shape = RoundedCornerShape(100.dp),
                             contentPadding = PaddingValues(horizontal = 20.dp),
-                            colors = ButtonDefaults.outlinedButtonColors(contentColor = ink)
+                            border = outlinedButtonBorder,
+                            colors = ButtonDefaults.outlinedButtonColors(
+                                containerColor = outlinedContainer,
+                                contentColor = ink
+                            )
                         ) {
                             Row(
                                 verticalAlignment = Alignment.CenterVertically,

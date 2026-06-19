@@ -568,7 +568,7 @@ fun BiteCalNavHost(
 
     CalAITheme(darkTheme = useDarkAppearance) {
         Box(modifier = modifier.fillMaxSize()) {
-            if (isOnboardingRoute(currentRoute)) {
+            if (isOnboardingRoute(currentRoute) || isDarkStyledAuthRoute(currentRoute)) {
                 HomeBackground()
             }
 
@@ -3481,8 +3481,16 @@ private fun isLightOnlyAppearanceRoute(route: String?): Boolean {
     if (route.isNullOrBlank()) return false
 
     return isAutoGenerateGoalsInputRoute(route) ||
-            isAuthOrEntryRoute(route) ||
+            route == Routes.APP_ENTRY ||
             route == Routes.HOME_SCAN_SUBSCRIPTION ||
             route == Routes.HOME_WORKOUT_SUBSCRIPTION ||
             route == Routes.SETTINGS_SCAN_SUBSCRIPTION
+}
+
+private fun isDarkStyledAuthRoute(route: String?): Boolean {
+    if (route.isNullOrBlank()) return false
+
+    return route.startsWith(Routes.REQUIRE_SIGN_IN) ||
+            route.startsWith(Routes.SIGN_IN_EMAIL_ENTER) ||
+            route.startsWith(Routes.SIGN_IN_EMAIL_CODE)
 }

@@ -910,13 +910,14 @@ fun BiteCalPlainBackTopBar(
     onBack: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val isDark = BiteCalOnboardingColors.isDark()
     TopAppBar(
         modifier = modifier.padding(
             start = BiteCalSpacing.topBarHorizontal,
             end = BiteCalSpacing.topBarHorizontal,
         ),
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = BiteCalColors.current().background,
+            containerColor = if (isDark) BiteCalOnboardingColors.background() else BiteCalColors.current().background,
             navigationIconContentColor = BiteCalColors.current().textPrimary,
             titleContentColor = BiteCalColors.current().textPrimary,
         ),

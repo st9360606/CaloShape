@@ -30,8 +30,8 @@ import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
 import com.calai.bitecal.ui.common.haptic.rememberBiteCalHaptics
 import com.calai.bitecal.ui.common.design.BiteCalOnboardingBottomBar
+import com.calai.bitecal.ui.common.design.BiteCalOnboardingColors
 import com.calai.bitecal.ui.common.design.BiteCalPlainBackTopBar
-import com.calai.bitecal.ui.common.design.BiteCalSpacing
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -44,9 +44,17 @@ fun EmailEnterScreen(
     val ui by vm.enter.collectAsState()
     val emailFieldHaptics = rememberBiteCalHaptics()
     var emailFieldFocused by remember { mutableStateOf(false) }
+    val isDark = BiteCalOnboardingColors.isDark()
+    val screenBackground = if (isDark) BiteCalOnboardingColors.background() else Color.White
+    val titleColor = if (isDark) BiteCalOnboardingColors.title() else Color(0xFF111114)
+    val fieldContainer = if (isDark) BiteCalOnboardingColors.inputSurface() else Color.White
+    val focusedBorder = if (isDark) BiteCalOnboardingColors.title() else Color.Black
+    val unfocusedBorder = if (isDark) BiteCalOnboardingColors.softBorder() else Color(0xFFDDDDDD)
+    val labelColor = if (isDark) BiteCalOnboardingColors.subtitle() else Color(0xFF666666)
+    val inputTextColor = if (isDark) BiteCalOnboardingColors.title() else Color(0xFF111114)
 
     Scaffold(
-        containerColor = Color.White,   // ← 加這行，避免用到主題的粉白背景
+        containerColor = screenBackground,
         topBar = {
             BiteCalPlainBackTopBar(
                 onBack = onBack
@@ -72,7 +80,7 @@ fun EmailEnterScreen(
             Text(
                 text = stringResource(R.string.email_sign_in_title),
                 style = MaterialTheme.typography.headlineLarge.copy(fontSize = 34.sp),
-                color = Color(0xFF111114)
+                color = titleColor
             )
             Spacer(Modifier.height(24.dp))
 
@@ -93,20 +101,19 @@ fun EmailEnterScreen(
                         }
                         emailFieldFocused = focusState.isFocused
                     },
-                // ← 輸入框聚焦框線／游標／標籤改黑色
                 colors = OutlinedTextFieldDefaults.colors(
-                    focusedBorderColor = Color.Black,
-                    unfocusedBorderColor = Color(0xFFDDDDDD),
+                    focusedBorderColor = focusedBorder,
+                    unfocusedBorderColor = unfocusedBorder,
                     errorBorderColor = Color(0xFFD32F2F),
-                    cursorColor = Color.Black,
-                    focusedLabelColor = Color.Black,
-                    unfocusedLabelColor = Color(0xFF666666),
-                    focusedTextColor = Color(0xFF111114),
-                    unfocusedTextColor = Color(0xFF111114),
-                    focusedContainerColor = Color.White,
-                    unfocusedContainerColor = Color.White,
-                    errorContainerColor = Color.White,
-                    disabledContainerColor = Color.White
+                    cursorColor = focusedBorder,
+                    focusedLabelColor = focusedBorder,
+                    unfocusedLabelColor = labelColor,
+                    focusedTextColor = inputTextColor,
+                    unfocusedTextColor = inputTextColor,
+                    focusedContainerColor = fieldContainer,
+                    unfocusedContainerColor = fieldContainer,
+                    errorContainerColor = fieldContainer,
+                    disabledContainerColor = fieldContainer
                 )
             )
 

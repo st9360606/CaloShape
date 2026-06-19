@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
 import com.calai.bitecal.i18n.ProvideComposeLocale
+import com.calai.bitecal.ui.common.design.BiteCalOnboardingColors
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
 import kotlinx.coroutines.launch
@@ -44,11 +45,24 @@ fun SignInSheet(
     onDismiss: () -> Unit
 ) {
     val sheetShape = RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp)
-    val closeTint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
+    val isDark = BiteCalOnboardingColors.isDark()
+    val sheetColor = if (isDark) BiteCalOnboardingColors.cardSurface() else Color.White
+    val ink = if (isDark) BiteCalOnboardingColors.title() else Color(0xFF111114)
+    val selectedContainer = if (isDark) Color.White else ink
+    val selectedContent = if (isDark) Color.Black else Color.White
+    val outlinedContainer = if (isDark) BiteCalOnboardingColors.inputSurface() else Color.Transparent
+    val outlinedBorder = if (isDark) BiteCalOnboardingColors.softBorder() else Color(0xFFE5E5EA)
+    val hintColor = if (isDark) BiteCalOnboardingColors.subtitle() else MaterialTheme.colorScheme.onSurfaceVariant
+    val linkColor = if (isDark) BiteCalOnboardingColors.title() else MaterialTheme.colorScheme.primary
+    val closeTint = if (isDark) {
+        BiteCalOnboardingColors.subtitle()
+    } else {
+        MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
+    }
     ModalBottomSheet(
         onDismissRequest = onDismiss,
         dragHandle = null,
-        containerColor = Color.White,
+        containerColor = sheetColor,
         shape = sheetShape,
         tonalElevation = 0.dp
     ) {
@@ -76,6 +90,7 @@ fun SignInSheet(
                         text = stringResource(R.string.signin_title),
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
+                        color = if (isDark) ink else Color.Unspecified,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.align(Alignment.Center)
                     )
@@ -97,8 +112,6 @@ fun SignInSheet(
                 Spacer(Modifier.height(16.dp))
 
                 // === Google 按鈕 ===
-                val ink = Color(0xFF111114)
-
                 val scope = rememberCoroutineScope()
                 var actionInFlight by remember { mutableStateOf(false) }
 
@@ -137,8 +150,8 @@ fun SignInSheet(
                             .height(56.dp),
                         shape = RoundedCornerShape(28.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = ink,
-                            contentColor = Color.White
+                            containerColor = selectedContainer,
+                            contentColor = selectedContent
                         )
                     ) {
                         Icon(
@@ -162,8 +175,9 @@ fun SignInSheet(
                             .fillMaxWidth()
                             .height(56.dp),
                         shape = RoundedCornerShape(28.dp),
-                        border = BorderStroke(1.dp, Color(0xFFE5E5EA)),
+                        border = BorderStroke(1.dp, outlinedBorder),
                         colors = ButtonDefaults.outlinedButtonColors(
+                            containerColor = outlinedContainer,
                             contentColor = ink
                         )
                     ) {
@@ -194,8 +208,8 @@ fun SignInSheet(
                             .height(56.dp),
                         shape = RoundedCornerShape(28.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = ink,
-                            contentColor = Color.White
+                            containerColor = selectedContainer,
+                            contentColor = selectedContent
                         )
                     ) {
                         Icon(
@@ -218,9 +232,10 @@ fun SignInSheet(
                             .fillMaxWidth()
                             .height(56.dp),
                         shape = RoundedCornerShape(28.dp),
-                        border = BorderStroke(1.dp, Color(0xFFE5E5EA)),
+                        border = BorderStroke(1.dp, outlinedBorder),
                         colors = ButtonDefaults.outlinedButtonColors(
-                            contentColor = Color(0xFF111114)
+                            containerColor = outlinedContainer,
+                            contentColor = ink
                         )
                     ) {
                         Icon(
@@ -239,7 +254,6 @@ fun SignInSheet(
 
                 Spacer(Modifier.height(20.dp))
 
-                val hintColor = MaterialTheme.colorScheme.onSurfaceVariant
                 val legalFontSize = 12.sp
                 val legalLineHeight = 16.sp
 
@@ -297,7 +311,7 @@ fun SignInSheet(
                         Text(
                             text = stringResource(R.string.signin_terms),
                             style = linkStyle,
-                            color = MaterialTheme.colorScheme.primary,
+                            color = linkColor,
                             modifier = Modifier
                                 .padding(horizontal = 6.dp)
                                 .biteCalClickable(role = Role.Button) {
@@ -313,7 +327,7 @@ fun SignInSheet(
                         Text(
                             text = stringResource(R.string.signin_privacy),
                             style = linkStyle,
-                            color = MaterialTheme.colorScheme.primary,
+                            color = linkColor,
                             modifier = Modifier
                                 .padding(horizontal = 6.dp)
                                 .biteCalClickable(role = Role.Button) {

@@ -10,6 +10,7 @@ import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.scaleIn
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -266,6 +267,11 @@ private fun ProgressChecklistCard(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(28.dp),
         color = BiteCalOnboardingColors.cardSurface(),
+        border = if (BiteCalOnboardingColors.isDark()) {
+            BorderStroke(1.2.dp, BiteCalOnboardingColors.softBorder())
+        } else {
+            null
+        },
         shadowElevation = if (BiteCalOnboardingColors.isDark()) 0.dp else 8.dp
     ) {
         Column(

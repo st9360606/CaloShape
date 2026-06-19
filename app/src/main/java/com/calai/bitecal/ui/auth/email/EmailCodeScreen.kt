@@ -28,6 +28,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.calai.bitecal.R
+import com.calai.bitecal.ui.common.design.BiteCalOnboardingColors
 import com.calai.bitecal.ui.common.design.BiteCalPlainBackTopBar
 import com.calai.bitecal.ui.common.design.BiteCalScreenFrame
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
@@ -81,9 +82,18 @@ fun EmailCodeScreen(
         EmailCodeError.UNKNOWN -> ui?.errorMsg ?: stringResource(R.string.err_generic)
         null -> null
     }
+    val isDark = BiteCalOnboardingColors.isDark()
+    val screenBackground = if (isDark) BiteCalOnboardingColors.background() else Color.White
+    val titleColor = if (isDark) BiteCalOnboardingColors.title() else Color(0xFF111114)
+    val subtitleColor = if (isDark) BiteCalOnboardingColors.subtitle() else Color.Gray
+    val emailColor = if (isDark) BiteCalOnboardingColors.title() else Color.Black
+    val fieldContainer = if (isDark) BiteCalOnboardingColors.inputSurface() else Color.White
+    val idleBorder = if (isDark) BiteCalOnboardingColors.softBorder() else Color(0xFFDDDDDD)
+    val activeBorder = if (isDark) BiteCalOnboardingColors.title() else Color.Black
+    val dividerColor = if (isDark) BiteCalOnboardingColors.softBorder() else Color(0x1A000000)
 
     Scaffold(
-        containerColor = Color.White,
+        containerColor = screenBackground,
         topBar = {
             BiteCalPlainBackTopBar(onBack = onBack)
         }
@@ -102,19 +112,19 @@ fun EmailCodeScreen(
                 fontSize = 30.sp,
                 fontWeight = FontWeight.Bold,
                 lineHeight = 36.sp,
-                color = Color(0xFF111114)
+                color = titleColor
             )
 
             Spacer(Modifier.height(8.dp))
 
             Text(
                 stringResource(R.string.confirm_email_hint),
-                style = MaterialTheme.typography.bodyMedium.copy(color = Color.Gray)
+                style = MaterialTheme.typography.bodyMedium.copy(color = subtitleColor)
             )
             Text(
                 maskEmail(ui?.email ?: email),
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    color = Color.Black,
+                    color = emailColor,
                     fontWeight = FontWeight.SemiBold
                 )
             )
@@ -151,10 +161,10 @@ fun EmailCodeScreen(
                                     .weight(1f)
                                     .height(64.dp)
                                     .clip(RoundedCornerShape(14.dp))
-                                    .background(Color.White)
+                                    .background(fieldContainer)
                                     .border(
                                         width = 1.dp,
-                                        color = if (char.isEmpty()) Color(0xFFDDDDDD) else Color.Black,
+                                        color = if (char.isEmpty()) idleBorder else activeBorder,
                                         shape = RoundedCornerShape(14.dp)
                                     ),
                                 contentAlignment = Alignment.Center
@@ -164,7 +174,7 @@ fun EmailCodeScreen(
                                     style = TextStyle(
                                         fontSize = 28.sp,
                                         textAlign = TextAlign.Center,
-                                        color = Color(0xFF111114)
+                                        color = titleColor
                                     )
                                 )
                             }
@@ -183,13 +193,13 @@ fun EmailCodeScreen(
             }
 
             Spacer(Modifier.height(28.dp))
-            HorizontalDivider(color = Color(0x1A000000))
+            HorizontalDivider(color = dividerColor)
             Spacer(Modifier.height(12.dp))
 
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
                     stringResource(R.string.didnt_receive_code),
-                    style = MaterialTheme.typography.bodyMedium.copy(color = Color.Gray)
+                    style = MaterialTheme.typography.bodyMedium.copy(color = subtitleColor)
                 )
 
                 Spacer(Modifier.width(6.dp))
@@ -217,7 +227,7 @@ fun EmailCodeScreen(
                     Text(
                         text = resendLabel,
                         style = MaterialTheme.typography.bodyMedium.copy(
-                            color = Color(0xFF111114),
+                            color = titleColor,
                             fontWeight = FontWeight.SemiBold
                         )
                     )
