@@ -58,6 +58,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.input.pointer.PointerEventPass
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
@@ -921,10 +922,16 @@ private fun Avatar(
     startPadding: Dp = 0.dp,
     onClick: (() -> Unit)? = null,
     fallbackCircleSize: Dp = 43.dp,   // ✅ 對齊 Setting 的 visualSize
-    fallbackIconSize: Dp = 43.dp      // ✅ spoon icon 大小
+    fallbackIconSize: Dp = 70.dp      // ✅ spoon icon 大小
 ) {
     val interaction = remember { MutableInteractionSource() }
     val colors = BiteCalColors.current()
+    val isDark = HomeCardStyles.isDark()
+    val fallbackBackground = if (isDark) Color(0xFF3A3544) else colors.surface
+    val fallbackBorder = if (isDark) Color(0xFF4A4558) else colors.border
+    val fallbackBorderWidth = if (isDark) 1.6.dp else 1.25.dp
+    val resolvedFallbackIconSize = if (isDark) 70.dp else fallbackIconSize
+    val fallbackIconColorFilter = if (isDark) ColorFilter.tint(Color(0xFFF7F5FF)) else null
 
     Box(
         modifier = Modifier
@@ -948,10 +955,10 @@ private fun Avatar(
                 modifier = Modifier
                     .size(fallbackCircleSize)
                     .clip(CircleShape)
-                    .background(if (HomeCardStyles.isDark()) HomeCardStyles.Surface.raised() else colors.surface)
+                    .background(fallbackBackground)
                     .border(
-                        1.25.dp,
-                        if (HomeCardStyles.isDark()) HomeCardStyles.Surface.borderColor() else colors.border,
+                        fallbackBorderWidth,
+                        fallbackBorder,
                         CircleShape
                     ),
                 contentAlignment = Alignment.Center
@@ -959,8 +966,9 @@ private fun Avatar(
                 Image(
                     painter = painterResource(R.drawable.ic_focus_spoon_foreground),
                     contentDescription = "頭像",
-                    modifier = Modifier.size(fallbackIconSize),
-                    contentScale = ContentScale.Fit
+                    modifier = Modifier.size(resolvedFallbackIconSize),
+                    contentScale = ContentScale.Fit,
+                    colorFilter = fallbackIconColorFilter
                 )
             }
         } else {
