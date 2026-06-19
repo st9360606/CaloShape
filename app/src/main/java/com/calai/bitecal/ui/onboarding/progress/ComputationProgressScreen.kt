@@ -263,16 +263,20 @@ private fun PhasePill(
 private fun ProgressChecklistCard(
     ui: ProgressUiState
 ) {
+    val isDark = BiteCalOnboardingColors.isDark()
+    val cardColor = if (isDark) Color(0xFF24212D) else BiteCalOnboardingColors.cardSurface()
+    val borderColor = if (isDark) Color(0xFF4A4558) else Color.Transparent
+
     Surface(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(28.dp),
-        color = BiteCalOnboardingColors.cardSurface(),
-        border = if (BiteCalOnboardingColors.isDark()) {
-            BorderStroke(1.2.dp, BiteCalOnboardingColors.softBorder())
+        color = cardColor,
+        border = if (isDark) {
+            BorderStroke(1.2.dp, borderColor)
         } else {
             null
         },
-        shadowElevation = if (BiteCalOnboardingColors.isDark()) 0.dp else 8.dp
+        shadowElevation = if (isDark) 0.dp else 8.dp
     ) {
         Column(
             modifier = Modifier.padding(horizontal = 18.dp, vertical = 18.dp),
