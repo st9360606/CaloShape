@@ -927,11 +927,11 @@ private fun Avatar(
     val interaction = remember { MutableInteractionSource() }
     val colors = BiteCalColors.current()
     val isDark = HomeCardStyles.isDark()
-    val fallbackBackground = if (isDark) Color(0xFF3A3544) else colors.surface
-    val fallbackBorder = if (isDark) Color(0xFF4A4558) else colors.border
-    val fallbackBorderWidth = if (isDark) 1.6.dp else 1.25.dp
+    val fallbackBackground = if (isDark) HomeCardStyles.Surface.raised() else colors.surface
+    val fallbackBorder = if (isDark) HomeCardStyles.Surface.borderColor() else colors.border
+    val fallbackBorderWidth = if (isDark) 1.dp else 1.25.dp
     val resolvedFallbackIconSize = if (isDark) 70.dp else fallbackIconSize
-    val fallbackIconColorFilter = if (isDark) ColorFilter.tint(Color(0xFFF7F5FF)) else null
+    val fallbackIconColorFilter = if (isDark) ColorFilter.tint(HomeCardStyles.Text.secondary()) else null
 
     Box(
         modifier = Modifier
