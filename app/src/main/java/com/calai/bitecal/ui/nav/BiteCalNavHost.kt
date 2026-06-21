@@ -13,10 +13,12 @@ import androidx.activity.compose.LocalActivityResultRegistryOwner
 import androidx.activity.result.ActivityResultRegistryOwner
 import androidx.compose.animation.EnterTransition
 import androidx.compose.animation.ExitTransition
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -33,6 +35,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.stringResource
@@ -565,10 +568,27 @@ fun BiteCalNavHost(
 
     val useDarkAppearance = appearanceMode == AppearanceMode.DARK &&
             !isLightOnlyAppearanceRoute(currentRoute)
+    val autoGenerateGoalsRoute = isAutoGenerateGoalsRoute(currentRoute)
+    val keepAutoGenerateBackground = autoGenerateGoalsRoute ||
+            currentRoute == Routes.EDIT_NUTRITION_GOALS
 
     CalAITheme(darkTheme = useDarkAppearance) {
-        Box(modifier = modifier.fillMaxSize()) {
-            if (isOnboardingRoute(currentRoute) || isDarkStyledAuthRoute(currentRoute)) {
+        val navigationUnderlay = if (useDarkAppearance) {
+            MaterialTheme.colorScheme.background
+        } else {
+            Color.Transparent
+        }
+
+        Box(
+            modifier = modifier
+                .fillMaxSize()
+                .background(navigationUnderlay)
+        ) {
+            if (
+                isOnboardingRoute(currentRoute) ||
+                isDarkStyledAuthRoute(currentRoute) ||
+                (useDarkAppearance && keepAutoGenerateBackground)
+            ) {
                 HomeBackground()
             }
 
@@ -3467,21 +3487,21 @@ private fun isAuthOrEntryRoute(route: String?): Boolean {
             route.startsWith(Routes.SIGN_IN_EMAIL_CODE)
 }
 
-private fun isAutoGenerateGoalsInputRoute(route: String?): Boolean {
+private fun isAutoGenerateGoalsRoute(route: String?): Boolean {
     if (route.isNullOrBlank()) return false
 
     return route == Routes.AUTO_GENERATE_FLOW ||
             route == Routes.AUTO_GENERATE_EXERCISE_FREQUENCY ||
             route == Routes.AUTO_GENERATE_HEIGHT ||
             route == Routes.AUTO_GENERATE_WEIGHT ||
-            route == Routes.AUTO_GENERATE_GOALS
+            route == Routes.AUTO_GENERATE_GOALS ||
+            route == Routes.AUTO_GENERATE_GOALS_CALC
 }
 
 private fun isLightOnlyAppearanceRoute(route: String?): Boolean {
     if (route.isNullOrBlank()) return false
 
-    return isAutoGenerateGoalsInputRoute(route) ||
-            route == Routes.APP_ENTRY ||
+    return route == Routes.APP_ENTRY ||
             route == Routes.HOME_SCAN_SUBSCRIPTION ||
             route == Routes.HOME_WORKOUT_SUBSCRIPTION ||
             route == Routes.SETTINGS_SCAN_SUBSCRIPTION
