@@ -546,7 +546,7 @@ private fun SwipeToDeleteWorkoutSessionTile(
             Box(
                 modifier = Modifier
                     .matchParentSize()
-                    .background(if (HomeCardStyles.isDark()) Color(0xFF7F2D3A) else Color(0xFFE46A6A))
+                    .background(Color(0xFFE46A6A))
             )
 
             Box(
