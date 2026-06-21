@@ -268,6 +268,8 @@
     <!-- Onboarding: OnboardSubscriptionIntro -->
     <string name="subscription_intro_title">Unlock BiteCal AI to\nreach your goals faster.</string>
     <string name="subscription_intro_helper_format">Just %1$s per year (%2$s)</string>
+    <string name="subscription_start_three_day_free_trial">Try free for 3 days</string>
+    <string name="subscription_three_day_trial_helper_format">3 days free, then %1$s/year. Cancel anytime.</string>
     <string name="subscription_already_owned_restore_required">Your Google Play account already has an active BiteCal subscription. Restore it to this BiteCal account before using premium features.</string>
     <string name="restore_subscription_dialog_title">Subscription found</string>
     <string name="settings_restore_subscription">Restore subscription</string>
@@ -299,6 +301,7 @@
     <string name="subscription_trial_enable_prompt">Not sure? Turn on free trial</string>
     <string name="subscription_trial_checking_eligibility">Checking trial availability…</string>
     <string name="subscription_trial_already_used">Trial already used</string>
+    <string name="subscription_trial_unavailable">Free trial unavailable</string>
 
     <string name="subscription_badge_free_trial">Free trial</string>
     <string name="subscription_badge_lowest_price_ever">Lowest price ever</string>

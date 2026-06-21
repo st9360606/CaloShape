@@ -29,6 +29,8 @@ data class SubscriptionUiState(
     val canRestorePurchase: Boolean = false,
     val trialEligible: Boolean = false,
     val trialEligibilityLoaded: Boolean = false,
+    val subscriptionOffersLoaded: Boolean = false,
+    val yearlyTrialOfferAvailable: Boolean = false,
     val yearlyBasePrice: String = "NT$999.00",
     val yearlyBaseMonthlyEquivalent: String = "NT$83.25",
     val yearlyDiscountPrice: String = "NT$649.00",
@@ -69,7 +71,7 @@ class SubscriptionViewModel @Inject constructor(
                 _ui.update {
                     it.copy(
                         trialEligible = false,
-                        trialEligibilityLoaded = false,
+                        trialEligibilityLoaded = true,
                         error = ex.message ?: "Unable to check trial eligibility. Please try again.",
                         errorKind = null
                     )
@@ -103,6 +105,8 @@ class SubscriptionViewModel @Inject constructor(
 
             _ui.update {
                 it.copy(
+                    subscriptionOffersLoaded = true,
+                    yearlyTrialOfferAvailable = trialDiscount != null,
                     yearlyBasePrice = base?.formattedPrice ?: it.yearlyBasePrice,
                     yearlyBaseMonthlyEquivalent = base?.formattedMonthlyEquivalent ?: it.yearlyBaseMonthlyEquivalent,
                     yearlyDiscountPrice = discount?.formattedPrice ?: it.yearlyDiscountPrice,

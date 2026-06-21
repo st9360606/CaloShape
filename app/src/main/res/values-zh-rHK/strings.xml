@@ -270,6 +270,8 @@
     <!-- Onboarding: OnboardSubscriptionIntro -->
     <string name="subscription_intro_title">解鎖 BiteCal AI\n更快達成你的目標</string>
     <string name="subscription_intro_helper_format">每年只要 %1$s（約 %2$s）</string>
+    <string name="subscription_start_three_day_free_trial">免費試用 3 天</string>
+    <string name="subscription_three_day_trial_helper_format">前 3 天免費，之後每年 %1$s，可隨時取消。</string>
     <string name="subscription_already_owned_restore_required">目前這個 Google Play 帳號已經有有效的 BiteCal 訂閱。請先將訂閱恢復到目前登入的 BiteCal 帳號，才能使用付費功能。</string>
     <string name="restore_subscription_dialog_title">偵測到可恢復的訂閱</string>
     <string name="settings_restore_subscription">恢復訂閱</string>
@@ -301,6 +303,7 @@
     <string name="subscription_trial_enable_prompt">還不確定？開啟免費試用</string>
     <string name="subscription_trial_checking_eligibility">正在檢查試用資格…</string>
     <string name="subscription_trial_already_used">已使用過試用</string>
+    <string name="subscription_trial_unavailable">目前無法使用免費試用</string>
 
     <string name="subscription_badge_free_trial">免費試用</string>
     <string name="subscription_badge_lowest_price_ever">史上最低價</string>
