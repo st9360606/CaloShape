@@ -85,7 +85,14 @@ fun WidgetGuideScreen(
                 enabled = true,
                 loading = false,
                 onClick = onBack,
-                modifier = Modifier.padding(top = 32.dp)
+                modifier = Modifier.padding(top = 32.dp),
+                height = 56.dp,
+                textStyle = MaterialTheme.typography.labelLarge.copy(
+                    fontSize = 16.sp,
+                    lineHeight = 20.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    letterSpacing = 0.1.sp
+                )
             )
         }
     }
