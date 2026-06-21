@@ -97,14 +97,17 @@ fun HealthPlanScreen(
     onStart: () -> Unit
 ) {
     val ui = vm.ui.collectAsStateWithLifecycle().value
+    val isDark = BiteCalOnboardingColors.isDark()
+    val screenBackground = if (isDark) BiteCalOnboardingColors.background() else Color.White
+    val titleColor = if (isDark) BiteCalOnboardingColors.title() else Color(0xFF111114)
     if (ui.loading || ui.plan == null || ui.inputs == null) {
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .background(BiteCalOnboardingColors.background()),
+                .background(screenBackground),
             contentAlignment = Alignment.Center
         ) {
-            CircularProgressIndicator(color = BiteCalOnboardingColors.title())
+            CircularProgressIndicator(color = titleColor)
         }
         return
     }
@@ -132,7 +135,7 @@ fun HealthPlanScreen(
     }
 
     Scaffold(
-        containerColor = BiteCalOnboardingColors.background(),
+        containerColor = screenBackground,
         bottomBar = {
             BiteCalOnboardingBottomContainer {
                 BiteCalOnboardingPrimaryButton(
@@ -168,7 +171,7 @@ fun HealthPlanScreen(
 
             Text(
                 text = stringResource(R.string.plan_title_congrats),
-                color = BiteCalOnboardingColors.title(),
+                color = titleColor,
                 fontSize = 31.sp,
                 lineHeight = 37.sp,
                 fontWeight = FontWeight.ExtraBold,

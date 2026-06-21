@@ -72,13 +72,18 @@ fun GenderSelectionScreen(
     var showLang by rememberSaveable { mutableStateOf(false) }
     var switching by rememberSaveable { mutableStateOf(false) }
     val closeLangDialog = remember { { showLang = false } }
+    val isDark = BiteCalOnboardingColors.isDark()
+    val screenBackground = if (isDark) BiteCalOnboardingColors.background() else Color.White
+    val titleColor = if (isDark) BiteCalOnboardingColors.title() else Color(0xFF111114)
+    val subtitleColor = if (isDark) BiteCalOnboardingColors.subtitle() else Color.Gray
     Scaffold(
-        containerColor = BiteCalOnboardingColors.background(),
+        containerColor = screenBackground,
         topBar = {
             BiteCalOnboardingTopBar(
                 stepIndex = 1,
                 totalSteps = 12,
                 onBack = onBack,
+                containerColor = screenBackground,
                 actions = {
                     FlagChip(
                         flag = flagEmoji,
@@ -113,7 +118,7 @@ fun GenderSelectionScreen(
                 fontSize = 34.sp,
                 fontWeight = FontWeight.ExtraBold,
                 lineHeight = 40.sp,
-                color = BiteCalOnboardingColors.title(),
+                color = titleColor,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = BiteCalScreenFrame.contentHorizontalMedium),
@@ -125,7 +130,7 @@ fun GenderSelectionScreen(
             Text(
                 text = stringResource(R.string.onboard_gender_subtitle),
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    color = BiteCalOnboardingColors.subtitle(),
+                    color = subtitleColor,
                     lineHeight = 20.sp
                 ),
                 modifier = Modifier

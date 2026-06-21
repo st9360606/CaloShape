@@ -83,9 +83,10 @@ fun ComputationProgressScreen(
         animationSpec = tween(durationMillis = 450, easing = FastOutSlowInEasing),
         label = "progress_ring"
     )
-    val backgroundColor = BiteCalOnboardingColors.background()
-    val titleColor = BiteCalOnboardingColors.title()
-    val subtitleColor = BiteCalOnboardingColors.subtitle()
+    val isDark = BiteCalOnboardingColors.isDark()
+    val backgroundColor = if (isDark) BiteCalOnboardingColors.background() else Color.White
+    val titleColor = if (isDark) BiteCalOnboardingColors.title() else ProgressTokens.TextPrimary
+    val subtitleColor = if (isDark) BiteCalOnboardingColors.subtitle() else ProgressTokens.TextSecondary
 
     Box(
         modifier = Modifier
@@ -169,8 +170,9 @@ private fun HeroProgressRing(
     } else {
         ProgressTokens.ProgressTrack
     }
-    val titleColor = BiteCalOnboardingColors.title()
-    val subtitleColor = BiteCalOnboardingColors.subtitle()
+    val isDark = BiteCalOnboardingColors.isDark()
+    val titleColor = if (isDark) BiteCalOnboardingColors.title() else ProgressTokens.TextPrimary
+    val subtitleColor = if (isDark) BiteCalOnboardingColors.subtitle() else ProgressTokens.TextSecondary
 
     Box(
         modifier = Modifier.size(214.dp),
@@ -264,7 +266,7 @@ private fun ProgressChecklistCard(
     ui: ProgressUiState
 ) {
     val isDark = BiteCalOnboardingColors.isDark()
-    val cardColor = if (isDark) Color(0xFF24212D) else BiteCalOnboardingColors.cardSurface()
+    val cardColor = if (isDark) Color(0xFF24212D) else ProgressTokens.CardBg
     val borderColor = if (isDark) Color(0xFF4A4558) else Color.Transparent
 
     Surface(
@@ -287,7 +289,7 @@ private fun ProgressChecklistCard(
                 fontSize = 16.sp,
                 lineHeight = 20.sp,
                 fontWeight = FontWeight.Bold,
-                color = BiteCalOnboardingColors.title()
+                color = if (isDark) BiteCalOnboardingColors.title() else ProgressTokens.TextPrimary
             )
 
             buildChecklistRows(ui).forEach { row ->
@@ -355,6 +357,9 @@ private fun ProgressChecklistRow(
     title: String,
     state: ItemVisualState
 ) {
+    val isDark = BiteCalOnboardingColors.isDark()
+    val primaryTextColor = if (isDark) BiteCalOnboardingColors.title() else ProgressTokens.TextPrimary
+    val secondaryTextColor = if (isDark) BiteCalOnboardingColors.subtitle() else ProgressTokens.TextSecondary
     Row(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically
@@ -417,9 +422,9 @@ private fun ProgressChecklistRow(
         Text(
             text = title,
             color = when (state) {
-                ItemVisualState.DONE -> BiteCalOnboardingColors.title()
-                ItemVisualState.ACTIVE -> BiteCalOnboardingColors.title()
-                ItemVisualState.PENDING -> BiteCalOnboardingColors.subtitle()
+                ItemVisualState.DONE -> primaryTextColor
+                ItemVisualState.ACTIVE -> primaryTextColor
+                ItemVisualState.PENDING -> secondaryTextColor
             },
             fontSize = 15.sp,
             lineHeight = 20.sp,

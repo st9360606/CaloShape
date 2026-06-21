@@ -59,14 +59,18 @@ fun ReferralSourceScreen(
 ) {
     val state by vm.uiState.collectAsState()
     val scope = rememberCoroutineScope()
+    val isDark = BiteCalOnboardingColors.isDark()
+    val screenBackground = if (isDark) BiteCalOnboardingColors.background() else Color.White
+    val titleColor = if (isDark) BiteCalOnboardingColors.title() else Color(0xFF111114)
 
     Scaffold(
-        containerColor = BiteCalOnboardingColors.background(),
+        containerColor = screenBackground,
         topBar = {
             BiteCalOnboardingTopBar(
                 stepIndex = 2,
                 totalSteps = 12,
-                onBack = onBack
+                onBack = onBack,
+                containerColor = screenBackground
             )
         },
         bottomBar = {
@@ -93,7 +97,7 @@ fun ReferralSourceScreen(
                 fontSize = 34.sp,
                 fontWeight = FontWeight.ExtraBold,
                 lineHeight = 40.sp,
-                color = BiteCalOnboardingColors.title(),
+                color = titleColor,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = BiteCalScreenFrame.contentHorizontalMedium),

@@ -49,14 +49,19 @@ fun GoalSelectionScreen(
     vm: GoalSelectionViewModel = hiltViewModel()
 ) {
     val state by vm.uiState.collectAsState()
+    val isDark = BiteCalOnboardingColors.isDark()
+    val screenBackground = if (isDark) BiteCalOnboardingColors.background() else Color.White
+    val titleColor = if (isDark) BiteCalOnboardingColors.title() else Color(0xFF111114)
+    val subtitleColor = if (isDark) BiteCalOnboardingColors.subtitle() else Color.Gray
 
     Scaffold(
-        containerColor = BiteCalOnboardingColors.background(),
+        containerColor = screenBackground,
         topBar = {
             BiteCalOnboardingTopBar(
                 stepIndex = progressStepIndex,
                 totalSteps = progressTotalSteps,
-                onBack = onBack
+                onBack = onBack,
+                containerColor = screenBackground
             )
         },
         bottomBar = {
@@ -83,7 +88,7 @@ fun GoalSelectionScreen(
                 fontSize = 34.sp,
                 fontWeight = FontWeight.ExtraBold,
                 lineHeight = 40.sp,
-                color = BiteCalOnboardingColors.title(),
+                color = titleColor,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = BiteCalScreenFrame.contentHorizontalMedium),
@@ -95,7 +100,7 @@ fun GoalSelectionScreen(
             Text(
                 text = stringResource(R.string.onboard_goal_subtitle),
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    color = BiteCalOnboardingColors.subtitle(),
+                    color = subtitleColor,
                     lineHeight = 20.sp
                 ),
                 modifier = Modifier

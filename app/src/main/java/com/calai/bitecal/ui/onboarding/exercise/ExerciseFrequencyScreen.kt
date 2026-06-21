@@ -73,6 +73,10 @@ fun ExerciseFrequencyScreen(
     val state by vm.uiState.collectAsState()
     var isContinuing by rememberSaveable { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
+    val isDark = BiteCalOnboardingColors.isDark()
+    val screenBackground = if (isDark) BiteCalOnboardingColors.background() else Color.White
+    val titleColor = if (isDark) BiteCalOnboardingColors.title() else Color(0xFF111114)
+    val subtitleColor = if (isDark) BiteCalOnboardingColors.subtitle() else Color.Gray
 
     val options = listOf(
         ExerciseUiOption(
@@ -107,12 +111,13 @@ fun ExerciseFrequencyScreen(
     )
 
     Scaffold(
-        containerColor = BiteCalOnboardingColors.background(),
+        containerColor = screenBackground,
         topBar = {
             BiteCalOnboardingTopBar(
                 stepIndex = progressStepIndex,
                 totalSteps = progressTotalSteps,
-                onBack = onBack
+                onBack = onBack,
+                containerColor = screenBackground
             )
         },
         bottomBar = {
@@ -151,7 +156,7 @@ fun ExerciseFrequencyScreen(
                 fontSize = 34.sp,
                 fontWeight = FontWeight.ExtraBold,
                 lineHeight = 40.sp,
-                color = BiteCalOnboardingColors.title(),
+                color = titleColor,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = BiteCalScreenFrame.contentHorizontalMedium),
@@ -163,7 +168,7 @@ fun ExerciseFrequencyScreen(
             Text(
                 text = stringResource(R.string.onboard_ex_freq_subtitle),
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    color = BiteCalOnboardingColors.subtitle(),
+                    color = subtitleColor,
                     lineHeight = 20.sp
                 ),
                 modifier = Modifier

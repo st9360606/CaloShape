@@ -128,13 +128,13 @@ object BiteCalOnboardingColors {
     fun isDark(): Boolean = BiteCalColors.current() == BiteCalColors.Dark
 
     @Composable
-    fun background(): Color = if (isDark()) Color.Transparent else Color(0xFFF5F5F5)
+    fun background(): Color = if (isDark()) Color.Transparent else Color.White
 
     @Composable
     fun title(): Color = if (isDark()) Color(0xFFF7F5FF) else Color(0xFF111114)
 
     @Composable
-    fun subtitle(): Color = if (isDark()) Color(0xFFC9C4D4) else Color(0xFF9AA3AF)
+    fun subtitle(): Color = if (isDark()) Color(0xFFC9C4D4) else Color.Gray
 
     @Composable
     fun optionContainer(selected: Boolean): Color {
@@ -763,15 +763,17 @@ fun BiteCalOnboardingTopBar(
     onBack: () -> Unit,
     modifier: Modifier = Modifier,
     showBack: Boolean = true,
+    containerColor: Color? = null,
     actions: @Composable RowScope.() -> Unit = {},
 ) {
+    val resolvedContainerColor = containerColor ?: BiteCalOnboardingColors.background()
     TopAppBar(
         modifier = modifier.padding(
             start = BiteCalSpacing.topBarHorizontal,
             end = BiteCalSpacing.topBarHorizontal,
         ),
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = BiteCalOnboardingColors.background(),
+            containerColor = resolvedContainerColor,
             navigationIconContentColor = BiteCalColors.current().textPrimary,
         ),
         navigationIcon = {
