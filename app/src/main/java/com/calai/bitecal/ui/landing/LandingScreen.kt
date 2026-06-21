@@ -183,7 +183,8 @@ fun LandingScreen(
                 },
                 onDismiss = { showLang = false },
                 widthFraction = 0.92f,     // 92% 的螢幕寬
-                maxHeightFraction = 0.60f  // 60% 的螢幕高
+                maxHeightFraction = 0.60f, // 60% 的螢幕高
+                useDarkStyle = isDark
             )
         }
     }
