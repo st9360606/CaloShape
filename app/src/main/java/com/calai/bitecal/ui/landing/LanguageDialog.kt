@@ -43,50 +43,24 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.calai.bitecal.R
+import com.calai.bitecal.i18n.LanguageManager
 import com.calai.bitecal.ui.common.design.BiteCalColors
 import com.calai.bitecal.ui.common.haptic.biteCalClickable
-import com.calai.bitecal.i18n.LanguageManager
 import com.calai.bitecal.ui.common.haptic.rememberClickWithHaptic
 
 data class LangItem(val label: String, val tag: String, val flag: String)
 
 val LANGS = listOf(
-    // Tier 1: 頂級變現市場 (超大營收規模 / 極高人均付費)
-    LangItem("English", "en", "🇺🇸"),
+    LangItem("English (United States)", "en-US", "🇺🇸"),
     LangItem("简体中文", "zh-CN", "🇨🇳"),
+    LangItem("繁體中文", "zh-HK", "🇭🇰"),
     LangItem("日本語", "ja", "🇯🇵"),
-    LangItem("한국어", "ko", "🇰🇷"),
-
-    // Tier 2: 成熟發達市場 (高購買力、高訂閱轉化率)
     LangItem("Deutsch", "de", "🇩🇪"),
     LangItem("Français", "fr", "🇫🇷"),
-    LangItem("繁體中文", "zh-HK", "🇭🇰"),
-    LangItem("Nederlands", "nl", "🇳🇱"),
-    LangItem("עברית", "he", "🇮🇱"),
-    LangItem("Svenska", "sv", "🇸🇪"),
-    LangItem("Norsk (Bokmål)", "nb", "🇳🇴"),
-    LangItem("Dansk", "da", "🇩🇰"),
-    LangItem("Suomi", "fi", "🇫🇮"),
-    LangItem("Italiano", "it", "🇮🇹"),
-
-    // Tier 3: 中度消費與高潛力市場 (基數龐大或局部高收入)
-    LangItem("Español", "es", "🇪🇸"),
-    LangItem("العربية", "ar", "🇸🇦"),
-    LangItem("Português (Brasil)", "pt-BR", "🇧🇷"),
-    LangItem("Türkçe", "tr", "🇹🇷"),
-    LangItem("Polski", "pl", "🇵🇱"),
-    LangItem("Čeština", "cs", "🇨🇿"),
-    LangItem("Română", "ro", "🇷🇴"),
-    LangItem("Português (Portugal)", "pt-PT", "🇵🇹"),
-    LangItem("Русский", "ru", "🇷🇺"),
-
-    // Tier 4: 高下載量但低訂閱轉化市場 (以免費或廣告變現為主)
-    LangItem("ไทย", "th", "🇹🇭"),
-    LangItem("Bahasa Melayu", "ms", "🇲🇾"),
-    LangItem("Tiếng Việt", "vi", "🇻🇳"),
-    LangItem("Filipino", "fil", "🇵🇭"),
-    LangItem("हिन्दी", "hi", "🇮🇳"),
-    LangItem("Basa Jawa", "jv", "🇮🇩")
+    LangItem("한국어", "ko", "🇰🇷"),
+    LangItem("Español (Latinoamérica)", "es-419", "🌎"),
+    LangItem("Español (España)", "es", "🇪🇸"),
+    LangItem("Português (Brasil)", "pt-BR", "🇧🇷")
 )
 
 @Composable

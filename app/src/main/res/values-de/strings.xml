@@ -1,0 +1,1122 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <!-- App_Name -->
+    <string name="app_name">BiteCal: Kalorienkamera</string>
+
+
+    <!-- common -->
+    <string name="common_close">Schließen</string>
+    <string name="common_save">Speichern</string>
+    <string name="common_cancel">Abbrechen</string>
+    <string name="common_continue_btn">Weiter</string>
+    <string name="common_skip">Überspringen</string>
+    <string name="common_dash">—</string>
+    <string name="common_error">Fehler</string>
+
+    <string name="common_save_success">Erfolgreich gespeichert!</string>
+    <string name="common_today">Heute</string>
+    <string name="common_yesterday">Gestern</string>
+    <string name="common_unavailable_dash">—</string>
+    <string name="common_retry">Erneut versuchen</string>
+
+    <string name="common_delete">Löschen</string>
+    <string name="common_deleting">Wird gelöscht…</string>
+
+    <string name="common_understood">Verstanden</string>
+    <string name="common_revert">Zurücksetzen</string>
+
+
+    <!-- ApiErrorUiMapper -->
+    <string name="err_barcode_not_found_title">Produkt nicht gefunden</string>
+    <string name="err_barcode_not_found_msg">We couldn’t find this barcode. Try taking a photo of the nutrition label.</string>
+
+    <string name="err_barcode_lookup_failed_title">Suche fehlgeschlagen</string>
+    <string name="err_barcode_lookup_failed_msg">We couldn’t reach the product database. Check your connection and try again.</string>
+
+    <string name="err_generic_title">Etwas ist schiefgelaufen</string>
+    <string name="err_generic_msg">Bitte versuchen Sie es erneut.</string>
+
+    <string name="err_network_title">Netzwerkproblem</string>
+    <string name="err_network_msg">Bitte prüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.</string>
+
+    <string name="err_photo_title">Foto erforderlich</string>
+    <string name="err_photo_msg">Try taking the photo again with better lighting.</string>
+
+    <string name="err_manual_title">Manuell eingeben</string>
+    <string name="err_manual_msg">You can enter details manually.</string>
+
+    <string name="err_support_title">Support kontaktieren</string>
+    <string name="err_support_msg">Please contact support if the issue persists.</string>
+
+    <string name="cta_try_label">Nährwertetikett scannen</string>
+    <string name="cta_enter_manually">Manuell eingeben</string>
+
+    <string name="cta_check_network">Netzwerk prüfen</string>
+    <string name="cta_retake">Erneut aufnehmen</string>
+    <string name="cta_contact_support">Support kontaktieren</string>
+    <string name="cta_rescan_barcode">Barcode erneut scannen</string>
+
+
+
+
+    <!-- Landing Screen -->
+    <string name="landing_title">Foto aufnehmen, Kalorien erkennen.</string>
+    <string name="choose_language">Sprache wählen</string>
+    <string name="cta_get_started">Loslegen</string>
+    <string name="cta_login_prefix">Sie haben bereits ein Konto?</string>
+    <string name="cta_login">Anmelden</string>
+
+
+    <!-- RequireSignInScreen -->
+    <string name="auth_sign_in_account_title">Melden Sie sich bei Ihrem Konto an</string>
+    <string name="auth_sign_in_with_google">Mit Google anmelden</string>
+    <string name="auth_signin_with_email">Mit E-Mail fortfahren</string>
+
+
+    <!-- SignInSheet-->
+    <string name="signin_title">Anmelden</string>
+    <string name="signin_with_apple">Mit Apple anmelden</string>
+    <string name="signin_with_google">Mit Google anmelden</string>
+    <string name="signin_with_email">Mit E-Mail fortfahren</string>
+    <string name="signin_legal_hint">Mit dem Fortfahren stimmen Sie den Bedingungen von BiteCal zu</string>
+    <string name="signin_terms">Bedingungen</string>
+    <string name="signin_and">und</string>
+    <string name="signin_privacy">Datenschutzerklärung</string>
+    <string name="signin_url_terms">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</string>
+    <string name="signin_url_privacy">https://www.viraldevelopment.co/index.php/privacy-policy</string>
+
+
+    <!-- SignInSheetHost 控制 Sheet 是否顯示、處理狀態、接外部 callback -->
+    <string name="err_google_no_account_hint">Tip: add a Google account in Einstellungen → Accounts and try again</string>
+    <string name="err_google_signin_failed">Google sign-in fehlgeschlagen</string>
+
+
+    <!-- EmailEnterScreen-->
+    <string name="email_sign_in_title">Anmelden</string>
+    <string name="input_box_email_label">E-Mail</string>
+
+
+    <!-- EmailCodeScreen OTP -->
+    <string name="resend">Erneut senden</string>
+    <string name="resend_countdown">Erneut senden (%1$d s)</string>
+
+    <string name="err_otp_invalid">Der Code ist falsch. Bitte versuchen Sie es erneut.</string>
+    <string name="err_otp_too_many_attempts">Zu viele Versuche. Bitte später erneut versuchen.</string>
+    <string name="err_network_io">Netzwerkfehler. Bitte erneut versuchen.</string>
+    <string name="err_server_unavailable">Der Dienst ist vorübergehend nicht verfügbar. Bitte später erneut versuchen.</string>
+    <string name="err_generic">Etwas ist schiefgelaufen. Bitte erneut versuchen.</string>
+
+    <string name="confirm_email_title">E-Mail bestätigen</string>
+    <string name="confirm_email_hint">Bitte geben Sie den 4-stelligen Code ein, den wir gesendet haben an</string>
+    <string name="didnt_receive_code">Code nicht erhalten?</string>
+
+
+    <!-- Onboarding: GenderSelectionScreen -->
+    <string name="onboard_gender_title">Geschlecht auswählen</string>
+    <string name="onboard_gender_subtitle">Dies wird zur Kalibrierung Ihres persönlichen Plans verwendet.</string>
+    <string name="onboard_male">Männlich</string>
+    <string name="onboard_female">Weiblich</string>
+    <string name="onboard_other">Andere</string>
+
+
+    <!-- Onboarding: ReferralSourceScreen -->
+    <string name="onboard_referral_title">Wie haben Sie uns entdeckt?</string>
+
+
+    <!-- Onboarding: AgeSelectionScreen -->
+    <string name="onboard_age_title">Wie alt sind Sie?</string>
+    <string name="onboard_age_subtitle">We only use your age to improve your experience and calorie estimation accuracy.</string>
+
+
+    <!-- Onboarding: HeightSelectionScreen -->
+    <string name="onboard_height_title">Wie groß sind Sie?</string>
+    <string name="onboard_height_subtitle">We only use your data to improve your experience and our calorie estimates.</string>
+    <string name="onboard_height_hint">Dies wird zur Kalibrierung Ihres persönlichen Plans verwendet.</string>
+
+
+    <!-- Onboarding: WeightSelectionScreen -->
+    <string name="onboard_weight_title">Wie viel wiegen Sie?</string>
+    <string name="onboard_weight_subtitle">We only use your data to improve your experience and our calorie estimates.</string>
+    <string name="onboard_weight_hint">Dies wird zur Kalibrierung Ihres persönlichen Plans verwendet.</string>
+
+
+    <!-- Onboarding: ExerciseFrequencyScreen  -->
+    <string name="onboard_ex_freq_title">How often do you exercise each week?</string>
+    <string name="onboard_ex_freq_subtitle">This will help calibrate your personalized plan.</string>
+    <string name="ex_freq_0_title">0</string>
+    <string name="ex_freq_0_sub">Sedentary</string>
+    <string name="ex_freq_1_3_title">1–3</string>
+    <string name="ex_freq_1_3_sub">Light activity</string>
+    <string name="ex_freq_3_5_title">3–5</string>
+    <string name="ex_freq_3_5_sub">Moderate activity</string>
+    <string name="ex_freq_6_7_plus_title">6–7</string>
+    <string name="ex_freq_6_7_plus_sub">High activity</string>
+    <string name="ex_freq_7_plus_title">7+</string>
+    <string name="ex_freq_7_plus_sub">Very high activity</string>
+
+
+    <!-- Onboarding: GoalSelectionScreen  -->
+    <string name="onboard_goal_title">Was ist Ihr Ziel?</string>
+    <string name="onboard_goal_subtitle">This helps us tailor your calorie plan.</string>
+    <string name="goal_lose">Abnehmen</string>
+    <string name="goal_maintain">Halten</string>
+    <string name="goal_gain">Zunehmen</string>
+    <string name="goal_healthy_eating">Gesunde Ernährung</string>
+
+
+    <!-- Onboarding: WeightGoalScreen -->
+    <string name="onboard_goal_weight_title">Was ist Ihr Zielgewicht?</string>
+    <string name="onboard_goal_weight_subtitle">We only use your data to improve your experience and our calorie estimates.</string>
+    <string name="onboard_goal_weight_hint">Dies wird zur Kalibrierung Ihres persönlichen Plans verwendet.</string>
+
+
+    <!-- Onboarding: WeightLossComparisonScreen -->
+    <string name="onboard_weight_loss_comparison_title">Using BiteCal AI can\ntriple your Gewicht loss efficiency</string>
+    <string name="onboard_weight_loss_comparison_without_ai">Without\nBiteCal AI</string>
+    <string name="onboard_weight_loss_comparison_with_ai">With\nBiteCal AI</string>
+    <string name="onboard_weight_loss_comparison_twenty_percent">20%</string>
+    <string name="onboard_weight_loss_comparison_two_times">3X</string>
+    <string name="onboard_weight_loss_comparison_caption">BiteCal AI makes everything simple\nand keeps you accountable</string>
+
+
+    <!-- Onboarding: NotificationPermissionScreen -->
+    <string name="onboard_notif_title">Jede Mahlzeit zählt!</string>
+    <string name="onboard_notif_subtitle">Enable notifications for gentle reminders to log meals—so your Kalorien, macros, and progress stay on track. Slip-ups happen; timely nudges help you bounce back fast.</string>
+    <string name="onboard_allow_notifications_cta">Benachrichtigungen erlauben</string>
+    <string name="notification_mock_app_title">AI-Kalorienzähler</string>
+    <string name="onboard_notif_title_got_a_sec">Your meal won’t log itself 😉</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">Log this meal to keep your Kalorien and macros on track.</string>
+
+
+    <!-- Onboarding: HealthConnectIntroScreen -->
+    <string name="onboard_hc_connect_title_prefix">Verbinden mit</string>
+    <string name="onboard_hc_connect_title_service">Health Connect</string>
+    <string name="onboard_hc_connect_body">Sync daily activity between BiteCal AI and health apps to get more complete records and insights.</string>
+    <string name="onboard_hc_permission_rationale_title_prefix">Why BiteCal uses</string>
+    <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
+    <string name="onboard_hc_permission_rationale_body">BiteCal reads your steps, exercise, and sleep data to estimate daily activity burn, update your calorie dashboard, and improve progress insights. You can revoke access anytime in Gesundheit Connect.</string>
+    <string name="onboard_hc_permission_rationale_button">Verstanden</string>
+
+
+    <!-- Onboarding: ComputationProgressScreen -->
+    <string name="progress_hero_title">Ihr persönlicher Plan wird erstellt</string>
+    <string name="progress_hero_subtitle">We’re using your Ziels, body data, and preferences to tailor your daily targets.</string>
+    <string name="progress_footer_hint">Das dauert nur einen Moment</string>
+    <string name="progress_center_caption">Ergebnisse werden vorbereitet</string>
+    <string name="progress_phase_pill_1">Reviewing your profile</string>
+    <string name="progress_phase_pill_2">Calculating your calorie target</string>
+    <string name="progress_phase_pill_3">Balancing your daily macros</string>
+    <string name="progress_phase_pill_4">Finalizing your health insights</string>
+    <string name="progress_card_title">Setting up your plan</string>
+    <string name="progress_row_calorie_target">Täglich calorie target</string>
+    <string name="progress_row_carb_distribution">Carb distribution</string>
+    <string name="progress_row_protein_recommendation">Protein recommendation</string>
+    <string name="progress_row_fat_recommendation">Fat recommendation</string>
+    <string name="progress_row_health_score_estimate">Gesundheit Score estimate</string>
+
+
+    <!-- Onboarding: HealthPlanScreen -->
+    <string name="plan_cta_start">Los geht’s</string>
+    <string name="plan_title_congrats">Glückwunsch!</string>
+    <string name="plan_subtitle_ready">Ihr persönlicher Gesundheitsplan ist bereit!</string>
+    <string name="plan_disclaimer">Sources are below: See all references ›</string>
+    <string name="plan_unit_kcal_day">kcal / day</string>
+
+    <string name="plan_macros_proteins">Protein</string>
+    <string name="plan_macros_carbs">Kohlenhydrate</string>
+    <string name="plan_macros_fat">Fette</string>
+    <string name="plan_unit_g">g</string>
+
+    <string name="plan_water_daily">Tägliches Wasser</string>
+    <string name="plan_weight_current">Aktuelles Gewicht</string>
+    <string name="plan_weight_delta">Bis zum Zielgewicht</string>
+
+    <string name="plan_goals_title">How to reach\nyour Ziels</string>
+    <string name="plan_goal_card_health_scores">Gesundheit Scores guide you, so habits form naturally</string>
+    <string name="plan_goal_card_track_meals">Log meals in one tap, staying consistent is easy</string>
+    <string name="plan_goal_card_daily_calories">See daily Kalorien clearly, and never lose track</string>
+    <string name="plan_goal_card_balance_macros">Kohlenhydrate × protein × fat, smart balance, better results</string>
+    <string name="plan_sources_based_on">Based on official dietary guidelines,\nfor reference only, not medical advice.</string>
+    <string name="plan_sources_more">See all references ›</string>
+    <string name="plan_sources_hide">Hide sources</string>
+
+
+    <!-- Onboarding: OnboardReferralCodeScreen -->
+    <string name="onboard_referral_code_input">Enter referral code\n(optional)</string>
+    <string name="onboard_referral_code_subtitle">You can skip this step</string>
+    <string name="onboard_referral_code_input_label">Empfehlungscode</string>
+    <string name="onboard_referral_code_placeholder">Empfehlungscode</string>
+    <string name="onboard_referral_code_submit">Absenden</string>
+    <string name="onboard_referral_code_submitting">Wird gesendet…</string>
+    <string name="onboard_referral_code_applied">Empfehlungscode angewendet!</string>
+
+    <string name="onboard_referral_code_error_invalid_format">Use letters and numbers only.</string>
+    <string name="onboard_referral_code_error_invalid">We couldn\'t find this referral code.</string>
+    <string name="onboard_referral_code_error_self_referral">You can\'t use your own referral code.</string>
+    <string name="onboard_referral_code_error_already_claimed">This account has already applied a referral code.</string>
+    <string name="onboard_referral_code_error_already_subscribed">Subscribed accounts can\'t apply a referral code.</string>
+    <string name="onboard_referral_code_error_disabled">Referral is temporarily unavailable.</string>
+    <string name="onboard_referral_code_error_risk">We can\'t apply a referral code right now.</string>
+    <string name="onboard_referral_code_error_network">We can\'t apply it right now. Bitte später erneut versuchen.</string>
+    <string name="onboard_referral_code_error_unknown">Referral code can\'t be applied right now.\nBitte später erneut versuchen.</string>
+
+
+    <!-- Onboarding: OnboardSubscriptionScreen  Paywall -->
+    <string name="subscription_price_per_month_format">%1$s/Monat</string>
+    <string name="subscription_price_per_month_unit">/Monat</string>
+
+
+    <!-- Onboarding: OnboardSubscriptionIntro -->
+    <string name="subscription_intro_title">Unlock BiteCal AI to\nreach your Ziels faster.</string>
+    <string name="subscription_intro_helper_format">Just %1$s per year (%2$s)</string>
+    <string name="subscription_start_three_day_free_trial">3 Tage kostenlos testen</string>
+    <string name="subscription_three_day_trial_helper_format">3 days free, then %1$s/year. Cancel anytime.</string>
+    <string name="subscription_already_owned_restore_required">Your Google Play account already has an active BiteCal subscription. Restore it to this BiteCal account before using premium features.</string>
+    <string name="restore_subscription_dialog_title">Abo gefunden</string>
+    <string name="settings_restore_subscription">Abo wiederherstellen</string>
+    <string name="restore_subscription_dialog_restoring">Wird wiederhergestellt…</string>
+    <string name="common_maybe_later">Vielleicht später</string>
+
+
+    <!-- Onboarding: OnboardDiscountSpinScreen-->
+    <string name="subscription_spin_title">Spin to unlock an\nexclusive discount</string>
+    <string name="subscription_spin_helper_ready">Tap Spin to reveal your exclusive gift.</string>
+    <string name="subscription_spin_button">Drehen</string>
+    <string name="subscription_spinning_button">Dreht…</string>
+    <string name="subscription_gift_offer_unlocked">Gift offer unlocked</string>
+    <string name="subscription_spin_helper_wait">Please wait until the wheel stops.</string>
+    <string name="subscription_spin_helper_revealed">This offer is revealed after the wheel stops.</string>
+
+
+    <!-- Onboarding: OneTimeOfferHeroCard-->
+    <string name="subscription_gift_unlocked_title">Geschenk freigeschaltet 🎁</string>
+    <string name="subscription_gift_price_unlocked">Geschenkpreis freigeschaltet</string>
+    <string name="subscription_unlock_premium_for_only">Unlock premium for only</string>
+    <string name="subscription_discount_body">Scannen meals faster. Track macros smarter.\nStay on plan daily.</string>
+    <string name="subscription_yearly_price_format">%1$s/Jahr</string>
+    <string name="subscription_urgency_coffee">Less than a coffee.</string>
+    <string name="subscription_urgency_price_gone">Close this screen? This price is gone</string>
+    <string name="subscription_urgency_waiting">What are you waiting for?</string>
+
+    <string name="subscription_trial_enabled">Kostenlose Testversion aktiviert</string>
+    <string name="subscription_trial_enable_prompt">Not sure? Turn on free trial</string>
+    <string name="subscription_trial_checking_eligibility">Checking trial availability…</string>
+    <string name="subscription_trial_already_used">Testversion bereits genutzt</string>
+    <string name="subscription_trial_unavailable">Kostenlose Testversion nicht verfügbar</string>
+
+    <string name="subscription_badge_free_trial">Kostenlose Testversion</string>
+    <string name="subscription_badge_lowest_price_ever">Lowest price ever</string>
+    <string name="subscription_yearly_plan">Jahresplan</string>
+    <string name="subscription_yearly_plan_price_format">12mo · %1$s</string>
+
+    <string name="subscription_start_free_trial">Kostenlose Testversion starten</string>
+    <string name="subscription_trial_helper">Keine Verpflichtung — jederzeit kündbar</string>
+
+
+    <!-- HomeScreen -->
+    <string name="recently_uploaded">Zuletzt hochgeladen</string>
+    <string name="workout_membership_verify_failed">Unable to verify membership. Bitte erneut versuchen.</string>
+
+
+    <!-- MainBottomBar -->
+    <string name="bottom_nav_home">Startseite</string>
+    <string name="bottom_nav_progress">Fortschritt</string>
+    <string name="bottom_nav_weight">Gewicht</string>
+    <string name="bottom_nav_fasting">Fasten</string>
+    <string name="bottom_nav_workout">Training</string>
+
+
+    <!-- =============   HomeCards  ============= -->
+
+    <!-- HomeCards :  Calories Card -->
+    <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
+    <string name="home_calories_goal_label">Verbleibende Kalorien</string>
+    <string name="home_calories_eaten_label">Aufgenommene Kalorien</string>
+
+
+    <!-- HomeCards :  Nutrition Card -->
+    <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
+    <string name="home_protein_goal_label">Verbleibendes Protein</string>
+    <string name="home_protein_eaten_label">Aufgenommenes Protein</string>
+    <string name="home_carbs_goal_label">Verbleibende Kohlenhydrate</string>
+    <string name="home_carbs_eaten_label">Aufgenommene Kohlenhydrate</string>
+    <string name="home_fats_goal_label">Verbleibende Fette</string>
+    <string name="home_fats_eaten_label">Aufgenommene Fette</string>
+    <string name="home_fiber_goal_label">Verbleibende Ballaststoffe</string>
+    <string name="home_fiber_eaten_label">Aufgenommene Ballaststoffe</string>
+    <string name="home_sugar_goal_label">Verbleibender Zucker</string>
+    <string name="home_sugar_eaten_label">Aufgenommener Zucker</string>
+    <string name="home_sodium_goal_label">Verbleibendes Natrium</string>
+    <string name="home_sodium_eaten_label">Aufgenommenes Natrium</string>
+    <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
+
+
+    <!-- HomeCards :  Health Score Card & Advice -->
+    <string name="home_health_score_advice_zero">Log your first meal today to see a health Score based on its nutrition details.</string>
+    <string name="home_health_score_advice_very_low">Today\'s average is low. Consider more protein, fiber, and lower sugar or sodium.</string>
+    <string name="home_health_score_advice_low">There\'s room to improve. Try adding vegetables and quality protein.</string>
+    <string name="home_health_score_advice_medium">You\'re on track. Keep portions steady and watch sugar, sodium, and fiber.</string>
+    <string name="home_health_score_advice_good">Good balance today. Keep choosing nutrient-dense Essens.</string>
+    <string name="home_health_score_advice_excellent">Great balance today. Keep building consistent habits.</string>
+    <string name="home_health_score_title">Gesundheitsscore</string>
+    <string name="home_health_score_value">%1$d/10</string>
+
+
+    <!-- HomeCards : Step Card -->
+    <string name="steps_card_title">Schritte</string>
+    <string name="steps_status_permission_not_granted">Nicht autorisiert</string>
+    <string name="steps_status_hc_not_installed">Nicht installiert</string>
+    <string name="steps_status_hc_unavailable">Nicht verfügbar</string>
+    <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
+    <string name="steps_secondary_no_data_yet">Noch keine Daten</string>
+    <string name="steps_secondary_connect">Verbinden</string>
+    <string name="steps_hint_connect_google_health">Connect Google Gesundheit to track your steps</string>
+    <string name="steps_hint_install_health_connect">Install Gesundheit Connect to track your steps</string>
+    <string name="steps_hint_hc_unavailable">Gesundheit Connect isn’t available on this device</string>
+    <string name="steps_hint_retry">Sync fehlgeschlagen. Tap to retry</string>
+
+
+    <!-- HomeCards : Workout Card -->
+    <string name="workout_card_title">Training</string>
+    <string name="workout_card_unit_kcal">kcal</string>
+
+
+    <!-- HomeCards : Weight Card -->
+    <string name="weight_card_title">Gewicht</string>
+    <string name="weight_card_of_goal">of Ziel</string>
+
+
+    <!-- HomeCards : Fasting Card -->
+    <string name="fasting_card_plan_title">Fastenplan</string>
+    <string name="fasting_card_start_time">Startzeit</string>
+    <string name="fasting_card_end_time">Endzeit</string>
+
+
+    <!-- HomeCards : Water Card -->
+    <string name="water_intake_title">Wasser</string>
+    <string name="water_intake_cups_format">(%1$d cups)</string>
+
+
+    <!-- =========================
+         ProgressScreen
+         ========================= -->
+    <string name="progress_screen_title">Fortschritt</string>
+    <string name="progress_tab_this_week">Diese Woche</string>
+    <string name="progress_tab_last_week">Letzte Woche</string>
+    <string name="progress_tab_two_weeks_ago">Vor 2 Wochen</string>
+    <string name="progress_tab_three_weeks_ago">Vor 3 Wochen</string>
+    <string name="progress_error_load_failed">Laden fehlgeschlagen</string>
+    <string name="workout_chart_error_load_failed">Load Training chart fehlgeschlagen</string>
+    <string name="water_chart_error_load_failed">Load water chart fehlgeschlagen</string>
+
+
+    <!-- =========================
+         BMI Card / BMI Info Dialog
+         ========================= -->
+    <string name="bmi_card_title">Ihr BMI</string>
+    <string name="bmi_card_subtitle">Ihr Gewicht ist</string>
+
+    <string name="bmi_status_underweight">Untergewicht</string>
+    <string name="bmi_status_healthy">Gesund</string>
+    <string name="bmi_status_overweight">Übergewicht</string>
+    <string name="bmi_status_obese">Adipositas</string>
+    <string name="bmi_status_unknown">Unbekannt</string>
+
+    <string name="bmi_range_underweight">&lt;18.5</string>
+    <string name="bmi_range_healthy">18.5–24.9</string>
+    <string name="bmi_range_overweight">25.0–29.9</string>
+    <string name="bmi_range_obese">&gt;30.0</string>
+
+    <string name="bmi_info_title">Was ist BMI?</string>
+    <string name="bmi_info_subtitle">Body-Mass-Index</string>
+    <string name="bmi_info_formula_title">Formel</string>
+    <string name="bmi_info_formula_value">BMI = Gewicht (kg) / height (m²)</string>
+    <string name="bmi_info_meaning_title">Was es aussagt</string>
+    <string name="bmi_info_meaning_body">BMI helps estimate whether your body Gewicht is in a generally healthy range.</string>
+    <string name="bmi_info_note_title">Bitte beachten</string>
+    <string name="bmi_info_note_body">BMI is a general guide. It does not directly measure body fat, muscle mass, or overall health.</string>
+    <string name="bmi_info_cta">Verstanden</string>
+
+
+    <!-- =========================
+         NutritionChartCard
+         ========================= -->
+    <string name="progress_chart_7day_avg_calories">7-Tage-Durchschnitt</string>
+    <string name="progress_chart_value_cals">%1$d cals</string>
+    <string name="progress_chart_15day_avg_calories">15-Tage-Durchschnitt</string>
+    <string name="progress_chart_loading_total_calories_text">--.- cals</string>
+    <string name="progress_chart_loading_delta">↑ --%%</string>
+    <string name="progress_chart_delta_placeholder">--%%</string>
+    <string name="progress_chart_total_calories">Gesamtkalorien</string>
+    <string name="progress_chart_cals">Kal.</string>
+    <string name="progress_legend_protein">Protein</string>
+    <string name="progress_legend_carbs">Kohlenhydrate</string>
+    <string name="progress_legend_fats">Fette</string>
+    <string name="progress_keep_it_up">Weiter so! Der Anfang ist am schwersten!</string>
+
+    <string name="progress_day_sun">So</string>
+    <string name="progress_day_mon">Mo</string>
+    <string name="progress_day_tue">Di</string>
+    <string name="progress_day_wed">Mi</string>
+    <string name="progress_day_thu">Do</string>
+    <string name="progress_day_fri">Fr</string>
+    <string name="progress_day_sat">Sa</string>
+
+    <string name="progress_tooltip_calories">Kalorien</string>
+    <string name="progress_tooltip_protein">Protein</string>
+    <string name="progress_tooltip_carbs">Kohlenhydrate</string>
+    <string name="progress_tooltip_fats">Fette</string>
+    <string name="progress_tooltip_label_format">%1$s:</string>
+    <string name="progress_tooltip_grams_value">%1$d g</string>
+    <string name="progress_tooltip_plain_value">%1$d</string>
+
+
+    <!-- =========================
+         MicronutrientChartCard
+         ========================= -->
+    <string name="progress_micronutrients_title">Mikronährstoffe</string>
+    <string name="progress_chart_grams">g</string>
+    <string name="progress_chart_7day_avg">7-Tage-Durchschnitt</string>
+    <string name="progress_legend_fiber">Ballaststoffe</string>
+    <string name="progress_legend_sugar">Zucker</string>
+    <string name="progress_legend_sodium">Natrium</string>
+    <string name="progress_micronutrients_keep_it_up">Keep your fiber, sugar, and sodium balanced.</string>
+    <string name="progress_tooltip_fiber">Ballaststoffe</string>
+    <string name="progress_tooltip_sugar">Zucker</string>
+    <string name="progress_tooltip_sodium">Natrium</string>
+    <string name="progress_tooltip_mg_value">%1$d mg</string>
+
+
+    <!-- =========================
+         WorkoutChartCard
+         ========================= -->
+    <string name="workout_chart_goal_reached">Ziel heute erreicht</string>
+    <string name="workout_chart_goal_left">%1$d kcal left to hit today\'s Ziel</string>
+    <string name="workout_chart_title">Trainingsverbrauch</string>
+    <string name="workout_chart_info_dialog_body">Includes logged Trainings and activity Kalorien estimated from daily steps.</string>
+    <string name="workout_chart_unit_kcal">kcal</string>
+    <string name="workout_chart_goal">Ziel</string>
+    <string name="workout_chart_value_kcal">%1$d kcal</string>
+    <string name="workout_chart_7day_avg">7-Tage-Durchschnitt</string>
+    <string name="workout_chart_loading">Wird geladen…</string>
+    <string name="workout_legend_burned">Training verbrannt</string>
+    <string name="workout_legend_daily_goal">Tagesziel</string>
+    <string name="workout_tooltip_burned">Verbrannt</string>
+    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+
+
+    <!-- =========================
+         WaterChartCard
+         ========================= -->
+    <string name="water_chart_goal_reached">Ziel für heute erreicht</string>
+    <string name="water_chart_goal_left_ml">%1$s ml left to reach today\'s Ziel</string>
+    <string name="water_chart_title">Wasseraufnahme</string>
+    <string name="water_chart_unit_ml">ml</string>
+    <string name="water_chart_goal">Ziel</string>
+    <string name="water_chart_value_ml">%1$s ml</string>
+    <string name="water_chart_7day_avg">7-Tage-Durchschnitt</string>
+    <string name="water_chart_loading">Wird geladen…</string>
+    <string name="water_legend_intake">Aufnahme</string>
+    <string name="water_legend_daily_goal">Tagesziel</string>
+    <string name="water_tooltip_intake">Aufnahme</string>
+    <string name="water_tooltip_ml_value">%1$d ml</string>
+
+
+    <!-- =========================
+         ProgressAverageOverviewSection
+         ========================= -->
+    <string name="progress_average_tab_7_days">7 Tage</string>
+    <string name="progress_average_tab_15_days">15 Tage</string>
+    <string name="progress_average_tab_30_days">30 Tage</string>
+    <string name="progress_average_tab_60_days">60 Tage</string>
+
+    <string name="progress_average_overview_title">Durchschnittsübersicht</string>
+    <string name="progress_average_overview_subtitle">Ohne heute; nur Tage mit Daten werden gemittelt.</string>
+    <string name="progress_average_days_badge">%1$d-day avg</string>
+    <string name="progress_average_loading">Durchschnitte werden geladen…</string>
+    <string name="progress_average_total_calories">Gesamtkalorien</string>
+    <string name="progress_average_protein">Protein</string>
+    <string name="progress_average_carbs">Kohlenhydrate</string>
+    <string name="progress_average_fats">Fette</string>
+    <string name="progress_average_fiber">Ballaststoffe</string>
+    <string name="progress_average_sugar">Zucker</string>
+    <string name="progress_average_sodium">Natrium</string>
+    <string name="progress_average_workout">Training verbrannt</string>
+    <string name="progress_average_water">Wasseraufnahme</string>
+    <string name="progress_average_health_score">Gesundheitsscore</string>
+    <string name="progress_average_steps">Schritte</string>
+    <string name="progress_average_health_score_value">%1$.1f / 10</string>
+    <string name="progress_average_steps_value">%1$s steps</string>
+
+
+    <!--WeightScreen-->
+    <string name="weight_title">Gewicht</string>
+    <string name="weight_overview_title">Übersicht</string>
+    <string name="weight_history_title">Verlauf</string>
+    <string name="weight_delete_success">Erfolgreich gelöscht!</string>
+    <string name="weight_delete_failed">Löschen fehlgeschlagen. Bitte erneut versuchen.</string>
+    <string name="weight_log_weight">Gewicht eintragen</string>
+
+
+    <!-- WeightComponents -->
+    <string name="weight_card_to_goal_weight">Bis zum Zielgewicht</string>
+    <string name="weight_card_current_weight">Aktuelles Gewicht</string>
+    <string name="weight_card_achieved_goal_format">Achieved %1$s%% of Ziel</string>
+    <string name="weight_chart_tab_30_days">30 Tage</string>
+    <string name="weight_chart_tab_60_days">60 Tage</string>
+    <string name="weight_chart_tab_90_days">90 Tage</string>
+    <string name="weight_chart_tab_all_time">Gesamter Zeitraum</string>
+    <string name="weight_chart_title">Gewichtstrend</string>
+    <string name="weight_chart_goal_progress_badge">%1$s%% of Ziel</string>
+    <string name="weight_chart_goal_label">Ziel</string>
+    <string name="weight_chart_to_goal">%1$s to Ziel</string>
+    <string name="weight_goal_chart_empty_hint">Log Gewicht to start your trend</string>
+    <string name="weight_chart_motivation">Jeder kleine Schritt bringt Sie Ihrem Ziel näher.</string>
+    <string name="weight_history_weight_label">Gewicht</string>
+    <string name="weight_history_change_label">Änderung</string>
+    <string name="weight_history_trend_loss">VERLUST</string>
+    <string name="weight_history_trend_gain">ZUNAHME</string>
+    <string name="weight_history_trend_stable">STABIL</string>
+
+
+    <!-- FastingPlansScreen -->
+    <string name="fasting_plan_title">Fastenplan</string>
+    <string name="start_time">Startzeit</string>
+    <string name="end_time">Endzeit</string>
+    <string name="fasting_notification_info_status_on">Reminders are on. If device notification permission is allowed, these reminders repeat daily.</string>
+    <string name="fasting_notification_info_status_off">Reminders are off. Turn on the switch on the Home fasting card to receive these notifications.</string>
+    <string name="fasting_notification_info_status_enabled_label">Ein</string>
+    <string name="fasting_notification_info_status_disabled_label">Aus</string>
+    <string name="fasting_notification_info_title">So funktionieren Erinnerungen</string>
+    <string name="fasting_notification_info_subtitle">Your %1$s plan ends at %2$s. When reminders are on, BiteCal sends two daily notifications.</string>
+    <string name="fasting_notification_info_at_time">At %1$s</string>
+    <string name="fasting_notification_info_start_title">Essensfenster beginnt</string>
+    <string name="fasting_notification_info_start_body">You can start eating and log meals when needed.</string>
+    <string name="fasting_notification_info_endsoon_title">Essensfenster endet bald</string>
+    <string name="fasting_notification_info_endsoon_body">One hour before the window closes at %1$s, BiteCal reminds you to finish your last meal.</string>
+
+    <string name="fasting_plan_desc_14_10">Ease in with a steady rhythm—14 hours to reset appetite cues and energy.</string>
+    <string name="fasting_plan_desc_16_8">Crowd favorite for a reason—16 hours to stay focused and in a lean groove.</string>
+    <string name="fasting_plan_desc_12_12">Balanced split: fast 12 hours, eat within a 12-hour window — perfect for beginners.</string>
+    <string name="fasting_plan_desc_18_6">18 hours of fasting, with a 6-hour eating window — a leaner schedule than 16:8.</string>
+    <string name="fasting_plan_desc_20_4">Stay laser-focused—1–2 mindful meals within a tight 4-hour window.</string>
+    <string name="fasting_plan_desc_22_2">One intentional meal in a 2-hour slot—keep water intake up.</string>
+
+    <string name="fasting_picker_title">Fasten-Startzeit festlegen</string>
+    <string name="fasting_picker_subtitle">We’ll remind you at this time each day when your eating window starts.</string>
+
+
+    <!-- FastingReceiver -->
+    <string name="fasting_start_title">%1$s eating window is open</string>
+    <string name="fasting_start_body">Your eating window runs %1$s–%2$s. Log meals as you go to keep today accurate.</string>
+    <string name="fasting_endsoon_title">1 hour left in your eating window</string>
+    <string name="fasting_endsoon_body">Your window closes at %1$s. If you plan one last meal, log it before you wrap up.</string>
+
+
+
+
+    <!-- WorkoutHistoryScreen -->
+    <string name="workout_history_title">Trainingsverlauf</string>
+    <string name="workout_history_summary_label">Heute verbrannt</string>
+    <string name="workout_history_summary_body">Verfolgen Sie den heutigen Trainingsverbrauch</string>
+    <string name="workout_history_today_label">Heute</string>
+    <string name="workout_history_avg_daily_value">%1$d kcal</string>
+    <string name="workout_history_avg_daily_label">7-day avg / day</string>
+    <string name="workout_history_avg_label">7-day avg / session</string>
+    <string name="workout_history_avg_value">%1$d kcal</string>
+    <string name="workout_history_unit_kcal">kcal</string>
+
+    <string name="workout_history_empty_title">Keine aktuellen Trainings</string>
+    <string name="workout_history_empty">Keine Trainings in den letzten 7 Tagen.</string>
+    <string name="workout_history_recent_title">Letzte Einheiten</string>
+    <string name="workout_history_minutes">%1$d Min.</string>
+    <string name="workout_history_kcal">%1$d</string>
+    <string name="workout_history_date_time">%1$s · %2$s</string>
+    <string name="workout_history_kcal_with_unit">%1$d kcal</string>
+
+    <string name="workout_history_loading_title">Trainings werden synchronisiert</string>
+    <string name="workout_history_loading">Laden Training history…</string>
+    <string name="workout_history_error_title">Verlauf nicht verfügbar</string>
+
+    <string name="workout_history_delete_failed">Löschen fehlgeschlagen. Bitte erneut versuchen.</string>
+    <string name="workout_history_delete_success">Erfolgreich gelöscht!</string>
+    <string name="workout_history_error">Kann nicht geladen werden Training history.</string>
+
+
+    <!-- WorkoutTrackerSheet -->
+    <string name="workout_tracker_title">Workout-Tracker</string>
+    <string name="workout_tracker_subtitle">Beschreiben Sie Art und Dauer der Übung</string>
+    <string name="workout_tracker_example_placeholder">Beispiel: 45 Min. Laufen</string>
+
+    <string name="workout_tracker_select_from_list">or select from the list</string>
+    <string name="workout_tracker_show_less">Show less</string>
+    <string name="workout_tracker_show_more">Show more (%1$d)</string>
+
+    <string name="workout_tracker_estimating_fallback">Estimating…</string>
+    <string name="workout_tracker_estimating_analyzing">Analyzing your activity…</string>
+    <string name="workout_tracker_estimating_numbers">Working on your numbers…</string>
+    <string name="workout_tracker_estimating_calories">Estimating effort, calculating Kalorien…</string>
+    <string name="workout_tracker_do_not_close">Please do not close the app or lock your device</string>
+
+    <string name="workout_tracker_kcal_value">%1$d kcal</string>
+    <string name="workout_tracker_minutes_activity">%1$d min %2$s</string>
+    <string name="workout_tracker_add_workout">Training hinzufügen</string>
+
+    <string name="workout_tracker_activity_content_label">Training activity</string>
+    <string name="workout_preset_kcal_per_30_min">%1$d kcal / 30 min</string>
+
+    <string name="workout_tracker_save_success">Erfolgreich gespeichert!</string>
+    <string name="workout_tracker_save_failed">Failed to save. Bitte erneut versuchen.</string>
+    <string name="workout_tracker_refresh_failed">Refresh fehlgeschlagen. Bitte erneut versuchen.</string>
+    <string name="workout_tracker_cancel">Abbrechen</string>
+    <string name="workout_tracker_try_again">Try again</string>
+    <string name="workout_tracker_scan_failed_title">Uh-oh! Scannen fehlgeschlagen</string>
+    <string name="workout_tracker_scan_failed_body">The Training description may be incorrect, or the internet connection is weak. For example: 30 min Running.</string>
+
+
+    <!-- workoutNameStringRes : Workout preset display names -->
+    <string name="workout_preset_walking">Gehen</string>
+    <string name="workout_preset_running">Laufen</string>
+    <string name="workout_preset_cycling">Radfahren</string>
+    <string name="workout_preset_swimming">Schwimmen</string>
+    <string name="workout_preset_hiking">Wandern</string>
+    <string name="workout_preset_aerobic_exercise">Aerobic exercise</string>
+    <string name="workout_preset_strength_training">Strength training</string>
+    <string name="workout_preset_weight_training">Gewicht training</string>
+    <string name="workout_preset_basketball">Basketball</string>
+    <string name="workout_preset_soccer">Soccer</string>
+    <string name="workout_preset_tennis">Tennis</string>
+    <string name="workout_preset_yoga">Yoga</string>
+    <string name="workout_preset_badminton">Badminton</string>
+    <string name="workout_preset_baseball">Baseball</string>
+    <string name="workout_preset_softball">Softball</string>
+    <string name="workout_preset_volleyball">Volleyball</string>
+    <string name="workout_preset_table_tennis">Table tennis</string>
+    <string name="workout_preset_dancing_general">Dancing</string>
+    <string name="workout_preset_zumba">Zumba</string>
+    <string name="workout_preset_pilates">Pilates</string>
+
+
+    <!-- DurationPickerSheet -->
+    <string name="workout_duration_sheet_subtitle">Add this Training time to your activity log</string>
+    <string name="workout_duration_hour_short">hr</string>
+    <string name="workout_duration_minute_short">min</string>
+    <string name="workout_duration_save">Speichern</string>
+    <string name="workout_duration_cancel">Abbrechen</string>
+
+
+    <!-- HomeQuickActionMenu -->
+    <string name="quick_add_saved_foods">Saved Essens</string>
+    <string name="quick_add_scan_food">Essen scannen</string>
+
+
+    <!-- CameraScreen -->
+    <string name="camera_mode_food">Essen scannen</string>
+    <string name="camera_mode_barcode">Barcode</string>
+    <string name="camera_mode_label">Lebensmitteletikett</string>
+    <string name="camera_mode_album">Fotos</string>
+    <string name="camera_barcode_title">Barcode-Scanner</string>
+    <string name="camera_label_title">Etiketten-Scanner</string>
+    <string name="camera_need_permission">Zum Scannen ist Kamerazugriff erforderlich</string>
+
+
+    <!-- RecentUploadCard -->
+    <string name="foodlog_pending_analysis">Ihr Essen wird analysiert…</string>
+    <string name="foodlog_analysis_done">Analyse abgeschlossen</string>
+    <string name="recent_upload_kcal_text">🔥 %1$d Kalorien</string>
+    <string name="recent_upload_protein_text">🥩 %1$dg</string>
+    <string name="recent_upload_carbs_text">🌾 %1$dg</string>
+    <string name="recent_upload_fat_text">🥑 %1$dg</string>
+
+
+    <!-- RecentlyUploadedEmptyCard -->
+    <string name="recently_uploaded_empty">Zuletzt hochgeladen</string>
+    <string name="recently_uploaded_empty_hint">Tap + to add your first meal of the day</string>
+
+
+    <!-- SavedFoodsScreen -->
+    <string name="saved_foods_keep_15_days_hint">Saved Essens from the last 15 days.</string>
+    <string name="saved_foods_unsave_dialog_title">Remove from saved Essens?</string>
+    <string name="saved_foods_unsave_dialog_message">This meal will be removed from your Saved Essens list, but it will still remain in your recent records.</string>
+    <string name="saved_foods_unsave_dialog_confirm">Remove</string>
+    <string name="saved_foods_title">Saved Essens</string>
+    <string name="saved_foods_kcal">🔥 %1$d Kalorien</string>
+    <string name="saved_foods_protein">🥩 %1$dg</string>
+    <string name="saved_foods_carbs">🌾 %1$dg</string>
+    <string name="saved_foods_fat">🥑 %1$dg</string>
+    <string name="saved_foods_detail">Detail</string>
+    <string name="saved_foods_load_failed_title">Saved Essens fehlgeschlagen to load</string>
+
+
+    <!-- RecentUploadDetailScreen -->
+    <string name="foodlog_detail_load_failed">Laden fehlgeschlagen</string>
+    <string name="foodlog_unknown_food">Unbekanntes Essen</string>
+    <string name="foodlog_no_image">Kein Bild</string>
+
+    <string name="foodlog_detail_title">Nährwerte</string>
+    <string name="foodlog_detail_calories">Kalorien</string>
+    <string name="foodlog_detail_protein">Protein</string>
+    <string name="foodlog_detail_carbs">Kohlenhydrate</string>
+    <string name="foodlog_detail_fats">Fette</string>
+    <string name="foodlog_detail_fiber">Ballaststoffe</string>
+    <string name="foodlog_detail_sugar">Zucker</string>
+    <string name="foodlog_detail_sodium">Natrium</string>
+    <string name="foodlog_detail_health_score">Gesundheitsscore</string>
+
+
+    <!-- DeleteFoodLogDialog -->
+    <string name="foodlog_delete_dialog_title">Eintrag löschen?</string>
+    <string name="foodlog_delete_dialog_message">Möchten Sie diesen Mahlzeiteneintrag dauerhaft löschen? Diese Aktion kann nicht rückgängig gemacht werden.</string>
+    <string name="foodlog_delete_dialog_confirm">Löschen</string>
+
+
+    <!-- Settings -->
+    <string name="settings_title">Einstellungen</string>
+    <string name="settings_choose_language">Sprache wählen</string>
+    <string name="delete_account_dialog_title">Konto löschen?</string>
+    <string name="delete_account_dialog_body">Are you sure you want to delete your account? This will permanently delete your BiteCal data, including Essen logs, Gewicht records, and related settings. This action cannot be undone.</string>
+
+
+    <string name="restore_subscription_dialog_success_title">Abo wiederhergestellt</string>
+    <string name="restore_subscription_dialog_payment_issue_title">Subscription restored, payment issue remains</string>
+    <string name="restore_subscription_dialog_no_active_title">Kein aktives Abo gefunden</string>
+    <string name="restore_subscription_dialog_failed_title">Wiederherstellung fehlgeschlagen</string>
+    <string name="restore_subscription_dialog_bound_title">Subscription already linked</string>
+    <string name="restore_subscription_dialog_success_body">Your subscription has been restored to this BiteCal account.</string>
+    <string name="restore_subscription_dialog_payment_issue_body">Your subscription is linked to this BiteCal account, but Google Play still reports a payment issue. Please update your payment method in Google Play to keep your subscription active.</string>
+    <string name="restore_subscription_dialog_no_active_body">We could not find an active BiteCal subscription on the Google Play account currently used on this device. You can try again later from Einstellungen.</string>
+    <string name="restore_subscription_dialog_failed_body">We could not restore your subscription right now. Please check your connection and try again from Einstellungen.</string>
+    <string name="restore_subscription_dialog_bound_body">This subscription is already linked to another active BiteCal account. Please contact support if you believe this is a mistake.</string>
+    <string name="restore_subscription_dialog_body">We found an active BiteCal subscription or trial associated with the Google Play account on this device. You can restore it to the BiteCal account you’re currently signed in to.</string>
+
+    <!-- Settings : Payment issue dialog -->
+    <string name="payment_issue_dialog_title">Premium aktiv halten</string>
+    <string name="payment_issue_dialog_body">Your premium access is still active for now, but your payment needs attention.</string>
+    <string name="payment_issue_dialog_supporting_body">Update your Google Play payment method to avoid losing AI scannen and premium features.</string>
+    <string name="payment_issue_dialog_update_payment">Zahlungsmethode aktualisieren</string>
+    <string name="payment_issue_dialog_badge">Zahlung erfordert Aufmerksamkeit</string>
+    <string name="payment_issue_dialog_premium_access">Premium access</string>
+    <string name="payment_issue_dialog_active_for_now">Active for now</string>
+    <string name="payment_issue_dialog_next_step">Next step</string>
+    <string name="payment_issue_dialog_update_payment_short">Update payment</string>
+
+
+    <string name="settings_personal_details">Persönliche Daten</string>
+    <string name="settings_adjust_macronutrients">Makronährstoffe anpassen</string>
+    <string name="settings_weight_history">Gewichtsverlauf</string>
+    <string name="settings_ring_colors_explained">Farbguide für Kalenderringe</string>
+    <string name="settings_inbox">Posteingang</string>
+
+
+    <string name="settings_terms_conditions">Allgemeine Geschäftsbedingungen</string>
+    <string name="settings_privacy_policy">Datenschutzrichtlinie</string>
+    <string name="settings_support_email">Support-E-Mail</string>
+    <string name="settings_delete_account">Konto löschen?</string>
+    <string name="settings_version">Version %1$s</string>
+
+
+    <string name="settings_membership_payment">Zahlung</string>
+    <string name="settings_membership_update_payment">Update payment</string>
+    <string name="settings_membership_premium">Premium</string>
+    <string name="settings_membership_active_member">Aktives Mitglied</string>
+    <string name="settings_membership_trial">Testversion</string>
+    <string name="settings_membership_access_active">Zugriff aktiv</string>
+    <string name="settings_membership_free">Kostenlos</string>
+    <string name="settings_membership_upgrade">Upgrade</string>
+
+
+    <!-- Settings: referral card -->
+    <string name="settings_invite_friends">Freunde einladen</string>
+    <string name="settings_premium_reward">Premium-Prämie</string>
+    <string name="settings_share_bitecal_with_friends">Share BiteCal AI\nwith your friends</string>
+    <string name="settings_referral_reward_content">They subscribe. You get 30 days free.</string>
+    <string name="settings_get_30_days_free">Get 30 days free</string>
+    <string name="settings_days_label">Tage</string>
+
+    <string name="settings_appearance_light">Hell</string>
+    <string name="settings_appearance_dark">Dunkel</string>
+    <string name="settings_appearance_mode_title">Darstellung wählen</string>
+    <string name="settings_appearance_light_description">Keep the current bright, clean look.</string>
+    <string name="settings_appearance_dark_description">Use a darker, softer interface for everyday tracking.</string>
+    <string name="settings_preferences">Präferenzen</string>
+    <string name="settings_appearance">Darstellung</string>
+
+    <string name="settings_language">Sprache</string>
+
+
+    <!-- Settings: Widget Guide -->
+    <string name="settings_widgets_title">Widgets</string>
+    <string name="settings_widgets_how_to_add">Wie hinzufügen?</string>
+    <string name="log_your_food">Essen protokollieren</string>
+
+    <string name="settings_calories_goal_label">Verbleibende Kalorien</string>
+    <string name="settings_protein_goal_label">Verbleibendes Protein</string>
+    <string name="settings_carbs_goal_label">Verbleibende Kohlenhydrate</string>
+    <string name="settings_fats_goal_label">Verbleibende Fette</string>
+    <string name="settings_widget_scan_food">Essen scannen</string>
+    <string name="settings_widget_barcode">Barcode</string>
+
+    <string name="settings_logout_loading">Abmeldung…</string>
+    <string name="settings_logout">Abmelden</string>
+    <string name="settings_logout_failed">Logout fehlgeschlagen. Check your connection and try again.</string>
+
+
+    <!-- EditNameScreen -->
+    <string name="settings_edit_your_name_title">Namen bearbeiten</string>
+    <string name="edit_name_placeholder">Namen eingeben</string>
+
+
+    <!-- Referral Screen -->
+    <string name="referral_title">Freunde einladen</string>
+    <string name="referral_premium_reward">Premium-Prämie</string>
+    <string name="referral_invite_friends">Freunde einladen</string>
+    <string name="referral_earn_30_days_free">Earn 30 days free</string>
+    <string name="referral_reward_unlocks_after_no_refund">Reward unlocks after your friend subscribes with no refund.</string>
+    <string name="referral_code_copied">Empfehlungscode kopiert.</string>
+    <string name="referral_your_promo_code">Ihr Promo-Code</string>
+    <string name="referral_copy">Kopieren</string>
+    <string name="referral_share">Teilen</string>
+    <string name="referral_how_it_works">So funktioniert es</string>
+    <string name="referral_step_1_title">Share your promo code</string>
+    <string name="referral_step_1_subtitle">Send your code to a friend who wants to track Essen smarter.</string>
+    <string name="referral_step_2_title">Your friend subscribes</string>
+    <string name="referral_step_2_subtitle">They start a paid BiteCal AI subscription using your invite.</string>
+    <string name="referral_step_3_title">No refund, then reward</string>
+    <string name="referral_step_3_subtitle">After the subscription is verified with no refund, your premium period is extended.</string>
+    <string name="referral_share_text">Join me on BiteCal AI! My referral code is:\n%1$s\n\n%2$s</string>
+    <string name="referral_share_subject">Join me on BiteCal AI</string>
+    <string name="referral_share_chooser_title">Teilen über</string>
+    <string name="referral_unable_to_open_share_options">Unable to open share options.</string>
+
+
+    <!-- PersonalDetailsScreen -->
+    <string name="personal_details_goal_weight">Zielgewicht</string>
+    <string name="personal_details_change_goal">Ziel ändern</string>
+    <string name="personal_details_body_details_section">Körperdaten</string>
+    <string name="personal_details_current_weight">Aktuelles Gewicht</string>
+    <string name="personal_details_height">Größe</string>
+    <string name="personal_details_age">Alter</string>
+    <string name="personal_details_gender">Geschlecht</string>
+    <string name="personal_details_starting_weight">Startgewicht</string>
+    <string name="personal_details_daily_goals_section">Tagesziele</string>
+    <string name="personal_details_daily_step_goal">Tägliches Schrittziel</string>
+    <string name="personal_details_daily_water_goal">Tägliches Wasserziel</string>
+    <string name="personal_details_daily_workout_goal">Tägliches Trainingsziel</string>
+    <string name="personal_details_age_value">%1$d Jahre</string>
+    <string name="personal_details_steps_value">%1$d Schritte</string>
+    <string name="personal_details_water_value">%1$d ml</string>
+    <string name="personal_details_kcal_value">%1$d kcal</string>
+    <string name="gender_male">Männlich</string>
+    <string name="gender_female">Weiblich</string>
+    <string name="gender_other">Andere</string>
+
+
+    <!-- EditGoalWeightScreen -->
+    <string name="edit_goal_weight_title">Zielgewicht bearbeiten</string>
+    <string name="edit_goal_weight_progress_note">We will use this Ziel to calculate your progress.</string>
+    <string name="edit_goal_update_failed">Aktualisierung fehlgeschlagen Ziel Gewicht</string>
+
+
+    <!-- RecordWeightScreen -->
+    <string name="record_weight_camera_failed_to_open">Camera fehlgeschlagen to open.</string>
+    <string name="record_weight_camera_permission_required">Camera permission required.</string>
+    <string name="record_weight_camera_preview_unavailable">Camera only works in the running app, not in Preview.</string>
+    <string name="record_weight_camera_screen_unavailable">Camera is not available in this screen.</string>
+    <string name="record_weight_no_camera_app_found">No camera app found on this device.</string>
+    <string name="record_weight_enable_camera_permission_settings">Please enable Camera permission in Einstellungen.</string>
+
+    <string name="record_weight_title">Record Gewicht</string>
+    <string name="record_weight_save_failed">Speichern fehlgeschlagen</string>
+    <string name="record_weight_date_note">This Gewicht will be recorded for %1$s</string>
+
+    <string name="weight_date_sheet_title">Select your weighing date</string>
+    <string name="weight_date_sheet_subtitle">When did you step on the scale?</string>
+    <string name="weight_date_sheet_month_january">Januar</string>
+    <string name="weight_date_sheet_month_february">Februar</string>
+    <string name="weight_date_sheet_month_march">März</string>
+    <string name="weight_date_sheet_month_april">April</string>
+    <string name="weight_date_sheet_month_may">Mai</string>
+    <string name="weight_date_sheet_month_june">Juni</string>
+    <string name="weight_date_sheet_month_july">Juli</string>
+    <string name="weight_date_sheet_month_august">August</string>
+    <string name="weight_date_sheet_month_september">September</string>
+    <string name="weight_date_sheet_month_october">Oktober</string>
+    <string name="weight_date_sheet_month_november">November</string>
+    <string name="weight_date_sheet_month_december">Dezember</string>
+
+    <string name="record_weight_camera_not_available">Camera not available</string>
+    <string name="record_weight_take_photo">Take a photo</string>
+    <string name="record_weight_retake_photo">Retake photo</string>
+
+
+    <!-- EditHeightScreen -->
+    <string name="edit_height_title">Größe bearbeiten</string>
+    <string name="edit_height_privacy_note">We only use your height to improve your experience and calorie estimation accuracy.</string>
+
+
+    <!-- EditAgeScreen -->
+    <string name="edit_age_title">Alter bearbeiten</string>
+    <string name="edit_age_privacy_note">We only use your age to improve your experience and calorie estimation accuracy.</string>
+
+
+    <!-- EditGenderScreen -->
+    <string name="edit_gender_title">Geschlecht bearbeiten</string>
+    <string name="edit_gender_privacy_note">Used only to personalize and improve estimate accuracy.</string>
+
+
+    <!-- EditStartingWeightScreen -->
+    <string name="edit_starting_weight_title">Startgewicht bearbeiten</string>
+    <string name="edit_start_weight_baseline_note">We will use it as your baseline for progress.</string>
+    <string name="edit_starting_weight_update_failed">Aktualisierung fehlgeschlagen starting Gewicht</string>
+
+
+    <!-- EditDailyStepGoalScreen -->
+    <string name="edit_step_goal_title">Schrittziel bearbeiten</string>
+    <string name="edit_daily_step_goal_previous_format">Previous Ziel %1$d steps</string>
+    <string name="edit_daily_step_goal_input_label">Tägliches Schrittziel</string>
+
+
+    <!-- EditWaterGoalScreen -->
+    <string name="edit_water_goal_title">Wasserziel bearbeiten</string>
+    <string name="edit_water_goal_previous_format">Previous Ziel %1$d ml</string>
+    <string name="edit_water_goal_input_label">Täglich water Ziel (ml)</string>
+
+
+    <!-- EditWorkoutGoalScreen -->
+    <string name="edit_workout_goal_title">Trainingsziel bearbeiten</string>
+    <string name="edit_workout_goal_previous_format">Previous Ziel %1$d kcal</string>
+    <string name="edit_workout_goal_input_label">Täglich Training Ziel (kcal)</string>
+
+
+    <!-- EditNutritionGoalsScreen -->
+    <string name="edit_nutrition_goals_title">Ernährungsziele bearbeiten</string>
+    <string name="edit_nutrition_calorie_goal">Kalorienziel</string>
+    <string name="edit_nutrition_protein_goal">Proteinziel</string>
+    <string name="edit_nutrition_carb_goal">Kohlenhydratziel</string>
+    <string name="edit_nutrition_fat_goal">Fettziel</string>
+    <string name="edit_nutrition_view_micronutrients">Mikronährstoffe anzeigen</string>
+    <string name="edit_nutrition_fiber_goal">Ballaststoffe Ziel</string>
+    <string name="edit_nutrition_sugar_goal">Zucker Ziel</string>
+    <string name="edit_nutrition_sodium_goal">Natrium Ziel</string>
+    <string name="edit_nutrition_auto_generate_goals">Ziele automatisch erstellen</string>
+
+
+    <!-- RingColorsExplainedScreen -->
+    <string name="ring_colors_explained_title">Datumsringfarben</string>
+    <string name="ring_colors_explained_intro">Datumsringe zeigen schnell, wie jeder Tag im Vergleich zu Ihrem Kalorienziel steht.</string>
+    <string name="ring_colors_preview_brand">BiteCal AI</string>
+    <string name="ring_colors_explained">Datumsring-Vorschau</string>
+
+    <string name="ring_colors_preview_day_5">5</string>
+    <string name="ring_colors_preview_day_6">6</string>
+    <string name="ring_colors_preview_day_7">7</string>
+    <string name="ring_colors_preview_day_8">8</string>
+    <string name="ring_colors_preview_day_9">9</string>
+    <string name="ring_colors_preview_day_10">10</string>
+    <string name="ring_colors_preview_day_11">11</string>
+    <string name="ring_colors_explained_subtitle">Ringfarben erklärt</string>
+
+    <string name="ring_colors_green_title">Grün</string>
+    <string name="ring_colors_green_body">Im Zielbereich (innerhalb von 100 Kalorien)</string>
+    <string name="ring_colors_yellow_title">Braun</string>
+    <string name="ring_colors_yellow_body">100–199 Kalorien über dem Ziel</string>
+    <string name="ring_colors_red_title">Rot</string>
+    <string name="ring_colors_red_body">200+ Kalorien über dem Ziel</string>
+    <string name="ring_colors_dotted_title">Gepunktet</string>
+    <string name="ring_colors_dotted_body">An diesem Tag keine Mahlzeiten protokolliert</string>
+
+
+    <!-- NotificationInboxScreen Inbox -->
+    <string name="notification_inbox_title">Posteingang</string>
+    <string name="notification_inbox_header_title">BiteCal-Benachrichtigungen</string>
+    <string name="notification_inbox_header_body">Alle Plattform-Benachrichtigungen erscheinen hier.</string>
+    <string name="notification_inbox_status_read">Gelesen</string>
+    <string name="notification_inbox_status_unread">Ungelesen</string>
+
+    <string name="notification_inbox_loading_title">Laden notifications</string>
+    <string name="notification_inbox_loading">Laden notifications…</string>
+    <string name="notification_inbox_empty_title">Noch keine Benachrichtigungen</string>
+    <string name="notification_inbox_empty_body">Platform notifications will appear here.</string>
+    <string name="notification_inbox_error_title">Benachrichtigungen können nicht geladen werden</string>
+    <string name="notification_inbox_error_body">Please check your connection and try again.</string>
+
+
+    <!-- WidgetGuideScreen -->
+    <string name="widget_guide_title">Widget hinzufügen</string>
+    <string name="widget_guide_hero_title">BiteCal zum Startbildschirm hinzufügen</string>
+    <string name="widget_guide_hero_body">Track Kalorien, macros, and quick actions without opening the app.</string>
+    <string name="widget_guide_steps_title">Befolgen Sie diese Schritte</string>
+    <string name="widget_guide_step_1_title">Startbildschirm lange drücken</string>
+    <string name="widget_guide_step_1_body">Press and hold an empty area on your phone Home screen until the menu appears.</string>
+    <string name="widget_guide_step_2_title">Auf Widgets tippen</string>
+    <string name="widget_guide_step_2_body">Choose Widgets from the Home screen menu.</string>
+    <string name="widget_guide_step_3_title">BiteCal AI finden</string>
+    <string name="widget_guide_step_3_body">Scroll or search for BiteCal AI, then open the widget list.</string>
+    <string name="widget_guide_step_4_title">Widget an die gewünschte Stelle ziehen</string>
+    <string name="widget_guide_step_4_body">Touch and hold the widget, drag it to your preferred Home screen, then lift your finger.</string>
+    <string name="widget_guide_tip_title">Widget-Menü nicht gefunden?</string>
+    <string name="widget_guide_tip_body">Some phone brands and launchers use different names. Try Home settings, long-pressing the BiteCal AI app icon, or searching for Widgets in your launcher.</string>
+    <string name="widget_guide_done">Verstanden</string>
+    <string name="widget_guide_mock_home">Startseite</string>
+    <string name="widget_guide_mock_widgets">Widgets</string>
+
+
+    <!-- BiteCalNavHost -->
+    <string name="url_terms">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</string>
+    <string name="url_privacy">https://www.viraldevelopment.co/index.php/privacy-policy</string>
+    <string name="url_support_email">mailto:support@viraldevelopment.co?subject=Support%20Request</string>
+    <string name="camera_manual_entry_not_ready">Manual entry is not ready yet. Switching to label scannen for now.</string>
+
+
+    <!-- Android home screen widgets -->
+    <string name="widget_preview_goal_kcal">1830</string>
+    <string name="widget_preview_protein">120g</string>
+    <string name="widget_preview_carbs">180g</string>
+    <string name="widget_preview_fats">60g</string>
+    <string name="widget_calories_left">Verbleibende Kalorien</string>
+    <string name="widget_protein_left">Verbleibendes Protein</string>
+    <string name="widget_carbs_left">Verbleibende Kohlenhydrate</string>
+    <string name="widget_fats_left">Verbleibende Fette</string>
+    <string name="widget_calories_description">BiteCal-Kalorienwidget</string>
+    <string name="widget_macro_actions_description">BiteCal-Makros und Schnellaktionen-Widget</string>
+    <string name="widget_log_your_food">Essen protokollieren</string>
+    <string name="widget_scan_food">Essen scannen</string>
+    <string name="widget_barcode">Barcode</string>
+    <string name="widget_grams_format">%1$dg</string>
+
+
+
+
+
+    <!-- =========================
+                    Not use
+         ========================= -->
+    <!-- PremiumRewardsScreen Not use -->
+    <string name="premium_rewards_subscription_title">Subscription</string>
+    <string name="premium_rewards_history_title">Reward history</string>
+    <string name="premium_rewards_loading_membership">Laden membership…</string>
+    <string name="premium_rewards_status_title">Premium Status</string>
+    <string name="premium_rewards_latest_title">Latest reward</string>
+    <string name="premium_rewards_source_format">Source: %1$s</string>
+    <string name="premium_rewards_channel_format">Channel: %1$s</string>
+    <string name="premium_rewards_grant_status_format">Grant status: %1$s</string>
+    <string name="premium_rewards_status_format">Status: %1$s</string>
+    <string name="premium_rewards_google_defer_format">Google defer: %1$s</string>
+    <string name="premium_rewards_granted_at_format">Granted at: %1$s</string>
+    <string name="premium_rewards_old_expiry_format">Old expiry: %1$s</string>
+    <string name="premium_rewards_new_expiry_format">New expiry: %1$s</string>
+    <string name="premium_rewards_error_format">Error: %1$s</string>
+    <string name="premium_rewards_days_added_format">Days added: %1$d</string>
+    <string name="premium_rewards_empty_title">No rewards yet</string>
+    <string name="premium_rewards_empty_body">Successful referrals will appear here after verification.</string>
+    <string name="premium_rewards_channel_google_play_defer">Google Play billing date extended</string>
+    <string name="premium_rewards_channel_backend_only">Premium reward applied</string>
+    <string name="premium_rewards_grant_success">Success</string>
+    <string name="premium_rewards_status_retrying">Retrying</string>
+    <string name="premium_rewards_grant_not_granted">Not granted</string>
+    <string name="premium_rewards_google_defer_success">Extended by Google Play</string>
+    <string name="premium_rewards_google_defer_failed">Failed</string>
+    <string name="premium_rewards_google_defer_not_required">Not required</string>
+
+
+</resources>
