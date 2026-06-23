@@ -1,0 +1,557 @@
+package com.caloshape.app.ui.home.ui.settings.details
+
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
+import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.defaultMinSize
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.caloshape.app.data.profile.repo.cmToFeetInches1
+import com.caloshape.app.data.profile.repo.feetInchesToCm1
+import com.caloshape.app.ui.home.ui.settings.details.model.EditHeightViewModel
+import kotlin.math.abs
+import androidx.compose.runtime.mutableDoubleStateOf
+import androidx.compose.ui.res.stringResource
+import com.caloshape.app.R
+import com.caloshape.app.ui.common.haptic.HapticWheelTickEffect
+import com.caloshape.app.ui.common.design.CaloShapeTopBar
+import kotlin.math.roundToInt
+import com.caloshape.app.ui.common.haptic.rememberClickWithHaptic
+import com.caloshape.app.ui.common.design.CaloShapeScreenFrame
+import com.caloshape.app.ui.common.design.CaloShapeEditBottomActionBar
+import com.caloshape.app.ui.common.design.CaloShapeColors
+import com.caloshape.app.ui.home.components.HomeBackground
+import com.caloshape.app.ui.home.components.HomeCardStyles
+
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
+@Composable
+fun EditHeightScreen(
+    vm: EditHeightViewModel,
+    onBack: () -> Unit,
+    onSaved: () -> Unit,
+) {
+    val ui by vm.ui.collectAsState()
+    val init by vm.initialHeight.collectAsState()
+    val colors = CaloShapeColors.current()
+    val isDark = colors.background == CaloShapeColors.Dark.background
+    val screenBackground = if (isDark) Color.Transparent else colors.background
+    val errorColor = if (isDark) HomeCardStyles.Status.dangerText() else colors.error
+    val helperTextColor = if (isDark) HomeCardStyles.Text.muted() else colors.textMuted
+    val wheelAccentTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+
+    LaunchedEffect(Unit) { vm.initIfNeeded() }
+
+    // SSOT: cmVal（Double 一位小數）
+    val cmMin = 80.0
+    val cmMax = 350.0
+
+    // ✅ 不要用 rememberSaveable：避免回來時還原舊 seed
+    var seeded by remember { mutableStateOf(false) }
+
+    // ✅ 預設 FT
+    var useMetric by remember { mutableStateOf(false) }
+    var cmVal by remember { mutableDoubleStateOf(170.0) }
+    var feet by remember { mutableIntStateOf(5) }
+    var inches by remember { mutableIntStateOf(7) }
+
+    // ✅ 初始化完成後，seed 一次（DB 值優先）
+    LaunchedEffect(ui.initializing, init) {
+        if (!ui.initializing && !seeded) {
+            // ✅ 強制預設顯示 FT（但數值仍以 init 為準）
+            useMetric = false
+
+            cmVal = init.cm.coerceIn(cmMin, cmMax)
+            feet = init.feet
+            inches = init.inches
+
+            seeded = true
+        }
+    }
+
+    Box(modifier = Modifier.fillMaxSize()) {
+        if (isDark) {
+            HomeBackground(
+                modifier = Modifier.matchParentSize(),
+                darkTheme = true,
+                enableNoise = false
+            )
+        }
+
+        Scaffold(
+        containerColor = screenBackground,
+        topBar = {
+            CaloShapeTopBar(
+                title = stringResource(R.string.edit_height_title),
+                onBack = onBack
+            )
+        },
+        bottomBar = {
+            CaloShapeEditBottomActionBar(
+                primaryText = stringResource(R.string.common_save),
+                onPrimaryClick = {
+                    vm.saveAndSyncHeight(
+                        useMetric = useMetric,
+                        cmVal = cmVal,
+                        feet = feet,
+                        inches = inches,
+                        onSuccess = onSaved
+                    )
+                },
+                primaryEnabled = !ui.saving,
+                primaryLoading = ui.saving,
+            )
+        }
+    ) { innerPadding ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+                .padding(
+                    start = CaloShapeScreenFrame.detailHorizontal,
+                    top = CaloShapeScreenFrame.detailContentTopNudged,
+                    end = CaloShapeScreenFrame.detailHorizontal,
+                    bottom = CaloShapeScreenFrame.detailBottom
+                )
+        ) {
+            Spacer(Modifier.height(80.dp))
+
+            if (ui.error != null) {
+                Spacer(Modifier.height(10.dp))
+                Text(
+                    text = ui.error!!,
+                    color = errorColor,
+                    style = MaterialTheme.typography.bodyMedium,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = CaloShapeScreenFrame.contentHorizontalWide),
+                    textAlign = TextAlign.Center
+                )
+            }
+            HeightUnitSegmentedSameAsGoal(
+                useMetric = useMetric,
+                onChange = { isMetric ->
+                    if (isMetric) {
+                        // 切回 cm：用目前 ft/in 換算回 cm
+                        cmVal = feetInchesToCm1(feet, inches).coerceIn(cmMin, cmMax)
+                    } else {
+                        // 切到 ft/in：用目前 cm 推導
+                        val (ft, inch) = cmToFeetInches1(cmVal)
+                        feet = ft
+                        inches = inch
+                    }
+                    useMetric = isMetric
+                },
+                modifier = Modifier.align(Alignment.CenterHorizontally)
+            )
+            Spacer(Modifier.height(16.dp))
+
+            if (useMetric) {
+                // ✅ 關鍵修正：不要用 toInt()，用 roundToInt() 把 182.19999 拉回 182.2
+                val cmTenths = (cmVal * 10.0).roundToInt()
+                    .coerceIn((cmMin * 10).roundToInt(), (cmMax * 10).roundToInt())
+                val cmIntSel = cmTenths / 10
+                val cmDecSel = cmTenths % 10
+
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 2.dp),
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    NumberWheel(
+                        range = cmMin.toInt()..cmMax.toInt(),
+                        value = cmIntSel,
+                        onValueChange = { newInt ->
+                            val newCm = (newInt * 10 + cmDecSel) / 10.0
+                            cmVal = newCm.coerceIn(cmMin, cmMax)
+                        },
+                        rowHeight = 56.dp,
+                        centerTextSize = 30.sp,
+                        textSize = 26.sp,
+                        sideAlpha = 0.35f,
+                        unitLabel = null,
+                        modifier = Modifier
+                            .width(120.dp)
+                            .padding(start = 30.dp)
+                    )
+
+                    // 小數點：用固定寬度 Box 來置中
+                    Box(
+                        modifier = Modifier.width(18.dp),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = ".",
+                            fontSize = 34.sp,
+                            color = wheelAccentTextColor,
+                            modifier = Modifier.offset(x = 5.dp)
+                        )
+                    }
+
+                    NumberWheel(
+                        range = 0..9,
+                        value = cmDecSel,
+                        onValueChange = { newDec ->
+                            val newCm = (cmIntSel * 10 + newDec) / 10.0
+                            cmVal = newCm.coerceIn(cmMin, cmMax)
+                        },
+                        rowHeight = 56.dp,
+                        centerTextSize = 30.sp,
+                        textSize = 26.sp,
+                        sideAlpha = 0.35f,
+                        unitLabel = null,
+                        modifier = Modifier
+                            .width(80.dp)
+                            .padding(start = 8.dp)
+                    )
+
+                    Spacer(Modifier.width(8.dp))
+                    Text(
+                        text = "cm",
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = wheelAccentTextColor
+                    )
+                }
+            } else {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 2.dp),
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    NumberWheel(
+                        range = 4..9,
+                        value = feet,
+                        onValueChange = { newFeet ->
+                            feet = newFeet
+                            cmVal = feetInchesToCm1(newFeet, inches)
+                                .coerceIn(cmMin, cmMax)
+                        },
+                        rowHeight = 56.dp,
+                        centerTextSize = 30.sp,
+                        textSize = 26.sp,
+                        sideAlpha = 0.35f,
+                        unitLabel = "ft",
+                        modifier = Modifier
+                            .width(120.dp)
+                            .padding(start = 22.dp)
+                    )
+                    Spacer(Modifier.width(11.dp))
+                    NumberWheel(
+                        range = 0..11,
+                        value = inches,
+                        onValueChange = { newIn ->
+                            inches = newIn
+                            cmVal = feetInchesToCm1(feet, newIn)
+                                .coerceIn(cmMin, cmMax)
+                        },
+                        rowHeight = 56.dp,
+                        centerTextSize = 30.sp,
+                        textSize = 26.sp,
+                        sideAlpha = 0.35f,
+                        unitLabel = "in",
+                        modifier = Modifier
+                            .width(120.dp)
+                            .padding(end = 22.dp)
+                    )
+                }
+            }
+
+            Spacer(Modifier.height(18.dp))
+
+            Box(
+                modifier = Modifier.fillMaxWidth(),
+                contentAlignment = Alignment.Center
+            ) {
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    modifier = Modifier.fillMaxWidth(0.8f)
+                ) {
+                    Text(
+                        text = stringResource(R.string.edit_height_privacy_note),
+                        fontSize = 12.sp,
+                        color = helperTextColor,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                }
+            }
+            Spacer(Modifier.height(40.dp))
+        }
+    }
+}
+}
+
+@Composable
+private fun HeightUnitSegmentedSameAsGoal(
+    useMetric: Boolean,
+    onChange: (Boolean) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val colors = CaloShapeColors.current()
+    val isDark = colors.background == CaloShapeColors.Dark.background
+    val containerColor = if (isDark) HomeCardStyles.Surface.raisedAlt() else colors.surfaceMuted
+    val containerBorder = if (isDark) HomeCardStyles.Surface.borderColor() else Color.Transparent
+
+    Box(
+        modifier = modifier.fillMaxWidth(),
+        contentAlignment = Alignment.Center
+    ) {
+        Surface(
+            shape = RoundedCornerShape(40.dp),
+            color = containerColor,
+            border = if (isDark) BorderStroke(1.dp, containerBorder) else null,
+            modifier = Modifier
+                .fillMaxWidth(0.60f)
+                .heightIn(min = 40.dp)
+        ) {
+            Row(Modifier.padding(6.dp)) {
+                SegItemSameAsGoal(
+                    text = "ft",
+                    selected = !useMetric,
+                    onClick = { onChange(false) },
+                    selectedColor = if (isDark) HomeCardStyles.Camera.selectedTile() else colors.primaryButtonContainer,
+                    selectedContentColor = if (isDark) HomeCardStyles.Camera.selectedTileContent() else colors.primaryButtonContent,
+                    idleContentColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
+                    modifier = Modifier
+                        .weight(1f)
+                        .height(40.dp)
+                )
+                Spacer(Modifier.width(6.dp))
+                SegItemSameAsGoal(
+                    text = "cm",
+                    selected = useMetric,
+                    onClick = { onChange(true) },
+                    selectedColor = if (isDark) HomeCardStyles.Camera.selectedTile() else colors.primaryButtonContainer,
+                    selectedContentColor = if (isDark) HomeCardStyles.Camera.selectedTileContent() else colors.primaryButtonContent,
+                    idleContentColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
+                    modifier = Modifier
+                        .weight(1f)
+                        .height(40.dp)
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun SegItemSameAsGoal(
+    text: String,
+    selected: Boolean,
+    onClick: () -> Unit,
+    selectedColor: Color,
+    selectedContentColor: Color,
+    idleContentColor: Color,
+    modifier: Modifier = Modifier
+) {
+    val corner = 22.dp
+    val fSize = 20.sp
+
+    Surface(
+        onClick = rememberClickWithHaptic(onClick = onClick),
+        shape = RoundedCornerShape(corner),
+        color = if (selected) selectedColor else Color.Transparent,
+        modifier = modifier
+    ) {
+        Box(
+            modifier = Modifier
+                .defaultMinSize(minHeight = 40.dp)
+                .fillMaxWidth()
+                .padding(horizontal = 20.dp, vertical = 8.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = text,
+                fontSize = fSize,
+                fontWeight = FontWeight.SemiBold,
+                color = if (selected) selectedContentColor else idleContentColor,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth()
+            )
+        }
+    }
+}
+
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+private fun NumberWheel(
+    range: IntRange,
+    value: Int,
+    onValueChange: (Int) -> Unit,
+    rowHeight: Dp,
+    centerTextSize: TextUnit,
+    textSize: TextUnit = 26.sp,
+    sideAlpha: Float,
+    unitLabel: String? = null,
+    modifier: Modifier = Modifier
+) {
+    val colors = CaloShapeColors.current()
+    val isDark = colors.background == CaloShapeColors.Dark.background
+    val numberTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val unitTextColor = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
+    val centerLineColor = if (isDark) {
+        HomeCardStyles.Surface.borderColor().copy(alpha = 0.88f)
+    } else {
+        colors.border.copy(alpha = 0.72f)
+    }
+    val visibleCount = 5
+    val mid = visibleCount / 2
+    val items = remember(range) { range.toList() }
+
+    // 外部 value 對應到 items 的 index
+    val selectedIdx = (value - range.first).coerceIn(0, items.lastIndex)
+
+    val state = rememberLazyListState()
+    val fling = rememberSnapFlingBehavior(lazyListState = state)
+
+    // ✅ 防止「程式對齊」期間又回寫 value 造成跳回去
+    var aligning by remember { mutableStateOf(true) }
+
+    // ✅ 外部 value 改變時，Wheel 要跟著對齊（不然一定停錯）
+    LaunchedEffect(selectedIdx) {
+        if (!state.isScrollInProgress) {
+            aligning = true
+            state.scrollToItem(selectedIdx)
+            aligning = false
+        }
+    }
+
+    val centerIndex by remember {
+        derivedStateOf {
+            val li = state.layoutInfo
+            if (li.visibleItemsInfo.isEmpty()) return@derivedStateOf selectedIdx
+            val viewportCenter = (li.viewportStartOffset + li.viewportEndOffset) / 2
+            li.visibleItemsInfo.minByOrNull { info ->
+                abs((info.offset + info.size / 2) - viewportCenter)
+            }?.index ?: selectedIdx
+        }
+    }
+
+    HapticWheelTickEffect(
+        tickKey = centerIndex,
+        enabled = state.isScrollInProgress && !aligning
+    )
+
+    // ✅ 使用者滑動時才回寫；程式對齊中不回寫，避免把 DB 值打回舊值
+    LaunchedEffect(centerIndex, aligning) {
+        if (!aligning) {
+            val newValue = items.getOrNull(centerIndex) ?: return@LaunchedEffect
+            if (newValue != value) onValueChange(newValue)
+        }
+    }
+
+    Box(
+        modifier = modifier
+            .fillMaxWidth()
+            .height(rowHeight * visibleCount)
+    ) {
+        LazyColumn(
+            state = state,
+            flingBehavior = fling,
+            contentPadding = PaddingValues(vertical = rowHeight * mid),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.fillMaxSize()
+        ) {
+            itemsIndexed(items) { index, num ->
+                val isCenter = index == centerIndex
+                val alpha = if (isCenter) 1f else sideAlpha
+                val size = if (isCenter) centerTextSize else textSize
+                val weight = if (isCenter) FontWeight.SemiBold else FontWeight.Normal
+                val unitSize = if (isCenter) 20.sp else 18.sp
+
+                Row(
+                    modifier = Modifier
+                        .height(rowHeight)
+                        .fillMaxWidth(),
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    if (unitLabel != null && isCenter) {
+                        Spacer(Modifier.width(16.dp))  // 想再靠右一點可以改成 10.dp、12.dp
+                    }
+                    Text(
+                        text = num.toString(),
+                        fontSize = size,
+                        fontWeight = weight,
+                        color = numberTextColor.copy(alpha = alpha),
+                        textAlign = TextAlign.Center
+                    )
+
+                    // ✅ 建議只在中心顯示 unit（比較像你 Age 的版本）
+                    if (unitLabel != null && isCenter) {
+                        Spacer(Modifier.width(4.dp))
+                        Text(
+                            text = unitLabel,
+                            fontSize = unitSize,
+                            color = unitTextColor.copy(alpha = alpha),
+                            fontWeight = FontWeight.Normal
+                        )
+                    }
+                }
+            }
+        }
+
+        // center lines（保留你原本的）
+        val lineColor = centerLineColor
+        val half = rowHeight / 2
+        val lineThickness = 1.dp
+        Box(
+            Modifier
+                .align(Alignment.Center)
+                .offset(y = -half)
+                .fillMaxWidth()
+                .height(lineThickness)
+                .background(lineColor)
+        )
+        Box(
+            Modifier
+                .align(Alignment.Center)
+                .offset(y = half - lineThickness)
+                .fillMaxWidth()
+                .height(lineThickness)
+                .background(lineColor)
+        )
+    }
+}

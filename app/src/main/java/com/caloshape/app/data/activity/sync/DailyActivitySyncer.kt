@@ -1,0 +1,184 @@
+package com.caloshape.app.data.activity.sync
+
+import android.util.Log
+import com.caloshape.app.data.activity.api.DailyActivityApi
+import com.caloshape.app.data.activity.api.DailyActivityUpsertRequest
+import com.caloshape.app.data.activity.model.DailyActivityStatus
+import com.caloshape.app.data.activity.test.DailyActivityDebug
+import com.caloshape.app.data.activity.test.DailyActivityDebugConfig
+import com.caloshape.app.data.activity.test.OriginPicker
+import dagger.hilt.android.scopes.ViewModelScoped
+import kotlinx.coroutines.CancellationException
+import java.time.LocalDate
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
+import javax.inject.Inject
+import kotlin.math.roundToInt
+import retrofit2.HttpException
+
+data class DailyActivityDayResult(
+    val localDate: LocalDate,
+    val timezone: String,
+    val steps: Long?,
+    val activeKcal: Int?,              // ????server ?ûÂ°´ÔºàÂ?Á´ØÁî®È´îÈ?+stepsË®àÁ?Ôº?
+    val dataOriginPackage: String?,
+    val dataOriginName: String?
+)
+
+data class DailyActivitySyncResult(
+    val status: DailyActivityStatus,
+    val days: List<DailyActivityDayResult>
+)
+
+@ViewModelScoped
+class DailyActivitySyncer @Inject constructor(
+    private val api: DailyActivityApi,
+    private val reader: DailyReader
+) {
+    private val df = DateTimeFormatter.ISO_LOCAL_DATE
+
+    private fun choosePreferredOrigin(
+        byOrigin: Map<String, Long>,
+        preferred: List<String>
+    ): String? {
+        //?πÊ?ÔºöÂ??ëÂ?Â•Ω‰∏≠ >0 ?ÑÔ??ΩÊ???>0 ?çÈÄÄ??0 / max
+        if (byOrigin.isEmpty()) return null
+
+        fun stepsOf(pkg: String) = byOrigin[pkg]
+
+        // 1) ?à‰??èÂ•Ω?æÔ?Google Fit > Samsung HealthÔºà‰?ÂøÖÈ? >0Ôº?
+        for (pkg in preferred) {
+            if (pkg == DataOriginPrefs.ON_DEVICE_ANDROID) continue
+            val v = stepsOf(pkg)
+            if (v != null && v > 0L) return pkg
+        }
+
+        // 2) ?ÅË®±‰ªª‰?‰æÜÊ?ÔºöÈÅ∏ steps ?ÄÂ§ßÔ??ØËÉΩ??0Ôº?
+        if (preferred.contains(DataOriginPrefs.ON_DEVICE_ANDROID)) {
+            return byOrigin.maxByOrNull { it.value }?.key
+        }
+
+        // 3) ‰∏çÂ?Ë®?any-sourceÔºöÈÇ£Â∞±Ê??èÂ•ΩÂ≠òÂú®?ÑÔ??≥‰Ωø 0ÔºâÔ??ÄÂæåÊ? null
+        for (pkg in preferred) {
+            if (pkg == DataOriginPrefs.ON_DEVICE_ANDROID) continue
+            if (byOrigin.containsKey(pkg)) return pkg
+        }
+
+        return null
+    }
+
+
+    suspend fun syncLast7DaysWithStatus(nowZone: ZoneId): Result<DailyActivitySyncResult> {
+        DailyActivityDebug.logSyncEnter(nowZone)
+
+        // ???∞Â?/Ê¨äÈ?Ôºö‰?Ê¨°Âç∞Ê∏ÖÊ?
+        (reader as? HealthConnectDailyReader)?.debugDumpEnvDetailed()
+
+        val status = reader.getStatus()
+        DailyActivityDebug.logStatus(status)
+
+        if (status != DailyActivityStatus.AVAILABLE_GRANTED) {
+            return Result.success(DailyActivitySyncResult(status = status, days = emptyList()))
+        }
+
+        return try {
+            val today = LocalDate.now(nowZone)
+            val days = (0..6).map { today.minusDays(it.toLong()) }.reversed()
+
+            val out = mutableListOf<DailyActivityDayResult>()
+            var anyUpsertSucceeded = false
+
+            for (d in days) {
+                val byOrigin = runCatching { reader.readStepsByOrigin(d, nowZone) }
+                    .getOrElse {
+                        Log.e("HC_SYNC", "readStepsByOrigin failed date=$d err=${it.javaClass.simpleName}:${it.message}")
+                        emptyMap()
+                    }
+
+                // ???¥Êé•?∞Ô??∂Â§©?Ñ‰?Ê∫êÁ?Ë©≥Á¥∞Ôºàrecords/time-rangeÔº?
+                if (DailyActivityDebugConfig.enabled) {
+                    (reader as? HealthConnectDailyReader)?.debugDumpStepsOriginsDetailed(d, nowZone)
+                }
+
+                val chosen = OriginPicker.choosePreferredOrigin(byOrigin, DataOriginPrefs.preferred)
+                val steps = chosen?.let { byOrigin[it] }
+
+                DailyActivityDebug.logPickDecision(
+                    date = d,
+                    preferred = DataOriginPrefs.preferred,
+                    byOrigin = byOrigin,
+                    chosen = chosen,
+                    chosenSteps = steps
+                )
+
+                if (chosen == null || steps == null) continue
+
+                val originName = reader.resolveOriginName(chosen)
+
+                // ?àÊ??¨Ê?ËÆÄ?∞Á?ÁµêÊ??æÈÄ?outÔºà‰?‰æùË≥¥ÂæåÁ´Ø?êÂ?Ôº?
+                out += DailyActivityDayResult(
+                    localDate = d,
+                    timezone = nowZone.id,
+                    steps = steps,
+                    activeKcal = null,
+                    dataOriginPackage = chosen,
+                    dataOriginName = originName
+                )
+
+                // ÂæåÁ´Ø upsertÔºöbest-effort
+                try {
+                    api.upsert(
+                        DailyActivityUpsertRequest(
+                            localDate = d.format(df),
+                            timezone = nowZone.id,
+                            steps = steps,
+                            activeKcal = null,
+                            ingestSource = "HEALTH_CONNECT",
+                            dataOriginPackage = chosen,
+                            dataOriginName = originName
+                        )
+                    )
+                    anyUpsertSucceeded = true
+                    DailyActivityDebug.logUpsertOk(d, chosen, steps)
+                } catch (ce: CancellationException) {
+                    throw ce
+                } catch (he: HttpException) {
+                    DailyActivityDebug.logUpsertFail(d, "code=${he.code()} msg=${he.message()}")
+                } catch (t: Throwable) {
+                    DailyActivityDebug.logUpsertFail(d, "err=${t.javaClass.simpleName}:${t.message}")
+                }
+            }
+
+            // ?™Ê??≥Â?‰∏ÄÊ¨?upsert ?êÂ??çÊ? server merge
+            if (!anyUpsertSucceeded) {
+                return Result.success(DailyActivitySyncResult(status = status, days = out))
+            }
+
+            val from = days.first().format(df)
+            val to = days.last().format(df)
+
+            val serverRows = runCatching { api.getRange(from = from, to = to) }
+                .getOrElse {
+                    Log.e("HC_SYNC", "getRange failed (ok): ${it.javaClass.simpleName}:${it.message}")
+                    emptyList()
+                }
+
+            DailyActivityDebug.logServerMerge(from, to, serverRows.size)
+            serverRows.forEach { dto ->
+                DailyActivityDebug.logServerRow(dto.localDate, dto.activeKcal?.roundToInt())
+            }
+
+            val kcalByDate = serverRows.associate { dto ->
+                LocalDate.parse(dto.localDate) to dto.activeKcal?.roundToInt()
+            }
+
+            val merged = out.map { day -> day.copy(activeKcal = kcalByDate[day.localDate]) }
+            Result.success(DailyActivitySyncResult(status = status, days = merged))
+        } catch (ce: CancellationException) {
+            throw ce
+        } catch (t: Throwable) {
+            Log.e("HC_SYNC", "sync failed err=${t.javaClass.simpleName}:${t.message}")
+            Result.failure(t)
+        }
+    }
+}

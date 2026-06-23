@@ -1,5 +1,5 @@
-import com.calai.bitecal.data.activity.sync.DataOriginPrefs
-import com.calai.bitecal.data.activity.sync.pickFirstExistingOrigin
+import com.caloshape.app.data.activity.sync.DataOriginPrefs
+import com.caloshape.app.data.activity.sync.pickFirstExistingOrigin
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Test

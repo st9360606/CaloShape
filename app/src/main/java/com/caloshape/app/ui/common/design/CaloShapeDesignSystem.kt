@@ -1,0 +1,1095 @@
+package com.caloshape.app.ui.common.design
+
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxScope
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Immutable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.caloshape.app.ui.common.haptic.caloShapeClickable
+import com.caloshape.app.ui.common.haptic.rememberClickWithHaptic
+import androidx.compose.foundation.layout.imePadding
+import androidx.compose.material3.CenterAlignedTopAppBar
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.TextButton
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.ui.res.stringResource
+import com.caloshape.app.R
+import com.caloshape.app.ui.common.FlagChip
+import com.caloshape.app.ui.common.OnboardingProgress
+
+/**
+ * CaloShape UI design tokens.
+ *
+ * Keep cross-screen spacing, colors, typography and button/top-bar sizing here so future
+ * light/dark mode changes do not require editing every screen one by one.
+ */
+@Immutable
+data class CaloShapeColorTokens(
+    val background: Color,
+    val surface: Color,
+    val surfaceMuted: Color,
+    val textPrimary: Color,
+    val textSecondary: Color,
+    val textMuted: Color,
+    val border: Color,
+    val topBarBackBackground: Color,
+    val primaryButtonContainer: Color,
+    val primaryButtonContent: Color,
+    val secondaryButtonContent: Color,
+    val disabledButtonContainer: Color,
+    val disabledButtonContent: Color,
+    val error: Color,
+)
+
+object CaloShapeColors {
+    val Light = CaloShapeColorTokens(
+        background = Color.White,
+        surface = Color.White,
+        surfaceMuted = Color(0xFFF8FAFC),
+        textPrimary = Color(0xFF111114),
+        textSecondary = Color(0xFF52525B),
+        textMuted = Color(0xFF8F98A3),
+        border = Color(0xFFE5E7EB),
+        topBarBackBackground = Color(0xFFF1F3F7),
+        primaryButtonContainer = Color.Black,
+        primaryButtonContent = Color.White,
+        secondaryButtonContent = Color(0xFF8F98A3),
+        disabledButtonContainer = Color(0xFFDADBE2),
+        disabledButtonContent = Color.White,
+        error = Color(0xFFCC3D3D),
+    )
+
+    val Dark = CaloShapeColorTokens(
+        background = Color(0xFF09090B),
+        surface = Color(0xFF111114),
+        surfaceMuted = Color(0xFF18181B),
+        textPrimary = Color(0xFFF8FAFC),
+        textSecondary = Color(0xFFD4D4D8),
+        textMuted = Color(0xFFA1A1AA),
+        border = Color(0xFF27272A),
+        topBarBackBackground = Color(0xFF27272A),
+        primaryButtonContainer = Color.White,
+        primaryButtonContent = Color.Black,
+        secondaryButtonContent = Color(0xFFA1A1AA),
+        disabledButtonContainer = Color(0xFF3F3F46),
+        disabledButtonContent = Color(0xFFA1A1AA),
+        error = Color(0xFFFF7A7A),
+    )
+
+    @Composable
+    fun current(): CaloShapeColorTokens {
+        return if (MaterialTheme.colorScheme.background.luminanceCompat() < 0.5f) Dark else Light
+    }
+}
+
+object CaloShapeOnboardingColors {
+    @Composable
+    fun isDark(): Boolean = CaloShapeColors.current() == CaloShapeColors.Dark
+
+    @Composable
+    fun background(): Color = if (isDark()) Color.Transparent else Color.White
+
+    @Composable
+    fun title(): Color = if (isDark()) Color(0xFFF7F5FF) else Color(0xFF111114)
+
+    @Composable
+    fun subtitle(): Color = if (isDark()) Color(0xFFC9C4D4) else Color.Gray
+
+    @Composable
+    fun optionContainer(selected: Boolean): Color {
+        return when {
+            isDark() && selected -> Color(0xFFF7F5FF)
+            isDark() -> Color(0xFF24212D)
+            selected -> Color(0xFF111114)
+            else -> Color(0xFFF1F3F7)
+        }
+    }
+
+    @Composable
+    fun optionContent(selected: Boolean): Color {
+        return when {
+            isDark() && selected -> Color(0xFF111114)
+            isDark() -> Color(0xFFF7F5FF)
+            selected -> Color.White
+            else -> Color(0xFF111114)
+        }
+    }
+
+    @Composable
+    fun optionBorder(selected: Boolean): Color {
+        return when {
+            isDark() && selected -> Color(0xFFC9C4D4).copy(alpha = 0.44f)
+            isDark() -> Color(0xFF34303D)
+            else -> Color.Transparent
+        }
+    }
+
+    @Composable
+    fun wheelText(selected: Boolean): Color {
+        return when {
+            isDark() && selected -> Color(0xFFF7F5FF)
+            isDark() -> Color(0xFF8F899C)
+            selected -> Color.White
+            else -> Color(0xFF333333)
+        }
+    }
+
+    @Composable
+    fun cardSurface(): Color = if (isDark()) Color(0xFF18151F) else Color.White
+
+    @Composable
+    fun inputSurface(): Color = if (isDark()) Color(0xFF24212D) else Color(0xFFFAFAFC)
+
+    @Composable
+    fun softBorder(): Color = if (isDark()) Color(0xFF34303D) else Color(0xFFF1F1F4)
+}
+
+private fun Color.luminanceCompat(): Float {
+    return (0.299f * red + 0.587f * green + 0.114f * blue)
+}
+
+object CaloShapeSpacing {
+    val screenHorizontal: Dp = 20.dp
+    val screenHorizontalWide: Dp = 24.dp
+    val contentHorizontal: Dp = 20.dp
+    val topBarHorizontal: Dp = 16.dp
+    val topBarTop: Dp = 16.dp
+    val topBarBottom: Dp = 22.dp
+    val bottomBarHorizontal: Dp = 20.dp
+    val bottomBarBottom: Dp = 40.dp
+    val bottomBarBottomCompact: Dp = 8.dp
+    val bottomButtonToSecondary: Dp = 8.dp
+    val bottomButtonToLanding: Dp = 5.dp
+    val cardPadding: Dp = 16.dp
+    val sectionGap: Dp = 16.dp
+
+    // Legacy-compatible names used while migrating existing screens into the design system.
+    val TopBarEndPadding: Dp = 8.dp
+    val ContentWideHorizontal: Dp = screenHorizontalWide
+    val ContentVertical: Dp = CaloShapeScreenFrame.detailBottom
+    val ContentTitleHorizontal: Dp = CaloShapeScreenFrame.contentHorizontalMedium
+    val BottomHorizontal: Dp = bottomBarHorizontal
+    val BottomSingleAction: Dp = bottomBarBottom
+    val BottomWithSecondaryAction: Dp = bottomBarBottomCompact
+    val BottomGap: Dp = bottomButtonToSecondary
+    val OnboardingHorizontal: Dp = screenHorizontal
+    val OnboardingTitleHorizontal: Dp = 18.dp
+}
+
+
+object CaloShapeScreenFrame {
+    /** Standard horizontal distance from the phone edge for full-screen content. */
+    val contentHorizontalCompact: Dp = 16.dp
+    val contentHorizontalMedium: Dp = 18.dp
+    val contentHorizontal: Dp = CaloShapeSpacing.screenHorizontal
+    val contentHorizontalComfort: Dp = 22.dp
+    val contentHorizontalWide: Dp = CaloShapeSpacing.screenHorizontalWide
+    val contentHorizontalLarge: Dp = 28.dp
+    val contentHorizontalExtraWide: Dp = 30.dp
+    val contentHorizontalPaywall: Dp = 32.dp
+    val contentHorizontalHero: Dp = 36.dp
+
+    /** Default vertical breathing room for content directly under a Scaffold topBar. */
+    val contentVertical: Dp = 16.dp
+    val contentTopTiny: Dp = 5.dp
+    val contentTopSmall: Dp = 8.dp
+    val contentTop: Dp = 12.dp
+    val contentBottomLarge: Dp = 24.dp
+
+    /** Onboarding title and description horizontal padding. */
+    val onboardingTitleHorizontal: Dp = contentHorizontalMedium
+    val onboardingSubtitleHorizontal: Dp = 48.dp
+
+    /** Main onboarding content horizontal distance. */
+    val onboardingHorizontal: Dp = CaloShapeSpacing.screenHorizontal
+    val onboardingWideHorizontal: Dp = contentHorizontalExtraWide
+
+    /** Home/feed content distances. */
+    val homeHorizontal: Dp = CaloShapeSpacing.screenHorizontal
+    val homeTop: Dp = 12.dp
+    val homeBottom: Dp = 0.dp
+
+    /** Settings/detail screens. */
+    val detailHorizontal: Dp = CaloShapeSpacing.screenHorizontal
+    val detailHorizontalWide: Dp = contentHorizontalComfort
+    val detailVertical: Dp = 16.dp
+    val detailTop: Dp = 14.dp
+    val detailContentTopNudged: Dp = 50.dp
+    val detailBottom: Dp = 20.dp
+    val settingsHorizontal: Dp = contentHorizontalMedium
+    val settingsTop: Dp = 6.dp
+    val settingsBottom: Dp = 50.dp
+
+    /** Bottom CTA content frame values. */
+    val bottomActionSingle: Dp = CaloShapeSpacing.bottomBarBottom
+
+    /** Content that intentionally needs more side margin, such as referral code forms. */
+    val formHorizontalWide: Dp = contentHorizontalExtraWide
+    val authTitleVertical: Dp = 15.dp
+}
+
+
+object CaloShapeScreenSpacing {
+    val TopBarHorizontal: Dp = CaloShapeSpacing.topBarHorizontal
+    val TopBarEndPadding: Dp = 8.dp
+    val ContentHorizontal: Dp = CaloShapeScreenFrame.contentHorizontal
+    val ContentWideHorizontal: Dp = CaloShapeScreenFrame.contentHorizontalWide
+    val ContentVertical: Dp = CaloShapeScreenFrame.detailBottom
+    val ContentTitleHorizontal: Dp = CaloShapeScreenFrame.contentHorizontalMedium
+    val BottomHorizontal: Dp = CaloShapeScreenFrame.contentHorizontal
+    val BottomSingleAction: Dp = CaloShapeSpacing.bottomBarBottom
+    val BottomWithSecondaryAction: Dp = CaloShapeSpacing.bottomBarBottomCompact
+    val BottomGap: Dp = CaloShapeSpacing.bottomButtonToSecondary
+    val PrimaryButtonHeight: Dp = CaloShapeSize.primaryButtonHeight
+    val SecondaryButtonHeight: Dp = CaloShapeSize.secondaryTextButtonHeight
+    val ButtonCorner: Dp = CaloShapeSize.pillCorner
+    val BackButtonSize: Dp = CaloShapeSize.backButton
+    val BackButtonCorner: Dp = 20.dp
+    val BackButtonBackground: Color = CaloShapeColors.Light.topBarBackBackground
+    val PrimaryText: Color = CaloShapeColors.Light.textPrimary
+    val SecondaryActionText: Color = CaloShapeColors.Light.secondaryButtonContent
+}
+
+object CaloShapeSize {
+    val topBarHeight: Dp = 64.dp
+    val profileTopBarHeight: Dp = 36.dp
+    val backButton: Dp = 36.dp
+    val backButtonCompact: Dp = 36.dp
+    val primaryButtonHeight: Dp = 68.dp
+    val primaryButtonHeightCompact: Dp = 55.dp
+    val editActionButtonHeight: Dp = 56.dp
+    val editInlineButtonHeight: Dp = 50.dp
+    val secondaryTextButtonHeight: Dp = 44.dp
+    val pillCorner: Dp = 999.dp
+}
+
+object CaloShapeShape {
+    val backButton = RoundedCornerShape(20.dp)
+    val button = RoundedCornerShape(CaloShapeSize.pillCorner)
+    val card = RoundedCornerShape(28.dp)
+}
+
+object CaloShapeTextStyles {
+    @Composable
+    fun topBarTitle(): TextStyle = MaterialTheme.typography.headlineSmall.copy(
+        fontWeight = FontWeight.Bold,
+        color = CaloShapeColors.current().textPrimary,
+    )
+
+    @Composable
+    fun screenTitle(): TextStyle = MaterialTheme.typography.headlineLarge.copy(
+        fontSize = 34.sp,
+        lineHeight = 41.sp,
+        fontWeight = FontWeight.ExtraBold,
+        color = CaloShapeColors.current().textPrimary,
+    )
+
+    @Composable
+    fun body(): TextStyle = MaterialTheme.typography.bodyLarge.copy(
+        fontSize = 17.sp,
+        lineHeight = 24.sp,
+        fontWeight = FontWeight.Normal,
+        color = CaloShapeColors.current().textSecondary,
+    )
+
+    @Composable
+    fun primaryButton(): TextStyle = MaterialTheme.typography.bodyLarge.copy(
+        fontSize = 19.sp,
+        lineHeight = 23.sp,
+        fontWeight = FontWeight.Medium,
+        letterSpacing = 0.2.sp,
+    )
+
+    @Composable
+    fun secondaryButton(): TextStyle = MaterialTheme.typography.bodyLarge.copy(
+        fontSize = 17.sp,
+        lineHeight = 20.sp,
+        fontWeight = FontWeight.Medium,
+        letterSpacing = 0.1.sp,
+    )
+
+    @Composable
+    fun editActionButton(): TextStyle = MaterialTheme.typography.labelLarge.copy(
+        fontSize = 16.sp,
+        lineHeight = 20.sp,
+        fontWeight = FontWeight.SemiBold,
+        letterSpacing = 0.1.sp,
+    )
+}
+
+@Composable
+fun CaloShapeBackButton(
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    enabled: Boolean = true,
+    contentDescription: String = "Back",
+) {
+    val colors = CaloShapeColors.current()
+    Box(
+        modifier = modifier
+            .size(CaloShapeSize.backButton)
+            .clip(CaloShapeShape.backButton)
+            .background(colors.topBarBackBackground)
+            .caloShapeClickable(enabled = enabled, onClick = onClick),
+        contentAlignment = Alignment.Center,
+    ) {
+        Icon(
+            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+            contentDescription = contentDescription,
+            tint = colors.textPrimary,
+            modifier = Modifier.size(24.dp),
+        )
+    }
+}
+
+@Composable
+fun CaloShapeCompactBackButton(
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    enabled: Boolean = true,
+    contentDescription: String = "Back",
+) {
+    val colors = CaloShapeColors.current()
+    Box(
+        modifier = modifier
+            .size(CaloShapeSize.backButtonCompact)
+            .clip(CircleShape)
+            .background(colors.topBarBackBackground)
+            .caloShapeClickable(enabled = enabled, onClick = onClick),
+        contentAlignment = Alignment.Center,
+    ) {
+        Icon(
+            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+            contentDescription = contentDescription,
+            tint = colors.textPrimary,
+            modifier = Modifier.size(24.dp),
+        )
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun CaloShapeTopBar(
+    title: String,
+    onBack: () -> Unit,
+    modifier: Modifier = Modifier,
+    containerColor: Color = Color.Transparent,
+    actions: @Composable BoxScope.() -> Unit = {},
+) {
+    val colors = CaloShapeColors.current()
+
+    CenterAlignedTopAppBar(
+        modifier = modifier.padding(
+            start = CaloShapeSpacing.topBarHorizontal,
+            end = CaloShapeSpacing.topBarHorizontal,
+        ),
+        colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+            containerColor = containerColor,
+            scrolledContainerColor = containerColor,
+            navigationIconContentColor = colors.textPrimary,
+            titleContentColor = colors.textPrimary,
+            actionIconContentColor = colors.textPrimary,
+        ),
+        navigationIcon = {
+            CaloShapeBackButton(
+                onClick = onBack,
+                contentDescription = "Back",
+            )
+        },
+        title = {
+            Text(
+                text = title,
+                style = CaloShapeTextStyles.topBarTitle(),
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                color = colors.textPrimary,
+            )
+        },
+        actions = {
+            Box(
+                contentAlignment = Alignment.Center,
+                content = actions,
+            )
+        }
+    )
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun CaloShapeProgressTopBar(
+    stepIndex: Int,
+    totalSteps: Int,
+    onBack: () -> Unit,
+    modifier: Modifier = Modifier,
+    progress: @Composable RowScope.() -> Unit,
+    actions: @Composable RowScope.() -> Unit = {},
+) {
+    TopAppBar(
+        modifier = modifier.padding(start = CaloShapeSpacing.topBarHorizontal, end = CaloShapeSpacing.topBarHorizontal),
+        colors = TopAppBarDefaults.topAppBarColors(
+            containerColor = CaloShapeOnboardingColors.background(),
+            navigationIconContentColor = CaloShapeColors.current().textPrimary,
+        ),
+        navigationIcon = { CaloShapeBackButton(onClick = onBack) },
+        title = {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(end = 8.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                content = progress,
+            )
+        },
+        actions = actions,
+    )
+}
+
+@Composable
+fun CaloShapePrimaryButton(
+    text: String,
+    enabled: Boolean = true,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    loading: Boolean = false,
+    height: Dp = CaloShapeSize.primaryButtonHeight,
+    containerColor: Color? = null,
+    contentColor: Color? = null,
+    textStyle: TextStyle? = null,
+) {
+    val colors = CaloShapeColors.current()
+    val resolvedContainerColor = containerColor ?: colors.primaryButtonContainer
+    val resolvedContentColor = contentColor ?: colors.primaryButtonContent
+    val hapticClick = rememberClickWithHaptic(enabled = enabled && !loading, onClick = onClick)
+    Button(
+        onClick = hapticClick,
+        enabled = enabled && !loading,
+        modifier = modifier
+            .fillMaxWidth()
+            .height(height),
+        shape = CaloShapeShape.button,
+        colors = ButtonDefaults.buttonColors(
+            containerColor = resolvedContainerColor,
+            contentColor = resolvedContentColor,
+            disabledContainerColor = if (enabled) resolvedContainerColor else colors.disabledButtonContainer,
+            disabledContentColor = if (enabled) resolvedContentColor else colors.disabledButtonContent,
+        ),
+        contentPadding = PaddingValues(horizontal = 20.dp, vertical = 0.dp),
+    ) {
+        if (loading) {
+            CircularProgressIndicator(
+                modifier = Modifier.size(18.dp),
+                strokeWidth = 2.dp,
+                color = resolvedContentColor,
+            )
+        } else {
+            Text(
+                text = text,
+                style = textStyle ?: CaloShapeTextStyles.primaryButton(),
+                color = resolvedContentColor,
+                textAlign = TextAlign.Center,
+            )
+        }
+    }
+}
+
+@Composable
+fun CaloShapeSecondaryOutlinedButton(
+    text: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    enabled: Boolean = true,
+    height: Dp = CaloShapeSize.editInlineButtonHeight,
+    borderColor: Color = CaloShapeColors.current().textPrimary.copy(alpha = 0.45f),
+    contentColor: Color = CaloShapeColors.current().textPrimary,
+    containerColor: Color = CaloShapeColors.current().surface,
+    disabledContainerColor: Color = containerColor,
+) {
+    OutlinedButton(
+        onClick = rememberClickWithHaptic(enabled = enabled, onClick = onClick),
+        enabled = enabled,
+        modifier = modifier.height(height),
+        shape = CaloShapeShape.button,
+        border = BorderStroke(1.2.dp, borderColor),
+        colors = ButtonDefaults.outlinedButtonColors(
+            containerColor = containerColor,
+            contentColor = contentColor,
+            disabledContainerColor = disabledContainerColor,
+            disabledContentColor = contentColor.copy(alpha = 0.45f),
+        ),
+        contentPadding = PaddingValues(horizontal = 18.dp, vertical = 0.dp),
+    ) {
+        Text(
+            text = text,
+            style = CaloShapeTextStyles.editActionButton(),
+            textAlign = TextAlign.Center,
+        )
+    }
+}
+
+@Composable
+fun CaloShapeCompactPillButton(
+    text: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    enabled: Boolean = true,
+    height: Dp = 30.dp,
+    containerColor: Color? = null,
+    contentColor: Color? = null,
+    textStyle: TextStyle? = null,
+) {
+    val colors = CaloShapeColors.current()
+    val resolvedContainerColor = containerColor ?: colors.primaryButtonContainer
+    val resolvedContentColor = contentColor ?: colors.primaryButtonContent
+
+    Button(
+        onClick = rememberClickWithHaptic(enabled = enabled, onClick = onClick),
+        enabled = enabled,
+        modifier = modifier.height(height),
+        shape = CaloShapeShape.button,
+        colors = ButtonDefaults.buttonColors(
+            containerColor = resolvedContainerColor,
+            contentColor = resolvedContentColor,
+            disabledContainerColor = resolvedContainerColor.copy(alpha = 0.45f),
+            disabledContentColor = resolvedContentColor.copy(alpha = 0.82f),
+        ),
+        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 0.dp),
+    ) {
+        Text(
+            text = text,
+            style = textStyle ?: MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Medium),
+            color = resolvedContentColor,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+            textAlign = TextAlign.Center,
+        )
+    }
+}
+
+@Composable
+fun CaloShapeEditBottomActionBar(
+    primaryText: String,
+    onPrimaryClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    primaryEnabled: Boolean = true,
+    primaryLoading: Boolean = false,
+    useImePadding: Boolean = false,
+    buttonHeight: Dp = CaloShapeSize.editActionButtonHeight,
+    bottomPadding: Dp = CaloShapeScreenFrame.bottomActionSingle,
+) {
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .then(if (useImePadding) Modifier.imePadding() else Modifier)
+            .navigationBarsPadding()
+            .padding(
+                start = CaloShapeScreenFrame.contentHorizontal,
+                end = CaloShapeScreenFrame.contentHorizontal,
+                bottom = bottomPadding,
+            ),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        CaloShapePrimaryButton(
+            text = primaryText,
+            enabled = primaryEnabled,
+            loading = primaryLoading,
+            onClick = onPrimaryClick,
+            height = buttonHeight,
+            textStyle = CaloShapeTextStyles.editActionButton(),
+        )
+    }
+}
+
+@Composable
+fun CaloShapeEditDualActionRow(
+    secondaryText: String,
+    onSecondaryClick: () -> Unit,
+    primaryText: String,
+    onPrimaryClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    primaryEnabled: Boolean = true,
+    secondaryEnabled: Boolean = true,
+    primaryLoading: Boolean = false,
+) {
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(18.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        CaloShapeSecondaryOutlinedButton(
+            text = secondaryText,
+            onClick = onSecondaryClick,
+            enabled = secondaryEnabled && !primaryLoading,
+            modifier = Modifier.weight(1f),
+            height = CaloShapeSize.editInlineButtonHeight,
+        )
+
+        CaloShapePrimaryButton(
+            text = primaryText,
+            onClick = onPrimaryClick,
+            enabled = primaryEnabled,
+            loading = primaryLoading,
+            modifier = Modifier.weight(1f),
+            height = CaloShapeSize.editInlineButtonHeight,
+            textStyle = CaloShapeTextStyles.editActionButton(),
+        )
+    }
+}
+
+@Composable
+fun CaloShapeBottomActionBar(
+    primaryText: String,
+    onPrimaryClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    primaryEnabled: Boolean = true,
+    primaryLoading: Boolean = false,
+    secondaryText: String? = null,
+    onSecondaryClick: (() -> Unit)? = null,
+    secondaryEnabled: Boolean = true,
+    compactBottomPadding: Boolean = false,
+    useImePadding: Boolean = false,
+) {
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .then(if (useImePadding) Modifier.imePadding() else Modifier)
+            .navigationBarsPadding()
+            .padding(
+                start = CaloShapeSpacing.bottomBarHorizontal,
+                end = CaloShapeSpacing.bottomBarHorizontal,
+                bottom = if (compactBottomPadding) CaloShapeSpacing.bottomBarBottomCompact else CaloShapeSpacing.bottomBarBottom,
+            ),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        CaloShapePrimaryButton(
+            text = primaryText,
+            enabled = primaryEnabled,
+            loading = primaryLoading,
+            onClick = onPrimaryClick,
+        )
+
+        if (secondaryText != null && onSecondaryClick != null) {
+            Spacer(Modifier.height(CaloShapeSpacing.bottomButtonToSecondary))
+            TextButton(
+                onClick = rememberClickWithHaptic(enabled = secondaryEnabled && !primaryLoading, onClick = onSecondaryClick),
+                enabled = secondaryEnabled && !primaryLoading,
+                modifier = Modifier.height(CaloShapeSize.secondaryTextButtonHeight),
+                colors = ButtonDefaults.textButtonColors(
+                    contentColor = CaloShapeColors.current().secondaryButtonContent,
+                    disabledContentColor = CaloShapeColors.current().secondaryButtonContent.copy(alpha = 0.45f),
+                ),
+            ) {
+                Text(
+                    text = secondaryText,
+                    style = CaloShapeTextStyles.secondaryButton(),
+                    textAlign = TextAlign.Center,
+                )
+            }
+        }
+    }
+}
+
+@Composable
+fun CaloShapeScreenSurface(
+    modifier: Modifier = Modifier,
+    content: @Composable BoxScope.() -> Unit,
+) {
+    Box(
+        modifier = modifier.background(CaloShapeColors.current().background),
+        content = content,
+    )
+}
+
+@Composable
+fun CaloShapeScreenColumn(
+    modifier: Modifier = Modifier,
+    horizontalPadding: Dp = CaloShapeSpacing.screenHorizontal,
+    content: @Composable ColumnScope.() -> Unit,
+) {
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(horizontal = horizontalPadding),
+        content = content,
+    )
+}
+
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun CaloShapeOnboardingTopBar(
+    stepIndex: Int,
+    totalSteps: Int,
+    onBack: () -> Unit,
+    modifier: Modifier = Modifier,
+    showBack: Boolean = true,
+    containerColor: Color? = null,
+    actions: @Composable RowScope.() -> Unit = {},
+) {
+    val resolvedContainerColor = containerColor ?: CaloShapeOnboardingColors.background()
+    TopAppBar(
+        modifier = modifier.padding(
+            start = CaloShapeSpacing.topBarHorizontal,
+            end = CaloShapeSpacing.topBarHorizontal,
+        ),
+        colors = TopAppBarDefaults.topAppBarColors(
+            containerColor = resolvedContainerColor,
+            navigationIconContentColor = CaloShapeColors.current().textPrimary,
+        ),
+        navigationIcon = {
+            if (showBack) {
+                CaloShapeBackButton(onClick = onBack)
+            }
+        },
+        title = {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(end = 8.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                OnboardingProgress(
+                    stepIndex = stepIndex,
+                    totalSteps = totalSteps,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
+        },
+        actions = actions,
+    )
+}
+
+@Composable
+fun CaloShapeOnboardingPrimaryButton(
+    text: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    enabled: Boolean = true,
+    loading: Boolean = false,
+) {
+    val isDark = CaloShapeOnboardingColors.isDark()
+    CaloShapePrimaryButton(
+        text = text,
+        enabled = enabled,
+        loading = loading,
+        onClick = onClick,
+        modifier = modifier,
+        containerColor = if (isDark) Color.White else null,
+        contentColor = if (isDark) Color.Black else null,
+    )
+}
+
+@Composable
+fun CaloShapeOnboardingSecondaryTextButton(
+    text: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    enabled: Boolean = true,
+) {
+    val contentColor = if (CaloShapeOnboardingColors.isDark()) {
+        Color(0xFFC9C4D4)
+    } else {
+        CaloShapeColors.current().secondaryButtonContent
+    }
+    TextButton(
+        onClick = rememberClickWithHaptic(enabled = enabled, onClick = onClick),
+        enabled = enabled,
+        modifier = modifier.height(CaloShapeSize.secondaryTextButtonHeight),
+        colors = ButtonDefaults.textButtonColors(
+            contentColor = contentColor,
+            disabledContentColor = contentColor.copy(alpha = 0.45f),
+        ),
+    ) {
+        Text(
+            text = text,
+            style = CaloShapeTextStyles.secondaryButton(),
+            textAlign = TextAlign.Center,
+        )
+    }
+}
+
+@Composable
+fun CaloShapeOnboardingBottomContainer(
+    modifier: Modifier = Modifier,
+    hasSecondaryAction: Boolean = false,
+    useImePadding: Boolean = false,
+    content: @Composable ColumnScope.() -> Unit,
+) {
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .then(if (useImePadding) Modifier.imePadding() else Modifier)
+            .navigationBarsPadding()
+            .padding(
+                start = CaloShapeSpacing.bottomBarHorizontal,
+                end = CaloShapeSpacing.bottomBarHorizontal,
+                bottom = if (hasSecondaryAction) CaloShapeSpacing.bottomBarBottomCompact else CaloShapeSpacing.bottomBarBottom,
+            ),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        content = content,
+    )
+}
+
+@Composable
+fun CaloShapeOnboardingBottomBar(
+    primaryText: String,
+    onPrimaryClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    primaryEnabled: Boolean = true,
+    primaryLoading: Boolean = false,
+    compactBottom: Boolean = false,
+    useImePadding: Boolean = false,
+    secondaryText: String? = null,
+    onSecondaryClick: (() -> Unit)? = null,
+    secondaryEnabled: Boolean = true,
+) {
+    CaloShapeOnboardingBottomContainer(
+        modifier = modifier,
+        hasSecondaryAction = compactBottom || (secondaryText != null && onSecondaryClick != null),
+        useImePadding = useImePadding,
+    ) {
+        CaloShapeOnboardingPrimaryButton(
+            text = primaryText,
+            enabled = primaryEnabled,
+            loading = primaryLoading,
+            onClick = onPrimaryClick,
+        )
+
+        if (secondaryText != null && onSecondaryClick != null) {
+            Spacer(Modifier.height(CaloShapeSpacing.bottomButtonToSecondary))
+            CaloShapeOnboardingSecondaryTextButton(
+                text = secondaryText,
+                onClick = onSecondaryClick,
+                enabled = secondaryEnabled && !primaryLoading,
+            )
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun CaloShapePlainBackTopBar(
+    onBack: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val isDark = CaloShapeOnboardingColors.isDark()
+    TopAppBar(
+        modifier = modifier.padding(
+            start = CaloShapeSpacing.topBarHorizontal,
+            end = CaloShapeSpacing.topBarHorizontal,
+        ),
+        colors = TopAppBarDefaults.topAppBarColors(
+            containerColor = if (isDark) CaloShapeOnboardingColors.background() else CaloShapeColors.current().background,
+            navigationIconContentColor = CaloShapeColors.current().textPrimary,
+            titleContentColor = CaloShapeColors.current().textPrimary,
+        ),
+        navigationIcon = {
+            CaloShapeBackButton(
+                onClick = onBack,
+                contentDescription = "Back"
+            )
+        },
+        title = {}
+    )
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun CaloShapeLandingLanguageTopBar(
+    flag: String,
+    label: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    TopAppBar(
+        modifier = modifier,
+        title = {},
+        colors = TopAppBarDefaults.topAppBarColors(
+            containerColor = CaloShapeOnboardingColors.background(),
+            navigationIconContentColor = CaloShapeColors.current().textPrimary,
+        ),
+        actions = {
+            Box(
+                modifier = Modifier
+                    .padding(end = CaloShapeSpacing.topBarHorizontal),
+                contentAlignment = Alignment.Center,
+            ) {
+                FlagChip(
+                    flag = flag,
+                    label = label,
+                    onClick = onClick,
+                )
+            }
+        },
+    )
+}
+
+/**
+ * Shared visual tokens for feature screens that already have carefully tuned styles.
+ * Values intentionally mirror the previous screen-local constants so extracting them does
+ * not change the existing UI appearance.
+ */
+object CaloShapeCommonScreenTokens {
+    val softGrayBackground: Color = Color(0xFFF5F5F5)
+}
+
+object CaloShapeNotificationPreviewTokens {
+    val corner: Dp = 18.dp
+    val padH: Dp = 16.dp
+    val padV: Dp = 10.dp
+    val iconSize: Dp = 22.dp
+    val iconCorner: Dp = 11.dp
+    val iconInnerPad: Dp = 0.dp
+    const val iconScale: Float = 1.28f
+    val gapIconText: Dp = 10.dp
+    val gapMetaToContent: Dp = 5.dp
+    val metaFont = 11.sp
+    val metaLine = 12.sp
+    val metaLetterSpacing = 0.6.sp
+    val titleFont = 15.sp
+    val titleLine = 18.sp
+    val bodyFont = 12.sp
+    val bodyLine = 16.sp
+}
+
+object CaloShapeFoodLogDetailTokens {
+    val AppBg: Color = Color(0xFFF3F3F3)
+    val SheetBg: Color = Color.White
+    val Border: Color = Color(0xFFEAEAEA)
+    val TextPrimary: Color = Color(0xFF151515)
+    val HeroFallback: Color = Color(0xFF202124)
+    val Scrim: Color = Color.Black.copy(alpha = 0.16f)
+    val ChipBg: Color = Color(0xFFF5F5F7)
+    val ProteinTone: Color = Color(0xFFFF6B7B)
+    val CarbsTone: Color = Color(0xFFF6B24D)
+    val FatTone: Color = Color(0xFF6FA3FF)
+    val FiberTone: Color = Color(0xFF8E7DF2)
+    val SugarTone: Color = Color(0xFFFF8A5B)
+    val SodiumTone: Color = Color(0xFF4CB7A5)
+}
+
+object CaloShapeSavedFoodTokens {
+    val ScreenBg: Color = CaloShapeCommonScreenTokens.softGrayBackground
+    val TitleColor: Color = Color(0xFF18191D)
+    val KcalColor: Color = Color(0xFF2F3137)
+    val MacroColor: Color = Color(0xFF777C86)
+    val ActionBlack: Color = Color(0xFF0F1115)
+    val SecondaryText: Color = Color(0xFF5D5D66)
+    val CloseButtonBg: Color = Color(0xFFF1F2F4)
+    val CloseIconColor: Color = Color(0xFF5B606A)
+
+    val TitleTextStyle = TextStyle(
+        fontSize = 15.sp,
+        lineHeight = 19.sp,
+        fontWeight = FontWeight.SemiBold,
+        color = TitleColor,
+    )
+
+    val KcalTextStyle = TextStyle(
+        fontSize = 14.sp,
+        lineHeight = 18.sp,
+        fontWeight = FontWeight.SemiBold,
+        color = KcalColor,
+    )
+
+    val MacroTextStyle = TextStyle(
+        fontSize = 13.sp,
+        lineHeight = 14.sp,
+        fontWeight = FontWeight.Medium,
+        color = MacroColor,
+    )
+}
+
+object CaloShapeRingColorsExplainedTokens {
+    val Ink: Color = Color(0xFF111114)
+    val InkSoft: Color = Color(0xFF2F3137)
+    val Muted: Color = Color(0xFF6B7280)
+    val Subtle: Color = Color(0xFF8C929D)
+    val Card: Color = Color.White.copy(alpha = 0.92f)
+    val CardSoft: Color = Color(0xFFF8F8FA)
+    val Border: Color = Color(0xFFE2E5EA)
+    val BorderSoft: Color = Color(0xFFE9EBEF)
+    val Green: Color = Color(0xFF7DDF83)
+    val Brown: Color = Color(0xFFB45309)
+    val Red: Color = Color(0xFFD92D20)
+    val Dotted: Color = Color(0xFF555A60)
+    val Future: Color = Color(0xFFC1C7D0)
+}
+
+object CaloShapeComputationProgressTokens {
+    val ProgressPrimary: Color = Color(0xFF5BCB72)
+    val ProgressPrimarySoft: Color = Color(0x1A5BCB72)
+    val ProgressTrack: Color = Color(0xFFE5E7EB)
+    val TextPrimary: Color = Color(0xFF111827)
+    val TextSecondary: Color = Color(0xFF6B7280)
+    val CardBg: Color = Color(0xFFF8FAFC)
+    val PendingDot: Color = Color(0xFFD1D5DB)
+}
+
+object CaloShapeHealthPlanTokens {
+    val NeutralText: Color = Color(0xFF6B7280)
+    val RingTrack: Color = Color(0xFFF0F2F6)
+    val CarbColor: Color = Color(0xFFFBBC05)
+    val ProteinColor: Color = Color(0xFFEA4335)
+    val FatColor: Color = Color(0xFF34A853)
+    val WaterColor: Color = Color(0xFF3B82F6)
+    val WeightColor: Color = Color(0xFF6366F1)
+    const val donutStrokePx: Float = 80f
+    const val miniRingStrokePx: Float = 20f
+}
+
+@Composable
+fun CaloShapeLoadingScreen(
+    modifier: Modifier = Modifier,
+    backgroundColor: Color = CaloShapeColors.current().background,
+    indicatorColor: Color = CaloShapeColors.current().textPrimary,
+) {
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .background(backgroundColor),
+        contentAlignment = Alignment.Center,
+    ) {
+        CircularProgressIndicator(color = indicatorColor)
+    }
+}

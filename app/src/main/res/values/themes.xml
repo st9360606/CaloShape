@@ -9,7 +9,7 @@
     </style>
 
     <!-- App 主題：Material 3、固定淺色、全白背景 -->
-    <style name="Theme.BiteCal" parent="Theme.Material3.Light.NoActionBar">
+    <style name="Theme.CaloShape" parent="Theme.Material3.Light.NoActionBar">
         <!-- 停用自動深色 -->
         <item name="android:forceDarkAllowed">false</item>
 
@@ -24,10 +24,10 @@
     </style>
 
     <!-- Android 12+ 系統 Splash（只放無文字圖） -->
-    <style name="Theme.BiteCal.Splash" parent="Theme.SplashScreen">
+    <style name="Theme.CaloShape.Splash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/splash_bg</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_focus_spoon_foreground</item>
-        <item name="postSplashScreenTheme">@style/Theme.BiteCal</item>
+        <item name="postSplashScreenTheme">@style/Theme.CaloShape</item>
     </style>
 
     <style name="Theme.Transparent" parent="Theme.Material3.DayNight.NoActionBar">

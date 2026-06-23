@@ -1,7 +1,7 @@
-package com.calai.bitecal.ui.home.ui.weight.logic
+package com.caloshape.app.ui.home.ui.weight.logic
 
-import com.calai.bitecal.data.weight.api.WeightItemDto
-import com.calai.bitecal.ui.home.ui.weight.components.computeWeightProgress
+import com.caloshape.app.data.weight.api.WeightItemDto
+import com.caloshape.app.ui.home.ui.weight.components.computeWeightProgress
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

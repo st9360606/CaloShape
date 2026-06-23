@@ -1,4 +1,4 @@
-package com.calai.bitecal.data.profile.repo
+package com.caloshape.app.data.profile.repo
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

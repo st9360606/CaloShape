@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.calai.bitecal.baselineprofile"
+    namespace = "com.caloshape.app.baselineprofile"
     compileSdk = 36
 
     defaultConfig {

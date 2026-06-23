@@ -39,9 +39,9 @@ jobs:
         run: |
           mkdir -p keystore
           if [ -n "$ANDROID_KEYSTORE_BASE64" ]; then
-            echo "$ANDROID_KEYSTORE_BASE64" | base64 -d > keystore/calai-release.jks
+            echo "$ANDROID_KEYSTORE_BASE64" | base64 -d > keystore/caloshape-release.jks
             cat > keystore/keystore.properties <<EOF
-          storeFile=keystore/calai-release.jks
+          storeFile=keystore/caloshape-release.jks
           storePassword=${ANDROID_KEYSTORE_PASSWORD}
           keyAlias=${ANDROID_KEY_ALIAS}
           keyPassword=${ANDROID_KEY_PASSWORD}

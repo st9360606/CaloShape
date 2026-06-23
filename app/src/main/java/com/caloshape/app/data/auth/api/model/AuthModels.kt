@@ -1,0 +1,24 @@
+package com.caloshape.app.data.auth.api.model
+
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class GoogleSignInExchangeRequest(
+    val idToken: String,
+    val clientId: String? = null
+)
+
+@Serializable data class StartEmailReq(val email: String)
+@Serializable data class StartEmailRes(val sent: Boolean)
+@Serializable data class VerifyEmailReq(val email: String, val code: String)
+
+/** å¾Œç«¯?‡ç??ˆï?App ç«¯æ?ä½ç??¯ç‚º null ä»¥ä??ç›¸å®?*/
+@Serializable
+data class AuthResponse(
+    val accessToken: String,
+    val refreshToken: String? = null,
+    val tokenType: String? = "Bearer",
+    val accessExpiresInSec: Long? = null,
+    val refreshExpiresInSec: Long? = null,
+    val serverTimeEpochSec: Long? = null
+)

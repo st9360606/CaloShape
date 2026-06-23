@@ -1,0 +1,34 @@
+package com.caloshape.app.data.fasting.notifications
+
+import android.Manifest
+import android.content.Context
+import android.content.pm.PackageManager
+import android.os.Build
+import androidx.core.app.NotificationManagerCompat
+import androidx.core.content.ContextCompat
+
+object NotificationPermission {
+
+    /**
+     * ä»?¡¨?Œé€™å°è£ç½®ä¸Šï?App ?®å??‰èƒ½?›é€å‡º?šçŸ¥?ï?
+     * - App ?šçŸ¥ç¸½é??œè???
+     * - Android 13+ ?„è???POST_NOTIFICATIONS æ¬Šé?
+     *
+     * ? ï? æ³¨æ?ï¼šé€™è£¡ä¸æª¢??channel ?¯å¦è¢«é?ï¼ˆé‚£?¯æ›´ç´°ç?å±¤ç?ï¼Œå¯?¦å??šï?
+     */
+    fun isGranted(context: Context): Boolean {
+        // 1) App å±¤ç??šçŸ¥ç¸½é???
+        val appEnabled = NotificationManagerCompat.from(context).areNotificationsEnabled()
+        if (!appEnabled) return false
+
+        // 2) Android 13+ runtime permission
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            ContextCompat.checkSelfPermission(
+                context,
+                Manifest.permission.POST_NOTIFICATIONS
+            ) == PackageManager.PERMISSION_GRANTED
+        } else {
+            true
+        }
+    }
+}

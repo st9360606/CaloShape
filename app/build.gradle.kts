@@ -12,19 +12,19 @@ plugins {
 
 @Suppress("UnstableApiUsage")
 android {
-    namespace = "com.calai.bitecal"
+    namespace = "com.caloshape.app"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.calai.bitecal"
+        applicationId = "com.caloshape.app"
         minSdk = 30
         targetSdk = 36
-        versionCode = 10007
-        versionName = "1.0.31"
+        versionCode = 10001
+        versionName = "1.0.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         // 預設 app 顯示名稱（不覆蓋多語字串）
-        manifestPlaceholders["appLabel"] = "BiteCal"
+        manifestPlaceholders["appLabel"] = "CaloShape"
 
         /**
          * ✅ 重要：提供預設值，避免「沒有選到 flavor」或 IDE 索引時找不到欄位
@@ -91,12 +91,12 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 file("proguard-rules.pro")
             )
-            manifestPlaceholders["appLabel"] = "BiteCal"
+            manifestPlaceholders["appLabel"] = "CaloShape"
         }
         getByName("debug") {
             isMinifyEnabled = false
             isShrinkResources = false
-            manifestPlaceholders["appLabel"] = "BiteCal (debug)"
+            manifestPlaceholders["appLabel"] = "CaloShape (debug)"
         }
     }
 
@@ -114,15 +114,14 @@ android {
             // ✅ 新增給你現在要用的（尾巴不要 /，方便你 concat path）
             buildConfigField("String", "API_BASE_URL", "\"http://172.20.10.2:8080\"")
 
-            manifestPlaceholders["appLabel"] = "BiteCal (dev)"
+            manifestPlaceholders["appLabel"] = "CaloShape (dev)"
         }
 
         create("prod") {
             dimension = "env"
-            // TODO: 之後換正式域名
-            buildConfigField("String", "BASE_URL", "\"http://172.20.10.2:8080/\"")
-            buildConfigField("String", "API_BASE_URL", "\"http://172.20.10.2:8080\"")
-            manifestPlaceholders["appLabel"] = "BiteCal"
+            buildConfigField("String", "BASE_URL", "\"https://api.caloshape.com/\"")
+            buildConfigField("String", "API_BASE_URL", "\"https://api.caloshape.com\"")
+            manifestPlaceholders["appLabel"] = "CaloShape"
         }
     }
 

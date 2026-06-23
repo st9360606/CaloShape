@@ -1,4 +1,4 @@
-package com.calai.bitecal.data.activity.api
+package com.caloshape.app.data.activity.api
 
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json

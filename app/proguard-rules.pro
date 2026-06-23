@@ -20,11 +20,11 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
-# 保留你的資料模型（若有 @SerializedName）
--keep class com.calai.** { *; }
+# 保�?你�?資�?模�?（若??@SerializedName�?
+-keep class com.caloshape.** { *; }
 -keepattributes Signature, *Annotation*
 
-# 靜默掉一些不必要的警告
+# ?��??��?些�?必�??�警??
 -dontwarn okhttp3.**
 -dontwarn okio.**
 -dontwarn javax.annotation.**
@@ -44,9 +44,9 @@
 -keep class retrofit2.** { *; }
 -keep class okhttp3.** { *; }
 
-# DTO 若未以 @SerializedName 標註，保留欄位（依你的 package 調整）
--keepclassmembers class com.calai.bitecal.net.** { <fields>; }
--keepclassmembers class com.calai.bitecal.data.** { <fields>; }
+# DTO ?�未�?@SerializedName 標註，�??��?位�?依�???package 調整�?
+-keepclassmembers class com.caloshape.app.net.** { <fields>; }
+-keepclassmembers class com.caloshape.app.data.** { <fields>; }
 
 # @Keep
 -keep @androidx.annotation.Keep class * { *; }

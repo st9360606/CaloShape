@@ -1,6 +1,6 @@
-# AGENTS.md — BiteCal Android Client
+# AGENTS.md ??CaloShape Android Client
 
-This file gives coding agents project-specific instructions for the BiteCal Android app.
+This file gives coding agents project-specific instructions for the CaloShape Android app.
 It applies to the whole Android client repository unless a deeper `AGENTS.md` overrides it.
 
 
@@ -8,8 +8,8 @@ It applies to the whole Android client repository unless a deeper `AGENTS.md` ov
 
 ## 1. Project Identity
 
-- **Product:** BiteCal / Calai — calorie tracking Android app.
-- **Package:** `com.calai.bitecal`.
+- **Product:** CaloShape / CaloShape ??calorie tracking Android app.
+- **Package:** `com.caloshape.app`.
 - **Primary UI:** Jetpack Compose.
 - **App architecture:** MVVM + Clean Architecture style + Unidirectional Data Flow.
 - **Dependency injection:** Hilt.
@@ -17,8 +17,8 @@ It applies to the whole Android client repository unless a deeper `AGENTS.md` ov
 - **Local state:** DataStore is currently used for auth tokens, profile/user settings, water/workout snapshots, locale, and session-related flags. Do not introduce Room unless the requested feature truly needs relational local persistence.
 - **Background work:** WorkManager with Hilt worker factory.
 - **Platform integrations:** Camera, Health Connect, Google Play Billing, Google Sign-In / Credentials, notifications, localization.
-- **Main app entry:** `BiteCal.kt`, `BiteCalApp.kt`, `MainActivity.kt`.
-- **Navigation:** `ui/nav/BiteCalNavHost.kt` and route constants in `Routes`.
+- **Main app entry:** `CaloShape.kt`, `CaloShapeApp.kt`, `MainActivity.kt`.
+- **Navigation:** `ui/nav/CaloShapeNavHost.kt` and route constants in `Routes`.
 
 ---
 
@@ -29,7 +29,7 @@ Use the full project path when available. In the uploaded zip, the source tree i
 ```text
 main/
   AndroidManifest.xml
-  java/com/calai/bitecal/
+  java/com/caloshape/caloshape/
     core/                # pure/shared app logic, device/session/health calculations
     data/                # APIs, repositories, stores, syncers, billing, auth, network
     di/                  # Hilt modules and entry points
@@ -43,15 +43,15 @@ main/
 
 Important modules found in this codebase:
 
-- `data/auth` — token store, auth API, Google/email auth, interceptors/authenticator.
-- `data/billing` — `BillingGateway`, `PlayBillingGateway`, `FakeBillingGateway`, `BiteCalBillingProducts`.
-- `data/entitlement` and `data/membership` — entitlement sync and membership summary APIs.
-- `data/foodlog` — food log upload, overrides, portion multiplier, list/detail APIs.
-- `data/activity` and `data/health` — Health Connect and daily activity sync.
-- `data/referral` — referral APIs and repository.
-- `ui/onboarding` — onboarding funnel screens and ViewModels.
-- `ui/subscription` — onboarding/subscription paywall UI and `SubscriptionViewModel`.
-- `ui/home` — home dashboard, scan FAB, food log detail, progress, saved food, settings, referral, premium reward, water, weight, workout.
+- `data/auth` ??token store, auth API, Google/email auth, interceptors/authenticator.
+- `data/billing` ??`BillingGateway`, `PlayBillingGateway`, `FakeBillingGateway`, `CaloShapeBillingProducts`.
+- `data/entitlement` and `data/membership` ??entitlement sync and membership summary APIs.
+- `data/foodlog` ??food log upload, overrides, portion multiplier, list/detail APIs.
+- `data/activity` and `data/health` ??Health Connect and daily activity sync.
+- `data/referral` ??referral APIs and repository.
+- `ui/onboarding` ??onboarding funnel screens and ViewModels.
+- `ui/subscription` ??onboarding/subscription paywall UI and `SubscriptionViewModel`.
+- `ui/home` ??home dashboard, scan FAB, food log detail, progress, saved food, settings, referral, premium reward, water, weight, workout.
 
 ---
 
@@ -159,7 +159,7 @@ Do not mix DTOs directly into UI when a UI model is needed for formatting, fallb
 - Prefer `StateFlow` / immutable UI state from ViewModels.
 - Use `collectAsStateWithLifecycle()` where lifecycle-aware collection is available.
 - Use one-off events for navigation/toasts/dialog triggers; avoid encoding transient events as permanent state unless deliberately consumed.
-- Preserve Unidirectional Data Flow: UI event → ViewModel intent → repository/use-case → state update → UI render.
+- Preserve Unidirectional Data Flow: UI event ??ViewModel intent ??repository/use-case ??state update ??UI render.
 
 ### Coroutines
 
@@ -226,7 +226,7 @@ When adding or modifying `rememberLauncherForActivityResult`:
 
 ## 7. Navigation Rules
 
-The central route list is in `ui/nav/BiteCalNavHost.kt` under `object Routes`.
+The central route list is in `ui/nav/CaloShapeNavHost.kt` under `object Routes`.
 Do not introduce route strings in random files.
 
 State restoration rules:
@@ -262,8 +262,8 @@ Billing is commercial-critical. Be conservative.
 Current product IDs:
 
 ```kotlin
-BiteCalBillingProducts.MONTHLY = "bitecal_monthly"
-BiteCalBillingProducts.YEARLY = "bitecal_yearly"
+CaloShapeBillingProducts.MONTHLY = "caloshape_monthly"
+CaloShapeBillingProducts.YEARLY = "caloshape_yearly"
 ```
 
 Current offer tags:
@@ -394,7 +394,7 @@ Rules:
 <string name="example_remaining_kcal">%1$d kcal left</string>
 ```
 
-- Keep app language switching compatible with `LanguageManager`, `LanguageStore`, `ComposeLocale`, and `BiteCalApp` startup behavior.
+- Keep app language switching compatible with `LanguageManager`, `LanguageStore`, `ComposeLocale`, and `CaloShapeApp` startup behavior.
 - Do not hardcode English text in screens unless it is temporary debug-only UI and guarded appropriately.
 
 ---
@@ -509,10 +509,10 @@ The user prefers Traditional Chinese explanations, detailed file-level guidance,
 
 ## 18. Common Safe Defaults
 
-Use these defaults unless current code or the user’s explicit instruction says otherwise:
+Use these defaults unless current code or the user?�s explicit instruction says otherwise:
 
 - Screen state: Loading / Empty / Error / Success / Retry.
-- Permission fallback: denied → rationale; permanently denied/no launcher → system settings page.
+- Permission fallback: denied ??rationale; permanently denied/no launcher ??system settings page.
 - Subscription gating: `TRIAL` and `PREMIUM` can access premium scan/camera; `FREE` and expired states cannot.
 - Payment issue: show clear recovery UI, but rely on backend entitlement for access.
 - Network errors: user-safe message + retry; no raw stack traces in UI.

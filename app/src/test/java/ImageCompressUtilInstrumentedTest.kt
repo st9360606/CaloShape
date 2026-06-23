@@ -1,4 +1,4 @@
-package com.calai.bitecal.data.foodlog.repo
+package com.caloshape.app.data.foodlog.repo
 
 import android.content.Context
 import android.graphics.Bitmap

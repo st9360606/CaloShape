@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
     <!-- App_Name -->
-    <string name="app_name">BiteCal：カロリーカメラ</string>
+    <string name="app_name">CaloShape</string>
 
 
     <!-- common -->
@@ -78,7 +78,7 @@
     <string name="signin_with_apple">Appleでサインイン</string>
     <string name="signin_with_google">Googleでサインイン</string>
     <string name="signin_with_email">メールで続行</string>
-    <string name="signin_legal_hint">続行するとBiteCalの規約に同意したことになります</string>
+    <string name="signin_legal_hint">続行するとCaloShapeの規約に同意したことになります</string>
     <string name="signin_terms">利用規約</string>
     <string name="signin_and">および</string>
     <string name="signin_privacy">プライバシーポリシー</string>
@@ -171,12 +171,12 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">Using BiteCal AI can\ntriple your 体重 loss efficiency</string>
-    <string name="onboard_weight_loss_comparison_without_ai">Without\nBiteCal AI</string>
-    <string name="onboard_weight_loss_comparison_with_ai">With\nBiteCal AI</string>
+    <string name="onboard_weight_loss_comparison_title">Using CaloShape AI can\ntriple your 体重 loss efficiency</string>
+    <string name="onboard_weight_loss_comparison_without_ai">Without\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_with_ai">With\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_twenty_percent">20%</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">BiteCal AI makes everything simple\nand keeps you accountable</string>
+    <string name="onboard_weight_loss_comparison_caption">CaloShape AI makes everything simple\nand keeps you accountable</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
@@ -191,10 +191,10 @@
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">接続先</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
-    <string name="onboard_hc_connect_body">Sync daily activity between BiteCal AI and health apps to get more complete records and insights.</string>
-    <string name="onboard_hc_permission_rationale_title_prefix">Why BiteCal uses</string>
+    <string name="onboard_hc_connect_body">Sync daily activity between CaloShape AI and health apps to get more complete records and insights.</string>
+    <string name="onboard_hc_permission_rationale_title_prefix">Why CaloShape uses</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">BiteCal reads your steps, exercise, and sleep data to estimate daily activity burn, update your calorie dashboard, and improve progress insights. You can revoke access anytime in 健康 Connect.</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape reads your steps, exercise, and sleep data to estimate daily activity burn, update your calorie dashboard, and improve progress insights. You can revoke access anytime in 健康 Connect.</string>
     <string name="onboard_hc_permission_rationale_button">了解</string>
 
 
@@ -267,11 +267,11 @@
 
 
     <!-- Onboarding: OnboardSubscriptionIntro -->
-    <string name="subscription_intro_title">Unlock BiteCal AI to\nreach your 目標s faster.</string>
+    <string name="subscription_intro_title">Unlock CaloShape AI to\nreach your 目標s faster.</string>
     <string name="subscription_intro_helper_format">Just %1$s per year (%2$s)</string>
     <string name="subscription_start_three_day_free_trial">3日間無料で試す</string>
     <string name="subscription_three_day_trial_helper_format">3 days free, then %1$s/year. Cancel anytime.</string>
-    <string name="subscription_already_owned_restore_required">Your Google Play account already has an active BiteCal subscription. Restore it to this BiteCal account before using premium features.</string>
+    <string name="subscription_already_owned_restore_required">Your Google Play account already has an active CaloShape subscription. Restore it to this CaloShape account before using premium features.</string>
     <string name="restore_subscription_dialog_title">サブスクリプションが見つかりました</string>
     <string name="settings_restore_subscription">サブスクリプションを復元</string>
     <string name="restore_subscription_dialog_restoring">復元中…</string>
@@ -588,12 +588,12 @@
     <string name="fasting_notification_info_status_enabled_label">オン</string>
     <string name="fasting_notification_info_status_disabled_label">オフ</string>
     <string name="fasting_notification_info_title">リマインダーの仕組み</string>
-    <string name="fasting_notification_info_subtitle">Your %1$s plan ends at %2$s. When reminders are on, BiteCal sends two daily notifications.</string>
+    <string name="fasting_notification_info_subtitle">Your %1$s plan ends at %2$s. When reminders are on, CaloShape sends two daily notifications.</string>
     <string name="fasting_notification_info_at_time">At %1$s</string>
     <string name="fasting_notification_info_start_title">食事時間が開始</string>
     <string name="fasting_notification_info_start_body">You can start eating and log meals when needed.</string>
     <string name="fasting_notification_info_endsoon_title">食事時間がまもなく終了</string>
-    <string name="fasting_notification_info_endsoon_body">One hour before the window closes at %1$s, BiteCal reminds you to finish your last meal.</string>
+    <string name="fasting_notification_info_endsoon_body">One hour before the window closes at %1$s, CaloShape reminds you to finish your last meal.</string>
 
     <string name="fasting_plan_desc_14_10">Ease in with a steady rhythm—14 hours to reset appetite cues and energy.</string>
     <string name="fasting_plan_desc_16_8">Crowd favorite for a reason—16 hours to stay focused and in a lean groove.</string>
@@ -774,7 +774,7 @@
     <string name="settings_title">設定</string>
     <string name="settings_choose_language">言語を選択</string>
     <string name="delete_account_dialog_title">アカウントを削除しますか？</string>
-    <string name="delete_account_dialog_body">Are you sure you want to delete your account? This will permanently delete your BiteCal data, including 食事 logs, 体重 records, and related settings. This action cannot be undone.</string>
+    <string name="delete_account_dialog_body">Are you sure you want to delete your account? This will permanently delete your CaloShape data, including 食事 logs, 体重 records, and related settings. This action cannot be undone.</string>
 
 
     <string name="restore_subscription_dialog_success_title">サブスクリプションを復元しました</string>
@@ -782,12 +782,12 @@
     <string name="restore_subscription_dialog_no_active_title">有効なサブスクリプションが見つかりません</string>
     <string name="restore_subscription_dialog_failed_title">復元に失敗しました</string>
     <string name="restore_subscription_dialog_bound_title">Subscription already linked</string>
-    <string name="restore_subscription_dialog_success_body">Your subscription has been restored to this BiteCal account.</string>
-    <string name="restore_subscription_dialog_payment_issue_body">Your subscription is linked to this BiteCal account, but Google Play still reports a payment issue. Please update your payment method in Google Play to keep your subscription active.</string>
-    <string name="restore_subscription_dialog_no_active_body">We could not find an active BiteCal subscription on the Google Play account currently used on this device. You can try again later from 設定.</string>
+    <string name="restore_subscription_dialog_success_body">Your subscription has been restored to this CaloShape account.</string>
+    <string name="restore_subscription_dialog_payment_issue_body">Your subscription is linked to this CaloShape account, but Google Play still reports a payment issue. Please update your payment method in Google Play to keep your subscription active.</string>
+    <string name="restore_subscription_dialog_no_active_body">We could not find an active CaloShape subscription on the Google Play account currently used on this device. You can try again later from 設定.</string>
     <string name="restore_subscription_dialog_failed_body">We could not restore your subscription right now. Please check your connection and try again from 設定.</string>
-    <string name="restore_subscription_dialog_bound_body">This subscription is already linked to another active BiteCal account. Please contact support if you believe this is a mistake.</string>
-    <string name="restore_subscription_dialog_body">We found an active BiteCal subscription or trial associated with the Google Play account on this device. You can restore it to the BiteCal account you’re currently signed in to.</string>
+    <string name="restore_subscription_dialog_bound_body">This subscription is already linked to another active CaloShape account. Please contact support if you believe this is a mistake.</string>
+    <string name="restore_subscription_dialog_body">We found an active CaloShape subscription or trial associated with the Google Play account on this device. You can restore it to the CaloShape account you’re currently signed in to.</string>
 
     <!-- Settings : Payment issue dialog -->
     <string name="payment_issue_dialog_title">Premiumを有効に保つ</string>
@@ -828,7 +828,7 @@
     <!-- Settings: referral card -->
     <string name="settings_invite_friends">友達を招待</string>
     <string name="settings_premium_reward">Premium報酬</string>
-    <string name="settings_share_bitecal_with_friends">Share BiteCal AI\nwith your friends</string>
+    <string name="settings_share_caloshape_with_friends">Share CaloShape AI\nwith your friends</string>
     <string name="settings_referral_reward_content">They subscribe. You get 30 days free.</string>
     <string name="settings_get_30_days_free">Get 30 days free</string>
     <string name="settings_days_label">日</string>
@@ -880,11 +880,11 @@
     <string name="referral_step_1_title">Share your promo code</string>
     <string name="referral_step_1_subtitle">Send your code to a friend who wants to track 食事 smarter.</string>
     <string name="referral_step_2_title">Your friend subscribes</string>
-    <string name="referral_step_2_subtitle">They start a paid BiteCal AI subscription using your invite.</string>
+    <string name="referral_step_2_subtitle">They start a paid CaloShape AI subscription using your invite.</string>
     <string name="referral_step_3_title">No refund, then reward</string>
     <string name="referral_step_3_subtitle">After the subscription is verified with no refund, your premium period is extended.</string>
-    <string name="referral_share_text">Join me on BiteCal AI! My referral code is:\n%1$s\n\n%2$s</string>
-    <string name="referral_share_subject">Join me on BiteCal AI</string>
+    <string name="referral_share_text">Join me on CaloShape AI! My referral code is:\n%1$s\n\n%2$s</string>
+    <string name="referral_share_subject">Join me on CaloShape AI</string>
     <string name="referral_share_chooser_title">共有方法</string>
     <string name="referral_unable_to_open_share_options">Unable to open share options.</string>
 
@@ -1004,7 +1004,7 @@
     <!-- RingColorsExplainedScreen -->
     <string name="ring_colors_explained_title">日付リングの色</string>
     <string name="ring_colors_explained_intro">日付リングで、各日がカロリー目標に対してどうだったかをすばやく確認できます。</string>
-    <string name="ring_colors_preview_brand">BiteCal AI</string>
+    <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">日付リングプレビュー</string>
 
     <string name="ring_colors_preview_day_5">5</string>
@@ -1028,7 +1028,7 @@
 
     <!-- NotificationInboxScreen Inbox -->
     <string name="notification_inbox_title">受信箱</string>
-    <string name="notification_inbox_header_title">BiteCal通知</string>
+    <string name="notification_inbox_header_title">CaloShape通知</string>
     <string name="notification_inbox_header_body">すべてのプラットフォーム通知がここに表示されます。</string>
     <string name="notification_inbox_status_read">既読</string>
     <string name="notification_inbox_status_unread">未読</string>
@@ -1043,25 +1043,25 @@
 
     <!-- WidgetGuideScreen -->
     <string name="widget_guide_title">ウィジェットを追加</string>
-    <string name="widget_guide_hero_title">BiteCalをホーム画面に追加</string>
+    <string name="widget_guide_hero_title">CaloShapeをホーム画面に追加</string>
     <string name="widget_guide_hero_body">Track カロリー, macros, and quick actions without opening the app.</string>
     <string name="widget_guide_steps_title">次の手順に従ってください</string>
     <string name="widget_guide_step_1_title">ホーム画面を長押し</string>
     <string name="widget_guide_step_1_body">Press and hold an empty area on your phone Home screen until the menu appears.</string>
     <string name="widget_guide_step_2_title">ウィジェットをタップ</string>
     <string name="widget_guide_step_2_body">Choose Widgets from the Home screen menu.</string>
-    <string name="widget_guide_step_3_title">BiteCal AIを探す</string>
-    <string name="widget_guide_step_3_body">Scroll or search for BiteCal AI, then open the widget list.</string>
+    <string name="widget_guide_step_3_title">CaloShape AIを探す</string>
+    <string name="widget_guide_step_3_body">Scroll or search for CaloShape AI, then open the widget list.</string>
     <string name="widget_guide_step_4_title">ウィジェットを配置</string>
     <string name="widget_guide_step_4_body">Touch and hold the widget, drag it to your preferred Home screen, then lift your finger.</string>
     <string name="widget_guide_tip_title">ウィジェットメニューが見つかりませんか？</string>
-    <string name="widget_guide_tip_body">Some phone brands and launchers use different names. Try Home settings, long-pressing the BiteCal AI app icon, or searching for Widgets in your launcher.</string>
+    <string name="widget_guide_tip_body">Some phone brands and launchers use different names. Try Home settings, long-pressing the CaloShape AI app icon, or searching for Widgets in your launcher.</string>
     <string name="widget_guide_done">了解</string>
     <string name="widget_guide_mock_home">ホーム</string>
     <string name="widget_guide_mock_widgets">ウィジェット</string>
 
 
-    <!-- BiteCalNavHost -->
+    <!-- CaloShapeNavHost -->
     <string name="url_terms">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</string>
     <string name="url_privacy">https://www.viraldevelopment.co/index.php/privacy-policy</string>
     <string name="url_support_email">mailto:support@viraldevelopment.co?subject=Support%20Request</string>
@@ -1077,8 +1077,8 @@
     <string name="widget_protein_left">残りタンパク質</string>
     <string name="widget_carbs_left">残り炭水化物</string>
     <string name="widget_fats_left">残り脂質</string>
-    <string name="widget_calories_description">BiteCalカロリーウィジェット</string>
-    <string name="widget_macro_actions_description">BiteCalマクロとクイック操作ウィジェット</string>
+    <string name="widget_calories_description">CaloShapeカロリーウィジェット</string>
+    <string name="widget_macro_actions_description">CaloShapeマクロとクイック操作ウィジェット</string>
     <string name="widget_log_your_food">食事を記録</string>
     <string name="widget_scan_food">食事をスキャン</string>
     <string name="widget_barcode">バーコード</string>

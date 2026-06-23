@@ -1,4 +1,4 @@
-package com.calai.bitecal.data.foodlog.repo
+package com.caloshape.app.data.foodlog.repo
 
 import okio.Buffer
 import org.junit.Assert.assertArrayEquals

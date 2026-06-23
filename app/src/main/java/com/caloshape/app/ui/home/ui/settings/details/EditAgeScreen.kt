@@ -1,0 +1,320 @@
+package com.caloshape.app.ui.home.ui.settings.details
+
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
+import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.caloshape.app.R
+import com.caloshape.app.ui.common.design.CaloShapeEditBottomActionBar
+import com.caloshape.app.ui.common.design.CaloShapeColors
+import com.caloshape.app.ui.common.design.CaloShapeScreenFrame
+import com.caloshape.app.ui.common.design.CaloShapeTopBar
+import com.caloshape.app.ui.common.haptic.HapticWheelTickEffect
+import com.caloshape.app.ui.home.components.HomeBackground
+import com.caloshape.app.ui.home.components.HomeCardStyles
+import com.caloshape.app.ui.home.ui.settings.details.model.EditAgeViewModel
+import kotlin.math.abs
+
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
+@Composable
+fun EditAgeScreen(
+    vm: EditAgeViewModel,
+    onBack: () -> Unit,
+    onSaved: () -> Unit
+) {
+    val ui by vm.ui.collectAsState()
+    val initialAge by vm.initialAge.collectAsState()
+    val colors = CaloShapeColors.current()
+    val isDark = colors.background == CaloShapeColors.Dark.background
+    val screenBackground = if (isDark) Color.Transparent else colors.background
+    val errorColor = if (isDark) HomeCardStyles.Status.dangerText() else colors.error
+    val privacyTextColor = if (isDark) HomeCardStyles.Text.muted() else colors.textMuted
+
+    LaunchedEffect(Unit) { vm.initIfNeeded() }
+
+    val AGE_MIN = 10
+    val AGE_MAX = 150
+
+    // ✅ 關鍵：不要用 rememberSaveable，避免 Nav 回來時還原舊的 age/seeded
+    var seeded by remember { mutableStateOf(false) }
+    var age by remember { mutableIntStateOf(25) }
+
+    LaunchedEffect(ui.initializing, initialAge) {
+        if (!ui.initializing && !seeded) {
+            age = initialAge.coerceIn(AGE_MIN, AGE_MAX)
+            seeded = true
+        }
+    }
+
+    Box(modifier = Modifier.fillMaxSize()) {
+        if (isDark) {
+            HomeBackground(
+                modifier = Modifier.matchParentSize(),
+                darkTheme = true,
+                enableNoise = false
+            )
+        }
+
+        Scaffold(
+            containerColor = screenBackground,
+            topBar = {
+                CaloShapeTopBar(
+                    title = stringResource(R.string.edit_age_title),
+                    onBack = onBack
+                )
+            },
+            bottomBar = {
+                CaloShapeEditBottomActionBar(
+                primaryText = stringResource(R.string.common_save),
+                onPrimaryClick = { vm.saveAndSyncAge(ageYears = age, onSuccess = onSaved) },
+                primaryEnabled = !ui.saving && !ui.initializing,
+                    primaryLoading = ui.saving,
+                )
+            }
+        ) { innerPadding ->
+            Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+                .padding(
+                    start = CaloShapeScreenFrame.detailHorizontal,
+                    top = CaloShapeScreenFrame.detailContentTopNudged,
+                    end = CaloShapeScreenFrame.detailHorizontal,
+                    bottom = CaloShapeScreenFrame.detailBottom
+                )
+        ) {
+            Spacer(Modifier.height(140.dp))
+
+            ui.error?.let { msg ->
+                Spacer(Modifier.height(10.dp))
+                Text(
+                    text = msg,
+                    color = errorColor,
+                    style = MaterialTheme.typography.bodyMedium,
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = CaloShapeScreenFrame.contentHorizontalWide),
+                    textAlign = TextAlign.Center
+                )
+            }
+
+            val wheelHeight = 56.dp * 5
+            Box(
+                modifier = Modifier.fillMaxWidth().height(wheelHeight),
+                contentAlignment = Alignment.Center
+            ) {
+                if (ui.initializing) {
+                    if (isDark) {
+                        CircularProgressIndicator(
+                            strokeWidth = 2.dp,
+                            color = HomeCardStyles.Text.primary()
+                        )
+                    } else {
+                        CircularProgressIndicator(strokeWidth = 2.dp)
+                    }
+                } else {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.Center,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        NumberWheel(
+                            range = AGE_MIN..AGE_MAX,
+                            value = age,
+                            onValueChange = { age = it },
+                            rowHeight = 56.dp,
+                            centerTextSize = 32.sp,
+                            textSize = 26.sp,
+                            sideAlpha = 0.35f,
+                            modifier = Modifier.width(220.dp)
+                        )
+                    }
+                }
+            }
+
+            Spacer(Modifier.height(18.dp))
+            Text(
+                text = stringResource(R.string.edit_age_privacy_note),
+                fontSize = 12.sp,
+                color = privacyTextColor,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth().padding(horizontal = CaloShapeScreenFrame.contentHorizontalWide)
+            )
+        }
+    }
+}
+}
+
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+private fun NumberWheel(
+    range: IntRange,
+    value: Int,
+    onValueChange: (Int) -> Unit,
+    rowHeight: Dp,
+    centerTextSize: TextUnit,
+    textSize: TextUnit = 26.sp,
+    sideAlpha: Float,
+    unitLabel: String? = null,
+    modifier: Modifier = Modifier
+) {
+    val colors = CaloShapeColors.current()
+    val isDark = colors.background == CaloShapeColors.Dark.background
+    val numberTextColor = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary
+    val unitTextColor = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary
+    val centerLineColor = if (isDark) {
+        HomeCardStyles.Surface.borderColor().copy(alpha = 0.88f)
+    } else {
+        colors.border.copy(alpha = 0.72f)
+    }
+    val VISIBLE_COUNT = 5
+    val MID = VISIBLE_COUNT / 2
+    val items = remember(range) { range.toList() }
+
+    // 目標 index（外部 value 對應的 index）
+    val selectedIdx = (value - range.first).coerceIn(0, items.lastIndex)
+
+    val state = rememberLazyListState()
+    val fling = rememberSnapFlingBehavior(lazyListState = state)
+
+    /**
+     * ✅ 核心修正：
+     * - 外部 value 改變 → selectedIdx 改變
+     * - 如果目前不是使用者在滑動，就把列表對齊到 selectedIdx
+     * - 這樣 seed(34) 會真的捲到 34，不會卡在 25
+     */
+    LaunchedEffect(selectedIdx) {
+        if (!state.isScrollInProgress) {
+            state.scrollToItem(selectedIdx)
+        }
+    }
+
+    val centerIndex by remember {
+        derivedStateOf {
+            val li = state.layoutInfo
+            if (li.visibleItemsInfo.isEmpty()) return@derivedStateOf selectedIdx
+            val viewportCenter = (li.viewportStartOffset + li.viewportEndOffset) / 2
+            li.visibleItemsInfo.minByOrNull { info ->
+                abs((info.offset + info.size / 2) - viewportCenter)
+            }?.index ?: selectedIdx
+        }
+    }
+
+    HapticWheelTickEffect(
+        tickKey = centerIndex,
+        enabled = state.isScrollInProgress
+    )
+
+    /**
+     * ✅ 防止無限回寫：
+     * 只有當中心值真的跟 value 不同，才通知外層更新
+     */
+    LaunchedEffect(centerIndex) {
+        val newValue = items.getOrNull(centerIndex) ?: return@LaunchedEffect
+        if (newValue != value) onValueChange(newValue)
+    }
+
+    Box(
+        modifier = modifier
+            .fillMaxWidth()
+            .height(rowHeight * VISIBLE_COUNT)
+    ) {
+        LazyColumn(
+            state = state,
+            flingBehavior = fling,
+            contentPadding = PaddingValues(vertical = rowHeight * MID),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.fillMaxSize()
+        ) {
+            itemsIndexed(items) { index, num ->
+                val isCenter = index == centerIndex
+                val alpha = if (isCenter) 1f else sideAlpha
+                val size = if (isCenter) centerTextSize else textSize
+                val weight = if (isCenter) FontWeight.SemiBold else FontWeight.Normal
+                val unitSize = if (isCenter) 18.sp else 16.sp
+
+                Row(
+                    modifier = Modifier
+                        .height(rowHeight)
+                        .fillMaxWidth(),
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = num.toString(),
+                        fontSize = size,
+                        fontWeight = weight,
+                        color = numberTextColor.copy(alpha = alpha),
+                        textAlign = TextAlign.Center
+                    )
+                    if (unitLabel != null && isCenter) {
+                        Spacer(Modifier.width(6.dp))
+                        Text(
+                            text = unitLabel,
+                            fontSize = unitSize,
+                            color = unitTextColor.copy(alpha = alpha),
+                            fontWeight = FontWeight.Normal
+                        )
+                    }
+                }
+            }
+        }
+
+        // center lines
+        val lineColor = centerLineColor
+        val half = rowHeight / 2
+        val lineThickness = 1.dp
+        Box(
+            Modifier
+                .align(Alignment.Center)
+                .offset(y = -half)
+                .fillMaxWidth()
+                .height(lineThickness)
+                .background(lineColor)
+        )
+        Box(
+            Modifier
+                .align(Alignment.Center)
+                .offset(y = half - lineThickness)
+                .fillMaxWidth()
+                .height(lineThickness)
+                .background(lineColor)
+        )
+    }
+}

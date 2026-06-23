@@ -27,16 +27,16 @@ jobs:
       - name: Gradle cache
         uses: gradle/actions/setup-gradle@v3
 
-      # ★ 把檔案還原到 repo 根的 keystore/，對齊 storeFile=keystore/calai-release.jks
+      # ★ 把檔案還原到 repo 根的 keystore/，對齊 storeFile=keystore/caloshape-release.jks
       - name: Restore keystore & props
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p keystore
           printf "%s" "${{ secrets.KEYSTORE_PROPERTIES }}" > keystore/keystore.properties
-          printf "%s" "${{ secrets.KEYSTORE_JKS_BASE64 }}" | base64 -d > keystore/calai-release.jks
+          printf "%s" "${{ secrets.KEYSTORE_JKS_BASE64 }}" | base64 -d > keystore/caloshape-release.jks
           echo "== storeFile in props ==" && grep -E '^storeFile=' keystore/keystore.properties || true
-          test -f keystore/calai-release.jks || (echo "::error::JKS missing at keystore/calai-release.jks"; ls -la keystore; exit 1)
+          test -f keystore/caloshape-release.jks || (echo "::error::JKS missing at keystore/caloshape-release.jks"; ls -la keystore; exit 1)
 
       - name: Build prodRelease (APK & AAB)
         run: |

@@ -1,9 +1,9 @@
-package com.calai.bitecal.data.profile.repo
+package com.caloshape.app.data.profile.repo
 
-import com.calai.bitecal.data.common.RepoInvalidationBus
-import com.calai.bitecal.data.profile.api.ProfileApi
-import com.calai.bitecal.data.profile.api.UpsertProfileRequest
-import com.calai.bitecal.data.profile.api.UserProfileDto
+import com.caloshape.app.data.common.RepoInvalidationBus
+import com.caloshape.app.data.profile.api.ProfileApi
+import com.caloshape.app.data.profile.api.UpsertProfileRequest
+import com.caloshape.app.data.profile.api.UserProfileDto
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk

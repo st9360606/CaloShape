@@ -1,6 +1,6 @@
 <resources>
     <!-- App_Name -->
-    <string name="app_name">BiteCal｜AI 卡路里相機：拍照算熱量、記錄飲食</string>
+    <string name="app_name">CaloShape</string>
 
 
     <!-- common -->
@@ -78,7 +78,7 @@
     <string name="signin_with_apple">使用 Apple 登入</string>
     <string name="signin_with_google">使用 Google 登入</string>
     <string name="signin_with_email">使用 Email 繼續</string>
-    <string name="signin_legal_hint">繼續即表示你同意 BiteCal 的</string>
+    <string name="signin_legal_hint">繼續即表示你同意 CaloShape 的</string>
     <string name="signin_terms">服務條款</string>
     <string name="signin_and">和</string>
     <string name="signin_privacy">隱私政策</string>
@@ -121,7 +121,7 @@
 
 
     <!-- Onboarding: ReferralSourceScreen -->
-    <string name="onboard_referral_title">你是怎麼知道 BiteCal 的？</string>
+    <string name="onboard_referral_title">你是怎麼知道 CaloShape 的？</string>
 
 
     <!-- Onboarding: AgeSelectionScreen -->
@@ -172,9 +172,9 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">使用BiteCal AI 的減重效果是自己減重的\n三倍</string>
-    <string name="onboard_weight_loss_comparison_without_ai">沒有\nBiteCal AI</string>
-    <string name="onboard_weight_loss_comparison_with_ai">使用\nBiteCal AI</string>
+    <string name="onboard_weight_loss_comparison_title">使用CaloShape AI 的減重效果是自己減重的\n三倍</string>
+    <string name="onboard_weight_loss_comparison_without_ai">沒有\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_with_ai">使用\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_twenty_percent">20%</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
     <string name="onboard_weight_loss_comparison_caption">BitCal AI 讓一切變得簡單並\n督促你履行承諾</string>
@@ -192,10 +192,10 @@
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">連接到</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
-    <string name="onboard_hc_connect_body">在 BiteCal AI 與健康應用之間同步日常活動，取得更完整的紀錄與分析。</string>
-    <string name="onboard_hc_permission_rationale_title_prefix">為什麼 BiteCal 使用</string>
+    <string name="onboard_hc_connect_body">在 CaloShape AI 與健康應用之間同步日常活動，取得更完整的紀錄與分析。</string>
+    <string name="onboard_hc_permission_rationale_title_prefix">為什麼 CaloShape 使用</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">BiteCal 會讀取你的步數、運動與睡眠資料，用來估算每日活動消耗、更新卡路里儀表板，並提供更完整的進度分析。你可以隨時在 Health Connect 中撤銷授權。</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape 會讀取你的步數、運動與睡眠資料，用來估算每日活動消耗、更新卡路里儀表板，並提供更完整的進度分析。你可以隨時在 Health Connect 中撤銷授權。</string>
     <string name="onboard_hc_permission_rationale_button">了解</string>
 
 
@@ -268,11 +268,11 @@
 
 
     <!-- Onboarding: OnboardSubscriptionIntro -->
-    <string name="subscription_intro_title">解鎖 BiteCal AI\n更快達成你的目標</string>
+    <string name="subscription_intro_title">解鎖 CaloShape AI\n更快達成你的目標</string>
     <string name="subscription_intro_helper_format">每年只要 %1$s（約 %2$s）</string>
     <string name="subscription_start_three_day_free_trial">免費試用 3 天</string>
     <string name="subscription_three_day_trial_helper_format">前 3 天免費，之後每年 %1$s，可隨時取消。</string>
-    <string name="subscription_already_owned_restore_required">目前這個 Google Play 帳號已經有有效的 BiteCal 訂閱。請先將訂閱恢復到目前登入的 BiteCal 帳號，才能使用付費功能。</string>
+    <string name="subscription_already_owned_restore_required">目前這個 Google Play 帳號已經有有效的 CaloShape 訂閱。請先將訂閱恢復到目前登入的 CaloShape 帳號，才能使用付費功能。</string>
     <string name="restore_subscription_dialog_title">偵測到可恢復的訂閱</string>
     <string name="settings_restore_subscription">恢復訂閱</string>
     <string name="restore_subscription_dialog_restoring">恢復中…</string>
@@ -589,12 +589,12 @@
     <string name="fasting_notification_info_status_enabled_label">已開啟</string>
     <string name="fasting_notification_info_status_disabled_label">已關閉</string>
     <string name="fasting_notification_info_title">提醒會怎麼運作</string>
-    <string name="fasting_notification_info_subtitle">你的 %1$s 計畫會在 %2$s 結束進食視窗。開啟提醒後，BiteCal 每天會發送兩個通知。</string>
+    <string name="fasting_notification_info_subtitle">你的 %1$s 計畫會在 %2$s 結束進食視窗。開啟提醒後，CaloShape 每天會發送兩個通知。</string>
     <string name="fasting_notification_info_at_time">%1$s</string>
     <string name="fasting_notification_info_start_title">進食時段開始</string>
     <string name="fasting_notification_info_start_body">你可以開始進食，並在需要時順手紀錄餐點。</string>
     <string name="fasting_notification_info_endsoon_title">進食時段即將結束</string>
-    <string name="fasting_notification_info_endsoon_body">距離 %1$s 結束前 1 小時，BiteCal 會提醒你完成最後一餐。</string>
+    <string name="fasting_notification_info_endsoon_body">距離 %1$s 結束前 1 小時，CaloShape 會提醒你完成最後一餐。</string>
 
     <string name="fasting_plan_desc_14_10">用穩定節奏開始，禁食 14 小時，幫助調整食慾與能量感。</string>
     <string name="fasting_plan_desc_16_8">最受歡迎的禁食節奏，16 小時禁食，適合維持專注與飲食控制。</string>
@@ -773,7 +773,7 @@
     <string name="settings_title">設定</string>
     <string name="settings_choose_language">選擇語言</string>
     <string name="delete_account_dialog_title">刪除帳號？</string>
-    <string name="delete_account_dialog_body">您確定要刪除帳號嗎？此操作將永久刪除您在 BiteCal 中的資料，包括飲食紀錄、體重紀錄與相關設定。刪除後將無法復原。</string>
+    <string name="delete_account_dialog_body">您確定要刪除帳號嗎？此操作將永久刪除您在 CaloShape 中的資料，包括飲食紀錄、體重紀錄與相關設定。刪除後將無法復原。</string>
 
     <!-- Settings : restore_subscription -->
     <string name="restore_subscription_dialog_success_title">訂閱已恢復</string>
@@ -781,12 +781,12 @@
     <string name="restore_subscription_dialog_no_active_title">找不到有效訂閱</string>
     <string name="restore_subscription_dialog_failed_title">恢復失敗</string>
     <string name="restore_subscription_dialog_bound_title">訂閱已綁定其他帳號</string>
-    <string name="restore_subscription_dialog_success_body">你的訂閱已恢復到目前登入的 BiteCal 帳號。</string>
-    <string name="restore_subscription_dialog_payment_issue_body">你的訂閱已綁定到目前登入的 BiteCal 帳號，但 Google Play 仍回報付款異常。請到 Google Play 更新付款方式，以維持訂閱有效。</string>
-    <string name="restore_subscription_dialog_no_active_body">我們在目前這台裝置使用的 Google Play 帳號中找不到有效的 BiteCal 訂閱。你可以稍後再從設定頁重試。</string>
+    <string name="restore_subscription_dialog_success_body">你的訂閱已恢復到目前登入的 CaloShape 帳號。</string>
+    <string name="restore_subscription_dialog_payment_issue_body">你的訂閱已綁定到目前登入的 CaloShape 帳號，但 Google Play 仍回報付款異常。請到 Google Play 更新付款方式，以維持訂閱有效。</string>
+    <string name="restore_subscription_dialog_no_active_body">我們在目前這台裝置使用的 Google Play 帳號中找不到有效的 CaloShape 訂閱。你可以稍後再從設定頁重試。</string>
     <string name="restore_subscription_dialog_failed_body">目前無法恢復訂閱，請確認網路連線後，稍後再從設定頁重試。</string>
-    <string name="restore_subscription_dialog_bound_body">這筆訂閱已綁定其他有效的 BiteCal 帳號。如果你認為這是錯誤，請聯絡客服。</string>
-    <string name="restore_subscription_dialog_body">我們在目前這台裝置使用的 Google Play 帳號中，偵測到 BiteCal 仍有有效的訂閱或試用。你可以將這筆訂閱恢復到目前登入的 BiteCal 帳號。</string>
+    <string name="restore_subscription_dialog_bound_body">這筆訂閱已綁定其他有效的 CaloShape 帳號。如果你認為這是錯誤，請聯絡客服。</string>
+    <string name="restore_subscription_dialog_body">我們在目前這台裝置使用的 Google Play 帳號中，偵測到 CaloShape 仍有有效的訂閱或試用。你可以將這筆訂閱恢復到目前登入的 CaloShape 帳號。</string>
 
     <!-- Settings : Payment issue dialog -->
     <string name="payment_issue_dialog_title">保持 Premium 啟用</string>
@@ -827,7 +827,7 @@
     <!-- Settings referral card -->
     <string name="settings_invite_friends">邀請朋友</string>
     <string name="settings_premium_reward">Premium 獎勵</string>
-    <string name="settings_share_bitecal_with_friends">和朋友分享 BiteCal AI</string>
+    <string name="settings_share_caloshape_with_friends">和朋友分享 CaloShape AI</string>
     <string name="settings_referral_reward_content">朋友訂閱後，你可獲得 30 天免費 Premium。</string>
     <string name="settings_get_30_days_free">獲得 30 天免費 Premium</string>
     <string name="settings_days_label">天</string>
@@ -878,11 +878,11 @@
     <string name="referral_step_1_title">分享你的邀請碼</string>
     <string name="referral_step_1_subtitle">把邀請碼傳給想更聰明記錄飲食的朋友。</string>
     <string name="referral_step_2_title">好友完成訂閱</string>
-    <string name="referral_step_2_subtitle">好友使用你的邀請碼開始 BiteCal AI 付費訂閱。</string>
+    <string name="referral_step_2_subtitle">好友使用你的邀請碼開始 CaloShape AI 付費訂閱。</string>
     <string name="referral_step_3_title">未退款後發放獎勵</string>
     <string name="referral_step_3_subtitle">訂閱驗證完成且未退款後，你的 Premium 期間將會延長。</string>
-    <string name="referral_share_text">一起使用 BiteCal AI！我的邀請碼是：\n%1$s\n\n%2$s</string>
-    <string name="referral_share_subject">一起使用 BiteCal AI</string>
+    <string name="referral_share_text">一起使用 CaloShape AI！我的邀請碼是：\n%1$s\n\n%2$s</string>
+    <string name="referral_share_subject">一起使用 CaloShape AI</string>
     <string name="referral_share_chooser_title">選擇分享方式</string>
     <string name="referral_unable_to_open_share_options">無法開啟分享選項。</string>
 
@@ -1001,7 +1001,7 @@
     <!-- RingColorsExplainedScreen -->
     <string name="ring_colors_explained_title">日期圓環顏色</string>
     <string name="ring_colors_explained_intro">日期圓環會幫你快速看出每天是否接近卡路里目標。</string>
-    <string name="ring_colors_preview_brand">BiteCal AI</string>
+    <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">日期圓環演示</string>
 
     <string name="ring_colors_preview_day_5">5</string>
@@ -1025,7 +1025,7 @@
 
     <!-- NotificationInboxScreen Inbox -->
     <string name="notification_inbox_title">通知收件匣</string>
-    <string name="notification_inbox_header_title">BiteCal 通知</string>
+    <string name="notification_inbox_header_title">CaloShape 通知</string>
     <string name="notification_inbox_header_body">所有平台通知都會集中顯示在這裡。</string>
     <string name="notification_inbox_status_read">已讀</string>
     <string name="notification_inbox_status_unread">未讀</string>
@@ -1040,25 +1040,25 @@
 
     <!-- WidgetGuideScreen -->
     <string name="widget_guide_title">添加小工具</string>
-    <string name="widget_guide_hero_title">把 BiteCal 加到手機桌面</string>
+    <string name="widget_guide_hero_title">把 CaloShape 加到手機桌面</string>
     <string name="widget_guide_hero_body">不用打開 App，也能快速查看卡路里、巨量營養素與常用操作。</string>
     <string name="widget_guide_steps_title">依照以下步驟操作</string>
     <string name="widget_guide_step_1_title">長按手機桌面</string>
     <string name="widget_guide_step_1_body">在手機桌面的空白處長按，直到桌面選單出現。</string>
     <string name="widget_guide_step_2_title">點選小工具</string>
     <string name="widget_guide_step_2_body">在桌面選單中選擇「小工具」或 Widgets。</string>
-    <string name="widget_guide_step_3_title">找到 BiteCal AI</string>
-    <string name="widget_guide_step_3_body">向下滑動或搜尋 BiteCal AI，然後打開可用的小工具列表。</string>
+    <string name="widget_guide_step_3_title">找到 CaloShape AI</string>
+    <string name="widget_guide_step_3_body">向下滑動或搜尋 CaloShape AI，然後打開可用的小工具列表。</string>
     <string name="widget_guide_step_4_title">拖曳小工具到桌面</string>
     <string name="widget_guide_step_4_body">長按想使用的小工具，拖到想放的位置後放開手指。</string>
     <string name="widget_guide_tip_title">找不到小工具選單？</string>
-    <string name="widget_guide_tip_body">不同手機品牌或桌面啟動器名稱可能不同。可以試試「主畫面設定」、長按 BiteCal AI App 圖示，或在桌面啟動器中搜尋小工具。</string>
+    <string name="widget_guide_tip_body">不同手機品牌或桌面啟動器名稱可能不同。可以試試「主畫面設定」、長按 CaloShape AI App 圖示，或在桌面啟動器中搜尋小工具。</string>
     <string name="widget_guide_done">我知道了</string>
     <string name="widget_guide_mock_home">Home</string>
     <string name="widget_guide_mock_widgets">小工具</string>
 
 
-    <!-- BiteCalNavHost -->
+    <!-- CaloShapeNavHost -->
     <string name="url_terms">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</string>
     <string name="url_privacy">https://www.viraldevelopment.co/index.php/privacy-policy</string>
     <string name="url_support_email">mailto:support@viraldevelopment.co?subject=Support%20Request</string>
@@ -1074,8 +1074,8 @@
     <string name="widget_protein_left">Protein left</string>
     <string name="widget_carbs_left">Carbs left</string>
     <string name="widget_fats_left">Fats left</string>
-    <string name="widget_calories_description">BiteCal calories widget</string>
-    <string name="widget_macro_actions_description">BiteCal macros and quick actions widget</string>
+    <string name="widget_calories_description">CaloShape calories widget</string>
+    <string name="widget_macro_actions_description">CaloShape macros and quick actions widget</string>
     <string name="widget_log_your_food">Log your food</string>
     <string name="widget_scan_food">Scan food</string>
     <string name="widget_barcode">Barcode</string>

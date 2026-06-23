@@ -1,0 +1,186 @@
+package com.caloshape.app.di
+
+import android.content.Context
+import com.caloshape.app.BuildConfig
+import com.caloshape.app.data.account.api.AccountApi
+import com.caloshape.app.data.activity.api.DailyActivityApi
+import com.caloshape.app.data.auth.api.AuthApi
+import com.caloshape.app.data.auth.net.AuthInterceptor
+import com.caloshape.app.data.auth.net.TokenAuthenticator
+import com.caloshape.app.data.entitlement.api.EntitlementApi
+import com.caloshape.app.data.fasting.api.FastingApi
+import com.caloshape.app.data.fasting.notifications.FastingAlarmScheduler
+import com.caloshape.app.data.fasting.repo.FastingRepository
+import com.caloshape.app.data.foodlog.api.FoodLogsApi
+import com.caloshape.app.data.net.BaseHeadersInterceptor
+import com.caloshape.app.data.profile.api.AutoGoalsApi
+import com.caloshape.app.data.profile.api.ProfileApi
+import com.caloshape.app.data.users.api.UsersApi
+import com.caloshape.app.data.water.api.WaterApi
+import com.caloshape.app.data.weight.api.WeightApi
+import com.caloshape.app.data.workout.api.WorkoutApi
+import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
+import kotlinx.serialization.json.Json
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Retrofit
+import java.time.ZoneId
+import java.util.concurrent.TimeUnit
+import javax.inject.Named
+import javax.inject.Singleton
+import com.caloshape.app.data.membership.api.MembershipApi
+import com.caloshape.app.data.notifications.api.NotificationInboxApi
+import com.caloshape.app.data.onboarding.api.OnboardingApi
+import com.caloshape.app.data.referral.api.ReferralApi
+@Module
+@InstallIn(SingletonComponent::class)
+object NetworkModule {
+
+    private fun json() = Json {
+        ignoreUnknownKeys = true
+        explicitNulls = true     // ✅ 讓 null 真的送出（符合 PUT 全量覆蓋）
+        encodeDefaults = false
+    }
+    private fun contentType() = "application/json".toMediaType()
+
+    private fun logging(): HttpLoggingInterceptor {
+        return HttpLoggingInterceptor().apply {
+            // Debug 顯示標頭；Release 關閉或降到 BASIC
+            level = if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.HEADERS
+            else HttpLoggingInterceptor.Level.NONE
+            redactHeader("Authorization")
+            redactHeader("Cookie")
+        }
+    }
+
+    @Provides @Singleton @Named("authClient")
+    fun provideAuthOkHttp(
+        baseHeadersInterceptor: BaseHeadersInterceptor
+    ): OkHttpClient =
+        OkHttpClient.Builder()
+            .addInterceptor(baseHeadersInterceptor)  // ✅ NEW：deviceId/lang/tz
+            .addInterceptor(logging())
+            .connectTimeout(10, TimeUnit.SECONDS)
+            .readTimeout(20, TimeUnit.SECONDS)
+            .build()
+
+    @Provides @Singleton @Named("apiClient")
+    fun provideApiOkHttp(
+        baseHeadersInterceptor: BaseHeadersInterceptor,
+        authInterceptor: AuthInterceptor,
+        tokenAuthenticator: TokenAuthenticator
+    ): OkHttpClient =
+        OkHttpClient.Builder()
+            .addInterceptor(baseHeadersInterceptor)  // ✅ NEW：deviceId/lang/tz
+            .addInterceptor(authInterceptor)
+            .authenticator(tokenAuthenticator)
+            .addInterceptor(logging())
+            .connectTimeout(10, TimeUnit.SECONDS)
+            .readTimeout(20, TimeUnit.SECONDS)
+            .build()
+
+    @Provides @Singleton @Named("authRetrofit")
+    fun provideAuthRetrofit(@Named("authClient") client: OkHttpClient): Retrofit =
+        Retrofit.Builder()
+            .baseUrl(BuildConfig.BASE_URL)
+            .client(client)
+            .addConverterFactory(json().asConverterFactory(contentType()))
+            .build()
+
+    @Provides @Singleton @Named("authApi")
+    fun provideAuthApi(@Named("authRetrofit") retrofit: Retrofit): AuthApi =
+        retrofit.create(AuthApi::class.java)
+
+
+    @Provides @Singleton @Named("apiRetrofit")
+    fun provideApiRetrofit(@Named("apiClient") client: OkHttpClient): Retrofit =
+        Retrofit.Builder()
+            .baseUrl(BuildConfig.BASE_URL)
+            .client(client)
+            .addConverterFactory(json().asConverterFactory(contentType()))
+            .build()
+
+    @Provides @Singleton fun provideProfileApi(@Named("apiRetrofit") retrofit: Retrofit): ProfileApi =
+        retrofit.create(ProfileApi::class.java)
+
+    @Provides @Singleton fun provideUsersApi(@Named("apiRetrofit") retrofit: Retrofit): UsersApi =
+        retrofit.create(UsersApi::class.java)
+
+    @Provides @Singleton fun provideFastingApi(@Named("apiRetrofit") retrofit: Retrofit): FastingApi =
+        retrofit.create(FastingApi::class.java)
+
+    @Provides @Singleton fun provideZoneId(): ZoneId = ZoneId.systemDefault()
+
+    @Provides @Singleton
+    fun provideFastingRepository(api: FastingApi, zoneId: ZoneId): FastingRepository =
+        FastingRepository(api) { zoneId }
+
+    @Provides @Singleton
+    fun provideFastingAlarmScheduler(@ApplicationContext ctx: Context): FastingAlarmScheduler =
+        FastingAlarmScheduler(ctx)
+
+    @Provides @Singleton
+    fun provideWaterApi(@Named("apiRetrofit") retrofit: Retrofit): WaterApi =
+        retrofit.create(WaterApi::class.java)
+
+    @Provides @Singleton
+    fun provideWorkoutApi(
+        @Named("apiRetrofit") retrofit: Retrofit
+    ): WorkoutApi = retrofit.create(WorkoutApi::class.java)
+
+    @Provides @Singleton
+    fun provideWeightApi(@Named("apiRetrofit") retrofit: Retrofit): WeightApi =
+        retrofit.create(WeightApi::class.java)
+
+    @Provides
+    @Singleton
+    fun provideAutoGoalsApi(@Named("apiRetrofit") retrofit: Retrofit): AutoGoalsApi =
+        retrofit.create(AutoGoalsApi::class.java)
+
+    @Provides
+    @Singleton
+    fun provideDailyActivityApi(
+        @Named("apiRetrofit") retrofit: Retrofit
+    ): DailyActivityApi = retrofit.create(DailyActivityApi::class.java)
+
+    @Provides
+    @Singleton
+    fun provideFoodLogsApi(@Named("apiRetrofit") retrofit: Retrofit): FoodLogsApi =
+        retrofit.create(FoodLogsApi::class.java)
+
+    @Provides
+    @Singleton
+    fun provideAccountApi(@Named("apiRetrofit") retrofit: Retrofit): AccountApi =
+        retrofit.create(AccountApi::class.java)
+
+    @Provides
+    @Singleton
+    fun provideEntitlementApi(@Named("apiRetrofit") retrofit: Retrofit): EntitlementApi =
+        retrofit.create(EntitlementApi::class.java)
+
+    @Provides
+    @Singleton
+    fun provideOnboardingApi(@Named("apiRetrofit") retrofit: Retrofit): OnboardingApi =
+        retrofit.create(OnboardingApi::class.java)
+
+    @Provides
+    @Singleton
+    fun provideReferralApi(@Named("apiRetrofit") retrofit: Retrofit): ReferralApi =
+        retrofit.create(ReferralApi::class.java)
+
+    @Provides
+    @Singleton
+    fun provideMembershipApi(@Named("apiRetrofit") retrofit: Retrofit): MembershipApi =
+        retrofit.create(MembershipApi::class.java)
+
+    @Provides
+    @Singleton
+    fun provideNotificationInboxApi(@Named("apiRetrofit") retrofit: Retrofit): NotificationInboxApi =
+        retrofit.create(NotificationInboxApi::class.java)
+}

@@ -1,0 +1,265 @@
+package com.caloshape.app.ui.home.ui.card
+
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.dp
+import com.caloshape.app.ui.home.components.GaugeRing
+import com.caloshape.app.ui.home.components.HomeCardStyles
+import com.caloshape.app.ui.common.haptic.caloShapeClickable
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.padding
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import com.caloshape.app.R
+import com.caloshape.app.ui.home.components.TopBarCard
+import com.caloshape.app.ui.home.components.TopBarDefaults
+
+/**
+ * WeightCardNew v2
+ *
+ * 改動：
+ * 1. 左半用 Box 疊層，保證按鈕不會被 Column 擠壓變形
+ * 2. 新增 onAddWeightClick callback
+ * 3. 加入 WeightAddButton()（黑色圓+灰閃光，和 Workout/Water 一致）
+ */
+@Composable
+fun WeightAndFastingCard(
+    modifier: Modifier = Modifier,
+    primary: String,
+    secondary: String? = "to goal",
+    ringColor: Color = HomeCardStyles.Palette.Weight,
+    progress: Float = 0f,
+    cardHeight: Dp,
+    ringSize: Dp = 78.dp,
+    ringStroke: Dp = 7.dp,
+    centerDisk: Dp = 35.dp,
+
+    // ✅ 新增：中心 icon（你要放 bullseye 就用預設）
+    centerIconRes: Int = R.drawable.flag,
+    centerIconDescription: String = "weight target",
+    centerIconTint: Color? = null,                    // Vector 想統一色可給 Color(0xFF111114)
+
+    centerDiskColor: Color = HomeCardStyles.Ring.centerFill(),
+
+    topBarTitle: String = "Weight",
+    topBarHeight: Dp = TopBarDefaults.Height,
+    topBarTextStyle: TextStyle = MaterialTheme.typography.titleSmall,
+    primaryTextStyle: TextStyle = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.SemiBold),
+    primaryFontSize: TextUnit? = null,
+    primaryYOffset: Dp = 0.dp,
+    primaryTopSpacing: Dp = 10.dp,
+    secondaryTextStyle: TextStyle = MaterialTheme.typography.bodySmall,
+    secondaryFontSize: TextUnit? = null,
+    secondaryYOffset: Dp = 0.dp,
+    gapPrimaryToSecondary: Dp = 2.dp,
+    onAddWeightClick: () -> Unit = {}
+) {
+    TopBarCard(
+        title = topBarTitle,
+        topBarHeight = topBarHeight,
+        topBarTextStyle = topBarTextStyle,
+        showWhiteTriangle = true,
+        modifier = modifier.height(cardHeight)
+    ) {
+        Row(
+            modifier = Modifier.fillMaxSize(),
+            horizontalArrangement = Arrangement.spacedBy(0.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+
+            // ========= 左半：文字 + 固定左下 + =========
+            Box(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxHeight()
+            ) {
+                Column(
+                    modifier = Modifier
+                        .align(Alignment.TopStart)
+                        .fillMaxWidth(),
+                    verticalArrangement = Arrangement.Top,
+                    horizontalAlignment = Alignment.Start
+                ) {
+                    Spacer(Modifier.height(primaryTopSpacing))
+
+                    Text(
+                        text = primary,
+                        style = primaryTextStyle,
+                        fontSize = primaryFontSize ?: primaryTextStyle.fontSize,
+                        color = HomeCardStyles.Text.primary(),
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.offset(x = (-2).dp, y = primaryYOffset)
+                    )
+
+                    Spacer(Modifier.height(gapPrimaryToSecondary))
+
+                    if (!secondary.isNullOrBlank()) {
+                        Text(
+                            text = secondary,
+                            style = secondaryTextStyle,
+                            fontSize = secondaryFontSize ?: secondaryTextStyle.fontSize,
+                            color = HomeCardStyles.Text.secondary(),
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                            modifier = Modifier.offset(y = secondaryYOffset)
+                        )
+                    } else {
+                        Spacer(Modifier.height(18.dp))
+                    }
+                }
+
+                WeightAddButton(
+                    onClick = onAddWeightClick,
+                    outerSizeDp = 34.dp,
+                    innerSizeDp = 26.dp,
+                    iconSizeDp = 21.dp,
+                    modifier = Modifier
+                        .align(Alignment.BottomStart)
+                        .offset(x = (-5).dp, y = (1).dp)
+                )
+            }
+
+            // ========= 右半：圓環 =========
+            Box(
+                modifier = Modifier
+                    .weight(0.95f)
+                    .fillMaxHeight(),
+                contentAlignment = Alignment.Center
+            ) {
+                Box(
+                    modifier = Modifier.size(ringSize),
+                    contentAlignment = Alignment.Center
+                ) {
+                    GaugeRing(
+                        progress = progress,
+                        sizeDp = ringSize,
+                        strokeDp = ringStroke,
+                        trackColor = HomeCardStyles.Ring.track(),
+                        progressColor = ringColor,
+                        drawTopTick = true,
+                        tickColor = ringColor
+                    )
+
+                    // ✅ 中心灰圓底 + bullseye
+                    Surface(
+                        color = centerDiskColor,
+                        shape = CircleShape,
+                        modifier = Modifier.size(centerDisk)
+                    ) {
+                        Box(
+                            modifier = Modifier.fillMaxSize(),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Image(
+                                painter = painterResource(id = centerIconRes),
+                                contentDescription = centerIconDescription,
+                                modifier = Modifier
+                                    .size(17.dp)
+                                    .padding(0.dp),
+                                contentScale = ContentScale.Fit,
+                                colorFilter = centerIconTint?.let { ColorFilter.tint(it) }
+                            )
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun WeightAddButton(
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    outerSizeDp: Dp = 36.dp,
+    innerSizeDp: Dp = 30.dp,
+    iconSizeDp: Dp = 24.dp
+) {
+    val scope = rememberCoroutineScope()
+    var flashAlphaGoal by remember { mutableFloatStateOf(0f) }
+
+    val animatedAlpha by animateFloatAsState(
+        targetValue = flashAlphaGoal,
+        label = "weightAddFlash"
+    )
+
+    val noRipple = remember { MutableInteractionSource() }
+
+    Box(
+        modifier = modifier
+            .size(outerSizeDp)
+            .caloShapeClickable(interactionSource = noRipple, indication = null) {
+                scope.launch {
+                    flashAlphaGoal = 0.4f
+                    delay(120)
+                    flashAlphaGoal = 0f
+                }
+                onClick()
+            },
+        contentAlignment = Alignment.Center
+    ) {
+        if (animatedAlpha > 0f) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(
+                        color = HomeCardStyles.Action.flash().copy(alpha = animatedAlpha * 0.4f),
+                        shape = CircleShape
+                    )
+            )
+        }
+
+        Box(
+            modifier = Modifier
+                .size(innerSizeDp)
+                .background(HomeCardStyles.Action.addContainer(), CircleShape)
+                .border(width = 0.8.dp, color = HomeCardStyles.Action.addBorder(), shape = CircleShape),
+            contentAlignment = Alignment.Center
+        ) {
+            Icon(
+                imageVector = Icons.Filled.Add,
+                contentDescription = "Add weight log",
+                tint = HomeCardStyles.Action.addContent(),
+                modifier = Modifier.size(iconSizeDp)
+            )
+        }
+    }
+}

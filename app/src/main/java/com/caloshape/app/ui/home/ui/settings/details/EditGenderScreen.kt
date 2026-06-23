@@ -1,0 +1,254 @@
+package com.caloshape.app.ui.home.ui.settings.details
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.caloshape.app.R
+import com.caloshape.app.ui.common.design.CaloShapeColors
+import com.caloshape.app.ui.common.design.CaloShapeEditBottomActionBar
+import com.caloshape.app.ui.common.design.CaloShapeScreenFrame
+import com.caloshape.app.ui.common.design.CaloShapeTopBar
+import com.caloshape.app.ui.common.haptic.caloShapeClickable
+import com.caloshape.app.ui.home.components.HomeBackground
+import com.caloshape.app.ui.home.components.HomeCardStyles
+import com.caloshape.app.ui.home.ui.settings.details.model.EditGenderViewModel
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun EditGenderScreen(
+    vm: EditGenderViewModel,
+    onBack: () -> Unit,
+    onSaved: () -> Unit,
+) {
+    val ui by vm.ui.collectAsState()
+    val colors = CaloShapeColors.current()
+    val isDark = colors.background == CaloShapeColors.Dark.background
+    val screenBackground = if (isDark) Color.Transparent else colors.background
+    val errorColor = if (isDark) HomeCardStyles.Status.dangerText() else colors.error
+    val privacyTextColor = if (isDark) HomeCardStyles.Text.muted() else colors.textMuted
+    val savedGender by vm.genderState.collectAsState() // ✅ 可能是 null
+    LaunchedEffect(Unit) { vm.refreshGenderFromServerIfNeeded() }
+
+    // ✅ 關鍵：不要用預設 OTHER 當初始，先用 null
+    var selected by rememberSaveable { mutableStateOf<EditGenderViewModel.GenderKey?>(null) }
+
+    // ✅ 只在「尚未選過」時，才吃進資料層的 savedGender，避免覆蓋使用者手動點選
+    LaunchedEffect(savedGender) {
+        if (selected == null && savedGender != null) {
+            selected = savedGender
+        }
+    }
+
+    Box(modifier = Modifier.fillMaxSize()) {
+        if (isDark) {
+            HomeBackground(
+                modifier = Modifier.matchParentSize(),
+                darkTheme = true,
+                enableNoise = false
+            )
+        }
+
+        Scaffold(
+            containerColor = screenBackground,
+            topBar = {
+                CaloShapeTopBar(
+                    title = stringResource(R.string.edit_gender_title),
+                    onBack = onBack
+                )
+            },
+            bottomBar = {
+                CaloShapeEditBottomActionBar(
+                    primaryText = stringResource(R.string.common_save),
+                    onPrimaryClick = {
+                        selected?.let { sel ->
+                            vm.saveAndSyncGender(selected = sel, onSuccess = onSaved)
+                        }
+                    },
+                    primaryEnabled = !ui.saving && selected != null,
+                    primaryLoading = ui.saving,
+                )
+            }
+        ) { innerPadding ->
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(screenBackground)
+                    .padding(innerPadding)
+                    .padding(
+                        start = CaloShapeScreenFrame.detailHorizontal,
+                        top = CaloShapeScreenFrame.detailContentTopNudged,
+                        end = CaloShapeScreenFrame.detailHorizontal,
+                        bottom = CaloShapeScreenFrame.detailBottom
+                    ),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Spacer(Modifier.height(170.dp))
+
+                ui.error?.let {
+                    Spacer(Modifier.height(10.dp))
+                    Text(
+                        text = it,
+                        color = errorColor,
+                        style = MaterialTheme.typography.bodyMedium,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = CaloShapeScreenFrame.contentHorizontalWide),
+                        textAlign = TextAlign.Center
+                    )
+                }
+
+                // ✅ 載入中：不選任何項目（不會先亮 OTHER）
+                GenderSegmented(
+                    selected = selected,
+                    onSelect = { selected = it },
+                    modifier = Modifier.fillMaxWidth(0.88f)
+                )
+
+                Spacer(Modifier.height(22.dp))
+
+                Text(
+                    text = stringResource(R.string.edit_gender_privacy_note),
+                    fontSize = 12.sp,
+                    color = privacyTextColor,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth(0.9f)
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun GenderSegmented(
+    selected: EditGenderViewModel.GenderKey?, // ✅ nullable
+    onSelect: (EditGenderViewModel.GenderKey) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val widthFraction = 1f   // 原本 0.90f → 更寬（最多到 1f）
+    val optionHeight = 65.dp    // 原本 68.dp → 更矮
+    val corner = 32.dp          // 你原本 36.dp，縮一點比較順（可不改）
+
+    Column(
+        modifier = modifier.fillMaxWidth(),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        GenderOptionCard(
+            text = stringResource(R.string.gender_male),
+            selected = selected == EditGenderViewModel.GenderKey.MALE,
+            onClick = { onSelect(EditGenderViewModel.GenderKey.MALE) },
+            widthFraction = widthFraction,
+            height = optionHeight,
+            corner = corner
+        )
+        Spacer(Modifier.height(21.dp))
+        GenderOptionCard(
+            text = stringResource(R.string.gender_female),
+            selected = selected == EditGenderViewModel.GenderKey.FEMALE,
+            onClick = { onSelect(EditGenderViewModel.GenderKey.FEMALE) },
+            widthFraction = widthFraction,
+            height = optionHeight,
+            corner = corner
+        )
+        Spacer(Modifier.height(21.dp))
+        GenderOptionCard(
+            text = stringResource(R.string.gender_other),
+            selected = selected == EditGenderViewModel.GenderKey.OTHER,
+            onClick = { onSelect(EditGenderViewModel.GenderKey.OTHER) },
+            widthFraction = widthFraction,
+            height = optionHeight,
+            corner = corner
+        )
+    }
+}
+
+@Composable
+private fun GenderOptionCard(
+    text: String,
+    selected: Boolean,
+    onClick: () -> Unit,
+    widthFraction: Float,
+    height: Dp,
+    corner: Dp,
+) {
+    val shape = RoundedCornerShape(corner)
+    val colors = CaloShapeColors.current()
+    val isDark = colors.background == CaloShapeColors.Dark.background
+    val container = when {
+        selected && isDark -> HomeCardStyles.Camera.selectedTile()
+        selected -> colors.primaryButtonContainer
+        isDark -> HomeCardStyles.Surface.raisedAlt()
+        else -> colors.surfaceMuted
+    }
+    val content = when {
+        selected && isDark -> HomeCardStyles.Camera.selectedTileContent()
+        selected -> colors.primaryButtonContent
+        isDark -> HomeCardStyles.Text.primary()
+        else -> colors.textPrimary
+    }
+    val borderColor = when {
+        selected && isDark -> HomeCardStyles.Camera.tileBorder(selected = true)
+        isDark -> HomeCardStyles.Surface.borderColor()
+        else -> Color.Transparent
+    }
+    val interaction = remember { MutableInteractionSource() }
+
+    Box(
+        modifier = Modifier
+            .fillMaxWidth(widthFraction)
+            .height(height)
+            .clip(shape)
+            .background(container)
+            .border(
+                width = if (isDark) 1.2.dp else 0.dp,
+                color = borderColor,
+                shape = shape
+            )
+            .caloShapeClickable(
+                interactionSource = interaction,
+                indication = null,
+                role = Role.Button
+            ) { onClick() },
+        contentAlignment = Alignment.Center
+    ) {
+        Text(
+            text = text,
+            color = content,
+            style = MaterialTheme.typography.bodyLarge.copy(
+                fontWeight = FontWeight.Medium,
+                letterSpacing = 0.2.sp
+            ),
+            textAlign = TextAlign.Center
+        )
+    }
+}
