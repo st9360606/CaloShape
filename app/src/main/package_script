@@ -1,0 +1,1 @@
+.\gradlew clean :app:bundleProdRelease --no-problems-report --warning-mode summary
