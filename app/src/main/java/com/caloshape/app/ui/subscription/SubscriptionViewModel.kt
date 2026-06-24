@@ -22,7 +22,7 @@ enum class SubscriptionErrorKind {
 }
 
 data class SubscriptionUiState(
-    val selectedProductId: String = CaloShapeBillingProducts.MONTHLY,
+    val selectedProductId: String = CaloShapeBillingProducts.YEARLY,
     val purchasing: Boolean = false,
     val error: String? = null,
     val errorKind: SubscriptionErrorKind? = null,
@@ -35,8 +35,8 @@ data class SubscriptionUiState(
     val yearlyBaseMonthlyEquivalent: String = "NT$83.25",
     val yearlyDiscountPrice: String = "NT$649.00",
     val yearlyDiscountMonthlyEquivalent: String = "NT$54.08",
-    val yearlyTrialDiscountPrice: String = "NT$649.00",
-    val yearlyTrialDiscountMonthlyEquivalent: String = "NT$54.08"
+    val yearlyTrialDiscountPrice: String = "NT$999.00",
+    val yearlyTrialDiscountMonthlyEquivalent: String = "NT$83.25"
 ) {
     val busy: Boolean
         get() = purchasing
@@ -85,7 +85,7 @@ class SubscriptionViewModel @Inject constructor(
             val base = runCatching {
                 billingGateway.querySubscriptionOfferPrice(
                     productId = CaloShapeBillingProducts.YEARLY,
-                    offerTag = null
+                    offerTag = CaloShapeBillingProducts.OfferTags.DEFAULT_YEARLY
                 )
             }.getOrNull()
 
@@ -99,7 +99,7 @@ class SubscriptionViewModel @Inject constructor(
             val trialDiscount = runCatching {
                 billingGateway.querySubscriptionOfferPrice(
                     productId = CaloShapeBillingProducts.YEARLY,
-                    offerTag = CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_DISCOUNT_YEARLY
+                    offerTag = CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_YEARLY
                 )
             }.getOrNull()
 

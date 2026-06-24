@@ -163,7 +163,7 @@ fun OnboardSubscriptionScreen(
                                 vm.purchaseProduct(
                                     activity = activity,
                                     productId = CaloShapeBillingProducts.YEARLY,
-                                    offerTag = CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_DISCOUNT_YEARLY,
+                                    offerTag = CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_YEARLY,
                                     onSuccess = onPurchased,
                                     onCancelled = {
                                         step = OnboardPaywallStep.Spin
@@ -193,14 +193,13 @@ fun OnboardSubscriptionScreen(
                             /**
                              * 圖2：Google Play 原價 yearly plan
                              *
-                             * 這裡不要傳 DEFAULT_YEARLY offerTag。
-                             * 原價 base plan 通常是 regular base plan，
-                             * 由 PlayBillingGateway 在 offerTag=null 時自動選。
+                             * 明確指定 default-yearly base plan，避免未來新增其他 base plan
+                             * 時由 null 自動選到非預期方案。
                              */
                             vm.purchaseProduct(
                                 activity = activity,
                                 productId = CaloShapeBillingProducts.YEARLY,
-                                offerTag = null,
+                                offerTag = CaloShapeBillingProducts.OfferTags.DEFAULT_YEARLY,
                                 onSuccess = onPurchased,
                                 onCancelled = {
                                     step = OnboardPaywallStep.Spin
@@ -256,7 +255,7 @@ fun OnboardSubscriptionScreen(
                         val offerTag = if (
                             trialEnabled && ui.trialEligible && ui.yearlyTrialOfferAvailable
                         ) {
-                            CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_DISCOUNT_YEARLY
+                            CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_YEARLY
                         } else {
                             CaloShapeBillingProducts.OfferTags.ONBOARD_DISCOUNT_YEARLY
                         }
