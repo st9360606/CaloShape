@@ -118,16 +118,28 @@ fun OnboardSubscriptionScreen(
     var trialEnabled by rememberSaveable { mutableStateOf(false) }
     var trialToggleTouched by rememberSaveable { mutableStateOf(false) }
     var restoreRequiredDismissedThisSession by rememberSaveable { mutableStateOf(false) }
+    val requiredOfferPricesAvailable =
+        !ui.yearlyBasePrice.isNullOrBlank() &&
+                !ui.yearlyBaseMonthlyEquivalent.isNullOrBlank() &&
+                !ui.yearlyDiscountPrice.isNullOrBlank() &&
+                !ui.yearlyDiscountMonthlyEquivalent.isNullOrBlank()
+    val subscriptionPriceUnavailable =
+        ui.subscriptionOffersLoaded &&
+                (ui.subscriptionOfferPriceLoadFailed || !requiredOfferPricesAvailable)
+    val trialOfferAvailable =
+        ui.yearlyTrialOfferAvailable &&
+                !ui.yearlyTrialDiscountPrice.isNullOrBlank() &&
+                !ui.yearlyTrialDiscountMonthlyEquivalent.isNullOrBlank()
 
     LaunchedEffect(
         ui.trialEligibilityLoaded,
         ui.subscriptionOffersLoaded,
         ui.trialEligible,
-        ui.yearlyTrialOfferAvailable
+        trialOfferAvailable
     ) {
         if (!ui.trialEligibilityLoaded || !ui.subscriptionOffersLoaded) return@LaunchedEffect
 
-        if (!ui.trialEligible || !ui.yearlyTrialOfferAvailable) {
+        if (!ui.trialEligible || !trialOfferAvailable) {
             trialEnabled = false
             trialToggleTouched = false
             return@LaunchedEffect
@@ -139,21 +151,26 @@ fun OnboardSubscriptionScreen(
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
-        when (step) {
+        if (!ui.trialEligibilityLoaded || !ui.subscriptionOffersLoaded) {
+            OnboardSubscriptionLoading()
+        } else if (subscriptionPriceUnavailable) {
+            OnboardSubscriptionPriceUnavailable(
+                onClose = onCloseToSignIn,
+                onRetry = vm::loadSubscriptionOfferPrices
+            )
+        } else when (step) {
             OnboardPaywallStep.Intro -> {
-                if (!ui.trialEligibilityLoaded || !ui.subscriptionOffersLoaded) {
-                    OnboardSubscriptionLoading()
-                } else if (
+                if (
                     resolveOnboardIntroVariant(
                         trialEligible = ui.trialEligible,
-                        trialOfferAvailable = ui.yearlyTrialOfferAvailable
+                        trialOfferAvailable = trialOfferAvailable
                     ) == OnboardIntroVariant.Trial
                 ) {
                     OnboardTrialIntro(
                         purchasing = ui.purchasing,
                         helperText = stringResource(
                             R.string.subscription_three_day_trial_helper_format,
-                            ui.yearlyTrialDiscountPrice
+                            ui.yearlyTrialDiscountPrice.orEmpty()
                         ),
                         onClose = onCloseToSignIn,
                         onContinue = {
@@ -174,7 +191,7 @@ fun OnboardSubscriptionScreen(
                     )
                 } else {
                     val yearlyBaseMonthlyEquivalentText = localizedMonthlyEquivalentText(
-                    monthlyEquivalent = ui.yearlyBaseMonthlyEquivalent
+                    monthlyEquivalent = ui.yearlyBaseMonthlyEquivalent.orEmpty()
                 )
 
                 OnboardSubscriptionIntro(
@@ -182,7 +199,7 @@ fun OnboardSubscriptionScreen(
                     buttonText = stringResource(R.string.common_continue_btn),
                     helperText = stringResource(
                         R.string.subscription_intro_helper_format,
-                        ui.yearlyBasePrice,
+                        ui.yearlyBasePrice.orEmpty(),
                         yearlyBaseMonthlyEquivalentText
                     ),
                     onClose = onCloseToSignIn,
@@ -224,25 +241,25 @@ fun OnboardSubscriptionScreen(
                     purchasing = ui.purchasing,
                     trialEnabled = trialEnabled,
                     trialEligible = ui.trialEligible,
-                    trialOfferAvailable = ui.yearlyTrialOfferAvailable,
+                    trialOfferAvailable = trialOfferAvailable,
                     trialEligibilityLoaded = ui.trialEligibilityLoaded,
-                    originalYearlyPrice = ui.yearlyBasePrice,
+                    originalYearlyPrice = ui.yearlyBasePrice.orEmpty(),
                     offerYearlyPrice = if (
-                        trialEnabled && ui.trialEligible && ui.yearlyTrialOfferAvailable
+                        trialEnabled && ui.trialEligible && trialOfferAvailable
                     ) {
-                        ui.yearlyTrialDiscountPrice
+                        ui.yearlyTrialDiscountPrice.orEmpty()
                     } else {
-                        ui.yearlyDiscountPrice
+                        ui.yearlyDiscountPrice.orEmpty()
                     },
                     monthlyEquivalent = if (
-                        trialEnabled && ui.trialEligible && ui.yearlyTrialOfferAvailable
+                        trialEnabled && ui.trialEligible && trialOfferAvailable
                     ) {
-                        ui.yearlyTrialDiscountMonthlyEquivalent
+                        ui.yearlyTrialDiscountMonthlyEquivalent.orEmpty()
                     } else {
-                        ui.yearlyDiscountMonthlyEquivalent
+                        ui.yearlyDiscountMonthlyEquivalent.orEmpty()
                     },
                     onTrialEnabledChange = { enabled ->
-                        if (!ui.trialEligible || !ui.yearlyTrialOfferAvailable) {
+                        if (!ui.trialEligible || !trialOfferAvailable) {
                             trialEnabled = false
                             trialToggleTouched = false
                         } else {
@@ -253,7 +270,7 @@ fun OnboardSubscriptionScreen(
                     onClose = onCloseToSignIn,
                     onContinue = {
                         val offerTag = if (
-                            trialEnabled && ui.trialEligible && ui.yearlyTrialOfferAvailable
+                            trialEnabled && ui.trialEligible && trialOfferAvailable
                         ) {
                             CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_YEARLY
                         } else {
@@ -534,6 +551,80 @@ private fun OnboardSubscriptionLoading() {
         contentAlignment = Alignment.Center
     ) {
         CircularProgressIndicator(color = Color(0xFF1C1923))
+    }
+}
+
+@Composable
+private fun OnboardSubscriptionPriceUnavailable(
+    onClose: () -> Unit,
+    onRetry: () -> Unit
+) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.White)
+            .navigationBarsPadding()
+            .padding(horizontal = CaloShapeScreenFrame.contentHorizontalWide)
+    ) {
+        IconButton(
+            onClick = rememberClickWithHaptic(onClick = onClose),
+            modifier = Modifier
+                .align(Alignment.TopStart)
+                .padding(top = 60.dp)
+                .size(42.dp)
+        ) {
+            Icon(
+                imageVector = Icons.Default.Close,
+                contentDescription = stringResource(R.string.common_close),
+                tint = Color(0xFF71717A),
+                modifier = Modifier.size(28.dp)
+            )
+        }
+
+        Column(
+            modifier = Modifier
+                .align(Alignment.Center)
+                .fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = stringResource(R.string.subscription_price_unavailable_title),
+                color = Color(0xFF111111),
+                fontSize = 28.sp,
+                lineHeight = 34.sp,
+                fontWeight = FontWeight.ExtraBold,
+                textAlign = TextAlign.Center
+            )
+
+            Spacer(Modifier.height(12.dp))
+
+            Text(
+                text = stringResource(R.string.subscription_price_unavailable_body),
+                color = Color(0xFF52525B),
+                fontSize = 16.sp,
+                lineHeight = 22.sp,
+                fontWeight = FontWeight.Medium,
+                textAlign = TextAlign.Center
+            )
+
+            Spacer(Modifier.height(26.dp))
+
+            Button(
+                onClick = rememberClickWithHaptic(onClick = onRetry),
+                shape = RoundedCornerShape(16.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFF111111),
+                    contentColor = Color.White
+                ),
+                contentPadding = PaddingValues(horizontal = 28.dp, vertical = 14.dp)
+            ) {
+                Text(
+                    text = stringResource(R.string.common_retry),
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+        }
     }
 }
 

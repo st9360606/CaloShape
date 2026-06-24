@@ -264,6 +264,8 @@
     <!-- Onboarding: OnboardSubscriptionScreen  Paywall -->
     <string name="subscription_price_per_month_format">%1$s/mês</string>
     <string name="subscription_price_per_month_unit">/mês</string>
+    <string name="subscription_price_unavailable_title">Preço indisponível</string>
+    <string name="subscription_price_unavailable_body">Não foi possível obter seu preço local do Google Play agora. Tente novamente.</string>
 
 
     <!-- Onboarding: OnboardSubscriptionIntro -->

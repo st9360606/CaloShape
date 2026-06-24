@@ -264,6 +264,8 @@
     <!-- Onboarding: OnboardSubscriptionScreen  Paywall -->
     <string name="subscription_price_per_month_format">%1$s/月</string>
     <string name="subscription_price_per_month_unit">/月</string>
+    <string name="subscription_price_unavailable_title">価格を取得できません</string>
+    <string name="subscription_price_unavailable_body">現在、お住まいの地域の Google Play 価格を取得できません。もう一度お試しください。</string>
 
 
     <!-- Onboarding: OnboardSubscriptionIntro -->

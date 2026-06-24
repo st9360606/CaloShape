@@ -30,13 +30,14 @@ data class SubscriptionUiState(
     val trialEligible: Boolean = false,
     val trialEligibilityLoaded: Boolean = false,
     val subscriptionOffersLoaded: Boolean = false,
+    val subscriptionOfferPriceLoadFailed: Boolean = false,
     val yearlyTrialOfferAvailable: Boolean = false,
-    val yearlyBasePrice: String = "NT$999.00",
-    val yearlyBaseMonthlyEquivalent: String = "NT$83.25",
-    val yearlyDiscountPrice: String = "NT$649.00",
-    val yearlyDiscountMonthlyEquivalent: String = "NT$54.08",
-    val yearlyTrialDiscountPrice: String = "NT$999.00",
-    val yearlyTrialDiscountMonthlyEquivalent: String = "NT$83.25"
+    val yearlyBasePrice: String? = null,
+    val yearlyBaseMonthlyEquivalent: String? = null,
+    val yearlyDiscountPrice: String? = null,
+    val yearlyDiscountMonthlyEquivalent: String? = null,
+    val yearlyTrialDiscountPrice: String? = null,
+    val yearlyTrialDiscountMonthlyEquivalent: String? = null
 ) {
     val busy: Boolean
         get() = purchasing
@@ -82,6 +83,13 @@ class SubscriptionViewModel @Inject constructor(
 
     fun loadSubscriptionOfferPrices() {
         viewModelScope.launch {
+            _ui.update {
+                it.copy(
+                    subscriptionOffersLoaded = false,
+                    subscriptionOfferPriceLoadFailed = false
+                )
+            }
+
             val base = runCatching {
                 billingGateway.querySubscriptionOfferPrice(
                     productId = CaloShapeBillingProducts.YEARLY,
@@ -103,18 +111,22 @@ class SubscriptionViewModel @Inject constructor(
                 )
             }.getOrNull()
 
+            val baseReady = base?.formattedMonthlyEquivalent != null
+            val discountReady = discount?.formattedMonthlyEquivalent != null
+            val requiredPricesReady = baseReady && discountReady
+            val trialReady = trialDiscount?.formattedMonthlyEquivalent != null
+
             _ui.update {
                 it.copy(
                     subscriptionOffersLoaded = true,
-                    yearlyTrialOfferAvailable = trialDiscount != null,
-                    yearlyBasePrice = base?.formattedPrice ?: it.yearlyBasePrice,
-                    yearlyBaseMonthlyEquivalent = base?.formattedMonthlyEquivalent ?: it.yearlyBaseMonthlyEquivalent,
-                    yearlyDiscountPrice = discount?.formattedPrice ?: it.yearlyDiscountPrice,
-                    yearlyDiscountMonthlyEquivalent = discount?.formattedMonthlyEquivalent ?: it.yearlyDiscountMonthlyEquivalent,
-                    yearlyTrialDiscountPrice = trialDiscount?.formattedPrice ?: discount?.formattedPrice ?: it.yearlyTrialDiscountPrice,
+                    subscriptionOfferPriceLoadFailed = !requiredPricesReady,
+                    yearlyTrialOfferAvailable = trialReady,
+                    yearlyBasePrice = base?.formattedPrice,
+                    yearlyBaseMonthlyEquivalent = base?.formattedMonthlyEquivalent,
+                    yearlyDiscountPrice = discount?.formattedPrice,
+                    yearlyDiscountMonthlyEquivalent = discount?.formattedMonthlyEquivalent,
+                    yearlyTrialDiscountPrice = trialDiscount?.formattedPrice,
                     yearlyTrialDiscountMonthlyEquivalent = trialDiscount?.formattedMonthlyEquivalent
-                        ?: discount?.formattedMonthlyEquivalent
-                        ?: it.yearlyTrialDiscountMonthlyEquivalent
                 )
             }
         }
