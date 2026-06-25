@@ -82,8 +82,8 @@
     <string name="signin_terms">Conditions</string>
     <string name="signin_and">et</string>
     <string name="signin_privacy">Politique de confidentialité</string>
-    <string name="signin_url_terms">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</string>
-    <string name="signin_url_privacy">https://www.viraldevelopment.co/index.php/privacy-policy</string>
+    <string name="signin_url_terms">https://caloshape.com/terms</string>
+    <string name="signin_url_privacy">https://caloshape.com/privacy</string>
 
 
     <!-- SignInSheetHost 控制 Sheet 是否顯示、處理狀態、接外部 callback -->
@@ -1064,9 +1064,9 @@
 
 
     <!-- CaloShapeNavHost -->
-    <string name="url_terms">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</string>
-    <string name="url_privacy">https://www.viraldevelopment.co/index.php/privacy-policy</string>
-    <string name="url_support_email">mailto:support@viraldevelopment.co?subject=Support%20Request</string>
+    <string name="url_terms">https://caloshape.com/terms</string>
+    <string name="url_privacy">https://caloshape.com/privacy</string>
+    <string name="url_support_email">mailto:support@caloshape.com?subject=Support%20Request</string>
     <string name="camera_manual_entry_not_ready">Manual entry is not ready yet. Switching to label scanner for now.</string>
 
 

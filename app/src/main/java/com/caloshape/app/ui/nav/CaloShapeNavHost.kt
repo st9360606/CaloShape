@@ -3451,7 +3451,7 @@ private fun openNetworkSettings(ctx: Context) {
 
 private fun openSupportEmail(ctx: Context) {
     val intent = Intent(Intent.ACTION_SENDTO).apply {
-        data = Uri.parse("mailto:support@bitcaloshape.example")
+        data = Uri.parse("mailto:support@caloshape.com")
         putExtra(Intent.EXTRA_SUBJECT, "CaloShape Support")
         addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
     }
