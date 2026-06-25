@@ -8,16 +8,15 @@ data class LangOption(
 )
 
 val LANGS: List<LangOption> = listOf(
-    LangOption("en-US", "English (United States)", "🇺🇸", "EN"),
-    LangOption("zh-CN", "简体中文", "🇨🇳", "简"),
-    LangOption("zh-HK", "繁體中文", "🇭🇰", "繁"),
+    LangOption("en-US", "English", "🇺🇸", "EN"),
     LangOption("ja", "日本語", "🇯🇵", "JP"),
     LangOption("de", "Deutsch", "🇩🇪", "DE"),
     LangOption("fr", "Français", "🇫🇷", "FR"),
     LangOption("ko", "한국어", "🇰🇷", "KR"),
-    LangOption("es-419", "Español (Latinoamérica)", "🌎", "LA"),
-    LangOption("es", "Español (España)", "🇪🇸", "ES"),
-    LangOption("pt-BR", "Português (Brasil)", "🇧🇷", "BR")
+    LangOption("es", "Español", "🇪🇸", "ES"),
+    LangOption("zh-CN", "简体中文", "🇨🇳", "CH"),
+    LangOption("zh-HK", "繁體中文", "🇭🇰", "HK"),
+    LangOption("pt-BR", "Português", "🇧🇷", "BR")
 )
 
 fun langShortLabelFromTag(tag: String): String {

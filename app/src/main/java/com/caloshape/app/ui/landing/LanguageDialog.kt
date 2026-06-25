@@ -51,16 +51,15 @@ import com.caloshape.app.ui.common.haptic.rememberClickWithHaptic
 data class LangItem(val label: String, val tag: String, val flag: String)
 
 val LANGS = listOf(
-    LangItem("English (United States)", "en-US", "🇺🇸"),
-    LangItem("简体中文", "zh-CN", "🇨🇳"),
-    LangItem("繁體中文", "zh-HK", "🇭🇰"),
+    LangItem("English", "en-US", "🇺🇸"),
     LangItem("日本語", "ja", "🇯🇵"),
     LangItem("Deutsch", "de", "🇩🇪"),
     LangItem("Français", "fr", "🇫🇷"),
     LangItem("한국어", "ko", "🇰🇷"),
-    LangItem("Español (Latinoamérica)", "es-419", "🌎"),
-    LangItem("Español (España)", "es", "🇪🇸"),
-    LangItem("Português (Brasil)", "pt-BR", "🇧🇷")
+    LangItem("Español", "es", "🇪🇸"),
+    LangItem("简体中文", "zh-CN", "🇨🇳"),
+    LangItem("繁體中文", "zh-HK", "🇭🇰"),
+    LangItem("Português", "pt-BR", "🇧🇷")
 )
 
 @Composable

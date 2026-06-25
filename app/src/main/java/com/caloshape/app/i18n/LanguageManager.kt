@@ -7,11 +7,6 @@ import java.util.Locale
 object LanguageManager {
     const val DEFAULT_LANGUAGE_TAG = "en-US"
 
-    private val latinAmericanSpanishRegions = setOf(
-        "419", "AR", "BO", "BR", "BZ", "CL", "CO", "CR", "CU", "DO", "EC",
-        "GT", "HN", "MX", "NI", "PA", "PE", "PR", "PY", "SV", "US", "UY", "VE"
-    )
-
     private val canonicalTags = mapOf(
         "en" to "en-US",
         "en-us" to "en-US",
@@ -42,7 +37,6 @@ object LanguageManager {
         "ko-kr" to "ko",
         "es" to "es",
         "es-es" to "es",
-        "es-419" to "es-419",
         "pt" to "pt-BR",
         "pt-br" to "pt-BR"
     )
@@ -89,7 +83,7 @@ object LanguageManager {
             "de" -> "de"
             "fr" -> "fr"
             "ko" -> "ko"
-            "es" -> if (region in latinAmericanSpanishRegions) "es-419" else "es"
+            "es" -> "es"
             "pt" -> if (region.isBlank() || region == "BR") "pt-BR" else null
             else -> null
         }
