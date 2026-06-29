@@ -45,8 +45,8 @@ import androidx.core.net.toUri
 import androidx.health.connect.client.HealthConnectClient
 import androidx.health.connect.client.PermissionController
 import androidx.health.connect.client.permission.HealthPermission
+import androidx.health.connect.client.records.ActiveCaloriesBurnedRecord
 import androidx.health.connect.client.records.ExerciseSessionRecord
-import androidx.health.connect.client.records.SleepSessionRecord
 import androidx.health.connect.client.records.StepsRecord
 import com.caloshape.app.R
 import com.caloshape.app.ui.common.design.CaloShapeOnboardingBottomBar
@@ -71,7 +71,7 @@ fun HealthConnectIntroScreen(
         setOf(
             HealthPermission.getReadPermission(StepsRecord::class),
             HealthPermission.getReadPermission(ExerciseSessionRecord::class),
-            HealthPermission.getReadPermission(SleepSessionRecord::class)
+            HealthPermission.getReadPermission(ActiveCaloriesBurnedRecord::class)
         )
     }
 

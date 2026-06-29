@@ -195,7 +195,7 @@
     <string name="onboard_hc_connect_body">在 CaloShape AI 與健康應用之間同步日常活動，取得更完整的紀錄與分析。</string>
     <string name="onboard_hc_permission_rationale_title_prefix">為什麼 CaloShape 使用</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape 會讀取你的步數、運動與睡眠資料，用來估算每日活動消耗、更新卡路里儀表板，並提供更完整的進度分析。你可以隨時在 Health Connect 中撤銷授權。</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape 會讀取你的步數、活動熱量與運動資料，用來估算每日活動消耗、更新卡路里儀表板，並提供更完整的進度分析。你可以隨時在 Health Connect 中撤銷授權。</string>
     <string name="onboard_hc_permission_rationale_button">了解</string>
 
 

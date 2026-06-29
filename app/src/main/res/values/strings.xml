@@ -193,7 +193,7 @@
     <string name="onboard_hc_connect_body">Sync daily activity between CaloShape AI and health apps to get more complete records and insights.</string>
     <string name="onboard_hc_permission_rationale_title_prefix">Why CaloShape uses</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape reads your steps, exercise, and sleep data to estimate daily activity burn, update your calorie dashboard, and improve progress insights. You can revoke access anytime in Health Connect.</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape reads your steps, active calories, and exercise data to estimate daily activity burn, update your calorie dashboard, and improve progress insights. You can revoke access anytime in Health Connect.</string>
     <string name="onboard_hc_permission_rationale_button">Got it</string>
 
 
