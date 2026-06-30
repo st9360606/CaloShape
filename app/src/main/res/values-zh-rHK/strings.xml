@@ -283,19 +283,19 @@
 
     <!-- Onboarding: OnboardDiscountSpinScreen-->
     <string name="subscription_spin_title">解鎖專屬折扣</string>
-    <string name="subscription_spin_helper_ready">點擊 Spin 揭曉您的專屬禮物。</string>
+    <string name="subscription_spin_helper_ready">點擊 Spin 揭曉您的專屬禮物</string>
     <string name="subscription_spin_button">Spin</string>
     <string name="subscription_spinning_button">轉動中…</string>
     <string name="subscription_gift_offer_unlocked">禮物優惠已解鎖</string>
-    <string name="subscription_spin_helper_wait">請等待轉盤停止。</string>
-    <string name="subscription_spin_helper_revealed">優惠會在轉盤停止後揭曉。</string>
+    <string name="subscription_spin_helper_wait">請等待轉盤停止</string>
+    <string name="subscription_spin_helper_revealed">優惠會在轉盤停止後揭曉</string>
 
 
     <!-- Onboarding: OneTimeOfferHeroCard-->
     <string name="subscription_gift_unlocked_title">禮物已解鎖 🎁</string>
     <string name="subscription_gift_price_unlocked">禮物價格已解鎖</string>
     <string name="subscription_unlock_premium_for_only">只需以下價格即可解鎖 Premium</string>
-    <string name="subscription_discount_body">更快掃描餐點，更聰明追蹤營養素。\n每天穩定保持計畫。</string>
+    <string name="subscription_discount_body">更快掃描餐點，更聰明追蹤營養素。\n每天穩定保持計畫</string>
     <string name="subscription_yearly_price_format">%1$s/年</string>
     <string name="subscription_urgency_coffee">比一杯咖啡更划算</string>
     <string name="subscription_urgency_price_gone">關閉此畫面後，這個價格就會消失</string>
