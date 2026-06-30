@@ -296,7 +296,7 @@
     <string name="subscription_unlock_premium_for_only">Unlock premium for only</string>
     <string name="subscription_discount_body">Scan meals faster. Track macros smarter.\nStay on plan daily.</string>
     <string name="subscription_yearly_price_format">%1$s/year</string>
-    <string name="subscription_urgency_coffee">Less than a coffee.</string>
+    <string name="subscription_urgency_coffee">Less than a coffee</string>
     <string name="subscription_urgency_price_gone">Close this screen? This price is gone</string>
     <string name="subscription_urgency_waiting">What are you waiting for?</string>
 

@@ -8,6 +8,7 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
@@ -935,11 +936,11 @@ private fun OnboardOneTimeOfferScreen(
                 monthlyEquivalent = monthlyEquivalent
             )
 
-            Spacer(Modifier.height(18.dp))
+            Spacer(Modifier.height(14.dp))
 
             OneTimeOfferUrgencyCard()
 
-            Spacer(Modifier.height(22.dp))
+            Spacer(Modifier.height(14.dp))
 
             OneTimeOfferTrialCard(
                 trialEnabled = trialEnabled,
@@ -1238,8 +1239,8 @@ private fun OneTimeOfferUrgencyCard() {
                 color = Color.White,
                 shape = RoundedCornerShape(20.dp)
             )
-            .padding(horizontal = 18.dp, vertical = 16.dp),
-        verticalArrangement = Arrangement.spacedBy(20.dp)
+            .padding(horizontal = 18.dp, vertical = 12.dp),
+        verticalArrangement = Arrangement.spacedBy(18.dp)
     ) {
         OneTimeOfferUrgencyRow(
             emoji = "☕",
@@ -1329,6 +1330,7 @@ private fun OneTimeOfferTrialCard(
     val monthlyEquivalentText = localizedMonthlyEquivalentText(
         monthlyEquivalent = monthlyEquivalent
     )
+    val trialToggleInteractionSource = remember { MutableInteractionSource() }
 
     Column(
         modifier = Modifier.fillMaxWidth()
@@ -1338,7 +1340,9 @@ private fun OneTimeOfferTrialCard(
                 .fillMaxWidth()
                 .padding(horizontal = 4.dp)
                 .caloShapeClickable(
-                    enabled = !purchasing && trialEligible && trialOfferAvailable && trialEligibilityLoaded
+                    enabled = !purchasing && trialEligible && trialOfferAvailable && trialEligibilityLoaded,
+                    interactionSource = trialToggleInteractionSource,
+                    indication = null
                 ) {
                     onTrialEnabledChange(!trialEnabled)
                 },

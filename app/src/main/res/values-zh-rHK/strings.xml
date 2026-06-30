@@ -297,7 +297,7 @@
     <string name="subscription_unlock_premium_for_only">只需以下價格即可解鎖 Premium</string>
     <string name="subscription_discount_body">更快掃描餐點，更聰明追蹤營養素。\n每天穩定保持計畫。</string>
     <string name="subscription_yearly_price_format">%1$s/年</string>
-    <string name="subscription_urgency_coffee">比一杯咖啡更划算。</string>
+    <string name="subscription_urgency_coffee">比一杯咖啡更划算</string>
     <string name="subscription_urgency_price_gone">關閉此畫面後，這個價格就會消失</string>
     <string name="subscription_urgency_waiting">還在等什麼？</string>
 
