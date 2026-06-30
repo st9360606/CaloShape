@@ -171,7 +171,7 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">Using CaloShape AI can\ntriple your weight loss efficiency</string>
+    <string name="onboard_weight_loss_comparison_title">Using CaloShape AI can triple your weight\nloss efficiency</string>
     <string name="onboard_weight_loss_comparison_without_ai">Without\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">With\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_twenty_percent">20%</string>

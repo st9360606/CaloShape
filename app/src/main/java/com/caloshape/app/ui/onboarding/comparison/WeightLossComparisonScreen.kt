@@ -11,7 +11,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
@@ -25,6 +25,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -95,6 +96,8 @@ private fun ComparisonCard(
     modifier: Modifier = Modifier,
 ) {
     val isDark = CaloShapeOnboardingColors.isDark()
+    val comparisonUnitHeight = 50.dp
+    val pillarHeight = comparisonUnitHeight * 3.2f
     val cardShape = RoundedCornerShape(28.dp)
     val cardBorderColor = if (isDark) CaloShapeOnboardingColors.softBorder() else Color.Transparent
     val cardBrush = if (isDark) {
@@ -121,46 +124,54 @@ private fun ComparisonCard(
             .clip(cardShape)
             .background(cardBrush)
             .border(width = if (isDark) 1.2.dp else 0.dp, color = cardBorderColor, shape = cardShape)
-            .padding(horizontal = 28.dp, vertical = 42.dp)
+            .padding(horizontal = 20.dp, vertical = 28.dp)
     ) {
         Column(
             modifier = Modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.Center,
-                verticalAlignment = Alignment.Bottom
+                modifier = Modifier
+                    .widthIn(max = 224.dp)
+                    .fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(32.dp),
+                verticalAlignment = Alignment.Top
             ) {
                 ComparisonPillar(
                     title = stringResource(R.string.onboard_weight_loss_comparison_without_ai),
                     value = stringResource(R.string.onboard_weight_loss_comparison_twenty_percent),
                     valueContainerColor = if (isDark) Color(0xFF4A4558) else Color(0xFFE1E1E1),
                     valueTextColor = if (isDark) CaloShapeOnboardingColors.title() else Color(0xFF111114),
-                    bottomBlockHeight = 51.dp
+                    pillarHeight = pillarHeight,
+                    bottomBlockHeight = comparisonUnitHeight,
+                    modifier = Modifier.weight(1f)
                 )
-
-                Spacer(Modifier.width(36.dp))
 
                 ComparisonPillar(
                     title = stringResource(R.string.onboard_weight_loss_comparison_with_ai),
                     value = stringResource(R.string.onboard_weight_loss_comparison_two_times),
                     valueContainerColor = if (isDark) Color(0xFFF7F5FF) else Color(0xFF1C1822),
                     valueTextColor = if (isDark) Color(0xFF111114) else Color.White,
-                    bottomBlockHeight = 122.dp
+                    pillarHeight = pillarHeight,
+                    bottomBlockHeight = comparisonUnitHeight * 2.3f,
+                    modifier = Modifier.weight(1f)
                 )
             }
 
-            Spacer(Modifier.height(24.dp))
+            Spacer(Modifier.height(20.dp))
 
             Text(
                 text = stringResource(R.string.onboard_weight_loss_comparison_caption),
                 color = if (isDark) CaloShapeOnboardingColors.subtitle() else Color(0xFF57575D),
-                fontSize = 17.sp,
+                fontSize = 16.sp,
                 fontWeight = FontWeight.Medium,
-                lineHeight = 24.sp,
+                lineHeight = 22.sp,
                 textAlign = TextAlign.Center,
-                modifier = Modifier.fillMaxWidth()
+                maxLines = 3,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier
+                    .widthIn(max = 300.dp)
+                    .fillMaxWidth()
             )
         }
     }
@@ -172,6 +183,7 @@ private fun ComparisonPillar(
     value: String,
     valueContainerColor: Color,
     valueTextColor: Color,
+    pillarHeight: Dp,
     bottomBlockHeight: Dp,
     modifier: Modifier = Modifier,
 ) {
@@ -189,46 +201,61 @@ private fun ComparisonPillar(
 
     Column(
         modifier = modifier
-            .width(104.dp)
-            .height(202.dp)
-            .clip(RoundedCornerShape(18.dp))
-            .background(pillarBg)
-            .border(
-                width = if (CaloShapeOnboardingColors.isDark()) 1.dp else 0.dp,
-                color = pillarBorderColor,
-                shape = RoundedCornerShape(18.dp)
-            ),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Bottom
+            .widthIn(max = 96.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(
-            text = title,
-            color = titleColor,
-            fontSize = 17.sp,
-            fontWeight = FontWeight.ExtraBold,
-            lineHeight = 24.sp,
-            textAlign = TextAlign.Center,
+        Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(start = 8.dp, end = 8.dp, top = 14.dp)
-                .weight(1f),
-        )
+                .height(76.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = title,
+                color = titleColor,
+                fontSize = 15.sp,
+                fontWeight = FontWeight.ExtraBold,
+                lineHeight = 20.sp,
+                textAlign = TextAlign.Center,
+                maxLines = 3,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 4.dp)
+            )
+        }
+
+        Spacer(Modifier.height(8.dp))
 
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(bottomBlockHeight)
+                .height(pillarHeight)
                 .clip(RoundedCornerShape(18.dp))
-                .background(valueContainerColor),
-            contentAlignment = Alignment.Center
+                .background(pillarBg)
+                .border(
+                    width = if (CaloShapeOnboardingColors.isDark()) 1.dp else 0.dp,
+                    color = pillarBorderColor,
+                    shape = RoundedCornerShape(18.dp)
+                ),
+            contentAlignment = Alignment.BottomCenter
         ) {
-            Text(
-                text = value,
-                color = valueTextColor,
-                fontSize = 18.sp,
-                fontWeight = FontWeight.Medium,
-                textAlign = TextAlign.Center
-            )
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(bottomBlockHeight)
+                    .clip(RoundedCornerShape(18.dp))
+                    .background(valueContainerColor),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = value,
+                    color = valueTextColor,
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    textAlign = TextAlign.Center
+                )
+            }
         }
     }
 }

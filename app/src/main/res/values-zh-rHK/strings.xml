@@ -172,7 +172,7 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">使用CaloShape AI 的減重效果是自己減重的\n三倍</string>
+    <string name="onboard_weight_loss_comparison_title">使用CaloShape AI的\n減重效果是自己減重的\n三倍</string>
     <string name="onboard_weight_loss_comparison_without_ai">沒有\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">使用\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_twenty_percent">20%</string>
