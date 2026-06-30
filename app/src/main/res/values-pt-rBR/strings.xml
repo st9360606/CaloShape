@@ -166,7 +166,7 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">Qual é seu peso meta?</string>
-    <string name="onboard_goal_weight_subtitle">We only use your data to improve your experience and our calorie estimates.</string>
+    <string name="onboard_goal_weight_subtitle">Com base nessa meta, recomendaremos uma ingestão diária de calorias mais adequada para você.</string>
     <string name="onboard_goal_weight_hint">Será usado para calibrar seu plano personalizado.</string>
 
 
@@ -274,6 +274,11 @@
     <string name="subscription_start_three_day_free_trial">Teste grátis por 3 dias</string>
     <string name="subscription_three_day_trial_helper_format">Apenas %1$s/ano (%2$s/mês)</string>
     <string name="subscription_already_owned_restore_required">Your Google Play account already has an active CaloShape subscription. Restore it to this CaloShape account before using premium features.</string>
+    <string name="subscription_error_no_active_purchase">Nenhuma compra ativa encontrada.</string>
+    <string name="subscription_error_restore_failed">Não foi possível restaurar a compra. Tente novamente.</string>
+    <string name="subscription_error_purchase_failed">Falha na compra. Tente novamente.</string>
+    <string name="subscription_error_purchase_pending">O pagamento está sendo processado. O acesso Premium será liberado após a confirmação da compra pelo Google Play.</string>
+    <string name="subscription_error_trial_eligibility_failed">Não foi possível verificar sua elegibilidade para o teste. Tente novamente.</string>
     <string name="restore_subscription_dialog_title">Assinatura encontrada</string>
     <string name="settings_restore_subscription">Restaurar assinatura</string>
     <string name="restore_subscription_dialog_restoring">Restaurando…</string>
@@ -783,14 +788,14 @@
 
     <string name="restore_subscription_dialog_success_title">Assinatura restaurada</string>
     <string name="restore_subscription_dialog_payment_issue_title">Subscription restored, payment issue remains</string>
-    <string name="restore_subscription_dialog_no_active_title">Nenhuma assinatura ativa encontrada</string>
+    <string name="restore_subscription_dialog_no_active_title">Nenhuma assinatura ativa do Google Play encontrada</string>
     <string name="restore_subscription_dialog_failed_title">Falha ao restaurar</string>
-    <string name="restore_subscription_dialog_bound_title">Subscription already linked</string>
+    <string name="restore_subscription_dialog_bound_title">Assinatura vinculada a outra conta</string>
     <string name="restore_subscription_dialog_success_body">Your subscription has been restored to this CaloShape account.</string>
     <string name="restore_subscription_dialog_payment_issue_body">Your subscription is linked to this CaloShape account, but Google Play still reports a payment issue. Please update your payment method in Google Play to keep your subscription active.</string>
-    <string name="restore_subscription_dialog_no_active_body">We could not find an active CaloShape subscription on the Google Play account currently used on this device. You can try again later from Configurações.</string>
+    <string name="restore_subscription_dialog_no_active_body">Não encontramos uma assinatura ativa do CaloShape na conta atual do Google Play. Confirme se está usando a conta que fez a compra e tente novamente.</string>
     <string name="restore_subscription_dialog_failed_body">We could not restore your subscription right now. Please check your connection and try again from Configurações.</string>
-    <string name="restore_subscription_dialog_bound_body">This subscription is already linked to another active CaloShape account. Please contact support if you believe this is a mistake.</string>
+    <string name="restore_subscription_dialog_bound_body">Esta assinatura do Google Play já está vinculada a outra conta do CaloShape. Entre na conta original ou fale com o suporte se não conseguir acessá-la.</string>
     <string name="restore_subscription_dialog_body">We found an active CaloShape subscription or trial associated with the Google Play account on this device. You can restore it to the CaloShape account you’re currently signed in to.</string>
 
     <!-- Settings : Payment issue dialog -->

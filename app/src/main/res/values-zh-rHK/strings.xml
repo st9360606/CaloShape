@@ -167,7 +167,7 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">你的目標體重是多少？</string>
-    <string name="onboard_goal_weight_subtitle">我們僅使用您的數據來改善體驗並提升卡路里估算準確度。</string>
+    <string name="onboard_goal_weight_subtitle">我們會根據這個目標，幫你規劃更適合的每日熱量建議。</string>
     <string name="onboard_goal_weight_hint">這將用於校準你的自訂計畫。</string>
 
 
@@ -226,7 +226,7 @@
     <string name="plan_macros_proteins">蛋白質</string>
     <string name="plan_macros_carbs">碳水</string>
     <string name="plan_macros_fat">脂肪</string>
-    <string name="plan_unit_g">g</string>
+    <string name="plan_unit_g">克</string>
 
     <string name="plan_water_daily">每日飲水量</string>
     <string name="plan_weight_current">目前體重</string>
@@ -275,6 +275,11 @@
     <string name="subscription_start_three_day_free_trial">免費試用 3 天</string>
     <string name="subscription_three_day_trial_helper_format">每年只要 %1$s（約 %2$s/月）</string>
     <string name="subscription_already_owned_restore_required">目前這個 Google Play 帳號已經有有效的 CaloShape 訂閱。請先將訂閱恢復到目前登入的 CaloShape 帳號，才能使用付費功能。</string>
+    <string name="subscription_error_no_active_purchase">找不到有效的購買項目。</string>
+    <string name="subscription_error_restore_failed">無法恢復購買，請再試一次。</string>
+    <string name="subscription_error_purchase_failed">購買失敗，請再試一次。</string>
+    <string name="subscription_error_purchase_pending">付款正在處理中，Google Play 確認後即可使用 Premium 功能。</string>
+    <string name="subscription_error_trial_eligibility_failed">無法確認試用資格，請再試一次。</string>
     <string name="restore_subscription_dialog_title">偵測到可恢復的訂閱</string>
     <string name="settings_restore_subscription">恢復訂閱</string>
     <string name="restore_subscription_dialog_restoring">恢復中…</string>
@@ -782,14 +787,14 @@
     <!-- Settings : restore_subscription -->
     <string name="restore_subscription_dialog_success_title">訂閱已恢復</string>
     <string name="restore_subscription_dialog_payment_issue_title">訂閱已恢復，但付款仍有問題</string>
-    <string name="restore_subscription_dialog_no_active_title">找不到有效訂閱</string>
+    <string name="restore_subscription_dialog_no_active_title">找不到有效的 Google Play 訂閱</string>
     <string name="restore_subscription_dialog_failed_title">恢復失敗</string>
-    <string name="restore_subscription_dialog_bound_title">訂閱已綁定其他帳號</string>
+    <string name="restore_subscription_dialog_bound_title">此訂閱已連結其他帳號</string>
     <string name="restore_subscription_dialog_success_body">你的訂閱已恢復到目前登入的 CaloShape 帳號。</string>
     <string name="restore_subscription_dialog_payment_issue_body">你的訂閱已綁定到目前登入的 CaloShape 帳號，但 Google Play 仍回報付款異常。請到 Google Play 更新付款方式，以維持訂閱有效。</string>
-    <string name="restore_subscription_dialog_no_active_body">我們在目前這台裝置使用的 Google Play 帳號中找不到有效的 CaloShape 訂閱。你可以稍後再從設定頁重試。</string>
+    <string name="restore_subscription_dialog_no_active_body">目前的 Google Play 帳號沒有可恢復的 CaloShape 訂閱。請確認使用購買時的 Google Play 帳號後再試。</string>
     <string name="restore_subscription_dialog_failed_body">目前無法恢復訂閱，請確認網路連線後，稍後再從設定頁重試。</string>
-    <string name="restore_subscription_dialog_bound_body">這筆訂閱已綁定其他有效的 CaloShape 帳號。如果你認為這是錯誤，請聯絡客服。</string>
+    <string name="restore_subscription_dialog_bound_body">這筆 Google Play 訂閱已連結到另一個 CaloShape 帳號。請登入原帳號使用訂閱；若無法登入，請聯絡客服。</string>
     <string name="restore_subscription_dialog_body">我們在目前這台裝置使用的 Google Play 帳號中，偵測到 CaloShape 仍有有效的訂閱或試用。你可以將這筆訂閱恢復到目前登入的 CaloShape 帳號。</string>
 
     <!-- Settings : Payment issue dialog -->

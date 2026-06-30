@@ -166,7 +166,7 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">What is your goal weight?</string>
-    <string name="onboard_goal_weight_subtitle">We only use your data to improve your experience and our calorie estimates.</string>
+    <string name="onboard_goal_weight_subtitle">Based on this goal, we’ll create a more suitable daily calorie recommendation for you.</string>
     <string name="onboard_goal_weight_hint">This will be used to calibrate your custom plan.</string>
 
 
@@ -274,6 +274,11 @@
     <string name="subscription_start_three_day_free_trial">Try free for 3 days</string>
     <string name="subscription_three_day_trial_helper_format">Just %1$s/year (%2$s/mo)</string>
     <string name="subscription_already_owned_restore_required">Your Google Play account already has an active CaloShape subscription. Restore it to this CaloShape account before using premium features.</string>
+    <string name="subscription_error_no_active_purchase">No active purchase found.</string>
+    <string name="subscription_error_restore_failed">Could not restore purchase. Please try again.</string>
+    <string name="subscription_error_purchase_failed">Purchase failed. Please try again.</string>
+    <string name="subscription_error_purchase_pending">Payment is being processed. Premium access will be available after Google Play confirms the purchase.</string>
+    <string name="subscription_error_trial_eligibility_failed">Unable to check trial eligibility. Please try again.</string>
     <string name="restore_subscription_dialog_title">Subscription found</string>
     <string name="settings_restore_subscription">Restore subscription</string>
     <string name="restore_subscription_dialog_restoring">Restoring…</string>
@@ -783,14 +788,14 @@
 
     <string name="restore_subscription_dialog_success_title">Subscription restored</string>
     <string name="restore_subscription_dialog_payment_issue_title">Subscription restored, payment issue remains</string>
-    <string name="restore_subscription_dialog_no_active_title">No active subscription found</string>
+    <string name="restore_subscription_dialog_no_active_title">No active Google Play subscription found</string>
     <string name="restore_subscription_dialog_failed_title">Restore failed</string>
-    <string name="restore_subscription_dialog_bound_title">Subscription already linked</string>
+    <string name="restore_subscription_dialog_bound_title">Subscription linked to another account</string>
     <string name="restore_subscription_dialog_success_body">Your subscription has been restored to this CaloShape account.</string>
     <string name="restore_subscription_dialog_payment_issue_body">Your subscription is linked to this CaloShape account, but Google Play still reports a payment issue. Please update your payment method in Google Play to keep your subscription active.</string>
-    <string name="restore_subscription_dialog_no_active_body">We could not find an active CaloShape subscription on the Google Play account currently used on this device. You can try again later from Settings.</string>
+    <string name="restore_subscription_dialog_no_active_body">We couldn’t find an active CaloShape subscription on the current Google Play account. Make sure you’re using the Google Play account that made the purchase, then try again.</string>
     <string name="restore_subscription_dialog_failed_body">We could not restore your subscription right now. Please check your connection and try again from Settings.</string>
-    <string name="restore_subscription_dialog_bound_body">This subscription is already linked to another active CaloShape account. Please contact support if you believe this is a mistake.</string>
+    <string name="restore_subscription_dialog_bound_body">This Google Play subscription is already linked to another CaloShape account. Sign in to the original account to use it, or contact support if you can’t access that account.</string>
     <string name="restore_subscription_dialog_body">We found an active CaloShape subscription or trial associated with the Google Play account on this device. You can restore it to the CaloShape account you’re currently signed in to.</string>
 
     <!-- Settings : Payment issue dialog -->

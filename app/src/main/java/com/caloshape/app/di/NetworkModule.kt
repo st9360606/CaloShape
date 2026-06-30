@@ -8,6 +8,7 @@ import com.caloshape.app.data.auth.api.AuthApi
 import com.caloshape.app.data.auth.net.AuthInterceptor
 import com.caloshape.app.data.auth.net.TokenAuthenticator
 import com.caloshape.app.data.entitlement.api.EntitlementApi
+import com.caloshape.app.data.entitlement.net.EntitlementConflictResponseInterceptor
 import com.caloshape.app.data.fasting.api.FastingApi
 import com.caloshape.app.data.fasting.notifications.FastingAlarmScheduler
 import com.caloshape.app.data.fasting.repo.FastingRepository
@@ -74,11 +75,13 @@ object NetworkModule {
     fun provideApiOkHttp(
         baseHeadersInterceptor: BaseHeadersInterceptor,
         authInterceptor: AuthInterceptor,
+        entitlementConflictResponseInterceptor: EntitlementConflictResponseInterceptor,
         tokenAuthenticator: TokenAuthenticator
     ): OkHttpClient =
         OkHttpClient.Builder()
             .addInterceptor(baseHeadersInterceptor)  // ✅ NEW：deviceId/lang/tz
             .addInterceptor(authInterceptor)
+            .addInterceptor(entitlementConflictResponseInterceptor)
             .authenticator(tokenAuthenticator)
             .addInterceptor(logging())
             .connectTimeout(10, TimeUnit.SECONDS)

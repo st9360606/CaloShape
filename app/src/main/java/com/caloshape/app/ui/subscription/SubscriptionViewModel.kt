@@ -8,6 +8,7 @@ import com.caloshape.app.data.billing.CaloShapeBillingProducts
 import com.caloshape.app.data.billing.SubscriptionOfferPriceText
 import com.caloshape.app.data.entitlement.EntitlementSyncer
 import com.caloshape.app.data.entitlement.EntitlementSyncer.Companion.PURCHASE_ALREADY_OWNED_RESTORE_REQUIRED
+import com.caloshape.app.data.entitlement.RestoreSubscriptionResult
 import com.caloshape.app.data.entitlement.api.EntitlementSyncResponse
 import com.caloshape.app.data.membership.repo.MembershipRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -19,7 +20,13 @@ import java.util.Locale
 import javax.inject.Inject
 
 enum class SubscriptionErrorKind {
-    AlreadyOwnedRestoreRequired
+    AlreadyOwnedRestoreRequired,
+    NoActivePurchase,
+    BoundToAnotherAccount,
+    RestoreFailed,
+    PurchasePending,
+    PurchaseFailed,
+    TrialEligibilityCheckFailed
 }
 
 data class SubscriptionUiState(
@@ -68,13 +75,13 @@ class SubscriptionViewModel @Inject constructor(
                         errorKind = null
                     )
                 }
-            }.onFailure { ex ->
+            }.onFailure {
                 _ui.update {
                     it.copy(
                         trialEligible = false,
                         trialEligibilityLoaded = true,
-                        error = ex.message ?: "Unable to check trial eligibility. Please try again.",
-                        errorKind = null
+                        error = null,
+                        errorKind = SubscriptionErrorKind.TrialEligibilityCheckFailed
                     )
                 }
             }
@@ -222,16 +229,15 @@ class SubscriptionViewModel @Inject constructor(
             }
 
             val shouldShowRestore = result.restoreRequired || isPostPurchaseSyncFailure(result.message)
-            val errorKind = if (result.restoreRequired || isAlreadyOwnedRestoreRequiredMessage(result.message)) {
-                SubscriptionErrorKind.AlreadyOwnedRestoreRequired
-            } else {
-                null
-            }
+            val errorKind = resolveSubscriptionPurchaseErrorKind(
+                restoreRequired = result.restoreRequired,
+                message = result.message
+            )
 
             _ui.update {
                 it.copy(
                     purchasing = false,
-                    error = if (errorKind == null) result.message ?: "Purchase failed" else null,
+                    error = null,
                     errorKind = errorKind,
                     canRestorePurchase = shouldShowRestore,
                     trialEligible = result.response?.trialEligible ?: it.trialEligible,
@@ -254,14 +260,37 @@ class SubscriptionViewModel @Inject constructor(
                 )
             }
 
-            val response = runCatching {
-                entitlementSyncer.refreshEntitlementSummary()
-            }.getOrElse { ex ->
+            val restoreResult = runCatching {
+                entitlementSyncer.restoreSubscription()
+            }.getOrElse {
+                RestoreSubscriptionResult.Failed()
+            }
+
+            val restored =
+                restoreResult is RestoreSubscriptionResult.Restored ||
+                        restoreResult is RestoreSubscriptionResult.RestoredWithPaymentIssue
+
+            if (!restored) {
                 _ui.update {
                     it.copy(
                         purchasing = false,
-                        error = ex.message ?: "Could not restore purchase. Please try again.",
-                        errorKind = null,
+                        error = null,
+                        errorKind = restoreResult.toSubscriptionErrorKind(),
+                        canRestorePurchase =
+                            restoreResult !is RestoreSubscriptionResult.BoundToAnotherAccount
+                    )
+                }
+                return@launch
+            }
+
+            val response = runCatching {
+                entitlementSyncer.refreshServerEntitlementSummaryOnly()
+            }.getOrElse {
+                _ui.update {
+                    it.copy(
+                        purchasing = false,
+                        error = null,
+                        errorKind = SubscriptionErrorKind.RestoreFailed,
                         canRestorePurchase = true
                     )
                 }
@@ -289,8 +318,8 @@ class SubscriptionViewModel @Inject constructor(
             } else {
                 _ui.update {
                     it.copy(
-                        error = "No active purchase found.",
-                        errorKind = null,
+                        error = null,
+                        errorKind = SubscriptionErrorKind.NoActivePurchase,
                         canRestorePurchase = true
                     )
                 }
@@ -307,10 +336,6 @@ class SubscriptionViewModel @Inject constructor(
                 response.currentPremiumUntil != null
     }
 
-    private fun isAlreadyOwnedRestoreRequiredMessage(message: String?): Boolean {
-        return message == PURCHASE_ALREADY_OWNED_RESTORE_REQUIRED
-    }
-
     private fun isPostPurchaseSyncFailure(message: String?): Boolean {
         return message.orEmpty().contains(
             other = "entitlement sync failed",
@@ -323,6 +348,33 @@ class SubscriptionViewModel @Inject constructor(
 
         return raw.contains("cancel", ignoreCase = true) ||
                 raw.contains("USER_CANCELED", ignoreCase = true)
+    }
+}
+
+internal fun resolveSubscriptionPurchaseErrorKind(
+    restoreRequired: Boolean,
+    message: String?
+): SubscriptionErrorKind {
+    return when {
+        restoreRequired || message == PURCHASE_ALREADY_OWNED_RESTORE_REQUIRED -> {
+            SubscriptionErrorKind.AlreadyOwnedRestoreRequired
+        }
+
+        message.orEmpty().contains("pending", ignoreCase = true) -> {
+            SubscriptionErrorKind.PurchasePending
+        }
+
+        else -> SubscriptionErrorKind.PurchaseFailed
+    }
+}
+
+internal fun RestoreSubscriptionResult.toSubscriptionErrorKind(): SubscriptionErrorKind? {
+    return when (this) {
+        RestoreSubscriptionResult.NoActivePurchase -> SubscriptionErrorKind.NoActivePurchase
+        RestoreSubscriptionResult.BoundToAnotherAccount -> SubscriptionErrorKind.BoundToAnotherAccount
+        is RestoreSubscriptionResult.Failed -> SubscriptionErrorKind.RestoreFailed
+        is RestoreSubscriptionResult.Restored,
+        is RestoreSubscriptionResult.RestoredWithPaymentIssue -> null
     }
 }
 

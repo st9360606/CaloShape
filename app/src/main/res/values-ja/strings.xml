@@ -166,7 +166,7 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">目標体重は？</string>
-    <string name="onboard_goal_weight_subtitle">We only use your data to improve your experience and our calorie estimates.</string>
+    <string name="onboard_goal_weight_subtitle">この目標に基づいて、あなたにより適した1日の摂取カロリーを提案します。</string>
     <string name="onboard_goal_weight_hint">これはあなた専用プランの調整に使用されます。</string>
 
 
@@ -274,6 +274,11 @@
     <string name="subscription_start_three_day_free_trial">3日間無料で試す</string>
     <string name="subscription_three_day_trial_helper_format">年額%1$s（月額換算%2$s）</string>
     <string name="subscription_already_owned_restore_required">Your Google Play account already has an active CaloShape subscription. Restore it to this CaloShape account before using premium features.</string>
+    <string name="subscription_error_no_active_purchase">有効な購入が見つかりません。</string>
+    <string name="subscription_error_restore_failed">購入を復元できませんでした。もう一度お試しください。</string>
+    <string name="subscription_error_purchase_failed">購入に失敗しました。もう一度お試しください。</string>
+    <string name="subscription_error_purchase_pending">お支払いを処理しています。Google Play で購入が確認されると Premium を利用できます。</string>
+    <string name="subscription_error_trial_eligibility_failed">無料トライアルの利用資格を確認できませんでした。もう一度お試しください。</string>
     <string name="restore_subscription_dialog_title">サブスクリプションが見つかりました</string>
     <string name="settings_restore_subscription">サブスクリプションを復元</string>
     <string name="restore_subscription_dialog_restoring">復元中…</string>
@@ -783,14 +788,14 @@
 
     <string name="restore_subscription_dialog_success_title">サブスクリプションを復元しました</string>
     <string name="restore_subscription_dialog_payment_issue_title">Subscription restored, payment issue remains</string>
-    <string name="restore_subscription_dialog_no_active_title">有効なサブスクリプションが見つかりません</string>
+    <string name="restore_subscription_dialog_no_active_title">有効な Google Play サブスクリプションが見つかりません</string>
     <string name="restore_subscription_dialog_failed_title">復元に失敗しました</string>
-    <string name="restore_subscription_dialog_bound_title">Subscription already linked</string>
+    <string name="restore_subscription_dialog_bound_title">別のアカウントに連携済みです</string>
     <string name="restore_subscription_dialog_success_body">Your subscription has been restored to this CaloShape account.</string>
     <string name="restore_subscription_dialog_payment_issue_body">Your subscription is linked to this CaloShape account, but Google Play still reports a payment issue. Please update your payment method in Google Play to keep your subscription active.</string>
-    <string name="restore_subscription_dialog_no_active_body">We could not find an active CaloShape subscription on the Google Play account currently used on this device. You can try again later from 設定.</string>
+    <string name="restore_subscription_dialog_no_active_body">現在の Google Play アカウントに復元可能な CaloShape サブスクリプションが見つかりません。購入時の Google Play アカウントを使用していることを確認し、もう一度お試しください。</string>
     <string name="restore_subscription_dialog_failed_body">We could not restore your subscription right now. Please check your connection and try again from 設定.</string>
-    <string name="restore_subscription_dialog_bound_body">This subscription is already linked to another active CaloShape account. Please contact support if you believe this is a mistake.</string>
+    <string name="restore_subscription_dialog_bound_body">この Google Play サブスクリプションは別の CaloShape アカウントに連携されています。元のアカウントにログインするか、アクセスできない場合はサポートにお問い合わせください。</string>
     <string name="restore_subscription_dialog_body">We found an active CaloShape subscription or trial associated with the Google Play account on this device. You can restore it to the CaloShape account you’re currently signed in to.</string>
 
     <!-- Settings : Payment issue dialog -->

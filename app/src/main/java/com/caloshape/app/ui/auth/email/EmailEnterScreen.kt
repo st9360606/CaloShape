@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
@@ -79,7 +80,10 @@ fun EmailEnterScreen(
             Spacer(Modifier.height(8.dp))
             Text(
                 text = stringResource(R.string.email_sign_in_title),
-                style = MaterialTheme.typography.headlineLarge.copy(fontSize = 34.sp),
+                style = MaterialTheme.typography.headlineLarge.copy(
+                    fontSize = 34.sp,
+                    fontWeight = FontWeight.Bold
+                ),
                 color = titleColor
             )
             Spacer(Modifier.height(24.dp))

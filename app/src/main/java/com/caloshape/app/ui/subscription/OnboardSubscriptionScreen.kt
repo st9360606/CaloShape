@@ -301,6 +301,30 @@ fun OnboardSubscriptionScreen(
                 stringResource(R.string.subscription_already_owned_restore_required)
             }
 
+            SubscriptionErrorKind.NoActivePurchase -> {
+                stringResource(R.string.subscription_error_no_active_purchase)
+            }
+
+            SubscriptionErrorKind.BoundToAnotherAccount -> {
+                stringResource(R.string.restore_subscription_dialog_bound_body)
+            }
+
+            SubscriptionErrorKind.RestoreFailed -> {
+                stringResource(R.string.subscription_error_restore_failed)
+            }
+
+            SubscriptionErrorKind.PurchasePending -> {
+                stringResource(R.string.subscription_error_purchase_pending)
+            }
+
+            SubscriptionErrorKind.PurchaseFailed -> {
+                stringResource(R.string.subscription_error_purchase_failed)
+            }
+
+            SubscriptionErrorKind.TrialEligibilityCheckFailed -> {
+                stringResource(R.string.subscription_error_trial_eligibility_failed)
+            }
+
             null -> ui.error
         }
 
