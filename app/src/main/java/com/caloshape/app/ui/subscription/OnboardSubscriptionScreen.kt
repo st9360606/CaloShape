@@ -100,6 +100,16 @@ internal fun resolveOnboardIntroVariant(
     OnboardIntroVariant.Standard
 }
 
+internal fun resolveOneTimeOfferTag(
+    trialEnabled: Boolean,
+    trialEligible: Boolean,
+    discountTrialOfferAvailable: Boolean
+): String = if (trialEnabled && trialEligible && discountTrialOfferAvailable) {
+    CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_DISCOUNT_YEARLY
+} else {
+    CaloShapeBillingProducts.OfferTags.ONBOARD_DISCOUNT_YEARLY
+}
+
 @Composable
 fun OnboardSubscriptionScreen(
     vm: SubscriptionViewModel,
@@ -126,20 +136,18 @@ fun OnboardSubscriptionScreen(
     val subscriptionPriceUnavailable =
         ui.subscriptionOffersLoaded &&
                 (ui.subscriptionOfferPriceLoadFailed || !requiredOfferPricesAvailable)
-    val trialOfferAvailable =
-        ui.yearlyTrialOfferAvailable &&
-                !ui.yearlyTrialDiscountPrice.isNullOrBlank() &&
-                !ui.yearlyTrialDiscountMonthlyEquivalent.isNullOrBlank()
+    val baseTrialOfferAvailable = ui.yearlyBaseTrialOfferAvailable
+    val discountTrialOfferAvailable = ui.yearlyDiscountTrialOfferAvailable
 
     LaunchedEffect(
         ui.trialEligibilityLoaded,
         ui.subscriptionOffersLoaded,
         ui.trialEligible,
-        trialOfferAvailable
+        discountTrialOfferAvailable
     ) {
         if (!ui.trialEligibilityLoaded || !ui.subscriptionOffersLoaded) return@LaunchedEffect
 
-        if (!ui.trialEligible || !trialOfferAvailable) {
+        if (!ui.trialEligible || !discountTrialOfferAvailable) {
             trialEnabled = false
             trialToggleTouched = false
             return@LaunchedEffect
@@ -163,16 +171,19 @@ fun OnboardSubscriptionScreen(
                 if (
                     resolveOnboardIntroVariant(
                         trialEligible = ui.trialEligible,
-                        trialOfferAvailable = trialOfferAvailable
+                        trialOfferAvailable = baseTrialOfferAvailable
                     ) == OnboardIntroVariant.Trial
                 ) {
                     OnboardTrialIntro(
                         purchasing = ui.purchasing,
                         helperText = stringResource(
                             R.string.subscription_three_day_trial_helper_format,
-                            ui.yearlyTrialDiscountPrice.orEmpty()
+                            ui.yearlyBasePrice.orEmpty(),
+                            ui.yearlyBaseMonthlyEquivalent.orEmpty()
                         ),
-                        onClose = onCloseToSignIn,
+                        onClose = {
+                            step = OnboardPaywallStep.Spin
+                        },
                         onContinue = {
                             if (shouldBypassInitialGooglePlaywallForDev()) {
                                 step = OnboardPaywallStep.Spin
@@ -202,7 +213,9 @@ fun OnboardSubscriptionScreen(
                         ui.yearlyBasePrice.orEmpty(),
                         yearlyBaseMonthlyEquivalentText
                     ),
-                    onClose = onCloseToSignIn,
+                    onClose = {
+                        step = OnboardPaywallStep.Spin
+                    },
                     onContinue = {
                         if (shouldBypassInitialGooglePlaywallForDev()) {
                             step = OnboardPaywallStep.Spin
@@ -241,25 +254,13 @@ fun OnboardSubscriptionScreen(
                     purchasing = ui.purchasing,
                     trialEnabled = trialEnabled,
                     trialEligible = ui.trialEligible,
-                    trialOfferAvailable = trialOfferAvailable,
+                    trialOfferAvailable = discountTrialOfferAvailable,
                     trialEligibilityLoaded = ui.trialEligibilityLoaded,
                     originalYearlyPrice = ui.yearlyBasePrice.orEmpty(),
-                    offerYearlyPrice = if (
-                        trialEnabled && ui.trialEligible && trialOfferAvailable
-                    ) {
-                        ui.yearlyTrialDiscountPrice.orEmpty()
-                    } else {
-                        ui.yearlyDiscountPrice.orEmpty()
-                    },
-                    monthlyEquivalent = if (
-                        trialEnabled && ui.trialEligible && trialOfferAvailable
-                    ) {
-                        ui.yearlyTrialDiscountMonthlyEquivalent.orEmpty()
-                    } else {
-                        ui.yearlyDiscountMonthlyEquivalent.orEmpty()
-                    },
+                    offerYearlyPrice = ui.yearlyDiscountPrice.orEmpty(),
+                    monthlyEquivalent = ui.yearlyDiscountMonthlyEquivalent.orEmpty(),
                     onTrialEnabledChange = { enabled ->
-                        if (!ui.trialEligible || !trialOfferAvailable) {
+                        if (!ui.trialEligible || !discountTrialOfferAvailable) {
                             trialEnabled = false
                             trialToggleTouched = false
                         } else {
@@ -269,13 +270,11 @@ fun OnboardSubscriptionScreen(
                     },
                     onClose = onCloseToSignIn,
                     onContinue = {
-                        val offerTag = if (
-                            trialEnabled && ui.trialEligible && trialOfferAvailable
-                        ) {
-                            CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_YEARLY
-                        } else {
-                            CaloShapeBillingProducts.OfferTags.ONBOARD_DISCOUNT_YEARLY
-                        }
+                        val offerTag = resolveOneTimeOfferTag(
+                            trialEnabled = trialEnabled,
+                            trialEligible = ui.trialEligible,
+                            discountTrialOfferAvailable = discountTrialOfferAvailable
+                        )
 
                         /**
                          * 圖6：Google Play discount / trial offer
@@ -892,6 +891,17 @@ private fun OnboardOneTimeOfferScreen(
     onContinue: () -> Unit
 ) {
     val scrollState = rememberScrollState()
+    val useDiscountTrialOffer =
+        trialEnabled && trialEligible && trialOfferAvailable
+    val purchaseTerms = if (useDiscountTrialOffer) {
+        stringResource(R.string.subscription_discount_trial_terms_format)
+    } else {
+        stringResource(
+            R.string.subscription_discount_terms_format,
+            offerYearlyPrice,
+            monthlyEquivalent
+        )
+    }
 
     Box(
         modifier = Modifier
@@ -944,12 +954,12 @@ private fun OnboardOneTimeOfferScreen(
         }
 
         OnboardPaywallBottomCta(
-            buttonText = if (trialEnabled && trialEligible && trialOfferAvailable) {
+            buttonText = if (useDiscountTrialOffer) {
                 stringResource(R.string.subscription_start_free_trial)
             } else {
                 stringResource(R.string.common_continue_btn)
             },
-            helperText = stringResource(R.string.subscription_trial_helper),
+            helperText = purchaseTerms,
             helperTextColor = Color(0xFF52525B),
             buttonShape = RoundedCornerShape(14.dp),
             loading = purchasing,

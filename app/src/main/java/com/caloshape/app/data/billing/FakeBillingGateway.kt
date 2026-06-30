@@ -47,7 +47,8 @@ class FakeBillingGateway(
         }
 
         val isDiscountOffer =
-            offerTag == CaloShapeBillingProducts.OfferTags.ONBOARD_DISCOUNT_YEARLY
+            offerTag == CaloShapeBillingProducts.OfferTags.ONBOARD_DISCOUNT_YEARLY ||
+                    offerTag == CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_DISCOUNT_YEARLY
 
         return SubscriptionOfferPriceText(
             productId = productId,
@@ -73,7 +74,10 @@ class FakeBillingGateway(
         }
 
         val phase =
-            if (offerTag == CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_YEARLY) {
+            if (
+                offerTag == CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_YEARLY ||
+                offerTag == CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_DISCOUNT_YEARLY
+            ) {
                 "trial"
             } else {
                 "paid"

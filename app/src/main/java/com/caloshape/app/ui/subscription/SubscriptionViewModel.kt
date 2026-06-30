@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.caloshape.app.data.billing.BillingGateway
 import com.caloshape.app.data.billing.CaloShapeBillingProducts
+import com.caloshape.app.data.billing.SubscriptionOfferPriceText
 import com.caloshape.app.data.entitlement.EntitlementSyncer
 import com.caloshape.app.data.entitlement.EntitlementSyncer.Companion.PURCHASE_ALREADY_OWNED_RESTORE_REQUIRED
 import com.caloshape.app.data.entitlement.api.EntitlementSyncResponse
@@ -31,13 +32,12 @@ data class SubscriptionUiState(
     val trialEligibilityLoaded: Boolean = false,
     val subscriptionOffersLoaded: Boolean = false,
     val subscriptionOfferPriceLoadFailed: Boolean = false,
-    val yearlyTrialOfferAvailable: Boolean = false,
+    val yearlyBaseTrialOfferAvailable: Boolean = false,
+    val yearlyDiscountTrialOfferAvailable: Boolean = false,
     val yearlyBasePrice: String? = null,
     val yearlyBaseMonthlyEquivalent: String? = null,
     val yearlyDiscountPrice: String? = null,
-    val yearlyDiscountMonthlyEquivalent: String? = null,
-    val yearlyTrialDiscountPrice: String? = null,
-    val yearlyTrialDiscountMonthlyEquivalent: String? = null
+    val yearlyDiscountMonthlyEquivalent: String? = null
 ) {
     val busy: Boolean
         get() = purchasing
@@ -104,29 +104,36 @@ class SubscriptionViewModel @Inject constructor(
                 )
             }.getOrNull()
 
-            val trialDiscount = runCatching {
+            val baseTrial = runCatching {
                 billingGateway.querySubscriptionOfferPrice(
                     productId = CaloShapeBillingProducts.YEARLY,
                     offerTag = CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_YEARLY
                 )
             }.getOrNull()
 
+            val discountTrial = runCatching {
+                billingGateway.querySubscriptionOfferPrice(
+                    productId = CaloShapeBillingProducts.YEARLY,
+                    offerTag = CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_DISCOUNT_YEARLY
+                )
+            }.getOrNull()
+
             val baseReady = base?.formattedMonthlyEquivalent != null
             val discountReady = discount?.formattedMonthlyEquivalent != null
             val requiredPricesReady = baseReady && discountReady
-            val trialReady = trialDiscount?.formattedMonthlyEquivalent != null
+            val baseTrialReady = baseTrial.hasSamePaidPriceAs(base)
+            val discountTrialReady = discountTrial.hasSamePaidPriceAs(discount)
 
             _ui.update {
                 it.copy(
                     subscriptionOffersLoaded = true,
                     subscriptionOfferPriceLoadFailed = !requiredPricesReady,
-                    yearlyTrialOfferAvailable = trialReady,
+                    yearlyBaseTrialOfferAvailable = baseTrialReady,
+                    yearlyDiscountTrialOfferAvailable = discountTrialReady,
                     yearlyBasePrice = base?.formattedPrice,
                     yearlyBaseMonthlyEquivalent = base?.formattedMonthlyEquivalent,
                     yearlyDiscountPrice = discount?.formattedPrice,
-                    yearlyDiscountMonthlyEquivalent = discount?.formattedMonthlyEquivalent,
-                    yearlyTrialDiscountPrice = trialDiscount?.formattedPrice,
-                    yearlyTrialDiscountMonthlyEquivalent = trialDiscount?.formattedMonthlyEquivalent
+                    yearlyDiscountMonthlyEquivalent = discount?.formattedMonthlyEquivalent
                 )
             }
         }
@@ -317,4 +324,13 @@ class SubscriptionViewModel @Inject constructor(
         return raw.contains("cancel", ignoreCase = true) ||
                 raw.contains("USER_CANCELED", ignoreCase = true)
     }
+}
+
+internal fun SubscriptionOfferPriceText?.hasSamePaidPriceAs(
+    reference: SubscriptionOfferPriceText?
+): Boolean {
+    return this != null &&
+            reference != null &&
+            formattedPrice == reference.formattedPrice &&
+            formattedMonthlyEquivalent == reference.formattedMonthlyEquivalent
 }

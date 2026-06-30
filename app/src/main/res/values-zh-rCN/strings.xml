@@ -272,7 +272,7 @@
     <string name="subscription_intro_title">Unlock CaloShape AI to\nreach your 目标s faster.</string>
     <string name="subscription_intro_helper_format">Just %1$s per year (%2$s)</string>
     <string name="subscription_start_three_day_free_trial">免费试用 3 天</string>
-    <string name="subscription_three_day_trial_helper_format">3 days free, then %1$s/year. Cancel anytime.</string>
+    <string name="subscription_three_day_trial_helper_format">每年只要 %1$s（约 %2$s/月）</string>
     <string name="subscription_already_owned_restore_required">Your Google Play account already has an active CaloShape subscription. Restore it to this CaloShape account before using premium features.</string>
     <string name="restore_subscription_dialog_title">找到订阅</string>
     <string name="settings_restore_subscription">恢复订阅</string>
@@ -311,8 +311,10 @@
     <string name="subscription_yearly_plan">年度方案</string>
     <string name="subscription_yearly_plan_price_format">12mo · %1$s</string>
 
-    <string name="subscription_start_free_trial">开始免费试用</string>
+    <string name="subscription_start_free_trial">免费试用 3 天</string>
     <string name="subscription_trial_helper">无承诺，可随时取消</string>
+    <string name="subscription_discount_terms_format">每年仅需 %1$s（%2$s/月）</string>
+    <string name="subscription_discount_trial_terms_format">无需承诺－可随时取消</string>
 
 
     <!-- HomeScreen -->

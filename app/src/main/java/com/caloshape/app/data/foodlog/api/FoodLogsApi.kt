@@ -29,10 +29,6 @@ interface FoodLogsApi {
         @Part("deviceCapturedAtUtc") deviceCapturedAtUtc: RequestBody? = null
     ): FoodLogEnvelopeDto
 
-    /**
-     * ALBUM æ¨¡å??®å?ä¸é€?deviceCapturedAtUtc??
-     * ?¥å?ç«¯è??‡æ”¹è®Šï??è? multipart text part??
-     */
     @Multipart
     @POST("/api/v1/food-logs/album")
     suspend fun postAlbum(

@@ -272,7 +272,7 @@
     <string name="subscription_intro_title">Unlock CaloShape AI to\nreach your Ziels faster.</string>
     <string name="subscription_intro_helper_format">Just %1$s per year (%2$s)</string>
     <string name="subscription_start_three_day_free_trial">3 Tage kostenlos testen</string>
-    <string name="subscription_three_day_trial_helper_format">3 days free, then %1$s/year. Cancel anytime.</string>
+    <string name="subscription_three_day_trial_helper_format">Nur %1$s/Jahr (%2$s/Monat)</string>
     <string name="subscription_already_owned_restore_required">Your Google Play account already has an active CaloShape subscription. Restore it to this CaloShape account before using premium features.</string>
     <string name="restore_subscription_dialog_title">Abo gefunden</string>
     <string name="settings_restore_subscription">Abo wiederherstellen</string>
@@ -311,8 +311,10 @@
     <string name="subscription_yearly_plan">Jahresplan</string>
     <string name="subscription_yearly_plan_price_format">12mo · %1$s</string>
 
-    <string name="subscription_start_free_trial">Kostenlose Testversion starten</string>
+    <string name="subscription_start_free_trial">3 Tage kostenlos testen</string>
     <string name="subscription_trial_helper">Keine Verpflichtung — jederzeit kündbar</string>
+    <string name="subscription_discount_terms_format">Nur %1$s/Jahr (%2$s/Monat)</string>
+    <string name="subscription_discount_trial_terms_format">Keine Verpflichtung – jederzeit kündbar</string>
 
 
     <!-- HomeScreen -->
