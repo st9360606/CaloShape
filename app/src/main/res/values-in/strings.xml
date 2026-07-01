@@ -224,7 +224,7 @@
     <string name="plan_macros_proteins">Protein</string>
     <string name="plan_macros_carbs">Karbohidrat</string>
     <string name="plan_macros_fat">lemak</string>
-    <string name="plan_unit_g">G</string>
+    <string name="plan_unit_g">g</string>
 
     <string name="plan_water_daily">Air Harian</string>
     <string name="plan_weight_current">Berat badan saat ini</string>
@@ -483,7 +483,7 @@
          MicronutrientChartCard
          ========================= -->
     <string name="progress_micronutrients_title">Mikronutrien</string>
-    <string name="progress_chart_grams">G</string>
+    <string name="progress_chart_grams">g</string>
     <string name="progress_chart_7day_avg">Rata-rata 7 hari</string>
     <string name="progress_legend_fiber">Serat</string>
     <string name="progress_legend_sugar">Gula</string>
@@ -1082,9 +1082,9 @@
 
     <!-- Android home screen widgets -->
     <string name="widget_preview_goal_kcal">1830</string>
-    <string name="widget_preview_protein">120 gram</string>
-    <string name="widget_preview_carbs">180 gram</string>
-    <string name="widget_preview_fats">60 gram</string>
+    <string name="widget_preview_protein">120g</string>
+    <string name="widget_preview_carbs">180g</string>
+    <string name="widget_preview_fats">60g</string>
     <string name="widget_calories_left">Kalori tersisa</string>
     <string name="widget_protein_left">Proteinnya tersisa</string>
     <string name="widget_carbs_left">Karbohidrat tersisa</string>

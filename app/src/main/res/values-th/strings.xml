@@ -224,7 +224,7 @@
     <string name="plan_macros_proteins">โปรตีน</string>
     <string name="plan_macros_carbs">คาร์โบไฮเดรต</string>
     <string name="plan_macros_fat">ไขมัน</string>
-    <string name="plan_unit_g">ก</string>
+    <string name="plan_unit_g">g</string>
 
     <string name="plan_water_daily">น้ำรายวัน</string>
     <string name="plan_weight_current">น้ำหนักปัจจุบัน</string>
@@ -356,7 +356,7 @@
     <string name="home_sugar_eaten_label">น้ำตาลกินแล้ว</string>
     <string name="home_sodium_goal_label">โซเดียมเหลือ</string>
     <string name="home_sodium_eaten_label">โซเดียมกินแล้ว</string>
-    <string name="home_nutrition_ratio_mg">%1$d / %2$dมก</string>
+    <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
     <!-- HomeCards :  Health Score Card & Advice -->
@@ -475,7 +475,7 @@
     <string name="progress_tooltip_carbs">คาร์โบไฮเดรต</string>
     <string name="progress_tooltip_fats">ไขมัน</string>
     <string name="progress_tooltip_label_format">%1$s:</string>
-    <string name="progress_tooltip_grams_value">%1$d ก</string>
+    <string name="progress_tooltip_grams_value">%1$d g</string>
     <string name="progress_tooltip_plain_value">%1$d</string>
 
 
@@ -483,7 +483,7 @@
          MicronutrientChartCard
          ========================= -->
     <string name="progress_micronutrients_title">สารอาหารรอง</string>
-    <string name="progress_chart_grams">ก</string>
+    <string name="progress_chart_grams">g</string>
     <string name="progress_chart_7day_avg">เฉลี่ย 7 วัน</string>
     <string name="progress_legend_fiber">ไฟเบอร์</string>
     <string name="progress_legend_sugar">น้ำตาล</string>
@@ -492,7 +492,7 @@
     <string name="progress_tooltip_fiber">ไฟเบอร์</string>
     <string name="progress_tooltip_sugar">น้ำตาล</string>
     <string name="progress_tooltip_sodium">โซเดียม</string>
-    <string name="progress_tooltip_mg_value">%1$d มก</string>
+    <string name="progress_tooltip_mg_value">%1$d mg</string>
 
 
     <!-- =========================
@@ -1082,9 +1082,9 @@
 
     <!-- Android home screen widgets -->
     <string name="widget_preview_goal_kcal">1830</string>
-    <string name="widget_preview_protein">120ก</string>
-    <string name="widget_preview_carbs">180ก</string>
-    <string name="widget_preview_fats">60ก</string>
+    <string name="widget_preview_protein">120g</string>
+    <string name="widget_preview_carbs">180g</string>
+    <string name="widget_preview_fats">60g</string>
     <string name="widget_calories_left">แคลอรี่ที่เหลืออยู่</string>
     <string name="widget_protein_left">เหลือโปรตีน</string>
     <string name="widget_carbs_left">คาร์โบไฮเดรตเหลือ</string>
@@ -1094,7 +1094,7 @@
     <string name="widget_log_your_food">เข้าสู่ระบบอาหารของคุณ</string>
     <string name="widget_scan_food">สแกนอาหาร</string>
     <string name="widget_barcode">บาร์โค้ด</string>
-    <string name="widget_grams_format">%1$dก</string>
+    <string name="widget_grams_format">%1$dg</string>
 
 
 

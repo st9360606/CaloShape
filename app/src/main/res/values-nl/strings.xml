@@ -224,7 +224,7 @@
     <string name="plan_macros_proteins">Eiwit</string>
     <string name="plan_macros_carbs">Koolhydraten</string>
     <string name="plan_macros_fat">Vetten</string>
-    <string name="plan_unit_g">G</string>
+    <string name="plan_unit_g">g</string>
 
     <string name="plan_water_daily">Dagelijks water</string>
     <string name="plan_weight_current">Huidig ​​gewicht</string>
@@ -483,7 +483,7 @@
          MicronutrientChartCard
          ========================= -->
     <string name="progress_micronutrients_title">Micronutriënten</string>
-    <string name="progress_chart_grams">G</string>
+    <string name="progress_chart_grams">g</string>
     <string name="progress_chart_7day_avg">Gemiddeld 7 dagen</string>
     <string name="progress_legend_fiber">Vezel</string>
     <string name="progress_legend_sugar">Suiker</string>

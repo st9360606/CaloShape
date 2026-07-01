@@ -224,7 +224,7 @@
     <string name="plan_macros_proteins">חֶלְבּוֹן</string>
     <string name="plan_macros_carbs">פחמימות</string>
     <string name="plan_macros_fat">שומנים</string>
-    <string name="plan_unit_g">ז</string>
+    <string name="plan_unit_g">g</string>
 
     <string name="plan_water_daily">מים יומיים</string>
     <string name="plan_weight_current">משקל נוכחי</string>
@@ -475,7 +475,7 @@
     <string name="progress_tooltip_carbs">פחמימות</string>
     <string name="progress_tooltip_fats">שומנים</string>
     <string name="progress_tooltip_label_format">%1$s:</string>
-    <string name="progress_tooltip_grams_value">%1$d גרם</string>
+    <string name="progress_tooltip_grams_value">%1$d g</string>
     <string name="progress_tooltip_plain_value">%1$d</string>
 
 
@@ -483,7 +483,7 @@
          MicronutrientChartCard
          ========================= -->
     <string name="progress_micronutrients_title">מיקרו-נוטריינטים</string>
-    <string name="progress_chart_grams">ז</string>
+    <string name="progress_chart_grams">g</string>
     <string name="progress_chart_7day_avg">ממוצע של 7 ימים</string>
     <string name="progress_legend_fiber">סִיב</string>
     <string name="progress_legend_sugar">סוּכָּר</string>
@@ -492,7 +492,7 @@
     <string name="progress_tooltip_fiber">סִיב</string>
     <string name="progress_tooltip_sugar">סוּכָּר</string>
     <string name="progress_tooltip_sodium">נַתרָן</string>
-    <string name="progress_tooltip_mg_value">%1$d מ\"ג</string>
+    <string name="progress_tooltip_mg_value">%1$d mg</string>
 
 
     <!-- =========================
@@ -1084,9 +1084,9 @@
 
     <!-- Android home screen widgets -->
     <string name="widget_preview_goal_kcal">1830</string>
-    <string name="widget_preview_protein">120 גרם</string>
-    <string name="widget_preview_carbs">180 גרם</string>
-    <string name="widget_preview_fats">60 גרם</string>
+    <string name="widget_preview_protein">120g</string>
+    <string name="widget_preview_carbs">180g</string>
+    <string name="widget_preview_fats">60g</string>
     <string name="widget_calories_left">נשארו קלוריות</string>
     <string name="widget_protein_left">נשאר חלבון</string>
     <string name="widget_carbs_left">נשארו פחמימות</string>

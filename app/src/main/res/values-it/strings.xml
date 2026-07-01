@@ -224,7 +224,7 @@
     <string name="plan_macros_proteins">Proteina</string>
     <string name="plan_macros_carbs">Carboidrati</string>
     <string name="plan_macros_fat">Grassi</string>
-    <string name="plan_unit_g">G</string>
+    <string name="plan_unit_g">g</string>
 
     <string name="plan_water_daily">Acqua quotidiana</string>
     <string name="plan_weight_current">Peso attuale</string>
@@ -483,7 +483,7 @@
          MicronutrientChartCard
          ========================= -->
     <string name="progress_micronutrients_title">Micronutrienti</string>
-    <string name="progress_chart_grams">G</string>
+    <string name="progress_chart_grams">g</string>
     <string name="progress_chart_7day_avg">media di 7 giorni</string>
     <string name="progress_legend_fiber">Fibra</string>
     <string name="progress_legend_sugar">Zucchero</string>
@@ -1083,9 +1083,9 @@
 
     <!-- Android home screen widgets -->
     <string name="widget_preview_goal_kcal">1830</string>
-    <string name="widget_preview_protein">120 g</string>
-    <string name="widget_preview_carbs">180 g</string>
-    <string name="widget_preview_fats">60 g</string>
+    <string name="widget_preview_protein">120g</string>
+    <string name="widget_preview_carbs">180g</string>
+    <string name="widget_preview_fats">60g</string>
     <string name="widget_calories_left">Calorie rimaste</string>
     <string name="widget_protein_left">Proteine ​​rimaste</string>
     <string name="widget_carbs_left">Carboidrati rimasti</string>

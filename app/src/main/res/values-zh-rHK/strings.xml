@@ -121,7 +121,7 @@
 
 
     <!-- Onboarding: ReferralSourceScreen -->
-    <string name="onboard_referral_title">你是怎麼知道 CaloShape 的？</string>
+    <string name="onboard_referral_title">你是怎麼知道我們的？</string>
 
 
     <!-- Onboarding: AgeSelectionScreen -->
@@ -221,12 +221,12 @@
     <string name="plan_title_congrats">恭喜!</string>
     <string name="plan_subtitle_ready">你的個人健康計畫已完成！</string>
     <string name="plan_disclaimer">來源請看下方「查看參考來源 ›」。</string>
-    <string name="plan_unit_kcal_day">大卡 / 天</string>
+    <string name="plan_unit_kcal_day">kcal / day</string>
 
     <string name="plan_macros_proteins">蛋白質</string>
     <string name="plan_macros_carbs">碳水</string>
     <string name="plan_macros_fat">脂肪</string>
-    <string name="plan_unit_g">克</string>
+    <string name="plan_unit_g">g</string>
 
     <string name="plan_water_daily">每日飲水量</string>
     <string name="plan_weight_current">目前體重</string>
@@ -345,7 +345,7 @@
 
 
     <!-- HomeCards :  Nutrition Card -->
-    <string name="home_nutrition_ratio_grams">%1$d / %2$d克</string>
+    <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">蛋白質 剩餘</string>
     <string name="home_protein_eaten_label">蛋白質 已攝入</string>
     <string name="home_carbs_goal_label">碳水 剩餘</string>
@@ -358,7 +358,7 @@
     <string name="home_sugar_eaten_label">糖 已攝入</string>
     <string name="home_sodium_goal_label">鈉 剩餘</string>
     <string name="home_sodium_eaten_label">鈉 已攝入</string>
-    <string name="home_nutrition_ratio_mg">%1$d / %2$d毫克</string>
+    <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
     <!-- HomeCards :  Health Score Card & Advice -->
@@ -377,7 +377,7 @@
     <string name="steps_status_permission_not_granted">未授權</string>
     <string name="steps_status_hc_not_installed">未安裝</string>
     <string name="steps_status_hc_unavailable">無法使用</string>
-    <string name="steps_secondary_est_kcal">≈ %1$d 大卡</string>
+    <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
     <string name="steps_secondary_no_data_yet">尚無資料</string>
     <string name="steps_secondary_connect">連接</string>
     <string name="steps_hint_connect_google_health">連結 Google Health 取得步數資料</string>
@@ -388,7 +388,7 @@
 
     <!-- HomeCards : Workout Card -->
     <string name="workout_card_title">運動</string>
-    <string name="workout_card_unit_kcal">大卡</string>
+    <string name="workout_card_unit_kcal">kcal</string>
 
 
     <!-- HomeCards : Weight Card -->
@@ -452,13 +452,13 @@
          NutritionChartCard
          ========================= -->
     <string name="progress_chart_7day_avg_calories">7 日平均</string>
-    <string name="progress_chart_value_cals">%1$d 大卡</string>
+    <string name="progress_chart_value_cals">%1$d 大kcal卡</string>
     <string name="progress_chart_15day_avg_calories">15 日平均</string>
     <string name="progress_chart_loading_total_calories_text">--.- 卡</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
     <string name="progress_chart_total_calories">總卡路里</string>
-    <string name="progress_chart_cals">大卡</string>
+    <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">蛋白質</string>
     <string name="progress_legend_carbs">碳水</string>
     <string name="progress_legend_fats">脂肪</string>
@@ -477,7 +477,7 @@
     <string name="progress_tooltip_carbs">碳水</string>
     <string name="progress_tooltip_fats">脂肪</string>
     <string name="progress_tooltip_label_format">%1$s：</string>
-    <string name="progress_tooltip_grams_value">%1$d 克</string>
+    <string name="progress_tooltip_grams_value">%1$d g</string>
     <string name="progress_tooltip_plain_value">%1$d</string>
 
 
@@ -485,7 +485,7 @@
       MicronutrientChartCard
       ========================= -->
     <string name="progress_micronutrients_title">微量營養素</string>
-    <string name="progress_chart_grams">克</string>
+    <string name="progress_chart_grams">g</string>
     <string name="progress_chart_7day_avg">7 日平均</string>
     <string name="progress_legend_fiber">纖維</string>
     <string name="progress_legend_sugar">糖</string>
@@ -494,42 +494,42 @@
     <string name="progress_tooltip_fiber">纖維</string>
     <string name="progress_tooltip_sugar">糖</string>
     <string name="progress_tooltip_sodium">鈉</string>
-    <string name="progress_tooltip_mg_value">%1$d 毫克</string>
+    <string name="progress_tooltip_mg_value">%1$d mg</string>
 
 
     <!-- =========================
          WorkoutChartCard
          ========================= -->
     <string name="workout_chart_goal_reached">今天已達成目標</string>
-    <string name="workout_chart_goal_left">距離今日目標還差 %1$d 大卡</string>
+    <string name="workout_chart_goal_left">距離今日目標還差 %1$d kcal</string>
     <string name="workout_chart_title">運動消耗</string>
     <string name="workout_chart_info_dialog_body">此數值包含手動記錄的運動，以及步數推估的日常活動消耗。</string>
-    <string name="workout_chart_unit_kcal">大卡</string>
+    <string name="workout_chart_unit_kcal">kcal</string>
     <string name="workout_chart_goal">目標</string>
-    <string name="workout_chart_value_kcal">%1$d 大卡</string>
+    <string name="workout_chart_value_kcal">%1$d kcal</string>
     <string name="workout_chart_7day_avg">7 日平均</string>
     <string name="workout_chart_loading">載入中…</string>
     <string name="workout_legend_burned">運動消耗量</string>
     <string name="workout_legend_daily_goal">每日目標</string>
     <string name="workout_tooltip_burned">消耗</string>
-    <string name="workout_tooltip_kcal_value">%1$d 大卡</string>
+    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
 
 
     <!-- =========================
          WaterChartCard
          ========================= -->
     <string name="water_chart_goal_reached">今日已達成目標</string>
-    <string name="water_chart_goal_left_ml">距離今日目標還差 %1$s 毫升</string>
+    <string name="water_chart_goal_left_ml">距離今日目標還差 %1$s ml</string>
     <string name="water_chart_title">喝水量</string>
-    <string name="water_chart_unit_ml">毫升</string>
+    <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">目標</string>
-    <string name="water_chart_value_ml">%1$s 毫升</string>
+    <string name="water_chart_value_ml">%1$s ml</string>
     <string name="water_chart_7day_avg">7 日平均</string>
     <string name="water_chart_loading">載入中…</string>
     <string name="water_legend_intake">攝取量</string>
     <string name="water_legend_daily_goal">每日目標</string>
     <string name="water_tooltip_intake">攝取</string>
-    <string name="water_tooltip_ml_value">%1$d 毫升</string>
+    <string name="water_tooltip_ml_value">%1$d ml</string>
 
 
     <!-- =========================
@@ -628,11 +628,11 @@
     <string name="workout_history_summary_label">今日運動消耗</string>
     <string name="workout_history_summary_body">用來追蹤你今天的運動消耗進度</string>
     <string name="workout_history_today_label">今天</string>
-    <string name="workout_history_avg_daily_value">%1$d 大卡</string>
+    <string name="workout_history_avg_daily_value">%1$d kcal</string>
     <string name="workout_history_avg_daily_label">近 7 天平均 / 天</string>
     <string name="workout_history_avg_label">近 7 天平均 / 次</string>
-    <string name="workout_history_avg_value">%1$d 大卡</string>
-    <string name="workout_history_unit_kcal">大卡</string>
+    <string name="workout_history_avg_value">%1$d kcal</string>
+    <string name="workout_history_unit_kcal">kcal</string>
 
     <string name="workout_history_empty_title">沒有近期運動</string>
     <string name="workout_history_empty">最近 7 天沒有運動紀錄。</string>
@@ -640,7 +640,7 @@
     <string name="workout_history_minutes">%1$d 分鐘</string>
     <string name="workout_history_kcal">%1$d</string>
     <string name="workout_history_date_time">%1$s · %2$s</string>
-    <string name="workout_history_kcal_with_unit">%1$d 大卡</string>
+    <string name="workout_history_kcal_with_unit">%1$d kcal</string>
 
     <string name="workout_history_loading_title">同步運動紀錄</string>
     <string name="workout_history_loading">正在載入運動紀錄&#8230;</string>
@@ -666,12 +666,12 @@
     <string name="workout_tracker_estimating_calories">正在估算強度與消耗熱量&#8230;</string>
     <string name="workout_tracker_do_not_close">請不要關閉 App 或鎖定裝置</string>
 
-    <string name="workout_tracker_kcal_value">%1$d 大卡</string>
+    <string name="workout_tracker_kcal_value">%1$d kcal</string>
     <string name="workout_tracker_minutes_activity">%1$d 分鐘 %2$s</string>
     <string name="workout_tracker_add_workout">新增運動</string>
 
     <string name="workout_tracker_activity_content_label">運動項目</string>
-    <string name="workout_preset_kcal_per_30_min">%1$d 大卡 / 30 分鐘</string>
+    <string name="workout_preset_kcal_per_30_min">%1$d kcal / 30 分鐘</string>
 
     <string name="workout_tracker_save_success">儲存成功</string>
     <string name="workout_tracker_save_failed">儲存失敗，請再試一次。</string>
@@ -915,8 +915,8 @@
     <string name="personal_details_daily_workout_goal">每日運動目標</string>
     <string name="personal_details_age_value">%1$d 歲</string>
     <string name="personal_details_steps_value">%1$d 步</string>
-    <string name="personal_details_water_value">%1$d 毫升</string>
-    <string name="personal_details_kcal_value">%1$d 大卡</string>
+    <string name="personal_details_water_value">%1$d ml</string>
+    <string name="personal_details_kcal_value">%1$d kcal</string>
     <string name="gender_male">男性</string>
     <string name="gender_female">女性</string>
     <string name="gender_other">其他</string>
@@ -988,14 +988,14 @@
 
     <!-- EditWaterGoalScreen -->
     <string name="edit_water_goal_title">編輯喝水目標</string>
-    <string name="edit_water_goal_previous_format">上一個目標 %1$d 毫升</string>
-    <string name="edit_water_goal_input_label">每日飲水目標（毫升）</string>
+    <string name="edit_water_goal_previous_format">上一個目標 %1$d ml</string>
+    <string name="edit_water_goal_input_label">每日飲水目標（ml）</string>
 
 
     <!-- EditWorkoutGoalScreen -->
     <string name="edit_workout_goal_title">編輯運動目標</string>
-    <string name="edit_workout_goal_previous_format">上一個目標 %1$d 大卡</string>
-    <string name="edit_workout_goal_input_label">每日運動目標（大卡）</string>
+    <string name="edit_workout_goal_previous_format">上一個目標 %1$d kcal</string>
+    <string name="edit_workout_goal_input_label">每日運動目標（kcal）</string>
 
 
     <!-- EditNutritionGoalsScreen -->
@@ -1080,9 +1080,9 @@
 
     <!-- Android home screen widgets -->
     <string name="widget_preview_goal_kcal">1830</string>
-    <string name="widget_preview_protein">120克</string>
-    <string name="widget_preview_carbs">180克</string>
-    <string name="widget_preview_fats">60克</string>
+    <string name="widget_preview_protein">120g</string>
+    <string name="widget_preview_carbs">180g</string>
+    <string name="widget_preview_fats">60g</string>
     <string name="widget_calories_left">剩餘卡路里</string>
     <string name="widget_protein_left">剩餘蛋白質</string>
     <string name="widget_carbs_left">剩餘碳水</string>
@@ -1092,7 +1092,7 @@
     <string name="widget_log_your_food">記錄你的食物</string>
     <string name="widget_scan_food">掃描食物</string>
     <string name="widget_barcode">條碼</string>
-    <string name="widget_grams_format">%1$d克</string>
+    <string name="widget_grams_format">%1$dg</string>
 
 
 

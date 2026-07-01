@@ -224,7 +224,7 @@
     <string name="plan_macros_proteins">प्रोटीन</string>
     <string name="plan_macros_carbs">कार्बोहाइड्रेट</string>
     <string name="plan_macros_fat">वसा</string>
-    <string name="plan_unit_g">जी</string>
+    <string name="plan_unit_g">g</string>
 
     <string name="plan_water_daily">दैनिक जल</string>
     <string name="plan_weight_current">वर्तमान वजन</string>
@@ -356,7 +356,7 @@
     <string name="home_sugar_eaten_label">चीनी खाई</string>
     <string name="home_sodium_goal_label">सोडियम बचा</string>
     <string name="home_sodium_eaten_label">सोडियम खाया</string>
-    <string name="home_nutrition_ratio_mg">%1$d / %2$dमिलीग्राम</string>
+    <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
     <!-- HomeCards :  Health Score Card & Advice -->
@@ -475,7 +475,7 @@
     <string name="progress_tooltip_carbs">कार्बोहाइड्रेट</string>
     <string name="progress_tooltip_fats">वसा</string>
     <string name="progress_tooltip_label_format">%1$s:</string>
-    <string name="progress_tooltip_grams_value">%1$d जी</string>
+    <string name="progress_tooltip_grams_value">%1$d g</string>
     <string name="progress_tooltip_plain_value">%1$d</string>
 
 
@@ -483,7 +483,7 @@
          MicronutrientChartCard
          ========================= -->
     <string name="progress_micronutrients_title">सूक्ष्म पोषक</string>
-    <string name="progress_chart_grams">जी</string>
+    <string name="progress_chart_grams">g</string>
     <string name="progress_chart_7day_avg">7 दिन का औसत</string>
     <string name="progress_legend_fiber">रेशा</string>
     <string name="progress_legend_sugar">चीनी</string>
@@ -492,7 +492,7 @@
     <string name="progress_tooltip_fiber">रेशा</string>
     <string name="progress_tooltip_sugar">चीनी</string>
     <string name="progress_tooltip_sodium">सोडियम</string>
-    <string name="progress_tooltip_mg_value">%1$d मिलीग्राम</string>
+    <string name="progress_tooltip_mg_value">%1$d mg</string>
 
 
     <!-- =========================
@@ -1083,9 +1083,9 @@
 
     <!-- Android home screen widgets -->
     <string name="widget_preview_goal_kcal">1830</string>
-    <string name="widget_preview_protein">120 ग्रा</string>
-    <string name="widget_preview_carbs">180 ग्राम</string>
-    <string name="widget_preview_fats">60 ग्राम</string>
+    <string name="widget_preview_protein">120g</string>
+    <string name="widget_preview_carbs">180g</string>
+    <string name="widget_preview_fats">60g</string>
     <string name="widget_calories_left">कैलोरी बची</string>
     <string name="widget_protein_left">प्रोटीन बचा</string>
     <string name="widget_carbs_left">कार्ब्स बचे</string>

@@ -1083,9 +1083,9 @@
 
     <!-- Android home screen widgets -->
     <string name="widget_preview_goal_kcal">1830</string>
-    <string name="widget_preview_protein">120 g</string>
-    <string name="widget_preview_carbs">180 g</string>
-    <string name="widget_preview_fats">60 g</string>
+    <string name="widget_preview_protein">120g</string>
+    <string name="widget_preview_carbs">180g</string>
+    <string name="widget_preview_fats">60g</string>
     <string name="widget_calories_left">Kalorier kvar</string>
     <string name="widget_protein_left">Protein kvar</string>
     <string name="widget_carbs_left">Kolhydrater kvar</string>

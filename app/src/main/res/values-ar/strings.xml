@@ -145,7 +145,7 @@
     <string name="plan_macros_proteins">بروتين</string>
     <string name="plan_macros_carbs">الكربوهيدرات</string>
     <string name="plan_macros_fat">الدهون</string>
-    <string name="plan_unit_g">ز</string>
+    <string name="plan_unit_g">g</string>
     <string name="plan_water_daily">المياه اليومية</string>
     <string name="plan_weight_current">الوزن الحالي</string>
     <string name="plan_weight_delta">لهدف الوزن</string>
@@ -242,7 +242,7 @@
     <string name="home_sugar_eaten_label">أكل السكر</string>
     <string name="home_sodium_goal_label">بقي الصوديوم</string>
     <string name="home_sodium_eaten_label">يؤكل الصوديوم</string>
-    <string name="home_nutrition_ratio_mg">%1$d / %2$dمجم</string>
+    <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
     <string name="home_health_score_advice_zero">قم بتسجيل وجبتك الأولى اليوم لترى النتيجة الصحية بناءً على تفاصيل التغذية الخاصة بها.</string>
     <string name="home_health_score_advice_very_low">المتوسط ​​اليوم منخفض. فكر في تناول المزيد من البروتين والألياف وتقليل السكر أو الصوديوم.</string>
     <string name="home_health_score_advice_low">هناك مجال للتحسين. حاول إضافة الخضار والبروتين عالي الجودة.</string>
@@ -323,10 +323,10 @@
     <string name="progress_tooltip_carbs">الكربوهيدرات</string>
     <string name="progress_tooltip_fats">الدهون</string>
     <string name="progress_tooltip_label_format">%1$s:</string>
-    <string name="progress_tooltip_grams_value">%1$d ز</string>
+    <string name="progress_tooltip_grams_value">%1$d g</string>
     <string name="progress_tooltip_plain_value">%1$d</string>
     <string name="progress_micronutrients_title">المغذيات الدقيقة</string>
-    <string name="progress_chart_grams">ز</string>
+    <string name="progress_chart_grams">g</string>
     <string name="progress_chart_7day_avg">متوسط ​​7 أيام</string>
     <string name="progress_legend_fiber">الفيبر</string>
     <string name="progress_legend_sugar">سكر</string>
@@ -335,7 +335,7 @@
     <string name="progress_tooltip_fiber">الفيبر</string>
     <string name="progress_tooltip_sugar">سكر</string>
     <string name="progress_tooltip_sodium">الصوديوم</string>
-    <string name="progress_tooltip_mg_value">%1$d ملغ</string>
+    <string name="progress_tooltip_mg_value">%1$d mg</string>
     <string name="workout_chart_goal_reached">تم الوصول للهدف اليوم</string>
     <string name="workout_chart_goal_left">%1$d سعرات حرارية متبقية لتحقيق هدف اليوم</string>
     <string name="workout_chart_title">حرق تجريب</string>
@@ -765,9 +765,9 @@
     <string name="url_support_email">mailto:support@caloshape.com?subject=Support%20Request</string>
     <string name="camera_manual_entry_not_ready">الإدخال اليدوي ليس جاهزًا بعد. التبديل إلى مسح الملصقات في الوقت الحالي.</string>
     <string name="widget_preview_goal_kcal">1830</string>
-    <string name="widget_preview_protein">120 جرام</string>
-    <string name="widget_preview_carbs">180 جرام</string>
-    <string name="widget_preview_fats">60 جرام</string>
+    <string name="widget_preview_protein">120g</string>
+    <string name="widget_preview_carbs">180g</string>
+    <string name="widget_preview_fats">60g</string>
     <string name="widget_calories_left">السعرات الحرارية المتبقية</string>
     <string name="widget_protein_left">بقي البروتين</string>
     <string name="widget_carbs_left">الكربوهيدرات اليسار</string>
