@@ -48,7 +48,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
 import com.caloshape.app.R
-import com.caloshape.app.ui.common.haptic.caloShapeClickable
+import com.caloshape.app.ui.common.haptic.caloShapeClickableWithoutRipple
 import com.caloshape.app.ui.common.CaloShapeConfirmDialog
 import com.caloshape.app.ui.home.components.CardStyles
 import com.caloshape.app.ui.home.components.HomeBackground
@@ -245,7 +245,7 @@ private fun SavedFoodCard(
             .fillMaxWidth()
             .aspectRatio(0.7f)
             .testTag("saved_food_card")
-            .caloShapeClickable(onClick = onOpenDetail),
+            .caloShapeClickableWithoutRipple(onClick = onOpenDetail),
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(containerColor = cardContainer),
         border = cardBorder,
@@ -269,7 +269,7 @@ private fun SavedFoodCard(
                         .size(30.dp)
                         .clip(CircleShape)
                         .background(removeSurface)
-                        .caloShapeClickable(onClick = onRemove)
+                        .caloShapeClickableWithoutRipple(onClick = onRemove)
                         .align(Alignment.TopStart)
                         .testTag("saved_food_remove"),
                     contentAlignment = Alignment.Center
@@ -377,7 +377,7 @@ private fun SavedFoodCard(
                     .fillMaxWidth()
                     .height(36.dp)
                     .background(detailContainer)
-                    .caloShapeClickable(onClick = onOpenDetail)
+                    .caloShapeClickableWithoutRipple(onClick = onOpenDetail)
                     .testTag("saved_food_detail"),
                 contentAlignment = Alignment.Center
             ) {

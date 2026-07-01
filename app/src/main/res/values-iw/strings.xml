@@ -823,14 +823,21 @@
     <string name="settings_version">גרסה %1$s</string>
 
 
-    <string name="settings_membership_payment">תַשְׁלוּם</string>
-    <string name="settings_membership_update_payment">עדכון תשלום</string>
-    <string name="settings_membership_premium">פּרֶמיָה</string>
-    <string name="settings_membership_active_member">חבר פעיל</string>
-    <string name="settings_membership_trial">מִשׁפָּט</string>
+    <string name="settings_membership_payment">בעיה בתשלום</string>
+    <string name="settings_membership_update_payment">עדכון אמצעי תשלום</string>
+    <string name="settings_membership_premium">פרימיום</string>
+    <string name="settings_membership_active_member">חברות פעילה</string>
+    <string name="settings_membership_trial">תקופת ניסיון</string>
     <string name="settings_membership_access_active">גישה פעילה</string>
-    <string name="settings_membership_free">לְשַׁחְרֵר</string>
+    <string name="settings_membership_free">חינם</string>
     <string name="settings_membership_upgrade">שדרוג</string>
+    <string name="settings_membership_trial_ends_today">תקופת הניסיון מסתיימת היום</string>
+    <string name="settings_membership_until_format">בתוקף עד %1$s</string>
+    <plurals name="settings_membership_trial_days_left">
+        <item quantity="one">נותר %1$d יום</item>
+        <item quantity="two">נותרו %1$d ימים</item>
+        <item quantity="other">נותרו %1$d ימים</item>
+    </plurals>
 
 
     <!-- Settings: referral card -->

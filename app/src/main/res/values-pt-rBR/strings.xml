@@ -824,14 +824,20 @@
     <string name="settings_version">Version %1$s</string>
 
 
-    <string name="settings_membership_payment">Pagamento</string>
-    <string name="settings_membership_update_payment">Update payment</string>
+    <string name="settings_membership_payment">Problema no pagamento</string>
+    <string name="settings_membership_update_payment">Atualizar pagamento</string>
     <string name="settings_membership_premium">Premium</string>
     <string name="settings_membership_active_member">Membro ativo</string>
-    <string name="settings_membership_trial">Teste</string>
+    <string name="settings_membership_trial">Teste grátis</string>
     <string name="settings_membership_access_active">Acesso ativo</string>
     <string name="settings_membership_free">Grátis</string>
     <string name="settings_membership_upgrade">Fazer upgrade</string>
+    <string name="settings_membership_trial_ends_today">O teste termina hoje</string>
+    <string name="settings_membership_until_format">Válido até %1$s</string>
+    <plurals name="settings_membership_trial_days_left">
+        <item quantity="one">Resta %1$d dia</item>
+        <item quantity="other">Restam %1$d dias</item>
+    </plurals>
 
 
     <!-- Settings: referral card -->

@@ -57,7 +57,7 @@ import com.caloshape.app.ui.common.design.CaloShapeColors
 import com.caloshape.app.ui.common.design.CaloShapePrimaryButton
 import com.caloshape.app.ui.common.design.CaloShapeScreenFrame
 import com.caloshape.app.ui.common.design.CaloShapeTopBar
-import com.caloshape.app.ui.common.haptic.caloShapeClickable
+import com.caloshape.app.ui.common.haptic.caloShapeClickableWithoutRipple
 import com.caloshape.app.ui.home.components.HomeBackground
 import kotlinx.coroutines.delay
 
@@ -476,7 +476,7 @@ private fun PromoCodePanel(
                 .height(40.dp)
                 .clip(RoundedCornerShape(999.dp))
                 .background(Color.White)
-                .caloShapeClickable(onClick = onCopy)
+                .caloShapeClickableWithoutRipple(onClick = onCopy)
                 .padding(horizontal = 14.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {

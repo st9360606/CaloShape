@@ -823,14 +823,20 @@
     <string name="settings_version">Sürüm %1$s</string>
 
 
-    <string name="settings_membership_payment">Ödeme</string>
+    <string name="settings_membership_payment">Ödeme sorunu</string>
     <string name="settings_membership_update_payment">Ödemeyi güncelle</string>
-    <string name="settings_membership_premium">prim</string>
-    <string name="settings_membership_active_member">Aktif üye</string>
-    <string name="settings_membership_trial">Duruşma</string>
-    <string name="settings_membership_access_active">Erişim etkin</string>
-    <string name="settings_membership_free">Özgür</string>
-    <string name="settings_membership_upgrade">Güncelleme</string>
+    <string name="settings_membership_premium">Premium</string>
+    <string name="settings_membership_active_member">Aktif üyelik</string>
+    <string name="settings_membership_trial">Deneme</string>
+    <string name="settings_membership_access_active">Erişim aktif</string>
+    <string name="settings_membership_free">Ücretsiz</string>
+    <string name="settings_membership_upgrade">Yükselt</string>
+    <string name="settings_membership_trial_ends_today">Deneme bugün sona eriyor</string>
+    <string name="settings_membership_until_format">%1$s tarihine kadar geçerli</string>
+    <plurals name="settings_membership_trial_days_left">
+        <item quantity="one">%1$d gün kaldı</item>
+        <item quantity="other">%1$d gün kaldı</item>
+    </plurals>
 
 
     <!-- Settings: referral card -->

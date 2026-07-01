@@ -823,14 +823,22 @@
     <string name="settings_version">Wersja %1$s</string>
 
 
-    <string name="settings_membership_payment">Zapłata</string>
+    <string name="settings_membership_payment">Problem z płatnością</string>
     <string name="settings_membership_update_payment">Zaktualizuj płatność</string>
-    <string name="settings_membership_premium">Premia</string>
-    <string name="settings_membership_active_member">Działacz</string>
-    <string name="settings_membership_trial">Test</string>
+    <string name="settings_membership_premium">Premium</string>
+    <string name="settings_membership_active_member">Aktywne członkostwo</string>
+    <string name="settings_membership_trial">Okres próbny</string>
     <string name="settings_membership_access_active">Dostęp aktywny</string>
     <string name="settings_membership_free">Bezpłatny</string>
-    <string name="settings_membership_upgrade">Aktualizacja</string>
+    <string name="settings_membership_upgrade">Ulepsz</string>
+    <string name="settings_membership_trial_ends_today">Okres próbny kończy się dzisiaj</string>
+    <string name="settings_membership_until_format">Ważne do %1$s</string>
+    <plurals name="settings_membership_trial_days_left">
+        <item quantity="one">Pozostał %1$d dzień</item>
+        <item quantity="few">Pozostały %1$d dni</item>
+        <item quantity="many">Pozostało %1$d dni</item>
+        <item quantity="other">Pozostało %1$d dnia</item>
+    </plurals>
 
 
     <!-- Settings: referral card -->

@@ -74,6 +74,7 @@ import com.caloshape.app.data.billing.CaloShapeBillingProducts
 import com.caloshape.app.data.entitlement.api.EntitlementSyncResponse
 import com.caloshape.app.ui.common.design.CaloShapeScreenSpacing
 import com.caloshape.app.ui.common.haptic.caloShapeClickable
+import com.caloshape.app.ui.common.haptic.caloShapeClickableWithoutRipple
 import com.caloshape.app.ui.common.haptic.rememberClickWithHaptic
 import com.caloshape.app.ui.landing.LandingSlideshow
 import com.caloshape.app.ui.landing.SlideItem
@@ -387,7 +388,7 @@ private fun BoxScope.RestoreSubscriptionRequiredDialog(
             modifier = Modifier
                 .fillMaxSize()
                 .background(Color.Black.copy(alpha = 0.42f))
-                .caloShapeClickable(enabled = !purchasing) {
+                .caloShapeClickableWithoutRipple(enabled = !purchasing) {
                     // 只吃掉背景點擊事件，不關閉 Dialog。
                     // 這樣可以避免使用者誤觸遮罩，導致 restore 提示消失。
                 }

@@ -823,14 +823,19 @@
     <string name="settings_version">เวอร์ชัน %1$s</string>
 
 
-    <string name="settings_membership_payment">การชำระเงิน</string>
-    <string name="settings_membership_update_payment">อัพเดทการชำระเงิน</string>
+    <string name="settings_membership_payment">ปัญหาการชำระเงิน</string>
+    <string name="settings_membership_update_payment">อัปเดตการชำระเงิน</string>
     <string name="settings_membership_premium">พรีเมี่ยม</string>
     <string name="settings_membership_active_member">สมาชิกที่ใช้งานอยู่</string>
-    <string name="settings_membership_trial">การทดลอง</string>
-    <string name="settings_membership_access_active">การเข้าถึงที่ใช้งานอยู่</string>
+    <string name="settings_membership_trial">ทดลองใช้</string>
+    <string name="settings_membership_access_active">สิทธิ์ใช้งานอยู่</string>
     <string name="settings_membership_free">ฟรี</string>
-    <string name="settings_membership_upgrade">อัพเกรด</string>
+    <string name="settings_membership_upgrade">อัปเกรด</string>
+    <string name="settings_membership_trial_ends_today">การทดลองใช้สิ้นสุดวันนี้</string>
+    <string name="settings_membership_until_format">ใช้ได้ถึง %1$s</string>
+    <plurals name="settings_membership_trial_days_left">
+        <item quantity="other">เหลือ %1$d วัน</item>
+    </plurals>
 
 
     <!-- Settings: referral card -->

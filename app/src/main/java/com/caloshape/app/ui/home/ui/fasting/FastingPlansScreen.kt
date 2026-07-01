@@ -84,6 +84,7 @@ import com.caloshape.app.ui.common.haptic.HapticWheelTickEffect
 import com.caloshape.app.ui.common.haptic.clickWithoutHaptic
 import com.caloshape.app.ui.common.haptic.consumeClickWithoutHaptic
 import com.caloshape.app.ui.common.haptic.caloShapeClickable
+import com.caloshape.app.ui.common.haptic.caloShapeClickableWithoutRipple
 import com.caloshape.app.ui.common.haptic.rememberClickWithHaptic
 import kotlinx.coroutines.launch
 import java.time.LocalTime
@@ -685,7 +686,7 @@ private fun FastingPlanCard(
         modifier = Modifier
             .fillMaxWidth()
             .aspectRatio(0.9f)
-            .caloShapeClickable(role = Role.Button, onClick = onSelect),
+            .caloShapeClickableWithoutRipple(role = Role.Button, onClick = onSelect),
         shape = CardStyles.Corner,
         colors = CardDefaults.cardColors(containerColor = HomeCardStyles.Surface.card()),
         border = HomeCardStyles.Surface.border()
@@ -943,7 +944,7 @@ private fun FastingPlanTimeValueCard(
     modifier: Modifier = Modifier
 ) {
     val clickableModifier = if (enabled && onClick != null) {
-        Modifier.caloShapeClickable(
+        Modifier.caloShapeClickableWithoutRipple(
             role = Role.Button,
             onClick = onClick
         )

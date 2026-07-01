@@ -824,14 +824,19 @@
     <string name="settings_version">Version %1$s</string>
 
 
-    <string name="settings_membership_payment">결제</string>
-    <string name="settings_membership_update_payment">Update payment</string>
+    <string name="settings_membership_payment">결제 문제</string>
+    <string name="settings_membership_update_payment">결제 정보 업데이트</string>
     <string name="settings_membership_premium">프리미엄</string>
     <string name="settings_membership_active_member">활성 회원</string>
-    <string name="settings_membership_trial">체험</string>
-    <string name="settings_membership_access_active">접근 활성</string>
+    <string name="settings_membership_trial">무료 체험</string>
+    <string name="settings_membership_access_active">이용 가능</string>
     <string name="settings_membership_free">무료</string>
     <string name="settings_membership_upgrade">업그레이드</string>
+    <string name="settings_membership_trial_ends_today">무료 체험이 오늘 종료됩니다</string>
+    <string name="settings_membership_until_format">%1$s까지 유효</string>
+    <plurals name="settings_membership_trial_days_left">
+        <item quantity="other">%1$d일 남음</item>
+    </plurals>
 
 
     <!-- Settings: referral card -->

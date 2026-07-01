@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.sp
 import com.caloshape.app.R
 import com.caloshape.app.i18n.ProvideComposeLocale
 import com.caloshape.app.ui.common.design.CaloShapeOnboardingColors
-import com.caloshape.app.ui.common.haptic.caloShapeClickable
+import com.caloshape.app.ui.common.haptic.caloShapeClickableWithoutRipple
 import com.caloshape.app.ui.common.haptic.rememberClickWithHaptic
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.delay
@@ -314,7 +314,7 @@ fun SignInSheet(
                             color = linkColor,
                             modifier = Modifier
                                 .padding(horizontal = 6.dp)
-                                .caloShapeClickable(role = Role.Button) {
+                                .caloShapeClickableWithoutRipple(role = Role.Button) {
                                     onTerms()
                                     uriHandler.openUri(termsUrl)
                                 }
@@ -330,7 +330,7 @@ fun SignInSheet(
                             color = linkColor,
                             modifier = Modifier
                                 .padding(horizontal = 6.dp)
-                                .caloShapeClickable(role = Role.Button) {
+                                .caloShapeClickableWithoutRipple(role = Role.Button) {
                                     onPrivacy()
                                     uriHandler.openUri(privacyUrl)
                                 }

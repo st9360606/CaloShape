@@ -107,6 +107,25 @@ fun Modifier.caloShapeClickable(
 }
 
 @Composable
+fun Modifier.caloShapeClickableWithoutRipple(
+    enabled: Boolean = true,
+    onClickLabel: String? = null,
+    role: Role? = null,
+    interactionSource: MutableInteractionSource? = null,
+    onClick: () -> Unit
+): Modifier {
+    val safeInteractionSource = interactionSource ?: remember { MutableInteractionSource() }
+    return caloShapeClickable(
+        enabled = enabled,
+        onClickLabel = onClickLabel,
+        role = role,
+        interactionSource = safeInteractionSource,
+        indication = null,
+        onClick = onClick
+    )
+}
+
+@Composable
 fun Modifier.clickWithoutHaptic(
     enabled: Boolean = true,
     onClickLabel: String? = null,

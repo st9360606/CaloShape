@@ -2,7 +2,6 @@ package com.caloshape.app.ui.home.ui.calendar
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Canvas
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -34,6 +33,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.caloshape.app.ui.common.haptic.caloShapeClickableWithoutRipple
 import com.caloshape.app.ui.home.components.HomeCardStyles
 import java.time.DayOfWeek
 import java.time.LocalDate
@@ -170,7 +170,7 @@ fun CalendarStrip(
                         // 選中的那天：使用 HomeCardStyles.Calendar 管理的金棕色底
                         Box(
                             modifier = baseContainer
-                                .clickable { onSelect(d) }
+                                .caloShapeClickableWithoutRipple { onSelect(d) }
                                 .drawBehind {
                                     val fraction = selectedBgWidthFraction.coerceIn(0.6f, 1f)
                                     val chipW = size.width * fraction
@@ -205,7 +205,7 @@ fun CalendarStrip(
                         // 今天但未被選：柔和灰底
                         Box(
                             modifier = baseContainer
-                                .clickable(enabled = enabled) { onSelect(d) }
+                                .caloShapeClickableWithoutRipple(enabled = enabled) { onSelect(d) }
                                 .drawBehind {
                                     val fraction = selectedBgWidthFraction.coerceIn(0.6f, 1f)
                                     val chipW = size.width * fraction
@@ -239,7 +239,7 @@ fun CalendarStrip(
                         // 其他（一般日或未來日）
                         Box(
                             modifier = baseContainer
-                                .clickable(enabled = enabled) { onSelect(d) },
+                                .caloShapeClickableWithoutRipple(enabled = enabled) { onSelect(d) },
                             contentAlignment = Alignment.Center
                         ) {
                             DayDot(

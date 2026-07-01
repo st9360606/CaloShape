@@ -823,14 +823,20 @@
     <string name="settings_version">Versie %1$s</string>
 
 
-    <string name="settings_membership_payment">Betaling</string>
+    <string name="settings_membership_payment">Betalingsprobleem</string>
     <string name="settings_membership_update_payment">Betaling bijwerken</string>
-    <string name="settings_membership_premium">Premie</string>
+    <string name="settings_membership_premium">Premium</string>
     <string name="settings_membership_active_member">Actief lid</string>
-    <string name="settings_membership_trial">Proces</string>
+    <string name="settings_membership_trial">Proefperiode</string>
     <string name="settings_membership_access_active">Toegang actief</string>
-    <string name="settings_membership_free">Vrij</string>
+    <string name="settings_membership_free">Gratis</string>
     <string name="settings_membership_upgrade">Upgraden</string>
+    <string name="settings_membership_trial_ends_today">Proefperiode eindigt vandaag</string>
+    <string name="settings_membership_until_format">Geldig tot %1$s</string>
+    <plurals name="settings_membership_trial_days_left">
+        <item quantity="one">Nog %1$d dag</item>
+        <item quantity="other">Nog %1$d dagen</item>
+    </plurals>
 
 
     <!-- Settings: referral card -->

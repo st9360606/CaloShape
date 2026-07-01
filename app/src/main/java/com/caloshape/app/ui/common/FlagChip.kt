@@ -15,7 +15,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.caloshape.app.ui.common.haptic.caloShapeClickable
+import com.caloshape.app.ui.common.haptic.caloShapeClickableWithoutRipple
 
 /**
  * 與 Landing 相同樣式的語言旗幟膠囊。
@@ -30,7 +30,7 @@ fun FlagChip(
     Surface(
         modifier = modifier
             .clip(RoundedCornerShape(22.dp))
-            .caloShapeClickable(onClick = onClick),
+            .caloShapeClickableWithoutRipple(onClick = onClick),
         color = Color(0xFFF1F3F7),
         shadowElevation = 0.dp
     ) {

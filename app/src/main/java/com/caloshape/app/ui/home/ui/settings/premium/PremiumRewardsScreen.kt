@@ -30,6 +30,8 @@ import com.caloshape.app.ui.common.design.CaloShapeScreenFrame
 import com.caloshape.app.ui.common.design.CaloShapePrimaryButton
 import com.caloshape.app.ui.common.design.CaloShapeTopBar
 import com.caloshape.app.ui.home.ui.membership.MembershipUiMapper
+import com.caloshape.app.ui.home.ui.membership.localizedMembershipSubtitle
+import com.caloshape.app.ui.home.ui.membership.localizedMembershipTitle
 
 @Composable
 fun PremiumRewardsScreen(
@@ -140,8 +142,6 @@ private fun SummaryCard(summary: MembershipSummaryDto?) {
         trialDaysLeft = summary?.trialDaysLeft,
         paymentIssue = summary?.paymentIssue == true
     )
-    val unavailable = stringResource(R.string.common_unavailable_dash)
-
     Card(
         shape = RoundedCornerShape(20.dp),
         modifier = Modifier.fillMaxWidth()
@@ -154,12 +154,12 @@ private fun SummaryCard(summary: MembershipSummaryDto?) {
             Spacer(Modifier.height(4.dp))
 
             Text(
-                text = display.title,
+                text = localizedMembershipTitle(display.kind),
                 style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold)
             )
 
             Spacer(Modifier.height(6.dp))
-            Text(display.subtitle.ifBlank { unavailable })
+            Text(localizedMembershipSubtitle(display.subtitle))
         }
     }
 }

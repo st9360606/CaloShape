@@ -57,7 +57,7 @@ import com.caloshape.app.i18n.currentLocaleKey
 import com.caloshape.app.ui.common.design.CaloShapeColors
 import com.caloshape.app.ui.common.design.CaloShapeScreenFrame
 import com.caloshape.app.ui.common.design.CaloShapeTopBar
-import com.caloshape.app.ui.common.haptic.caloShapeClickable
+import com.caloshape.app.ui.common.haptic.caloShapeClickableWithoutRipple
 import com.caloshape.app.ui.common.haptic.rememberClickWithHaptic
 import com.caloshape.app.ui.home.components.HomeBackground
 import com.caloshape.app.ui.home.components.HomeCardStyles
@@ -254,7 +254,7 @@ private fun NotificationCard(
             .fillMaxWidth()
             .then(
                 if (!item.read && !markingRead) {
-                    Modifier.caloShapeClickable(onClick = markReadClick)
+                    Modifier.caloShapeClickableWithoutRipple(onClick = markReadClick)
                 } else {
                     Modifier
                 }

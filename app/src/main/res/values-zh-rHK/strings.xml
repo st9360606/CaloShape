@@ -288,8 +288,8 @@
 
     <!-- Onboarding: OnboardDiscountSpinScreen-->
     <string name="subscription_spin_title">解鎖專屬折扣</string>
-    <string name="subscription_spin_helper_ready">點擊 Spin 揭曉您的專屬禮物</string>
-    <string name="subscription_spin_button">Spin</string>
+    <string name="subscription_spin_helper_ready">點擊 開始轉動 揭曉您的專屬禮物</string>
+    <string name="subscription_spin_button">開始轉動</string>
     <string name="subscription_spinning_button">轉動中…</string>
     <string name="subscription_gift_offer_unlocked">禮物優惠已解鎖</string>
     <string name="subscription_spin_helper_wait">請等待轉盤停止</string>
@@ -823,14 +823,19 @@
     <string name="settings_version">版本 %1$s</string>
 
 
-    <string name="settings_membership_payment">付款問題</string>
-    <string name="settings_membership_update_payment">更新付款</string>
+    <string name="settings_membership_payment">付款異常</string>
+    <string name="settings_membership_update_payment">更新付款方式</string>
     <string name="settings_membership_premium">Premium</string>
-    <string name="settings_membership_active_member">會員啟用中</string>
+    <string name="settings_membership_active_member">會員資格生效中</string>
     <string name="settings_membership_trial">試用</string>
-    <string name="settings_membership_access_active">權限啟用中</string>
+    <string name="settings_membership_access_active">權限生效中</string>
     <string name="settings_membership_free">免費</string>
     <string name="settings_membership_upgrade">升級</string>
+    <string name="settings_membership_trial_ends_today">試用今天結束</string>
+    <string name="settings_membership_until_format">有效至 %1$s</string>
+    <plurals name="settings_membership_trial_days_left">
+        <item quantity="other">剩餘 %1$d 天</item>
+    </plurals>
 
 
     <!-- Settings referral card -->

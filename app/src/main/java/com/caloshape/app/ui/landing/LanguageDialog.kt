@@ -45,7 +45,7 @@ import androidx.compose.ui.window.DialogProperties
 import com.caloshape.app.R
 import com.caloshape.app.i18n.LanguageManager
 import com.caloshape.app.ui.common.design.CaloShapeColors
-import com.caloshape.app.ui.common.haptic.caloShapeClickable
+import com.caloshape.app.ui.common.haptic.caloShapeClickableWithoutRipple
 import com.caloshape.app.ui.common.haptic.rememberClickWithHaptic
 
 data class LangItem(val label: String, val tag: String, val flag: String)
@@ -173,7 +173,7 @@ fun LanguageDialog(
                                 .clip(RoundedCornerShape(16.dp))
                                 .background(bg)
                                 .border(BorderStroke(1.dp, border), RoundedCornerShape(16.dp))
-                                .caloShapeClickable(enabled = supported) {
+                                .caloShapeClickableWithoutRipple(enabled = supported) {
                                     onPick(langItem)
                                 }
                                 .padding(horizontal = 14.dp),

@@ -823,14 +823,19 @@
     <string name="settings_version">Phiên bản %1$s</string>
 
 
-    <string name="settings_membership_payment">Sự chi trả</string>
+    <string name="settings_membership_payment">Vấn đề thanh toán</string>
     <string name="settings_membership_update_payment">Cập nhật thanh toán</string>
-    <string name="settings_membership_premium">Phần thưởng</string>
-    <string name="settings_membership_active_member">thành viên tích cực</string>
-    <string name="settings_membership_trial">Sự thử nghiệm</string>
-    <string name="settings_membership_access_active">Truy cập đang hoạt động</string>
+    <string name="settings_membership_premium">Premium</string>
+    <string name="settings_membership_active_member">Thành viên đang hoạt động</string>
+    <string name="settings_membership_trial">Dùng thử</string>
+    <string name="settings_membership_access_active">Quyền truy cập đang hoạt động</string>
     <string name="settings_membership_free">Miễn phí</string>
     <string name="settings_membership_upgrade">Nâng cấp</string>
+    <string name="settings_membership_trial_ends_today">Thời gian dùng thử kết thúc hôm nay</string>
+    <string name="settings_membership_until_format">Có hiệu lực đến %1$s</string>
+    <plurals name="settings_membership_trial_days_left">
+        <item quantity="other">Còn %1$d ngày</item>
+    </plurals>
 
 
     <!-- Settings: referral card -->

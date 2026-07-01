@@ -58,7 +58,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.caloshape.app.R
-import com.caloshape.app.ui.common.haptic.caloShapeClickable
+import com.caloshape.app.ui.common.haptic.caloShapeClickableWithoutRipple
 import com.caloshape.app.data.profile.repo.UserProfileStore
 import com.caloshape.app.data.weight.api.WeightItemDto
 import com.caloshape.app.ui.home.components.toast.DeleteFailedTopToast
@@ -369,7 +369,7 @@ private fun SwipeToDeleteHistoryRow(
                             }
                         }
                     )
-                    .caloShapeClickable(enabled = isOpened) {
+                    .caloShapeClickableWithoutRipple(enabled = isOpened) {
                         scope.launch {
                             offsetX.animateTo(
                                 targetValue = 0f,

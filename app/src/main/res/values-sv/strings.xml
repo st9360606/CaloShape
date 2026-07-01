@@ -823,14 +823,20 @@
     <string name="settings_version">Version %1$s</string>
 
 
-    <string name="settings_membership_payment">Betalning</string>
+    <string name="settings_membership_payment">Betalningsproblem</string>
     <string name="settings_membership_update_payment">Uppdatera betalning</string>
-    <string name="settings_membership_premium">Premie</string>
+    <string name="settings_membership_premium">Premium</string>
     <string name="settings_membership_active_member">Aktiv medlem</string>
-    <string name="settings_membership_trial">Rättegång</string>
+    <string name="settings_membership_trial">Provperiod</string>
     <string name="settings_membership_access_active">Åtkomst aktiv</string>
     <string name="settings_membership_free">Gratis</string>
     <string name="settings_membership_upgrade">Uppgradera</string>
+    <string name="settings_membership_trial_ends_today">Provperioden slutar idag</string>
+    <string name="settings_membership_until_format">Giltig till %1$s</string>
+    <plurals name="settings_membership_trial_days_left">
+        <item quantity="one">%1$d dag kvar</item>
+        <item quantity="other">%1$d dagar kvar</item>
+    </plurals>
 
 
     <!-- Settings: referral card -->

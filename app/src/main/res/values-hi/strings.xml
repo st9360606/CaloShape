@@ -823,14 +823,20 @@
     <string name="settings_version">संस्करण %1$s</string>
 
 
-    <string name="settings_membership_payment">भुगतान</string>
+    <string name="settings_membership_payment">भुगतान संबंधी समस्या</string>
     <string name="settings_membership_update_payment">भुगतान अद्यतन करें</string>
-    <string name="settings_membership_premium">अधिमूल्य</string>
+    <string name="settings_membership_premium">प्रीमियम</string>
     <string name="settings_membership_active_member">सक्रिय सदस्य</string>
     <string name="settings_membership_trial">परीक्षण</string>
-    <string name="settings_membership_access_active">पहुंच सक्रिय</string>
-    <string name="settings_membership_free">मुक्त</string>
-    <string name="settings_membership_upgrade">उन्नत करना</string>
+    <string name="settings_membership_access_active">एक्सेस सक्रिय</string>
+    <string name="settings_membership_free">मुफ़्त</string>
+    <string name="settings_membership_upgrade">अपग्रेड</string>
+    <string name="settings_membership_trial_ends_today">परीक्षण आज समाप्त होगा</string>
+    <string name="settings_membership_until_format">%1$s तक मान्य</string>
+    <plurals name="settings_membership_trial_days_left">
+        <item quantity="one">%1$d दिन शेष</item>
+        <item quantity="other">%1$d दिन शेष</item>
+    </plurals>
 
 
     <!-- Settings: referral card -->

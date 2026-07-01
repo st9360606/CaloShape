@@ -58,7 +58,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.caloshape.app.R
-import com.caloshape.app.ui.common.haptic.caloShapeClickable
+import com.caloshape.app.ui.common.haptic.caloShapeClickableWithoutRipple
 import com.caloshape.app.data.workout.api.WorkoutHistorySessionDto
 import com.caloshape.app.ui.home.HomeTab
 import com.caloshape.app.ui.common.design.CaloShapeTopBar
@@ -609,7 +609,7 @@ private fun SwipeToDeleteWorkoutSessionTile(
                             }
                         }
                     )
-                    .caloShapeClickable(enabled = isOpened) {
+                    .caloShapeClickableWithoutRipple(enabled = isOpened) {
                         scope.launch {
                             offsetX.animateTo(
                                 targetValue = 0f,

@@ -90,7 +90,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 import coil.compose.AsyncImage
 import com.caloshape.app.R
-import com.caloshape.app.ui.common.haptic.caloShapeClickable
+import com.caloshape.app.ui.common.haptic.caloShapeClickableWithoutRipple
 import com.caloshape.app.data.profile.repo.UserProfileStore
 import com.caloshape.app.data.profile.repo.kgToLbs1
 import com.caloshape.app.data.profile.repo.lbsToKg1
@@ -667,7 +667,7 @@ private fun DateHeader(
             modifier = Modifier
                 .offset(x = 10.dp)
                 .clip(RoundedCornerShape(999.dp))
-                .caloShapeClickable(onClick = rememberClickWithHaptic(onClick = onClick))
+                .caloShapeClickableWithoutRipple(onClick = onClick)
                 .defaultMinSize(minHeight = 44.dp)
                 .padding(horizontal = 8.dp, vertical = 6.dp),
             verticalAlignment = Alignment.CenterVertically
@@ -1258,7 +1258,7 @@ private fun PhotoPickerBlock(
                 .clip(RoundedCornerShape(26.dp))
                 .background(photoContainerColor)
                 .then(if (isDark) Modifier.border(1.dp, photoBorderColor, RoundedCornerShape(26.dp)) else Modifier)
-                .caloShapeClickable(onClick = onPickPhoto),
+                .caloShapeClickableWithoutRipple(onClick = onPickPhoto),
             contentAlignment = Alignment.Center
         ) {
             if (uri != null) {

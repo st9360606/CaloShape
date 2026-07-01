@@ -111,6 +111,7 @@ import com.caloshape.app.ui.home.components.MainBottomBar
 import com.caloshape.app.ui.home.ui.camera.menu.HomeQuickActionMenu
 import com.caloshape.app.ui.home.ui.camera.scan.ScanFab
 import com.caloshape.app.ui.common.haptic.caloShapeClickable
+import com.caloshape.app.ui.common.haptic.caloShapeClickableWithoutRipple
 import com.caloshape.app.ui.common.haptic.rememberClickWithHaptic
 import com.caloshape.app.ui.home.ui.camera.components.CameraPermissionPrefs
 import com.caloshape.app.ui.home.ui.camera.components.CameraPermissionProxyActivity
@@ -118,6 +119,8 @@ import com.caloshape.app.ui.home.ui.camera.components.openCameraPermissionSettin
 import com.caloshape.app.ui.common.design.CaloShapeColors
 import com.caloshape.app.ui.common.design.CaloShapeTopBar
 import com.caloshape.app.ui.home.ui.membership.MembershipDisplayKind
+import com.caloshape.app.ui.home.ui.membership.MembershipSubtitle
+import com.caloshape.app.ui.home.ui.membership.localizedMembershipSubtitle
 import com.caloshape.app.ui.home.ui.settings.dialog.DeleteAccountDialog
 import com.caloshape.app.ui.home.ui.settings.dialog.PaymentIssueDialog
 import com.caloshape.app.ui.home.ui.settings.dialog.RestoreSubscriptionDialog
@@ -158,7 +161,7 @@ fun SettingsScreen(
     onOpenAdjustMacros: () -> Unit = {},
     onOpenWeightHistory: () -> Unit = {},
     onOpenRingColorsExplained: () -> Unit = {},
-    premiumStatusSubtitle: String = "Upgrade",
+    premiumStatusSubtitle: MembershipSubtitle = MembershipSubtitle.Upgrade,
     premiumStatusKind: MembershipDisplayKind = MembershipDisplayKind.FREE,
     canUseScan: Boolean = false,
     onOpenSubscription: () -> Unit = {},
@@ -405,7 +408,7 @@ private fun SettingsContent(
     onOpenWeightHistory: () -> Unit,
     onOpenRingColorsExplained: () -> Unit,
     premiumStatusKind: MembershipDisplayKind,
-    premiumStatusSubtitle: String,
+    premiumStatusSubtitle: MembershipSubtitle,
     onOpenSubscription: () -> Unit,
     onFixPaymentIssue: () -> Unit,
     onOpenReferral: () -> Unit,
@@ -687,21 +690,30 @@ private fun ProfileCard(
     name: String,
     subtitle: String,
     premiumStatusKind: MembershipDisplayKind,
-    premiumSubtitle: String,
+    premiumSubtitle: MembershipSubtitle,
     onProfileClick: () -> Unit,
     onSubscriptionClick: () -> Unit,
     onPaymentIssueClick: () -> Unit
 ) {
     val shape = RoundedCornerShape(22.dp)
     val displayName = remember(name) { name.trim().ifBlank { "Guest" } }
+    val subscriptionBadgeInteractionSource = remember { MutableInteractionSource() }
     val subscriptionBadgeClickableModifier =
         when (premiumStatusKind) {
             MembershipDisplayKind.FREE -> {
-                Modifier.caloShapeClickable(onClick = onSubscriptionClick)
+                Modifier.caloShapeClickable(
+                    interactionSource = subscriptionBadgeInteractionSource,
+                    indication = null,
+                    onClick = onSubscriptionClick
+                )
             }
 
             MembershipDisplayKind.PAYMENT_ISSUE -> {
-                Modifier.caloShapeClickable(onClick = onPaymentIssueClick)
+                Modifier.caloShapeClickable(
+                    interactionSource = subscriptionBadgeInteractionSource,
+                    indication = null,
+                    onClick = onPaymentIssueClick
+                )
             }
 
             MembershipDisplayKind.TRIAL,
@@ -727,7 +739,7 @@ private fun ProfileCard(
                 modifier = Modifier
                     .weight(1f)
                     .clip(RoundedCornerShape(18.dp))
-                    .caloShapeClickable(onClick = onProfileClick),
+                    .caloShapeClickableWithoutRipple(onClick = onProfileClick),
                 contentAlignment = Alignment.CenterStart
             ) {
                 Row(
@@ -764,7 +776,7 @@ private fun ProfileCard(
                                 modifier = Modifier
                                     .offset(y = (0).dp)
                                     .size(22.dp)
-                                    .caloShapeClickable(onClick = onProfileClick),
+                                    .caloShapeClickableWithoutRipple(onClick = onProfileClick),
                                 contentAlignment = Alignment.Center
                             ) {
                                 Icon(
@@ -812,7 +824,7 @@ private fun ProfileCard(
 @Composable
 private fun ProfileSubscriptionBadge(
     kind: MembershipDisplayKind,
-    subtitle: String,
+    subtitle: MembershipSubtitle,
     modifier: Modifier = Modifier
 ) {
     val colors = CaloShapeColors.current()
@@ -822,6 +834,7 @@ private fun ProfileSubscriptionBadge(
     }
     val badgeBorderColor = if (isDark) visual.darkBorderColor else visual.borderColor
     val subtitleColor = if (isDark) colors.textPrimary else colors.textSecondary
+    val subtitleText = localizedMembershipSubtitle(subtitle)
 
     val dotSize = 8.dp
     val dotLabelGap = 7.dp
@@ -878,7 +891,7 @@ private fun ProfileSubscriptionBadge(
         Spacer(Modifier.height(6.dp))
 
         Text(
-            text = subtitle.ifBlank { stringResource(visual.fallbackSubtitleRes) },
+            text = subtitleText,
             maxLines = 1,
             softWrap = false,
             overflow = TextOverflow.Ellipsis,
@@ -894,7 +907,6 @@ private fun ProfileSubscriptionBadge(
 
 private data class ProfileSubscriptionVisual(
     @StringRes val labelRes: Int,
-    @StringRes val fallbackSubtitleRes: Int,
     val backgroundColors: List<Color>,
     val borderColor: Color,
     val darkBorderColor: Color,
@@ -909,7 +921,6 @@ private data class ProfileSubscriptionVisual(
                 MembershipDisplayKind.PAYMENT_ISSUE -> {
                     ProfileSubscriptionVisual(
                         labelRes = R.string.settings_membership_payment,
-                        fallbackSubtitleRes = R.string.settings_membership_update_payment,
                         backgroundColors = listOf(
                             Color(0xFFFFF7F7),
                             Color(0xFFFFF1F2)
@@ -925,7 +936,6 @@ private data class ProfileSubscriptionVisual(
                 MembershipDisplayKind.PREMIUM -> {
                     ProfileSubscriptionVisual(
                         labelRes = R.string.settings_membership_premium,
-                        fallbackSubtitleRes = R.string.settings_membership_active_member,
                         backgroundColors = listOf(
                             Color(0xFF111114),
                             Color(0xFF18181B)
@@ -941,7 +951,6 @@ private data class ProfileSubscriptionVisual(
                 MembershipDisplayKind.TRIAL -> {
                     ProfileSubscriptionVisual(
                         labelRes = R.string.settings_membership_trial,
-                        fallbackSubtitleRes = R.string.settings_membership_access_active,
                         backgroundColors = listOf(
                             Color(0xFFF0FDF4),
                             Color(0xFFDCFCE7)
@@ -959,7 +968,6 @@ private data class ProfileSubscriptionVisual(
                 MembershipDisplayKind.FREE -> {
                     ProfileSubscriptionVisual(
                         labelRes = R.string.settings_membership_free,
-                        fallbackSubtitleRes = R.string.settings_membership_upgrade,
                         backgroundColors = listOf(
                             Color(0xFFF4F4F5),
                             Color(0xFFEFEFF1)
@@ -1620,7 +1628,7 @@ private fun AppearanceModeOption(
                 color = optionBorder,
                 shape = RoundedCornerShape(18.dp)
             )
-            .caloShapeClickable(onClick = onClick)
+            .caloShapeClickableWithoutRipple(onClick = onClick)
             .padding(horizontal = 16.dp, vertical = 15.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {

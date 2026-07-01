@@ -88,6 +88,7 @@ import androidx.lifecycle.compose.LifecycleResumeEffect
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.caloshape.app.R
 import com.caloshape.app.ui.common.haptic.caloShapeClickable
+import com.caloshape.app.ui.common.haptic.caloShapeClickableWithoutRipple
 import com.caloshape.app.ui.home.ui.camera.barcode.BarcodeScannerProcessor
 import com.caloshape.app.ui.home.ui.camera.components.CameraPermissionPrefs
 import com.caloshape.app.ui.home.ui.camera.components.CameraPermissionProxyActivity
@@ -576,7 +577,7 @@ fun CameraScreen(
                     color = Color.White.copy(alpha = 0.85f),
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier
-                        .caloShapeClickable(role = Role.Button) {
+                        .caloShapeClickableWithoutRipple(role = Role.Button) {
                             requestCameraPermLauncher?.launch(Manifest.permission.CAMERA)
                                 ?: openAppSettings(ctx)
                         }
@@ -891,7 +892,7 @@ private fun ShutterButton(
             .size(outer)
             .clip(CircleShape)
             .alpha(if (enabled) 1f else 0.45f)
-            .caloShapeClickable(
+            .caloShapeClickableWithoutRipple(
                 enabled = enabled,
                 role = Role.Button
             ) { onClick() },

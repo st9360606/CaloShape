@@ -823,14 +823,19 @@
     <string name="settings_version">Versi %1$s</string>
 
 
-    <string name="settings_membership_payment">Pembayaran</string>
+    <string name="settings_membership_payment">Masalah pembayaran</string>
     <string name="settings_membership_update_payment">Perbarui pembayaran</string>
-    <string name="settings_membership_premium">Premi</string>
+    <string name="settings_membership_premium">Premium</string>
     <string name="settings_membership_active_member">Anggota aktif</string>
     <string name="settings_membership_trial">Uji coba</string>
     <string name="settings_membership_access_active">Akses aktif</string>
-    <string name="settings_membership_free">Bebas</string>
-    <string name="settings_membership_upgrade">Meningkatkan</string>
+    <string name="settings_membership_free">Gratis</string>
+    <string name="settings_membership_upgrade">Tingkatkan</string>
+    <string name="settings_membership_trial_ends_today">Uji coba berakhir hari ini</string>
+    <string name="settings_membership_until_format">Berlaku hingga %1$s</string>
+    <plurals name="settings_membership_trial_days_left">
+        <item quantity="other">Tersisa %1$d hari</item>
+    </plurals>
 
 
     <!-- Settings: referral card -->

@@ -12,9 +12,17 @@ enum class MembershipDisplayKind {
 
 data class MembershipDisplay(
     val kind: MembershipDisplayKind,
-    val title: String,
-    val subtitle: String = ""
+    val subtitle: MembershipSubtitle
 )
+
+sealed interface MembershipSubtitle {
+    data object Upgrade : MembershipSubtitle
+    data object UpdatePayment : MembershipSubtitle
+    data object ActiveMember : MembershipSubtitle
+    data object TrialEndsToday : MembershipSubtitle
+    data class TrialDaysLeft(val days: Int) : MembershipSubtitle
+    data class Until(val date: String) : MembershipSubtitle
+}
 
 object MembershipUiMapper {
 
@@ -27,49 +35,44 @@ object MembershipUiMapper {
         if (paymentIssue && status == PremiumStatus.PREMIUM) {
             return MembershipDisplay(
                 kind = MembershipDisplayKind.PAYMENT_ISSUE,
-                title = "Payment issue",
-                subtitle = "Update payment"
+                subtitle = MembershipSubtitle.UpdatePayment
             )
         }
 
         return when (status) {
             PremiumStatus.FREE -> MembershipDisplay(
                 kind = MembershipDisplayKind.FREE,
-                title = "Free",
-                subtitle = "Upgrade"
+                subtitle = MembershipSubtitle.Upgrade
             )
 
             PremiumStatus.TRIAL -> MembershipDisplay(
                 kind = MembershipDisplayKind.TRIAL,
-                title = "Trial",
                 subtitle = formatTrialSubtitle(trialDaysLeft)
             )
 
             PremiumStatus.PREMIUM -> MembershipDisplay(
                 kind = MembershipDisplayKind.PREMIUM,
-                title = "Premium",
                 subtitle = formatPremiumSubtitle(currentPremiumUntil)
             )
         }
     }
 
-    private fun formatPremiumSubtitle(currentPremiumUntil: String?): String {
+    private fun formatPremiumSubtitle(currentPremiumUntil: String?): MembershipSubtitle {
         val date = formatDateOrNull(currentPremiumUntil)
 
         return if (date != null) {
-            "Until $date"
+            MembershipSubtitle.Until(date)
         } else {
-            "Active member"
+            MembershipSubtitle.ActiveMember
         }
     }
 
-    private fun formatTrialSubtitle(daysLeft: Int?): String {
+    private fun formatTrialSubtitle(daysLeft: Int?): MembershipSubtitle {
         val safeDays = (daysLeft ?: 0).coerceAtLeast(0)
 
         return when (safeDays) {
-            0 -> "Trial ends today"
-            1 -> "1 day left"
-            else -> "$safeDays days left"
+            0 -> MembershipSubtitle.TrialEndsToday
+            else -> MembershipSubtitle.TrialDaysLeft(safeDays)
         }
     }
 
