@@ -33,12 +33,40 @@ object LanguageManager {
         "fr-fr" to "fr",
         "fr-be" to "fr",
         "fr-ca" to "fr",
+        "it" to "it",
+        "it-it" to "it",
+        "nl" to "nl",
+        "nl-nl" to "nl",
+        "nl-be" to "nl",
+        "sv" to "sv",
+        "sv-se" to "sv",
+        "fi" to "fi",
+        "fi-fi" to "fi",
+        "pl" to "pl",
+        "pl-pl" to "pl",
         "ko" to "ko",
         "ko-kr" to "ko",
         "es" to "es",
         "es-es" to "es",
+        "es-mx" to "es-MX",
         "pt" to "pt-BR",
-        "pt-br" to "pt-BR"
+        "pt-br" to "pt-BR",
+        "vi" to "vi",
+        "vi-vn" to "vi",
+        "th" to "th",
+        "th-th" to "th",
+        "id" to "id",
+        "id-id" to "id",
+        "in" to "id",
+        "in-id" to "id",
+        "hi" to "hi",
+        "hi-in" to "hi",
+        "he" to "he",
+        "he-il" to "he",
+        "iw" to "he",
+        "iw-il" to "he",
+        "tr" to "tr",
+        "tr-tr" to "tr"
     )
 
     fun normalizeTag(raw: String?): String = canonicalTagOrNull(raw) ?: DEFAULT_LANGUAGE_TAG
@@ -82,9 +110,20 @@ object LanguageManager {
             "ja" -> "ja"
             "de" -> "de"
             "fr" -> "fr"
+            "it" -> "it"
+            "nl" -> "nl"
+            "sv" -> "sv"
+            "fi" -> "fi"
+            "pl" -> "pl"
             "ko" -> "ko"
-            "es" -> "es"
+            "es" -> if (region == "MX") "es-MX" else "es"
             "pt" -> if (region.isBlank() || region == "BR") "pt-BR" else null
+            "vi" -> "vi"
+            "th" -> "th"
+            "id", "in" -> "id"
+            "hi" -> "hi"
+            "he", "iw" -> "he"
+            "tr" -> "tr"
             else -> null
         }
     }

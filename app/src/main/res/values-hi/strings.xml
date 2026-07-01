@@ -1,0 +1,1130 @@
+<resources>
+    <!-- App_Name -->
+    <string name="app_name">CaloShape</string>
+
+
+    <!-- common -->
+    <string name="common_close">बंद करना</string>
+    <string name="common_save">बचाना</string>
+    <string name="common_cancel">रद्द करना</string>
+    <string name="common_continue_btn">जारी रखना</string>
+    <string name="common_skip">छोडना</string>
+    <string name="common_dash">—</string>
+    <string name="common_error">गलती</string>
+
+    <string name="common_save_success">सफलतापूर्वक बचाया!</string>
+    <string name="common_today">आज</string>
+    <string name="common_yesterday">कल</string>
+    <string name="common_unavailable_dash">—</string>
+    <string name="common_retry">पुन: प्रयास करें</string>
+
+    <string name="common_delete">मिटाना</string>
+    <string name="common_deleting">हटाया जा रहा है...</string>
+
+    <string name="common_understood">समझा</string>
+    <string name="common_revert">फिर लौट आना</string>
+
+
+    <!-- ApiErrorUiMapper -->
+    <string name="err_barcode_not_found_title">उत्पाद नहीं मिला</string>
+    <string name="err_barcode_not_found_msg">हमें यह बारकोड नहीं मिला. पोषण लेबल का फ़ोटो लेने का प्रयास करें।</string>
+
+    <string name="err_barcode_lookup_failed_title">लुकअप विफल रहा</string>
+    <string name="err_barcode_lookup_failed_msg">हम उत्पाद डेटाबेस तक नहीं पहुंच सके. अपना कनेक्शन जांचें और पुनः प्रयास करें।</string>
+
+    <string name="err_generic_title">कुछ गलत हो गया</string>
+    <string name="err_generic_msg">कृपया पुन: प्रयास करें।</string>
+
+    <string name="err_network_title">नेटवर्क समस्या</string>
+    <string name="err_network_msg">अपने इंटरनेट कनेक्शन की जाँच करें और पुन: प्रयास करें।</string>
+
+    <string name="err_photo_title">फोटो चाहिए</string>
+    <string name="err_photo_msg">बेहतर रोशनी में फिर से फ़ोटो लेने का प्रयास करें।</string>
+
+    <string name="err_manual_title">मैन्युअल रूप से दर्ज करें</string>
+    <string name="err_manual_msg">आप विवरण मैन्युअल रूप से दर्ज कर सकते हैं.</string>
+
+    <string name="err_support_title">समर्थन से संपर्क करें</string>
+    <string name="err_support_msg">यदि समस्या बनी रहती है तो कृपया सहायता से संपर्क करें।</string>
+
+    <string name="cta_try_label">पोषण लेबल स्कैन करें</string>
+    <string name="cta_enter_manually">मैन्युअल रूप से दर्ज करें</string>
+
+    <string name="cta_check_network">नेटवर्क जांचें</string>
+    <string name="cta_retake">फिर से लेना</string>
+    <string name="cta_contact_support">समर्थन से संपर्क करें</string>
+    <string name="cta_rescan_barcode">बारकोड पुनः स्कैन करें</string>
+
+
+
+
+    <!-- Landing Screen -->
+    <string name="landing_title">एक फोटो खींचिए, कैलोरी जानिए।</string>
+    <string name="choose_language">भाषा चुनें</string>
+    <string name="cta_get_started">शुरू हो जाओ</string>
+    <string name="cta_login_prefix">क्या आपके पास पहले से एक खाता मौजूद है?</string>
+    <string name="cta_login">दाखिल करना</string>
+
+
+    <!-- RequireSignInScreen -->
+    <string name="auth_sign_in_account_title">अपने खाते में साइन इन करें</string>
+    <string name="auth_sign_in_with_google">Google से साइन इन करें</string>
+    <string name="auth_signin_with_email">ईमेल जारी रखें</string>
+
+
+    <!-- SignInSheet-->
+    <string name="signin_title">दाखिल करना</string>
+    <string name="signin_with_apple">Apple के साथ साइन इन करें</string>
+    <string name="signin_with_google">Google से साइन इन करें</string>
+    <string name="signin_with_email">ईमेल जारी रखें</string>
+    <string name="signin_legal_hint">जारी रखकर, आप CaloShape की शर्तों से सहमत हैं</string>
+    <string name="signin_terms">शर्तें</string>
+    <string name="signin_and">और</string>
+    <string name="signin_privacy">गोपनीयता नीति</string>
+    <string name="signin_url_terms">https://caloshape.com/terms</string>
+    <string name="signin_url_privacy">https://caloshape.com/privacy</string>
+
+
+    <!-- SignInSheetHost 控制 Sheet 是否顯示、處理狀態、接外部 callback -->
+    <string name="err_google_no_account_hint">युक्ति: सेटिंग्स → खाते में एक Google खाता जोड़ें और पुनः प्रयास करें</string>
+    <string name="err_google_signin_failed">Google साइन-इन विफल रहा</string>
+
+
+    <!-- EmailEnterScreen-->
+    <string name="email_sign_in_title">दाखिल करना</string>
+    <string name="input_box_email_label">ईमेल</string>
+
+
+    <!-- EmailCodeScreen OTP -->
+    <string name="resend">पुन: भेजें</string>
+    <string name="resend_countdown">पुनः भेजें (%1$d s)</string>
+
+    <string name="err_otp_invalid">कोड ग़लत है. कृपया पुन: प्रयास करें।</string>
+    <string name="err_otp_too_many_attempts">बहुत अधिक प्रयास. कृपया बाद में पुन: प्रयास करें।</string>
+    <string name="err_network_io">नेटवर्क त्रुटि। कृपया पुन: प्रयास करें।</string>
+    <string name="err_server_unavailable">सेवा अस्थायी रूप से अनुपलब्ध है। कृपया बाद में पुन: प्रयास करें।</string>
+    <string name="err_generic">कुछ गलत हो गया। कृपया पुन: प्रयास करें।</string>
+
+    <string name="confirm_email_title">अपने ईमेल की पुष्टि करें</string>
+    <string name="confirm_email_hint">कृपया वह 4-अंकीय कोड दर्ज करें जिसे हमने अभी भेजा है</string>
+    <string name="didnt_receive_code">कोड प्राप्त नहीं हुआ?</string>
+
+
+    <!-- Onboarding: GenderSelectionScreen -->
+    <string name="onboard_gender_title">अपना लिंग चुनें</string>
+    <string name="onboard_gender_subtitle">इसका उपयोग आपके कस्टम प्लान को कैलिब्रेट करने के लिए किया जाएगा।</string>
+    <string name="onboard_male">पुरुष</string>
+    <string name="onboard_female">महिला</string>
+    <string name="onboard_other">अन्य</string>
+
+
+    <!-- Onboarding: ReferralSourceScreen -->
+    <string name="onboard_referral_title">आपने हमें कैसे खोजा?</string>
+
+
+    <!-- Onboarding: AgeSelectionScreen -->
+    <string name="onboard_age_title">आपकी आयु कितनी है?</string>
+    <string name="onboard_age_subtitle">हम आपकी उम्र का उपयोग केवल आपके अनुभव और कैलोरी अनुमान सटीकता को बेहतर बनाने के लिए करते हैं।</string>
+
+
+    <!-- Onboarding: HeightSelectionScreen -->
+    <string name="onboard_height_title">तुम कितने लंबे हो?</string>
+    <string name="onboard_height_subtitle">हम आपके डेटा का उपयोग केवल आपके अनुभव और हमारे कैलोरी अनुमान को बेहतर बनाने के लिए करते हैं।</string>
+    <string name="onboard_height_hint">इसका उपयोग आपके कस्टम प्लान को कैलिब्रेट करने के लिए किया जाएगा।</string>
+
+
+    <!-- Onboarding: WeightSelectionScreen -->
+    <string name="onboard_weight_title">आपका वजन कितना है?</string>
+    <string name="onboard_weight_subtitle">हम आपके डेटा का उपयोग केवल आपके अनुभव और हमारे कैलोरी अनुमान को बेहतर बनाने के लिए करते हैं।</string>
+    <string name="onboard_weight_hint">इसका उपयोग आपके कस्टम प्लान को कैलिब्रेट करने के लिए किया जाएगा।</string>
+
+
+    <!-- Onboarding: ExerciseFrequencyScreen  -->
+    <string name="onboard_ex_freq_title">आप प्रत्येक सप्ताह कितनी बार व्यायाम करते हैं?</string>
+    <string name="onboard_ex_freq_subtitle">इससे आपकी वैयक्तिकृत योजना को अंशांकित करने में सहायता मिलेगी.</string>
+    <string name="ex_freq_0_title">0</string>
+    <string name="ex_freq_0_sub">गतिहीन</string>
+    <string name="ex_freq_1_3_title">1-3</string>
+    <string name="ex_freq_1_3_sub">हल्की गतिविधि</string>
+    <string name="ex_freq_3_5_title">3-5</string>
+    <string name="ex_freq_3_5_sub">मध्यम गतिविधि</string>
+    <string name="ex_freq_6_7_plus_title">6-7</string>
+    <string name="ex_freq_6_7_plus_sub">उच्च सक्रियता</string>
+    <string name="ex_freq_7_plus_title">7+</string>
+    <string name="ex_freq_7_plus_sub">बहुत उच्च गतिविधि</string>
+
+
+    <!-- Onboarding: GoalSelectionScreen  -->
+    <string name="onboard_goal_title">आपका लक्ष्य क्या है?</string>
+    <string name="onboard_goal_subtitle">इससे हमें आपकी कैलोरी योजना तैयार करने में मदद मिलती है।</string>
+    <string name="goal_lose">वजन कम करें</string>
+    <string name="goal_maintain">बनाए रखना</string>
+    <string name="goal_gain">वजन बढ़ना</string>
+    <string name="goal_healthy_eating">पौष्टिक भोजन</string>
+
+
+    <!-- Onboarding: WeightGoalScreen -->
+    <string name="onboard_goal_weight_title">आपका लक्ष्य वजन क्या है?</string>
+    <string name="onboard_goal_weight_subtitle">इस लक्ष्य के आधार पर, हम आपके लिए अधिक उपयुक्त दैनिक कैलोरी अनुशंसा तैयार करेंगे।</string>
+    <string name="onboard_goal_weight_hint">इसका उपयोग आपके कस्टम प्लान को कैलिब्रेट करने के लिए किया जाएगा।</string>
+
+
+    <!-- Onboarding: WeightLossComparisonScreen -->
+    <string name="onboard_weight_loss_comparison_title">CaloShape AI का उपयोग करने से आपकी वजन\nघटाने की क्षमता तीन गुना हो सकती है</string>
+    <string name="onboard_weight_loss_comparison_without_ai">बिना\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_with_ai">CaloShape AI\nके साथ</string>
+    <string name="onboard_weight_loss_comparison_twenty_percent">20%</string>
+    <string name="onboard_weight_loss_comparison_two_times">3X</string>
+    <string name="onboard_weight_loss_comparison_caption">CaloShape AI सब कुछ सरल बनाता है\nऔर आपको जवाबदेह रखता है</string>
+
+
+    <!-- Onboarding: NotificationPermissionScreen -->
+    <string name="onboard_notif_title">प्रत्येक भोजन को महत्व दें!</string>
+    <string name="onboard_notif_subtitle">भोजन को लॉग करने के लिए हल्के अनुस्मारक के लिए सूचनाएं सक्षम करें - ताकि आपकी कैलोरी, मैक्रोज़ और प्रगति ट्रैक पर बनी रहे। चूक होती रहती है; समय पर संकेत आपको तेजी से वापसी करने में मदद करते हैं।</string>
+    <string name="onboard_allow_notifications_cta">सूचनाओं की अनुमति दें</string>
+    <string name="notification_mock_app_title">एआई कैलोरी काउंटर</string>
+    <string name="onboard_notif_title_got_a_sec">आपका भोजन स्वयं लॉग नहीं होगा 😉</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">अपनी कैलोरी और मैक्रोज़ को ट्रैक पर रखने के लिए इस भोजन को लॉग करें।</string>
+
+
+    <!-- Onboarding: HealthConnectIntroScreen -->
+    <string name="onboard_hc_connect_title_prefix">से कनेक्ट</string>
+    <string name="onboard_hc_connect_title_service">स्वास्थ्य कनेक्ट</string>
+    <string name="onboard_hc_connect_body">अधिक संपूर्ण रिकॉर्ड और जानकारी प्राप्त करने के लिए CaloShape AI और स्वास्थ्य ऐप्स के बीच दैनिक गतिविधि को सिंक करें।</string>
+    <string name="onboard_hc_permission_rationale_title_prefix">CaloShape का उपयोग क्यों किया जाता है</string>
+    <string name="onboard_hc_permission_rationale_title_service">स्वास्थ्य कनेक्ट</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape दैनिक गतिविधि खर्च का अनुमान लगाने, आपके कैलोरी डैशबोर्ड को अपडेट करने और प्रगति अंतर्दृष्टि में सुधार करने के लिए आपके कदम, सक्रिय कैलोरी और व्यायाम डेटा को पढ़ता है। आप हेल्थ कनेक्ट में किसी भी समय पहुंच रद्द कर सकते हैं।</string>
+    <string name="onboard_hc_permission_rationale_button">समझ गया</string>
+
+
+    <!-- Onboarding: ComputationProgressScreen -->
+    <string name="progress_hero_title">अपनी वैयक्तिकृत योजना बनाना</string>
+    <string name="progress_hero_subtitle">हम आपके दैनिक लक्ष्यों को अनुकूलित करने के लिए आपके लक्ष्यों, निकाय डेटा और प्राथमिकताओं का उपयोग कर रहे हैं।</string>
+    <string name="progress_footer_hint">इसमें बस एक क्षण लगता है</string>
+    <string name="progress_center_caption">आपके परिणाम तैयार हो रहे हैं</string>
+    <string name="progress_phase_pill_1">आपकी प्रोफ़ाइल की समीक्षा की जा रही है</string>
+    <string name="progress_phase_pill_2">आपके कैलोरी लक्ष्य की गणना</string>
+    <string name="progress_phase_pill_3">अपने दैनिक मैक्रोज़ को संतुलित करना</string>
+    <string name="progress_phase_pill_4">अपने स्वास्थ्य संबंधी अंतर्दृष्टि को अंतिम रूप देना</string>
+    <string name="progress_card_title">अपनी योजना स्थापित करना</string>
+    <string name="progress_row_calorie_target">दैनिक कैलोरी लक्ष्य</string>
+    <string name="progress_row_carb_distribution">कार्ब वितरण</string>
+    <string name="progress_row_protein_recommendation">प्रोटीन की सिफ़ारिश</string>
+    <string name="progress_row_fat_recommendation">मोटी सिफ़ारिश</string>
+    <string name="progress_row_health_score_estimate">स्वास्थ्य स्कोर अनुमान</string>
+
+
+    <!-- Onboarding: HealthPlanScreen -->
+    <string name="plan_cta_start">शुरू हो जाओ</string>
+    <string name="plan_title_congrats">बधाई हो!</string>
+    <string name="plan_subtitle_ready">आपकी व्यक्तिगत स्वास्थ्य योजना तैयार है!</string>
+    <string name="plan_disclaimer">स्रोत नीचे हैं: सभी संदर्भ देखें ›</string>
+    <string name="plan_unit_kcal_day">किलो कैलोरी/दिन</string>
+
+    <string name="plan_macros_proteins">प्रोटीन</string>
+    <string name="plan_macros_carbs">कार्बोहाइड्रेट</string>
+    <string name="plan_macros_fat">वसा</string>
+    <string name="plan_unit_g">जी</string>
+
+    <string name="plan_water_daily">दैनिक जल</string>
+    <string name="plan_weight_current">वर्तमान वजन</string>
+    <string name="plan_weight_delta">वजन लक्ष्य करने के लिए</string>
+
+    <string name="plan_goals_title">अपने लक्ष्यों तक कैसे पहुंचें\n</string>
+    <string name="plan_goal_card_health_scores">स्वास्थ्य स्कोर आपका मार्गदर्शन करते हैं, इसलिए आदतें स्वाभाविक रूप से बनती हैं</string>
+    <string name="plan_goal_card_track_meals">भोजन को एक टैप में लॉग इन करें, लगातार बने रहना आसान है</string>
+    <string name="plan_goal_card_daily_calories">दैनिक कैलोरी स्पष्ट रूप से देखें, और कभी भी ट्रैक न खोएं</string>
+    <string name="plan_goal_card_balance_macros">कार्ब्स × प्रोटीन × वसा, स्मार्ट संतुलन, बेहतर परिणाम</string>
+    <string name="plan_sources_based_on">आधिकारिक आहार दिशानिर्देशों के आधार पर, \nकेवल संदर्भ के लिए, चिकित्सीय सलाह के लिए नहीं।</string>
+    <string name="plan_sources_more">सभी संदर्भ देखें ›</string>
+    <string name="plan_sources_hide">स्रोत छिपाएँ</string>
+
+
+    <!-- Onboarding: OnboardReferralCodeScreen -->
+    <string name="onboard_referral_code_input">रेफरल कोड दर्ज करें\n(वैकल्पिक)</string>
+    <string name="onboard_referral_code_subtitle">आप इस चरण को छोड़ सकते हैं</string>
+    <string name="onboard_referral_code_input_label">रेफरल कोड</string>
+    <string name="onboard_referral_code_placeholder">रेफरल कोड</string>
+    <string name="onboard_referral_code_submit">जमा करना</string>
+    <string name="onboard_referral_code_submitting">सबमिट किया जा रहा है...</string>
+    <string name="onboard_referral_code_applied">रेफरल कोड लागू!</string>
+
+    <string name="onboard_referral_code_error_invalid_format">केवल अक्षरों और संख्याओं का प्रयोग करें.</string>
+    <string name="onboard_referral_code_error_invalid">हमें यह रेफरल कोड नहीं मिला.</string>
+    <string name="onboard_referral_code_error_self_referral">आप अपने स्वयं के रेफरल कोड का उपयोग नहीं कर सकते.</string>
+    <string name="onboard_referral_code_error_already_claimed">इस खाते ने पहले ही एक रेफरल कोड लागू कर दिया है।</string>
+    <string name="onboard_referral_code_error_already_subscribed">सदस्यता प्राप्त खाते रेफरल कोड लागू नहीं कर सकते।</string>
+    <string name="onboard_referral_code_error_disabled">रेफ़रल अस्थायी रूप से अनुपलब्ध है.</string>
+    <string name="onboard_referral_code_error_risk">हम अभी रेफरल कोड लागू नहीं कर सकते.</string>
+    <string name="onboard_referral_code_error_network">हम इसे अभी लागू नहीं कर सकते. कृपया बाद में पुन: प्रयास करें।</string>
+    <string name="onboard_referral_code_error_unknown">रेफ़रल कोड अभी लागू नहीं किया जा सकता.\nकृपया बाद में पुनः प्रयास करें.</string>
+
+
+    <!-- Onboarding: OnboardSubscriptionScreen  Paywall -->
+    <string name="subscription_price_per_month_format">%1$s/महीना</string>
+    <string name="subscription_price_per_month_unit">/मो</string>
+    <string name="subscription_price_unavailable_title">कीमत उपलब्ध नहीं है</string>
+    <string name="subscription_price_unavailable_body">हमें अभी आपका स्थानीय Google Play मूल्य नहीं मिल सका। कृपया पुन: प्रयास करें।</string>
+
+
+    <!-- Onboarding: OnboardSubscriptionIntro -->
+    <string name="subscription_intro_title">अपने लक्ष्यों तक तेजी से पहुंचने के लिए CaloShape AI को अनलॉक करें।</string>
+    <string name="subscription_intro_helper_format">बस %1$s प्रति वर्ष (%2$s)</string>
+    <string name="subscription_start_three_day_free_trial">3 दिनों के लिए निःशुल्क प्रयास करें</string>
+    <string name="subscription_three_day_trial_helper_format">बस %1$s/वर्ष (%2$s/महीना)</string>
+    <string name="subscription_already_owned_restore_required">आपके Google Play खाते में पहले से ही सक्रिय CaloShape सदस्यता है। प्रीमियम सुविधाओं का उपयोग करने से पहले इसे इस CaloShape खाते में पुनर्स्थापित करें।</string>
+    <string name="subscription_error_no_active_purchase">कोई सक्रिय खरीदारी नहीं मिली.</string>
+    <string name="subscription_error_restore_failed">खरीदारी बहाल नहीं की जा सकी. कृपया पुन: प्रयास करें।</string>
+    <string name="subscription_error_purchase_failed">खरीदारी विफल. कृपया पुन: प्रयास करें।</string>
+    <string name="subscription_error_purchase_pending">भुगतान की कार्यवाही की जा रही है. Google Play द्वारा खरीदारी की पुष्टि करने के बाद प्रीमियम एक्सेस उपलब्ध होगा।</string>
+    <string name="subscription_error_trial_eligibility_failed">परीक्षण पात्रता की जाँच करने में असमर्थ. कृपया पुन: प्रयास करें।</string>
+    <string name="restore_subscription_dialog_title">सदस्यता मिली</string>
+    <string name="settings_restore_subscription">सदस्यता बहाल करें</string>
+    <string name="restore_subscription_dialog_restoring">पुनर्स्थापित किया जा रहा है...</string>
+    <string name="common_maybe_later">शायद बाद में</string>
+
+
+    <!-- Onboarding: OnboardDiscountSpinScreen-->
+    <string name="subscription_spin_title">एक\nविशेष छूट अनलॉक करने के लिए स्पिन करें</string>
+    <string name="subscription_spin_helper_ready">अपने विशेष उपहार को प्रकट करने के लिए स्पिन पर टैप करें।</string>
+    <string name="subscription_spin_button">घुमाना</string>
+    <string name="subscription_spinning_button">घूम रहा है...</string>
+    <string name="subscription_gift_offer_unlocked">उपहार ऑफर अनलॉक</string>
+    <string name="subscription_spin_helper_wait">कृपया पहिया रुकने तक प्रतीक्षा करें।</string>
+    <string name="subscription_spin_helper_revealed">यह ऑफर पहिया थमने के बाद सामने आया है।</string>
+
+
+    <!-- Onboarding: OneTimeOfferHeroCard-->
+    <string name="subscription_gift_unlocked_title">उपहार अनलॉक 🎁</string>
+    <string name="subscription_gift_price_unlocked">उपहार की कीमत अनलॉक की गई</string>
+    <string name="subscription_unlock_premium_for_only">केवल प्रीमियम अनलॉक करें</string>
+    <string name="subscription_discount_body">भोजन को तेजी से स्कैन करें। मैक्रोज़ को बेहतर तरीके से ट्रैक करें.\nदैनिक योजना पर बने रहें।</string>
+    <string name="subscription_yearly_price_format">%1$s/वर्ष</string>
+    <string name="subscription_urgency_coffee">एक कॉफ़ी से भी कम</string>
+    <string name="subscription_urgency_price_gone">यह स्क्रीन बंद करें? यह कीमत खत्म हो गई है</string>
+    <string name="subscription_urgency_waiting">आप किस का इंतजार कर रहे हैं?</string>
+
+    <string name="subscription_trial_enabled">नि:शुल्क परीक्षण सक्षम</string>
+    <string name="subscription_trial_enable_prompt">निश्चित नहीं? निःशुल्क परीक्षण चालू करें</string>
+    <string name="subscription_trial_checking_eligibility">परीक्षण उपलब्धता की जाँच की जा रही है...</string>
+    <string name="subscription_trial_already_used">परीक्षण पहले ही प्रयोग किया जा चुका है</string>
+    <string name="subscription_trial_unavailable">निःशुल्क परीक्षण उपलब्ध नहीं है</string>
+
+    <string name="subscription_badge_free_trial">मुफ्त परीक्षण</string>
+    <string name="subscription_badge_lowest_price_ever">अब तक की सबसे कम कीमत</string>
+    <string name="subscription_yearly_plan">वार्षिक योजना</string>
+    <string name="subscription_yearly_plan_price_format">12 माह · %1$s</string>
+
+    <string name="subscription_start_free_trial">3 दिनों के लिए निःशुल्क प्रयास करें</string>
+    <string name="subscription_trial_helper">कोई प्रतिबद्धता नहीं - किसी भी समय रद्द करें</string>
+    <string name="subscription_discount_terms_format">बस %1$s/वर्ष (%2$s/महीना)</string>
+    <string name="subscription_discount_trial_terms_format">कोई प्रतिबद्धता नहीं - कभी भी रद्द करें</string>
+
+
+    <!-- HomeScreen -->
+    <string name="recently_uploaded">हाल ही में अपलोड किया गया</string>
+    <string name="workout_membership_verify_failed">सदस्यता सत्यापित करने में असमर्थ. कृपया पुन: प्रयास करें।</string>
+
+
+    <!-- MainBottomBar -->
+    <string name="bottom_nav_home">घर</string>
+    <string name="bottom_nav_progress">प्रगति</string>
+    <string name="bottom_nav_weight">वज़न</string>
+    <string name="bottom_nav_fasting">उपवास</string>
+    <string name="bottom_nav_workout">कसरत करना</string>
+
+
+    <!-- =============   HomeCards  ============= -->
+
+    <!-- HomeCards :  Calories Card -->
+    <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
+    <string name="home_calories_goal_label">कैलोरी बची</string>
+    <string name="home_calories_eaten_label">कैलोरी खाया</string>
+
+
+    <!-- HomeCards :  Nutrition Card -->
+    <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
+    <string name="home_protein_goal_label">प्रोटीन बचा</string>
+    <string name="home_protein_eaten_label">प्रोटीन खाया</string>
+    <string name="home_carbs_goal_label">कार्ब्स बचे</string>
+    <string name="home_carbs_eaten_label">कार्ब्स खाया</string>
+    <string name="home_fats_goal_label">चर्बी बची</string>
+    <string name="home_fats_eaten_label">वसा खाया</string>
+    <string name="home_fiber_goal_label">फाइबर बचा</string>
+    <string name="home_fiber_eaten_label">फाइबर खाया जाता है</string>
+    <string name="home_sugar_goal_label">चीनी बची</string>
+    <string name="home_sugar_eaten_label">चीनी खाई</string>
+    <string name="home_sodium_goal_label">सोडियम बचा</string>
+    <string name="home_sodium_eaten_label">सोडियम खाया</string>
+    <string name="home_nutrition_ratio_mg">%1$d / %2$dमिलीग्राम</string>
+
+
+    <!-- HomeCards :  Health Score Card & Advice -->
+    <string name="home_health_score_advice_zero">अपने पहले भोजन के पोषण विवरण के आधार पर स्वास्थ्य स्कोर देखने के लिए आज ही लॉग इन करें।</string>
+    <string name="home_health_score_advice_very_low">आज का औसत कम है. अधिक प्रोटीन, फाइबर और कम चीनी या सोडियम पर विचार करें।</string>
+    <string name="home_health_score_advice_low">इसमें सुधार की गुंजाइश है. सब्जियाँ और गुणवत्तापूर्ण प्रोटीन जोड़ने का प्रयास करें।</string>
+    <string name="home_health_score_advice_medium">आप सही रास्ते पर हैं. मात्रा स्थिर रखें और चीनी, सोडियम और फाइबर पर नज़र रखें।</string>
+    <string name="home_health_score_advice_good">आज अच्छा संतुलन. पोषक तत्वों से भरपूर खाद्य पदार्थों का चयन करते रहें।</string>
+    <string name="home_health_score_advice_excellent">आज बढ़िया संतुलन. लगातार आदतें बनाते रहें।</string>
+    <string name="home_health_score_title">स्वास्थ्य स्कोर</string>
+    <string name="home_health_score_value">%1$d/10</string>
+
+
+    <!-- HomeCards : Step Card -->
+    <string name="steps_card_title">कदम</string>
+    <string name="steps_status_permission_not_granted">अधिकृत नहीं हैं</string>
+    <string name="steps_status_hc_not_installed">स्थापित नहीं हे</string>
+    <string name="steps_status_hc_unavailable">अनुपलब्ध</string>
+    <string name="steps_secondary_est_kcal">≈ %1$d किलो कैलोरी</string>
+    <string name="steps_secondary_no_data_yet">अभी तक कोई डेटा नहीं</string>
+    <string name="steps_secondary_connect">जोड़ना</string>
+    <string name="steps_hint_connect_google_health">अपने कदमों को ट्रैक करने के लिए Google स्वास्थ्य से कनेक्ट करें</string>
+    <string name="steps_hint_install_health_connect">अपने कदमों को ट्रैक करने के लिए हेल्थ कनेक्ट इंस्टॉल करें</string>
+    <string name="steps_hint_hc_unavailable">इस डिवाइस पर हेल्थ कनेक्ट उपलब्ध नहीं है</string>
+    <string name="steps_hint_retry">समन्वयन विफल. पुन: प्रयास करने के लिए ठोकिए</string>
+
+
+    <!-- HomeCards : Workout Card -->
+    <string name="workout_card_title">कसरत करना</string>
+    <string name="workout_card_unit_kcal">किलो कैलोरी</string>
+
+
+    <!-- HomeCards : Weight Card -->
+    <string name="weight_card_title">वज़न</string>
+    <string name="weight_card_of_goal">लक्ष्य का</string>
+
+
+    <!-- HomeCards : Fasting Card -->
+    <string name="fasting_card_plan_title">उपवास योजना</string>
+    <string name="fasting_card_start_time">समय शुरू</string>
+    <string name="fasting_card_end_time">अंत समय</string>
+
+
+    <!-- HomeCards : Water Card -->
+    <string name="water_intake_title">पानी</string>
+    <string name="water_intake_cups_format">(%1$d कप)</string>
+
+
+    <!-- =========================
+         ProgressScreen
+         ========================= -->
+    <string name="progress_screen_title">प्रगति</string>
+    <string name="progress_tab_this_week">इस सप्ताह</string>
+    <string name="progress_tab_last_week">पिछले सप्ताह</string>
+    <string name="progress_tab_two_weeks_ago">2 सप्ताह. पहले</string>
+    <string name="progress_tab_three_weeks_ago">3 सप्ताह. पहले</string>
+    <string name="progress_error_load_failed">लोड विफल हो गया</string>
+    <string name="workout_chart_error_load_failed">लोड वर्कआउट चार्ट विफल रहा</string>
+    <string name="water_chart_error_load_failed">लोड जल चार्ट विफल रहा</string>
+
+
+    <!-- =========================
+         BMI Card / BMI Info Dialog
+         ========================= -->
+    <string name="bmi_card_title">अपना बीएमआई</string>
+    <string name="bmi_card_subtitle">आपका वजन है</string>
+
+    <string name="bmi_status_underweight">वजन</string>
+    <string name="bmi_status_healthy">स्वस्थ</string>
+    <string name="bmi_status_overweight">अधिक वजन</string>
+    <string name="bmi_status_obese">मोटा</string>
+    <string name="bmi_status_unknown">अज्ञात</string>
+
+    <string name="bmi_range_underweight">&lt;18.5</string>
+    <string name="bmi_range_healthy">18.5-24.9</string>
+    <string name="bmi_range_overweight">25.0–29.9</string>
+    <string name="bmi_range_obese">&gt;30.0</string>
+
+    <string name="bmi_info_title">बीएमआई क्या है?</string>
+    <string name="bmi_info_subtitle">बॉडी मास इंडेक्स</string>
+    <string name="bmi_info_formula_title">FORMULA</string>
+    <string name="bmi_info_formula_value">बीएमआई = वजन (किलो) / ऊंचाई (एम²)</string>
+    <string name="bmi_info_meaning_title">यह आपको क्या बताता है</string>
+    <string name="bmi_info_meaning_body">बीएमआई यह अनुमान लगाने में मदद करता है कि आपके शरीर का वजन आम तौर पर स्वस्थ सीमा में है या नहीं।</string>
+    <string name="bmi_info_note_title">ध्यान रखें</string>
+    <string name="bmi_info_note_body">बीएमआई एक सामान्य मार्गदर्शिका है. यह सीधे तौर पर शरीर में वसा, मांसपेशियों या समग्र स्वास्थ्य को नहीं मापता है।</string>
+    <string name="bmi_info_cta">समझ गया</string>
+
+
+    <!-- =========================
+         NutritionChartCard
+         ========================= -->
+    <string name="progress_chart_7day_avg_calories">7 दिन का औसत</string>
+    <string name="progress_chart_value_cals">%1$d कैल्स</string>
+    <string name="progress_chart_15day_avg_calories">15 दिन का औसत</string>
+    <string name="progress_chart_loading_total_calories_text">--.- कैल्स</string>
+    <string name="progress_chart_loading_delta">↑ --%%</string>
+    <string name="progress_chart_delta_placeholder">--%%</string>
+    <string name="progress_chart_total_calories">कुल कैलोरी</string>
+    <string name="progress_chart_cals">कैलोरी</string>
+    <string name="progress_legend_protein">प्रोटीन</string>
+    <string name="progress_legend_carbs">कार्बोहाइड्रेट</string>
+    <string name="progress_legend_fats">वसा</string>
+    <string name="progress_keep_it_up">इसे जारी रखो! शुरुआत करना सबसे कठिन हिस्सा है!</string>
+
+    <string name="progress_day_sun">सूरज</string>
+    <string name="progress_day_mon">सोम</string>
+    <string name="progress_day_tue">मंगल</string>
+    <string name="progress_day_wed">बुध</string>
+    <string name="progress_day_thu">गुरु</string>
+    <string name="progress_day_fri">शुक्र</string>
+    <string name="progress_day_sat">बैठा</string>
+
+    <string name="progress_tooltip_calories">कैलोरी</string>
+    <string name="progress_tooltip_protein">प्रोटीन</string>
+    <string name="progress_tooltip_carbs">कार्बोहाइड्रेट</string>
+    <string name="progress_tooltip_fats">वसा</string>
+    <string name="progress_tooltip_label_format">%1$s:</string>
+    <string name="progress_tooltip_grams_value">%1$d जी</string>
+    <string name="progress_tooltip_plain_value">%1$d</string>
+
+
+    <!-- =========================
+         MicronutrientChartCard
+         ========================= -->
+    <string name="progress_micronutrients_title">सूक्ष्म पोषक</string>
+    <string name="progress_chart_grams">जी</string>
+    <string name="progress_chart_7day_avg">7 दिन का औसत</string>
+    <string name="progress_legend_fiber">रेशा</string>
+    <string name="progress_legend_sugar">चीनी</string>
+    <string name="progress_legend_sodium">सोडियम</string>
+    <string name="progress_micronutrients_keep_it_up">अपने फाइबर, चीनी और सोडियम को संतुलित रखें।</string>
+    <string name="progress_tooltip_fiber">रेशा</string>
+    <string name="progress_tooltip_sugar">चीनी</string>
+    <string name="progress_tooltip_sodium">सोडियम</string>
+    <string name="progress_tooltip_mg_value">%1$d मिलीग्राम</string>
+
+
+    <!-- =========================
+         WorkoutChartCard
+         ========================= -->
+    <string name="workout_chart_goal_reached">लक्ष्य आज पूरा हो गया</string>
+    <string name="workout_chart_goal_left">%1$d किलो कैलोरी आज के लक्ष्य तक पहुँचने के लिए शेष है</string>
+    <string name="workout_chart_title">वर्कआउट बर्न</string>
+    <string name="workout_chart_info_dialog_body">इसमें लॉग किए गए वर्कआउट और दैनिक कदमों से अनुमानित गतिविधि कैलोरी शामिल हैं।</string>
+    <string name="workout_chart_unit_kcal">किलो कैलोरी</string>
+    <string name="workout_chart_goal">लक्ष्य</string>
+    <string name="workout_chart_value_kcal">%1$d किलो कैलोरी</string>
+    <string name="workout_chart_7day_avg">7 दिन का औसत</string>
+    <string name="workout_chart_loading">लोड हो रहा है...</string>
+    <string name="workout_legend_burned">वर्कआउट जल गया</string>
+    <string name="workout_legend_daily_goal">दैनिक लक्ष्य</string>
+    <string name="workout_tooltip_burned">जला</string>
+    <string name="workout_tooltip_kcal_value">%1$d किलो कैलोरी</string>
+
+
+    <!-- =========================
+         WaterChartCard
+         ========================= -->
+    <string name="water_chart_goal_reached">आज का लक्ष्य पूरा हो गया</string>
+    <string name="water_chart_goal_left_ml">आज के लक्ष्य तक पहुंचने के लिए %1$s मिली शेष है</string>
+    <string name="water_chart_title">पानी का सेवन</string>
+    <string name="water_chart_unit_ml">एमएल</string>
+    <string name="water_chart_goal">लक्ष्य</string>
+    <string name="water_chart_value_ml">%1$s मिली</string>
+    <string name="water_chart_7day_avg">7 दिन का औसत</string>
+    <string name="water_chart_loading">लोड हो रहा है...</string>
+    <string name="water_legend_intake">प्रवेश</string>
+    <string name="water_legend_daily_goal">दैनिक लक्ष्य</string>
+    <string name="water_tooltip_intake">प्रवेश</string>
+    <string name="water_tooltip_ml_value">%1$d मिली</string>
+
+
+    <!-- =========================
+         ProgressAverageOverviewSection
+         ========================= -->
+    <string name="progress_average_tab_7_days">7 दिन</string>
+    <string name="progress_average_tab_15_days">15 दिन</string>
+    <string name="progress_average_tab_30_days">30 दिन</string>
+    <string name="progress_average_tab_60_days">60 दिन</string>
+
+    <string name="progress_average_overview_title">औसत अवलोकन</string>
+    <string name="progress_average_overview_subtitle">डेटा के साथ आज का दिन और केवल औसत दिन शामिल नहीं हैं।</string>
+    <string name="progress_average_days_badge">%1$d-दिन का औसत</string>
+    <string name="progress_average_loading">औसत लोड हो रहा है...</string>
+    <string name="progress_average_total_calories">कुल कैलोरी</string>
+    <string name="progress_average_protein">प्रोटीन</string>
+    <string name="progress_average_carbs">कार्बोहाइड्रेट</string>
+    <string name="progress_average_fats">वसा</string>
+    <string name="progress_average_fiber">रेशा</string>
+    <string name="progress_average_sugar">चीनी</string>
+    <string name="progress_average_sodium">सोडियम</string>
+    <string name="progress_average_workout">वर्कआउट जल गया</string>
+    <string name="progress_average_water">पानी का सेवन</string>
+    <string name="progress_average_health_score">स्वास्थ्य स्कोर</string>
+    <string name="progress_average_steps">कदम</string>
+    <string name="progress_average_health_score_value">%1$.1f / 10</string>
+    <string name="progress_average_steps_value">%1$s चरण</string>
+
+
+    <!--WeightScreen-->
+    <string name="weight_title">वज़न</string>
+    <string name="weight_overview_title">सिंहावलोकन</string>
+    <string name="weight_history_title">इतिहास</string>
+    <string name="weight_delete_success">सफलतापूर्वक मिटाया गया!</string>
+    <string name="weight_delete_failed">हटाना विफल. कृपया पुन: प्रयास करें।</string>
+    <string name="weight_log_weight">वजन लॉग करें</string>
+
+
+    <!-- WeightComponents -->
+    <string name="weight_card_to_goal_weight">वजन लक्ष्य करने के लिए</string>
+    <string name="weight_card_current_weight">वर्तमान वजन</string>
+    <string name="weight_card_achieved_goal_format">लक्ष्य का %1$s%% प्राप्त किया</string>
+    <string name="weight_chart_tab_30_days">30 दिन</string>
+    <string name="weight_chart_tab_60_days">60 दिन</string>
+    <string name="weight_chart_tab_90_days">90 दिन</string>
+    <string name="weight_chart_tab_all_time">पूरे समय</string>
+    <string name="weight_chart_title">वजन की प्रवृत्ति</string>
+    <string name="weight_chart_goal_progress_badge">लक्ष्य का %1$s%%</string>
+    <string name="weight_chart_goal_label">लक्ष्य</string>
+    <string name="weight_chart_to_goal">लक्ष्य के लिए %1$s</string>
+    <string name="weight_goal_chart_empty_hint">अपना रुझान शुरू करने के लिए वजन लॉग करें</string>
+    <string name="weight_chart_motivation">हर छोटा कदम आपको आपके लक्ष्य के करीब लाता है।</string>
+    <string name="weight_history_weight_label">वज़न</string>
+    <string name="weight_history_change_label">परिवर्तन</string>
+    <string name="weight_history_trend_loss">नुकसान</string>
+    <string name="weight_history_trend_gain">पाना</string>
+    <string name="weight_history_trend_stable">स्थिर</string>
+
+
+    <!-- FastingPlansScreen -->
+    <string name="fasting_plan_title">उपवास योजना</string>
+    <string name="start_time">समय शुरू</string>
+    <string name="end_time">अंत समय</string>
+    <string name="fasting_notification_info_status_on">अनुस्मारक चालू हैं. यदि डिवाइस अधिसूचना अनुमति की अनुमति है, तो ये अनुस्मारक प्रतिदिन दोहराए जाते हैं।</string>
+    <string name="fasting_notification_info_status_off">अनुस्मारक बंद हैं. ये सूचनाएं प्राप्त करने के लिए होम फास्टिंग कार्ड पर स्विच चालू करें।</string>
+    <string name="fasting_notification_info_status_enabled_label">पर</string>
+    <string name="fasting_notification_info_status_disabled_label">बंद</string>
+    <string name="fasting_notification_info_title">अनुस्मारक कैसे काम करते हैं</string>
+    <string name="fasting_notification_info_subtitle">आपकी %1$s योजना %2$s पर समाप्त होती है। जब अनुस्मारक चालू होते हैं, तो CaloShape दो दैनिक सूचनाएं भेजता है।</string>
+    <string name="fasting_notification_info_at_time">%1$s पर</string>
+    <string name="fasting_notification_info_start_title">खाने की खिड़की शुरू होती है</string>
+    <string name="fasting_notification_info_start_body">जरूरत पड़ने पर आप खाना शुरू कर सकते हैं और भोजन लॉग कर सकते हैं।</string>
+    <string name="fasting_notification_info_endsoon_title">खाने की खिड़की जल्द ही समाप्त हो जाती है</string>
+    <string name="fasting_notification_info_endsoon_body">%1$s पर विंडो बंद होने से एक घंटा पहले, CaloShape आपको अपना अंतिम भोजन समाप्त करने की याद दिलाता है।</string>
+
+    <string name="fasting_plan_desc_14_10">एक स्थिर लय के साथ आराम करें - भूख संकेतों और ऊर्जा को रीसेट करने के लिए 14 घंटे।</string>
+    <string name="fasting_plan_desc_16_8">एक कारण से भीड़ का पसंदीदा - ध्यान केंद्रित करने और लय में रहने के लिए 16 घंटे।</string>
+    <string name="fasting_plan_desc_12_12">संतुलित विभाजन: 12 घंटे का उपवास, 12 घंटे के भीतर खाना - शुरुआती लोगों के लिए बिल्कुल सही।</string>
+    <string name="fasting_plan_desc_18_6">18 घंटे का उपवास, 6 घंटे के खाने के समय के साथ - 16:8 की तुलना में एक छोटा कार्यक्रम।</string>
+    <string name="fasting_plan_desc_20_4">लेज़र-केंद्रित रहें—4-घंटे की सीमित अवधि के भीतर 1-2 सचेत भोजन।</string>
+    <string name="fasting_plan_desc_22_2">2 घंटे के अंतराल में एक जानबूझकर भोजन - पानी का सेवन अधिक रखें।</string>
+
+    <string name="fasting_picker_title">अपना उपवास आरंभ करने का समय निर्धारित करें</string>
+    <string name="fasting_picker_subtitle">हम आपको हर दिन इसी समय याद दिलाएंगे जब आपकी खाने की खिड़की शुरू होगी।</string>
+
+
+    <!-- FastingReceiver -->
+    <string name="fasting_start_title">%1$s खाने की खिड़की खुली है</string>
+    <string name="fasting_start_body">आपकी खाने की विंडो %1$s–%2$s चलती है। आज का दिन सटीक रखने के लिए जाते समय भोजन लॉग करें।</string>
+    <string name="fasting_endsoon_title">आपकी खाने की खिड़की में 1 घंटा बचा है</string>
+    <string name="fasting_endsoon_body">आपकी विंडो %1$s पर बंद होती है। यदि आप आखिरी भोजन की योजना बना रहे हैं, तो इसे समाप्त करने से पहले इसे लॉग इन करें।</string>
+
+
+
+
+    <!-- WorkoutHistoryScreen -->
+    <string name="workout_history_title">कसरत का इतिहास</string>
+    <string name="workout_history_summary_label">आज जल गया</string>
+    <string name="workout_history_summary_body">आज के वर्कआउट बर्न की प्रगति पर नज़र रखें</string>
+    <string name="workout_history_today_label">आज</string>
+    <string name="workout_history_avg_daily_value">%1$d किलो कैलोरी</string>
+    <string name="workout_history_avg_daily_label">7 दिन का औसत/दिन</string>
+    <string name="workout_history_avg_label">7-दिवसीय औसत/सत्र</string>
+    <string name="workout_history_avg_value">%1$d किलो कैलोरी</string>
+    <string name="workout_history_unit_kcal">किलो कैलोरी</string>
+
+    <string name="workout_history_empty_title">कोई हालिया वर्कआउट नहीं</string>
+    <string name="workout_history_empty">पिछले 7 दिनों में कोई वर्कआउट नहीं।</string>
+    <string name="workout_history_recent_title">हाल के सत्र</string>
+    <string name="workout_history_minutes">%1$d मि</string>
+    <string name="workout_history_kcal">%1$d</string>
+    <string name="workout_history_date_time">%1$s · %2$s</string>
+    <string name="workout_history_kcal_with_unit">%1$d किलो कैलोरी</string>
+
+    <string name="workout_history_loading_title">वर्कआउट सिंक करना</string>
+    <string name="workout_history_loading">वर्कआउट इतिहास लोड हो रहा है...</string>
+    <string name="workout_history_error_title">इतिहास अनुपलब्ध</string>
+
+    <string name="workout_history_delete_failed">हटाना विफल. कृपया पुन: प्रयास करें।</string>
+    <string name="workout_history_delete_success">सफलतापूर्वक मिटाया गया!</string>
+    <string name="workout_history_error">वर्कआउट इतिहास लोड करने में असमर्थ.</string>
+
+
+    <!-- WorkoutTrackerSheet -->
+    <string name="workout_tracker_title">वर्कआउट ट्रैकर</string>
+    <string name="workout_tracker_subtitle">व्यायाम के प्रकार और अवधि का वर्णन करें</string>
+    <string name="workout_tracker_example_placeholder">उदाहरण: 45 मिनट की दौड़</string>
+
+    <string name="workout_tracker_select_from_list">या सूची से चयन करें</string>
+    <string name="workout_tracker_show_less">कम दिखाओ</string>
+    <string name="workout_tracker_show_more">और दिखाएँ (%1$d)</string>
+
+    <string name="workout_tracker_estimating_fallback">अनुमान लगाया जा रहा है...</string>
+    <string name="workout_tracker_estimating_analyzing">आपकी गतिविधि का विश्लेषण किया जा रहा है...</string>
+    <string name="workout_tracker_estimating_numbers">आपके नंबरों पर काम हो रहा है...</string>
+    <string name="workout_tracker_estimating_calories">प्रयास का अनुमान लगाना, कैलोरी की गणना करना...</string>
+    <string name="workout_tracker_do_not_close">कृपया ऐप को बंद न करें या अपने डिवाइस को लॉक न करें</string>
+
+    <string name="workout_tracker_kcal_value">%1$d किलो कैलोरी</string>
+    <string name="workout_tracker_minutes_activity">%1$d मिनट %2$s</string>
+    <string name="workout_tracker_add_workout">कसरत जोड़ें</string>
+
+    <string name="workout_tracker_activity_content_label">कसरत गतिविधि</string>
+    <string name="workout_preset_kcal_per_30_min">%1$d किलो कैलोरी / 30 मिनट</string>
+
+    <string name="workout_tracker_save_success">सफलतापूर्वक बचाया!</string>
+    <string name="workout_tracker_save_failed">सहेजने में विफल. कृपया पुन: प्रयास करें।</string>
+    <string name="workout_tracker_refresh_failed">रिफ्रेश विफल रहा. कृपया पुन: प्रयास करें।</string>
+    <string name="workout_tracker_cancel">रद्द करना</string>
+    <string name="workout_tracker_try_again">पुनः प्रयास करें</string>
+    <string name="workout_tracker_scan_failed_title">उह ओह! स्कैन विफल</string>
+    <string name="workout_tracker_scan_failed_body">वर्कआउट विवरण ग़लत हो सकता है, या इंटरनेट कनेक्शन कमज़ोर हो सकता है। उदाहरण के लिए: 30 मिनट की दौड़।</string>
+
+
+    <!-- workoutNameStringRes : Workout preset display names -->
+    <string name="workout_preset_walking">चलना</string>
+    <string name="workout_preset_running">दौड़ना</string>
+    <string name="workout_preset_cycling">साइकिल चलाना</string>
+    <string name="workout_preset_swimming">तैरना</string>
+    <string name="workout_preset_hiking">लंबी पैदल यात्रा</string>
+    <string name="workout_preset_aerobic_exercise">एरोबिक व्यायाम</string>
+    <string name="workout_preset_strength_training">मज़बूती की ट्रेनिंग</string>
+    <string name="workout_preset_weight_training">वजन प्रशिक्षण</string>
+    <string name="workout_preset_basketball">बास्केटबाल</string>
+    <string name="workout_preset_soccer">फुटबॉल</string>
+    <string name="workout_preset_tennis">टेनिस</string>
+    <string name="workout_preset_yoga">योग</string>
+    <string name="workout_preset_badminton">बैडमिंटन</string>
+    <string name="workout_preset_baseball">बेसबॉल</string>
+    <string name="workout_preset_softball">सॉफ्टबॉल</string>
+    <string name="workout_preset_volleyball">वालीबाल</string>
+    <string name="workout_preset_table_tennis">टेबल टेनिस</string>
+    <string name="workout_preset_dancing_general">नृत्य</string>
+    <string name="workout_preset_zumba">ज़ुम्बा</string>
+    <string name="workout_preset_pilates">पिलेट्स</string>
+
+
+    <!-- DurationPickerSheet -->
+    <string name="workout_duration_sheet_subtitle">इस कसरत के समय को अपने गतिविधि लॉग में जोड़ें</string>
+    <string name="workout_duration_hour_short">मानव संसाधन</string>
+    <string name="workout_duration_minute_short">मिन</string>
+    <string name="workout_duration_save">बचाना</string>
+    <string name="workout_duration_cancel">रद्द करना</string>
+
+
+    <!-- HomeQuickActionMenu -->
+    <string name="quick_add_saved_foods">सहेजे गए खाद्य पदार्थ</string>
+    <string name="quick_add_scan_food">खाना स्कैन करें</string>
+
+
+    <!-- CameraScreen -->
+    <string name="camera_mode_food">खाना स्कैन करें</string>
+    <string name="camera_mode_barcode">बारकोड</string>
+    <string name="camera_mode_label">खाद्य लेबल</string>
+    <string name="camera_mode_album">तस्वीरें</string>
+    <string name="camera_barcode_title">बारकोड स्कैनर</string>
+    <string name="camera_label_title">लेबल स्कैनर</string>
+    <string name="camera_need_permission">स्कैन करने के लिए कैमरे की अनुमति आवश्यक है</string>
+
+
+    <!-- RecentUploadCard -->
+    <string name="foodlog_pending_analysis">आपके भोजन का विश्लेषण...</string>
+    <string name="foodlog_analysis_done">विश्लेषण पूरा हुआ</string>
+    <string name="recent_upload_kcal_text">🔥 %1$d कैलोरी</string>
+    <string name="recent_upload_protein_text">🥩%1$dg</string>
+    <string name="recent_upload_carbs_text">🌾 %1$dg</string>
+    <string name="recent_upload_fat_text">🥑 %1$dg</string>
+
+
+    <!-- RecentlyUploadedEmptyCard -->
+    <string name="recently_uploaded_empty">हाल ही में अपलोड किया गया</string>
+    <string name="recently_uploaded_empty_hint">दिन का अपना पहला भोजन जोड़ने के लिए + टैप करें</string>
+
+
+    <!-- SavedFoodsScreen -->
+    <string name="saved_foods_keep_15_days_hint">पिछले 15 दिनों का खाना बचाया।</string>
+    <string name="saved_foods_unsave_dialog_title">सहेजे गए खाद्य पदार्थों से निकालें?</string>
+    <string name="saved_foods_unsave_dialog_message">यह भोजन आपके सहेजे गए खाद्य पदार्थों की सूची से हटा दिया जाएगा, लेकिन यह अभी भी आपके हाल के रिकॉर्ड में रहेगा।</string>
+    <string name="saved_foods_unsave_dialog_confirm">निकालना</string>
+    <string name="saved_foods_title">सहेजे गए खाद्य पदार्थ</string>
+    <string name="saved_foods_kcal">🔥 %1$d कैलोरी</string>
+    <string name="saved_foods_protein">🥩%1$dg</string>
+    <string name="saved_foods_carbs">🌾 %1$dg</string>
+    <string name="saved_foods_fat">🥑 %1$dg</string>
+    <string name="saved_foods_detail">विवरण</string>
+    <string name="saved_foods_load_failed_title">सहेजे गए खाद्य पदार्थ लोड करने में विफल रहे</string>
+
+
+    <!-- RecentUploadDetailScreen -->
+    <string name="foodlog_detail_load_failed">लोड विफल हो गया</string>
+    <string name="foodlog_unknown_food">अज्ञात भोजन</string>
+    <string name="foodlog_no_image">चित्र उपलब्द नहीं है</string>
+
+    <string name="foodlog_detail_title">पोषण</string>
+    <string name="foodlog_detail_calories">कैलोरी</string>
+    <string name="foodlog_detail_protein">प्रोटीन</string>
+    <string name="foodlog_detail_carbs">कार्बोहाइड्रेट</string>
+    <string name="foodlog_detail_fats">वसा</string>
+    <string name="foodlog_detail_fiber">रेशा</string>
+    <string name="foodlog_detail_sugar">चीनी</string>
+    <string name="foodlog_detail_sodium">सोडियम</string>
+    <string name="foodlog_detail_health_score">स्वास्थ्य स्कोर</string>
+
+
+    <!-- DeleteFoodLogDialog -->
+    <string name="foodlog_delete_dialog_title">रिकॉर्ड हटाएं?</string>
+    <string name="foodlog_delete_dialog_message">क्या आप वाकई इस भोजन रिकॉर्ड को स्थायी रूप से हटाना चाहते हैं? इस एक्शन को वापस नहीं किया जा सकता।</string>
+    <string name="foodlog_delete_dialog_confirm">मिटाना</string>
+
+
+    <!-- Settings -->
+    <string name="settings_title">सेटिंग्स</string>
+    <string name="settings_choose_language">भाषा चुनें</string>
+    <string name="delete_account_dialog_title">खाता हटा दो?</string>
+    <string name="delete_account_dialog_body">क्या आप इस खाते को हटाने के लिए सुनिश्चित हैं? यह आपके कैलोशेप डेटा को स्थायी रूप से हटा देगा, जिसमें खाद्य लॉग, वजन रिकॉर्ड और संबंधित सेटिंग्स शामिल हैं। इस एक्शन को वापस नहीं किया जा सकता।</string>
+
+
+    <string name="restore_subscription_dialog_success_title">सदस्यता बहाल</string>
+    <string name="restore_subscription_dialog_payment_issue_title">सदस्यता बहाल, भुगतान की समस्या बनी हुई है</string>
+    <string name="restore_subscription_dialog_no_active_title">कोई सक्रिय Google Play सदस्यता नहीं मिली</string>
+    <string name="restore_subscription_dialog_failed_title">पुनर्स्थापना विफल</string>
+    <string name="restore_subscription_dialog_bound_title">सदस्यता दूसरे खाते से जुड़ी हुई है</string>
+    <string name="restore_subscription_dialog_success_body">आपकी सदस्यता इस CaloShape खाते में बहाल कर दी गई है।</string>
+    <string name="restore_subscription_dialog_payment_issue_body">आपकी सदस्यता इस CaloShape खाते से लिंक है, लेकिन Google Play अभी भी भुगतान समस्या की रिपोर्ट कर रहा है। कृपया अपनी सदस्यता को सक्रिय रखने के लिए Google Play में अपनी भुगतान विधि अपडेट करें।</string>
+    <string name="restore_subscription_dialog_no_active_body">हमें वर्तमान Google Play खाते पर सक्रिय CaloShape सदस्यता नहीं मिल सकी। सुनिश्चित करें कि आप उस Google Play खाते का उपयोग कर रहे हैं जिससे खरीदारी हुई है, फिर पुनः प्रयास करें।</string>
+    <string name="restore_subscription_dialog_failed_body">हम अभी आपकी सदस्यता बहाल नहीं कर सके. कृपया अपना कनेक्शन जांचें और सेटिंग्स से पुनः प्रयास करें।</string>
+    <string name="restore_subscription_dialog_bound_body">यह Google Play सदस्यता पहले से ही किसी अन्य CaloShape खाते से लिंक है। इसका उपयोग करने के लिए मूल खाते में साइन इन करें, या यदि आप उस खाते तक नहीं पहुंच सकते हैं तो सहायता से संपर्क करें।</string>
+    <string name="restore_subscription_dialog_body">हमें इस डिवाइस पर Google Play खाते से संबद्ध एक सक्रिय CaloShape सदस्यता या परीक्षण मिला। आप इसे उस CaloShape खाते में पुनर्स्थापित कर सकते हैं जिसमें आप वर्तमान में साइन इन हैं।</string>
+
+    <!-- Settings : Payment issue dialog -->
+    <string name="payment_issue_dialog_title">अपना प्रीमियम सक्रिय रखें</string>
+    <string name="payment_issue_dialog_body">आपकी प्रीमियम पहुंच अभी भी सक्रिय है, लेकिन आपके भुगतान पर ध्यान देने की आवश्यकता है।</string>
+    <string name="payment_issue_dialog_supporting_body">एआई स्कैन और प्रीमियम सुविधाओं को खोने से बचने के लिए अपनी Google Play भुगतान विधि को अपडेट करें।</string>
+    <string name="payment_issue_dialog_update_payment">भुगतान विधि अद्यतन करें</string>
+    <string name="payment_issue_dialog_badge">भुगतान पर ध्यान देने की जरूरत है</string>
+    <string name="payment_issue_dialog_premium_access">प्रीमियम पहुंच</string>
+    <string name="payment_issue_dialog_active_for_now">फ़िलहाल सक्रिय</string>
+    <string name="payment_issue_dialog_next_step">अगला कदम</string>
+    <string name="payment_issue_dialog_update_payment_short">भुगतान अद्यतन करें</string>
+
+
+    <string name="settings_personal_details">व्यक्तिगत विवरण</string>
+    <string name="settings_adjust_macronutrients">मैक्रोन्यूट्रिएंट्स को समायोजित करें</string>
+    <string name="settings_weight_history">वजन का इतिहास</string>
+    <string name="settings_ring_colors_explained">कैलेंडर रिंग कलर गाइड</string>
+    <string name="settings_inbox">इनबॉक्स</string>
+
+
+    <string name="settings_terms_conditions">नियम और शर्तें</string>
+    <string name="settings_privacy_policy">गोपनीयता नीति</string>
+    <string name="settings_support_email">समर्थन ईमेल</string>
+    <string name="settings_delete_account">खाता हटा दो?</string>
+    <string name="settings_version">संस्करण %1$s</string>
+
+
+    <string name="settings_membership_payment">भुगतान</string>
+    <string name="settings_membership_update_payment">भुगतान अद्यतन करें</string>
+    <string name="settings_membership_premium">अधिमूल्य</string>
+    <string name="settings_membership_active_member">सक्रिय सदस्य</string>
+    <string name="settings_membership_trial">परीक्षण</string>
+    <string name="settings_membership_access_active">पहुंच सक्रिय</string>
+    <string name="settings_membership_free">मुक्त</string>
+    <string name="settings_membership_upgrade">उन्नत करना</string>
+
+
+    <!-- Settings: referral card -->
+    <string name="settings_invite_friends">मित्रों को आमंत्रित करें</string>
+    <string name="settings_premium_reward">प्रीमियम इनाम</string>
+    <string name="settings_share_caloshape_with_friends">अपने दोस्तों के साथ CaloShape AI\n साझा करें</string>
+    <string name="settings_referral_reward_content">वे सदस्यता लेते हैं. आपको 30 दिन मुफ़्त मिलते हैं।</string>
+    <string name="settings_get_30_days_free">30 दिन मुफ़्त पाएं</string>
+    <string name="settings_days_label">दिन</string>
+
+    <string name="settings_appearance_light">रोशनी</string>
+    <string name="settings_appearance_dark">अँधेरा</string>
+    <string name="settings_appearance_mode_title">दिखावट चुनें</string>
+    <string name="settings_appearance_light_description">वर्तमान को उज्ज्वल, स्वच्छ रूप में रखें।</string>
+    <string name="settings_appearance_dark_description">रोजमर्रा की ट्रैकिंग के लिए गहरे, नरम इंटरफ़ेस का उपयोग करें।</string>
+    <string name="settings_preferences">प्राथमिकताएँ</string>
+    <string name="settings_appearance">उपस्थिति</string>
+
+    <string name="settings_language">भाषा</string>
+
+
+    <!-- Settings: Widget Guide -->
+    <string name="settings_widgets_title">विजेट</string>
+    <string name="settings_widgets_how_to_add">कैसे जोड़ना है?</string>
+    <string name="log_your_food">अपना भोजन लॉग करें</string>
+
+    <string name="settings_calories_goal_label">कैलोरी बची</string>
+    <string name="settings_protein_goal_label">प्रोटीन बचा</string>
+    <string name="settings_carbs_goal_label">कार्ब्स बचे</string>
+    <string name="settings_fats_goal_label">चर्बी बची</string>
+    <string name="settings_widget_scan_food">खाना स्कैन करें</string>
+    <string name="settings_widget_barcode">बारकोड</string>
+
+    <string name="settings_logout_loading">लॉग आउट हो रहा है...</string>
+    <string name="settings_logout">लॉग आउट</string>
+    <string name="settings_logout_failed">लॉगआउट विफल. अपना कनेक्शन जांचें और पुनः प्रयास करें।</string>
+
+
+    <!-- EditNameScreen -->
+    <string name="settings_edit_your_name_title">अपना नाम संपादित करें</string>
+    <string name="edit_name_placeholder">अपना नाम दर्ज करें</string>
+
+
+    <!-- Referral Screen -->
+    <string name="referral_title">मित्रों को आमंत्रित करें</string>
+    <string name="referral_premium_reward">प्रीमियम इनाम</string>
+    <string name="referral_invite_friends">मित्रों को आमंत्रित करें</string>
+    <string name="referral_earn_30_days_free">30 दिन मुफ़्त कमाएँ</string>
+    <string name="referral_reward_unlocks_after_no_refund">आपके मित्र द्वारा बिना किसी रिफंड के सदस्यता लेने के बाद इनाम अनलॉक हो जाता है।</string>
+    <string name="referral_code_copied">रेफरल कोड कॉपी किया गया.</string>
+    <string name="referral_your_promo_code">आपका प्रोमो कोड</string>
+    <string name="referral_copy">प्रतिलिपि</string>
+    <string name="referral_share">शेयर करना</string>
+    <string name="referral_how_it_works">यह काम किस प्रकार करता है</string>
+    <string name="referral_step_1_title">अपना प्रोमो कोड साझा करें</string>
+    <string name="referral_step_1_subtitle">अपना कोड उस मित्र को भेजें जो भोजन को बेहतर ढंग से ट्रैक करना चाहता है।</string>
+    <string name="referral_step_2_title">आपका मित्र सदस्यता लेता है</string>
+    <string name="referral_step_2_subtitle">वे आपके आमंत्रण का उपयोग करके सशुल्क CaloShape AI सदस्यता शुरू करते हैं।</string>
+    <string name="referral_step_3_title">कोई रिफंड नहीं, फिर इनाम</string>
+    <string name="referral_step_3_subtitle">बिना किसी रिफंड के सदस्यता सत्यापित होने के बाद, आपकी प्रीमियम अवधि बढ़ा दी जाती है।</string>
+    <string name="referral_share_text">CaloShape AI पर मेरे साथ जुड़ें! मेरा रेफरल कोड है:\n%1$s\n\n%2$s</string>
+    <string name="referral_share_subject">CaloShape AI पर मेरे साथ जुड़ें</string>
+    <string name="referral_share_chooser_title">के माध्यम से साझा करें</string>
+    <string name="referral_unable_to_open_share_options">शेयर विकल्प खोलने में असमर्थ.</string>
+
+
+    <!-- PersonalDetailsScreen -->
+    <string name="personal_details_goal_weight">भार मकसद</string>
+    <string name="personal_details_change_goal">लक्ष्य बदलें</string>
+    <string name="personal_details_body_details_section">शरीर का विवरण</string>
+    <string name="personal_details_current_weight">वर्तमान वजन</string>
+    <string name="personal_details_height">ऊंचाई</string>
+    <string name="personal_details_age">आयु</string>
+    <string name="personal_details_gender">लिंग</string>
+    <string name="personal_details_starting_weight">प्रारंभिक वजन</string>
+    <string name="personal_details_daily_goals_section">दैनिक लक्ष्य</string>
+    <string name="personal_details_daily_step_goal">दैनिक कदम लक्ष्य</string>
+    <string name="personal_details_daily_water_goal">दैनिक जल लक्ष्य</string>
+    <string name="personal_details_daily_workout_goal">दैनिक कसरत लक्ष्य</string>
+    <string name="personal_details_age_value">%1$d वर्ष</string>
+    <string name="personal_details_steps_value">%1$d चरण</string>
+    <string name="personal_details_water_value">%1$d मिली</string>
+    <string name="personal_details_kcal_value">%1$d किलो कैलोरी</string>
+    <string name="gender_male">पुरुष</string>
+    <string name="gender_female">महिला</string>
+    <string name="gender_other">अन्य</string>
+
+
+    <!-- EditGoalWeightScreen -->
+    <string name="edit_goal_weight_title">लक्ष्य भार संपादित करें</string>
+    <string name="edit_goal_weight_progress_note">हम आपकी प्रगति की गणना के लिए इस लक्ष्य का उपयोग करेंगे।</string>
+    <string name="edit_goal_update_failed">लक्ष्य भार अद्यतन करने में विफल</string>
+
+
+    <!-- RecordWeightScreen -->
+    <string name="record_weight_camera_failed_to_open">कैमरा खुलने में विफल.</string>
+    <string name="record_weight_camera_permission_required">कैमरे की अनुमति आवश्यक है.</string>
+    <string name="record_weight_camera_preview_unavailable">कैमरा केवल चालू ऐप में काम करता है, पूर्वावलोकन में नहीं।</string>
+    <string name="record_weight_camera_screen_unavailable">इस स्क्रीन में कैमरा उपलब्ध नहीं है.</string>
+    <string name="record_weight_no_camera_app_found">इस डिवाइस पर कोई कैमरा ऐप नहीं मिला.</string>
+    <string name="record_weight_enable_camera_permission_settings">कृपया सेटिंग्स में कैमरा अनुमति सक्षम करें।</string>
+
+    <string name="record_weight_title">वजन रिकॉर्ड करें</string>
+    <string name="record_weight_save_failed">सहेजना विफल</string>
+    <string name="record_weight_date_note">यह वजन %1$s के लिए दर्ज किया जाएगा</string>
+
+    <string name="weight_date_sheet_title">अपनी वज़न तारीख चुनें</string>
+    <string name="weight_date_sheet_subtitle">आपने पैमाने पर कब कदम रखा?</string>
+    <string name="weight_date_sheet_month_january">जनवरी</string>
+    <string name="weight_date_sheet_month_february">फ़रवरी</string>
+    <string name="weight_date_sheet_month_march">मार्च</string>
+    <string name="weight_date_sheet_month_april">अप्रैल</string>
+    <string name="weight_date_sheet_month_may">मई</string>
+    <string name="weight_date_sheet_month_june">जून</string>
+    <string name="weight_date_sheet_month_july">जुलाई</string>
+    <string name="weight_date_sheet_month_august">अगस्त</string>
+    <string name="weight_date_sheet_month_september">सितम्बर</string>
+    <string name="weight_date_sheet_month_october">अक्टूबर</string>
+    <string name="weight_date_sheet_month_november">नवंबर</string>
+    <string name="weight_date_sheet_month_december">दिसंबर</string>
+
+    <string name="record_weight_camera_not_available">कैमरा उपलब्ध नहीं है</string>
+    <string name="record_weight_take_photo">एक तस्वीर लें</string>
+    <string name="record_weight_retake_photo">फ़ोटो दोबारा लें</string>
+
+
+    <!-- EditHeightScreen -->
+    <string name="edit_height_title">अपनी ऊंचाई संपादित करें</string>
+    <string name="edit_height_privacy_note">हम केवल आपके अनुभव और कैलोरी अनुमान सटीकता को बेहतर बनाने के लिए आपकी ऊंचाई का उपयोग करते हैं।</string>
+
+
+    <!-- EditAgeScreen -->
+    <string name="edit_age_title">अपनी आयु संपादित करें</string>
+    <string name="edit_age_privacy_note">हम आपकी उम्र का उपयोग केवल आपके अनुभव और कैलोरी अनुमान सटीकता को बेहतर बनाने के लिए करते हैं।</string>
+
+
+    <!-- EditGenderScreen -->
+    <string name="edit_gender_title">अपना लिंग संपादित करें</string>
+    <string name="edit_gender_privacy_note">केवल वैयक्तिकृत करने और अनुमान सटीकता में सुधार करने के लिए उपयोग किया जाता है।</string>
+
+
+    <!-- EditStartingWeightScreen -->
+    <string name="edit_starting_weight_title">आरंभिक वज़न संपादित करें</string>
+    <string name="edit_start_weight_baseline_note">हम इसे प्रगति के लिए आपकी आधार रेखा के रूप में उपयोग करेंगे।</string>
+    <string name="edit_starting_weight_update_failed">आरंभिक वज़न अपडेट करने में विफल</string>
+
+
+    <!-- EditDailyStepGoalScreen -->
+    <string name="edit_step_goal_title">चरण लक्ष्य संपादित करें</string>
+    <string name="edit_daily_step_goal_previous_format">पिछला लक्ष्य %1$d चरण</string>
+    <string name="edit_daily_step_goal_input_label">दैनिक कदम लक्ष्य</string>
+
+
+    <!-- EditWaterGoalScreen -->
+    <string name="edit_water_goal_title">जल लक्ष्य संपादित करें</string>
+    <string name="edit_water_goal_previous_format">पिछला लक्ष्य %1$d मि.ली</string>
+    <string name="edit_water_goal_input_label">दैनिक जल लक्ष्य (एमएल)</string>
+
+
+    <!-- EditWorkoutGoalScreen -->
+    <string name="edit_workout_goal_title">वर्कआउट लक्ष्य संपादित करें</string>
+    <string name="edit_workout_goal_previous_format">पिछला लक्ष्य %1$d किलो कैलोरी</string>
+    <string name="edit_workout_goal_input_label">दैनिक कसरत लक्ष्य (किलो कैलोरी)</string>
+
+
+    <!-- EditNutritionGoalsScreen -->
+    <string name="edit_nutrition_goals_title">पोषण लक्ष्य संपादित करें</string>
+    <string name="edit_nutrition_calorie_goal">कैलोरी लक्ष्य</string>
+    <string name="edit_nutrition_protein_goal">प्रोटीन लक्ष्य</string>
+    <string name="edit_nutrition_carb_goal">कार्ब लक्ष्य</string>
+    <string name="edit_nutrition_fat_goal">मोटा लक्ष्य</string>
+    <string name="edit_nutrition_view_micronutrients">सूक्ष्म पोषक तत्व देखें</string>
+    <string name="edit_nutrition_fiber_goal">फाइबर लक्ष्य</string>
+    <string name="edit_nutrition_sugar_goal">चीनी लक्ष्य</string>
+    <string name="edit_nutrition_sodium_goal">सोडियम लक्ष्य</string>
+    <string name="edit_nutrition_auto_generate_goals">स्वतः लक्ष्य उत्पन्न करें</string>
+
+
+    <!-- RingColorsExplainedScreen -->
+    <string name="ring_colors_explained_title">तारीख की अंगूठी के रंग</string>
+    <string name="ring_colors_explained_intro">डेट रिंग्स आपको तुरंत यह देखने में मदद करती हैं कि प्रत्येक दिन की तुलना आपके कैलोरी लक्ष्य से कैसे की जाती है।</string>
+    <string name="ring_colors_preview_brand">कैलोशेप एआई</string>
+    <string name="ring_colors_explained">दिनांक रिंग पूर्वावलोकन</string>
+
+    <string name="ring_colors_preview_day_5">5</string>
+    <string name="ring_colors_preview_day_6">6</string>
+    <string name="ring_colors_preview_day_7">7</string>
+    <string name="ring_colors_preview_day_8">8</string>
+    <string name="ring_colors_preview_day_9">9</string>
+    <string name="ring_colors_preview_day_10">10</string>
+    <string name="ring_colors_preview_day_11">11</string>
+    <string name="ring_colors_explained_subtitle">अंगूठी के रंगों की व्याख्या</string>
+
+    <string name="ring_colors_green_title">हरा</string>
+    <string name="ring_colors_green_body">लक्ष्य पर (लक्ष्य के 100 कैलोरी के भीतर)</string>
+    <string name="ring_colors_yellow_title">भूरा</string>
+    <string name="ring_colors_yellow_body">आपके लक्ष्य से 100-199 कैलोरी अधिक</string>
+    <string name="ring_colors_red_title">लाल</string>
+    <string name="ring_colors_red_body">आपके लक्ष्य से 200+ अधिक कैलोरी</string>
+    <string name="ring_colors_dotted_title">छितराया हुआ</string>
+    <string name="ring_colors_dotted_body">उस दिन कोई भोजन लॉग नहीं किया गया</string>
+
+
+    <!-- NotificationInboxScreen Inbox -->
+    <string name="notification_inbox_title">इनबॉक्स</string>
+    <string name="notification_inbox_header_title">कैलोशेप अधिसूचनाएँ</string>
+    <string name="notification_inbox_header_body">सभी प्लेटफ़ॉर्म सूचनाएं यहां दिखाई देंगी.</string>
+    <string name="notification_inbox_status_read">पढ़ना</string>
+    <string name="notification_inbox_status_unread">अपठित ग</string>
+
+    <string name="notification_inbox_loading_title">सूचनाएं लोड हो रही हैं</string>
+    <string name="notification_inbox_loading">सूचनाएं लोड हो रही हैं...</string>
+    <string name="notification_inbox_empty_title">अभी तक कोई सूचना नहीं</string>
+    <string name="notification_inbox_empty_body">प्लेटफ़ॉर्म सूचनाएं यहां दिखाई देंगी.</string>
+    <string name="notification_inbox_error_title">सूचनाएं लोड करने में असमर्थ</string>
+    <string name="notification_inbox_error_body">अपने कनेक्शन की जांच करें और पुन: प्रयास करें।</string>
+
+
+    <!-- WidgetGuideScreen -->
+    <string name="widget_guide_title">विजेट जोड़ें</string>
+    <string name="widget_guide_hero_title">अपनी होम स्क्रीन पर CaloShape जोड़ें</string>
+    <string name="widget_guide_hero_body">ऐप खोले बिना कैलोरी, मैक्रोज़ और त्वरित क्रियाओं को ट्रैक करें।</string>
+    <string name="widget_guide_steps_title">इन चरणों का पालन करें</string>
+    <string name="widget_guide_step_1_title">होम स्क्रीन को देर तक दबाएँ</string>
+    <string name="widget_guide_step_1_body">मेनू प्रकट होने तक अपने फ़ोन की होम स्क्रीन पर एक खाली क्षेत्र को दबाकर रखें।</string>
+    <string name="widget_guide_step_2_title">विजेट टैप करें</string>
+    <string name="widget_guide_step_2_body">होम स्क्रीन मेनू से विजेट चुनें।</string>
+    <string name="widget_guide_step_3_title">कैलोशेप एआई खोजें</string>
+    <string name="widget_guide_step_3_body">स्क्रॉल करें या CaloShape AI खोजें, फिर विजेट सूची खोलें।</string>
+    <string name="widget_guide_step_4_title">किसी विजेट को उसके स्थान पर खींचें</string>
+    <string name="widget_guide_step_4_body">विजेट को स्पर्श करके रखें, उसे अपनी पसंदीदा होम स्क्रीन पर खींचें, फिर अपनी उंगली उठाएँ।</string>
+    <string name="widget_guide_tip_title">विजेट मेनू नहीं मिल रहा?</string>
+    <string name="widget_guide_tip_body">कुछ फ़ोन ब्रांड और लॉन्चर अलग-अलग नामों का उपयोग करते हैं। होम सेटिंग्स आज़माएं, CaloShape AI ऐप आइकन को लंबे समय तक दबाकर रखें, या अपने लॉन्चर में विजेट खोजें।</string>
+    <string name="widget_guide_done">समझ गया</string>
+    <string name="widget_guide_mock_home">घर</string>
+    <string name="widget_guide_mock_widgets">विजेट</string>
+
+
+    <!-- CaloShapeNavHost -->
+    <string name="url_terms">https://caloshape.com/terms</string>
+    <string name="url_privacy">https://caloshape.com/privacy</string>
+    <string name="url_support_email">mailto:support@caloshape.com?subject=Support%20Request</string>
+    <string name="camera_manual_entry_not_ready">मैन्युअल प्रविष्टि अभी तैयार नहीं है. अभी के लिए लेबल स्कैन पर स्विच किया जा रहा है।</string>
+
+
+    <!-- Android home screen widgets -->
+    <string name="widget_preview_goal_kcal">1830</string>
+    <string name="widget_preview_protein">120 ग्रा</string>
+    <string name="widget_preview_carbs">180 ग्राम</string>
+    <string name="widget_preview_fats">60 ग्राम</string>
+    <string name="widget_calories_left">कैलोरी बची</string>
+    <string name="widget_protein_left">प्रोटीन बचा</string>
+    <string name="widget_carbs_left">कार्ब्स बचे</string>
+    <string name="widget_fats_left">चर्बी बची</string>
+    <string name="widget_calories_description">कैलोशेप कैलोरी विजेट</string>
+    <string name="widget_macro_actions_description">CaloShape मैक्रोज़ और त्वरित कार्रवाई विजेट</string>
+    <string name="widget_log_your_food">अपना भोजन लॉग करें</string>
+    <string name="widget_scan_food">खाना स्कैन करें</string>
+    <string name="widget_barcode">बारकोड</string>
+    <string name="widget_grams_format">%1$dg</string>
+
+
+
+
+
+    <!-- =========================
+                    Not use
+         ========================= -->
+    <!-- PremiumRewardsScreen Not use -->
+    <string name="premium_rewards_subscription_title">सदस्यता</string>
+    <string name="premium_rewards_history_title">पुरस्कार इतिहास</string>
+    <string name="premium_rewards_loading_membership">सदस्यता लोड हो रही है...</string>
+    <string name="premium_rewards_status_title">प्रीमियम स्थिति</string>
+    <string name="premium_rewards_latest_title">नवीनतम इनाम</string>
+    <string name="premium_rewards_source_format">स्रोत: %1$s</string>
+    <string name="premium_rewards_channel_format">चैनल: %1$s</string>
+    <string name="premium_rewards_grant_status_format">अनुदान स्थिति: %1$s</string>
+    <string name="premium_rewards_status_format">स्थिति: %1$s</string>
+    <string name="premium_rewards_google_defer_format">Google स्थगित: %1$s</string>
+    <string name="premium_rewards_granted_at_format">स्वीकृत: %1$s</string>
+    <string name="premium_rewards_old_expiry_format">पुरानी समाप्ति: %1$s</string>
+    <string name="premium_rewards_new_expiry_format">नई समाप्ति: %1$s</string>
+    <string name="premium_rewards_error_format">त्रुटि: %1$s</string>
+    <string name="premium_rewards_days_added_format">जोड़े गए दिन: %1$d</string>
+    <string name="premium_rewards_empty_title">अभी तक कोई पुरस्कार नहीं</string>
+    <string name="premium_rewards_empty_body">सत्यापन के बाद सफल रेफरल यहां दिखाई देंगे।</string>
+    <string name="premium_rewards_channel_google_play_defer">Google Play बिलिंग तिथि बढ़ा दी गई</string>
+    <string name="premium_rewards_channel_backend_only">प्रीमियम इनाम लागू किया गया</string>
+    <string name="premium_rewards_grant_success">सफलता</string>
+    <string name="premium_rewards_status_retrying">पुनः प्रयास किया जाएगा</string>
+    <string name="premium_rewards_grant_not_granted">नहीं दी गयी</string>
+    <string name="premium_rewards_google_defer_success">Google Play द्वारा विस्तारित</string>
+    <string name="premium_rewards_google_defer_failed">असफल</string>
+    <string name="premium_rewards_google_defer_not_required">आवश्यक नहीं</string>
+
+
+</resources>

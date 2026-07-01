@@ -12,11 +12,23 @@ val LANGS: List<LangOption> = listOf(
     LangOption("ja", "日本語", "🇯🇵", "JP"),
     LangOption("de", "Deutsch", "🇩🇪", "DE"),
     LangOption("fr", "Français", "🇫🇷", "FR"),
+    LangOption("it", "Italiano", "🇮🇹", "IT"),
+    LangOption("nl", "Nederlands", "🇳🇱", "NL"),
+    LangOption("sv", "Svenska", "🇸🇪", "SE"),
+    LangOption("fi", "Suomi", "🇫🇮", "FI"),
+    LangOption("pl", "Polski", "🇵🇱", "PL"),
     LangOption("ko", "한국어", "🇰🇷", "KR"),
     LangOption("es", "Español", "🇪🇸", "ES"),
+    LangOption("es-MX", "Español (México)", "🇲🇽", "MX"),
     LangOption("zh-CN", "简体中文", "🇨🇳", "CH"),
     LangOption("zh-HK", "繁體中文", "🇭🇰", "HK"),
-    LangOption("pt-BR", "Português", "🇧🇷", "BR")
+    LangOption("pt-BR", "Português", "🇧🇷", "BR"),
+    LangOption("vi", "Tiếng Việt", "🇻🇳", "VN"),
+    LangOption("th", "ไทย", "🇹🇭", "TH"),
+    LangOption("id", "Bahasa Indonesia", "🇮🇩", "ID"),
+    LangOption("hi", "हिन्दी", "🇮🇳", "HI"),
+    LangOption("he", "עברית", "🇮🇱", "IL"),
+    LangOption("tr", "Türkçe", "🇹🇷", "TR")
 )
 
 fun langShortLabelFromTag(tag: String): String {

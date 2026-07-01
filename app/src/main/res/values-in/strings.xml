@@ -1,0 +1,1130 @@
+<resources>
+    <!-- App_Name -->
+    <string name="app_name">CaloShape</string>
+
+
+    <!-- common -->
+    <string name="common_close">Menutup</string>
+    <string name="common_save">Menyimpan</string>
+    <string name="common_cancel">Membatalkan</string>
+    <string name="common_continue_btn">Melanjutkan</string>
+    <string name="common_skip">Melewati</string>
+    <string name="common_dash">—</string>
+    <string name="common_error">Kesalahan</string>
+
+    <string name="common_save_success">Berhasil disimpan!</string>
+    <string name="common_today">Hari ini</string>
+    <string name="common_yesterday">Kemarin</string>
+    <string name="common_unavailable_dash">—</string>
+    <string name="common_retry">Mencoba kembali</string>
+
+    <string name="common_delete">Menghapus</string>
+    <string name="common_deleting">Menghapus…</string>
+
+    <string name="common_understood">Dipahami</string>
+    <string name="common_revert">Kembali</string>
+
+
+    <!-- ApiErrorUiMapper -->
+    <string name="err_barcode_not_found_title">Produk tidak ditemukan</string>
+    <string name="err_barcode_not_found_msg">Kami tidak dapat menemukan kode batang ini. Coba ambil foto label nutrisinya.</string>
+
+    <string name="err_barcode_lookup_failed_title">Pencarian gagal</string>
+    <string name="err_barcode_lookup_failed_msg">Kami tidak dapat menjangkau database produk. Periksa koneksi Anda dan coba lagi.</string>
+
+    <string name="err_generic_title">Ada yang tidak beres</string>
+    <string name="err_generic_msg">Silakan coba lagi.</string>
+
+    <string name="err_network_title">Masalah jaringan</string>
+    <string name="err_network_msg">Silakan periksa koneksi internet Anda dan coba lagi.</string>
+
+    <string name="err_photo_title">Foto diperlukan</string>
+    <string name="err_photo_msg">Coba ambil foto lagi dengan pencahayaan yang lebih baik.</string>
+
+    <string name="err_manual_title">Masukkan secara manual</string>
+    <string name="err_manual_msg">Anda dapat memasukkan rincian secara manual.</string>
+
+    <string name="err_support_title">Hubungi dukungan</string>
+    <string name="err_support_msg">Silakan hubungi dukungan jika masalah terus berlanjut.</string>
+
+    <string name="cta_try_label">Pindai label nutrisi</string>
+    <string name="cta_enter_manually">Masukkan secara manual</string>
+
+    <string name="cta_check_network">Periksa jaringan</string>
+    <string name="cta_retake">Merebut kembali</string>
+    <string name="cta_contact_support">Hubungi dukungan</string>
+    <string name="cta_rescan_barcode">Pindai ulang kode batang</string>
+
+
+
+
+    <!-- Landing Screen -->
+    <string name="landing_title">Ambil foto, ketahui kalorinya.</string>
+    <string name="choose_language">Pilih bahasa</string>
+    <string name="cta_get_started">Mulailah</string>
+    <string name="cta_login_prefix">Sudah punya akun?</string>
+    <string name="cta_login">Masuk</string>
+
+
+    <!-- RequireSignInScreen -->
+    <string name="auth_sign_in_account_title">Masuk ke akun Anda</string>
+    <string name="auth_sign_in_with_google">Masuk dengan Google</string>
+    <string name="auth_signin_with_email">Lanjutkan dengan email</string>
+
+
+    <!-- SignInSheet-->
+    <string name="signin_title">Masuk</string>
+    <string name="signin_with_apple">Masuk dengan Apple</string>
+    <string name="signin_with_google">Masuk dengan Google</string>
+    <string name="signin_with_email">Lanjutkan dengan email</string>
+    <string name="signin_legal_hint">Dengan melanjutkan, Anda menyetujui ketentuan CaloShape</string>
+    <string name="signin_terms">Ketentuan</string>
+    <string name="signin_and">Dan</string>
+    <string name="signin_privacy">Kebijakan privasi</string>
+    <string name="signin_url_terms">https://caloshape.com/terms</string>
+    <string name="signin_url_privacy">https://caloshape.com/privacy</string>
+
+
+    <!-- SignInSheetHost 控制 Sheet 是否顯示、處理狀態、接外部 callback -->
+    <string name="err_google_no_account_hint">Tip: tambahkan akun Google di Pengaturan → Akun dan coba lagi</string>
+    <string name="err_google_signin_failed">Gagal masuk ke Google</string>
+
+
+    <!-- EmailEnterScreen-->
+    <string name="email_sign_in_title">Masuk</string>
+    <string name="input_box_email_label">E-mail</string>
+
+
+    <!-- EmailCodeScreen OTP -->
+    <string name="resend">Kirim ulang</string>
+    <string name="resend_countdown">Kirim ulang (%1$d dtk)</string>
+
+    <string name="err_otp_invalid">Kodenya salah. Silakan coba lagi.</string>
+    <string name="err_otp_too_many_attempts">Terlalu banyak upaya. Silakan coba lagi nanti.</string>
+    <string name="err_network_io">Kesalahan jaringan. Silakan coba lagi.</string>
+    <string name="err_server_unavailable">Layanan untuk sementara tidak tersedia. Silakan coba lagi nanti.</string>
+    <string name="err_generic">Ada yang tidak beres. Silakan coba lagi.</string>
+
+    <string name="confirm_email_title">Konfirmasikan email Anda</string>
+    <string name="confirm_email_hint">Silakan masukkan 4 digit kode yang baru saja kami kirimkan</string>
+    <string name="didnt_receive_code">Tidak menerima kodenya?</string>
+
+
+    <!-- Onboarding: GenderSelectionScreen -->
+    <string name="onboard_gender_title">Pilih jenis kelamin Anda</string>
+    <string name="onboard_gender_subtitle">Ini akan digunakan untuk mengkalibrasi paket khusus Anda.</string>
+    <string name="onboard_male">Pria</string>
+    <string name="onboard_female">Perempuan</string>
+    <string name="onboard_other">Lainnya</string>
+
+
+    <!-- Onboarding: ReferralSourceScreen -->
+    <string name="onboard_referral_title">Bagaimana Anda menemukan kami?</string>
+
+
+    <!-- Onboarding: AgeSelectionScreen -->
+    <string name="onboard_age_title">Berapa usiamu?</string>
+    <string name="onboard_age_subtitle">Kami hanya menggunakan usia Anda untuk meningkatkan pengalaman dan akurasi estimasi kalori Anda.</string>
+
+
+    <!-- Onboarding: HeightSelectionScreen -->
+    <string name="onboard_height_title">Berapa tinggi kamu?</string>
+    <string name="onboard_height_subtitle">Kami hanya menggunakan data Anda untuk meningkatkan pengalaman Anda dan perkiraan kalori kami.</string>
+    <string name="onboard_height_hint">Ini akan digunakan untuk mengkalibrasi paket khusus Anda.</string>
+
+
+    <!-- Onboarding: WeightSelectionScreen -->
+    <string name="onboard_weight_title">Berapa berat badanmu?</string>
+    <string name="onboard_weight_subtitle">Kami hanya menggunakan data Anda untuk meningkatkan pengalaman Anda dan perkiraan kalori kami.</string>
+    <string name="onboard_weight_hint">Ini akan digunakan untuk mengkalibrasi paket khusus Anda.</string>
+
+
+    <!-- Onboarding: ExerciseFrequencyScreen  -->
+    <string name="onboard_ex_freq_title">Seberapa sering Anda berolahraga setiap minggunya?</string>
+    <string name="onboard_ex_freq_subtitle">Ini akan membantu mengkalibrasi rencana pribadi Anda.</string>
+    <string name="ex_freq_0_title">0</string>
+    <string name="ex_freq_0_sub">Menetap</string>
+    <string name="ex_freq_1_3_title">1–3</string>
+    <string name="ex_freq_1_3_sub">Aktivitas ringan</string>
+    <string name="ex_freq_3_5_title">3–5</string>
+    <string name="ex_freq_3_5_sub">Aktivitas sedang</string>
+    <string name="ex_freq_6_7_plus_title">6–7</string>
+    <string name="ex_freq_6_7_plus_sub">Aktivitas tinggi</string>
+    <string name="ex_freq_7_plus_title">7+</string>
+    <string name="ex_freq_7_plus_sub">Aktivitas yang sangat tinggi</string>
+
+
+    <!-- Onboarding: GoalSelectionScreen  -->
+    <string name="onboard_goal_title">Apa tujuanmu?</string>
+    <string name="onboard_goal_subtitle">Ini membantu kami menyesuaikan rencana kalori Anda.</string>
+    <string name="goal_lose">Menurunkan berat badan</string>
+    <string name="goal_maintain">Menjaga</string>
+    <string name="goal_gain">Bertambah berat</string>
+    <string name="goal_healthy_eating">Makan sehat</string>
+
+
+    <!-- Onboarding: WeightGoalScreen -->
+    <string name="onboard_goal_weight_title">Berapa berat sasaran Anda?</string>
+    <string name="onboard_goal_weight_subtitle">Berdasarkan tujuan ini, kami akan membuat rekomendasi kalori harian yang lebih sesuai untuk Anda.</string>
+    <string name="onboard_goal_weight_hint">Ini akan digunakan untuk mengkalibrasi paket khusus Anda.</string>
+
+
+    <!-- Onboarding: WeightLossComparisonScreen -->
+    <string name="onboard_weight_loss_comparison_title">Menggunakan CaloShape AI dapat melipatgandakan efisiensi penurunan berat\nAnda</string>
+    <string name="onboard_weight_loss_comparison_without_ai">Tanpa\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_with_ai">Dengan\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_twenty_percent">20%</string>
+    <string name="onboard_weight_loss_comparison_two_times">3X</string>
+    <string name="onboard_weight_loss_comparison_caption">CaloShape AI membuat segalanya menjadi sederhana\ndan membuat Anda tetap bertanggung jawab</string>
+
+
+    <!-- Onboarding: NotificationPermissionScreen -->
+    <string name="onboard_notif_title">Jadikan setiap makanan berarti!</string>
+    <string name="onboard_notif_subtitle">Aktifkan notifikasi sebagai pengingat lembut untuk mencatat makanan—sehingga kalori, makro, dan kemajuan Anda tetap pada jalurnya. Terjadi kesalahan; dorongan tepat waktu membantu Anda bangkit kembali dengan cepat.</string>
+    <string name="onboard_allow_notifications_cta">Izinkan notifikasi</string>
+    <string name="notification_mock_app_title">Penghitung Kalori AI</string>
+    <string name="onboard_notif_title_got_a_sec">Makanan Anda tidak akan masuk sendiri 😉</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">Catat makanan ini untuk menjaga kalori dan makro Anda tetap pada jalurnya.</string>
+
+
+    <!-- Onboarding: HealthConnectIntroScreen -->
+    <string name="onboard_hc_connect_title_prefix">Hubungkan ke</string>
+    <string name="onboard_hc_connect_title_service">Koneksi Kesehatan</string>
+    <string name="onboard_hc_connect_body">Sinkronkan aktivitas harian antara CaloShape AI dan aplikasi kesehatan untuk mendapatkan catatan dan wawasan yang lebih lengkap.</string>
+    <string name="onboard_hc_permission_rationale_title_prefix">Mengapa CaloShape menggunakan</string>
+    <string name="onboard_hc_permission_rationale_title_service">Koneksi Kesehatan</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape membaca langkah Anda, kalori aktif, dan data olahraga untuk memperkirakan pembakaran aktivitas harian, memperbarui dasbor kalori Anda, dan meningkatkan wawasan kemajuan. Anda dapat mencabut akses kapan saja di Health Connect.</string>
+    <string name="onboard_hc_permission_rationale_button">Mengerti</string>
+
+
+    <!-- Onboarding: ComputationProgressScreen -->
+    <string name="progress_hero_title">Membuat rencana pribadi Anda</string>
+    <string name="progress_hero_subtitle">Kami menggunakan sasaran, data tubuh, dan preferensi Anda untuk menyesuaikan target harian Anda.</string>
+    <string name="progress_footer_hint">Ini hanya memerlukan waktu sebentar</string>
+    <string name="progress_center_caption">Mempersiapkan hasil Anda</string>
+    <string name="progress_phase_pill_1">Meninjau profil Anda</string>
+    <string name="progress_phase_pill_2">Menghitung target kalori Anda</string>
+    <string name="progress_phase_pill_3">Menyeimbangkan makro harian Anda</string>
+    <string name="progress_phase_pill_4">Menyelesaikan wawasan kesehatan Anda</string>
+    <string name="progress_card_title">Menyiapkan rencana Anda</string>
+    <string name="progress_row_calorie_target">Target kalori harian</string>
+    <string name="progress_row_carb_distribution">Distribusi karbohidrat</string>
+    <string name="progress_row_protein_recommendation">Rekomendasi protein</string>
+    <string name="progress_row_fat_recommendation">Rekomendasi gemuk</string>
+    <string name="progress_row_health_score_estimate">Estimasi skor kesehatan</string>
+
+
+    <!-- Onboarding: HealthPlanScreen -->
+    <string name="plan_cta_start">Mulailah</string>
+    <string name="plan_title_congrats">Selamat!</string>
+    <string name="plan_subtitle_ready">Rencana kesehatan pribadi Anda sudah siap!</string>
+    <string name="plan_disclaimer">Sumber ada di bawah: Lihat semua referensi ›</string>
+    <string name="plan_unit_kcal_day">kkal / hari</string>
+
+    <string name="plan_macros_proteins">Protein</string>
+    <string name="plan_macros_carbs">Karbohidrat</string>
+    <string name="plan_macros_fat">lemak</string>
+    <string name="plan_unit_g">G</string>
+
+    <string name="plan_water_daily">Air Harian</string>
+    <string name="plan_weight_current">Berat badan saat ini</string>
+    <string name="plan_weight_delta">Untuk mencapai berat badan</string>
+
+    <string name="plan_goals_title">Cara mencapai\ntujuan Anda</string>
+    <string name="plan_goal_card_health_scores">Skor kesehatan memandu Anda, sehingga kebiasaan terbentuk secara alami</string>
+    <string name="plan_goal_card_track_meals">Catat makanan dalam satu ketukan, tetap konsisten itu mudah</string>
+    <string name="plan_goal_card_daily_calories">Lihat kalori harian dengan jelas, dan jangan pernah lupa</string>
+    <string name="plan_goal_card_balance_macros">Karbohidrat × protein × lemak, keseimbangan cerdas, hasil lebih baik</string>
+    <string name="plan_sources_based_on">Berdasarkan pedoman diet resmi,\nhanya untuk referensi, bukan saran medis.</string>
+    <string name="plan_sources_more">Lihat semua referensi ›</string>
+    <string name="plan_sources_hide">Sembunyikan sumber</string>
+
+
+    <!-- Onboarding: OnboardReferralCodeScreen -->
+    <string name="onboard_referral_code_input">Masukkan kode rujukan\n(opsional)</string>
+    <string name="onboard_referral_code_subtitle">Anda dapat melewati langkah ini</string>
+    <string name="onboard_referral_code_input_label">Kode referensi</string>
+    <string name="onboard_referral_code_placeholder">Kode referensi</string>
+    <string name="onboard_referral_code_submit">Kirim</string>
+    <string name="onboard_referral_code_submitting">Mengirimkan…</string>
+    <string name="onboard_referral_code_applied">Kode referensi diterapkan!</string>
+
+    <string name="onboard_referral_code_error_invalid_format">Gunakan huruf dan angka saja.</string>
+    <string name="onboard_referral_code_error_invalid">Kami tidak dapat menemukan kode referral ini.</string>
+    <string name="onboard_referral_code_error_self_referral">Anda tidak dapat menggunakan kode referral Anda sendiri.</string>
+    <string name="onboard_referral_code_error_already_claimed">Akun ini telah menerapkan kode referral.</string>
+    <string name="onboard_referral_code_error_already_subscribed">Akun berlangganan tidak dapat menerapkan kode referensi.</string>
+    <string name="onboard_referral_code_error_disabled">Rujukan untuk sementara tidak tersedia.</string>
+    <string name="onboard_referral_code_error_risk">Kami tidak dapat menerapkan kode referensi saat ini.</string>
+    <string name="onboard_referral_code_error_network">Kami tidak bisa menerapkannya saat ini. Silakan coba lagi nanti.</string>
+    <string name="onboard_referral_code_error_unknown">Kode rujukan tidak dapat diterapkan saat ini.\nSilakan coba lagi nanti.</string>
+
+
+    <!-- Onboarding: OnboardSubscriptionScreen  Paywall -->
+    <string name="subscription_price_per_month_format">%1$s/bln</string>
+    <string name="subscription_price_per_month_unit">/bln</string>
+    <string name="subscription_price_unavailable_title">Harga tidak tersedia</string>
+    <string name="subscription_price_unavailable_body">Kami tidak bisa mendapatkan harga Google Play lokal Anda saat ini. Silakan coba lagi.</string>
+
+
+    <!-- Onboarding: OnboardSubscriptionIntro -->
+    <string name="subscription_intro_title">Buka CaloShape AI untuk\nmencapai tujuan Anda lebih cepat.</string>
+    <string name="subscription_intro_helper_format">Hanya %1$s per tahun (%2$s)</string>
+    <string name="subscription_start_three_day_free_trial">Coba gratis selama 3 hari</string>
+    <string name="subscription_three_day_trial_helper_format">Hanya %1$s/tahun (%2$s/bln)</string>
+    <string name="subscription_already_owned_restore_required">Akun Google Play Anda sudah memiliki langganan CaloShape yang aktif. Kembalikan ke akun CaloShape ini sebelum menggunakan fitur premium.</string>
+    <string name="subscription_error_no_active_purchase">Tidak ditemukan pembelian aktif.</string>
+    <string name="subscription_error_restore_failed">Tidak dapat memulihkan pembelian. Silakan coba lagi.</string>
+    <string name="subscription_error_purchase_failed">Pembelian gagal. Silakan coba lagi.</string>
+    <string name="subscription_error_purchase_pending">Pembayaran sedang diproses. Akses premium akan tersedia setelah Google Play mengonfirmasi pembelian.</string>
+    <string name="subscription_error_trial_eligibility_failed">Tidak dapat memeriksa kelayakan uji coba. Silakan coba lagi.</string>
+    <string name="restore_subscription_dialog_title">Langganan ditemukan</string>
+    <string name="settings_restore_subscription">Pulihkan langganan</string>
+    <string name="restore_subscription_dialog_restoring">Memulihkan…</string>
+    <string name="common_maybe_later">mungkin nanti</string>
+
+
+    <!-- Onboarding: OnboardDiscountSpinScreen-->
+    <string name="subscription_spin_title">Putar untuk membuka diskon\neksklusif</string>
+    <string name="subscription_spin_helper_ready">Ketuk Putar untuk menampilkan hadiah eksklusif Anda.</string>
+    <string name="subscription_spin_button">Putaran</string>
+    <string name="subscription_spinning_button">Pemintalan…</string>
+    <string name="subscription_gift_offer_unlocked">Penawaran hadiah tidak terkunci</string>
+    <string name="subscription_spin_helper_wait">Harap tunggu sampai roda berhenti.</string>
+    <string name="subscription_spin_helper_revealed">Tawaran ini terungkap setelah roda berhenti.</string>
+
+
+    <!-- Onboarding: OneTimeOfferHeroCard-->
+    <string name="subscription_gift_unlocked_title">Hadiah tidak terkunci 🎁</string>
+    <string name="subscription_gift_price_unlocked">Harga hadiah tidak terkunci</string>
+    <string name="subscription_unlock_premium_for_only">Buka kunci premium hanya untuk</string>
+    <string name="subscription_discount_body">Pindai makanan lebih cepat. Lacak makro dengan lebih cerdas.\nTetap sesuai rencana setiap hari.</string>
+    <string name="subscription_yearly_price_format">%1$s/tahun</string>
+    <string name="subscription_urgency_coffee">Kurang dari kopi</string>
+    <string name="subscription_urgency_price_gone">Tutup layar ini? Harga ini hilang</string>
+    <string name="subscription_urgency_waiting">Apa yang kamu tunggu?</string>
+
+    <string name="subscription_trial_enabled">Uji coba gratis diaktifkan</string>
+    <string name="subscription_trial_enable_prompt">Tidak yakin? Aktifkan uji coba gratis</string>
+    <string name="subscription_trial_checking_eligibility">Memeriksa ketersediaan uji coba…</string>
+    <string name="subscription_trial_already_used">Uji coba sudah digunakan</string>
+    <string name="subscription_trial_unavailable">Uji coba gratis tidak tersedia</string>
+
+    <string name="subscription_badge_free_trial">Uji coba gratis</string>
+    <string name="subscription_badge_lowest_price_ever">Harga terendah yang pernah ada</string>
+    <string name="subscription_yearly_plan">Paket Tahunan</string>
+    <string name="subscription_yearly_plan_price_format">12 bulan · %1$s</string>
+
+    <string name="subscription_start_free_trial">Coba gratis selama 3 hari</string>
+    <string name="subscription_trial_helper">Tidak ada komitmen — batalkan kapan saja</string>
+    <string name="subscription_discount_terms_format">Hanya %1$s/tahun (%2$s/bln)</string>
+    <string name="subscription_discount_trial_terms_format">Tanpa Komitmen - Batalkan Kapan Saja</string>
+
+
+    <!-- HomeScreen -->
+    <string name="recently_uploaded">Baru saja diunggah</string>
+    <string name="workout_membership_verify_failed">Tidak dapat memverifikasi keanggotaan. Silakan coba lagi.</string>
+
+
+    <!-- MainBottomBar -->
+    <string name="bottom_nav_home">Rumah</string>
+    <string name="bottom_nav_progress">Kemajuan</string>
+    <string name="bottom_nav_weight">Berat</string>
+    <string name="bottom_nav_fasting">Puasa</string>
+    <string name="bottom_nav_workout">Olahraga</string>
+
+
+    <!-- =============   HomeCards  ============= -->
+
+    <!-- HomeCards :  Calories Card -->
+    <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
+    <string name="home_calories_goal_label">Kalori tersisa</string>
+    <string name="home_calories_eaten_label">Kalori dimakan</string>
+
+
+    <!-- HomeCards :  Nutrition Card -->
+    <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
+    <string name="home_protein_goal_label">Proteinnya tersisa</string>
+    <string name="home_protein_eaten_label">Protein dimakan</string>
+    <string name="home_carbs_goal_label">Karbohidrat tersisa</string>
+    <string name="home_carbs_eaten_label">Karbohidrat dimakan</string>
+    <string name="home_fats_goal_label">Sisa lemak</string>
+    <string name="home_fats_eaten_label">Lemak dimakan</string>
+    <string name="home_fiber_goal_label">Serat tersisa</string>
+    <string name="home_fiber_eaten_label">Serat dimakan</string>
+    <string name="home_sugar_goal_label">Gula tersisa</string>
+    <string name="home_sugar_eaten_label">Gula dimakan</string>
+    <string name="home_sodium_goal_label">Natrium tersisa</string>
+    <string name="home_sodium_eaten_label">Natrium dimakan</string>
+    <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
+
+
+    <!-- HomeCards :  Health Score Card & Advice -->
+    <string name="home_health_score_advice_zero">Catat makanan pertama Anda hari ini untuk melihat skor kesehatan berdasarkan rincian nutrisinya.</string>
+    <string name="home_health_score_advice_very_low">Rata-rata hari ini rendah. Pertimbangkan lebih banyak protein, serat, dan rendah gula atau natrium.</string>
+    <string name="home_health_score_advice_low">Ada ruang untuk ditingkatkan. Coba tambahkan sayuran dan protein berkualitas.</string>
+    <string name="home_health_score_advice_medium">Anda berada di jalur yang benar. Pertahankan porsinya tetap dan perhatikan gula, natrium, dan serat.</string>
+    <string name="home_health_score_advice_good">Keseimbangan yang bagus hari ini. Tetap pilih makanan padat nutrisi.</string>
+    <string name="home_health_score_advice_excellent">Keseimbangan yang luar biasa hari ini. Teruslah membangun kebiasaan yang konsisten.</string>
+    <string name="home_health_score_title">Skor Kesehatan</string>
+    <string name="home_health_score_value">%1$d/10</string>
+
+
+    <!-- HomeCards : Step Card -->
+    <string name="steps_card_title">Tangga</string>
+    <string name="steps_status_permission_not_granted">Tidak diizinkan</string>
+    <string name="steps_status_hc_not_installed">Tidak dipasang</string>
+    <string name="steps_status_hc_unavailable">Tidak tersedia</string>
+    <string name="steps_secondary_est_kcal">≈ %1$d kkal</string>
+    <string name="steps_secondary_no_data_yet">Belum ada datanya</string>
+    <string name="steps_secondary_connect">Menghubungkan</string>
+    <string name="steps_hint_connect_google_health">Hubungkan Google Health untuk melacak langkah Anda</string>
+    <string name="steps_hint_install_health_connect">Instal Health Connect untuk melacak langkah Anda</string>
+    <string name="steps_hint_hc_unavailable">Health Connect tidak tersedia di perangkat ini</string>
+    <string name="steps_hint_retry">Sinkronisasi gagal. Ketuk untuk mencoba lagi</string>
+
+
+    <!-- HomeCards : Workout Card -->
+    <string name="workout_card_title">Olahraga</string>
+    <string name="workout_card_unit_kcal">kkal</string>
+
+
+    <!-- HomeCards : Weight Card -->
+    <string name="weight_card_title">Berat</string>
+    <string name="weight_card_of_goal">tujuan</string>
+
+
+    <!-- HomeCards : Fasting Card -->
+    <string name="fasting_card_plan_title">Rencana Puasa</string>
+    <string name="fasting_card_start_time">Waktu mulai</string>
+    <string name="fasting_card_end_time">Waktu berakhir</string>
+
+
+    <!-- HomeCards : Water Card -->
+    <string name="water_intake_title">Air</string>
+    <string name="water_intake_cups_format">(%1$d cangkir)</string>
+
+
+    <!-- =========================
+         ProgressScreen
+         ========================= -->
+    <string name="progress_screen_title">Kemajuan</string>
+    <string name="progress_tab_this_week">Minggu ini</string>
+    <string name="progress_tab_last_week">Minggu lalu</string>
+    <string name="progress_tab_two_weeks_ago">2 minggu. yang lalu</string>
+    <string name="progress_tab_three_weeks_ago">3 minggu. yang lalu</string>
+    <string name="progress_error_load_failed">Gagal memuat</string>
+    <string name="workout_chart_error_load_failed">Gagal memuat diagram latihan</string>
+    <string name="water_chart_error_load_failed">Memuat diagram air gagal</string>
+
+
+    <!-- =========================
+         BMI Card / BMI Info Dialog
+         ========================= -->
+    <string name="bmi_card_title">BMI Anda</string>
+    <string name="bmi_card_subtitle">Berat badanmu adalah</string>
+
+    <string name="bmi_status_underweight">Berat badan kurang</string>
+    <string name="bmi_status_healthy">Sehat</string>
+    <string name="bmi_status_overweight">Kegemukan</string>
+    <string name="bmi_status_obese">Kegemukan</string>
+    <string name="bmi_status_unknown">Tidak dikenal</string>
+
+    <string name="bmi_range_underweight">&lt;18.5</string>
+    <string name="bmi_range_healthy">18.5–24.9</string>
+    <string name="bmi_range_overweight">25.0–29.9</string>
+    <string name="bmi_range_obese">&gt;30.0</string>
+
+    <string name="bmi_info_title">Apa itu BMI?</string>
+    <string name="bmi_info_subtitle">Indeks Massa Tubuh</string>
+    <string name="bmi_info_formula_title">Rumus</string>
+    <string name="bmi_info_formula_value">BMI = berat badan (kg) / tinggi badan (m²)</string>
+    <string name="bmi_info_meaning_title">Apa yang diberitahukannya kepada Anda</string>
+    <string name="bmi_info_meaning_body">BMI membantu memperkirakan apakah berat badan Anda berada dalam kisaran sehat secara umum.</string>
+    <string name="bmi_info_note_title">Mengingat</string>
+    <string name="bmi_info_note_body">BMI adalah panduan umum. Itu tidak secara langsung mengukur lemak tubuh, massa otot, atau kesehatan secara keseluruhan.</string>
+    <string name="bmi_info_cta">Mengerti</string>
+
+
+    <!-- =========================
+         NutritionChartCard
+         ========================= -->
+    <string name="progress_chart_7day_avg_calories">Rata-rata 7 hari</string>
+    <string name="progress_chart_value_cals">%1$d kalori</string>
+    <string name="progress_chart_15day_avg_calories">Rata-rata 15 hari</string>
+    <string name="progress_chart_loading_total_calories_text">---- kalori</string>
+    <string name="progress_chart_loading_delta">^ --%%</string>
+    <string name="progress_chart_delta_placeholder">--%%</string>
+    <string name="progress_chart_total_calories">Jumlah kalori</string>
+    <string name="progress_chart_cals">cal</string>
+    <string name="progress_legend_protein">Protein</string>
+    <string name="progress_legend_carbs">Karbohidrat</string>
+    <string name="progress_legend_fats">lemak</string>
+    <string name="progress_keep_it_up">Lanjutkan kerja baikmu! Memulai adalah bagian tersulit!</string>
+
+    <string name="progress_day_sun">Matahari</string>
+    <string name="progress_day_mon">Senin</string>
+    <string name="progress_day_tue">Selasa</string>
+    <string name="progress_day_wed">Menikahi</string>
+    <string name="progress_day_thu">Kam</string>
+    <string name="progress_day_fri">Jumat</string>
+    <string name="progress_day_sat">Duduk</string>
+
+    <string name="progress_tooltip_calories">Kalori</string>
+    <string name="progress_tooltip_protein">Protein</string>
+    <string name="progress_tooltip_carbs">Karbohidrat</string>
+    <string name="progress_tooltip_fats">lemak</string>
+    <string name="progress_tooltip_label_format">%1$s:</string>
+    <string name="progress_tooltip_grams_value">%1$d g</string>
+    <string name="progress_tooltip_plain_value">%1$d</string>
+
+
+    <!-- =========================
+         MicronutrientChartCard
+         ========================= -->
+    <string name="progress_micronutrients_title">Mikronutrien</string>
+    <string name="progress_chart_grams">G</string>
+    <string name="progress_chart_7day_avg">Rata-rata 7 hari</string>
+    <string name="progress_legend_fiber">Serat</string>
+    <string name="progress_legend_sugar">Gula</string>
+    <string name="progress_legend_sodium">Sodium</string>
+    <string name="progress_micronutrients_keep_it_up">Jaga keseimbangan serat, gula, dan natrium Anda.</string>
+    <string name="progress_tooltip_fiber">Serat</string>
+    <string name="progress_tooltip_sugar">Gula</string>
+    <string name="progress_tooltip_sodium">Sodium</string>
+    <string name="progress_tooltip_mg_value">%1$d mg</string>
+
+
+    <!-- =========================
+         WorkoutChartCard
+         ========================= -->
+    <string name="workout_chart_goal_reached">Tujuan tercapai hari ini</string>
+    <string name="workout_chart_goal_left">%1$d kkal tersisa untuk mencapai target hari ini</string>
+    <string name="workout_chart_title">Luka bakar saat berolahraga</string>
+    <string name="workout_chart_info_dialog_body">Termasuk latihan yang dicatat dan kalori aktivitas yang diperkirakan dari langkah harian.</string>
+    <string name="workout_chart_unit_kcal">kkal</string>
+    <string name="workout_chart_goal">Sasaran</string>
+    <string name="workout_chart_value_kcal">%1$d kkal</string>
+    <string name="workout_chart_7day_avg">Rata-rata 7 hari</string>
+    <string name="workout_chart_loading">Memuat…</string>
+    <string name="workout_legend_burned">Latihan terbakar</string>
+    <string name="workout_legend_daily_goal">Tujuan harian</string>
+    <string name="workout_tooltip_burned">Terbakar</string>
+    <string name="workout_tooltip_kcal_value">%1$d kkal</string>
+
+
+    <!-- =========================
+         WaterChartCard
+         ========================= -->
+    <string name="water_chart_goal_reached">Tujuan tercapai hari ini</string>
+    <string name="water_chart_goal_left_ml">%1$s ml tersisa untuk mencapai target hari ini</string>
+    <string name="water_chart_title">Asupan air</string>
+    <string name="water_chart_unit_ml">ml</string>
+    <string name="water_chart_goal">Sasaran</string>
+    <string name="water_chart_value_ml">%1$s ml</string>
+    <string name="water_chart_7day_avg">Rata-rata 7 hari</string>
+    <string name="water_chart_loading">Memuat…</string>
+    <string name="water_legend_intake">Asupan</string>
+    <string name="water_legend_daily_goal">Tujuan harian</string>
+    <string name="water_tooltip_intake">Asupan</string>
+    <string name="water_tooltip_ml_value">%1$d ml</string>
+
+
+    <!-- =========================
+         ProgressAverageOverviewSection
+         ========================= -->
+    <string name="progress_average_tab_7_days">7 hari</string>
+    <string name="progress_average_tab_15_days">15 hari</string>
+    <string name="progress_average_tab_30_days">30 hari</string>
+    <string name="progress_average_tab_60_days">60 hari</string>
+
+    <string name="progress_average_overview_title">Ikhtisar Rata-Rata</string>
+    <string name="progress_average_overview_subtitle">Tidak termasuk hari ini dan rata-rata hanya hari dengan data.</string>
+    <string name="progress_average_days_badge">Rata-rata %1$d hari</string>
+    <string name="progress_average_loading">Memuat rata-rata…</string>
+    <string name="progress_average_total_calories">Jumlah kalori</string>
+    <string name="progress_average_protein">Protein</string>
+    <string name="progress_average_carbs">Karbohidrat</string>
+    <string name="progress_average_fats">lemak</string>
+    <string name="progress_average_fiber">Serat</string>
+    <string name="progress_average_sugar">Gula</string>
+    <string name="progress_average_sodium">Sodium</string>
+    <string name="progress_average_workout">Latihan terbakar</string>
+    <string name="progress_average_water">Asupan air</string>
+    <string name="progress_average_health_score">Skor kesehatan</string>
+    <string name="progress_average_steps">Tangga</string>
+    <string name="progress_average_health_score_value">%1$.1f / 10</string>
+    <string name="progress_average_steps_value">%1$s langkah</string>
+
+
+    <!--WeightScreen-->
+    <string name="weight_title">Berat</string>
+    <string name="weight_overview_title">Ringkasan</string>
+    <string name="weight_history_title">Sejarah</string>
+    <string name="weight_delete_success">Berhasil dihapus!</string>
+    <string name="weight_delete_failed">Penghapusan gagal. Silakan coba lagi.</string>
+    <string name="weight_log_weight">Catat beratnya</string>
+
+
+    <!-- WeightComponents -->
+    <string name="weight_card_to_goal_weight">Untuk mencapai berat badan</string>
+    <string name="weight_card_current_weight">Berat badan saat ini</string>
+    <string name="weight_card_achieved_goal_format">Mencapai %1$s%% dari sasaran</string>
+    <string name="weight_chart_tab_30_days">30 hari</string>
+    <string name="weight_chart_tab_60_days">60 hari</string>
+    <string name="weight_chart_tab_90_days">90 hari</string>
+    <string name="weight_chart_tab_all_time">Sepanjang waktu</string>
+    <string name="weight_chart_title">Tren berat badan</string>
+    <string name="weight_chart_goal_progress_badge">%1$s%% dari sasaran</string>
+    <string name="weight_chart_goal_label">Sasaran</string>
+    <string name="weight_chart_to_goal">%1$s ke gawang</string>
+    <string name="weight_goal_chart_empty_hint">Catat berat badan untuk memulai tren Anda</string>
+    <string name="weight_chart_motivation">Setiap langkah kecil membawa Anda lebih dekat ke tujuan Anda.</string>
+    <string name="weight_history_weight_label">Berat</string>
+    <string name="weight_history_change_label">Mengubah</string>
+    <string name="weight_history_trend_loss">KEHILANGAN</string>
+    <string name="weight_history_trend_gain">MEMPEROLEH</string>
+    <string name="weight_history_trend_stable">STABIL</string>
+
+
+    <!-- FastingPlansScreen -->
+    <string name="fasting_plan_title">Rencana Puasa</string>
+    <string name="start_time">Waktu mulai</string>
+    <string name="end_time">Waktu berakhir</string>
+    <string name="fasting_notification_info_status_on">Pengingat aktif. Jika izin pemberitahuan perangkat diizinkan, pengingat ini berulang setiap hari.</string>
+    <string name="fasting_notification_info_status_off">Pengingat tidak aktif. Nyalakan tombol pada kartu Puasa Rumah untuk menerima notifikasi ini.</string>
+    <string name="fasting_notification_info_status_enabled_label">Pada</string>
+    <string name="fasting_notification_info_status_disabled_label">Mati</string>
+    <string name="fasting_notification_info_title">Cara kerja pengingat</string>
+    <string name="fasting_notification_info_subtitle">Paket %1$s Anda berakhir pada %2$s. Saat pengingat aktif, CaloShape mengirimkan dua notifikasi harian.</string>
+    <string name="fasting_notification_info_at_time">Di %1$s</string>
+    <string name="fasting_notification_info_start_title">Jendela makan dimulai</string>
+    <string name="fasting_notification_info_start_body">Anda dapat mulai makan dan mencatat makanan bila diperlukan.</string>
+    <string name="fasting_notification_info_endsoon_title">Jendela makan segera berakhir</string>
+    <string name="fasting_notification_info_endsoon_body">Satu jam sebelum jendela ditutup pada %1$s, CaloShape mengingatkan Anda untuk menyelesaikan makanan terakhir Anda.</string>
+
+    <string name="fasting_plan_desc_14_10">Bersantailah dengan ritme yang stabil—14 jam untuk mengatur ulang isyarat nafsu makan dan energi.</string>
+    <string name="fasting_plan_desc_16_8">Favorit banyak orang karena suatu alasan—16 jam untuk tetap fokus dan tetap fokus.</string>
+    <string name="fasting_plan_desc_12_12">Perpecahan seimbang: puasa 12 jam, makan dalam jangka waktu 12 jam — cocok untuk pemula.</string>
+    <string name="fasting_plan_desc_18_6">Puasa 18 jam, dengan jendela makan 6 jam — jadwal yang lebih ramping dibandingkan 16:8.</string>
+    <string name="fasting_plan_desc_20_4">Tetap fokus pada laser—1–2 kali makan dengan penuh perhatian dalam jangka waktu 4 jam yang ketat.</string>
+    <string name="fasting_plan_desc_22_2">Satu kali makan dalam waktu 2 jam—pertahankan asupan air.</string>
+
+    <string name="fasting_picker_title">Atur waktu mulai puasa Anda</string>
+    <string name="fasting_picker_subtitle">Kami akan mengingatkan Anda saat ini setiap hari ketika jendela makan Anda dimulai.</string>
+
+
+    <!-- FastingReceiver -->
+    <string name="fasting_start_title">%1$s jendela makan terbuka</string>
+    <string name="fasting_start_body">Jendela makan Anda berjalan %1$s–%2$s. Catat makanan saat Anda bepergian agar hari ini tetap akurat.</string>
+    <string name="fasting_endsoon_title">1 jam tersisa di jendela makan Anda</string>
+    <string name="fasting_endsoon_body">Jendela Anda ditutup pada %1$s. Jika Anda merencanakan makan terakhir, catatlah sebelum Anda menyelesaikannya.</string>
+
+
+
+
+    <!-- WorkoutHistoryScreen -->
+    <string name="workout_history_title">Sejarah Latihan</string>
+    <string name="workout_history_summary_label">Hari ini terbakar</string>
+    <string name="workout_history_summary_body">Lacak kemajuan latihan hari ini</string>
+    <string name="workout_history_today_label">Hari ini</string>
+    <string name="workout_history_avg_daily_value">%1$d kkal</string>
+    <string name="workout_history_avg_daily_label">Rata-rata 7 hari / hari</string>
+    <string name="workout_history_avg_label">Rata-rata 7 hari / sesi</string>
+    <string name="workout_history_avg_value">%1$d kkal</string>
+    <string name="workout_history_unit_kcal">kkal</string>
+
+    <string name="workout_history_empty_title">Tidak ada latihan baru-baru ini</string>
+    <string name="workout_history_empty">Tidak ada latihan dalam 7 hari terakhir.</string>
+    <string name="workout_history_recent_title">Sesi terbaru</string>
+    <string name="workout_history_minutes">%1$d menit</string>
+    <string name="workout_history_kcal">%1$d</string>
+    <string name="workout_history_date_time">%1$s · %2$s</string>
+    <string name="workout_history_kcal_with_unit">%1$d kkal</string>
+
+    <string name="workout_history_loading_title">Menyinkronkan latihan</string>
+    <string name="workout_history_loading">Memuat riwayat latihan…</string>
+    <string name="workout_history_error_title">Riwayat tidak tersedia</string>
+
+    <string name="workout_history_delete_failed">Penghapusan gagal. Silakan coba lagi.</string>
+    <string name="workout_history_delete_success">Berhasil dihapus!</string>
+    <string name="workout_history_error">Tidak dapat memuat riwayat latihan.</string>
+
+
+    <!-- WorkoutTrackerSheet -->
+    <string name="workout_tracker_title">Pelacak Latihan</string>
+    <string name="workout_tracker_subtitle">Jelaskan jenis latihan dan durasinya</string>
+    <string name="workout_tracker_example_placeholder">Contoh: lari 45 menit</string>
+
+    <string name="workout_tracker_select_from_list">atau pilih dari daftar</string>
+    <string name="workout_tracker_show_less">Tampilkan lebih sedikit</string>
+    <string name="workout_tracker_show_more">Tampilkan lebih banyak (%1$d)</string>
+
+    <string name="workout_tracker_estimating_fallback">Memperkirakan…</string>
+    <string name="workout_tracker_estimating_analyzing">Menganalisis aktivitas Anda…</string>
+    <string name="workout_tracker_estimating_numbers">Mengerjakan nomor Anda…</string>
+    <string name="workout_tracker_estimating_calories">Memperkirakan upaya, menghitung kalori…</string>
+    <string name="workout_tracker_do_not_close">Harap jangan menutup aplikasi atau mengunci perangkat Anda</string>
+
+    <string name="workout_tracker_kcal_value">%1$d kkal</string>
+    <string name="workout_tracker_minutes_activity">%1$d menit %2$s</string>
+    <string name="workout_tracker_add_workout">Tambahkan latihan</string>
+
+    <string name="workout_tracker_activity_content_label">Aktivitas latihan</string>
+    <string name="workout_preset_kcal_per_30_min">%1$d kkal / 30 menit</string>
+
+    <string name="workout_tracker_save_success">Berhasil disimpan!</string>
+    <string name="workout_tracker_save_failed">Gagal menyimpan. Silakan coba lagi.</string>
+    <string name="workout_tracker_refresh_failed">Penyegaran gagal. Silakan coba lagi.</string>
+    <string name="workout_tracker_cancel">Membatalkan</string>
+    <string name="workout_tracker_try_again">Coba lagi</string>
+    <string name="workout_tracker_scan_failed_title">Uh-oh! Pemindaian gagal</string>
+    <string name="workout_tracker_scan_failed_body">Deskripsi latihan mungkin salah, atau koneksi internet lemah. Misalnya: 30 menit Berlari.</string>
+
+
+    <!-- workoutNameStringRes : Workout preset display names -->
+    <string name="workout_preset_walking">Sedang berjalan</string>
+    <string name="workout_preset_running">Berlari</string>
+    <string name="workout_preset_cycling">Bersepeda</string>
+    <string name="workout_preset_swimming">Renang</string>
+    <string name="workout_preset_hiking">Lintas alam</string>
+    <string name="workout_preset_aerobic_exercise">Latihan aerobik</string>
+    <string name="workout_preset_strength_training">Latihan kekuatan</string>
+    <string name="workout_preset_weight_training">Latihan beban</string>
+    <string name="workout_preset_basketball">Bola basket</string>
+    <string name="workout_preset_soccer">Sepak bola</string>
+    <string name="workout_preset_tennis">Tenis</string>
+    <string name="workout_preset_yoga">Yoga</string>
+    <string name="workout_preset_badminton">Bulutangkis</string>
+    <string name="workout_preset_baseball">Baseball</string>
+    <string name="workout_preset_softball">Sofbol</string>
+    <string name="workout_preset_volleyball">Bola voli</string>
+    <string name="workout_preset_table_tennis">Tenis meja</string>
+    <string name="workout_preset_dancing_general">Tarian</string>
+    <string name="workout_preset_zumba">Zumba</string>
+    <string name="workout_preset_pilates">Pilates</string>
+
+
+    <!-- DurationPickerSheet -->
+    <string name="workout_duration_sheet_subtitle">Tambahkan waktu latihan ini ke log aktivitas Anda</string>
+    <string name="workout_duration_hour_short">jam</string>
+    <string name="workout_duration_minute_short">menit</string>
+    <string name="workout_duration_save">Menyimpan</string>
+    <string name="workout_duration_cancel">Membatalkan</string>
+
+
+    <!-- HomeQuickActionMenu -->
+    <string name="quick_add_saved_foods">Makanan yang disimpan</string>
+    <string name="quick_add_scan_food">Pindai makanan</string>
+
+
+    <!-- CameraScreen -->
+    <string name="camera_mode_food">Pindai makanan</string>
+    <string name="camera_mode_barcode">kode batang</string>
+    <string name="camera_mode_label">Label makanan</string>
+    <string name="camera_mode_album">Foto</string>
+    <string name="camera_barcode_title">Pemindai Kode Batang</string>
+    <string name="camera_label_title">Pemindai Label</string>
+    <string name="camera_need_permission">Izin kamera diperlukan untuk memindai</string>
+
+
+    <!-- RecentUploadCard -->
+    <string name="foodlog_pending_analysis">Menganalisis makanan Anda…</string>
+    <string name="foodlog_analysis_done">Analisis selesai</string>
+    <string name="recent_upload_kcal_text">🔥 %1$d kalori</string>
+    <string name="recent_upload_protein_text">🥩 %1$dg</string>
+    <string name="recent_upload_carbs_text">🌾 %1$dg</string>
+    <string name="recent_upload_fat_text">🥑 %1$dg</string>
+
+
+    <!-- RecentlyUploadedEmptyCard -->
+    <string name="recently_uploaded_empty">Baru saja diunggah</string>
+    <string name="recently_uploaded_empty_hint">Ketuk + untuk menambahkan makanan pertama Anda hari itu</string>
+
+
+    <!-- SavedFoodsScreen -->
+    <string name="saved_foods_keep_15_days_hint">Makanan yang disimpan dari 15 hari terakhir.</string>
+    <string name="saved_foods_unsave_dialog_title">Hapus dari makanan yang disimpan?</string>
+    <string name="saved_foods_unsave_dialog_message">Makanan ini akan dihapus dari daftar Makanan Tersimpan Anda, namun masih tetap ada di catatan terbaru Anda.</string>
+    <string name="saved_foods_unsave_dialog_confirm">Menghapus</string>
+    <string name="saved_foods_title">Makanan yang disimpan</string>
+    <string name="saved_foods_kcal">🔥 %1$d kalori</string>
+    <string name="saved_foods_protein">🥩 %1$dg</string>
+    <string name="saved_foods_carbs">🌾 %1$dg</string>
+    <string name="saved_foods_fat">🥑 %1$dg</string>
+    <string name="saved_foods_detail">Detil</string>
+    <string name="saved_foods_load_failed_title">Makanan yang disimpan gagal dimuat</string>
+
+
+    <!-- RecentUploadDetailScreen -->
+    <string name="foodlog_detail_load_failed">Gagal memuat</string>
+    <string name="foodlog_unknown_food">Makanan yang tidak diketahui</string>
+    <string name="foodlog_no_image">Tidak ada gambar</string>
+
+    <string name="foodlog_detail_title">Nutrisi</string>
+    <string name="foodlog_detail_calories">Kalori</string>
+    <string name="foodlog_detail_protein">Protein</string>
+    <string name="foodlog_detail_carbs">Karbohidrat</string>
+    <string name="foodlog_detail_fats">lemak</string>
+    <string name="foodlog_detail_fiber">Serat</string>
+    <string name="foodlog_detail_sugar">Gula</string>
+    <string name="foodlog_detail_sodium">Sodium</string>
+    <string name="foodlog_detail_health_score">Skor kesehatan</string>
+
+
+    <!-- DeleteFoodLogDialog -->
+    <string name="foodlog_delete_dialog_title">Hapus catatan?</string>
+    <string name="foodlog_delete_dialog_message">Apakah Anda yakin ingin menghapus catatan makanan ini secara permanen? Tindakan ini tidak dapat dibatalkan.</string>
+    <string name="foodlog_delete_dialog_confirm">Menghapus</string>
+
+
+    <!-- Settings -->
+    <string name="settings_title">Pengaturan</string>
+    <string name="settings_choose_language">Pilih bahasa</string>
+    <string name="delete_account_dialog_title">Hapus akun?</string>
+    <string name="delete_account_dialog_body">Apakah Anda yakin ingin menghapus akun Anda? Ini akan menghapus data CaloShape Anda secara permanen, termasuk catatan makanan, catatan berat badan, dan pengaturan terkait. Tindakan ini tidak dapat dibatalkan.</string>
+
+
+    <string name="restore_subscription_dialog_success_title">Langganan dipulihkan</string>
+    <string name="restore_subscription_dialog_payment_issue_title">Langganan dipulihkan, masalah pembayaran tetap ada</string>
+    <string name="restore_subscription_dialog_no_active_title">Tidak ditemukan langganan Google Play aktif</string>
+    <string name="restore_subscription_dialog_failed_title">Pemulihan gagal</string>
+    <string name="restore_subscription_dialog_bound_title">Langganan ditautkan ke akun lain</string>
+    <string name="restore_subscription_dialog_success_body">Langganan Anda telah dipulihkan ke akun CaloShape ini.</string>
+    <string name="restore_subscription_dialog_payment_issue_body">Langganan Anda tertaut ke akun CaloShape ini, namun Google Play masih melaporkan masalah pembayaran. Harap perbarui metode pembayaran Anda di Google Play agar langganan Anda tetap aktif.</string>
+    <string name="restore_subscription_dialog_no_active_body">Kami tidak dapat menemukan langganan CaloShape yang aktif di akun Google Play saat ini. Pastikan Anda menggunakan akun Google Play yang melakukan pembelian, lalu coba lagi.</string>
+    <string name="restore_subscription_dialog_failed_body">Kami tidak dapat memulihkan langganan Anda saat ini. Silakan periksa koneksi Anda dan coba lagi dari Pengaturan.</string>
+    <string name="restore_subscription_dialog_bound_body">Langganan Google Play ini sudah ditautkan ke akun CaloShape lain. Masuk ke akun asli untuk menggunakannya, atau hubungi dukungan jika Anda tidak dapat mengakses akun tersebut.</string>
+    <string name="restore_subscription_dialog_body">Kami menemukan langganan atau uji coba CaloShape aktif yang terkait dengan akun Google Play di perangkat ini. Anda dapat memulihkannya ke akun CaloShape yang saat ini Anda masuki.</string>
+
+    <!-- Settings : Payment issue dialog -->
+    <string name="payment_issue_dialog_title">Jaga agar premium Anda tetap aktif</string>
+    <string name="payment_issue_dialog_body">Akses premium Anda masih aktif untuk saat ini, namun pembayaran Anda perlu diperhatikan.</string>
+    <string name="payment_issue_dialog_supporting_body">Perbarui metode pembayaran Google Play Anda untuk menghindari hilangnya pemindaian AI dan fitur premium.</string>
+    <string name="payment_issue_dialog_update_payment">Perbarui metode pembayaran</string>
+    <string name="payment_issue_dialog_badge">Pembayaran perlu diperhatikan</string>
+    <string name="payment_issue_dialog_premium_access">Akses premium</string>
+    <string name="payment_issue_dialog_active_for_now">Aktif untuk saat ini</string>
+    <string name="payment_issue_dialog_next_step">Langkah selanjutnya</string>
+    <string name="payment_issue_dialog_update_payment_short">Perbarui pembayaran</string>
+
+
+    <string name="settings_personal_details">Detail pribadi</string>
+    <string name="settings_adjust_macronutrients">Sesuaikan makronutrien</string>
+    <string name="settings_weight_history">Riwayat berat badan</string>
+    <string name="settings_ring_colors_explained">Panduan Warna Cincin Kalender</string>
+    <string name="settings_inbox">Kotak masuk</string>
+
+
+    <string name="settings_terms_conditions">syarat dan Ketentuan</string>
+    <string name="settings_privacy_policy">Kebijakan Privasi</string>
+    <string name="settings_support_email">Email Dukungan</string>
+    <string name="settings_delete_account">Hapus akun?</string>
+    <string name="settings_version">Versi %1$s</string>
+
+
+    <string name="settings_membership_payment">Pembayaran</string>
+    <string name="settings_membership_update_payment">Perbarui pembayaran</string>
+    <string name="settings_membership_premium">Premi</string>
+    <string name="settings_membership_active_member">Anggota aktif</string>
+    <string name="settings_membership_trial">Uji coba</string>
+    <string name="settings_membership_access_active">Akses aktif</string>
+    <string name="settings_membership_free">Bebas</string>
+    <string name="settings_membership_upgrade">Meningkatkan</string>
+
+
+    <!-- Settings: referral card -->
+    <string name="settings_invite_friends">Undang teman</string>
+    <string name="settings_premium_reward">Hadiah premium</string>
+    <string name="settings_share_caloshape_with_friends">Bagikan CaloShape AI\ndengan teman Anda</string>
+    <string name="settings_referral_reward_content">Mereka berlangganan. Anda mendapatkan 30 hari gratis.</string>
+    <string name="settings_get_30_days_free">Dapatkan 30 hari gratis</string>
+    <string name="settings_days_label">hari</string>
+
+    <string name="settings_appearance_light">Lampu</string>
+    <string name="settings_appearance_dark">Gelap</string>
+    <string name="settings_appearance_mode_title">Pilih penampilan</string>
+    <string name="settings_appearance_light_description">Pertahankan tampilan yang cerah dan bersih saat ini.</string>
+    <string name="settings_appearance_dark_description">Gunakan antarmuka yang lebih gelap dan lembut untuk pelacakan sehari-hari.</string>
+    <string name="settings_preferences">Preferensi</string>
+    <string name="settings_appearance">Penampilan</string>
+
+    <string name="settings_language">Bahasa</string>
+
+
+    <!-- Settings: Widget Guide -->
+    <string name="settings_widgets_title">Widget</string>
+    <string name="settings_widgets_how_to_add">Bagaimana cara menambahkan?</string>
+    <string name="log_your_food">Catat makanan Anda</string>
+
+    <string name="settings_calories_goal_label">Kalori tersisa</string>
+    <string name="settings_protein_goal_label">Proteinnya tersisa</string>
+    <string name="settings_carbs_goal_label">Karbohidrat tersisa</string>
+    <string name="settings_fats_goal_label">Sisa lemak</string>
+    <string name="settings_widget_scan_food">Pindai makanan</string>
+    <string name="settings_widget_barcode">kode batang</string>
+
+    <string name="settings_logout_loading">Keluar…</string>
+    <string name="settings_logout">Keluar</string>
+    <string name="settings_logout_failed">Gagal keluar. Periksa koneksi Anda dan coba lagi.</string>
+
+
+    <!-- EditNameScreen -->
+    <string name="settings_edit_your_name_title">Sunting Nama Anda</string>
+    <string name="edit_name_placeholder">Masukkan nama Anda</string>
+
+
+    <!-- Referral Screen -->
+    <string name="referral_title">Undang teman</string>
+    <string name="referral_premium_reward">Hadiah premium</string>
+    <string name="referral_invite_friends">Undang teman</string>
+    <string name="referral_earn_30_days_free">Hasilkan 30 hari gratis</string>
+    <string name="referral_reward_unlocks_after_no_refund">Hadiah terbuka setelah teman Anda berlangganan tanpa pengembalian uang.</string>
+    <string name="referral_code_copied">Kode referensi disalin.</string>
+    <string name="referral_your_promo_code">Kode promo Anda</string>
+    <string name="referral_copy">Menyalin</string>
+    <string name="referral_share">Membagikan</string>
+    <string name="referral_how_it_works">Bagaimana cara kerjanya</string>
+    <string name="referral_step_1_title">Bagikan kode promo Anda</string>
+    <string name="referral_step_1_subtitle">Kirimkan kode Anda ke teman yang ingin melacak makanan dengan lebih cerdas.</string>
+    <string name="referral_step_2_title">Teman Anda berlangganan</string>
+    <string name="referral_step_2_subtitle">Mereka memulai langganan CaloShape AI berbayar menggunakan undangan Anda.</string>
+    <string name="referral_step_3_title">Tidak ada pengembalian uang, lalu hadiah</string>
+    <string name="referral_step_3_subtitle">Setelah langganan diverifikasi tanpa pengembalian dana, periode premi Anda diperpanjang.</string>
+    <string name="referral_share_text">Bergabunglah dengan saya di CaloShape AI! Kode referensi saya adalah:\n%1$s\n\n%2$s</string>
+    <string name="referral_share_subject">Bergabunglah dengan saya di CaloShape AI</string>
+    <string name="referral_share_chooser_title">Bagikan melalui</string>
+    <string name="referral_unable_to_open_share_options">Tidak dapat membuka opsi berbagi.</string>
+
+
+    <!-- PersonalDetailsScreen -->
+    <string name="personal_details_goal_weight">Berat sasaran</string>
+    <string name="personal_details_change_goal">Ubah tujuan</string>
+    <string name="personal_details_body_details_section">Detail tubuh</string>
+    <string name="personal_details_current_weight">Berat badan saat ini</string>
+    <string name="personal_details_height">Tinggi</string>
+    <string name="personal_details_age">Usia</string>
+    <string name="personal_details_gender">Jenis kelamin</string>
+    <string name="personal_details_starting_weight">Berat awal</string>
+    <string name="personal_details_daily_goals_section">Tujuan harian</string>
+    <string name="personal_details_daily_step_goal">Sasaran langkah harian</string>
+    <string name="personal_details_daily_water_goal">Sasaran air harian</string>
+    <string name="personal_details_daily_workout_goal">Tujuan latihan harian</string>
+    <string name="personal_details_age_value">%1$d tahun</string>
+    <string name="personal_details_steps_value">%1$d langkah</string>
+    <string name="personal_details_water_value">%1$d ml</string>
+    <string name="personal_details_kcal_value">%1$d kkal</string>
+    <string name="gender_male">Pria</string>
+    <string name="gender_female">Perempuan</string>
+    <string name="gender_other">Lainnya</string>
+
+
+    <!-- EditGoalWeightScreen -->
+    <string name="edit_goal_weight_title">Sunting Berat Sasaran</string>
+    <string name="edit_goal_weight_progress_note">Kami akan menggunakan tujuan ini untuk menghitung kemajuan Anda.</string>
+    <string name="edit_goal_update_failed">Gagal memperbarui bobot sasaran</string>
+
+
+    <!-- RecordWeightScreen -->
+    <string name="record_weight_camera_failed_to_open">Kamera gagal dibuka.</string>
+    <string name="record_weight_camera_permission_required">Izin kamera diperlukan.</string>
+    <string name="record_weight_camera_preview_unavailable">Kamera hanya berfungsi di aplikasi yang sedang berjalan, bukan di Pratinjau.</string>
+    <string name="record_weight_camera_screen_unavailable">Kamera tidak tersedia di layar ini.</string>
+    <string name="record_weight_no_camera_app_found">Tidak ada aplikasi kamera yang ditemukan di perangkat ini.</string>
+    <string name="record_weight_enable_camera_permission_settings">Harap aktifkan izin Kamera di Pengaturan.</string>
+
+    <string name="record_weight_title">Catat Berat Badan</string>
+    <string name="record_weight_save_failed">Gagal menyimpan</string>
+    <string name="record_weight_date_note">Berat ini akan dicatat untuk %1$s</string>
+
+    <string name="weight_date_sheet_title">Pilih tanggal penimbangan Anda</string>
+    <string name="weight_date_sheet_subtitle">Kapan Anda menginjak timbangan?</string>
+    <string name="weight_date_sheet_month_january">Januari</string>
+    <string name="weight_date_sheet_month_february">Februari</string>
+    <string name="weight_date_sheet_month_march">Berbaris</string>
+    <string name="weight_date_sheet_month_april">April</string>
+    <string name="weight_date_sheet_month_may">Mungkin</string>
+    <string name="weight_date_sheet_month_june">Juni</string>
+    <string name="weight_date_sheet_month_july">Juli</string>
+    <string name="weight_date_sheet_month_august">Agustus</string>
+    <string name="weight_date_sheet_month_september">September</string>
+    <string name="weight_date_sheet_month_october">Oktober</string>
+    <string name="weight_date_sheet_month_november">November</string>
+    <string name="weight_date_sheet_month_december">Desember</string>
+
+    <string name="record_weight_camera_not_available">Kamera tidak tersedia</string>
+    <string name="record_weight_take_photo">Ambil foto</string>
+    <string name="record_weight_retake_photo">Ambil ulang foto</string>
+
+
+    <!-- EditHeightScreen -->
+    <string name="edit_height_title">Edit Tinggi Badan Anda</string>
+    <string name="edit_height_privacy_note">Kami hanya menggunakan tinggi badan Anda untuk meningkatkan pengalaman dan akurasi estimasi kalori Anda.</string>
+
+
+    <!-- EditAgeScreen -->
+    <string name="edit_age_title">Edit Usia Anda</string>
+    <string name="edit_age_privacy_note">Kami hanya menggunakan usia Anda untuk meningkatkan pengalaman dan akurasi estimasi kalori Anda.</string>
+
+
+    <!-- EditGenderScreen -->
+    <string name="edit_gender_title">Edit Jenis Kelamin Anda</string>
+    <string name="edit_gender_privacy_note">Hanya digunakan untuk mempersonalisasi dan meningkatkan akurasi estimasi.</string>
+
+
+    <!-- EditStartingWeightScreen -->
+    <string name="edit_starting_weight_title">Sunting Berat Awal</string>
+    <string name="edit_start_weight_baseline_note">Kami akan menggunakannya sebagai dasar kemajuan Anda.</string>
+    <string name="edit_starting_weight_update_failed">Gagal memperbarui berat awal</string>
+
+
+    <!-- EditDailyStepGoalScreen -->
+    <string name="edit_step_goal_title">Edit Sasaran Langkah</string>
+    <string name="edit_daily_step_goal_previous_format">Sasaran sebelumnya %1$d langkah</string>
+    <string name="edit_daily_step_goal_input_label">Sasaran langkah harian</string>
+
+
+    <!-- EditWaterGoalScreen -->
+    <string name="edit_water_goal_title">Sunting Sasaran Air</string>
+    <string name="edit_water_goal_previous_format">Gol sebelumnya %1$d ml</string>
+    <string name="edit_water_goal_input_label">Target air harian (ml)</string>
+
+
+    <!-- EditWorkoutGoalScreen -->
+    <string name="edit_workout_goal_title">Sunting Sasaran Latihan</string>
+    <string name="edit_workout_goal_previous_format">Sasaran sebelumnya %1$d kkal</string>
+    <string name="edit_workout_goal_input_label">Sasaran latihan harian (kkal)</string>
+
+
+    <!-- EditNutritionGoalsScreen -->
+    <string name="edit_nutrition_goals_title">Sunting Sasaran Nutrisi</string>
+    <string name="edit_nutrition_calorie_goal">Tujuan kalori</string>
+    <string name="edit_nutrition_protein_goal">Tujuan protein</string>
+    <string name="edit_nutrition_carb_goal">Tujuan karbohidrat</string>
+    <string name="edit_nutrition_fat_goal">Tujuan yang gemuk</string>
+    <string name="edit_nutrition_view_micronutrients">Lihat mikronutrien</string>
+    <string name="edit_nutrition_fiber_goal">Tujuan serat</string>
+    <string name="edit_nutrition_sugar_goal">Tujuan gula</string>
+    <string name="edit_nutrition_sodium_goal">Tujuan natrium</string>
+    <string name="edit_nutrition_auto_generate_goals">Hasilkan sasaran secara otomatis</string>
+
+
+    <!-- RingColorsExplainedScreen -->
+    <string name="ring_colors_explained_title">Warna Cincin Tanggal</string>
+    <string name="ring_colors_explained_intro">Cincin tanggal membantu Anda dengan cepat melihat perbandingan setiap hari dengan sasaran kalori Anda.</string>
+    <string name="ring_colors_preview_brand">CaloBentuk AI</string>
+    <string name="ring_colors_explained">Pratinjau Cincin Tanggal</string>
+
+    <string name="ring_colors_preview_day_5">5</string>
+    <string name="ring_colors_preview_day_6">6</string>
+    <string name="ring_colors_preview_day_7">7</string>
+    <string name="ring_colors_preview_day_8">8</string>
+    <string name="ring_colors_preview_day_9">9</string>
+    <string name="ring_colors_preview_day_10">10</string>
+    <string name="ring_colors_preview_day_11">11</string>
+    <string name="ring_colors_explained_subtitle">Penjelasan Warna Cincin</string>
+
+    <string name="ring_colors_green_title">Hijau</string>
+    <string name="ring_colors_green_body">Sesuai target (dalam 100 kalori dari sasaran)</string>
+    <string name="ring_colors_yellow_title">Cokelat</string>
+    <string name="ring_colors_yellow_body">100-199 kalori melebihi target Anda</string>
+    <string name="ring_colors_red_title">Merah</string>
+    <string name="ring_colors_red_body">200+ kalori melebihi target Anda</string>
+    <string name="ring_colors_dotted_title">Burik</string>
+    <string name="ring_colors_dotted_body">Tidak ada makanan yang dicatat pada hari itu</string>
+
+
+    <!-- NotificationInboxScreen Inbox -->
+    <string name="notification_inbox_title">Kotak masuk</string>
+    <string name="notification_inbox_header_title">Pemberitahuan CaloShape</string>
+    <string name="notification_inbox_header_body">Semua notifikasi platform akan muncul di sini.</string>
+    <string name="notification_inbox_status_read">Membaca</string>
+    <string name="notification_inbox_status_unread">Belum dibaca</string>
+
+    <string name="notification_inbox_loading_title">Memuat notifikasi</string>
+    <string name="notification_inbox_loading">Memuat notifikasi…</string>
+    <string name="notification_inbox_empty_title">Belum ada pemberitahuan</string>
+    <string name="notification_inbox_empty_body">Notifikasi platform akan muncul di sini.</string>
+    <string name="notification_inbox_error_title">Tidak dapat memuat notifikasi</string>
+    <string name="notification_inbox_error_body">Silakan periksa koneksi Anda dan coba lagi.</string>
+
+
+    <!-- WidgetGuideScreen -->
+    <string name="widget_guide_title">Tambahkan Widget</string>
+    <string name="widget_guide_hero_title">Tambahkan CaloShape ke layar Beranda Anda</string>
+    <string name="widget_guide_hero_body">Lacak kalori, makro, dan tindakan cepat tanpa membuka aplikasi.</string>
+    <string name="widget_guide_steps_title">Ikuti langkah-langkah ini</string>
+    <string name="widget_guide_step_1_title">Tekan lama layar Beranda</string>
+    <string name="widget_guide_step_1_body">Tekan dan tahan area kosong di layar Beranda ponsel Anda hingga menu muncul.</string>
+    <string name="widget_guide_step_2_title">Ketuk Widget</string>
+    <string name="widget_guide_step_2_body">Pilih Widget dari menu layar Beranda.</string>
+    <string name="widget_guide_step_3_title">Temukan CaloShape AI</string>
+    <string name="widget_guide_step_3_body">Gulir atau cari CaloShape AI, lalu buka daftar widget.</string>
+    <string name="widget_guide_step_4_title">Seret widget ke tempatnya</string>
+    <string name="widget_guide_step_4_body">Sentuh dan tahan widget, seret ke layar Utama pilihan Anda, lalu angkat jari Anda.</string>
+    <string name="widget_guide_tip_title">Tidak dapat menemukan menu Widget?</string>
+    <string name="widget_guide_tip_body">Beberapa merek ponsel dan peluncur menggunakan nama berbeda. Coba pengaturan Beranda, tekan lama ikon aplikasi CaloShape AI, atau cari Widget di peluncur Anda.</string>
+    <string name="widget_guide_done">Mengerti</string>
+    <string name="widget_guide_mock_home">Rumah</string>
+    <string name="widget_guide_mock_widgets">Widget</string>
+
+
+    <!-- CaloShapeNavHost -->
+    <string name="url_terms">https://caloshape.com/terms</string>
+    <string name="url_privacy">https://caloshape.com/privacy</string>
+    <string name="url_support_email">mailto:support@caloshape.com?subject=Support%20Permintaan</string>
+    <string name="camera_manual_entry_not_ready">Entri manual belum siap. Beralih ke pemindaian label untuk saat ini.</string>
+
+
+    <!-- Android home screen widgets -->
+    <string name="widget_preview_goal_kcal">1830</string>
+    <string name="widget_preview_protein">120 gram</string>
+    <string name="widget_preview_carbs">180 gram</string>
+    <string name="widget_preview_fats">60 gram</string>
+    <string name="widget_calories_left">Kalori tersisa</string>
+    <string name="widget_protein_left">Proteinnya tersisa</string>
+    <string name="widget_carbs_left">Karbohidrat tersisa</string>
+    <string name="widget_fats_left">Sisa lemak</string>
+    <string name="widget_calories_description">Widget kalori CaloShape</string>
+    <string name="widget_macro_actions_description">Makro CaloShape dan widget tindakan cepat</string>
+    <string name="widget_log_your_food">Catat makanan Anda</string>
+    <string name="widget_scan_food">Pindai makanan</string>
+    <string name="widget_barcode">kode batang</string>
+    <string name="widget_grams_format">%1$dg</string>
+
+
+
+
+
+    <!-- =========================
+                    Not use
+         ========================= -->
+    <!-- PremiumRewardsScreen Not use -->
+    <string name="premium_rewards_subscription_title">Berlangganan</string>
+    <string name="premium_rewards_history_title">Sejarah penghargaan</string>
+    <string name="premium_rewards_loading_membership">Memuat keanggotaan…</string>
+    <string name="premium_rewards_status_title">Status Premium</string>
+    <string name="premium_rewards_latest_title">Hadiah terbaru</string>
+    <string name="premium_rewards_source_format">Sumber: %1$s</string>
+    <string name="premium_rewards_channel_format">Saluran: %1$s</string>
+    <string name="premium_rewards_grant_status_format">Status hibah: %1$s</string>
+    <string name="premium_rewards_status_format">Status: %1$s</string>
+    <string name="premium_rewards_google_defer_format">Penundaan Google: %1$s</string>
+    <string name="premium_rewards_granted_at_format">Diberikan di: %1$s</string>
+    <string name="premium_rewards_old_expiry_format">Kadaluwarsa lama: %1$s</string>
+    <string name="premium_rewards_new_expiry_format">Masa berlaku baru: %1$s</string>
+    <string name="premium_rewards_error_format">Kesalahan: %1$s</string>
+    <string name="premium_rewards_days_added_format">Hari ditambahkan: %1$d</string>
+    <string name="premium_rewards_empty_title">Belum ada imbalan</string>
+    <string name="premium_rewards_empty_body">Referensi yang berhasil akan muncul di sini setelah verifikasi.</string>
+    <string name="premium_rewards_channel_google_play_defer">Tanggal penagihan Google Play diperpanjang</string>
+    <string name="premium_rewards_channel_backend_only">Hadiah premium diterapkan</string>
+    <string name="premium_rewards_grant_success">Kesuksesan</string>
+    <string name="premium_rewards_status_retrying">Mencoba lagi</string>
+    <string name="premium_rewards_grant_not_granted">Tidak diberikan</string>
+    <string name="premium_rewards_google_defer_success">Diperluas oleh Google Play</string>
+    <string name="premium_rewards_google_defer_failed">Gagal</string>
+    <string name="premium_rewards_google_defer_not_required">Tidak diperlukan</string>
+
+
+</resources>

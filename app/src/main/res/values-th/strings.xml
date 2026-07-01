@@ -1,0 +1,1130 @@
+<resources>
+    <!-- App_Name -->
+    <string name="app_name">CaloShape</string>
+
+
+    <!-- common -->
+    <string name="common_close">ปิด</string>
+    <string name="common_save">บันทึก</string>
+    <string name="common_cancel">ยกเลิก</string>
+    <string name="common_continue_btn">ดำเนินการต่อ</string>
+    <string name="common_skip">ข้าม</string>
+    <string name="common_dash">—</string>
+    <string name="common_error">ข้อผิดพลาด</string>
+
+    <string name="common_save_success">บันทึกเรียบร้อยแล้ว!</string>
+    <string name="common_today">วันนี้</string>
+    <string name="common_yesterday">เมื่อวาน</string>
+    <string name="common_unavailable_dash">—</string>
+    <string name="common_retry">ลองอีกครั้ง</string>
+
+    <string name="common_delete">ลบ</string>
+    <string name="common_deleting">กำลังลบ...</string>
+
+    <string name="common_understood">เข้าใจแล้ว</string>
+    <string name="common_revert">เปลี่ยนกลับ</string>
+
+
+    <!-- ApiErrorUiMapper -->
+    <string name="err_barcode_not_found_title">ไม่พบสินค้า</string>
+    <string name="err_barcode_not_found_msg">เราไม่พบบาร์โค้ดนี้ ลองถ่ายรูปฉลากโภชนาการ</string>
+
+    <string name="err_barcode_lookup_failed_title">การค้นหาล้มเหลว</string>
+    <string name="err_barcode_lookup_failed_msg">เราไม่สามารถเข้าถึงฐานข้อมูลผลิตภัณฑ์ได้ ตรวจสอบการเชื่อมต่อของคุณแล้วลองอีกครั้ง</string>
+
+    <string name="err_generic_title">มีบางอย่างผิดพลาด</string>
+    <string name="err_generic_msg">โปรดลองอีกครั้ง</string>
+
+    <string name="err_network_title">ปัญหาเครือข่าย</string>
+    <string name="err_network_msg">โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณแล้วลองอีกครั้ง</string>
+
+    <string name="err_photo_title">จำเป็นต้องมีรูปถ่าย</string>
+    <string name="err_photo_msg">ลองถ่ายภาพอีกครั้งโดยมีแสงดีขึ้น</string>
+
+    <string name="err_manual_title">ป้อนด้วยตนเอง</string>
+    <string name="err_manual_msg">คุณสามารถป้อนรายละเอียดด้วยตนเอง</string>
+
+    <string name="err_support_title">ติดต่อฝ่ายสนับสนุน</string>
+    <string name="err_support_msg">โปรดติดต่อฝ่ายสนับสนุนหากปัญหายังคงมีอยู่</string>
+
+    <string name="cta_try_label">สแกนฉลากโภชนาการ</string>
+    <string name="cta_enter_manually">ป้อนด้วยตนเอง</string>
+
+    <string name="cta_check_network">ตรวจสอบเครือข่าย</string>
+    <string name="cta_retake">เอาใหม่</string>
+    <string name="cta_contact_support">ติดต่อฝ่ายสนับสนุน</string>
+    <string name="cta_rescan_barcode">สแกนบาร์โค้ดอีกครั้ง</string>
+
+
+
+
+    <!-- Landing Screen -->
+    <string name="landing_title">ถ่ายรูปรู้แคลอรี่</string>
+    <string name="choose_language">เลือกภาษา</string>
+    <string name="cta_get_started">เริ่มต้นเลย</string>
+    <string name="cta_login_prefix">มีบัญชีอยู่แล้ว?</string>
+    <string name="cta_login">เข้าสู่ระบบ</string>
+
+
+    <!-- RequireSignInScreen -->
+    <string name="auth_sign_in_account_title">ลงชื่อเข้าใช้บัญชีของคุณ</string>
+    <string name="auth_sign_in_with_google">ลงชื่อเข้าใช้งานด้วย Google</string>
+    <string name="auth_signin_with_email">ดำเนินการต่อด้วยอีเมล</string>
+
+
+    <!-- SignInSheet-->
+    <string name="signin_title">เข้าสู่ระบบ</string>
+    <string name="signin_with_apple">ลงชื่อเข้าใช้ด้วย Apple</string>
+    <string name="signin_with_google">ลงชื่อเข้าใช้งานด้วย Google</string>
+    <string name="signin_with_email">ดำเนินการต่อด้วยอีเมล</string>
+    <string name="signin_legal_hint">การดำเนินการต่อแสดงว่าคุณยอมรับข้อกำหนดของ CaloShape</string>
+    <string name="signin_terms">เงื่อนไข</string>
+    <string name="signin_and">และ</string>
+    <string name="signin_privacy">นโยบายความเป็นส่วนตัว</string>
+    <string name="signin_url_terms">https://caloshape.com/terms</string>
+    <string name="signin_url_privacy">https://caloshape.com/privacy</string>
+
+
+    <!-- SignInSheetHost 控制 Sheet 是否顯示、處理狀態、接外部 callback -->
+    <string name="err_google_no_account_hint">เคล็ดลับ: เพิ่มบัญชี Google ในการตั้งค่า → บัญชี แล้วลองอีกครั้ง</string>
+    <string name="err_google_signin_failed">การลงชื่อเข้าใช้ Google ล้มเหลว</string>
+
+
+    <!-- EmailEnterScreen-->
+    <string name="email_sign_in_title">เข้าสู่ระบบ</string>
+    <string name="input_box_email_label">อีเมล</string>
+
+
+    <!-- EmailCodeScreen OTP -->
+    <string name="resend">ส่งอีกครั้ง</string>
+    <string name="resend_countdown">ส่งอีกครั้ง (%1$d วิ)</string>
+
+    <string name="err_otp_invalid">รหัสไม่ถูกต้อง โปรดลองอีกครั้ง</string>
+    <string name="err_otp_too_many_attempts">มีความพยายามมากเกินไป โปรดลองอีกครั้งในภายหลัง</string>
+    <string name="err_network_io">ข้อผิดพลาดของเครือข่าย โปรดลองอีกครั้ง</string>
+    <string name="err_server_unavailable">ไม่สามารถให้บริการได้ชั่วคราว โปรดลองอีกครั้งในภายหลัง</string>
+    <string name="err_generic">มีบางอย่างผิดพลาด โปรดลองอีกครั้ง</string>
+
+    <string name="confirm_email_title">ยืนยันอีเมลของคุณ</string>
+    <string name="confirm_email_hint">กรุณากรอกรหัส 4 หลักที่เราเพิ่งส่งไป</string>
+    <string name="didnt_receive_code">ไม่ได้รับรหัส?</string>
+
+
+    <!-- Onboarding: GenderSelectionScreen -->
+    <string name="onboard_gender_title">เลือกเพศของคุณ</string>
+    <string name="onboard_gender_subtitle">สิ่งนี้จะถูกใช้เพื่อปรับเทียบแผนที่คุณกำหนดเอง</string>
+    <string name="onboard_male">ชาย</string>
+    <string name="onboard_female">หญิง</string>
+    <string name="onboard_other">อื่น</string>
+
+
+    <!-- Onboarding: ReferralSourceScreen -->
+    <string name="onboard_referral_title">คุณค้นพบเราได้อย่างไร?</string>
+
+
+    <!-- Onboarding: AgeSelectionScreen -->
+    <string name="onboard_age_title">คุณอายุเท่าไร</string>
+    <string name="onboard_age_subtitle">เราใช้อายุของคุณเพื่อปรับปรุงประสบการณ์ของคุณและความแม่นยำในการประมาณแคลอรี่เท่านั้น</string>
+
+
+    <!-- Onboarding: HeightSelectionScreen -->
+    <string name="onboard_height_title">คุณสูงเท่าไหร่?</string>
+    <string name="onboard_height_subtitle">เราใช้ข้อมูลของคุณเพื่อปรับปรุงประสบการณ์ของคุณและประมาณการแคลอรี่ของเราเท่านั้น</string>
+    <string name="onboard_height_hint">สิ่งนี้จะถูกใช้เพื่อปรับเทียบแผนที่คุณกำหนดเอง</string>
+
+
+    <!-- Onboarding: WeightSelectionScreen -->
+    <string name="onboard_weight_title">คุณมีน้ำหนักเท่าไหร่?</string>
+    <string name="onboard_weight_subtitle">เราใช้ข้อมูลของคุณเพื่อปรับปรุงประสบการณ์ของคุณและประมาณการแคลอรี่ของเราเท่านั้น</string>
+    <string name="onboard_weight_hint">สิ่งนี้จะถูกใช้เพื่อปรับเทียบแผนที่คุณกำหนดเอง</string>
+
+
+    <!-- Onboarding: ExerciseFrequencyScreen  -->
+    <string name="onboard_ex_freq_title">คุณออกกำลังกายบ่อยแค่ไหนในแต่ละสัปดาห์?</string>
+    <string name="onboard_ex_freq_subtitle">สิ่งนี้จะช่วยปรับเทียบแผนส่วนบุคคลของคุณ</string>
+    <string name="ex_freq_0_title">0</string>
+    <string name="ex_freq_0_sub">อยู่ประจำ</string>
+    <string name="ex_freq_1_3_title">1–3</string>
+    <string name="ex_freq_1_3_sub">กิจกรรมเบาๆ</string>
+    <string name="ex_freq_3_5_title">3–5</string>
+    <string name="ex_freq_3_5_sub">กิจกรรมปานกลาง</string>
+    <string name="ex_freq_6_7_plus_title">6–7</string>
+    <string name="ex_freq_6_7_plus_sub">มีกิจกรรมสูง</string>
+    <string name="ex_freq_7_plus_title">7+</string>
+    <string name="ex_freq_7_plus_sub">มีกิจกรรมสูงมาก</string>
+
+
+    <!-- Onboarding: GoalSelectionScreen  -->
+    <string name="onboard_goal_title">เป้าหมายของคุณคืออะไร?</string>
+    <string name="onboard_goal_subtitle">สิ่งนี้ช่วยให้เราปรับแต่งแผนแคลอรี่ของคุณได้</string>
+    <string name="goal_lose">ลดน้ำหนัก</string>
+    <string name="goal_maintain">บำรุงรักษา</string>
+    <string name="goal_gain">เพิ่มน้ำหนัก</string>
+    <string name="goal_healthy_eating">การรับประทานอาหารเพื่อสุขภาพ</string>
+
+
+    <!-- Onboarding: WeightGoalScreen -->
+    <string name="onboard_goal_weight_title">น้ำหนักเป้าหมายของคุณคือเท่าไร?</string>
+    <string name="onboard_goal_weight_subtitle">จากเป้าหมายนี้ เราจะสร้างคำแนะนำแคลอรี่รายวันที่เหมาะสมยิ่งขึ้นสำหรับคุณ</string>
+    <string name="onboard_goal_weight_hint">สิ่งนี้จะถูกใช้เพื่อปรับเทียบแผนที่คุณกำหนดเอง</string>
+
+
+    <!-- Onboarding: WeightLossComparisonScreen -->
+    <string name="onboard_weight_loss_comparison_title">การใช้ CaloShape AI สามารถเพิ่มน้ำหนัก\nประสิทธิภาพการลดน้ำหนักของคุณเป็นสามเท่า</string>
+    <string name="onboard_weight_loss_comparison_without_ai">ไม่มี\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_with_ai">ด้วย\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_twenty_percent">20%</string>
+    <string name="onboard_weight_loss_comparison_two_times">3X</string>
+    <string name="onboard_weight_loss_comparison_caption">CaloShape AI ทำให้ทุกอย่างเป็นเรื่องง่าย\nและช่วยให้คุณรับผิดชอบ</string>
+
+
+    <!-- Onboarding: NotificationPermissionScreen -->
+    <string name="onboard_notif_title">ให้ทุกมื้อมีคุณค่า!</string>
+    <string name="onboard_notif_subtitle">เปิดใช้งานการแจ้งเตือนเพื่อเตือนให้บันทึกมื้ออาหาร เพื่อให้แคลอรี่ มาโคร และความคืบหน้าของคุณเป็นไปตามแผน การลื่นล้มเกิดขึ้น การสะกิดอย่างทันท่วงทีช่วยให้คุณเด้งกลับได้อย่างรวดเร็ว</string>
+    <string name="onboard_allow_notifications_cta">อนุญาตการแจ้งเตือน</string>
+    <string name="notification_mock_app_title">เครื่องนับแคลอรี่ AI</string>
+    <string name="onboard_notif_title_got_a_sec">อาหารของคุณจะไม่บันทึกตัวเอง😉</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">บันทึกมื้อนี้เพื่อควบคุมแคลอรี่และมาโครของคุณ</string>
+
+
+    <!-- Onboarding: HealthConnectIntroScreen -->
+    <string name="onboard_hc_connect_title_prefix">เชื่อมต่อไปยัง</string>
+    <string name="onboard_hc_connect_title_service">เชื่อมต่อสุขภาพ</string>
+    <string name="onboard_hc_connect_body">ซิงค์กิจกรรมประจำวันระหว่าง CaloShape AI และแอปสุขภาพเพื่อรับบันทึกและข้อมูลเชิงลึกที่สมบูรณ์ยิ่งขึ้น</string>
+    <string name="onboard_hc_permission_rationale_title_prefix">เหตุใด CaloShape จึงใช้</string>
+    <string name="onboard_hc_permission_rationale_title_service">เชื่อมต่อสุขภาพ</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape อ่านจำนวนก้าว แคลอรี่ที่ใช้งาน และข้อมูลการออกกำลังกายเพื่อประเมินการเผาผลาญกิจกรรมในแต่ละวัน อัปเดตแดชบอร์ดแคลอรี่ของคุณ และปรับปรุงข้อมูลเชิงลึกเกี่ยวกับความคืบหน้า คุณเพิกถอนการเข้าถึงได้ตลอดเวลาใน Health Connect</string>
+    <string name="onboard_hc_permission_rationale_button">เข้าใจแล้ว</string>
+
+
+    <!-- Onboarding: ComputationProgressScreen -->
+    <string name="progress_hero_title">การสร้างแผนส่วนบุคคลของคุณ</string>
+    <string name="progress_hero_subtitle">เรากำลังใช้เป้าหมาย ข้อมูลร่างกาย และความชอบของคุณเพื่อปรับแต่งเป้าหมายรายวันของคุณ</string>
+    <string name="progress_footer_hint">ใช้เวลาเพียงครู่หนึ่ง</string>
+    <string name="progress_center_caption">เตรียมผลลัพธ์ของคุณ</string>
+    <string name="progress_phase_pill_1">กำลังตรวจสอบโปรไฟล์ของคุณ</string>
+    <string name="progress_phase_pill_2">การคำนวณเป้าหมายแคลอรี่ของคุณ</string>
+    <string name="progress_phase_pill_3">ปรับสมดุลมาโครรายวันของคุณ</string>
+    <string name="progress_phase_pill_4">การสรุปข้อมูลเชิงลึกด้านสุขภาพของคุณ</string>
+    <string name="progress_card_title">จัดทำแผนของคุณ</string>
+    <string name="progress_row_calorie_target">เป้าหมายแคลอรี่รายวัน</string>
+    <string name="progress_row_carb_distribution">การกระจายตัวของคาร์โบไฮเดรต</string>
+    <string name="progress_row_protein_recommendation">แนะนำโปรตีน</string>
+    <string name="progress_row_fat_recommendation">แนะนำอ้วน</string>
+    <string name="progress_row_health_score_estimate">การประมาณการคะแนนสุขภาพ</string>
+
+
+    <!-- Onboarding: HealthPlanScreen -->
+    <string name="plan_cta_start">เริ่มต้นเลย</string>
+    <string name="plan_title_congrats">ยินดีด้วย!</string>
+    <string name="plan_subtitle_ready">แผนสุขภาพส่วนบุคคลของคุณพร้อมแล้ว!</string>
+    <string name="plan_disclaimer">แหล่งที่มาอยู่ด้านล่าง: ดูข้อมูลอ้างอิงทั้งหมด ›</string>
+    <string name="plan_unit_kcal_day">กิโลแคลอรี/วัน</string>
+
+    <string name="plan_macros_proteins">โปรตีน</string>
+    <string name="plan_macros_carbs">คาร์โบไฮเดรต</string>
+    <string name="plan_macros_fat">ไขมัน</string>
+    <string name="plan_unit_g">ก</string>
+
+    <string name="plan_water_daily">น้ำรายวัน</string>
+    <string name="plan_weight_current">น้ำหนักปัจจุบัน</string>
+    <string name="plan_weight_delta">เพื่อเป้าหมายน้ำหนัก</string>
+
+    <string name="plan_goals_title">วิธีบรรลุเป้าหมาย\nเป้าหมายของคุณ</string>
+    <string name="plan_goal_card_health_scores">คะแนนสุขภาพจะแนะนำคุณ ดังนั้นนิสัยจึงเกิดขึ้นตามธรรมชาติ</string>
+    <string name="plan_goal_card_track_meals">บันทึกมื้ออาหารด้วยการแตะเพียงครั้งเดียว ความสม่ำเสมอเป็นเรื่องง่าย</string>
+    <string name="plan_goal_card_daily_calories">ดูแคลอรี่ในแต่ละวันได้อย่างชัดเจน และไม่พลาดการติดตาม</string>
+    <string name="plan_goal_card_balance_macros">คาร์โบไฮเดรต × โปรตีน × ไขมัน ปรับสมดุลอย่างชาญฉลาด ผลลัพธ์ที่ดีกว่า</string>
+    <string name="plan_sources_based_on">ตามหลักเกณฑ์การบริโภคอาหารอย่างเป็นทางการ\nใช้เพื่อการอ้างอิงเท่านั้น ไม่ใช่คำแนะนำทางการแพทย์</string>
+    <string name="plan_sources_more">ดูข้อมูลอ้างอิงทั้งหมด ›</string>
+    <string name="plan_sources_hide">ซ่อนแหล่งที่มา</string>
+
+
+    <!-- Onboarding: OnboardReferralCodeScreen -->
+    <string name="onboard_referral_code_input">ป้อนรหัสอ้างอิง\n(ตัวเลือก)</string>
+    <string name="onboard_referral_code_subtitle">คุณสามารถข้ามขั้นตอนนี้ได้</string>
+    <string name="onboard_referral_code_input_label">รหัสอ้างอิง</string>
+    <string name="onboard_referral_code_placeholder">รหัสอ้างอิง</string>
+    <string name="onboard_referral_code_submit">ส่ง</string>
+    <string name="onboard_referral_code_submitting">กำลังส่ง...</string>
+    <string name="onboard_referral_code_applied">ใช้รหัสอ้างอิงแล้ว!</string>
+
+    <string name="onboard_referral_code_error_invalid_format">ใช้ตัวอักษรและตัวเลขเท่านั้น</string>
+    <string name="onboard_referral_code_error_invalid">เราไม่พบรหัสอ้างอิงนี้</string>
+    <string name="onboard_referral_code_error_self_referral">คุณไม่สามารถใช้รหัสอ้างอิงของคุณเองได้</string>
+    <string name="onboard_referral_code_error_already_claimed">บัญชีนี้ได้ใช้รหัสอ้างอิงแล้ว</string>
+    <string name="onboard_referral_code_error_already_subscribed">บัญชีที่สมัครสมาชิกไม่สามารถใช้รหัสอ้างอิงได้</string>
+    <string name="onboard_referral_code_error_disabled">การอ้างอิงไม่สามารถใช้งานได้ชั่วคราว</string>
+    <string name="onboard_referral_code_error_risk">เราไม่สามารถใช้รหัสอ้างอิงได้ในขณะนี้</string>
+    <string name="onboard_referral_code_error_network">เราไม่สามารถนำไปใช้ได้ในขณะนี้ โปรดลองอีกครั้งในภายหลัง</string>
+    <string name="onboard_referral_code_error_unknown">ไม่สามารถใช้รหัสอ้างอิงได้ในขณะนี้\nโปรดลองอีกครั้งในภายหลัง</string>
+
+
+    <!-- Onboarding: OnboardSubscriptionScreen  Paywall -->
+    <string name="subscription_price_per_month_format">%1$s/เดือน</string>
+    <string name="subscription_price_per_month_unit">/เดือน</string>
+    <string name="subscription_price_unavailable_title">ราคาไม่พร้อมใช้งาน</string>
+    <string name="subscription_price_unavailable_body">เราไม่สามารถรับราคา Google Play ในท้องถิ่นของคุณได้ในขณะนี้ โปรดลองอีกครั้ง</string>
+
+
+    <!-- Onboarding: OnboardSubscriptionIntro -->
+    <string name="subscription_intro_title">ปลดล็อก CaloShape AI เพื่อ\nบรรลุเป้าหมายของคุณเร็วขึ้น</string>
+    <string name="subscription_intro_helper_format">เพียง %1$s ต่อปี (%2$s)</string>
+    <string name="subscription_start_three_day_free_trial">ทดลองใช้ฟรี 3 วัน</string>
+    <string name="subscription_three_day_trial_helper_format">เพียง %1$s/ปี (%2$s/เดือน)</string>
+    <string name="subscription_already_owned_restore_required">บัญชี Google Play ของคุณมีการสมัครสมาชิก CaloShape ที่ใช้งานอยู่ คืนค่าเป็นบัญชี CaloShape นี้ก่อนที่จะใช้คุณสมบัติพิเศษ</string>
+    <string name="subscription_error_no_active_purchase">ไม่พบการซื้อที่ใช้งานอยู่</string>
+    <string name="subscription_error_restore_failed">ไม่สามารถกู้คืนการซื้อได้ โปรดลองอีกครั้ง</string>
+    <string name="subscription_error_purchase_failed">การซื้อล้มเหลว โปรดลองอีกครั้ง</string>
+    <string name="subscription_error_purchase_pending">กำลังดำเนินการชำระเงิน การเข้าถึงแบบพรีเมียมจะสามารถใช้ได้หลังจากที่ Google Play ยืนยันการซื้อ</string>
+    <string name="subscription_error_trial_eligibility_failed">ไม่สามารถตรวจสอบสิทธิ์การทดลองใช้ได้ โปรดลองอีกครั้ง</string>
+    <string name="restore_subscription_dialog_title">พบการสมัครสมาชิก</string>
+    <string name="settings_restore_subscription">คืนค่าการสมัครสมาชิก</string>
+    <string name="restore_subscription_dialog_restoring">กำลังคืนค่า...</string>
+    <string name="common_maybe_later">อาจจะในภายหลัง</string>
+
+
+    <!-- Onboarding: OnboardDiscountSpinScreen-->
+    <string name="subscription_spin_title">หมุนเพื่อปลดล็อกส่วนลดพิเศษ\n</string>
+    <string name="subscription_spin_helper_ready">แตะ Spin เพื่อแสดงของขวัญสุดพิเศษของคุณ</string>
+    <string name="subscription_spin_button">สปิน</string>
+    <string name="subscription_spinning_button">ปั่น…</string>
+    <string name="subscription_gift_offer_unlocked">ปลดล็อคข้อเสนอของขวัญแล้ว</string>
+    <string name="subscription_spin_helper_wait">กรุณารอจนกว่าล้อจะหยุด</string>
+    <string name="subscription_spin_helper_revealed">ข้อเสนอนี้จะถูกเปิดเผยหลังจากล้อหยุด</string>
+
+
+    <!-- Onboarding: OneTimeOfferHeroCard-->
+    <string name="subscription_gift_unlocked_title">ปลดล็อคของขวัญ 🎁</string>
+    <string name="subscription_gift_price_unlocked">ปลดล็อคราคาของขวัญแล้ว</string>
+    <string name="subscription_unlock_premium_for_only">ปลดล็อคพรีเมี่ยมเพียง</string>
+    <string name="subscription_discount_body">สแกนมื้ออาหารได้เร็วขึ้น ติดตามมาโครอย่างชาญฉลาดยิ่งขึ้น\nปฏิบัติตามแผนทุกวัน</string>
+    <string name="subscription_yearly_price_format">%1$s/ปี</string>
+    <string name="subscription_urgency_coffee">น้อยกว่ากาแฟ</string>
+    <string name="subscription_urgency_price_gone">ปิดหน้าจอนี้ไหม? ราคานี้หมดแล้วครับ</string>
+    <string name="subscription_urgency_waiting">คุณจะรออะไรอีก?</string>
+
+    <string name="subscription_trial_enabled">เปิดใช้งานการทดลองใช้ฟรีแล้ว</string>
+    <string name="subscription_trial_enable_prompt">ไม่แน่ใจ? เปิดการทดลองใช้ฟรี</string>
+    <string name="subscription_trial_checking_eligibility">กำลังตรวจสอบความพร้อมใช้งานของรุ่นทดลองใช้...</string>
+    <string name="subscription_trial_already_used">ทดลองใช้แล้ว</string>
+    <string name="subscription_trial_unavailable">ทดลองใช้ฟรีไม่พร้อมใช้งาน</string>
+
+    <string name="subscription_badge_free_trial">ทดลองใช้ฟรี</string>
+    <string name="subscription_badge_lowest_price_ever">ราคาต่ำสุดเลยทีเดียว</string>
+    <string name="subscription_yearly_plan">แผนรายปี</string>
+    <string name="subscription_yearly_plan_price_format">12เดือน · %1$s</string>
+
+    <string name="subscription_start_free_trial">ทดลองใช้ฟรี 3 วัน</string>
+    <string name="subscription_trial_helper">ไม่มีข้อผูกมัด — ยกเลิกได้ตลอดเวลา</string>
+    <string name="subscription_discount_terms_format">เพียง %1$s/ปี (%2$s/เดือน)</string>
+    <string name="subscription_discount_trial_terms_format">ไม่มีข้อผูกมัด - ยกเลิกได้ตลอดเวลา</string>
+
+
+    <!-- HomeScreen -->
+    <string name="recently_uploaded">อัพโหลดล่าสุด</string>
+    <string name="workout_membership_verify_failed">ไม่สามารถยืนยันการเป็นสมาชิกได้ โปรดลองอีกครั้ง</string>
+
+
+    <!-- MainBottomBar -->
+    <string name="bottom_nav_home">บ้าน</string>
+    <string name="bottom_nav_progress">ความคืบหน้า</string>
+    <string name="bottom_nav_weight">น้ำหนัก</string>
+    <string name="bottom_nav_fasting">การถือศีลอด</string>
+    <string name="bottom_nav_workout">ออกกำลังกาย</string>
+
+
+    <!-- =============   HomeCards  ============= -->
+
+    <!-- HomeCards :  Calories Card -->
+    <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
+    <string name="home_calories_goal_label">แคลอรี่ที่เหลืออยู่</string>
+    <string name="home_calories_eaten_label">แคลอรี่ที่กินเข้าไป</string>
+
+
+    <!-- HomeCards :  Nutrition Card -->
+    <string name="home_nutrition_ratio_grams">%1$d / %2$dก</string>
+    <string name="home_protein_goal_label">เหลือโปรตีน</string>
+    <string name="home_protein_eaten_label">กินโปรตีนแล้ว</string>
+    <string name="home_carbs_goal_label">คาร์โบไฮเดรตเหลือ</string>
+    <string name="home_carbs_eaten_label">กินคาร์โบไฮเดรตแล้ว</string>
+    <string name="home_fats_goal_label">ไขมันก็เหลือ</string>
+    <string name="home_fats_eaten_label">ไขมันกินแล้ว</string>
+    <string name="home_fiber_goal_label">ไฟเบอร์เหลือ</string>
+    <string name="home_fiber_eaten_label">ไฟเบอร์กินแล้ว</string>
+    <string name="home_sugar_goal_label">น้ำตาลเหลือ</string>
+    <string name="home_sugar_eaten_label">น้ำตาลกินแล้ว</string>
+    <string name="home_sodium_goal_label">โซเดียมเหลือ</string>
+    <string name="home_sodium_eaten_label">โซเดียมกินแล้ว</string>
+    <string name="home_nutrition_ratio_mg">%1$d / %2$dมก</string>
+
+
+    <!-- HomeCards :  Health Score Card & Advice -->
+    <string name="home_health_score_advice_zero">บันทึกมื้อแรกของคุณวันนี้เพื่อดูคะแนนสุขภาพตามรายละเอียดโภชนาการ</string>
+    <string name="home_health_score_advice_very_low">ค่าเฉลี่ยสำหรับวันนี้อยู่ในระดับต่ำ ลองพิจารณาโปรตีน ไฟเบอร์ และน้ำตาลหรือโซเดียมให้น้อยลง</string>
+    <string name="home_health_score_advice_low">มีพื้นที่ให้ปรับปรุง ลองเพิ่มผักและโปรตีนคุณภาพ</string>
+    <string name="home_health_score_advice_medium">คุณกำลังติดตาม รักษาสัดส่วนให้คงที่และดูน้ำตาล โซเดียม และไฟเบอร์</string>
+    <string name="home_health_score_advice_good">วันนี้สมดุลดี เลือกอาหารที่มีสารอาหารหนาแน่นต่อไป</string>
+    <string name="home_health_score_advice_excellent">ความสมดุลที่ยอดเยี่ยมในวันนี้ สร้างนิสัยที่สอดคล้องกันต่อไป</string>
+    <string name="home_health_score_title">คะแนนสุขภาพ</string>
+    <string name="home_health_score_value">%1$d/10</string>
+
+
+    <!-- HomeCards : Step Card -->
+    <string name="steps_card_title">ขั้นตอน</string>
+    <string name="steps_status_permission_not_granted">ไม่ได้รับอนุญาต</string>
+    <string name="steps_status_hc_not_installed">ไม่ได้ติดตั้ง</string>
+    <string name="steps_status_hc_unavailable">ไม่พร้อมใช้งาน</string>
+    <string name="steps_secondary_est_kcal">data %1$d กิโลแคลอรี</string>
+    <string name="steps_secondary_no_data_yet">ยังไม่มีข้อมูล</string>
+    <string name="steps_secondary_connect">เชื่อมต่อ</string>
+    <string name="steps_hint_connect_google_health">เชื่อมต่อ Google Health เพื่อติดตามก้าวของคุณ</string>
+    <string name="steps_hint_install_health_connect">ติดตั้ง Health Connect เพื่อติดตามก้าวของคุณ</string>
+    <string name="steps_hint_hc_unavailable">Health Connect ไม่พร้อมใช้งานบนอุปกรณ์นี้</string>
+    <string name="steps_hint_retry">การซิงค์ล้มเหลว แตะเพื่อลองอีกครั้ง</string>
+
+
+    <!-- HomeCards : Workout Card -->
+    <string name="workout_card_title">ออกกำลังกาย</string>
+    <string name="workout_card_unit_kcal">กิโลแคลอรี</string>
+
+
+    <!-- HomeCards : Weight Card -->
+    <string name="weight_card_title">น้ำหนัก</string>
+    <string name="weight_card_of_goal">ของเป้าหมาย</string>
+
+
+    <!-- HomeCards : Fasting Card -->
+    <string name="fasting_card_plan_title">แผนการถือศีลอด</string>
+    <string name="fasting_card_start_time">เวลาเริ่มต้น</string>
+    <string name="fasting_card_end_time">เวลาสิ้นสุด</string>
+
+
+    <!-- HomeCards : Water Card -->
+    <string name="water_intake_title">น้ำ</string>
+    <string name="water_intake_cups_format">(%1$d ถ้วย)</string>
+
+
+    <!-- =========================
+         ProgressScreen
+         ========================= -->
+    <string name="progress_screen_title">ความคืบหน้า</string>
+    <string name="progress_tab_this_week">สัปดาห์นี้</string>
+    <string name="progress_tab_last_week">สัปดาห์ที่แล้ว</string>
+    <string name="progress_tab_two_weeks_ago">2 สัปดาห์ ที่ผ่านมา</string>
+    <string name="progress_tab_three_weeks_ago">3 สัปดาห์ ที่ผ่านมา</string>
+    <string name="progress_error_load_failed">โหลดล้มเหลว</string>
+    <string name="workout_chart_error_load_failed">โหลดแผนภูมิการออกกำลังกายล้มเหลว</string>
+    <string name="water_chart_error_load_failed">โหลดแผนภูมิน้ำล้มเหลว</string>
+
+
+    <!-- =========================
+         BMI Card / BMI Info Dialog
+         ========================= -->
+    <string name="bmi_card_title">ค่าดัชนีมวลกายของคุณ</string>
+    <string name="bmi_card_subtitle">น้ำหนักของคุณคือ</string>
+
+    <string name="bmi_status_underweight">น้ำหนักน้อยเกินไป</string>
+    <string name="bmi_status_healthy">สุขภาพดี</string>
+    <string name="bmi_status_overweight">น้ำหนักเกิน</string>
+    <string name="bmi_status_obese">อ้วน</string>
+    <string name="bmi_status_unknown">ไม่ทราบ</string>
+
+    <string name="bmi_range_underweight">&lt;18.5</string>
+    <string name="bmi_range_healthy">18.5–24.9</string>
+    <string name="bmi_range_overweight">25.0–29.9</string>
+    <string name="bmi_range_obese">&gt;30.0</string>
+
+    <string name="bmi_info_title">ค่าดัชนีมวลกายคืออะไร?</string>
+    <string name="bmi_info_subtitle">ดัชนีมวลกาย</string>
+    <string name="bmi_info_formula_title">สูตร</string>
+    <string name="bmi_info_formula_value">BMI = น้ำหนัก (กก.) / ส่วนสูง (ตร.ม.)</string>
+    <string name="bmi_info_meaning_title">มันบอกอะไรคุณ</string>
+    <string name="bmi_info_meaning_body">ค่าดัชนีมวลกายช่วยประเมินว่าน้ำหนักตัวของคุณอยู่ในช่วงที่ดีต่อสุขภาพโดยทั่วไปหรือไม่</string>
+    <string name="bmi_info_note_title">เก็บไว้ในใจ</string>
+    <string name="bmi_info_note_body">BMI เป็นแนวทางทั่วไป ไม่ได้วัดไขมันในร่างกาย มวลกล้ามเนื้อ หรือสุขภาพโดยรวมโดยตรง</string>
+    <string name="bmi_info_cta">เข้าใจแล้ว</string>
+
+
+    <!-- =========================
+         NutritionChartCard
+         ========================= -->
+    <string name="progress_chart_7day_avg_calories">เฉลี่ย 7 วัน</string>
+    <string name="progress_chart_value_cals">%1$d แคลอรี่</string>
+    <string name="progress_chart_15day_avg_calories">เฉลี่ย 15 วัน</string>
+    <string name="progress_chart_loading_total_calories_text">---.-แคล</string>
+    <string name="progress_chart_loading_delta">↑ --%%</string>
+    <string name="progress_chart_delta_placeholder">--%%</string>
+    <string name="progress_chart_total_calories">แคลอรี่ทั้งหมด</string>
+    <string name="progress_chart_cals">แคลอรี่</string>
+    <string name="progress_legend_protein">โปรตีน</string>
+    <string name="progress_legend_carbs">คาร์โบไฮเดรต</string>
+    <string name="progress_legend_fats">ไขมัน</string>
+    <string name="progress_keep_it_up">ติดตามมัน! การเริ่มต้นเป็นส่วนที่ยากที่สุด!</string>
+
+    <string name="progress_day_sun">ดวงอาทิตย์</string>
+    <string name="progress_day_mon">จันทร์</string>
+    <string name="progress_day_tue">อ</string>
+    <string name="progress_day_wed">พ</string>
+    <string name="progress_day_thu">พฤ</string>
+    <string name="progress_day_fri">ศุกร์</string>
+    <string name="progress_day_sat">นั่ง</string>
+
+    <string name="progress_tooltip_calories">แคลอรี่</string>
+    <string name="progress_tooltip_protein">โปรตีน</string>
+    <string name="progress_tooltip_carbs">คาร์โบไฮเดรต</string>
+    <string name="progress_tooltip_fats">ไขมัน</string>
+    <string name="progress_tooltip_label_format">%1$s:</string>
+    <string name="progress_tooltip_grams_value">%1$d ก</string>
+    <string name="progress_tooltip_plain_value">%1$d</string>
+
+
+    <!-- =========================
+         MicronutrientChartCard
+         ========================= -->
+    <string name="progress_micronutrients_title">สารอาหารรอง</string>
+    <string name="progress_chart_grams">ก</string>
+    <string name="progress_chart_7day_avg">เฉลี่ย 7 วัน</string>
+    <string name="progress_legend_fiber">ไฟเบอร์</string>
+    <string name="progress_legend_sugar">น้ำตาล</string>
+    <string name="progress_legend_sodium">โซเดียม</string>
+    <string name="progress_micronutrients_keep_it_up">รักษาสมดุลของเส้นใย น้ำตาล และโซเดียม</string>
+    <string name="progress_tooltip_fiber">ไฟเบอร์</string>
+    <string name="progress_tooltip_sugar">น้ำตาล</string>
+    <string name="progress_tooltip_sodium">โซเดียม</string>
+    <string name="progress_tooltip_mg_value">%1$d มก</string>
+
+
+    <!-- =========================
+         WorkoutChartCard
+         ========================= -->
+    <string name="workout_chart_goal_reached">วันนี้บรรลุเป้าหมายแล้ว</string>
+    <string name="workout_chart_goal_left">%1$d เหลืออีก 1 กิโลแคลอรีจึงจะบรรลุเป้าหมายสำหรับวันนี้</string>
+    <string name="workout_chart_title">ออกกำลังกายเผาผลาญ</string>
+    <string name="workout_chart_info_dialog_body">รวมบันทึกการออกกำลังกายและแคลอรี่กิจกรรมโดยประมาณจากจำนวนก้าวในแต่ละวัน</string>
+    <string name="workout_chart_unit_kcal">กิโลแคลอรี</string>
+    <string name="workout_chart_goal">เป้าหมาย</string>
+    <string name="workout_chart_value_kcal">%1$d กิโลแคลอรี</string>
+    <string name="workout_chart_7day_avg">เฉลี่ย 7 วัน</string>
+    <string name="workout_chart_loading">กำลังโหลด...</string>
+    <string name="workout_legend_burned">การออกกำลังกายถูกเผาไหม้</string>
+    <string name="workout_legend_daily_goal">เป้าหมายรายวัน</string>
+    <string name="workout_tooltip_burned">เผา</string>
+    <string name="workout_tooltip_kcal_value">%1$d กิโลแคลอรี</string>
+
+
+    <!-- =========================
+         WaterChartCard
+         ========================= -->
+    <string name="water_chart_goal_reached">ถึงเป้าหมายแล้วสำหรับวันนี้</string>
+    <string name="water_chart_goal_left_ml">เหลืออีก %1$s ml ในการบรรลุเป้าหมายสำหรับวันนี้</string>
+    <string name="water_chart_title">ปริมาณน้ำ</string>
+    <string name="water_chart_unit_ml">มล</string>
+    <string name="water_chart_goal">เป้าหมาย</string>
+    <string name="water_chart_value_ml">%1$s มล</string>
+    <string name="water_chart_7day_avg">เฉลี่ย 7 วัน</string>
+    <string name="water_chart_loading">กำลังโหลด...</string>
+    <string name="water_legend_intake">การบริโภค</string>
+    <string name="water_legend_daily_goal">เป้าหมายรายวัน</string>
+    <string name="water_tooltip_intake">การบริโภค</string>
+    <string name="water_tooltip_ml_value">%1$d มล</string>
+
+
+    <!-- =========================
+         ProgressAverageOverviewSection
+         ========================= -->
+    <string name="progress_average_tab_7_days">7 วัน</string>
+    <string name="progress_average_tab_15_days">15 วัน</string>
+    <string name="progress_average_tab_30_days">30 วัน</string>
+    <string name="progress_average_tab_60_days">60 วัน</string>
+
+    <string name="progress_average_overview_title">ภาพรวมโดยเฉลี่ย</string>
+    <string name="progress_average_overview_subtitle">ไม่รวมวันนี้และเฉลี่ยเฉพาะวันที่มีข้อมูล</string>
+    <string name="progress_average_days_badge">%1$d วันเฉลี่ย</string>
+    <string name="progress_average_loading">กำลังโหลดค่าเฉลี่ย...</string>
+    <string name="progress_average_total_calories">แคลอรี่ทั้งหมด</string>
+    <string name="progress_average_protein">โปรตีน</string>
+    <string name="progress_average_carbs">คาร์โบไฮเดรต</string>
+    <string name="progress_average_fats">ไขมัน</string>
+    <string name="progress_average_fiber">ไฟเบอร์</string>
+    <string name="progress_average_sugar">น้ำตาล</string>
+    <string name="progress_average_sodium">โซเดียม</string>
+    <string name="progress_average_workout">การออกกำลังกายถูกเผาไหม้</string>
+    <string name="progress_average_water">ปริมาณน้ำ</string>
+    <string name="progress_average_health_score">คะแนนสุขภาพ</string>
+    <string name="progress_average_steps">ขั้นตอน</string>
+    <string name="progress_average_health_score_value">%1$.1f / 10</string>
+    <string name="progress_average_steps_value">%1$s ขั้นตอน</string>
+
+
+    <!--WeightScreen-->
+    <string name="weight_title">น้ำหนัก</string>
+    <string name="weight_overview_title">ภาพรวม</string>
+    <string name="weight_history_title">ประวัติศาสตร์</string>
+    <string name="weight_delete_success">ลบเรียบร้อยแล้ว!</string>
+    <string name="weight_delete_failed">ลบไม่สำเร็จ โปรดลองอีกครั้ง</string>
+    <string name="weight_log_weight">บันทึกน้ำหนัก</string>
+
+
+    <!-- WeightComponents -->
+    <string name="weight_card_to_goal_weight">เพื่อเป้าหมายน้ำหนัก</string>
+    <string name="weight_card_current_weight">น้ำหนักปัจจุบัน</string>
+    <string name="weight_card_achieved_goal_format">บรรลุเป้าหมาย %1$s%%</string>
+    <string name="weight_chart_tab_30_days">30 วัน</string>
+    <string name="weight_chart_tab_60_days">60 วัน</string>
+    <string name="weight_chart_tab_90_days">90 วัน</string>
+    <string name="weight_chart_tab_all_time">ตลอดเวลา</string>
+    <string name="weight_chart_title">เทรนด์น้ำหนัก</string>
+    <string name="weight_chart_goal_progress_badge">%1$s%% ของเป้าหมาย</string>
+    <string name="weight_chart_goal_label">เป้าหมาย</string>
+    <string name="weight_chart_to_goal">%1$s ถึงเป้าหมาย</string>
+    <string name="weight_goal_chart_empty_hint">บันทึกน้ำหนักเพื่อเริ่มเทรนด์ของคุณ</string>
+    <string name="weight_chart_motivation">ทุกก้าวเล็กๆ จะทำให้คุณเข้าใกล้เป้าหมายมากขึ้น</string>
+    <string name="weight_history_weight_label">น้ำหนัก</string>
+    <string name="weight_history_change_label">เปลี่ยน</string>
+    <string name="weight_history_trend_loss">การสูญเสีย</string>
+    <string name="weight_history_trend_gain">ได้รับ</string>
+    <string name="weight_history_trend_stable">มั่นคง</string>
+
+
+    <!-- FastingPlansScreen -->
+    <string name="fasting_plan_title">แผนการถือศีลอด</string>
+    <string name="start_time">เวลาเริ่มต้น</string>
+    <string name="end_time">เวลาสิ้นสุด</string>
+    <string name="fasting_notification_info_status_on">การช่วยเตือนเปิดอยู่ หากได้รับอนุญาตจากอุปกรณ์ การแจ้งเตือนเหล่านี้จะเกิดซ้ำทุกวัน</string>
+    <string name="fasting_notification_info_status_off">การช่วยเตือนปิดอยู่ เปิดสวิตช์บนการ์ดการอดอาหารที่บ้านเพื่อรับการแจ้งเตือนเหล่านี้</string>
+    <string name="fasting_notification_info_status_enabled_label">บน</string>
+    <string name="fasting_notification_info_status_disabled_label">ปิด</string>
+    <string name="fasting_notification_info_title">การแจ้งเตือนทำงานอย่างไร</string>
+    <string name="fasting_notification_info_subtitle">แผน %1$s ของคุณสิ้นสุดที่ %2$s เมื่อเปิดการแจ้งเตือน CaloShape จะส่งการแจ้งเตือนรายวันสองครั้ง</string>
+    <string name="fasting_notification_info_at_time">ที่ %1$s</string>
+    <string name="fasting_notification_info_start_title">หน้าต่างการกินเริ่มต้นขึ้น</string>
+    <string name="fasting_notification_info_start_body">คุณสามารถเริ่มรับประทานอาหารและบันทึกมื้ออาหารได้เมื่อจำเป็น</string>
+    <string name="fasting_notification_info_endsoon_title">หน้าต่างการกินจะหมดลงเร็วๆ นี้</string>
+    <string name="fasting_notification_info_endsoon_body">หนึ่งชั่วโมงก่อนหน้าต่างจะปิดเวลา %1$s CaloShape จะเตือนให้คุณทานอาหารมื้อสุดท้ายให้เสร็จ</string>
+
+    <string name="fasting_plan_desc_14_10">ผ่อนคลายด้วยจังหวะที่สม่ำเสมอ 14 ชั่วโมงเพื่อรีเซ็ตสัญญาณความอยากอาหารและพลังงาน</string>
+    <string name="fasting_plan_desc_16_8">เหตุผลหนึ่งที่ผู้คนชื่นชอบ—16 ชั่วโมงเพื่อมีสมาธิและอยู่ในวิถีที่ไร้น้ำหนัก</string>
+    <string name="fasting_plan_desc_12_12">การแบ่งสมดุล: รวดเร็ว 12 ชั่วโมง รับประทานอาหารภายในกรอบเวลา 12 ชั่วโมง เหมาะสำหรับผู้เริ่มต้น</string>
+    <string name="fasting_plan_desc_18_6">อดอาหาร 18 ชั่วโมง โดยมีกรอบเวลารับประทานอาหาร 6 ชั่วโมง — ตารางที่น้อยกว่า 16:8</string>
+    <string name="fasting_plan_desc_20_4">มุ่งความสนใจไปที่เลเซอร์อยู่เสมอ—มื้ออาหารที่มีสติ 1-2 มื้อภายในกรอบเวลาอันจำกัด 4 ชั่วโมง</string>
+    <string name="fasting_plan_desc_22_2">ทานอาหารมื้อเดียวโดยตั้งใจในช่วงเวลา 2 ชั่วโมง—ดื่มน้ำให้มากขึ้น</string>
+
+    <string name="fasting_picker_title">ตั้งเวลาเริ่มต้นการอดอาหารของคุณ</string>
+    <string name="fasting_picker_subtitle">เราจะเตือนคุณในเวลานี้ในแต่ละวันเมื่อหน้าต่างการกินของคุณเริ่มต้นขึ้น</string>
+
+
+    <!-- FastingReceiver -->
+    <string name="fasting_start_title">%1$s หน้าต่างกินเปิดอยู่</string>
+    <string name="fasting_start_body">หน้าต่างการกินของคุณรัน %1$s–%2$s บันทึกมื้ออาหารตามที่คุณไปเพื่อให้วันนี้แม่นยำ</string>
+    <string name="fasting_endsoon_title">เหลือเวลาอีก 1 ชั่วโมงในหน้าต่างรับประทานอาหารของคุณ</string>
+    <string name="fasting_endsoon_body">หน้าต่างของคุณปิดเมื่อ %1$s หากคุณวางแผนมื้อสุดท้าย ให้บันทึกข้อมูลไว้ก่อนที่จะสรุป</string>
+
+
+
+
+    <!-- WorkoutHistoryScreen -->
+    <string name="workout_history_title">ประวัติการออกกำลังกาย</string>
+    <string name="workout_history_summary_label">วันนี้เผา</string>
+    <string name="workout_history_summary_body">ติดตามความคืบหน้าการเผาผลาญการออกกำลังกายของวันนี้</string>
+    <string name="workout_history_today_label">วันนี้</string>
+    <string name="workout_history_avg_daily_value">%1$d กิโลแคลอรี</string>
+    <string name="workout_history_avg_daily_label">เฉลี่ย 7 วัน / วัน</string>
+    <string name="workout_history_avg_label">เฉลี่ย 7 วัน / เซสชัน</string>
+    <string name="workout_history_avg_value">%1$d กิโลแคลอรี</string>
+    <string name="workout_history_unit_kcal">กิโลแคลอรี</string>
+
+    <string name="workout_history_empty_title">ไม่มีการออกกำลังกายล่าสุด</string>
+    <string name="workout_history_empty">ไม่มีการออกกำลังกายในช่วง 7 วันที่ผ่านมา</string>
+    <string name="workout_history_recent_title">เซสชันล่าสุด</string>
+    <string name="workout_history_minutes">%1$d นาที</string>
+    <string name="workout_history_kcal">%1$d</string>
+    <string name="workout_history_date_time">%1$s · %2$s</string>
+    <string name="workout_history_kcal_with_unit">%1$d กิโลแคลอรี</string>
+
+    <string name="workout_history_loading_title">กำลังซิงค์การออกกำลังกาย</string>
+    <string name="workout_history_loading">กำลังโหลดประวัติการออกกำลังกาย...</string>
+    <string name="workout_history_error_title">ประวัติไม่พร้อมใช้งาน</string>
+
+    <string name="workout_history_delete_failed">ลบไม่สำเร็จ โปรดลองอีกครั้ง</string>
+    <string name="workout_history_delete_success">ลบเรียบร้อยแล้ว!</string>
+    <string name="workout_history_error">ไม่สามารถโหลดประวัติการออกกำลังกายได้</string>
+
+
+    <!-- WorkoutTrackerSheet -->
+    <string name="workout_tracker_title">ติดตามการออกกำลังกาย</string>
+    <string name="workout_tracker_subtitle">อธิบายประเภทของการออกกำลังกายและระยะเวลา</string>
+    <string name="workout_tracker_example_placeholder">ตัวอย่าง: วิ่ง 45 นาที</string>
+
+    <string name="workout_tracker_select_from_list">หรือเลือกจากรายการ</string>
+    <string name="workout_tracker_show_less">แสดงน้อยลง</string>
+    <string name="workout_tracker_show_more">แสดงเพิ่มเติม (%1$d)</string>
+
+    <string name="workout_tracker_estimating_fallback">กำลังประมาณ...</string>
+    <string name="workout_tracker_estimating_analyzing">กำลังวิเคราะห์กิจกรรมของคุณ...</string>
+    <string name="workout_tracker_estimating_numbers">กำลังทำงานกับตัวเลขของคุณ...</string>
+    <string name="workout_tracker_estimating_calories">การประมาณความพยายาม การคำนวณแคลอรี่...</string>
+    <string name="workout_tracker_do_not_close">กรุณาอย่าปิดแอพหรือล็อคอุปกรณ์ของคุณ</string>
+
+    <string name="workout_tracker_kcal_value">%1$d กิโลแคลอรี</string>
+    <string name="workout_tracker_minutes_activity">%1$d นาที %2$s</string>
+    <string name="workout_tracker_add_workout">เพิ่มการออกกำลังกาย</string>
+
+    <string name="workout_tracker_activity_content_label">กิจกรรมการออกกำลังกาย</string>
+    <string name="workout_preset_kcal_per_30_min">%1$d กิโลแคลอรี / 30 นาที</string>
+
+    <string name="workout_tracker_save_success">บันทึกเรียบร้อยแล้ว!</string>
+    <string name="workout_tracker_save_failed">บันทึกไม่สำเร็จ โปรดลองอีกครั้ง</string>
+    <string name="workout_tracker_refresh_failed">รีเฟรชล้มเหลว โปรดลองอีกครั้ง</string>
+    <string name="workout_tracker_cancel">ยกเลิก</string>
+    <string name="workout_tracker_try_again">ลองอีกครั้ง</string>
+    <string name="workout_tracker_scan_failed_title">เอ่อโอ้! การสแกนล้มเหลว</string>
+    <string name="workout_tracker_scan_failed_body">คำอธิบายการออกกำลังกายอาจไม่ถูกต้อง หรือการเชื่อมต่ออินเทอร์เน็ตอ่อน เช่น วิ่ง 30 นาที</string>
+
+
+    <!-- workoutNameStringRes : Workout preset display names -->
+    <string name="workout_preset_walking">เดิน</string>
+    <string name="workout_preset_running">วิ่ง</string>
+    <string name="workout_preset_cycling">การปั่นจักรยาน</string>
+    <string name="workout_preset_swimming">การว่ายน้ำ</string>
+    <string name="workout_preset_hiking">การเดินป่า</string>
+    <string name="workout_preset_aerobic_exercise">การออกกำลังกายแบบแอโรบิก</string>
+    <string name="workout_preset_strength_training">การฝึกความแข็งแกร่ง</string>
+    <string name="workout_preset_weight_training">การฝึกน้ำหนัก</string>
+    <string name="workout_preset_basketball">บาสเกตบอล</string>
+    <string name="workout_preset_soccer">ฟุตบอล</string>
+    <string name="workout_preset_tennis">เทนนิส</string>
+    <string name="workout_preset_yoga">โยคะ</string>
+    <string name="workout_preset_badminton">แบดมินตัน</string>
+    <string name="workout_preset_baseball">เบสบอล</string>
+    <string name="workout_preset_softball">ซอฟท์บอล</string>
+    <string name="workout_preset_volleyball">วอลเลย์บอล</string>
+    <string name="workout_preset_table_tennis">เทเบิลเทนนิส</string>
+    <string name="workout_preset_dancing_general">การเต้นรำ</string>
+    <string name="workout_preset_zumba">ซุมบ้า</string>
+    <string name="workout_preset_pilates">พิลาทิส</string>
+
+
+    <!-- DurationPickerSheet -->
+    <string name="workout_duration_sheet_subtitle">เพิ่มเวลาออกกำลังกายนี้ลงในบันทึกกิจกรรมของคุณ</string>
+    <string name="workout_duration_hour_short">ชม</string>
+    <string name="workout_duration_minute_short">นาที</string>
+    <string name="workout_duration_save">บันทึก</string>
+    <string name="workout_duration_cancel">ยกเลิก</string>
+
+
+    <!-- HomeQuickActionMenu -->
+    <string name="quick_add_saved_foods">อาหารที่บันทึกไว้</string>
+    <string name="quick_add_scan_food">สแกนอาหาร</string>
+
+
+    <!-- CameraScreen -->
+    <string name="camera_mode_food">สแกนอาหาร</string>
+    <string name="camera_mode_barcode">บาร์โค้ด</string>
+    <string name="camera_mode_label">ฉลากอาหาร</string>
+    <string name="camera_mode_album">ภาพถ่าย</string>
+    <string name="camera_barcode_title">เครื่องสแกนบาร์โค้ด</string>
+    <string name="camera_label_title">เครื่องสแกนฉลาก</string>
+    <string name="camera_need_permission">ต้องได้รับอนุญาตจากกล้องจึงจะสแกนได้</string>
+
+
+    <!-- RecentUploadCard -->
+    <string name="foodlog_pending_analysis">กำลังวิเคราะห์อาหารของคุณ...</string>
+    <string name="foodlog_analysis_done">การวิเคราะห์เสร็จสมบูรณ์</string>
+    <string name="recent_upload_kcal_text">🔥 %1$d แคลอรี่</string>
+    <string name="recent_upload_protein_text">🥩 %1$dg</string>
+    <string name="recent_upload_carbs_text">🌾 %1$dก</string>
+    <string name="recent_upload_fat_text">🥑 %1$dก</string>
+
+
+    <!-- RecentlyUploadedEmptyCard -->
+    <string name="recently_uploaded_empty">อัพโหลดล่าสุด</string>
+    <string name="recently_uploaded_empty_hint">แตะ + เพื่อเพิ่มมื้อแรกของวัน</string>
+
+
+    <!-- SavedFoodsScreen -->
+    <string name="saved_foods_keep_15_days_hint">อาหารที่บันทึกไว้ในช่วง 15 วันที่ผ่านมา</string>
+    <string name="saved_foods_unsave_dialog_title">นำออกจากอาหารที่บันทึกไว้ใช่ไหม</string>
+    <string name="saved_foods_unsave_dialog_message">อาหารนี้จะถูกนำออกจากรายการอาหารที่บันทึกไว้ แต่จะยังคงอยู่ในบันทึกล่าสุดของคุณ</string>
+    <string name="saved_foods_unsave_dialog_confirm">ลบ</string>
+    <string name="saved_foods_title">อาหารที่บันทึกไว้</string>
+    <string name="saved_foods_kcal">🔥 %1$d แคลอรี่</string>
+    <string name="saved_foods_protein">🥩 %1$dg</string>
+    <string name="saved_foods_carbs">🌾 %1$dก</string>
+    <string name="saved_foods_fat">🥑 %1$dก</string>
+    <string name="saved_foods_detail">รายละเอียด</string>
+    <string name="saved_foods_load_failed_title">โหลดอาหารที่บันทึกไว้ไม่สำเร็จ</string>
+
+
+    <!-- RecentUploadDetailScreen -->
+    <string name="foodlog_detail_load_failed">โหลดล้มเหลว</string>
+    <string name="foodlog_unknown_food">อาหารที่ไม่รู้จัก</string>
+    <string name="foodlog_no_image">ไม่มีภาพ</string>
+
+    <string name="foodlog_detail_title">โภชนาการ</string>
+    <string name="foodlog_detail_calories">แคลอรี่</string>
+    <string name="foodlog_detail_protein">โปรตีน</string>
+    <string name="foodlog_detail_carbs">คาร์โบไฮเดรต</string>
+    <string name="foodlog_detail_fats">ไขมัน</string>
+    <string name="foodlog_detail_fiber">ไฟเบอร์</string>
+    <string name="foodlog_detail_sugar">น้ำตาล</string>
+    <string name="foodlog_detail_sodium">โซเดียม</string>
+    <string name="foodlog_detail_health_score">คะแนนสุขภาพ</string>
+
+
+    <!-- DeleteFoodLogDialog -->
+    <string name="foodlog_delete_dialog_title">ลบบันทึกใช่ไหม</string>
+    <string name="foodlog_delete_dialog_message">คุณแน่ใจหรือไม่ว่าต้องการลบบันทึกมื้ออาหารนี้อย่างถาวร การดำเนินการนี้ไม่สามารถยกเลิกได้</string>
+    <string name="foodlog_delete_dialog_confirm">ลบ</string>
+
+
+    <!-- Settings -->
+    <string name="settings_title">การตั้งค่า</string>
+    <string name="settings_choose_language">เลือกภาษา</string>
+    <string name="delete_account_dialog_title">ลบบัญชี?</string>
+    <string name="delete_account_dialog_body">คุณแน่ใจหรือไม่ว่าต้องการลบบัญชีของคุณ? การดำเนินการนี้จะลบข้อมูล CaloShape ของคุณอย่างถาวร รวมถึงบันทึกอาหาร บันทึกน้ำหนัก และการตั้งค่าที่เกี่ยวข้อง การดำเนินการนี้ไม่สามารถยกเลิกได้</string>
+
+
+    <string name="restore_subscription_dialog_success_title">กู้คืนการสมัครสมาชิกแล้ว</string>
+    <string name="restore_subscription_dialog_payment_issue_title">คืนการสมัครสมาชิกแล้ว แต่ปัญหาการชำระเงินยังคงอยู่</string>
+    <string name="restore_subscription_dialog_no_active_title">ไม่พบการสมัคร Google Play ที่ใช้งานอยู่</string>
+    <string name="restore_subscription_dialog_failed_title">การคืนค่าล้มเหลว</string>
+    <string name="restore_subscription_dialog_bound_title">การสมัครสมาชิกเชื่อมโยงกับบัญชีอื่น</string>
+    <string name="restore_subscription_dialog_success_body">การสมัครของคุณได้รับการคืนค่าไปยังบัญชี CaloShape นี้</string>
+    <string name="restore_subscription_dialog_payment_issue_body">การสมัครของคุณเชื่อมโยงกับบัญชี CaloShape นี้ แต่ Google Play ยังคงรายงานปัญหาการชำระเงิน โปรดอัปเดตวิธีการชำระเงินของคุณใน Google Play เพื่อให้การสมัครของคุณใช้งานได้</string>
+    <string name="restore_subscription_dialog_no_active_body">เราไม่พบการสมัครสมาชิก CaloShape ที่ใช้งานอยู่ในบัญชี Google Play ปัจจุบัน ตรวจสอบให้แน่ใจว่าคุณใช้บัญชี Google Play ที่ทำการซื้อ จากนั้นลองอีกครั้ง</string>
+    <string name="restore_subscription_dialog_failed_body">เราไม่สามารถคืนค่าการสมัครของคุณได้ในขณะนี้ โปรดตรวจสอบการเชื่อมต่อของคุณและลองอีกครั้งจากการตั้งค่า</string>
+    <string name="restore_subscription_dialog_bound_body">การสมัคร Google Play นี้เชื่อมโยงกับบัญชี CaloShape อื่นแล้ว ลงชื่อเข้าใช้บัญชีเดิมเพื่อใช้งาน หรือติดต่อฝ่ายสนับสนุนหากคุณไม่สามารถเข้าถึงบัญชีนั้นได้</string>
+    <string name="restore_subscription_dialog_body">เราพบการสมัครสมาชิกหรือการทดลองใช้ CaloShape ที่ใช้งานได้ซึ่งเชื่อมโยงกับบัญชี Google Play บนอุปกรณ์นี้ คุณสามารถคืนค่าเป็นบัญชี CaloShape ที่คุณลงชื่อเข้าใช้อยู่ได้</string>
+
+    <!-- Settings : Payment issue dialog -->
+    <string name="payment_issue_dialog_title">รักษาพรีเมี่ยมของคุณให้ใช้งานได้</string>
+    <string name="payment_issue_dialog_body">การเข้าถึงแบบพรีเมียมของคุณยังคงใช้งานได้ในขณะนี้ แต่การชำระเงินของคุณต้องการการดำเนินการ</string>
+    <string name="payment_issue_dialog_supporting_body">อัปเดตวิธีการชำระเงิน Google Play ของคุณเพื่อหลีกเลี่ยงการสูญเสียการสแกน AI และฟีเจอร์ระดับพรีเมียม</string>
+    <string name="payment_issue_dialog_update_payment">อัปเดตวิธีการชำระเงิน</string>
+    <string name="payment_issue_dialog_badge">การชำระเงินต้องการความสนใจ</string>
+    <string name="payment_issue_dialog_premium_access">การเข้าถึงระดับพรีเมียม</string>
+    <string name="payment_issue_dialog_active_for_now">ใช้งานอยู่ในขณะนี้</string>
+    <string name="payment_issue_dialog_next_step">ขั้นตอนต่อไป</string>
+    <string name="payment_issue_dialog_update_payment_short">อัพเดทการชำระเงิน</string>
+
+
+    <string name="settings_personal_details">รายละเอียดส่วนบุคคล</string>
+    <string name="settings_adjust_macronutrients">ปรับธาตุอาหารหลัก</string>
+    <string name="settings_weight_history">ประวัติน้ำหนัก</string>
+    <string name="settings_ring_colors_explained">คู่มือสีวงแหวนปฏิทิน</string>
+    <string name="settings_inbox">กล่องจดหมาย</string>
+
+
+    <string name="settings_terms_conditions">ข้อกำหนดและเงื่อนไข</string>
+    <string name="settings_privacy_policy">นโยบายความเป็นส่วนตัว</string>
+    <string name="settings_support_email">อีเมลสนับสนุน</string>
+    <string name="settings_delete_account">ลบบัญชี?</string>
+    <string name="settings_version">เวอร์ชัน %1$s</string>
+
+
+    <string name="settings_membership_payment">การชำระเงิน</string>
+    <string name="settings_membership_update_payment">อัพเดทการชำระเงิน</string>
+    <string name="settings_membership_premium">พรีเมี่ยม</string>
+    <string name="settings_membership_active_member">สมาชิกที่ใช้งานอยู่</string>
+    <string name="settings_membership_trial">การทดลอง</string>
+    <string name="settings_membership_access_active">การเข้าถึงที่ใช้งานอยู่</string>
+    <string name="settings_membership_free">ฟรี</string>
+    <string name="settings_membership_upgrade">อัพเกรด</string>
+
+
+    <!-- Settings: referral card -->
+    <string name="settings_invite_friends">ชวนเพื่อน</string>
+    <string name="settings_premium_reward">รางวัลพรีเมี่ยม</string>
+    <string name="settings_share_caloshape_with_friends">แบ่งปัน CaloShape AI\n กับเพื่อนของคุณ</string>
+    <string name="settings_referral_reward_content">พวกเขาสมัครสมาชิก คุณได้รับฟรี 30 วัน</string>
+    <string name="settings_get_30_days_free">รับฟรี 30 วัน</string>
+    <string name="settings_days_label">วัน</string>
+
+    <string name="settings_appearance_light">แสงสว่าง</string>
+    <string name="settings_appearance_dark">มืด</string>
+    <string name="settings_appearance_mode_title">เลือกลักษณะที่ปรากฏ</string>
+    <string name="settings_appearance_light_description">รักษากระแสให้สดใสสะอาดตา</string>
+    <string name="settings_appearance_dark_description">ใช้อินเทอร์เฟซที่เข้มกว่าและนุ่มนวลกว่าสำหรับการติดตามทุกวัน</string>
+    <string name="settings_preferences">การตั้งค่า</string>
+    <string name="settings_appearance">รูปร่าง</string>
+
+    <string name="settings_language">ภาษา</string>
+
+
+    <!-- Settings: Widget Guide -->
+    <string name="settings_widgets_title">วิดเจ็ต</string>
+    <string name="settings_widgets_how_to_add">จะเพิ่มได้อย่างไร?</string>
+    <string name="log_your_food">เข้าสู่ระบบอาหารของคุณ</string>
+
+    <string name="settings_calories_goal_label">แคลอรี่ที่เหลืออยู่</string>
+    <string name="settings_protein_goal_label">เหลือโปรตีน</string>
+    <string name="settings_carbs_goal_label">คาร์โบไฮเดรตเหลือ</string>
+    <string name="settings_fats_goal_label">ไขมันก็เหลือ</string>
+    <string name="settings_widget_scan_food">สแกนอาหาร</string>
+    <string name="settings_widget_barcode">บาร์โค้ด</string>
+
+    <string name="settings_logout_loading">กำลังออกจากระบบ...</string>
+    <string name="settings_logout">ออกจากระบบ</string>
+    <string name="settings_logout_failed">ออกจากระบบล้มเหลว ตรวจสอบการเชื่อมต่อของคุณแล้วลองอีกครั้ง</string>
+
+
+    <!-- EditNameScreen -->
+    <string name="settings_edit_your_name_title">แก้ไขชื่อของคุณ</string>
+    <string name="edit_name_placeholder">ใส่ชื่อของคุณ</string>
+
+
+    <!-- Referral Screen -->
+    <string name="referral_title">ชวนเพื่อน</string>
+    <string name="referral_premium_reward">รางวัลพรีเมี่ยม</string>
+    <string name="referral_invite_friends">ชวนเพื่อน</string>
+    <string name="referral_earn_30_days_free">รับ 30 วันฟรี</string>
+    <string name="referral_reward_unlocks_after_no_refund">รางวัลจะปลดล็อคหลังจากที่เพื่อนของคุณสมัครสมาชิกโดยไม่มีการคืนเงิน</string>
+    <string name="referral_code_copied">คัดลอกรหัสอ้างอิงแล้ว</string>
+    <string name="referral_your_promo_code">รหัสโปรโมชั่นของคุณ</string>
+    <string name="referral_copy">สำเนา</string>
+    <string name="referral_share">แบ่งปัน</string>
+    <string name="referral_how_it_works">มันทำงานอย่างไร</string>
+    <string name="referral_step_1_title">แบ่งปันรหัสโปรโมชั่นของคุณ</string>
+    <string name="referral_step_1_subtitle">ส่งรหัสของคุณให้เพื่อนที่ต้องการติดตามอาหารอย่างชาญฉลาดยิ่งขึ้น</string>
+    <string name="referral_step_2_title">เพื่อนของคุณสมัครรับข้อมูล</string>
+    <string name="referral_step_2_subtitle">พวกเขาเริ่มการสมัครสมาชิก CaloShape AI แบบชำระเงินโดยใช้คำเชิญของคุณ</string>
+    <string name="referral_step_3_title">ไม่มีการคืนเงินแล้วให้รางวัล</string>
+    <string name="referral_step_3_subtitle">หลังจากยืนยันการสมัครสมาชิกแล้วโดยไม่มีการคืนเงิน ระยะเวลาพรีเมียมของคุณจะถูกขยายออกไป</string>
+    <string name="referral_share_text">เข้าร่วมกับฉันใน CaloShape AI! รหัสอ้างอิงของฉันคือ:\n%1$s\n\n%2$s</string>
+    <string name="referral_share_subject">เข้าร่วมกับฉันใน CaloShape AI</string>
+    <string name="referral_share_chooser_title">แบ่งปันผ่านทาง</string>
+    <string name="referral_unable_to_open_share_options">ไม่สามารถเปิดตัวเลือกการแชร์ได้</string>
+
+
+    <!-- PersonalDetailsScreen -->
+    <string name="personal_details_goal_weight">น้ำหนักเป้าหมาย</string>
+    <string name="personal_details_change_goal">เปลี่ยนเป้าหมาย</string>
+    <string name="personal_details_body_details_section">รายละเอียดร่างกาย</string>
+    <string name="personal_details_current_weight">น้ำหนักปัจจุบัน</string>
+    <string name="personal_details_height">ความสูง</string>
+    <string name="personal_details_age">อายุ</string>
+    <string name="personal_details_gender">เพศ</string>
+    <string name="personal_details_starting_weight">น้ำหนักเริ่มต้น</string>
+    <string name="personal_details_daily_goals_section">เป้าหมายรายวัน</string>
+    <string name="personal_details_daily_step_goal">เป้าหมายก้าวรายวัน</string>
+    <string name="personal_details_daily_water_goal">เป้าหมายน้ำรายวัน</string>
+    <string name="personal_details_daily_workout_goal">เป้าหมายการออกกำลังกายในแต่ละวัน</string>
+    <string name="personal_details_age_value">%1$d ปี</string>
+    <string name="personal_details_steps_value">%1$d ขั้นตอน</string>
+    <string name="personal_details_water_value">%1$d มล</string>
+    <string name="personal_details_kcal_value">%1$d กิโลแคลอรี</string>
+    <string name="gender_male">ชาย</string>
+    <string name="gender_female">หญิง</string>
+    <string name="gender_other">อื่น</string>
+
+
+    <!-- EditGoalWeightScreen -->
+    <string name="edit_goal_weight_title">แก้ไขน้ำหนักเป้าหมาย</string>
+    <string name="edit_goal_weight_progress_note">เราจะใช้เป้าหมายนี้เพื่อคำนวณความก้าวหน้าของคุณ</string>
+    <string name="edit_goal_update_failed">ไม่สามารถอัปเดตน้ำหนักเป้าหมายได้</string>
+
+
+    <!-- RecordWeightScreen -->
+    <string name="record_weight_camera_failed_to_open">ไม่สามารถเปิดกล้องได้</string>
+    <string name="record_weight_camera_permission_required">ต้องได้รับอนุญาตจากกล้อง</string>
+    <string name="record_weight_camera_preview_unavailable">กล้องใช้งานได้เฉพาะในแอปที่ทำงานอยู่เท่านั้น ไม่ใช่ในการแสดงตัวอย่าง</string>
+    <string name="record_weight_camera_screen_unavailable">กล้องไม่สามารถใช้งานได้ในหน้าจอนี้</string>
+    <string name="record_weight_no_camera_app_found">ไม่พบแอปกล้องในอุปกรณ์นี้</string>
+    <string name="record_weight_enable_camera_permission_settings">โปรดเปิดใช้งานการอนุญาตกล้องในการตั้งค่า</string>
+
+    <string name="record_weight_title">บันทึกน้ำหนัก</string>
+    <string name="record_weight_save_failed">บันทึกล้มเหลว</string>
+    <string name="record_weight_date_note">น้ำหนักนี้จะถูกบันทึกไว้สำหรับ %1$s</string>
+
+    <string name="weight_date_sheet_title">เลือกวันที่ชั่งน้ำหนักของคุณ</string>
+    <string name="weight_date_sheet_subtitle">คุณขึ้นไปบนตาชั่งเมื่อไหร่?</string>
+    <string name="weight_date_sheet_month_january">มกราคม</string>
+    <string name="weight_date_sheet_month_february">กุมภาพันธ์</string>
+    <string name="weight_date_sheet_month_march">มีนาคม</string>
+    <string name="weight_date_sheet_month_april">เมษายน</string>
+    <string name="weight_date_sheet_month_may">อาจ</string>
+    <string name="weight_date_sheet_month_june">มิถุนายน</string>
+    <string name="weight_date_sheet_month_july">กรกฎาคม</string>
+    <string name="weight_date_sheet_month_august">สิงหาคม</string>
+    <string name="weight_date_sheet_month_september">กันยายน</string>
+    <string name="weight_date_sheet_month_october">ตุลาคม</string>
+    <string name="weight_date_sheet_month_november">พฤศจิกายน</string>
+    <string name="weight_date_sheet_month_december">ธันวาคม</string>
+
+    <string name="record_weight_camera_not_available">กล้องไม่พร้อมใช้งาน</string>
+    <string name="record_weight_take_photo">ถ่ายรูป</string>
+    <string name="record_weight_retake_photo">ถ่ายรูปใหม่</string>
+
+
+    <!-- EditHeightScreen -->
+    <string name="edit_height_title">แก้ไขความสูงของคุณ</string>
+    <string name="edit_height_privacy_note">เราใช้ความสูงของคุณเพื่อปรับปรุงประสบการณ์ของคุณและความแม่นยำในการประมาณแคลอรี่เท่านั้น</string>
+
+
+    <!-- EditAgeScreen -->
+    <string name="edit_age_title">แก้ไขอายุของคุณ</string>
+    <string name="edit_age_privacy_note">เราใช้อายุของคุณเพื่อปรับปรุงประสบการณ์ของคุณและความแม่นยำในการประมาณแคลอรี่เท่านั้น</string>
+
+
+    <!-- EditGenderScreen -->
+    <string name="edit_gender_title">แก้ไขเพศของคุณ</string>
+    <string name="edit_gender_privacy_note">ใช้เพื่อปรับแต่งและปรับปรุงความแม่นยำในการประมาณการเท่านั้น</string>
+
+
+    <!-- EditStartingWeightScreen -->
+    <string name="edit_starting_weight_title">แก้ไขน้ำหนักเริ่มต้น</string>
+    <string name="edit_start_weight_baseline_note">เราจะใช้เป็นพื้นฐานสำหรับความก้าวหน้าของคุณ</string>
+    <string name="edit_starting_weight_update_failed">ไม่สามารถอัปเดตน้ำหนักเริ่มต้นได้</string>
+
+
+    <!-- EditDailyStepGoalScreen -->
+    <string name="edit_step_goal_title">แก้ไขเป้าหมายขั้นตอน</string>
+    <string name="edit_daily_step_goal_previous_format">เป้าหมายก่อนหน้า %1$d ก้าว</string>
+    <string name="edit_daily_step_goal_input_label">เป้าหมายก้าวรายวัน</string>
+
+
+    <!-- EditWaterGoalScreen -->
+    <string name="edit_water_goal_title">แก้ไขเป้าหมายน้ำ</string>
+    <string name="edit_water_goal_previous_format">เป้าหมายก่อนหน้า %1$d มล</string>
+    <string name="edit_water_goal_input_label">เป้าหมายน้ำรายวัน (มล.)</string>
+
+
+    <!-- EditWorkoutGoalScreen -->
+    <string name="edit_workout_goal_title">แก้ไขเป้าหมายการออกกำลังกาย</string>
+    <string name="edit_workout_goal_previous_format">เป้าหมายก่อนหน้า %1$d กิโลแคลอรี</string>
+    <string name="edit_workout_goal_input_label">เป้าหมายการออกกำลังกายรายวัน (kcal)</string>
+
+
+    <!-- EditNutritionGoalsScreen -->
+    <string name="edit_nutrition_goals_title">แก้ไขเป้าหมายทางโภชนาการ</string>
+    <string name="edit_nutrition_calorie_goal">เป้าหมายแคลอรี่</string>
+    <string name="edit_nutrition_protein_goal">เป้าหมายโปรตีน</string>
+    <string name="edit_nutrition_carb_goal">เป้าหมายคาร์โบไฮเดรต</string>
+    <string name="edit_nutrition_fat_goal">เป้าหมายอ้วน</string>
+    <string name="edit_nutrition_view_micronutrients">ดู สารอาหารรอง</string>
+    <string name="edit_nutrition_fiber_goal">เป้าหมายไฟเบอร์</string>
+    <string name="edit_nutrition_sugar_goal">เป้าหมายน้ำตาล</string>
+    <string name="edit_nutrition_sodium_goal">เป้าหมายโซเดียม</string>
+    <string name="edit_nutrition_auto_generate_goals">สร้างเป้าหมายอัตโนมัติ</string>
+
+
+    <!-- RingColorsExplainedScreen -->
+    <string name="ring_colors_explained_title">สีแหวนวันที่</string>
+    <string name="ring_colors_explained_intro">วงแหวนวันที่ช่วยให้คุณเห็นได้อย่างรวดเร็วว่าแต่ละวันเปรียบเทียบกับเป้าหมายแคลอรี่ของคุณอย่างไร</string>
+    <string name="ring_colors_preview_brand">CaloShape AI</string>
+    <string name="ring_colors_explained">ดูตัวอย่างแหวนวันที่</string>
+
+    <string name="ring_colors_preview_day_5">5</string>
+    <string name="ring_colors_preview_day_6">6</string>
+    <string name="ring_colors_preview_day_7">7</string>
+    <string name="ring_colors_preview_day_8">8</string>
+    <string name="ring_colors_preview_day_9">9</string>
+    <string name="ring_colors_preview_day_10">10</string>
+    <string name="ring_colors_preview_day_11">11</string>
+    <string name="ring_colors_explained_subtitle">อธิบายสีแหวน</string>
+
+    <string name="ring_colors_green_title">สีเขียว</string>
+    <string name="ring_colors_green_body">ตามเป้าหมาย (ภายใน 100 แคลอรี่ของเป้าหมาย)</string>
+    <string name="ring_colors_yellow_title">สีน้ำตาล</string>
+    <string name="ring_colors_yellow_body">เกินเป้าหมายของคุณ 100-199 แคลอรี่</string>
+    <string name="ring_colors_red_title">สีแดง</string>
+    <string name="ring_colors_red_body">200+ แคลอรี่เกินเป้าหมายของคุณ</string>
+    <string name="ring_colors_dotted_title">ลายจุด</string>
+    <string name="ring_colors_dotted_body">ไม่มีการบันทึกมื้ออาหารในวันนั้น</string>
+
+
+    <!-- NotificationInboxScreen Inbox -->
+    <string name="notification_inbox_title">กล่องจดหมาย</string>
+    <string name="notification_inbox_header_title">การแจ้งเตือน CaloShape</string>
+    <string name="notification_inbox_header_body">การแจ้งเตือนแพลตฟอร์มทั้งหมดจะปรากฏที่นี่</string>
+    <string name="notification_inbox_status_read">อ่าน</string>
+    <string name="notification_inbox_status_unread">ยังไม่ได้อ่าน</string>
+
+    <string name="notification_inbox_loading_title">กำลังโหลดการแจ้งเตือน</string>
+    <string name="notification_inbox_loading">กำลังโหลดการแจ้งเตือน...</string>
+    <string name="notification_inbox_empty_title">ยังไม่มีการแจ้งเตือน</string>
+    <string name="notification_inbox_empty_body">การแจ้งเตือนแพลตฟอร์มจะปรากฏที่นี่</string>
+    <string name="notification_inbox_error_title">ไม่สามารถโหลดการแจ้งเตือนได้</string>
+    <string name="notification_inbox_error_body">โปรดตรวจสอบการเชื่อมต่อของคุณแล้วลองอีกครั้ง</string>
+
+
+    <!-- WidgetGuideScreen -->
+    <string name="widget_guide_title">เพิ่มวิดเจ็ต</string>
+    <string name="widget_guide_hero_title">เพิ่ม CaloShape ลงในหน้าจอหลักของคุณ</string>
+    <string name="widget_guide_hero_body">ติดตามแคลอรี่ มาโคร และการดำเนินการด่วนโดยไม่ต้องเปิดแอป</string>
+    <string name="widget_guide_steps_title">ทำตามขั้นตอนเหล่านี้</string>
+    <string name="widget_guide_step_1_title">กดหน้าจอหลักค้างไว้</string>
+    <string name="widget_guide_step_1_body">กดพื้นที่ว่างบนหน้าจอหลักของโทรศัพท์ค้างไว้จนกระทั่งเมนูปรากฏขึ้น</string>
+    <string name="widget_guide_step_2_title">แตะวิดเจ็ต</string>
+    <string name="widget_guide_step_2_body">เลือกวิดเจ็ตจากเมนูหน้าจอหลัก</string>
+    <string name="widget_guide_step_3_title">ค้นหา CaloShape AI</string>
+    <string name="widget_guide_step_3_body">เลื่อนหรือค้นหา CaloShape AI จากนั้นเปิดรายการวิดเจ็ต</string>
+    <string name="widget_guide_step_4_title">ลากวิดเจ็ตเข้าที่</string>
+    <string name="widget_guide_step_4_body">แตะวิดเจ็ตค้างไว้ ลากไปยังหน้าจอหลักที่คุณต้องการ จากนั้นยกนิ้วขึ้น</string>
+    <string name="widget_guide_tip_title">ไม่พบเมนูวิดเจ็ตใช่ไหม</string>
+    <string name="widget_guide_tip_body">โทรศัพท์บางยี่ห้อและตัวเรียกใช้งานใช้ชื่อที่แตกต่างกัน ลองใช้การตั้งค่าหน้าแรก กดไอคอนแอป CaloShape AI ค้างไว้ หรือค้นหาวิดเจ็ตในตัวเรียกใช้งานของคุณ</string>
+    <string name="widget_guide_done">เข้าใจแล้ว</string>
+    <string name="widget_guide_mock_home">บ้าน</string>
+    <string name="widget_guide_mock_widgets">วิดเจ็ต</string>
+
+
+    <!-- CaloShapeNavHost -->
+    <string name="url_terms">https://caloshape.com/terms</string>
+    <string name="url_privacy">https://caloshape.com/privacy</string>
+    <string name="url_support_email">mailto:support@caloshape.com?subject=Support%20คำขอ</string>
+    <string name="camera_manual_entry_not_ready">การป้อนข้อมูลด้วยตนเองยังไม่พร้อม ตอนนี้กำลังเปลี่ยนไปใช้การสแกนฉลาก</string>
+
+
+    <!-- Android home screen widgets -->
+    <string name="widget_preview_goal_kcal">1830</string>
+    <string name="widget_preview_protein">120ก</string>
+    <string name="widget_preview_carbs">180ก</string>
+    <string name="widget_preview_fats">60ก</string>
+    <string name="widget_calories_left">แคลอรี่ที่เหลืออยู่</string>
+    <string name="widget_protein_left">เหลือโปรตีน</string>
+    <string name="widget_carbs_left">คาร์โบไฮเดรตเหลือ</string>
+    <string name="widget_fats_left">ไขมันก็เหลือ</string>
+    <string name="widget_calories_description">วิดเจ็ตแคลอรี่ CaloShape</string>
+    <string name="widget_macro_actions_description">มาโคร CaloShape และวิดเจ็ตการดำเนินการด่วน</string>
+    <string name="widget_log_your_food">เข้าสู่ระบบอาหารของคุณ</string>
+    <string name="widget_scan_food">สแกนอาหาร</string>
+    <string name="widget_barcode">บาร์โค้ด</string>
+    <string name="widget_grams_format">%1$dก</string>
+
+
+
+
+
+    <!-- =========================
+                    Not use
+         ========================= -->
+    <!-- PremiumRewardsScreen Not use -->
+    <string name="premium_rewards_subscription_title">การสมัครสมาชิก</string>
+    <string name="premium_rewards_history_title">ประวัติรางวัล</string>
+    <string name="premium_rewards_loading_membership">กำลังโหลดการเป็นสมาชิก...</string>
+    <string name="premium_rewards_status_title">สถานะพรีเมียม</string>
+    <string name="premium_rewards_latest_title">รางวัลล่าสุด</string>
+    <string name="premium_rewards_source_format">ที่มา: %1$s</string>
+    <string name="premium_rewards_channel_format">ช่อง: %1$s</string>
+    <string name="premium_rewards_grant_status_format">สถานะการให้สิทธิ์: %1$s</string>
+    <string name="premium_rewards_status_format">สถานะ: %1$s</string>
+    <string name="premium_rewards_google_defer_format">Google เลื่อนออกไป: %1$s</string>
+    <string name="premium_rewards_granted_at_format">ได้รับที่: %1$s</string>
+    <string name="premium_rewards_old_expiry_format">วันหมดอายุเก่า: %1$s</string>
+    <string name="premium_rewards_new_expiry_format">วันหมดอายุใหม่: %1$s</string>
+    <string name="premium_rewards_error_format">ข้อผิดพลาด: %1$s</string>
+    <string name="premium_rewards_days_added_format">วันที่เพิ่ม: %1$d</string>
+    <string name="premium_rewards_empty_title">ยังไม่มีรางวัล</string>
+    <string name="premium_rewards_empty_body">การอ้างอิงที่สำเร็จจะปรากฏที่นี่หลังจากการยืนยันแล้ว</string>
+    <string name="premium_rewards_channel_google_play_defer">ขยายวันที่เรียกเก็บเงินของ Google Play</string>
+    <string name="premium_rewards_channel_backend_only">ใช้รางวัลพรีเมี่ยมแล้ว</string>
+    <string name="premium_rewards_grant_success">ความสำเร็จ</string>
+    <string name="premium_rewards_status_retrying">กำลังลองอีกครั้ง</string>
+    <string name="premium_rewards_grant_not_granted">ไม่ได้รับ</string>
+    <string name="premium_rewards_google_defer_success">ขยายโดย Google Play</string>
+    <string name="premium_rewards_google_defer_failed">ล้มเหลว</string>
+    <string name="premium_rewards_google_defer_not_required">ไม่จำเป็น</string>
+
+
+</resources>

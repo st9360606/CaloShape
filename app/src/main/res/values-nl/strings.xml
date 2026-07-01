@@ -1,0 +1,1130 @@
+<resources>
+    <!-- App_Name -->
+    <string name="app_name">CaloShape</string>
+
+
+    <!-- common -->
+    <string name="common_close">Dichtbij</string>
+    <string name="common_save">Redden</string>
+    <string name="common_cancel">Annuleren</string>
+    <string name="common_continue_btn">Doorgaan</string>
+    <string name="common_skip">Overslaan</string>
+    <string name="common_dash">—</string>
+    <string name="common_error">Fout</string>
+
+    <string name="common_save_success">Succesvol opgeslagen!</string>
+    <string name="common_today">Vandaag</string>
+    <string name="common_yesterday">Gisteren</string>
+    <string name="common_unavailable_dash">—</string>
+    <string name="common_retry">Opnieuw proberen</string>
+
+    <string name="common_delete">Verwijderen</string>
+    <string name="common_deleting">Verwijderen…</string>
+
+    <string name="common_understood">Begrepen</string>
+    <string name="common_revert">Terugdraaien</string>
+
+
+    <!-- ApiErrorUiMapper -->
+    <string name="err_barcode_not_found_title">Product niet gevonden</string>
+    <string name="err_barcode_not_found_msg">We konden deze streepjescode niet vinden. Probeer een foto te maken van het voedingsetiket.</string>
+
+    <string name="err_barcode_lookup_failed_title">Opzoeken mislukt</string>
+    <string name="err_barcode_lookup_failed_msg">We konden de productdatabase niet bereiken. Controleer uw verbinding en probeer het opnieuw.</string>
+
+    <string name="err_generic_title">Er is iets misgegaan</string>
+    <string name="err_generic_msg">Probeer het opnieuw.</string>
+
+    <string name="err_network_title">Netwerkprobleem</string>
+    <string name="err_network_msg">Controleer uw internetverbinding en probeer het opnieuw.</string>
+
+    <string name="err_photo_title">Foto nodig</string>
+    <string name="err_photo_msg">Probeer de foto opnieuw te maken met betere belichting.</string>
+
+    <string name="err_manual_title">Handmatig invoeren</string>
+    <string name="err_manual_msg">U kunt gegevens handmatig invoeren.</string>
+
+    <string name="err_support_title">Neem contact op met ondersteuning</string>
+    <string name="err_support_msg">Neem contact op met de ondersteuning als het probleem zich blijft voordoen.</string>
+
+    <string name="cta_try_label">Voedingsetiket scannen</string>
+    <string name="cta_enter_manually">Handmatig invoeren</string>
+
+    <string name="cta_check_network">Controleer netwerk</string>
+    <string name="cta_retake">Opnieuw nemen</string>
+    <string name="cta_contact_support">Neem contact op met ondersteuning</string>
+    <string name="cta_rescan_barcode">Streepjescode opnieuw scannen</string>
+
+
+
+
+    <!-- Landing Screen -->
+    <string name="landing_title">Maak een foto, ken de calorieën.</string>
+    <string name="choose_language">Kies taal</string>
+    <string name="cta_get_started">Ga aan de slag</string>
+    <string name="cta_login_prefix">Heeft u al een account?</string>
+    <string name="cta_login">Log in</string>
+
+
+    <!-- RequireSignInScreen -->
+    <string name="auth_sign_in_account_title">Meld u aan bij uw account</string>
+    <string name="auth_sign_in_with_google">Log in met Google</string>
+    <string name="auth_signin_with_email">Ga verder met e-mail</string>
+
+
+    <!-- SignInSheet-->
+    <string name="signin_title">Inloggen</string>
+    <string name="signin_with_apple">Log in met Apple</string>
+    <string name="signin_with_google">Log in met Google</string>
+    <string name="signin_with_email">Ga verder met e-mail</string>
+    <string name="signin_legal_hint">Als u doorgaat, gaat u akkoord met de voorwaarden van CaloShape</string>
+    <string name="signin_terms">Voorwaarden</string>
+    <string name="signin_and">En</string>
+    <string name="signin_privacy">Privacybeleid</string>
+    <string name="signin_url_terms">https://caloshape.com/terms</string>
+    <string name="signin_url_privacy">https://caloshape.com/privacy</string>
+
+
+    <!-- SignInSheetHost 控制 Sheet 是否顯示、處理狀態、接外部 callback -->
+    <string name="err_google_no_account_hint">Tip: voeg een Google-account toe via Instellingen → Accounts en probeer het opnieuw</string>
+    <string name="err_google_signin_failed">Inloggen bij Google is mislukt</string>
+
+
+    <!-- EmailEnterScreen-->
+    <string name="email_sign_in_title">Inloggen</string>
+    <string name="input_box_email_label">E-mail</string>
+
+
+    <!-- EmailCodeScreen OTP -->
+    <string name="resend">Opnieuw verzenden</string>
+    <string name="resend_countdown">Opnieuw verzenden (%1$d s)</string>
+
+    <string name="err_otp_invalid">De code is onjuist. Probeer het opnieuw.</string>
+    <string name="err_otp_too_many_attempts">Te veel pogingen. Probeer het later opnieuw.</string>
+    <string name="err_network_io">Netwerkfout. Probeer het opnieuw.</string>
+    <string name="err_server_unavailable">Dienst is tijdelijk niet beschikbaar. Probeer het later opnieuw.</string>
+    <string name="err_generic">Er is iets misgegaan. Probeer het opnieuw.</string>
+
+    <string name="confirm_email_title">Bevestig uw e-mail</string>
+    <string name="confirm_email_hint">Voer de 4-cijferige code in die we zojuist hebben verzonden</string>
+    <string name="didnt_receive_code">Heb je de code niet ontvangen?</string>
+
+
+    <!-- Onboarding: GenderSelectionScreen -->
+    <string name="onboard_gender_title">Kies uw geslacht</string>
+    <string name="onboard_gender_subtitle">Dit wordt gebruikt om uw aangepaste plan te kalibreren.</string>
+    <string name="onboard_male">Mannelijk</string>
+    <string name="onboard_female">Vrouwelijk</string>
+    <string name="onboard_other">Ander</string>
+
+
+    <!-- Onboarding: ReferralSourceScreen -->
+    <string name="onboard_referral_title">Hoe heb je ons ontdekt?</string>
+
+
+    <!-- Onboarding: AgeSelectionScreen -->
+    <string name="onboard_age_title">Hoe oud ben je?</string>
+    <string name="onboard_age_subtitle">We gebruiken uw leeftijd alleen om uw ervaring en de nauwkeurigheid van uw calorieschatting te verbeteren.</string>
+
+
+    <!-- Onboarding: HeightSelectionScreen -->
+    <string name="onboard_height_title">Hoe lang ben jij?</string>
+    <string name="onboard_height_subtitle">We gebruiken uw gegevens alleen om uw ervaring en onze calorieschattingen te verbeteren.</string>
+    <string name="onboard_height_hint">Dit wordt gebruikt om uw aangepaste plan te kalibreren.</string>
+
+
+    <!-- Onboarding: WeightSelectionScreen -->
+    <string name="onboard_weight_title">Hoeveel weeg je?</string>
+    <string name="onboard_weight_subtitle">We gebruiken uw gegevens alleen om uw ervaring en onze calorieschattingen te verbeteren.</string>
+    <string name="onboard_weight_hint">Dit wordt gebruikt om uw aangepaste plan te kalibreren.</string>
+
+
+    <!-- Onboarding: ExerciseFrequencyScreen  -->
+    <string name="onboard_ex_freq_title">Hoe vaak traint u per week?</string>
+    <string name="onboard_ex_freq_subtitle">Dit helpt u bij het kalibreren van uw persoonlijke plan.</string>
+    <string name="ex_freq_0_title">0</string>
+    <string name="ex_freq_0_sub">Gevestigd</string>
+    <string name="ex_freq_1_3_title">1–3</string>
+    <string name="ex_freq_1_3_sub">Lichte activiteit</string>
+    <string name="ex_freq_3_5_title">3–5</string>
+    <string name="ex_freq_3_5_sub">Matige activiteit</string>
+    <string name="ex_freq_6_7_plus_title">6–7</string>
+    <string name="ex_freq_6_7_plus_sub">Hoge activiteit</string>
+    <string name="ex_freq_7_plus_title">7+</string>
+    <string name="ex_freq_7_plus_sub">Zeer hoge activiteit</string>
+
+
+    <!-- Onboarding: GoalSelectionScreen  -->
+    <string name="onboard_goal_title">Wat is je doel?</string>
+    <string name="onboard_goal_subtitle">Dit helpt ons om jouw calorieplan op maat te maken.</string>
+    <string name="goal_lose">Afvallen</string>
+    <string name="goal_maintain">Behouden</string>
+    <string name="goal_gain">Aankomen</string>
+    <string name="goal_healthy_eating">Gezond eten</string>
+
+
+    <!-- Onboarding: WeightGoalScreen -->
+    <string name="onboard_goal_weight_title">Wat is uw streefgewicht?</string>
+    <string name="onboard_goal_weight_subtitle">Op basis van dit doel stellen we een passender dagelijks calorieadvies voor u op.</string>
+    <string name="onboard_goal_weight_hint">Dit wordt gebruikt om uw aangepaste plan te kalibreren.</string>
+
+
+    <!-- Onboarding: WeightLossComparisonScreen -->
+    <string name="onboard_weight_loss_comparison_title">Het gebruik van CaloShape AI kan uw gewicht\nverliesefficiëntie verdrievoudigen</string>
+    <string name="onboard_weight_loss_comparison_without_ai">Zonder\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_with_ai">Met\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_twenty_percent">20%</string>
+    <string name="onboard_weight_loss_comparison_two_times">3X</string>
+    <string name="onboard_weight_loss_comparison_caption">CaloShape AI maakt alles eenvoudig\nen houdt u verantwoordelijk</string>
+
+
+    <!-- Onboarding: NotificationPermissionScreen -->
+    <string name="onboard_notif_title">Zorg ervoor dat elke maaltijd telt!</string>
+    <string name="onboard_notif_subtitle">Schakel meldingen in voor vriendelijke herinneringen om maaltijden in te voeren, zodat uw calorieën, macro\'s en voortgang op het goede spoor blijven. Slip-ups gebeuren; Tijdige duwtjes helpen je snel terug te stuiteren.</string>
+    <string name="onboard_allow_notifications_cta">Meldingen toestaan</string>
+    <string name="notification_mock_app_title">AI Calorieteller</string>
+    <string name="onboard_notif_title_got_a_sec">Je maaltijd logt niet vanzelf 😉</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">Registreer deze maaltijd om uw calorieën en macro\'s op het goede spoor te houden.</string>
+
+
+    <!-- Onboarding: HealthConnectIntroScreen -->
+    <string name="onboard_hc_connect_title_prefix">Maak verbinding met</string>
+    <string name="onboard_hc_connect_title_service">Gezondheid verbinden</string>
+    <string name="onboard_hc_connect_body">Synchroniseer dagelijkse activiteiten tussen CaloShape AI en gezondheidsapps om completere records en inzichten te krijgen.</string>
+    <string name="onboard_hc_permission_rationale_title_prefix">Waarom CaloShape gebruikt</string>
+    <string name="onboard_hc_permission_rationale_title_service">Gezondheid verbinden</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape leest uw stappen, actieve calorieën en trainingsgegevens om het dagelijkse activiteitenverbruik te schatten, uw caloriedashboard bij te werken en uw voortgangsinzichten te verbeteren. U kunt de toegang op elk gewenst moment intrekken in Health Connect.</string>
+    <string name="onboard_hc_permission_rationale_button">Ik heb het</string>
+
+
+    <!-- Onboarding: ComputationProgressScreen -->
+    <string name="progress_hero_title">Het maken van uw persoonlijke plan</string>
+    <string name="progress_hero_subtitle">We gebruiken uw doelen, lichaamsgegevens en voorkeuren om uw dagelijkse doelen aan te passen.</string>
+    <string name="progress_footer_hint">Dit duurt slechts een moment</string>
+    <string name="progress_center_caption">Het voorbereiden van uw resultaten</string>
+    <string name="progress_phase_pill_1">Het beoordelen van uw profiel</string>
+    <string name="progress_phase_pill_2">Uw caloriedoel berekenen</string>
+    <string name="progress_phase_pill_3">Breng uw dagelijkse macro\'s in evenwicht</string>
+    <string name="progress_phase_pill_4">Het finaliseren van uw gezondheidsinzichten</string>
+    <string name="progress_card_title">Het opzetten van uw plan</string>
+    <string name="progress_row_calorie_target">Dagelijks caloriedoel</string>
+    <string name="progress_row_carb_distribution">Koolhydraten distributie</string>
+    <string name="progress_row_protein_recommendation">Eiwitaanbeveling</string>
+    <string name="progress_row_fat_recommendation">Dikke aanbeveling</string>
+    <string name="progress_row_health_score_estimate">Schatting van de gezondheidsscore</string>
+
+
+    <!-- Onboarding: HealthPlanScreen -->
+    <string name="plan_cta_start">Ga aan de slag</string>
+    <string name="plan_title_congrats">Gefeliciteerd!</string>
+    <string name="plan_subtitle_ready">Jouw persoonlijke gezondheidsplan is klaar!</string>
+    <string name="plan_disclaimer">Bronnen vindt u hieronder: Bekijk alle referenties ›</string>
+    <string name="plan_unit_kcal_day">kcal/dag</string>
+
+    <string name="plan_macros_proteins">Eiwit</string>
+    <string name="plan_macros_carbs">Koolhydraten</string>
+    <string name="plan_macros_fat">Vetten</string>
+    <string name="plan_unit_g">G</string>
+
+    <string name="plan_water_daily">Dagelijks water</string>
+    <string name="plan_weight_current">Huidig ​​gewicht</string>
+    <string name="plan_weight_delta">Naar streefgewicht</string>
+
+    <string name="plan_goals_title">Hoe u\nuw doelen bereikt</string>
+    <string name="plan_goal_card_health_scores">Gezondheidsscores begeleiden u, zodat gewoonten zich op natuurlijke wijze vormen</string>
+    <string name="plan_goal_card_track_meals">Log maaltijden in met één tik, consistent blijven is eenvoudig</string>
+    <string name="plan_goal_card_daily_calories">Zie de dagelijkse calorieën duidelijk en verlies nooit het overzicht</string>
+    <string name="plan_goal_card_balance_macros">Koolhydraten × eiwit × vet, slimme balans, betere resultaten</string>
+    <string name="plan_sources_based_on">Gebaseerd op officiële voedingsrichtlijnen,\nalleen ter referentie, geen medisch advies.</string>
+    <string name="plan_sources_more">Bekijk alle referenties ›</string>
+    <string name="plan_sources_hide">Bronnen verbergen</string>
+
+
+    <!-- Onboarding: OnboardReferralCodeScreen -->
+    <string name="onboard_referral_code_input">Voer verwijzingscode in\n(optioneel)</string>
+    <string name="onboard_referral_code_subtitle">U kunt deze stap overslaan</string>
+    <string name="onboard_referral_code_input_label">Verwijzingscode</string>
+    <string name="onboard_referral_code_placeholder">Verwijzingscode</string>
+    <string name="onboard_referral_code_submit">Indienen</string>
+    <string name="onboard_referral_code_submitting">Verzenden…</string>
+    <string name="onboard_referral_code_applied">Verwijzingscode toegepast!</string>
+
+    <string name="onboard_referral_code_error_invalid_format">Gebruik alleen letters en cijfers.</string>
+    <string name="onboard_referral_code_error_invalid">We konden deze verwijzingscode niet vinden.</string>
+    <string name="onboard_referral_code_error_self_referral">U kunt uw eigen verwijzingscode niet gebruiken.</string>
+    <string name="onboard_referral_code_error_already_claimed">Op dit account is al een verwijzingscode toegepast.</string>
+    <string name="onboard_referral_code_error_already_subscribed">Geabonneerde accounts kunnen geen verwijzingscode toepassen.</string>
+    <string name="onboard_referral_code_error_disabled">Verwijzing is tijdelijk niet beschikbaar.</string>
+    <string name="onboard_referral_code_error_risk">We kunnen momenteel geen verwijzingscode toepassen.</string>
+    <string name="onboard_referral_code_error_network">Wij kunnen het nu niet toepassen. Probeer het later opnieuw.</string>
+    <string name="onboard_referral_code_error_unknown">De verwijzingscode kan momenteel niet worden toegepast.\nProbeer het later opnieuw.</string>
+
+
+    <!-- Onboarding: OnboardSubscriptionScreen  Paywall -->
+    <string name="subscription_price_per_month_format">%1$s/maand</string>
+    <string name="subscription_price_per_month_unit">/mnd</string>
+    <string name="subscription_price_unavailable_title">Prijs niet beschikbaar</string>
+    <string name="subscription_price_unavailable_body">We kunnen uw lokale Google Play-prijs momenteel niet verkrijgen. Probeer het opnieuw.</string>
+
+
+    <!-- Onboarding: OnboardSubscriptionIntro -->
+    <string name="subscription_intro_title">Ontgrendel CaloShape AI om\nuw doelen sneller te bereiken.</string>
+    <string name="subscription_intro_helper_format">Slechts %1$s per jaar (%2$s)</string>
+    <string name="subscription_start_three_day_free_trial">Probeer 3 dagen gratis</string>
+    <string name="subscription_three_day_trial_helper_format">Slechts %1$s/jaar (%2$s/maand)</string>
+    <string name="subscription_already_owned_restore_required">Uw Google Play-account heeft al een actief CaloShape-abonnement. Herstel het naar dit CaloShape-account voordat u premiumfuncties gebruikt.</string>
+    <string name="subscription_error_no_active_purchase">Geen actieve aankoop gevonden.</string>
+    <string name="subscription_error_restore_failed">Kan aankoop niet herstellen. Probeer het opnieuw.</string>
+    <string name="subscription_error_purchase_failed">Aankoop mislukt. Probeer het opnieuw.</string>
+    <string name="subscription_error_purchase_pending">De betaling wordt verwerkt. Premium-toegang is beschikbaar nadat Google Play de aankoop heeft bevestigd.</string>
+    <string name="subscription_error_trial_eligibility_failed">Kan niet controleren of u in aanmerking komt voor de proefperiode. Probeer het opnieuw.</string>
+    <string name="restore_subscription_dialog_title">Abonnement gevonden</string>
+    <string name="settings_restore_subscription">Abonnement herstellen</string>
+    <string name="restore_subscription_dialog_restoring">Herstellen…</string>
+    <string name="common_maybe_later">Misschien later</string>
+
+
+    <!-- Onboarding: OnboardDiscountSpinScreen-->
+    <string name="subscription_spin_title">Draai om een ​​exclusieve korting van\n te ontgrendelen</string>
+    <string name="subscription_spin_helper_ready">Tik op Draaien om uw exclusieve geschenk te onthullen.</string>
+    <string name="subscription_spin_button">Draai</string>
+    <string name="subscription_spinning_button">Spinnen…</string>
+    <string name="subscription_gift_offer_unlocked">Cadeauaanbieding ontgrendeld</string>
+    <string name="subscription_spin_helper_wait">Wacht tot het wiel stopt.</string>
+    <string name="subscription_spin_helper_revealed">Dit aanbod wordt onthuld nadat het wiel stopt.</string>
+
+
+    <!-- Onboarding: OneTimeOfferHeroCard-->
+    <string name="subscription_gift_unlocked_title">Cadeau ontgrendeld 🎁</string>
+    <string name="subscription_gift_price_unlocked">Cadeauprijs ontgrendeld</string>
+    <string name="subscription_unlock_premium_for_only">Ontgrendel premium voor slechts</string>
+    <string name="subscription_discount_body">Scan maaltijden sneller. Houd macro\'s slimmer bij.\nBlijf dagelijks op schema.</string>
+    <string name="subscription_yearly_price_format">%1$s/jaar</string>
+    <string name="subscription_urgency_coffee">Minder dan een koffie</string>
+    <string name="subscription_urgency_price_gone">Dit scherm sluiten? Deze prijs is weg</string>
+    <string name="subscription_urgency_waiting">Waar wacht je op?</string>
+
+    <string name="subscription_trial_enabled">Gratis proefversie ingeschakeld</string>
+    <string name="subscription_trial_enable_prompt">Weet je het niet zeker? Schakel een gratis proefperiode in</string>
+    <string name="subscription_trial_checking_eligibility">Beschikbaarheid van proefversie controleren...</string>
+    <string name="subscription_trial_already_used">Proefversie al gebruikt</string>
+    <string name="subscription_trial_unavailable">Gratis proefperiode niet beschikbaar</string>
+
+    <string name="subscription_badge_free_trial">Gratis proefperiode</string>
+    <string name="subscription_badge_lowest_price_ever">Laagste prijs ooit</string>
+    <string name="subscription_yearly_plan">Jaarplan</string>
+    <string name="subscription_yearly_plan_price_format">12 maanden · %1$s</string>
+
+    <string name="subscription_start_free_trial">Probeer 3 dagen gratis</string>
+    <string name="subscription_trial_helper">Geen verplichtingen: annuleer op elk moment</string>
+    <string name="subscription_discount_terms_format">Slechts %1$s/jaar (%2$s/maand)</string>
+    <string name="subscription_discount_trial_terms_format">Geen verplichting - Annuleer op elk moment</string>
+
+
+    <!-- HomeScreen -->
+    <string name="recently_uploaded">Onlangs geüpload</string>
+    <string name="workout_membership_verify_failed">Kan lidmaatschap niet verifiëren. Probeer het opnieuw.</string>
+
+
+    <!-- MainBottomBar -->
+    <string name="bottom_nav_home">Thuis</string>
+    <string name="bottom_nav_progress">Voortgang</string>
+    <string name="bottom_nav_weight">Gewicht</string>
+    <string name="bottom_nav_fasting">Vasten</string>
+    <string name="bottom_nav_workout">Training</string>
+
+
+    <!-- =============   HomeCards  ============= -->
+
+    <!-- HomeCards :  Calories Card -->
+    <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
+    <string name="home_calories_goal_label">Calorieën over</string>
+    <string name="home_calories_eaten_label">Calorieën gegeten</string>
+
+
+    <!-- HomeCards :  Nutrition Card -->
+    <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
+    <string name="home_protein_goal_label">Eiwit overgebleven</string>
+    <string name="home_protein_eaten_label">Eiwit gegeten</string>
+    <string name="home_carbs_goal_label">Koolhydraten blijven over</string>
+    <string name="home_carbs_eaten_label">Koolhydraten gegeten</string>
+    <string name="home_fats_goal_label">Vetten zijn overgebleven</string>
+    <string name="home_fats_eaten_label">Vetten gegeten</string>
+    <string name="home_fiber_goal_label">Vezel links</string>
+    <string name="home_fiber_eaten_label">Vezels gegeten</string>
+    <string name="home_sugar_goal_label">Suiker bleef over</string>
+    <string name="home_sugar_eaten_label">Suiker gegeten</string>
+    <string name="home_sodium_goal_label">Natrium links</string>
+    <string name="home_sodium_eaten_label">Natrium gegeten</string>
+    <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
+
+
+    <!-- HomeCards :  Health Score Card & Advice -->
+    <string name="home_health_score_advice_zero">Registreer vandaag nog uw eerste maaltijd om een ​​gezondheidsscore te zien op basis van de voedingsgegevens.</string>
+    <string name="home_health_score_advice_very_low">Het gemiddelde voor vandaag is laag. Overweeg meer eiwitten, vezels en minder suiker of natrium.</string>
+    <string name="home_health_score_advice_low">Er is ruimte voor verbetering. Probeer groenten en hoogwaardige eiwitten toe te voegen.</string>
+    <string name="home_health_score_advice_medium">Je bent op de goede weg. Houd de porties stabiel en let op suiker, natrium en vezels.</string>
+    <string name="home_health_score_advice_good">Goede balans vandaag. Blijf voedzame voedingsmiddelen kiezen.</string>
+    <string name="home_health_score_advice_excellent">Mooie balans vandaag. Blijf consistente gewoonten opbouwen.</string>
+    <string name="home_health_score_title">Gezondheidsscore</string>
+    <string name="home_health_score_value">%1$d/10</string>
+
+
+    <!-- HomeCards : Step Card -->
+    <string name="steps_card_title">Stappen</string>
+    <string name="steps_status_permission_not_granted">Niet geautoriseerd</string>
+    <string name="steps_status_hc_not_installed">Niet geïnstalleerd</string>
+    <string name="steps_status_hc_unavailable">Niet beschikbaar</string>
+    <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
+    <string name="steps_secondary_no_data_yet">Nog geen gegevens</string>
+    <string name="steps_secondary_connect">Verbinden</string>
+    <string name="steps_hint_connect_google_health">Koppel Google Health om uw stappen bij te houden</string>
+    <string name="steps_hint_install_health_connect">Installeer Health Connect om uw stappen bij te houden</string>
+    <string name="steps_hint_hc_unavailable">Health Connect is niet beschikbaar op dit apparaat</string>
+    <string name="steps_hint_retry">Synchronisatie mislukt. Tik om het opnieuw te proberen</string>
+
+
+    <!-- HomeCards : Workout Card -->
+    <string name="workout_card_title">Training</string>
+    <string name="workout_card_unit_kcal">kcal</string>
+
+
+    <!-- HomeCards : Weight Card -->
+    <string name="weight_card_title">Gewicht</string>
+    <string name="weight_card_of_goal">van doel</string>
+
+
+    <!-- HomeCards : Fasting Card -->
+    <string name="fasting_card_plan_title">Vastenplan</string>
+    <string name="fasting_card_start_time">Begintijd</string>
+    <string name="fasting_card_end_time">Eindtijd</string>
+
+
+    <!-- HomeCards : Water Card -->
+    <string name="water_intake_title">Water</string>
+    <string name="water_intake_cups_format">(%1$d kopjes)</string>
+
+
+    <!-- =========================
+         ProgressScreen
+         ========================= -->
+    <string name="progress_screen_title">Voortgang</string>
+    <string name="progress_tab_this_week">Deze week</string>
+    <string name="progress_tab_last_week">Vorige week</string>
+    <string name="progress_tab_two_weeks_ago">2 weken. geleden</string>
+    <string name="progress_tab_three_weeks_ago">3 weken. geleden</string>
+    <string name="progress_error_load_failed">Laden mislukt</string>
+    <string name="workout_chart_error_load_failed">Laden trainingsschema mislukt</string>
+    <string name="water_chart_error_load_failed">Waterkaart laden mislukt</string>
+
+
+    <!-- =========================
+         BMI Card / BMI Info Dialog
+         ========================= -->
+    <string name="bmi_card_title">Uw BMI</string>
+    <string name="bmi_card_subtitle">Je gewicht is</string>
+
+    <string name="bmi_status_underweight">Ondergewicht</string>
+    <string name="bmi_status_healthy">Gezond</string>
+    <string name="bmi_status_overweight">Overgewicht</string>
+    <string name="bmi_status_obese">Zwaarlijvig</string>
+    <string name="bmi_status_unknown">Onbekend</string>
+
+    <string name="bmi_range_underweight">&lt;18,5</string>
+    <string name="bmi_range_healthy">18,5–24,9</string>
+    <string name="bmi_range_overweight">25,0–29,9</string>
+    <string name="bmi_range_obese">&gt;30,0</string>
+
+    <string name="bmi_info_title">Wat is BMI?</string>
+    <string name="bmi_info_subtitle">Body Mass Index</string>
+    <string name="bmi_info_formula_title">Formule</string>
+    <string name="bmi_info_formula_value">BMI = gewicht (kg) / lengte (m²)</string>
+    <string name="bmi_info_meaning_title">Wat het je vertelt</string>
+    <string name="bmi_info_meaning_body">BMI helpt bij het schatten of uw lichaamsgewicht binnen een over het algemeen gezond bereik ligt.</string>
+    <string name="bmi_info_note_title">Houd er rekening mee</string>
+    <string name="bmi_info_note_body">BMI is een algemene richtlijn. Het meet niet rechtstreeks lichaamsvet, spiermassa of algehele gezondheid.</string>
+    <string name="bmi_info_cta">Ik heb het</string>
+
+
+    <!-- =========================
+         NutritionChartCard
+         ========================= -->
+    <string name="progress_chart_7day_avg_calories">Gemiddeld 7 dagen</string>
+    <string name="progress_chart_value_cals">%1$d calorieën</string>
+    <string name="progress_chart_15day_avg_calories">Gemiddeld 15 dagen</string>
+    <string name="progress_chart_loading_total_calories_text">--.- cal</string>
+    <string name="progress_chart_loading_delta">↑ --%%</string>
+    <string name="progress_chart_delta_placeholder">--%%</string>
+    <string name="progress_chart_total_calories">Totaal aantal calorieën</string>
+    <string name="progress_chart_cals">cal</string>
+    <string name="progress_legend_protein">Eiwit</string>
+    <string name="progress_legend_carbs">Koolhydraten</string>
+    <string name="progress_legend_fats">Vetten</string>
+    <string name="progress_keep_it_up">Ga zo door! Beginnen is het moeilijkste deel!</string>
+
+    <string name="progress_day_sun">Zon</string>
+    <string name="progress_day_mon">ma</string>
+    <string name="progress_day_tue">di</string>
+    <string name="progress_day_wed">wo</string>
+    <string name="progress_day_thu">Do</string>
+    <string name="progress_day_fri">Vr</string>
+    <string name="progress_day_sat">Zat</string>
+
+    <string name="progress_tooltip_calories">Calorieën</string>
+    <string name="progress_tooltip_protein">Eiwit</string>
+    <string name="progress_tooltip_carbs">Koolhydraten</string>
+    <string name="progress_tooltip_fats">Vetten</string>
+    <string name="progress_tooltip_label_format">%1$s:</string>
+    <string name="progress_tooltip_grams_value">%1$d g</string>
+    <string name="progress_tooltip_plain_value">%1$d</string>
+
+
+    <!-- =========================
+         MicronutrientChartCard
+         ========================= -->
+    <string name="progress_micronutrients_title">Micronutriënten</string>
+    <string name="progress_chart_grams">G</string>
+    <string name="progress_chart_7day_avg">Gemiddeld 7 dagen</string>
+    <string name="progress_legend_fiber">Vezel</string>
+    <string name="progress_legend_sugar">Suiker</string>
+    <string name="progress_legend_sodium">Natrium</string>
+    <string name="progress_micronutrients_keep_it_up">Houd uw vezels, suiker en natrium in balans.</string>
+    <string name="progress_tooltip_fiber">Vezel</string>
+    <string name="progress_tooltip_sugar">Suiker</string>
+    <string name="progress_tooltip_sodium">Natrium</string>
+    <string name="progress_tooltip_mg_value">%1$d mg</string>
+
+
+    <!-- =========================
+         WorkoutChartCard
+         ========================= -->
+    <string name="workout_chart_goal_reached">Doel vandaag bereikt</string>
+    <string name="workout_chart_goal_left">Er is nog %1$d kcal over om het doel van vandaag te bereiken</string>
+    <string name="workout_chart_title">Training branden</string>
+    <string name="workout_chart_info_dialog_body">Inclusief geregistreerde trainingen en activiteitscalorieën geschat op basis van dagelijkse stappen.</string>
+    <string name="workout_chart_unit_kcal">kcal</string>
+    <string name="workout_chart_goal">Doel</string>
+    <string name="workout_chart_value_kcal">%1$d kcal</string>
+    <string name="workout_chart_7day_avg">Gemiddeld 7 dagen</string>
+    <string name="workout_chart_loading">Laden…</string>
+    <string name="workout_legend_burned">Training verbrand</string>
+    <string name="workout_legend_daily_goal">Dagelijks doel</string>
+    <string name="workout_tooltip_burned">Verbrand</string>
+    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+
+
+    <!-- =========================
+         WaterChartCard
+         ========================= -->
+    <string name="water_chart_goal_reached">Doel bereikt voor vandaag</string>
+    <string name="water_chart_goal_left_ml">Nog %1$s ml over om het doel van vandaag te bereiken</string>
+    <string name="water_chart_title">Wateropname</string>
+    <string name="water_chart_unit_ml">ml</string>
+    <string name="water_chart_goal">Doel</string>
+    <string name="water_chart_value_ml">%1$s ml</string>
+    <string name="water_chart_7day_avg">Gemiddeld 7 dagen</string>
+    <string name="water_chart_loading">Laden…</string>
+    <string name="water_legend_intake">Inname</string>
+    <string name="water_legend_daily_goal">Dagelijks doel</string>
+    <string name="water_tooltip_intake">Inname</string>
+    <string name="water_tooltip_ml_value">%1$d ml</string>
+
+
+    <!-- =========================
+         ProgressAverageOverviewSection
+         ========================= -->
+    <string name="progress_average_tab_7_days">7 dagen</string>
+    <string name="progress_average_tab_15_days">15 dagen</string>
+    <string name="progress_average_tab_30_days">30 dagen</string>
+    <string name="progress_average_tab_60_days">60 dagen</string>
+
+    <string name="progress_average_overview_title">Gemiddeld overzicht</string>
+    <string name="progress_average_overview_subtitle">Exclusief vandaag en gemiddelden alleen dagen met gegevens.</string>
+    <string name="progress_average_days_badge">Gem. %1$d dagen</string>
+    <string name="progress_average_loading">Gemiddelden laden…</string>
+    <string name="progress_average_total_calories">Totaal aantal calorieën</string>
+    <string name="progress_average_protein">Eiwit</string>
+    <string name="progress_average_carbs">Koolhydraten</string>
+    <string name="progress_average_fats">Vetten</string>
+    <string name="progress_average_fiber">Vezel</string>
+    <string name="progress_average_sugar">Suiker</string>
+    <string name="progress_average_sodium">Natrium</string>
+    <string name="progress_average_workout">Training verbrand</string>
+    <string name="progress_average_water">Wateropname</string>
+    <string name="progress_average_health_score">Gezondheidsscore</string>
+    <string name="progress_average_steps">Stappen</string>
+    <string name="progress_average_health_score_value">%1$.1f / 10</string>
+    <string name="progress_average_steps_value">%1$s stappen</string>
+
+
+    <!--WeightScreen-->
+    <string name="weight_title">Gewicht</string>
+    <string name="weight_overview_title">Overzicht</string>
+    <string name="weight_history_title">Geschiedenis</string>
+    <string name="weight_delete_success">Succesvol verwijderd!</string>
+    <string name="weight_delete_failed">Verwijderen is mislukt. Probeer het opnieuw.</string>
+    <string name="weight_log_weight">Gewicht loggen</string>
+
+
+    <!-- WeightComponents -->
+    <string name="weight_card_to_goal_weight">Naar streefgewicht</string>
+    <string name="weight_card_current_weight">Huidig ​​gewicht</string>
+    <string name="weight_card_achieved_goal_format">%1$s%% van doel bereikt</string>
+    <string name="weight_chart_tab_30_days">30 dagen</string>
+    <string name="weight_chart_tab_60_days">60 dagen</string>
+    <string name="weight_chart_tab_90_days">90 dagen</string>
+    <string name="weight_chart_tab_all_time">Altijd</string>
+    <string name="weight_chart_title">Gewichtstrend</string>
+    <string name="weight_chart_goal_progress_badge">%1$s%% van doel</string>
+    <string name="weight_chart_goal_label">Doel</string>
+    <string name="weight_chart_to_goal">%1$s naar doel</string>
+    <string name="weight_goal_chart_empty_hint">Registreer uw gewicht om uw trend te starten</string>
+    <string name="weight_chart_motivation">Elke kleine stap brengt je dichter bij je doel.</string>
+    <string name="weight_history_weight_label">Gewicht</string>
+    <string name="weight_history_change_label">Wijziging</string>
+    <string name="weight_history_trend_loss">VERLIES</string>
+    <string name="weight_history_trend_gain">VERDIENEN</string>
+    <string name="weight_history_trend_stable">STABIEL</string>
+
+
+    <!-- FastingPlansScreen -->
+    <string name="fasting_plan_title">Vastenplan</string>
+    <string name="start_time">Begintijd</string>
+    <string name="end_time">Eindtijd</string>
+    <string name="fasting_notification_info_status_on">Herinneringen staan ​​aan. Als toestemming voor apparaatmeldingen is toegestaan, worden deze herinneringen dagelijks herhaald.</string>
+    <string name="fasting_notification_info_status_off">Herinneringen zijn uitgeschakeld. Zet de schakelaar op de Thuisvastenkaart aan om deze meldingen te ontvangen.</string>
+    <string name="fasting_notification_info_status_enabled_label">Op</string>
+    <string name="fasting_notification_info_status_disabled_label">Uit</string>
+    <string name="fasting_notification_info_title">Hoe herinneringen werken</string>
+    <string name="fasting_notification_info_subtitle">Uw %1$s abonnement eindigt op %2$s. Als herinneringen zijn ingeschakeld, verzendt CaloShape twee dagelijkse meldingen.</string>
+    <string name="fasting_notification_info_at_time">Op %1$s</string>
+    <string name="fasting_notification_info_start_title">Het eetvenster begint</string>
+    <string name="fasting_notification_info_start_body">U kunt beginnen met eten en maaltijden registreren wanneer dat nodig is.</string>
+    <string name="fasting_notification_info_endsoon_title">Het eetvenster eindigt binnenkort</string>
+    <string name="fasting_notification_info_endsoon_body">Eén uur voordat het loket om %1$s sluit, herinnert CaloShape u eraan uw laatste maaltijd op te eten.</string>
+
+    <string name="fasting_plan_desc_14_10">Kom tot rust met een stabiel ritme: 14 uur om de eetlust en energie te resetten.</string>
+    <string name="fasting_plan_desc_16_8">Niet voor niets een publiekslieveling: 16 uur om gefocust en in een ontspannen sfeer te blijven.</string>
+    <string name="fasting_plan_desc_12_12">Evenwichtige verdeling: 12 uur vasten, binnen een tijdsbestek van 12 uur eten — perfect voor beginners.</string>
+    <string name="fasting_plan_desc_18_6">18 uur vasten, met een eetvenster van 6 uur – een slanker schema dan 16:8.</string>
+    <string name="fasting_plan_desc_20_4">Blijf gefocust: 1 à 2 bewuste maaltijden binnen een krap tijdsbestek van 4 uur.</string>
+    <string name="fasting_plan_desc_22_2">Eén bewuste maaltijd in een tijdsbestek van 2 uur: houd de waterinname op peil.</string>
+
+    <string name="fasting_picker_title">Stel uw starttijd voor vasten in</string>
+    <string name="fasting_picker_subtitle">We zullen u er elke dag op dit tijdstip aan herinneren wanneer uw eetvenster begint.</string>
+
+
+    <!-- FastingReceiver -->
+    <string name="fasting_start_title">%1$s eetvenster is open</string>
+    <string name="fasting_start_body">Je eetvenster loopt van %1$s–%2$s. Registreer maaltijden terwijl u onderweg bent om de dag nauwkeurig bij te houden.</string>
+    <string name="fasting_endsoon_title">Er resteert nog 1 uur in je eetvenster</string>
+    <string name="fasting_endsoon_body">Uw venster sluit om %1$s. Als u nog een laatste maaltijd plant, noteer deze dan voordat u afsluit.</string>
+
+
+
+
+    <!-- WorkoutHistoryScreen -->
+    <string name="workout_history_title">Trainingsgeschiedenis</string>
+    <string name="workout_history_summary_label">Vandaag verbrand</string>
+    <string name="workout_history_summary_body">Houd de voortgang van het branden van de training van vandaag bij</string>
+    <string name="workout_history_today_label">Vandaag</string>
+    <string name="workout_history_avg_daily_value">%1$d kcal</string>
+    <string name="workout_history_avg_daily_label">Gemiddeld 7 dagen per dag</string>
+    <string name="workout_history_avg_label">Gemiddeld 7 dagen / sessie</string>
+    <string name="workout_history_avg_value">%1$d kcal</string>
+    <string name="workout_history_unit_kcal">kcal</string>
+
+    <string name="workout_history_empty_title">Geen recente trainingen</string>
+    <string name="workout_history_empty">Geen trainingen in de afgelopen 7 dagen.</string>
+    <string name="workout_history_recent_title">Recente sessies</string>
+    <string name="workout_history_minutes">%1$d min</string>
+    <string name="workout_history_kcal">%1$d</string>
+    <string name="workout_history_date_time">%1$s · %2$s</string>
+    <string name="workout_history_kcal_with_unit">%1$d kcal</string>
+
+    <string name="workout_history_loading_title">Synchroniseren van trainingen</string>
+    <string name="workout_history_loading">Trainingsgeschiedenis laden...</string>
+    <string name="workout_history_error_title">Geschiedenis niet beschikbaar</string>
+
+    <string name="workout_history_delete_failed">Verwijderen is mislukt. Probeer het opnieuw.</string>
+    <string name="workout_history_delete_success">Succesvol verwijderd!</string>
+    <string name="workout_history_error">Kan de trainingsgeschiedenis niet laden.</string>
+
+
+    <!-- WorkoutTrackerSheet -->
+    <string name="workout_tracker_title">Trainingstracker</string>
+    <string name="workout_tracker_subtitle">Beschrijf het type oefening en de duur</string>
+    <string name="workout_tracker_example_placeholder">Voorbeeld: 45 minuten hardlopen</string>
+
+    <string name="workout_tracker_select_from_list">of selecteer uit de lijst</string>
+    <string name="workout_tracker_show_less">Laat minder zien</string>
+    <string name="workout_tracker_show_more">Meer weergeven (%1$d)</string>
+
+    <string name="workout_tracker_estimating_fallback">Schatten…</string>
+    <string name="workout_tracker_estimating_analyzing">Uw activiteit analyseren...</string>
+    <string name="workout_tracker_estimating_numbers">Werken aan je cijfers...</string>
+    <string name="workout_tracker_estimating_calories">Inspanning schatten, calorieën berekenen…</string>
+    <string name="workout_tracker_do_not_close">Sluit de app niet en vergrendel uw apparaat niet</string>
+
+    <string name="workout_tracker_kcal_value">%1$d kcal</string>
+    <string name="workout_tracker_minutes_activity">%1$d min %2$s</string>
+    <string name="workout_tracker_add_workout">Training toevoegen</string>
+
+    <string name="workout_tracker_activity_content_label">Trainingsactiviteit</string>
+    <string name="workout_preset_kcal_per_30_min">%1$d kcal / 30 min</string>
+
+    <string name="workout_tracker_save_success">Succesvol opgeslagen!</string>
+    <string name="workout_tracker_save_failed">Kan niet opslaan. Probeer het opnieuw.</string>
+    <string name="workout_tracker_refresh_failed">Vernieuwen mislukt. Probeer het opnieuw.</string>
+    <string name="workout_tracker_cancel">Annuleren</string>
+    <string name="workout_tracker_try_again">Probeer het opnieuw</string>
+    <string name="workout_tracker_scan_failed_title">Uh-oh! Scannen mislukt</string>
+    <string name="workout_tracker_scan_failed_body">De trainingsbeschrijving is mogelijk onjuist of de internetverbinding is zwak. Bijvoorbeeld: 30 minuten hardlopen.</string>
+
+
+    <!-- workoutNameStringRes : Workout preset display names -->
+    <string name="workout_preset_walking">Lopen</string>
+    <string name="workout_preset_running">Rennen</string>
+    <string name="workout_preset_cycling">Fietsen</string>
+    <string name="workout_preset_swimming">Zwemmen</string>
+    <string name="workout_preset_hiking">Hiking</string>
+    <string name="workout_preset_aerobic_exercise">Aërobe oefening</string>
+    <string name="workout_preset_strength_training">Krachttraining</string>
+    <string name="workout_preset_weight_training">Gewicht opleiding</string>
+    <string name="workout_preset_basketball">Basketbal</string>
+    <string name="workout_preset_soccer">Voetbal</string>
+    <string name="workout_preset_tennis">Tennis</string>
+    <string name="workout_preset_yoga">Yoga</string>
+    <string name="workout_preset_badminton">Badminton</string>
+    <string name="workout_preset_baseball">Honkbal</string>
+    <string name="workout_preset_softball">Softbal</string>
+    <string name="workout_preset_volleyball">Volleybal</string>
+    <string name="workout_preset_table_tennis">Tafeltennis</string>
+    <string name="workout_preset_dancing_general">Dansen</string>
+    <string name="workout_preset_zumba">Zumba</string>
+    <string name="workout_preset_pilates">Pilates</string>
+
+
+    <!-- DurationPickerSheet -->
+    <string name="workout_duration_sheet_subtitle">Voeg deze trainingstijd toe aan uw activiteitenlogboek</string>
+    <string name="workout_duration_hour_short">uur</string>
+    <string name="workout_duration_minute_short">min</string>
+    <string name="workout_duration_save">Redden</string>
+    <string name="workout_duration_cancel">Annuleren</string>
+
+
+    <!-- HomeQuickActionMenu -->
+    <string name="quick_add_saved_foods">Opgeslagen voedingsmiddelen</string>
+    <string name="quick_add_scan_food">Voedsel scannen</string>
+
+
+    <!-- CameraScreen -->
+    <string name="camera_mode_food">Voedsel scannen</string>
+    <string name="camera_mode_barcode">Streepjescode</string>
+    <string name="camera_mode_label">Voedsel etiket</string>
+    <string name="camera_mode_album">Foto\'s</string>
+    <string name="camera_barcode_title">Barcodescanner</string>
+    <string name="camera_label_title">Labelscanner</string>
+    <string name="camera_need_permission">Voor het scannen is cameratoestemming vereist</string>
+
+
+    <!-- RecentUploadCard -->
+    <string name="foodlog_pending_analysis">Je eten analyseren...</string>
+    <string name="foodlog_analysis_done">Analyse voltooid</string>
+    <string name="recent_upload_kcal_text">🔥 %1$d calorieën</string>
+    <string name="recent_upload_protein_text">🥩 %1$dg</string>
+    <string name="recent_upload_carbs_text">🌾 %1$dg</string>
+    <string name="recent_upload_fat_text">🥑 %1$dg</string>
+
+
+    <!-- RecentlyUploadedEmptyCard -->
+    <string name="recently_uploaded_empty">Onlangs geüpload</string>
+    <string name="recently_uploaded_empty_hint">Tik op + om uw eerste maaltijd van de dag toe te voegen</string>
+
+
+    <!-- SavedFoodsScreen -->
+    <string name="saved_foods_keep_15_days_hint">Opgeslagen voedingsmiddelen van de afgelopen 15 dagen.</string>
+    <string name="saved_foods_unsave_dialog_title">Uit bewaarde voedingsmiddelen verwijderen?</string>
+    <string name="saved_foods_unsave_dialog_message">Deze maaltijd wordt verwijderd uit uw lijst met opgeslagen voedingsmiddelen, maar blijft nog steeds in uw recente gegevens staan.</string>
+    <string name="saved_foods_unsave_dialog_confirm">Verwijderen</string>
+    <string name="saved_foods_title">Opgeslagen voedingsmiddelen</string>
+    <string name="saved_foods_kcal">🔥 %1$d calorieën</string>
+    <string name="saved_foods_protein">🥩 %1$dg</string>
+    <string name="saved_foods_carbs">🌾 %1$dg</string>
+    <string name="saved_foods_fat">🥑 %1$dg</string>
+    <string name="saved_foods_detail">Detail</string>
+    <string name="saved_foods_load_failed_title">Opgeslagen voedingsmiddelen kunnen niet worden geladen</string>
+
+
+    <!-- RecentUploadDetailScreen -->
+    <string name="foodlog_detail_load_failed">Laden mislukt</string>
+    <string name="foodlog_unknown_food">Onbekend eten</string>
+    <string name="foodlog_no_image">Geen afbeelding</string>
+
+    <string name="foodlog_detail_title">Voeding</string>
+    <string name="foodlog_detail_calories">Calorieën</string>
+    <string name="foodlog_detail_protein">Eiwit</string>
+    <string name="foodlog_detail_carbs">Koolhydraten</string>
+    <string name="foodlog_detail_fats">Vetten</string>
+    <string name="foodlog_detail_fiber">Vezel</string>
+    <string name="foodlog_detail_sugar">Suiker</string>
+    <string name="foodlog_detail_sodium">Natrium</string>
+    <string name="foodlog_detail_health_score">Gezondheidsscore</string>
+
+
+    <!-- DeleteFoodLogDialog -->
+    <string name="foodlog_delete_dialog_title">Opname verwijderen?</string>
+    <string name="foodlog_delete_dialog_message">Weet u zeker dat u deze maaltijdrecord definitief wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.</string>
+    <string name="foodlog_delete_dialog_confirm">Verwijderen</string>
+
+
+    <!-- Settings -->
+    <string name="settings_title">Instellingen</string>
+    <string name="settings_choose_language">Kies taal</string>
+    <string name="delete_account_dialog_title">Account verwijderen?</string>
+    <string name="delete_account_dialog_body">Weet u zeker dat u uw account wilt verwijderen? Hierdoor worden uw CaloShape-gegevens permanent verwijderd, inclusief voedsellogboeken, gewichtsregistraties en gerelateerde instellingen. Deze actie kan niet ongedaan worden gemaakt.</string>
+
+
+    <string name="restore_subscription_dialog_success_title">Abonnement hersteld</string>
+    <string name="restore_subscription_dialog_payment_issue_title">Abonnement hersteld, betalingsprobleem blijft bestaan</string>
+    <string name="restore_subscription_dialog_no_active_title">Geen actief Google Play-abonnement gevonden</string>
+    <string name="restore_subscription_dialog_failed_title">Herstellen mislukt</string>
+    <string name="restore_subscription_dialog_bound_title">Abonnement gekoppeld aan een ander account</string>
+    <string name="restore_subscription_dialog_success_body">Uw abonnement op dit CaloShape-account is hersteld.</string>
+    <string name="restore_subscription_dialog_payment_issue_body">Uw abonnement is gekoppeld aan dit CaloShape-account, maar Google Play meldt nog steeds een betalingsprobleem. Update uw betaalmethode in Google Play om uw abonnement actief te houden.</string>
+    <string name="restore_subscription_dialog_no_active_body">We konden geen actief CaloShape-abonnement vinden op het huidige Google Play-account. Zorg ervoor dat u het Google Play-account gebruikt waarmee de aankoop is gedaan en probeer het vervolgens opnieuw.</string>
+    <string name="restore_subscription_dialog_failed_body">We kunnen uw abonnement momenteel niet herstellen. Controleer uw verbinding en probeer het opnieuw via Instellingen.</string>
+    <string name="restore_subscription_dialog_bound_body">Dit Google Play-abonnement is al gekoppeld aan een ander CaloShape-account. Meld u aan bij het oorspronkelijke account om het te gebruiken, of neem contact op met de ondersteuning als u geen toegang heeft tot dat account.</string>
+    <string name="restore_subscription_dialog_body">We hebben een actief CaloShape-abonnement of proefperiode gevonden die is gekoppeld aan het Google Play-account op dit apparaat. U kunt het herstellen naar het CaloShape-account waarbij u momenteel bent aangemeld.</string>
+
+    <!-- Settings : Payment issue dialog -->
+    <string name="payment_issue_dialog_title">Houd uw premie actief</string>
+    <string name="payment_issue_dialog_body">Uw premium toegang is voorlopig nog actief, maar uw betaling heeft aandacht nodig.</string>
+    <string name="payment_issue_dialog_supporting_body">Update uw Google Play-betaalmethode om te voorkomen dat u AI-scan- en premiumfuncties kwijtraakt.</string>
+    <string name="payment_issue_dialog_update_payment">Betaalmethode bijwerken</string>
+    <string name="payment_issue_dialog_badge">Betaling heeft aandacht nodig</string>
+    <string name="payment_issue_dialog_premium_access">Premium toegang</string>
+    <string name="payment_issue_dialog_active_for_now">Voorlopig actief</string>
+    <string name="payment_issue_dialog_next_step">Volgende stap</string>
+    <string name="payment_issue_dialog_update_payment_short">Betaling bijwerken</string>
+
+
+    <string name="settings_personal_details">Persoonlijke gegevens</string>
+    <string name="settings_adjust_macronutrients">Pas macronutriënten aan</string>
+    <string name="settings_weight_history">Gewicht geschiedenis</string>
+    <string name="settings_ring_colors_explained">Kleurengids kalenderring</string>
+    <string name="settings_inbox">Postvak IN</string>
+
+
+    <string name="settings_terms_conditions">Algemene voorwaarden</string>
+    <string name="settings_privacy_policy">Privacybeleid</string>
+    <string name="settings_support_email">Ondersteuning e-mail</string>
+    <string name="settings_delete_account">Account verwijderen?</string>
+    <string name="settings_version">Versie %1$s</string>
+
+
+    <string name="settings_membership_payment">Betaling</string>
+    <string name="settings_membership_update_payment">Betaling bijwerken</string>
+    <string name="settings_membership_premium">Premie</string>
+    <string name="settings_membership_active_member">Actief lid</string>
+    <string name="settings_membership_trial">Proces</string>
+    <string name="settings_membership_access_active">Toegang actief</string>
+    <string name="settings_membership_free">Vrij</string>
+    <string name="settings_membership_upgrade">Upgraden</string>
+
+
+    <!-- Settings: referral card -->
+    <string name="settings_invite_friends">Nodig vrienden uit</string>
+    <string name="settings_premium_reward">Premium beloning</string>
+    <string name="settings_share_caloshape_with_friends">Deel CaloShape AI\nmet je vrienden</string>
+    <string name="settings_referral_reward_content">Zij abonneren zich. Je krijgt 30 dagen gratis.</string>
+    <string name="settings_get_30_days_free">Ontvang 30 dagen gratis</string>
+    <string name="settings_days_label">Dagen</string>
+
+    <string name="settings_appearance_light">Licht</string>
+    <string name="settings_appearance_dark">Donker</string>
+    <string name="settings_appearance_mode_title">Kies uiterlijk</string>
+    <string name="settings_appearance_light_description">Behoud de huidige heldere, strakke uitstraling.</string>
+    <string name="settings_appearance_dark_description">Gebruik een donkerdere, zachtere interface voor dagelijkse tracking.</string>
+    <string name="settings_preferences">Voorkeuren</string>
+    <string name="settings_appearance">Verschijning</string>
+
+    <string name="settings_language">Taal</string>
+
+
+    <!-- Settings: Widget Guide -->
+    <string name="settings_widgets_title">Widgets</string>
+    <string name="settings_widgets_how_to_add">Hoe toevoegen?</string>
+    <string name="log_your_food">Registreer uw eten</string>
+
+    <string name="settings_calories_goal_label">Calorieën over</string>
+    <string name="settings_protein_goal_label">Eiwit overgebleven</string>
+    <string name="settings_carbs_goal_label">Koolhydraten blijven over</string>
+    <string name="settings_fats_goal_label">Vetten zijn overgebleven</string>
+    <string name="settings_widget_scan_food">Voedsel scannen</string>
+    <string name="settings_widget_barcode">Streepjescode</string>
+
+    <string name="settings_logout_loading">Uitloggen…</string>
+    <string name="settings_logout">Uitloggen</string>
+    <string name="settings_logout_failed">Uitloggen is mislukt. Controleer uw verbinding en probeer het opnieuw.</string>
+
+
+    <!-- EditNameScreen -->
+    <string name="settings_edit_your_name_title">Bewerk uw naam</string>
+    <string name="edit_name_placeholder">Voer uw naam in</string>
+
+
+    <!-- Referral Screen -->
+    <string name="referral_title">Nodig vrienden uit</string>
+    <string name="referral_premium_reward">Premium beloning</string>
+    <string name="referral_invite_friends">Nodig vrienden uit</string>
+    <string name="referral_earn_30_days_free">Verdien 30 dagen gratis</string>
+    <string name="referral_reward_unlocks_after_no_refund">Beloning wordt ontgrendeld nadat je vriend zich heeft geabonneerd zonder restitutie.</string>
+    <string name="referral_code_copied">Verwijzingscode gekopieerd.</string>
+    <string name="referral_your_promo_code">Uw promotiecode</string>
+    <string name="referral_copy">Kopiëren</string>
+    <string name="referral_share">Deel</string>
+    <string name="referral_how_it_works">Hoe het werkt</string>
+    <string name="referral_step_1_title">Deel uw promotiecode</string>
+    <string name="referral_step_1_subtitle">Stuur uw code naar een vriend die voedsel slimmer wil volgen.</string>
+    <string name="referral_step_2_title">Je vriend abonneert zich</string>
+    <string name="referral_step_2_subtitle">Ze starten een betaald CaloShape AI-abonnement met behulp van uw uitnodiging.</string>
+    <string name="referral_step_3_title">Geen restitutie, dan beloning</string>
+    <string name="referral_step_3_subtitle">Nadat het abonnement is geverifieerd zonder restitutie, wordt uw premiumperiode verlengd.</string>
+    <string name="referral_share_text">Sluit je aan bij CaloShape AI! Mijn verwijzingscode is:\n%1$s\n\n%2$s</string>
+    <string name="referral_share_subject">Sluit me aan bij CaloShape AI</string>
+    <string name="referral_share_chooser_title">Deel via</string>
+    <string name="referral_unable_to_open_share_options">Kan aandelenopties niet openen.</string>
+
+
+    <!-- PersonalDetailsScreen -->
+    <string name="personal_details_goal_weight">Doelgewicht</string>
+    <string name="personal_details_change_goal">Verander doel</string>
+    <string name="personal_details_body_details_section">Lichaamsdetails</string>
+    <string name="personal_details_current_weight">Huidig ​​gewicht</string>
+    <string name="personal_details_height">Hoogte</string>
+    <string name="personal_details_age">Leeftijd</string>
+    <string name="personal_details_gender">Geslacht</string>
+    <string name="personal_details_starting_weight">Startgewicht</string>
+    <string name="personal_details_daily_goals_section">Dagelijkse doelen</string>
+    <string name="personal_details_daily_step_goal">Dagelijks stappendoel</string>
+    <string name="personal_details_daily_water_goal">Dagelijks waterdoel</string>
+    <string name="personal_details_daily_workout_goal">Dagelijks trainingsdoel</string>
+    <string name="personal_details_age_value">%1$d jaar</string>
+    <string name="personal_details_steps_value">%1$d stappen</string>
+    <string name="personal_details_water_value">%1$d ml</string>
+    <string name="personal_details_kcal_value">%1$d kcal</string>
+    <string name="gender_male">Mannelijk</string>
+    <string name="gender_female">Vrouwelijk</string>
+    <string name="gender_other">Ander</string>
+
+
+    <!-- EditGoalWeightScreen -->
+    <string name="edit_goal_weight_title">Doelgewicht bewerken</string>
+    <string name="edit_goal_weight_progress_note">Dit doel gebruiken wij om uw voortgang te berekenen.</string>
+    <string name="edit_goal_update_failed">Kan het streefgewicht niet bijwerken</string>
+
+
+    <!-- RecordWeightScreen -->
+    <string name="record_weight_camera_failed_to_open">Camera kon niet worden geopend.</string>
+    <string name="record_weight_camera_permission_required">Cameratoestemming vereist.</string>
+    <string name="record_weight_camera_preview_unavailable">Camera werkt alleen in de actieve app, niet in Preview.</string>
+    <string name="record_weight_camera_screen_unavailable">Camera is niet beschikbaar in dit scherm.</string>
+    <string name="record_weight_no_camera_app_found">Geen camera-app gevonden op dit apparaat.</string>
+    <string name="record_weight_enable_camera_permission_settings">Schakel cameratoestemming in via Instellingen.</string>
+
+    <string name="record_weight_title">Recordgewicht</string>
+    <string name="record_weight_save_failed">Opslaan mislukt</string>
+    <string name="record_weight_date_note">Dit gewicht wordt geregistreerd voor %1$s</string>
+
+    <string name="weight_date_sheet_title">Selecteer uw weegdatum</string>
+    <string name="weight_date_sheet_subtitle">Wanneer ben jij op de weegschaal gestapt?</string>
+    <string name="weight_date_sheet_month_january">Januari</string>
+    <string name="weight_date_sheet_month_february">Februari</string>
+    <string name="weight_date_sheet_month_march">Maart</string>
+    <string name="weight_date_sheet_month_april">april</string>
+    <string name="weight_date_sheet_month_may">Kunnen</string>
+    <string name="weight_date_sheet_month_june">juni</string>
+    <string name="weight_date_sheet_month_july">juli</string>
+    <string name="weight_date_sheet_month_august">augustus</string>
+    <string name="weight_date_sheet_month_september">september</string>
+    <string name="weight_date_sheet_month_october">oktober</string>
+    <string name="weight_date_sheet_month_november">November</string>
+    <string name="weight_date_sheet_month_december">December</string>
+
+    <string name="record_weight_camera_not_available">Camera niet beschikbaar</string>
+    <string name="record_weight_take_photo">Maak een foto</string>
+    <string name="record_weight_retake_photo">Foto opnieuw maken</string>
+
+
+    <!-- EditHeightScreen -->
+    <string name="edit_height_title">Bewerk uw lengte</string>
+    <string name="edit_height_privacy_note">We gebruiken uw lengte alleen om uw ervaring en de nauwkeurigheid van uw calorieschatting te verbeteren.</string>
+
+
+    <!-- EditAgeScreen -->
+    <string name="edit_age_title">Bewerk uw leeftijd</string>
+    <string name="edit_age_privacy_note">We gebruiken uw leeftijd alleen om uw ervaring en de nauwkeurigheid van uw calorieschatting te verbeteren.</string>
+
+
+    <!-- EditGenderScreen -->
+    <string name="edit_gender_title">Bewerk uw geslacht</string>
+    <string name="edit_gender_privacy_note">Wordt alleen gebruikt om de nauwkeurigheid van schattingen te personaliseren en te verbeteren.</string>
+
+
+    <!-- EditStartingWeightScreen -->
+    <string name="edit_starting_weight_title">Begingewicht bewerken</string>
+    <string name="edit_start_weight_baseline_note">We zullen het gebruiken als uw basis voor vooruitgang.</string>
+    <string name="edit_starting_weight_update_failed">Kan het startgewicht niet updaten</string>
+
+
+    <!-- EditDailyStepGoalScreen -->
+    <string name="edit_step_goal_title">Stapdoel bewerken</string>
+    <string name="edit_daily_step_goal_previous_format">Vorig doel %1$d stappen</string>
+    <string name="edit_daily_step_goal_input_label">Dagelijks stappendoel</string>
+
+
+    <!-- EditWaterGoalScreen -->
+    <string name="edit_water_goal_title">Waterdoel bewerken</string>
+    <string name="edit_water_goal_previous_format">Vorig doel %1$d ml</string>
+    <string name="edit_water_goal_input_label">Dagelijks waterdoel (ml)</string>
+
+
+    <!-- EditWorkoutGoalScreen -->
+    <string name="edit_workout_goal_title">Trainingsdoel bewerken</string>
+    <string name="edit_workout_goal_previous_format">Vorig doel %1$d kcal</string>
+    <string name="edit_workout_goal_input_label">Dagelijks trainingsdoel (kcal)</string>
+
+
+    <!-- EditNutritionGoalsScreen -->
+    <string name="edit_nutrition_goals_title">Voedingsdoelen bewerken</string>
+    <string name="edit_nutrition_calorie_goal">Caloriedoel</string>
+    <string name="edit_nutrition_protein_goal">Eiwit doel</string>
+    <string name="edit_nutrition_carb_goal">Koolhydraten doel</string>
+    <string name="edit_nutrition_fat_goal">Vet doel</string>
+    <string name="edit_nutrition_view_micronutrients">Bekijk micronutriënten</string>
+    <string name="edit_nutrition_fiber_goal">Vezel doel</string>
+    <string name="edit_nutrition_sugar_goal">Suiker doel</string>
+    <string name="edit_nutrition_sodium_goal">Natrium doel</string>
+    <string name="edit_nutrition_auto_generate_goals">Automatisch doelen genereren</string>
+
+
+    <!-- RingColorsExplainedScreen -->
+    <string name="ring_colors_explained_title">Datumring kleuren</string>
+    <string name="ring_colors_explained_intro">Met datumringen kunt u snel zien hoe elke dag zich verhoudt tot uw caloriedoel.</string>
+    <string name="ring_colors_preview_brand">CaloShape AI</string>
+    <string name="ring_colors_explained">Voorbeeld van datumring</string>
+
+    <string name="ring_colors_preview_day_5">5</string>
+    <string name="ring_colors_preview_day_6">6</string>
+    <string name="ring_colors_preview_day_7">7</string>
+    <string name="ring_colors_preview_day_8">8</string>
+    <string name="ring_colors_preview_day_9">9</string>
+    <string name="ring_colors_preview_day_10">10</string>
+    <string name="ring_colors_preview_day_11">11</string>
+    <string name="ring_colors_explained_subtitle">Ringkleuren uitgelegd</string>
+
+    <string name="ring_colors_green_title">Groente</string>
+    <string name="ring_colors_green_body">Op doel (binnen 100 calorieën van doel)</string>
+    <string name="ring_colors_yellow_title">Bruin</string>
+    <string name="ring_colors_yellow_body">100-199 calorieën boven je doel</string>
+    <string name="ring_colors_red_title">Rood</string>
+    <string name="ring_colors_red_body">200+ calorieën boven je doel</string>
+    <string name="ring_colors_dotted_title">Gestippeld</string>
+    <string name="ring_colors_dotted_body">Er zijn die dag geen maaltijden geregistreerd</string>
+
+
+    <!-- NotificationInboxScreen Inbox -->
+    <string name="notification_inbox_title">Postvak IN</string>
+    <string name="notification_inbox_header_title">CaloShape-meldingen</string>
+    <string name="notification_inbox_header_body">Alle platformmeldingen verschijnen hier.</string>
+    <string name="notification_inbox_status_read">Lezen</string>
+    <string name="notification_inbox_status_unread">Ongelezen</string>
+
+    <string name="notification_inbox_loading_title">Meldingen laden</string>
+    <string name="notification_inbox_loading">Meldingen laden…</string>
+    <string name="notification_inbox_empty_title">Nog geen meldingen</string>
+    <string name="notification_inbox_empty_body">Platformmeldingen verschijnen hier.</string>
+    <string name="notification_inbox_error_title">Kan meldingen niet laden</string>
+    <string name="notification_inbox_error_body">Controleer uw verbinding en probeer het opnieuw.</string>
+
+
+    <!-- WidgetGuideScreen -->
+    <string name="widget_guide_title">Widget toevoegen</string>
+    <string name="widget_guide_hero_title">Voeg CaloShape toe aan uw startscherm</string>
+    <string name="widget_guide_hero_body">Houd calorieën, macro\'s en snelle acties bij zonder de app te openen.</string>
+    <string name="widget_guide_steps_title">Volg deze stappen</string>
+    <string name="widget_guide_step_1_title">Druk lang op het startscherm</string>
+    <string name="widget_guide_step_1_body">Houd een leeg gebied op het startscherm van uw telefoon ingedrukt totdat het menu verschijnt.</string>
+    <string name="widget_guide_step_2_title">Tik op Widgets</string>
+    <string name="widget_guide_step_2_body">Kies Widgets in het startschermmenu.</string>
+    <string name="widget_guide_step_3_title">Vind CaloShape AI</string>
+    <string name="widget_guide_step_3_body">Blader of zoek naar CaloShape AI en open vervolgens de widgetlijst.</string>
+    <string name="widget_guide_step_4_title">Sleep een widget naar zijn plaats</string>
+    <string name="widget_guide_step_4_body">Houd uw vinger op de widget, sleep deze naar het startscherm van uw voorkeur en til vervolgens uw vinger op.</string>
+    <string name="widget_guide_tip_title">Kunt u het Widgets-menu niet vinden?</string>
+    <string name="widget_guide_tip_body">Sommige telefoonmerken en draagraketten gebruiken verschillende namen. Probeer de Home-instellingen, druk lang op het CaloShape AI-app-pictogram of zoek naar Widgets in uw opstartprogramma.</string>
+    <string name="widget_guide_done">Ik heb het</string>
+    <string name="widget_guide_mock_home">Thuis</string>
+    <string name="widget_guide_mock_widgets">Widgets</string>
+
+
+    <!-- CaloShapeNavHost -->
+    <string name="url_terms">https://caloshape.com/terms</string>
+    <string name="url_privacy">https://caloshape.com/privacy</string>
+    <string name="url_support_email">mailto:support@caloshape.com?subject=Ondersteuning%20Request</string>
+    <string name="camera_manual_entry_not_ready">Handmatige invoer is nog niet gereed. Voorlopig overstappen op labelscan.</string>
+
+
+    <!-- Android home screen widgets -->
+    <string name="widget_preview_goal_kcal">1830</string>
+    <string name="widget_preview_protein">120g</string>
+    <string name="widget_preview_carbs">180g</string>
+    <string name="widget_preview_fats">60g</string>
+    <string name="widget_calories_left">Calorieën over</string>
+    <string name="widget_protein_left">Eiwit overgebleven</string>
+    <string name="widget_carbs_left">Koolhydraten blijven over</string>
+    <string name="widget_fats_left">Vetten zijn overgebleven</string>
+    <string name="widget_calories_description">CaloShape calorieënwidget</string>
+    <string name="widget_macro_actions_description">CaloShape-macro\'s en widget voor snelle acties</string>
+    <string name="widget_log_your_food">Registreer uw eten</string>
+    <string name="widget_scan_food">Voedsel scannen</string>
+    <string name="widget_barcode">Streepjescode</string>
+    <string name="widget_grams_format">%1$dg</string>
+
+
+
+
+
+    <!-- =========================
+                    Not use
+         ========================= -->
+    <!-- PremiumRewardsScreen Not use -->
+    <string name="premium_rewards_subscription_title">Abonnement</string>
+    <string name="premium_rewards_history_title">Beloningsgeschiedenis</string>
+    <string name="premium_rewards_loading_membership">Lidmaatschap laden…</string>
+    <string name="premium_rewards_status_title">Premium-status</string>
+    <string name="premium_rewards_latest_title">Laatste beloning</string>
+    <string name="premium_rewards_source_format">Bron: %1$s</string>
+    <string name="premium_rewards_channel_format">Kanaal: %1$s</string>
+    <string name="premium_rewards_grant_status_format">Subsidiestatus: %1$s</string>
+    <string name="premium_rewards_status_format">Status: %1$s</string>
+    <string name="premium_rewards_google_defer_format">Google uitstel: %1$s</string>
+    <string name="premium_rewards_granted_at_format">Toegekend op: %1$s</string>
+    <string name="premium_rewards_old_expiry_format">Oude vervaldatum: %1$s</string>
+    <string name="premium_rewards_new_expiry_format">Nieuwe vervaldatum: %1$s</string>
+    <string name="premium_rewards_error_format">Fout: %1$s</string>
+    <string name="premium_rewards_days_added_format">Dagen toegevoegd: %1$d</string>
+    <string name="premium_rewards_empty_title">Nog geen beloningen</string>
+    <string name="premium_rewards_empty_body">Succesvolle verwijzingen verschijnen hier na verificatie.</string>
+    <string name="premium_rewards_channel_google_play_defer">Factureringsdatum voor Google Play verlengd</string>
+    <string name="premium_rewards_channel_backend_only">Premiumbeloning toegepast</string>
+    <string name="premium_rewards_grant_success">Succes</string>
+    <string name="premium_rewards_status_retrying">Opnieuw proberen</string>
+    <string name="premium_rewards_grant_not_granted">Niet verleend</string>
+    <string name="premium_rewards_google_defer_success">Uitgebreid door Google Play</string>
+    <string name="premium_rewards_google_defer_failed">Mislukt</string>
+    <string name="premium_rewards_google_defer_not_required">Niet vereist</string>
+
+
+</resources>

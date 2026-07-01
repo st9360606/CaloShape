@@ -1,0 +1,1130 @@
+<resources>
+    <!-- App_Name -->
+    <string name="app_name">CaloShape</string>
+
+
+    <!-- common -->
+    <string name="common_close">Nära</string>
+    <string name="common_save">Spara</string>
+    <string name="common_cancel">Avboka</string>
+    <string name="common_continue_btn">Fortsätta</string>
+    <string name="common_skip">Hoppa</string>
+    <string name="common_dash">—</string>
+    <string name="common_error">Fel</string>
+
+    <string name="common_save_success">Sparad framgångsrikt!</string>
+    <string name="common_today">I dag</string>
+    <string name="common_yesterday">I går</string>
+    <string name="common_unavailable_dash">—</string>
+    <string name="common_retry">Försöka igen</string>
+
+    <string name="common_delete">Radera</string>
+    <string name="common_deleting">Tar bort...</string>
+
+    <string name="common_understood">Förstått</string>
+    <string name="common_revert">Återgå</string>
+
+
+    <!-- ApiErrorUiMapper -->
+    <string name="err_barcode_not_found_title">Produkten hittades inte</string>
+    <string name="err_barcode_not_found_msg">Vi kunde inte hitta den här streckkoden. Försök att ta ett foto av näringsdeklarationen.</string>
+
+    <string name="err_barcode_lookup_failed_title">Sökningen misslyckades</string>
+    <string name="err_barcode_lookup_failed_msg">Vi kunde inte nå produktdatabasen. Kontrollera din anslutning och försök igen.</string>
+
+    <string name="err_generic_title">Något gick fel</string>
+    <string name="err_generic_msg">Försök igen.</string>
+
+    <string name="err_network_title">Nätverksproblem</string>
+    <string name="err_network_msg">Kontrollera din internetanslutning och försök igen.</string>
+
+    <string name="err_photo_title">Foto behövs</string>
+    <string name="err_photo_msg">Försök att ta bilden igen med bättre ljus.</string>
+
+    <string name="err_manual_title">Ange manuellt</string>
+    <string name="err_manual_msg">Du kan ange detaljer manuellt.</string>
+
+    <string name="err_support_title">Kontakta supporten</string>
+    <string name="err_support_msg">Kontakta supporten om problemet kvarstår.</string>
+
+    <string name="cta_try_label">Skanna näringsdeklarationen</string>
+    <string name="cta_enter_manually">Ange manuellt</string>
+
+    <string name="cta_check_network">Kontrollera nätverket</string>
+    <string name="cta_retake">Ta om</string>
+    <string name="cta_contact_support">Kontakta supporten</string>
+    <string name="cta_rescan_barcode">Skanna streckkoden igen</string>
+
+
+
+
+    <!-- Landing Screen -->
+    <string name="landing_title">Ta ett foto, vet kalorierna.</string>
+    <string name="choose_language">Välj språk</string>
+    <string name="cta_get_started">Kom igång</string>
+    <string name="cta_login_prefix">Har du redan ett konto?</string>
+    <string name="cta_login">Logga in</string>
+
+
+    <!-- RequireSignInScreen -->
+    <string name="auth_sign_in_account_title">Logga in på ditt konto</string>
+    <string name="auth_sign_in_with_google">Logga in med Google</string>
+    <string name="auth_signin_with_email">Fortsätt med e-post</string>
+
+
+    <!-- SignInSheet-->
+    <string name="signin_title">Logga in</string>
+    <string name="signin_with_apple">Logga in med Apple</string>
+    <string name="signin_with_google">Logga in med Google</string>
+    <string name="signin_with_email">Fortsätt med e-post</string>
+    <string name="signin_legal_hint">Genom att fortsätta godkänner du villkoren för CaloShape</string>
+    <string name="signin_terms">Villkor</string>
+    <string name="signin_and">och</string>
+    <string name="signin_privacy">Integritetspolicy</string>
+    <string name="signin_url_terms">https://caloshape.com/terms</string>
+    <string name="signin_url_privacy">https://caloshape.com/privacy</string>
+
+
+    <!-- SignInSheetHost 控制 Sheet 是否顯示、處理狀態、接外部 callback -->
+    <string name="err_google_no_account_hint">Tips: lägg till ett Google-konto i Inställningar → Konton och försök igen</string>
+    <string name="err_google_signin_failed">Google-inloggning misslyckades</string>
+
+
+    <!-- EmailEnterScreen-->
+    <string name="email_sign_in_title">Logga in</string>
+    <string name="input_box_email_label">E-post</string>
+
+
+    <!-- EmailCodeScreen OTP -->
+    <string name="resend">Skicka igen</string>
+    <string name="resend_countdown">Skicka igen (%1$d s)</string>
+
+    <string name="err_otp_invalid">Koden är felaktig. Försök igen.</string>
+    <string name="err_otp_too_many_attempts">För många försök. Försök igen senare.</string>
+    <string name="err_network_io">Nätverksfel. Försök igen.</string>
+    <string name="err_server_unavailable">Tjänsten är tillfälligt otillgänglig. Försök igen senare.</string>
+    <string name="err_generic">Något gick fel. Försök igen.</string>
+
+    <string name="confirm_email_title">Bekräfta din e-post</string>
+    <string name="confirm_email_hint">Vänligen ange den 4-siffriga koden vi just har skickat till</string>
+    <string name="didnt_receive_code">Fick du inte koden?</string>
+
+
+    <!-- Onboarding: GenderSelectionScreen -->
+    <string name="onboard_gender_title">Välj ditt kön</string>
+    <string name="onboard_gender_subtitle">Detta kommer att användas för att kalibrera din anpassade plan.</string>
+    <string name="onboard_male">Manlig</string>
+    <string name="onboard_female">Kvinnlig</string>
+    <string name="onboard_other">Andra</string>
+
+
+    <!-- Onboarding: ReferralSourceScreen -->
+    <string name="onboard_referral_title">Hur upptäckte du oss?</string>
+
+
+    <!-- Onboarding: AgeSelectionScreen -->
+    <string name="onboard_age_title">Hur gammal är du?</string>
+    <string name="onboard_age_subtitle">Vi använder bara din ålder för att förbättra din upplevelse och exaktheten i din kaloriuppskattning.</string>
+
+
+    <!-- Onboarding: HeightSelectionScreen -->
+    <string name="onboard_height_title">Hur lång är du?</string>
+    <string name="onboard_height_subtitle">Vi använder endast dina uppgifter för att förbättra din upplevelse och våra kaloriuppskattningar.</string>
+    <string name="onboard_height_hint">Detta kommer att användas för att kalibrera din anpassade plan.</string>
+
+
+    <!-- Onboarding: WeightSelectionScreen -->
+    <string name="onboard_weight_title">Hur mycket väger du?</string>
+    <string name="onboard_weight_subtitle">Vi använder endast dina uppgifter för att förbättra din upplevelse och våra kaloriuppskattningar.</string>
+    <string name="onboard_weight_hint">Detta kommer att användas för att kalibrera din anpassade plan.</string>
+
+
+    <!-- Onboarding: ExerciseFrequencyScreen  -->
+    <string name="onboard_ex_freq_title">Hur ofta tränar du varje vecka?</string>
+    <string name="onboard_ex_freq_subtitle">Detta hjälper dig att kalibrera din personliga plan.</string>
+    <string name="ex_freq_0_title">0</string>
+    <string name="ex_freq_0_sub">Stillasittande</string>
+    <string name="ex_freq_1_3_title">1–3</string>
+    <string name="ex_freq_1_3_sub">Lätt aktivitet</string>
+    <string name="ex_freq_3_5_title">3–5</string>
+    <string name="ex_freq_3_5_sub">Måttlig aktivitet</string>
+    <string name="ex_freq_6_7_plus_title">6–7</string>
+    <string name="ex_freq_6_7_plus_sub">Hög aktivitet</string>
+    <string name="ex_freq_7_plus_title">7+</string>
+    <string name="ex_freq_7_plus_sub">Mycket hög aktivitet</string>
+
+
+    <!-- Onboarding: GoalSelectionScreen  -->
+    <string name="onboard_goal_title">Vad är ditt mål?</string>
+    <string name="onboard_goal_subtitle">Detta hjälper oss att skräddarsy din kaloriplan.</string>
+    <string name="goal_lose">Gå ner i vikt</string>
+    <string name="goal_maintain">Upprätthålla</string>
+    <string name="goal_gain">Öka i vikt</string>
+    <string name="goal_healthy_eating">Hälsosam kost</string>
+
+
+    <!-- Onboarding: WeightGoalScreen -->
+    <string name="onboard_goal_weight_title">Vad är din målvikt?</string>
+    <string name="onboard_goal_weight_subtitle">Baserat på detta mål kommer vi att skapa en mer lämplig daglig kalorirekommendation för dig.</string>
+    <string name="onboard_goal_weight_hint">Detta kommer att användas för att kalibrera din anpassade plan.</string>
+
+
+    <!-- Onboarding: WeightLossComparisonScreen -->
+    <string name="onboard_weight_loss_comparison_title">Att använda CaloShape AI kan tredubbla din viktminskningseffektivitet\n</string>
+    <string name="onboard_weight_loss_comparison_without_ai">Utan\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_with_ai">Med\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_twenty_percent">20 %</string>
+    <string name="onboard_weight_loss_comparison_two_times">3X</string>
+    <string name="onboard_weight_loss_comparison_caption">CaloShape AI gör allt enkelt\noch håller dig ansvarig</string>
+
+
+    <!-- Onboarding: NotificationPermissionScreen -->
+    <string name="onboard_notif_title">Få varje måltid att räknas!</string>
+    <string name="onboard_notif_subtitle">Aktivera aviseringar för milda påminnelser om att logga måltider – så att dina kalorier, makron och framsteg håller sig på rätt spår. Slip-ups inträffar; snabba knuffar hjälper dig att studsa tillbaka snabbt.</string>
+    <string name="onboard_allow_notifications_cta">Tillåt aviseringar</string>
+    <string name="notification_mock_app_title">AI kaloriräknare</string>
+    <string name="onboard_notif_title_got_a_sec">Din måltid loggar inte av sig själv 😉</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">Logga denna måltid för att hålla dina kalorier och makron på rätt spår.</string>
+
+
+    <!-- Onboarding: HealthConnectIntroScreen -->
+    <string name="onboard_hc_connect_title_prefix">Anslut till</string>
+    <string name="onboard_hc_connect_title_service">Health Connect</string>
+    <string name="onboard_hc_connect_body">Synkronisera daglig aktivitet mellan CaloShape AI och hälsoappar för att få mer kompletta register och insikter.</string>
+    <string name="onboard_hc_permission_rationale_title_prefix">Varför CaloShape använder</string>
+    <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape läser dina steg, aktiva kalorier och träningsdata för att uppskatta daglig aktivitetsförbränning, uppdatera din kalorikontroll och förbättra framstegsinsikter. Du kan återkalla åtkomst när som helst i Health Connect.</string>
+    <string name="onboard_hc_permission_rationale_button">Jag förstår</string>
+
+
+    <!-- Onboarding: ComputationProgressScreen -->
+    <string name="progress_hero_title">Skapa din personliga plan</string>
+    <string name="progress_hero_subtitle">Vi använder dina mål, kroppsdata och preferenser för att skräddarsy dina dagliga mål.</string>
+    <string name="progress_footer_hint">Det här tar bara ett ögonblick</string>
+    <string name="progress_center_caption">Förbereder dina resultat</string>
+    <string name="progress_phase_pill_1">Granska din profil</string>
+    <string name="progress_phase_pill_2">Beräknar ditt kalorimål</string>
+    <string name="progress_phase_pill_3">Balansera dina dagliga makron</string>
+    <string name="progress_phase_pill_4">Slutför dina hälsoinsikter</string>
+    <string name="progress_card_title">Konfigurera din plan</string>
+    <string name="progress_row_calorie_target">Dagligt kalorimål</string>
+    <string name="progress_row_carb_distribution">Kolhydratdistribution</string>
+    <string name="progress_row_protein_recommendation">Proteinrekommendation</string>
+    <string name="progress_row_fat_recommendation">Fettrekommendation</string>
+    <string name="progress_row_health_score_estimate">Uppskattning av hälsopoäng</string>
+
+
+    <!-- Onboarding: HealthPlanScreen -->
+    <string name="plan_cta_start">Kom igång</string>
+    <string name="plan_title_congrats">Grattis!</string>
+    <string name="plan_subtitle_ready">Din personliga hälsoplan är klar!</string>
+    <string name="plan_disclaimer">Källor finns nedan: Se alla referenser ›</string>
+    <string name="plan_unit_kcal_day">kcal / dag</string>
+
+    <string name="plan_macros_proteins">Protein</string>
+    <string name="plan_macros_carbs">Kolhydrater</string>
+    <string name="plan_macros_fat">Fetter</string>
+    <string name="plan_unit_g">g</string>
+
+    <string name="plan_water_daily">Dagligt vatten</string>
+    <string name="plan_weight_current">Aktuell vikt</string>
+    <string name="plan_weight_delta">Till målvikt</string>
+
+    <string name="plan_goals_title">Hur du når\ndina mål</string>
+    <string name="plan_goal_card_health_scores">Hälsoresultat vägleder dig, så vanor bildas naturligt</string>
+    <string name="plan_goal_card_track_meals">Logga måltider i ett tryck, det är lätt att hålla sig konsekvent</string>
+    <string name="plan_goal_card_daily_calories">Se tydligt dagliga kalorier och tappa aldrig koll</string>
+    <string name="plan_goal_card_balance_macros">Kolhydrater × protein × fett, smart balans, bättre resultat</string>
+    <string name="plan_sources_based_on">Baserat på officiella kostriktlinjer,\nendast för referens, inte medicinsk rådgivning.</string>
+    <string name="plan_sources_more">Se alla referenser ›</string>
+    <string name="plan_sources_hide">Dölj källor</string>
+
+
+    <!-- Onboarding: OnboardReferralCodeScreen -->
+    <string name="onboard_referral_code_input">Ange hänvisningskod\n(valfritt)</string>
+    <string name="onboard_referral_code_subtitle">Du kan hoppa över detta steg</string>
+    <string name="onboard_referral_code_input_label">Remisskod</string>
+    <string name="onboard_referral_code_placeholder">Remisskod</string>
+    <string name="onboard_referral_code_submit">Överlämna</string>
+    <string name="onboard_referral_code_submitting">Skickar in...</string>
+    <string name="onboard_referral_code_applied">Remisskod tillämpas!</string>
+
+    <string name="onboard_referral_code_error_invalid_format">Använd endast bokstäver och siffror.</string>
+    <string name="onboard_referral_code_error_invalid">Vi kunde inte hitta den här hänvisningskoden.</string>
+    <string name="onboard_referral_code_error_self_referral">Du kan inte använda din egen remisskod.</string>
+    <string name="onboard_referral_code_error_already_claimed">Det här kontot har redan tillämpat en hänvisningskod.</string>
+    <string name="onboard_referral_code_error_already_subscribed">Prenumererade konton kan inte tillämpa en hänvisningskod.</string>
+    <string name="onboard_referral_code_error_disabled">Remiss är inte tillgänglig för tillfället.</string>
+    <string name="onboard_referral_code_error_risk">Vi kan inte tillämpa en remisskod just nu.</string>
+    <string name="onboard_referral_code_error_network">Vi kan inte tillämpa det just nu. Försök igen senare.</string>
+    <string name="onboard_referral_code_error_unknown">Hänvisningskoden kan inte användas just nu.\nFörsök igen senare.</string>
+
+
+    <!-- Onboarding: OnboardSubscriptionScreen  Paywall -->
+    <string name="subscription_price_per_month_format">%1$s/mån</string>
+    <string name="subscription_price_per_month_unit">/mån</string>
+    <string name="subscription_price_unavailable_title">Priset är inte tillgängligt</string>
+    <string name="subscription_price_unavailable_body">Vi kunde inte få ditt lokala Google Play-pris just nu. Försök igen.</string>
+
+
+    <!-- Onboarding: OnboardSubscriptionIntro -->
+    <string name="subscription_intro_title">Lås upp CaloShape AI för att\nnå dina mål snabbare.</string>
+    <string name="subscription_intro_helper_format">Bara %1$s per år (%2$s)</string>
+    <string name="subscription_start_three_day_free_trial">Prova gratis i 3 dagar</string>
+    <string name="subscription_three_day_trial_helper_format">Bara %1$s/år (%2$s/mån)</string>
+    <string name="subscription_already_owned_restore_required">Ditt Google Play-konto har redan en aktiv CaloShape-prenumeration. Återställ det till detta CaloShape-konto innan du använder premiumfunktioner.</string>
+    <string name="subscription_error_no_active_purchase">Inget aktivt köp hittades.</string>
+    <string name="subscription_error_restore_failed">Kunde inte återställa köpet. Försök igen.</string>
+    <string name="subscription_error_purchase_failed">Köpet misslyckades. Försök igen.</string>
+    <string name="subscription_error_purchase_pending">Betalning behandlas. Premiumåtkomst kommer att vara tillgänglig efter att Google Play har bekräftat köpet.</string>
+    <string name="subscription_error_trial_eligibility_failed">Det gick inte att kontrollera rätt till provperiod. Försök igen.</string>
+    <string name="restore_subscription_dialog_title">Prenumeration hittades</string>
+    <string name="settings_restore_subscription">Återställ prenumeration</string>
+    <string name="restore_subscription_dialog_restoring">Återställer...</string>
+    <string name="common_maybe_later">Kanske senare</string>
+
+
+    <!-- Onboarding: OnboardDiscountSpinScreen-->
+    <string name="subscription_spin_title">Snurra för att låsa upp en\nexklusiv rabatt</string>
+    <string name="subscription_spin_helper_ready">Tryck på Snurra för att avslöja din exklusiva gåva.</string>
+    <string name="subscription_spin_button">Snurra</string>
+    <string name="subscription_spinning_button">Spinning…</string>
+    <string name="subscription_gift_offer_unlocked">Presenterbjudande upplåst</string>
+    <string name="subscription_spin_helper_wait">Vänta tills hjulet stannar.</string>
+    <string name="subscription_spin_helper_revealed">Detta erbjudande avslöjas efter att hjulet stannar.</string>
+
+
+    <!-- Onboarding: OneTimeOfferHeroCard-->
+    <string name="subscription_gift_unlocked_title">Gåvan upplåst 🎁</string>
+    <string name="subscription_gift_price_unlocked">Presentpris upplåst</string>
+    <string name="subscription_unlock_premium_for_only">Lås upp premium för endast</string>
+    <string name="subscription_discount_body">Skanna måltider snabbare. Spåra makron smartare.\nFölj planen dagligen.</string>
+    <string name="subscription_yearly_price_format">%1$s/år</string>
+    <string name="subscription_urgency_coffee">Mindre än en kaffe</string>
+    <string name="subscription_urgency_price_gone">Stäng den här skärmen? Detta pris är borta</string>
+    <string name="subscription_urgency_waiting">Vad väntar du på?</string>
+
+    <string name="subscription_trial_enabled">Gratis provperiod aktiverad</string>
+    <string name="subscription_trial_enable_prompt">Inte säker? Aktivera gratis provperiod</string>
+    <string name="subscription_trial_checking_eligibility">Kontrollerar provperiodens tillgänglighet...</string>
+    <string name="subscription_trial_already_used">Testversionen har redan använts</string>
+    <string name="subscription_trial_unavailable">Gratis provperiod är inte tillgänglig</string>
+
+    <string name="subscription_badge_free_trial">Gratis provperiod</string>
+    <string name="subscription_badge_lowest_price_ever">Lägsta pris någonsin</string>
+    <string name="subscription_yearly_plan">Årsplan</string>
+    <string name="subscription_yearly_plan_price_format">12 månader · %1$s</string>
+
+    <string name="subscription_start_free_trial">Prova gratis i 3 dagar</string>
+    <string name="subscription_trial_helper">Inget åtagande – avbryt när som helst</string>
+    <string name="subscription_discount_terms_format">Bara %1$s/år (%2$s/mån)</string>
+    <string name="subscription_discount_trial_terms_format">Inget åtagande - Avbryt när som helst</string>
+
+
+    <!-- HomeScreen -->
+    <string name="recently_uploaded">Nyligen uppladdad</string>
+    <string name="workout_membership_verify_failed">Det gick inte att verifiera medlemskapet. Försök igen.</string>
+
+
+    <!-- MainBottomBar -->
+    <string name="bottom_nav_home">Hem</string>
+    <string name="bottom_nav_progress">Framsteg</string>
+    <string name="bottom_nav_weight">Vikt</string>
+    <string name="bottom_nav_fasting">Fasta</string>
+    <string name="bottom_nav_workout">Träningspass</string>
+
+
+    <!-- =============   HomeCards  ============= -->
+
+    <!-- HomeCards :  Calories Card -->
+    <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
+    <string name="home_calories_goal_label">Kalorier kvar</string>
+    <string name="home_calories_eaten_label">Kalorier ätit</string>
+
+
+    <!-- HomeCards :  Nutrition Card -->
+    <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
+    <string name="home_protein_goal_label">Protein kvar</string>
+    <string name="home_protein_eaten_label">Protein ätit</string>
+    <string name="home_carbs_goal_label">Kolhydrater kvar</string>
+    <string name="home_carbs_eaten_label">Kolhydrater ätit</string>
+    <string name="home_fats_goal_label">Fett kvar</string>
+    <string name="home_fats_eaten_label">Fett ätit</string>
+    <string name="home_fiber_goal_label">Fiber kvar</string>
+    <string name="home_fiber_eaten_label">Fiber ätit</string>
+    <string name="home_sugar_goal_label">Socker kvar</string>
+    <string name="home_sugar_eaten_label">Socker ätit</string>
+    <string name="home_sodium_goal_label">Natrium kvar</string>
+    <string name="home_sodium_eaten_label">Natrium ätit</string>
+    <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
+
+
+    <!-- HomeCards :  Health Score Card & Advice -->
+    <string name="home_health_score_advice_zero">Logga din första måltid idag för att se ett hälsoresultat baserat på dess näringsinformation.</string>
+    <string name="home_health_score_advice_very_low">Genomsnittet för idag är lågt. Överväg mer protein, fibrer och lägre socker eller natrium.</string>
+    <string name="home_health_score_advice_low">Det finns utrymme att förbättra. Prova att lägga till grönsaker och kvalitetsprotein.</string>
+    <string name="home_health_score_advice_medium">Du är på rätt spår. Håll portionerna stadiga och titta på socker, natrium och fibrer.</string>
+    <string name="home_health_score_advice_good">Bra balans idag. Fortsätt att välja näringsrik mat.</string>
+    <string name="home_health_score_advice_excellent">Bra balans idag. Fortsätt bygga konsekventa vanor.</string>
+    <string name="home_health_score_title">Hälsoresultat</string>
+    <string name="home_health_score_value">%1$d/10</string>
+
+
+    <!-- HomeCards : Step Card -->
+    <string name="steps_card_title">Steg</string>
+    <string name="steps_status_permission_not_granted">Ej auktoriserad</string>
+    <string name="steps_status_hc_not_installed">Ej installerad</string>
+    <string name="steps_status_hc_unavailable">Inte tillgänglig</string>
+    <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
+    <string name="steps_secondary_no_data_yet">Inga uppgifter ännu</string>
+    <string name="steps_secondary_connect">Ansluta</string>
+    <string name="steps_hint_connect_google_health">Anslut Google Health för att spåra dina steg</string>
+    <string name="steps_hint_install_health_connect">Installera Health Connect för att spåra dina steg</string>
+    <string name="steps_hint_hc_unavailable">Health Connect är inte tillgängligt på den här enheten</string>
+    <string name="steps_hint_retry">Synkroniseringen misslyckades. Tryck för att försöka igen</string>
+
+
+    <!-- HomeCards : Workout Card -->
+    <string name="workout_card_title">Träningspass</string>
+    <string name="workout_card_unit_kcal">kcal</string>
+
+
+    <!-- HomeCards : Weight Card -->
+    <string name="weight_card_title">Vikt</string>
+    <string name="weight_card_of_goal">av mål</string>
+
+
+    <!-- HomeCards : Fasting Card -->
+    <string name="fasting_card_plan_title">Fasteplan</string>
+    <string name="fasting_card_start_time">Starttid</string>
+    <string name="fasting_card_end_time">Sluttid</string>
+
+
+    <!-- HomeCards : Water Card -->
+    <string name="water_intake_title">Vatten</string>
+    <string name="water_intake_cups_format">(%1$d koppar)</string>
+
+
+    <!-- =========================
+         ProgressScreen
+         ========================= -->
+    <string name="progress_screen_title">Framsteg</string>
+    <string name="progress_tab_this_week">Denna vecka</string>
+    <string name="progress_tab_last_week">Förra veckan</string>
+    <string name="progress_tab_two_weeks_ago">2 veckor. sedan</string>
+    <string name="progress_tab_three_weeks_ago">3 veckor. sedan</string>
+    <string name="progress_error_load_failed">Laddningen misslyckades</string>
+    <string name="workout_chart_error_load_failed">Det gick inte att ladda träningsdiagrammet</string>
+    <string name="water_chart_error_load_failed">Ladda vattendiagram misslyckades</string>
+
+
+    <!-- =========================
+         BMI Card / BMI Info Dialog
+         ========================= -->
+    <string name="bmi_card_title">Ditt BMI</string>
+    <string name="bmi_card_subtitle">Din vikt är</string>
+
+    <string name="bmi_status_underweight">Undervikt</string>
+    <string name="bmi_status_healthy">Hälsosam</string>
+    <string name="bmi_status_overweight">Övervikt</string>
+    <string name="bmi_status_obese">Fet</string>
+    <string name="bmi_status_unknown">Okänd</string>
+
+    <string name="bmi_range_underweight">&lt;18,5</string>
+    <string name="bmi_range_healthy">18.5–24.9</string>
+    <string name="bmi_range_overweight">25.0–29.9</string>
+    <string name="bmi_range_obese">&gt;30,0</string>
+
+    <string name="bmi_info_title">Vad är BMI?</string>
+    <string name="bmi_info_subtitle">Body Mass Index</string>
+    <string name="bmi_info_formula_title">Formel</string>
+    <string name="bmi_info_formula_value">BMI = vikt (kg) / höjd (m²)</string>
+    <string name="bmi_info_meaning_title">Vad det säger dig</string>
+    <string name="bmi_info_meaning_body">BMI hjälper till att uppskatta om din kroppsvikt ligger inom ett allmänt hälsosamt intervall.</string>
+    <string name="bmi_info_note_title">Komma ihåg</string>
+    <string name="bmi_info_note_body">BMI är en allmän guide. Det mäter inte direkt kroppsfett, muskelmassa eller allmän hälsa.</string>
+    <string name="bmi_info_cta">Jag förstår</string>
+
+
+    <!-- =========================
+         NutritionChartCard
+         ========================= -->
+    <string name="progress_chart_7day_avg_calories">7-dagars snitt</string>
+    <string name="progress_chart_value_cals">%1$d kal</string>
+    <string name="progress_chart_15day_avg_calories">15 dagars snitt</string>
+    <string name="progress_chart_loading_total_calories_text">--.- kal</string>
+    <string name="progress_chart_loading_delta">↑ --%%</string>
+    <string name="progress_chart_delta_placeholder">--%%</string>
+    <string name="progress_chart_total_calories">Totala kalorier</string>
+    <string name="progress_chart_cals">cals</string>
+    <string name="progress_legend_protein">Protein</string>
+    <string name="progress_legend_carbs">Kolhydrater</string>
+    <string name="progress_legend_fats">Fetter</string>
+    <string name="progress_keep_it_up">Fortsätt så! Att komma igång är det svåraste!</string>
+
+    <string name="progress_day_sun">Sol</string>
+    <string name="progress_day_mon">mån</string>
+    <string name="progress_day_tue">tis</string>
+    <string name="progress_day_wed">ons</string>
+    <string name="progress_day_thu">tors</string>
+    <string name="progress_day_fri">fre</string>
+    <string name="progress_day_sat">lö</string>
+
+    <string name="progress_tooltip_calories">Kalorier</string>
+    <string name="progress_tooltip_protein">Protein</string>
+    <string name="progress_tooltip_carbs">Kolhydrater</string>
+    <string name="progress_tooltip_fats">Fetter</string>
+    <string name="progress_tooltip_label_format">%1$s:</string>
+    <string name="progress_tooltip_grams_value">%1$d g</string>
+    <string name="progress_tooltip_plain_value">%1$d</string>
+
+
+    <!-- =========================
+         MicronutrientChartCard
+         ========================= -->
+    <string name="progress_micronutrients_title">Mikronäringsämnen</string>
+    <string name="progress_chart_grams">g</string>
+    <string name="progress_chart_7day_avg">7-dagars snitt</string>
+    <string name="progress_legend_fiber">Fiber</string>
+    <string name="progress_legend_sugar">Socker</string>
+    <string name="progress_legend_sodium">Natrium</string>
+    <string name="progress_micronutrients_keep_it_up">Håll dina fibrer, socker och natrium i balans.</string>
+    <string name="progress_tooltip_fiber">Fiber</string>
+    <string name="progress_tooltip_sugar">Socker</string>
+    <string name="progress_tooltip_sodium">Natrium</string>
+    <string name="progress_tooltip_mg_value">%1$d mg</string>
+
+
+    <!-- =========================
+         WorkoutChartCard
+         ========================= -->
+    <string name="workout_chart_goal_reached">Målet nått idag</string>
+    <string name="workout_chart_goal_left">%1$d kcal kvar för att nå målet för idag</string>
+    <string name="workout_chart_title">Träningsförbränning</string>
+    <string name="workout_chart_info_dialog_body">Inkluderar loggade träningspass och aktivitetskalorier beräknade från dagliga steg.</string>
+    <string name="workout_chart_unit_kcal">kcal</string>
+    <string name="workout_chart_goal">Mål</string>
+    <string name="workout_chart_value_kcal">%1$d kcal</string>
+    <string name="workout_chart_7day_avg">7-dagars snitt</string>
+    <string name="workout_chart_loading">Belastning…</string>
+    <string name="workout_legend_burned">Träningen brände</string>
+    <string name="workout_legend_daily_goal">Dagligt mål</string>
+    <string name="workout_tooltip_burned">Bränt</string>
+    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+
+
+    <!-- =========================
+         WaterChartCard
+         ========================= -->
+    <string name="water_chart_goal_reached">Målet nått för idag</string>
+    <string name="water_chart_goal_left_ml">%1$s ml kvar för att nå målet för idag</string>
+    <string name="water_chart_title">Vattenintag</string>
+    <string name="water_chart_unit_ml">ml</string>
+    <string name="water_chart_goal">Mål</string>
+    <string name="water_chart_value_ml">%1$s ml</string>
+    <string name="water_chart_7day_avg">7-dagars snitt</string>
+    <string name="water_chart_loading">Belastning…</string>
+    <string name="water_legend_intake">Intag</string>
+    <string name="water_legend_daily_goal">Dagligt mål</string>
+    <string name="water_tooltip_intake">Intag</string>
+    <string name="water_tooltip_ml_value">%1$d ml</string>
+
+
+    <!-- =========================
+         ProgressAverageOverviewSection
+         ========================= -->
+    <string name="progress_average_tab_7_days">7 dagar</string>
+    <string name="progress_average_tab_15_days">15 dagar</string>
+    <string name="progress_average_tab_30_days">30 dagar</string>
+    <string name="progress_average_tab_60_days">60 dagar</string>
+
+    <string name="progress_average_overview_title">Genomsnittlig översikt</string>
+    <string name="progress_average_overview_subtitle">Exkluderar idag och i genomsnitt endast dagar med data.</string>
+    <string name="progress_average_days_badge">%1$d-dagars genomsnitt</string>
+    <string name="progress_average_loading">Laddar medelvärden...</string>
+    <string name="progress_average_total_calories">Totala kalorier</string>
+    <string name="progress_average_protein">Protein</string>
+    <string name="progress_average_carbs">Kolhydrater</string>
+    <string name="progress_average_fats">Fetter</string>
+    <string name="progress_average_fiber">Fiber</string>
+    <string name="progress_average_sugar">Socker</string>
+    <string name="progress_average_sodium">Natrium</string>
+    <string name="progress_average_workout">Träningen brände</string>
+    <string name="progress_average_water">Vattenintag</string>
+    <string name="progress_average_health_score">Hälsopoäng</string>
+    <string name="progress_average_steps">Steg</string>
+    <string name="progress_average_health_score_value">%1$.1f / 10</string>
+    <string name="progress_average_steps_value">%1$s steg</string>
+
+
+    <!--WeightScreen-->
+    <string name="weight_title">Vikt</string>
+    <string name="weight_overview_title">Översikt</string>
+    <string name="weight_history_title">Historia</string>
+    <string name="weight_delete_success">Raderades framgångsrikt!</string>
+    <string name="weight_delete_failed">Det gick inte att ta bort. Försök igen.</string>
+    <string name="weight_log_weight">Timmervikt</string>
+
+
+    <!-- WeightComponents -->
+    <string name="weight_card_to_goal_weight">Till målvikt</string>
+    <string name="weight_card_current_weight">Aktuell vikt</string>
+    <string name="weight_card_achieved_goal_format">Uppnådde %1$s%% av målet</string>
+    <string name="weight_chart_tab_30_days">30 dagar</string>
+    <string name="weight_chart_tab_60_days">60 dagar</string>
+    <string name="weight_chart_tab_90_days">90 dagar</string>
+    <string name="weight_chart_tab_all_time">Hela tiden</string>
+    <string name="weight_chart_title">Vikt trend</string>
+    <string name="weight_chart_goal_progress_badge">%1$s%% av målet</string>
+    <string name="weight_chart_goal_label">Mål</string>
+    <string name="weight_chart_to_goal">%1$s till mål</string>
+    <string name="weight_goal_chart_empty_hint">Logga vikt för att starta din trend</string>
+    <string name="weight_chart_motivation">Varje litet steg tar dig närmare ditt mål.</string>
+    <string name="weight_history_weight_label">Vikt</string>
+    <string name="weight_history_change_label">Ändra</string>
+    <string name="weight_history_trend_loss">FÖRLUST</string>
+    <string name="weight_history_trend_gain">FÅ</string>
+    <string name="weight_history_trend_stable">STABIL</string>
+
+
+    <!-- FastingPlansScreen -->
+    <string name="fasting_plan_title">Fasteplan</string>
+    <string name="start_time">Starttid</string>
+    <string name="end_time">Sluttid</string>
+    <string name="fasting_notification_info_status_on">Påminnelser är på. Om enhetsaviseringsbehörighet tillåts upprepas dessa påminnelser dagligen.</string>
+    <string name="fasting_notification_info_status_off">Påminnelser är avstängda. Slå på strömbrytaren på Fastekortet för hemmet för att få dessa aviseringar.</string>
+    <string name="fasting_notification_info_status_enabled_label">På</string>
+    <string name="fasting_notification_info_status_disabled_label">Av</string>
+    <string name="fasting_notification_info_title">Hur påminnelser fungerar</string>
+    <string name="fasting_notification_info_subtitle">Din %1$s plan slutar vid %2$s. När påminnelser är aktiverade skickar CaloShape två dagliga aviseringar.</string>
+    <string name="fasting_notification_info_at_time">Vid %1$s</string>
+    <string name="fasting_notification_info_start_title">Ätfönstret startar</string>
+    <string name="fasting_notification_info_start_body">Du kan börja äta och logga måltider när det behövs.</string>
+    <string name="fasting_notification_info_endsoon_title">Ätfönstret tar snart slut</string>
+    <string name="fasting_notification_info_endsoon_body">En timme innan fönstret stänger vid %1$s påminner CaloShape dig om att avsluta din sista måltid.</string>
+
+    <string name="fasting_plan_desc_14_10">Kom in med en jämn rytm – 14 timmar för att återställa aptiten och energin.</string>
+    <string name="fasting_plan_desc_16_8">Publikens favorit av en anledning – 16 timmar för att hålla fokus och i ett magert spår.</string>
+    <string name="fasting_plan_desc_12_12">Balanserad split: snabb 12 timmar, ät inom ett 12-timmarsfönster — perfekt för nybörjare.</string>
+    <string name="fasting_plan_desc_18_6">18 timmars fasta, med ett 6-timmars ätfönster - ett slankare schema än 16:8.</string>
+    <string name="fasting_plan_desc_20_4">Håll dig laserfokuserad – 1–2 uppmärksamma måltider inom ett snävt 4-timmarsfönster.</string>
+    <string name="fasting_plan_desc_22_2">En avsiktlig måltid i en 2-timmarsperiod – håll uppe vattenintaget.</string>
+
+    <string name="fasting_picker_title">Ställ in din fasta starttid</string>
+    <string name="fasting_picker_subtitle">Vi kommer att påminna dig vid denna tidpunkt varje dag när ditt matfönster börjar.</string>
+
+
+    <!-- FastingReceiver -->
+    <string name="fasting_start_title">%1$s matfönstret är öppet</string>
+    <string name="fasting_start_body">Ditt matfönster löper %1$s–%2$s. Logga måltider när du går för att hålla dagens korrekta.</string>
+    <string name="fasting_endsoon_title">1 timme kvar i ditt matfönster</string>
+    <string name="fasting_endsoon_body">Ditt fönster stängs vid %1$s. Om du planerar en sista måltid, logga in den innan du avslutar.</string>
+
+
+
+
+    <!-- WorkoutHistoryScreen -->
+    <string name="workout_history_title">Träningshistorik</string>
+    <string name="workout_history_summary_label">Idag brann</string>
+    <string name="workout_history_summary_body">Spåra dagens träningsförbränningsframsteg</string>
+    <string name="workout_history_today_label">I dag</string>
+    <string name="workout_history_avg_daily_value">%1$d kcal</string>
+    <string name="workout_history_avg_daily_label">7-dagars medel/dag</string>
+    <string name="workout_history_avg_label">7-dagars medel/session</string>
+    <string name="workout_history_avg_value">%1$d kcal</string>
+    <string name="workout_history_unit_kcal">kcal</string>
+
+    <string name="workout_history_empty_title">Inga senaste träningspass</string>
+    <string name="workout_history_empty">Inga träningspass de senaste 7 dagarna.</string>
+    <string name="workout_history_recent_title">Senaste sessioner</string>
+    <string name="workout_history_minutes">%1$d min</string>
+    <string name="workout_history_kcal">%1$d</string>
+    <string name="workout_history_date_time">%1$s · %2$s</string>
+    <string name="workout_history_kcal_with_unit">%1$d kcal</string>
+
+    <string name="workout_history_loading_title">Synkronisera träningspass</string>
+    <string name="workout_history_loading">Laddar träningshistorik...</string>
+    <string name="workout_history_error_title">Historik inte tillgänglig</string>
+
+    <string name="workout_history_delete_failed">Det gick inte att ta bort. Försök igen.</string>
+    <string name="workout_history_delete_success">Raderades framgångsrikt!</string>
+    <string name="workout_history_error">Det gick inte att ladda träningshistoriken.</string>
+
+
+    <!-- WorkoutTrackerSheet -->
+    <string name="workout_tracker_title">Träningsspårare</string>
+    <string name="workout_tracker_subtitle">Beskriv typ av träning och varaktighet</string>
+    <string name="workout_tracker_example_placeholder">Exempel: 45 min löpning</string>
+
+    <string name="workout_tracker_select_from_list">eller välj från listan</string>
+    <string name="workout_tracker_show_less">Visa mindre</string>
+    <string name="workout_tracker_show_more">Visa mer (%1$d)</string>
+
+    <string name="workout_tracker_estimating_fallback">Uppskattar...</string>
+    <string name="workout_tracker_estimating_analyzing">Analyserar din aktivitet...</string>
+    <string name="workout_tracker_estimating_numbers">Jobbar på dina siffror...</string>
+    <string name="workout_tracker_estimating_calories">Beräkna ansträngning, beräkna kalorier...</string>
+    <string name="workout_tracker_do_not_close">Stäng inte appen eller lås din enhet</string>
+
+    <string name="workout_tracker_kcal_value">%1$d kcal</string>
+    <string name="workout_tracker_minutes_activity">%1$d min %2$s</string>
+    <string name="workout_tracker_add_workout">Lägg till träningspass</string>
+
+    <string name="workout_tracker_activity_content_label">Träningsaktivitet</string>
+    <string name="workout_preset_kcal_per_30_min">%1$d kcal / 30 min</string>
+
+    <string name="workout_tracker_save_success">Sparad framgångsrikt!</string>
+    <string name="workout_tracker_save_failed">Det gick inte att spara. Försök igen.</string>
+    <string name="workout_tracker_refresh_failed">Uppdateringen misslyckades. Försök igen.</string>
+    <string name="workout_tracker_cancel">Avboka</string>
+    <string name="workout_tracker_try_again">Försök igen</string>
+    <string name="workout_tracker_scan_failed_title">Åh-åh! Skanningen misslyckades</string>
+    <string name="workout_tracker_scan_failed_body">Träningsbeskrivningen kan vara felaktig eller så är internetanslutningen svag. Till exempel: 30 min löpning.</string>
+
+
+    <!-- workoutNameStringRes : Workout preset display names -->
+    <string name="workout_preset_walking">Gående</string>
+    <string name="workout_preset_running">Spring</string>
+    <string name="workout_preset_cycling">Cykling</string>
+    <string name="workout_preset_swimming">Simning</string>
+    <string name="workout_preset_hiking">Vandring</string>
+    <string name="workout_preset_aerobic_exercise">Aerob träning</string>
+    <string name="workout_preset_strength_training">Styrketräning</string>
+    <string name="workout_preset_weight_training">Styrketräning</string>
+    <string name="workout_preset_basketball">Basketboll</string>
+    <string name="workout_preset_soccer">Fotboll</string>
+    <string name="workout_preset_tennis">Tennis</string>
+    <string name="workout_preset_yoga">Yoga</string>
+    <string name="workout_preset_badminton">Badminton</string>
+    <string name="workout_preset_baseball">Baseball</string>
+    <string name="workout_preset_softball">Softboll</string>
+    <string name="workout_preset_volleyball">Volleyboll</string>
+    <string name="workout_preset_table_tennis">Bordtennis</string>
+    <string name="workout_preset_dancing_general">Dans</string>
+    <string name="workout_preset_zumba">Zumba</string>
+    <string name="workout_preset_pilates">Pilates</string>
+
+
+    <!-- DurationPickerSheet -->
+    <string name="workout_duration_sheet_subtitle">Lägg till den här träningstiden i din aktivitetslogg</string>
+    <string name="workout_duration_hour_short">hr</string>
+    <string name="workout_duration_minute_short">min</string>
+    <string name="workout_duration_save">Spara</string>
+    <string name="workout_duration_cancel">Avboka</string>
+
+
+    <!-- HomeQuickActionMenu -->
+    <string name="quick_add_saved_foods">Sparad mat</string>
+    <string name="quick_add_scan_food">Skanna mat</string>
+
+
+    <!-- CameraScreen -->
+    <string name="camera_mode_food">Skanna mat</string>
+    <string name="camera_mode_barcode">Streckkod</string>
+    <string name="camera_mode_label">Matetikett</string>
+    <string name="camera_mode_album">Foton</string>
+    <string name="camera_barcode_title">Streckkodsläsare</string>
+    <string name="camera_label_title">Etikettskanner</string>
+    <string name="camera_need_permission">Kameratillstånd krävs för att skanna</string>
+
+
+    <!-- RecentUploadCard -->
+    <string name="foodlog_pending_analysis">Analyserar din mat...</string>
+    <string name="foodlog_analysis_done">Analysen klar</string>
+    <string name="recent_upload_kcal_text">🔥 %1$d kalorier</string>
+    <string name="recent_upload_protein_text">🥩 %1$dg</string>
+    <string name="recent_upload_carbs_text">🌾 %1$dg</string>
+    <string name="recent_upload_fat_text">🥑 %1$dg</string>
+
+
+    <!-- RecentlyUploadedEmptyCard -->
+    <string name="recently_uploaded_empty">Nyligen uppladdad</string>
+    <string name="recently_uploaded_empty_hint">Tryck på + för att lägga till din första måltid för dagen</string>
+
+
+    <!-- SavedFoodsScreen -->
+    <string name="saved_foods_keep_15_days_hint">Sparad mat från de senaste 15 dagarna.</string>
+    <string name="saved_foods_unsave_dialog_title">Ta bort från sparad mat?</string>
+    <string name="saved_foods_unsave_dialog_message">Denna måltid kommer att tas bort från din sparade mat-lista, men den kommer fortfarande att finnas kvar i dina senaste register.</string>
+    <string name="saved_foods_unsave_dialog_confirm">Ta bort</string>
+    <string name="saved_foods_title">Sparad mat</string>
+    <string name="saved_foods_kcal">🔥 %1$d kalorier</string>
+    <string name="saved_foods_protein">🥩 %1$dg</string>
+    <string name="saved_foods_carbs">🌾 %1$dg</string>
+    <string name="saved_foods_fat">🥑 %1$dg</string>
+    <string name="saved_foods_detail">Detalj</string>
+    <string name="saved_foods_load_failed_title">Sparade livsmedel kunde inte laddas</string>
+
+
+    <!-- RecentUploadDetailScreen -->
+    <string name="foodlog_detail_load_failed">Laddningen misslyckades</string>
+    <string name="foodlog_unknown_food">Okänd mat</string>
+    <string name="foodlog_no_image">Ingen bild</string>
+
+    <string name="foodlog_detail_title">Näring</string>
+    <string name="foodlog_detail_calories">Kalorier</string>
+    <string name="foodlog_detail_protein">Protein</string>
+    <string name="foodlog_detail_carbs">Kolhydrater</string>
+    <string name="foodlog_detail_fats">Fetter</string>
+    <string name="foodlog_detail_fiber">Fiber</string>
+    <string name="foodlog_detail_sugar">Socker</string>
+    <string name="foodlog_detail_sodium">Natrium</string>
+    <string name="foodlog_detail_health_score">Hälsopoäng</string>
+
+
+    <!-- DeleteFoodLogDialog -->
+    <string name="foodlog_delete_dialog_title">Ta bort post?</string>
+    <string name="foodlog_delete_dialog_message">Är du säker på att du vill ta bort denna måltidspost permanent? Denna åtgärd kan inte ångras.</string>
+    <string name="foodlog_delete_dialog_confirm">Radera</string>
+
+
+    <!-- Settings -->
+    <string name="settings_title">Inställningar</string>
+    <string name="settings_choose_language">Välj språk</string>
+    <string name="delete_account_dialog_title">Ta bort konto?</string>
+    <string name="delete_account_dialog_body">Är du säker på att du vill ta bort ditt konto? Detta kommer att radera dina CaloShape-data permanent, inklusive matloggar, viktregister och relaterade inställningar. Denna åtgärd kan inte ångras.</string>
+
+
+    <string name="restore_subscription_dialog_success_title">Prenumerationen återställd</string>
+    <string name="restore_subscription_dialog_payment_issue_title">Prenumerationen återställd, betalningsproblem kvarstår</string>
+    <string name="restore_subscription_dialog_no_active_title">Ingen aktiv prenumeration på Google Play hittades</string>
+    <string name="restore_subscription_dialog_failed_title">Återställningen misslyckades</string>
+    <string name="restore_subscription_dialog_bound_title">Prenumeration kopplad till ett annat konto</string>
+    <string name="restore_subscription_dialog_success_body">Din prenumeration har återställts till detta CaloShape-konto.</string>
+    <string name="restore_subscription_dialog_payment_issue_body">Din prenumeration är länkad till detta CaloShape-konto, men Google Play rapporterar fortfarande ett betalningsproblem. Uppdatera din betalningsmetod i Google Play för att hålla din prenumeration aktiv.</string>
+    <string name="restore_subscription_dialog_no_active_body">Vi kunde inte hitta en aktiv CaloShape-prenumeration på det aktuella Google Play-kontot. Se till att du använder Google Play-kontot som gjorde köpet och försök sedan igen.</string>
+    <string name="restore_subscription_dialog_failed_body">Vi kunde inte återställa din prenumeration just nu. Kontrollera din anslutning och försök igen från Inställningar.</string>
+    <string name="restore_subscription_dialog_bound_body">Denna Google Play-prenumeration är redan länkad till ett annat CaloShape-konto. Logga in på det ursprungliga kontot för att använda det, eller kontakta supporten om du inte kan komma åt det kontot.</string>
+    <string name="restore_subscription_dialog_body">Vi hittade en aktiv CaloShape-prenumeration eller testversion kopplad till Google Play-kontot på den här enheten. Du kan återställa det till CaloShape-kontot som du för närvarande är inloggad på.</string>
+
+    <!-- Settings : Payment issue dialog -->
+    <string name="payment_issue_dialog_title">Håll din premium aktiv</string>
+    <string name="payment_issue_dialog_body">Din premiumåtkomst är fortfarande aktiv för tillfället, men din betalning behöver uppmärksammas.</string>
+    <string name="payment_issue_dialog_supporting_body">Uppdatera din Google Play-betalningsmetod för att undvika att förlora AI-skanning och premiumfunktioner.</string>
+    <string name="payment_issue_dialog_update_payment">Uppdatera betalningsmetod</string>
+    <string name="payment_issue_dialog_badge">Betalning kräver uppmärksamhet</string>
+    <string name="payment_issue_dialog_premium_access">Premium tillgång</string>
+    <string name="payment_issue_dialog_active_for_now">Aktiv för tillfället</string>
+    <string name="payment_issue_dialog_next_step">Nästa steg</string>
+    <string name="payment_issue_dialog_update_payment_short">Uppdatera betalning</string>
+
+
+    <string name="settings_personal_details">Personliga uppgifter</string>
+    <string name="settings_adjust_macronutrients">Justera makronäringsämnen</string>
+    <string name="settings_weight_history">Vikt historia</string>
+    <string name="settings_ring_colors_explained">Kalenderring Färgguide</string>
+    <string name="settings_inbox">Inkorg</string>
+
+
+    <string name="settings_terms_conditions">Regler och villkor</string>
+    <string name="settings_privacy_policy">Sekretesspolicy</string>
+    <string name="settings_support_email">Support E-post</string>
+    <string name="settings_delete_account">Ta bort konto?</string>
+    <string name="settings_version">Version %1$s</string>
+
+
+    <string name="settings_membership_payment">Betalning</string>
+    <string name="settings_membership_update_payment">Uppdatera betalning</string>
+    <string name="settings_membership_premium">Premie</string>
+    <string name="settings_membership_active_member">Aktiv medlem</string>
+    <string name="settings_membership_trial">Rättegång</string>
+    <string name="settings_membership_access_active">Åtkomst aktiv</string>
+    <string name="settings_membership_free">Gratis</string>
+    <string name="settings_membership_upgrade">Uppgradera</string>
+
+
+    <!-- Settings: referral card -->
+    <string name="settings_invite_friends">Bjud in vänner</string>
+    <string name="settings_premium_reward">Premium belöning</string>
+    <string name="settings_share_caloshape_with_friends">Dela CaloShape AI\nmed dina vänner</string>
+    <string name="settings_referral_reward_content">De prenumererar. Du får 30 dagar gratis.</string>
+    <string name="settings_get_30_days_free">Få 30 dagar gratis</string>
+    <string name="settings_days_label">dagar</string>
+
+    <string name="settings_appearance_light">Ljus</string>
+    <string name="settings_appearance_dark">Mörk</string>
+    <string name="settings_appearance_mode_title">Välj utseende</string>
+    <string name="settings_appearance_light_description">Behåll det nuvarande ljusa, rena utseendet.</string>
+    <string name="settings_appearance_dark_description">Använd ett mörkare, mjukare gränssnitt för daglig spårning.</string>
+    <string name="settings_preferences">Inställningar</string>
+    <string name="settings_appearance">Utseende</string>
+
+    <string name="settings_language">Språk</string>
+
+
+    <!-- Settings: Widget Guide -->
+    <string name="settings_widgets_title">Widgets</string>
+    <string name="settings_widgets_how_to_add">Hur lägger man till?</string>
+    <string name="log_your_food">Logga din mat</string>
+
+    <string name="settings_calories_goal_label">Kalorier kvar</string>
+    <string name="settings_protein_goal_label">Protein kvar</string>
+    <string name="settings_carbs_goal_label">Kolhydrater kvar</string>
+    <string name="settings_fats_goal_label">Fett kvar</string>
+    <string name="settings_widget_scan_food">Skanna mat</string>
+    <string name="settings_widget_barcode">Streckkod</string>
+
+    <string name="settings_logout_loading">Loggar ut...</string>
+    <string name="settings_logout">Utloggning</string>
+    <string name="settings_logout_failed">Det gick inte att logga ut. Kontrollera din anslutning och försök igen.</string>
+
+
+    <!-- EditNameScreen -->
+    <string name="settings_edit_your_name_title">Redigera ditt namn</string>
+    <string name="edit_name_placeholder">Ange ditt namn</string>
+
+
+    <!-- Referral Screen -->
+    <string name="referral_title">Bjud in vänner</string>
+    <string name="referral_premium_reward">Premium belöning</string>
+    <string name="referral_invite_friends">Bjud in vänner</string>
+    <string name="referral_earn_30_days_free">Tjäna 30 dagar gratis</string>
+    <string name="referral_reward_unlocks_after_no_refund">Belöningen låses upp efter att din vän prenumererar utan återbetalning.</string>
+    <string name="referral_code_copied">Remisskod kopierad.</string>
+    <string name="referral_your_promo_code">Din kampanjkod</string>
+    <string name="referral_copy">Kopiera</string>
+    <string name="referral_share">Dela</string>
+    <string name="referral_how_it_works">Hur det fungerar</string>
+    <string name="referral_step_1_title">Dela din kampanjkod</string>
+    <string name="referral_step_1_subtitle">Skicka din kod till en vän som vill spåra mat smartare.</string>
+    <string name="referral_step_2_title">Din vän prenumererar</string>
+    <string name="referral_step_2_subtitle">De startar en betald CaloShape AI-prenumeration med din inbjudan.</string>
+    <string name="referral_step_3_title">Ingen återbetalning, sedan belöning</string>
+    <string name="referral_step_3_subtitle">Efter att prenumerationen har verifierats utan återbetalning förlängs din premieperiod.</string>
+    <string name="referral_share_text">Följ med mig på CaloShape AI! Min remisskod är:\n%1$s\n\n%2$s</string>
+    <string name="referral_share_subject">Följ med mig på CaloShape AI</string>
+    <string name="referral_share_chooser_title">Dela via</string>
+    <string name="referral_unable_to_open_share_options">Det går inte att öppna aktieoptioner.</string>
+
+
+    <!-- PersonalDetailsScreen -->
+    <string name="personal_details_goal_weight">Målvikt</string>
+    <string name="personal_details_change_goal">Ändra mål</string>
+    <string name="personal_details_body_details_section">Kroppsdetaljer</string>
+    <string name="personal_details_current_weight">Aktuell vikt</string>
+    <string name="personal_details_height">Höjd</string>
+    <string name="personal_details_age">Åldras</string>
+    <string name="personal_details_gender">Kön</string>
+    <string name="personal_details_starting_weight">Startvikt</string>
+    <string name="personal_details_daily_goals_section">Dagliga mål</string>
+    <string name="personal_details_daily_step_goal">Dagligt stegmål</string>
+    <string name="personal_details_daily_water_goal">Dagligt vattenmål</string>
+    <string name="personal_details_daily_workout_goal">Dagligt träningsmål</string>
+    <string name="personal_details_age_value">%1$d år</string>
+    <string name="personal_details_steps_value">%1$d steg</string>
+    <string name="personal_details_water_value">%1$d ml</string>
+    <string name="personal_details_kcal_value">%1$d kcal</string>
+    <string name="gender_male">Manlig</string>
+    <string name="gender_female">Kvinnlig</string>
+    <string name="gender_other">Andra</string>
+
+
+    <!-- EditGoalWeightScreen -->
+    <string name="edit_goal_weight_title">Redigera målvikt</string>
+    <string name="edit_goal_weight_progress_note">Vi kommer att använda detta mål för att beräkna dina framsteg.</string>
+    <string name="edit_goal_update_failed">Det gick inte att uppdatera målvikten</string>
+
+
+    <!-- RecordWeightScreen -->
+    <string name="record_weight_camera_failed_to_open">Kameran kunde inte öppnas.</string>
+    <string name="record_weight_camera_permission_required">Kameratillstånd krävs.</string>
+    <string name="record_weight_camera_preview_unavailable">Kameran fungerar bara i den löpande appen, inte i Preview.</string>
+    <string name="record_weight_camera_screen_unavailable">Kameran är inte tillgänglig på den här skärmen.</string>
+    <string name="record_weight_no_camera_app_found">Ingen kameraapp hittades på den här enheten.</string>
+    <string name="record_weight_enable_camera_permission_settings">Aktivera kamerabehörighet i Inställningar.</string>
+
+    <string name="record_weight_title">Rekordvikt</string>
+    <string name="record_weight_save_failed">Det gick inte att spara</string>
+    <string name="record_weight_date_note">Denna vikt kommer att registreras för %1$s</string>
+
+    <string name="weight_date_sheet_title">Välj ditt vägningsdatum</string>
+    <string name="weight_date_sheet_subtitle">När klev du på vågen?</string>
+    <string name="weight_date_sheet_month_january">januari</string>
+    <string name="weight_date_sheet_month_february">februari</string>
+    <string name="weight_date_sheet_month_march">mars</string>
+    <string name="weight_date_sheet_month_april">april</string>
+    <string name="weight_date_sheet_month_may">maj</string>
+    <string name="weight_date_sheet_month_june">juni</string>
+    <string name="weight_date_sheet_month_july">juli</string>
+    <string name="weight_date_sheet_month_august">augusti</string>
+    <string name="weight_date_sheet_month_september">september</string>
+    <string name="weight_date_sheet_month_october">oktober</string>
+    <string name="weight_date_sheet_month_november">november</string>
+    <string name="weight_date_sheet_month_december">december</string>
+
+    <string name="record_weight_camera_not_available">Kameran är inte tillgänglig</string>
+    <string name="record_weight_take_photo">Ta ett foto</string>
+    <string name="record_weight_retake_photo">Ta om fotot</string>
+
+
+    <!-- EditHeightScreen -->
+    <string name="edit_height_title">Redigera din längd</string>
+    <string name="edit_height_privacy_note">Vi använder bara din längd för att förbättra din upplevelse och noggrannhet i din kaloriuppskattning.</string>
+
+
+    <!-- EditAgeScreen -->
+    <string name="edit_age_title">Redigera din ålder</string>
+    <string name="edit_age_privacy_note">Vi använder bara din ålder för att förbättra din upplevelse och exaktheten i din kaloriuppskattning.</string>
+
+
+    <!-- EditGenderScreen -->
+    <string name="edit_gender_title">Redigera ditt kön</string>
+    <string name="edit_gender_privacy_note">Används endast för att anpassa och förbättra uppskattningsnoggrannheten.</string>
+
+
+    <!-- EditStartingWeightScreen -->
+    <string name="edit_starting_weight_title">Redigera startvikt</string>
+    <string name="edit_start_weight_baseline_note">Vi kommer att använda det som din baslinje för framsteg.</string>
+    <string name="edit_starting_weight_update_failed">Det gick inte att uppdatera startvikten</string>
+
+
+    <!-- EditDailyStepGoalScreen -->
+    <string name="edit_step_goal_title">Redigera stegmål</string>
+    <string name="edit_daily_step_goal_previous_format">Tidigare mål %1$d steg</string>
+    <string name="edit_daily_step_goal_input_label">Dagligt stegmål</string>
+
+
+    <!-- EditWaterGoalScreen -->
+    <string name="edit_water_goal_title">Redigera vattenmål</string>
+    <string name="edit_water_goal_previous_format">Tidigare mål %1$d ml</string>
+    <string name="edit_water_goal_input_label">Dagligt vattenmål (ml)</string>
+
+
+    <!-- EditWorkoutGoalScreen -->
+    <string name="edit_workout_goal_title">Redigera träningsmål</string>
+    <string name="edit_workout_goal_previous_format">Tidigare mål %1$d kcal</string>
+    <string name="edit_workout_goal_input_label">Dagligt träningsmål (kcal)</string>
+
+
+    <!-- EditNutritionGoalsScreen -->
+    <string name="edit_nutrition_goals_title">Redigera näringsmål</string>
+    <string name="edit_nutrition_calorie_goal">Kalorimål</string>
+    <string name="edit_nutrition_protein_goal">Proteinmål</string>
+    <string name="edit_nutrition_carb_goal">Kolhydratmål</string>
+    <string name="edit_nutrition_fat_goal">Fett mål</string>
+    <string name="edit_nutrition_view_micronutrients">Se mikronäringsämnen</string>
+    <string name="edit_nutrition_fiber_goal">Fibermål</string>
+    <string name="edit_nutrition_sugar_goal">Sockermål</string>
+    <string name="edit_nutrition_sodium_goal">Natriummål</string>
+    <string name="edit_nutrition_auto_generate_goals">Skapa mål automatiskt</string>
+
+
+    <!-- RingColorsExplainedScreen -->
+    <string name="ring_colors_explained_title">Datum Ring Färger</string>
+    <string name="ring_colors_explained_intro">Datumringar hjälper dig att snabbt se hur varje dag står sig i jämförelse med ditt kalorimål.</string>
+    <string name="ring_colors_preview_brand">CaloShape AI</string>
+    <string name="ring_colors_explained">Förhandsvisning av datumring</string>
+
+    <string name="ring_colors_preview_day_5">5</string>
+    <string name="ring_colors_preview_day_6">6</string>
+    <string name="ring_colors_preview_day_7">7</string>
+    <string name="ring_colors_preview_day_8">8</string>
+    <string name="ring_colors_preview_day_9">9</string>
+    <string name="ring_colors_preview_day_10">10</string>
+    <string name="ring_colors_preview_day_11">11</string>
+    <string name="ring_colors_explained_subtitle">Ringens färger förklaras</string>
+
+    <string name="ring_colors_green_title">Grön</string>
+    <string name="ring_colors_green_body">På mål (inom 100 kalorier från målet)</string>
+    <string name="ring_colors_yellow_title">Brun</string>
+    <string name="ring_colors_yellow_body">100-199 kalorier över ditt mål</string>
+    <string name="ring_colors_red_title">Röd</string>
+    <string name="ring_colors_red_body">200+ kalorier över ditt mål</string>
+    <string name="ring_colors_dotted_title">Prickad</string>
+    <string name="ring_colors_dotted_body">Inga måltider loggade den dagen</string>
+
+
+    <!-- NotificationInboxScreen Inbox -->
+    <string name="notification_inbox_title">Inkorg</string>
+    <string name="notification_inbox_header_title">CaloShape-meddelanden</string>
+    <string name="notification_inbox_header_body">Alla plattformsaviseringar kommer att visas här.</string>
+    <string name="notification_inbox_status_read">Läsa</string>
+    <string name="notification_inbox_status_unread">Oläst</string>
+
+    <string name="notification_inbox_loading_title">Laddar aviseringar</string>
+    <string name="notification_inbox_loading">Läser in aviseringar...</string>
+    <string name="notification_inbox_empty_title">Inga aviseringar än</string>
+    <string name="notification_inbox_empty_body">Plattformsmeddelanden kommer att visas här.</string>
+    <string name="notification_inbox_error_title">Det gick inte att ladda aviseringar</string>
+    <string name="notification_inbox_error_body">Kontrollera din anslutning och försök igen.</string>
+
+
+    <!-- WidgetGuideScreen -->
+    <string name="widget_guide_title">Lägg till widget</string>
+    <string name="widget_guide_hero_title">Lägg till CaloShape på din startskärm</string>
+    <string name="widget_guide_hero_body">Spåra kalorier, makron och snabba åtgärder utan att öppna appen.</string>
+    <string name="widget_guide_steps_title">Följ dessa steg</string>
+    <string name="widget_guide_step_1_title">Tryck länge på hemskärmen</string>
+    <string name="widget_guide_step_1_body">Tryck och håll ett tomt område på telefonens startskärm tills menyn visas.</string>
+    <string name="widget_guide_step_2_title">Tryck på Widgets</string>
+    <string name="widget_guide_step_2_body">Välj Widgets från startskärmens meny.</string>
+    <string name="widget_guide_step_3_title">Hitta CaloShape AI</string>
+    <string name="widget_guide_step_3_body">Bläddra eller sök efter CaloShape AI och öppna sedan widgetlistan.</string>
+    <string name="widget_guide_step_4_title">Dra en widget på plats</string>
+    <string name="widget_guide_step_4_body">Peka och håll kvar widgeten, dra den till din favoritstartskärm och lyft sedan fingret.</string>
+    <string name="widget_guide_tip_title">Hittar du inte Widgets-menyn?</string>
+    <string name="widget_guide_tip_body">Vissa telefonmärken och lanserare använder olika namn. Testa heminställningar, tryck länge på CaloShape AI-appikonen eller sök efter widgets i startprogrammet.</string>
+    <string name="widget_guide_done">Jag förstår</string>
+    <string name="widget_guide_mock_home">Hem</string>
+    <string name="widget_guide_mock_widgets">Widgets</string>
+
+
+    <!-- CaloShapeNavHost -->
+    <string name="url_terms">https://caloshape.com/terms</string>
+    <string name="url_privacy">https://caloshape.com/privacy</string>
+    <string name="url_support_email">mailto:support@caloshape.com?subject=Support%20Request</string>
+    <string name="camera_manual_entry_not_ready">Manuell inmatning är inte klar ännu. Byter till etikettskanning för tillfället.</string>
+
+
+    <!-- Android home screen widgets -->
+    <string name="widget_preview_goal_kcal">1830</string>
+    <string name="widget_preview_protein">120 g</string>
+    <string name="widget_preview_carbs">180 g</string>
+    <string name="widget_preview_fats">60 g</string>
+    <string name="widget_calories_left">Kalorier kvar</string>
+    <string name="widget_protein_left">Protein kvar</string>
+    <string name="widget_carbs_left">Kolhydrater kvar</string>
+    <string name="widget_fats_left">Fett kvar</string>
+    <string name="widget_calories_description">CaloShape kalorier widget</string>
+    <string name="widget_macro_actions_description">CaloShape-makron och widget för snabba åtgärder</string>
+    <string name="widget_log_your_food">Logga din mat</string>
+    <string name="widget_scan_food">Skanna mat</string>
+    <string name="widget_barcode">Streckkod</string>
+    <string name="widget_grams_format">%1$dg</string>
+
+
+
+
+
+    <!-- =========================
+                    Not use
+         ========================= -->
+    <!-- PremiumRewardsScreen Not use -->
+    <string name="premium_rewards_subscription_title">Prenumeration</string>
+    <string name="premium_rewards_history_title">Belöningshistorik</string>
+    <string name="premium_rewards_loading_membership">Laddar medlemskap...</string>
+    <string name="premium_rewards_status_title">Premiumstatus</string>
+    <string name="premium_rewards_latest_title">Senaste belöningen</string>
+    <string name="premium_rewards_source_format">Källa: %1$s</string>
+    <string name="premium_rewards_channel_format">Kanal: %1$s</string>
+    <string name="premium_rewards_grant_status_format">Bidragsstatus: %1$s</string>
+    <string name="premium_rewards_status_format">Status: %1$s</string>
+    <string name="premium_rewards_google_defer_format">Google uppskjuter: %1$s</string>
+    <string name="premium_rewards_granted_at_format">Beviljas på: %1$s</string>
+    <string name="premium_rewards_old_expiry_format">Gammalt utgångsdatum: %1$s</string>
+    <string name="premium_rewards_new_expiry_format">Nytt utgångsdatum: %1$s</string>
+    <string name="premium_rewards_error_format">Fel: %1$s</string>
+    <string name="premium_rewards_days_added_format">Tillagda dagar: %1$d</string>
+    <string name="premium_rewards_empty_title">Inga belöningar än</string>
+    <string name="premium_rewards_empty_body">Lyckade hänvisningar kommer att visas här efter verifiering.</string>
+    <string name="premium_rewards_channel_google_play_defer">Google Plays faktureringsdatum förlängt</string>
+    <string name="premium_rewards_channel_backend_only">Premiumbelöning tillämpas</string>
+    <string name="premium_rewards_grant_success">Framgång</string>
+    <string name="premium_rewards_status_retrying">Försöker igen</string>
+    <string name="premium_rewards_grant_not_granted">Inte beviljat</string>
+    <string name="premium_rewards_google_defer_success">Utökad av Google Play</string>
+    <string name="premium_rewards_google_defer_failed">Misslyckades</string>
+    <string name="premium_rewards_google_defer_not_required">Krävs inte</string>
+
+
+</resources>

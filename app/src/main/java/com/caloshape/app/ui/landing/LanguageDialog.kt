@@ -55,11 +55,23 @@ val LANGS = listOf(
     LangItem("日本語", "ja", "🇯🇵"),
     LangItem("Deutsch", "de", "🇩🇪"),
     LangItem("Français", "fr", "🇫🇷"),
+    LangItem("Italiano", "it", "🇮🇹"),
+    LangItem("Nederlands", "nl", "🇳🇱"),
+    LangItem("Svenska", "sv", "🇸🇪"),
+    LangItem("Suomi", "fi", "🇫🇮"),
+    LangItem("Polski", "pl", "🇵🇱"),
     LangItem("한국어", "ko", "🇰🇷"),
     LangItem("Español", "es", "🇪🇸"),
+    LangItem("Español (México)", "es-MX", "🇲🇽"),
     LangItem("简体中文", "zh-CN", "🇨🇳"),
     LangItem("繁體中文", "zh-HK", "🇭🇰"),
-    LangItem("Português", "pt-BR", "🇧🇷")
+    LangItem("Português", "pt-BR", "🇧🇷"),
+    LangItem("Tiếng Việt", "vi", "🇻🇳"),
+    LangItem("ไทย", "th", "🇹🇭"),
+    LangItem("Bahasa Indonesia", "id", "🇮🇩"),
+    LangItem("हिन्दी", "hi", "🇮🇳"),
+    LangItem("עברית", "he", "🇮🇱"),
+    LangItem("Türkçe", "tr", "🇹🇷")
 )
 
 @Composable

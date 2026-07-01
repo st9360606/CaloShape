@@ -177,7 +177,7 @@
     <string name="onboard_weight_loss_comparison_with_ai">使用\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_twenty_percent">20%</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">BitCal AI 讓一切變得簡單並\n督促你履行承諾</string>
+    <string name="onboard_weight_loss_comparison_caption">CaloShape AI 讓一切變得簡單並\n督促你履行承諾</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
@@ -220,7 +220,7 @@
     <string name="plan_cta_start">開始使用</string>
     <string name="plan_title_congrats">恭喜!</string>
     <string name="plan_subtitle_ready">你的個人健康計畫已完成！</string>
-    <string name="plan_disclaimer">來源請看下方「See all references ›」。</string>
+    <string name="plan_disclaimer">來源請看下方「查看參考來源 ›」。</string>
     <string name="plan_unit_kcal_day">大卡 / 天</string>
 
     <string name="plan_macros_proteins">蛋白質</string>
@@ -345,7 +345,7 @@
 
 
     <!-- HomeCards :  Nutrition Card -->
-    <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
+    <string name="home_nutrition_ratio_grams">%1$d / %2$d克</string>
     <string name="home_protein_goal_label">蛋白質 剩餘</string>
     <string name="home_protein_eaten_label">蛋白質 已攝入</string>
     <string name="home_carbs_goal_label">碳水 剩餘</string>
@@ -358,7 +358,7 @@
     <string name="home_sugar_eaten_label">糖 已攝入</string>
     <string name="home_sodium_goal_label">鈉 剩餘</string>
     <string name="home_sodium_eaten_label">鈉 已攝入</string>
-    <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
+    <string name="home_nutrition_ratio_mg">%1$d / %2$d毫克</string>
 
 
     <!-- HomeCards :  Health Score Card & Advice -->
@@ -377,7 +377,7 @@
     <string name="steps_status_permission_not_granted">未授權</string>
     <string name="steps_status_hc_not_installed">未安裝</string>
     <string name="steps_status_hc_unavailable">無法使用</string>
-    <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
+    <string name="steps_secondary_est_kcal">≈ %1$d 大卡</string>
     <string name="steps_secondary_no_data_yet">尚無資料</string>
     <string name="steps_secondary_connect">連接</string>
     <string name="steps_hint_connect_google_health">連結 Google Health 取得步數資料</string>
@@ -388,7 +388,7 @@
 
     <!-- HomeCards : Workout Card -->
     <string name="workout_card_title">運動</string>
-    <string name="workout_card_unit_kcal">kcal</string>
+    <string name="workout_card_unit_kcal">大卡</string>
 
 
     <!-- HomeCards : Weight Card -->
@@ -477,7 +477,7 @@
     <string name="progress_tooltip_carbs">碳水</string>
     <string name="progress_tooltip_fats">脂肪</string>
     <string name="progress_tooltip_label_format">%1$s：</string>
-    <string name="progress_tooltip_grams_value">%1$d g</string>
+    <string name="progress_tooltip_grams_value">%1$d 克</string>
     <string name="progress_tooltip_plain_value">%1$d</string>
 
 
@@ -494,7 +494,7 @@
     <string name="progress_tooltip_fiber">纖維</string>
     <string name="progress_tooltip_sugar">糖</string>
     <string name="progress_tooltip_sodium">鈉</string>
-    <string name="progress_tooltip_mg_value">%1$d mg</string>
+    <string name="progress_tooltip_mg_value">%1$d 毫克</string>
 
 
     <!-- =========================
@@ -575,7 +575,7 @@
     <string name="weight_chart_tab_30_days">30 天</string>
     <string name="weight_chart_tab_60_days">60 天</string>
     <string name="weight_chart_tab_90_days">90 天</string>
-    <string name="weight_chart_tab_all_time">All time</string>
+    <string name="weight_chart_tab_all_time">全部時間</string>
     <string name="weight_chart_title">體重趨勢</string>
     <string name="weight_chart_goal_progress_badge">目標進度 %1$s%%</string>
     <string name="weight_chart_goal_label">目標</string>
@@ -911,8 +911,8 @@
     <string name="personal_details_daily_workout_goal">每日運動目標</string>
     <string name="personal_details_age_value">%1$d 歲</string>
     <string name="personal_details_steps_value">%1$d 步</string>
-    <string name="personal_details_water_value">%1$d ml</string>
-    <string name="personal_details_kcal_value">%1$d kcal</string>
+    <string name="personal_details_water_value">%1$d 毫升</string>
+    <string name="personal_details_kcal_value">%1$d 大卡</string>
     <string name="gender_male">男性</string>
     <string name="gender_female">女性</string>
     <string name="gender_other">其他</string>
@@ -926,7 +926,7 @@
     <!-- RecordWeightScreen -->
     <string name="record_weight_camera_failed_to_open">相機無法開啟。</string>
     <string name="record_weight_camera_permission_required">需要相機權限。</string>
-    <string name="record_weight_camera_preview_unavailable">相機只可在執行中的 App 使用，Preview 無法使用。</string>
+    <string name="record_weight_camera_preview_unavailable">相機僅可在正在執行的 App 中使用，預覽無法使用。</string>
     <string name="record_weight_camera_screen_unavailable">此畫面目前無法使用相機。</string>
     <string name="record_weight_no_camera_app_found">此裝置找不到相機 App。</string>
     <string name="record_weight_enable_camera_permission_settings">請在設定中開啟相機權限。</string>
@@ -984,14 +984,14 @@
 
     <!-- EditWaterGoalScreen -->
     <string name="edit_water_goal_title">編輯喝水目標</string>
-    <string name="edit_water_goal_previous_format">上一個目標 %1$d ml</string>
-    <string name="edit_water_goal_input_label">每日飲水目標（ml）</string>
+    <string name="edit_water_goal_previous_format">上一個目標 %1$d 毫升</string>
+    <string name="edit_water_goal_input_label">每日飲水目標（毫升）</string>
 
 
     <!-- EditWorkoutGoalScreen -->
     <string name="edit_workout_goal_title">編輯運動目標</string>
-    <string name="edit_workout_goal_previous_format">上一個目標 %1$d kcal</string>
-    <string name="edit_workout_goal_input_label">每日運動目標（kcal）</string>
+    <string name="edit_workout_goal_previous_format">上一個目標 %1$d 大卡</string>
+    <string name="edit_workout_goal_input_label">每日運動目標（大卡）</string>
 
 
     <!-- EditNutritionGoalsScreen -->
@@ -1063,7 +1063,7 @@
     <string name="widget_guide_tip_title">找不到小工具選單？</string>
     <string name="widget_guide_tip_body">不同手機品牌或桌面啟動器名稱可能不同。可以試試「主畫面設定」、長按 CaloShape AI App 圖示，或在桌面啟動器中搜尋小工具。</string>
     <string name="widget_guide_done">我知道了</string>
-    <string name="widget_guide_mock_home">Home</string>
+    <string name="widget_guide_mock_home">首頁</string>
     <string name="widget_guide_mock_widgets">小工具</string>
 
 
@@ -1076,19 +1076,19 @@
 
     <!-- Android home screen widgets -->
     <string name="widget_preview_goal_kcal">1830</string>
-    <string name="widget_preview_protein">120g</string>
-    <string name="widget_preview_carbs">180g</string>
-    <string name="widget_preview_fats">60g</string>
-    <string name="widget_calories_left">Calories left</string>
-    <string name="widget_protein_left">Protein left</string>
-    <string name="widget_carbs_left">Carbs left</string>
-    <string name="widget_fats_left">Fats left</string>
-    <string name="widget_calories_description">CaloShape calories widget</string>
-    <string name="widget_macro_actions_description">CaloShape macros and quick actions widget</string>
-    <string name="widget_log_your_food">Log your food</string>
-    <string name="widget_scan_food">Scan food</string>
-    <string name="widget_barcode">Barcode</string>
-    <string name="widget_grams_format">%1$dg</string>
+    <string name="widget_preview_protein">120克</string>
+    <string name="widget_preview_carbs">180克</string>
+    <string name="widget_preview_fats">60克</string>
+    <string name="widget_calories_left">剩餘卡路里</string>
+    <string name="widget_protein_left">剩餘蛋白質</string>
+    <string name="widget_carbs_left">剩餘碳水</string>
+    <string name="widget_fats_left">剩餘脂肪</string>
+    <string name="widget_calories_description">CaloShape 卡路里小工具</string>
+    <string name="widget_macro_actions_description">CaloShape 巨量營養素與快速操作小工具</string>
+    <string name="widget_log_your_food">記錄你的食物</string>
+    <string name="widget_scan_food">掃描食物</string>
+    <string name="widget_barcode">條碼</string>
+    <string name="widget_grams_format">%1$d克</string>
 
 
 
