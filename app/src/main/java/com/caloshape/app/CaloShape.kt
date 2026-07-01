@@ -13,17 +13,15 @@ class CaloShape : Application(), Configuration.Provider {
 
     @Inject lateinit var workerFactory: HiltWorkerFactory
 
-    // ??WorkManager 2.9.x ä»¥å±¬?§è?å¯?
+    // ??WorkManager 2.9.x ä»¥å±¬?ï¿½ï¿½?ï¿½?
     override val workManagerConfiguration: Configuration
         get() = Configuration.Builder()
             .setWorkerFactory(workerFactory)
-            .setMinimumLoggingLevel(Log.INFO) // ?¯èª¿??VERBOSE ä»¥é™¤??
+            .setMinimumLoggingLevel(Log.INFO) // ?ï¿½èª¿??VERBOSE ä»¥é™¤??
             .build()
 
     override fun onCreate() {
         super.onCreate()
-        // ?å?å»ºç??šçŸ¥?»é?ï¼ˆé¿?ç¬¬ä¸€æ¬¡ç™¼?šçŸ¥?æ??‰é »?“ï?
-        // ???ªè??™è??‰å‡º?¾åœ¨ Logcatï¼Œå°±ä»?¡¨ app ?³å??‰æ??Ÿå??•åˆ° Application
         Log.d("CalAiApp", "Application onCreate() started")
         FastingReceiver.ensureChannel(this)
     }

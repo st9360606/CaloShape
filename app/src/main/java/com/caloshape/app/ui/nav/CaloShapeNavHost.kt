@@ -161,7 +161,7 @@ import com.caloshape.app.ui.onboarding.weight.WeightSelectionScreen
 import com.caloshape.app.ui.onboarding.weight.WeightSelectionViewModel
 import com.caloshape.app.ui.subscription.OnboardSubscriptionScreen
 import com.caloshape.app.ui.subscription.SubscriptionViewModel
-import com.caloshape.app.ui.theme.CalAITheme
+import com.caloshape.app.ui.theme.CaloShapeTheme
 import com.caloshape.app.widget.CaloShapeWidgetNavigationRequest
 import com.caloshape.app.widget.CaloShapeWidgetPendingIntents
 import dagger.hilt.android.EntryPointAccessors
@@ -572,7 +572,7 @@ fun CaloShapeNavHost(
     val keepAutoGenerateBackground = autoGenerateGoalsRoute ||
             currentRoute == Routes.EDIT_NUTRITION_GOALS
 
-    CalAITheme(darkTheme = useDarkAppearance) {
+    CaloShapeTheme(darkTheme = useDarkAppearance) {
         val navigationUnderlay = if (useDarkAppearance) {
             MaterialTheme.colorScheme.background
         } else {

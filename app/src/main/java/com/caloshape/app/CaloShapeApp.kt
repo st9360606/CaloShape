@@ -17,7 +17,7 @@ import com.caloshape.app.i18n.ProvideComposeLocale
 import com.caloshape.app.ui.appearance.AppearanceMode
 import com.caloshape.app.ui.appearance.AppearanceStore
 import com.caloshape.app.ui.nav.CaloShapeNavHost
-import com.caloshape.app.ui.theme.CalAITheme
+import com.caloshape.app.ui.theme.CaloShapeTheme
 import com.caloshape.app.widget.CaloShapeHomeWidgetUpdater
 import com.caloshape.app.widget.CaloShapeWidgetNavigationRequest
 import kotlinx.coroutines.Dispatchers
@@ -25,11 +25,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.util.Locale
 
-/**
- * ?®ä?èªè?æ¬Šå?ä¾†æ?ï¼?
- * - ç­?DataStore ç¬¬ä?æ¬?emit å¾Œå?æ±ºå? initialTagï¼ˆé¿?å??¨è?ç½®è?è¨€? æ??Ÿå??ƒå?ï¼?
- * - NavHost ä¸å??šè?è¨€?å??–ï??ªè??†å??ªè??è¼¯
- */
 @Composable
 fun CaloShapeApp(
     hostActivity: ComponentActivity,
@@ -41,11 +36,9 @@ fun CaloShapeApp(
     val appearanceMode by appearanceStore.modeFlow.collectAsState(initial = AppearanceMode.LIGHT)
     val appearanceScope = rememberCoroutineScope()
 
-    // ???œéµï¼šç?å¾?DataStore ç¬¬ä?æ¬¡æ??¼å?æ¸²æ?ï¼Œé¿?å??¨ç³»çµ±è?è¨€?è·³?ä½¿?¨è€…è?è¨€
     val savedTagOrNull: String? by store.langFlow.collectAsState(initial = null)
 
     if (savedTagOrNull == null) {
-        // é¦–æ¬¡è®€?–æ??“é¡¯ç¤ºæ¥µç°¡ç™½åº•ï?ä¹Ÿå¯?¿æ??ä??„é??´ç•«?¢ï?
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -57,7 +50,6 @@ fun CaloShapeApp(
         return
     }
 
-    // ä¸€?¦æ??¼ï?DataStore ?ªå?ï¼›å???AppCompatDelegateï¼›æ?å¾Œç”¨è£ç½®èªè?
     val initialTag = LanguageManager.normalizeTag(when {
         !savedTagOrNull.isNullOrBlank() -> savedTagOrNull!!
         AppCompatDelegate.getApplicationLocales().toLanguageTags().isNotBlank() ->
@@ -67,7 +59,6 @@ fun CaloShapeApp(
 
     var composeLocale by remember(initialTag) { mutableStateOf(initialTag) }
 
-    // èªç³»è®Šæ›´?‚æ?ä¹…å?ï¼ˆä??»å? UIï¼‰ï?ä¸¦å?æ­¥åˆ·?°æ??¢å?å·¥å…·?‡å???
     LaunchedEffect(composeLocale) {
         if (composeLocale.isNotBlank()) {
             store.save(composeLocale)
@@ -77,9 +68,8 @@ fun CaloShapeApp(
         }
     }
 
-    // ?ªé€é? ProvideComposeLocale ?ä?èªç³»ï¼›ä?è¦†å¯« LocalContext
     ProvideComposeLocale(composeLocale) {
-        CalAITheme(darkTheme = appearanceMode == AppearanceMode.DARK) {
+        CaloShapeTheme(darkTheme = appearanceMode == AppearanceMode.DARK) {
             CaloShapeNavHost(
                 hostActivity = hostActivity,
                 widgetNavigationRequest = widgetNavigationRequest,

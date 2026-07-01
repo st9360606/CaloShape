@@ -27,10 +27,10 @@
 
     <!-- ApiErrorUiMapper -->
     <string name="err_barcode_not_found_title">查无此商品</string>
-    <string name="err_barcode_not_found_msg">数据库找不到此条形码。建议改拍食品标签，成功率更高。</string>
+    <string name="err_barcode_not_found_msg">数据库找不到此条形码，建议改拍食品标签，成功率更高。</string>
 
     <string name="err_barcode_lookup_failed_title">查询失败</string>
-    <string name="err_barcode_lookup_failed_msg">目前无法连接商品数据库。请检查网络后再试一次。</string>
+    <string name="err_barcode_lookup_failed_msg">目前无法连接商品数据库，请检查网络后再试一次。</string>
 
     <string name="err_generic_title">发生错误</string>
     <string name="err_generic_msg">请稍后再试。</string>
@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">拍一下! AI 即刻算出你的餐点热量</string>
+    <string name="landing_title">拍一下！AI 即刻算出你的餐点热量</string>
     <string name="choose_language">选择语言</string>
     <string name="cta_get_started">开始使用</string>
     <string name="cta_login_prefix">已拥有账号？</string>
@@ -182,7 +182,7 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">每一餐都算数</string>
-    <string name="onboard_notif_subtitle">开启通知后，我们会在合适的时间给你温柔提醒，协助你养成餐点纪录的节奏，让你的热量、三大营养素与进度保持在正轨。偶尔忘记很正常；及时提醒能帮你更快回到节奏。</string>
+    <string name="onboard_notif_subtitle">开启通知后，我们会在合适的时间给你温柔提醒，协助你养成餐点纪录的节奏，让你的热量、三大营养素与进度保持在正轨，偶尔忘记很正常；及时提醒能帮你更快回到节奏。</string>
     <string name="onboard_allow_notifications_cta">允许通知</string>
     <string name="notification_mock_app_title">AI 热量计算器</string>
     <string name="onboard_notif_title_got_a_sec">现在有 10 秒吗？</string>
@@ -220,7 +220,7 @@
     <string name="plan_cta_start">开始使用</string>
     <string name="plan_title_congrats">恭喜!</string>
     <string name="plan_subtitle_ready">你的个人健康计划已完成！</string>
-    <string name="plan_disclaimer">来源请看下方「查看参考来源 ›」。</string>
+    <string name="plan_disclaimer">来源请看下方「 查看参考来源 」</string>
     <string name="plan_unit_kcal_day">kcal / 天</string>
 
     <string name="plan_macros_proteins">蛋白质</string>
@@ -237,7 +237,7 @@
     <string name="plan_goal_card_track_meals">一键纪录餐点，持之以恒更简单</string>
     <string name="plan_goal_card_daily_calories">每日热量清晰可见，进度永不偏航</string>
     <string name="plan_goal_card_balance_macros">碳水×蛋白×脂肪，吃对才能更有效</string>
-    <string name="plan_sources_based_on">根据官方饮食指引，仅供参考非医疗建议。</string>
+    <string name="plan_sources_based_on">根据官方饮食指引，仅供参考非医疗建议</string>
     <string name="plan_sources_more">查看参考来源 ›</string>
     <string name="plan_sources_hide">隐藏来源</string>
 
@@ -266,7 +266,7 @@
     <string name="subscription_price_per_month_format">%1$s/月</string>
     <string name="subscription_price_per_month_unit">/月</string>
     <string name="subscription_price_unavailable_title">无法取得价格</string>
-    <string name="subscription_price_unavailable_body">目前无法从 Google Play 取得你所在地区的价格。请稍后再试。</string>
+    <string name="subscription_price_unavailable_body">目前无法从 Google Play 取得你所在地区的价格，请稍后再试。</string>
 
 
     <!-- Onboarding: OnboardSubscriptionIntro -->
@@ -274,7 +274,7 @@
     <string name="subscription_intro_helper_format">每年只要 %1$s（约 %2$s）</string>
     <string name="subscription_start_three_day_free_trial">免费试用 3 天</string>
     <string name="subscription_three_day_trial_helper_format">每年只要 %1$s（约 %2$s/月）</string>
-    <string name="subscription_already_owned_restore_required">目前这个 Google Play 账号已经有有效的 CaloShape 订阅。请先将订阅恢复到目前登录的 CaloShape 账号，才能使用付费功能。</string>
+    <string name="subscription_already_owned_restore_required">目前这个 Google Play 账号已经有有效的 CaloShape 订阅，请先将订阅恢复到目前登录的 CaloShape 账号，才能使用付费功能。</string>
     <string name="subscription_error_no_active_purchase">找不到有效的购买项目。</string>
     <string name="subscription_error_restore_failed">无法恢复购买，请再试一次。</string>
     <string name="subscription_error_purchase_failed">购买失败，请再试一次。</string>
@@ -363,11 +363,11 @@
 
     <!-- HomeCards :  Health Score Card & Advice -->
     <string name="home_health_score_advice_zero">记录今天的第一餐后，即可查看依营养内容计算的健康分数。</string>
-    <string name="home_health_score_advice_very_low">今天平均分数偏低。可参考补足蛋白质、纤维，并减少高糖或高钠选择。</string>
-    <string name="home_health_score_advice_low">今天还有优化空间。建议增加蔬菜与优质蛋白。</string>
-    <string name="home_health_score_advice_medium">今天表现稳定。建议维持份量，并留意糖、钠与纤维。</string>
-    <string name="home_health_score_advice_good">今天饮食平衡不错。可以继续选择营养密度高的食物。</string>
-    <string name="home_health_score_advice_excellent">今天饮食平衡良好。请继续维持稳定习惯。</string>
+    <string name="home_health_score_advice_very_low">今天平均分数偏低，可参考补足蛋白质、纤维，并减少高糖或高钠选择。</string>
+    <string name="home_health_score_advice_low">今天还有优化空间，建议增加蔬菜与优质蛋白。</string>
+    <string name="home_health_score_advice_medium">今天表现稳定，建议维持份量，并留意糖、钠与纤维。</string>
+    <string name="home_health_score_advice_good">今天饮食平衡不错，可以继续选择营养密度高的食物。</string>
+    <string name="home_health_score_advice_excellent">今天饮食平衡良好，请继续维持稳定习惯。</string>
     <string name="home_health_score_title">健康分数</string>
     <string name="home_health_score_value">%1$d/10</string>
 
@@ -593,12 +593,12 @@
     <string name="fasting_plan_title">禁食计划</string>
     <string name="start_time">开始时间</string>
     <string name="end_time">结束时间</string>
-    <string name="fasting_notification_info_status_on">提醒已开启。若装置通知权限允许，这些提醒会每天重复。</string>
-    <string name="fasting_notification_info_status_off">提醒目前关闭。请回首页的禁食计划卡片打开开关，才会收到这些通知。</string>
+    <string name="fasting_notification_info_status_on">提醒已开启，若装置通知权限允许，这些提醒会每天重复。</string>
+    <string name="fasting_notification_info_status_off">提醒目前关闭，请回首页的禁食计划卡片打开开关，才会收到这些通知。</string>
     <string name="fasting_notification_info_status_enabled_label">已开启</string>
     <string name="fasting_notification_info_status_disabled_label">已关闭</string>
     <string name="fasting_notification_info_title">提醒会怎么运作</string>
-    <string name="fasting_notification_info_subtitle">你的 %1$s 计划会在 %2$s 结束进食视窗。开启提醒后，CaloShape 每天会发送两个通知。</string>
+    <string name="fasting_notification_info_subtitle">你的 %1$s 计划会在 %2$s 结束进食视窗，开启提醒后，CaloShape 每天会发送两个通知。</string>
     <string name="fasting_notification_info_at_time">%1$s</string>
     <string name="fasting_notification_info_start_title">进食时段开始</string>
     <string name="fasting_notification_info_start_body">你可以开始进食，并在需要时顺手纪录餐点。</string>
@@ -618,7 +618,7 @@
 
     <!-- FastingReceiver -->
     <string name="fasting_start_title">%1$s 进食时段开始了</string>
-    <string name="fasting_start_body">你的进食时段是 %1$s–%2$s。吃东西时顺手记录，今天的数据会更准。</string>
+    <string name="fasting_start_body">你的进食时段是 %1$s–%2$s，吃东西时顺手记录，今天的数据会更准。</string>
     <string name="fasting_endsoon_title">进食时段还剩 1 小时</string>
     <string name="fasting_endsoon_body">这次进食时段会在 %1$s 结束。如果还有最后一餐，记得在结束前记录。</string>
 
@@ -782,7 +782,7 @@
     <string name="settings_title">设定</string>
     <string name="settings_choose_language">选择语言</string>
     <string name="delete_account_dialog_title">删除账号？</string>
-    <string name="delete_account_dialog_body">您确定要删除账号吗？此操作将永久删除您在 CaloShape 中的资料，包括饮食纪录、体重纪录与相关设定。删除后将无法复原。</string>
+    <string name="delete_account_dialog_body">您确定要删除账号吗？此操作将永久删除您在 CaloShape 中的资料，包括饮食纪录、体重纪录与相关设定，删除后将无法复原。</string>
 
     <!-- Settings : restore_subscription -->
     <string name="restore_subscription_dialog_success_title">订阅已恢复</string>
@@ -791,10 +791,10 @@
     <string name="restore_subscription_dialog_failed_title">恢复失败</string>
     <string name="restore_subscription_dialog_bound_title">此订阅已连结其他账号</string>
     <string name="restore_subscription_dialog_success_body">你的订阅已恢复到目前登录的 CaloShape 账号。</string>
-    <string name="restore_subscription_dialog_payment_issue_body">你的订阅已绑定到目前登录的 CaloShape 账号，但 Google Play 仍回报付款异常。请到 Google Play 更新付款方式，以维持订阅有效。</string>
+    <string name="restore_subscription_dialog_payment_issue_body">你的订阅已绑定到目前登录的 CaloShape 账号，但 Google Play 仍回报付款异常，请到 Google Play 更新付款方式，以维持订阅有效。</string>
     <string name="restore_subscription_dialog_no_active_body">目前的 Google Play 账号没有可恢复的 CaloShape 订阅。请确认使用购买时的 Google Play 账号后再试。</string>
     <string name="restore_subscription_dialog_failed_body">目前无法恢复订阅，请确认网络连接后，稍后再从设定页重试。</string>
-    <string name="restore_subscription_dialog_bound_body">这笔 Google Play 订阅已连结到另一个 CaloShape 账号。请登录原账号使用订阅；若无法登录，请联络客服。</string>
+    <string name="restore_subscription_dialog_bound_body">这笔 Google Play 订阅已连结到另一个 CaloShape 账号，请登录原账号使用订阅；若无法登录，请联络客服。</string>
     <string name="restore_subscription_dialog_body">我们在目前这台装置使用的 Google Play 账号中，侦测到 CaloShape 仍有有效的订阅或试用。你可以将这笔订阅恢复到目前登录的 CaloShape 账号。</string>
 
     <!-- Settings : Payment issue dialog -->

@@ -27,10 +27,10 @@
 
     <!-- ApiErrorUiMapper -->
     <string name="err_barcode_not_found_title">查無此商品</string>
-    <string name="err_barcode_not_found_msg">資料庫找不到此條碼。建議改拍食品標籤，成功率更高。</string>
+    <string name="err_barcode_not_found_msg">資料庫找不到此條碼，建議改拍食品標籤，成功率更高。</string>
 
     <string name="err_barcode_lookup_failed_title">查詢失敗</string>
-    <string name="err_barcode_lookup_failed_msg">目前無法連上商品資料庫。請檢查網路後再試一次。</string>
+    <string name="err_barcode_lookup_failed_msg">目前無法連上商品資料庫，請檢查網路後再試一次。</string>
 
     <string name="err_generic_title">發生錯誤</string>
     <string name="err_generic_msg">請稍後再試。</string>
@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">拍一下! AI 即刻算出你的餐點熱量</string>
+    <string name="landing_title">拍一下！AI 即刻算出你的餐點熱量</string>
     <string name="choose_language">選擇語言</string>
     <string name="cta_get_started">開始使用</string>
     <string name="cta_login_prefix">已擁有帳號？</string>
@@ -68,7 +68,7 @@
 
 
     <!-- RequireSignInScreen -->
-    <string name="auth_sign_in_account_title">登入帳戶</string>
+    <string name="auth_sign_in_account_title">登入帳號</string>
     <string name="auth_sign_in_with_google">使用 Google 登入</string>
     <string name="auth_signin_with_email">使用 Email 繼續</string>
 
@@ -182,7 +182,7 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">每一餐都算數</string>
-    <string name="onboard_notif_subtitle">開啟通知後，我們會在合適的時間給你溫柔提醒，協助你養成餐點紀錄的節奏，讓你的熱量、三大營養素與進度保持在正軌。偶爾忘記很正常；及時提醒能幫你更快回到節奏。</string>
+    <string name="onboard_notif_subtitle">開啟通知後，我們會在合適的時間給你溫柔提醒，協助你養成餐點紀錄的節奏，讓你的熱量、三大營養素與進度保持在正軌，偶爾忘記很正常；及時提醒能幫你更快回到節奏。</string>
     <string name="onboard_allow_notifications_cta">允許通知</string>
     <string name="notification_mock_app_title">AI 熱量計算器</string>
     <string name="onboard_notif_title_got_a_sec">現在有 10 秒嗎？</string>
@@ -220,7 +220,7 @@
     <string name="plan_cta_start">開始使用</string>
     <string name="plan_title_congrats">恭喜!</string>
     <string name="plan_subtitle_ready">你的個人健康計畫已完成！</string>
-    <string name="plan_disclaimer">來源請看下方「查看參考來源 ›」。</string>
+    <string name="plan_disclaimer">來源請看下方「 查看參考來源 」</string>
     <string name="plan_unit_kcal_day">kcal / day</string>
 
     <string name="plan_macros_proteins">蛋白質</string>
@@ -237,14 +237,14 @@
     <string name="plan_goal_card_track_meals">一鍵紀錄餐點，持之以恆更簡單</string>
     <string name="plan_goal_card_daily_calories">每日熱量清晰可見，進度永不偏航</string>
     <string name="plan_goal_card_balance_macros">碳水×蛋白×脂肪，吃對才能更有效</string>
-    <string name="plan_sources_based_on">根據官方飲食指引，僅供參考非醫療建議。</string>
+    <string name="plan_sources_based_on">根據官方飲食指引，僅供參考非醫療建議</string>
     <string name="plan_sources_more">查看參考來源 ›</string>
     <string name="plan_sources_hide">隱藏來源</string>
 
 
     <!-- Onboarding: OnboardReferralCodeScreen -->
     <string name="onboard_referral_code_input">輸入推薦碼（可選）</string>
-    <string name="onboard_referral_code_subtitle">您可以跳過此步驟</string>
+    <string name="onboard_referral_code_subtitle">你可以跳過此步驟</string>
     <string name="onboard_referral_code_input_label">推薦碼</string>
     <string name="onboard_referral_code_placeholder">推薦碼</string>
     <string name="onboard_referral_code_submit">提交</string>
@@ -266,7 +266,7 @@
     <string name="subscription_price_per_month_format">%1$s/月</string>
     <string name="subscription_price_per_month_unit">/月</string>
     <string name="subscription_price_unavailable_title">無法取得價格</string>
-    <string name="subscription_price_unavailable_body">目前無法從 Google Play 取得你所在地區的價格。請稍後再試。</string>
+    <string name="subscription_price_unavailable_body">目前無法從 Google Play 取得你所在地區的價格，請稍後再試。</string>
 
 
     <!-- Onboarding: OnboardSubscriptionIntro -->
@@ -274,7 +274,7 @@
     <string name="subscription_intro_helper_format">每年只要 %1$s（約 %2$s）</string>
     <string name="subscription_start_three_day_free_trial">免費試用 3 天</string>
     <string name="subscription_three_day_trial_helper_format">每年只要 %1$s（約 %2$s/月）</string>
-    <string name="subscription_already_owned_restore_required">目前這個 Google Play 帳號已經有有效的 CaloShape 訂閱。請先將訂閱恢復到目前登入的 CaloShape 帳號，才能使用付費功能。</string>
+    <string name="subscription_already_owned_restore_required">目前這個 Google Play 帳號已經有有效的 CaloShape 訂閱，請先將訂閱恢復到目前登入的 CaloShape 帳號，才能使用付費功能。</string>
     <string name="subscription_error_no_active_purchase">找不到有效的購買項目。</string>
     <string name="subscription_error_restore_failed">無法恢復購買，請再試一次。</string>
     <string name="subscription_error_purchase_failed">購買失敗，請再試一次。</string>
@@ -288,7 +288,7 @@
 
     <!-- Onboarding: OnboardDiscountSpinScreen-->
     <string name="subscription_spin_title">解鎖專屬折扣</string>
-    <string name="subscription_spin_helper_ready">點擊 開始轉動 揭曉您的專屬禮物</string>
+    <string name="subscription_spin_helper_ready">點擊「開始轉動」，揭曉你的專屬禮物</string>
     <string name="subscription_spin_button">開始轉動</string>
     <string name="subscription_spinning_button">轉動中…</string>
     <string name="subscription_gift_offer_unlocked">禮物優惠已解鎖</string>
@@ -363,11 +363,11 @@
 
     <!-- HomeCards :  Health Score Card & Advice -->
     <string name="home_health_score_advice_zero">記錄今天的第一餐後，即可查看依營養內容計算的健康分數。</string>
-    <string name="home_health_score_advice_very_low">今天平均分數偏低。可參考補足蛋白質、纖維，並減少高糖或高鈉選擇。</string>
-    <string name="home_health_score_advice_low">今天還有優化空間。建議增加蔬菜與優質蛋白。</string>
-    <string name="home_health_score_advice_medium">今天表現穩定。建議維持份量，並留意糖、鈉與纖維。</string>
-    <string name="home_health_score_advice_good">今天飲食平衡不錯。可以繼續選擇營養密度高的食物。</string>
-    <string name="home_health_score_advice_excellent">今天飲食平衡良好。請繼續維持穩定習慣。</string>
+    <string name="home_health_score_advice_very_low">今天平均分數偏低，可參考補足蛋白質、纖維，並減少高糖或高鈉選擇。</string>
+    <string name="home_health_score_advice_low">今天還有優化空間，建議增加蔬菜與優質蛋白。</string>
+    <string name="home_health_score_advice_medium">今天表現穩定，建議維持份量，並留意糖、鈉與纖維。</string>
+    <string name="home_health_score_advice_good">今天飲食平衡不錯，可以繼續選擇營養密度高的食物。</string>
+    <string name="home_health_score_advice_excellent">今天飲食平衡良好，請繼續維持穩定習慣。</string>
     <string name="home_health_score_title">健康分數</string>
     <string name="home_health_score_value">%1$d/10</string>
 
@@ -452,7 +452,7 @@
          NutritionChartCard
          ========================= -->
     <string name="progress_chart_7day_avg_calories">7 日平均</string>
-    <string name="progress_chart_value_cals">%1$d 大kcal卡</string>
+    <string name="progress_chart_value_cals">%1$d kcal</string>
     <string name="progress_chart_15day_avg_calories">15 日平均</string>
     <string name="progress_chart_loading_total_calories_text">--.- 卡</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
@@ -593,12 +593,12 @@
     <string name="fasting_plan_title">禁食計畫</string>
     <string name="start_time">開始時間</string>
     <string name="end_time">結束時間</string>
-    <string name="fasting_notification_info_status_on">提醒已開啟。若裝置通知權限允許，這些提醒會每天重複。</string>
-    <string name="fasting_notification_info_status_off">提醒目前關閉。請回首頁的禁食計畫卡片打開開關，才會收到這些通知。</string>
+    <string name="fasting_notification_info_status_on">提醒已開啟，若裝置通知權限允許，這些提醒會每天重複。</string>
+    <string name="fasting_notification_info_status_off">提醒目前關閉，請回首頁的禁食計畫卡片打開開關，才會收到這些通知。</string>
     <string name="fasting_notification_info_status_enabled_label">已開啟</string>
     <string name="fasting_notification_info_status_disabled_label">已關閉</string>
     <string name="fasting_notification_info_title">提醒會怎麼運作</string>
-    <string name="fasting_notification_info_subtitle">你的 %1$s 計畫會在 %2$s 結束進食視窗。開啟提醒後，CaloShape 每天會發送兩個通知。</string>
+    <string name="fasting_notification_info_subtitle">你的 %1$s 計畫會在 %2$s 結束進食視窗，開啟提醒後，CaloShape 每天會發送兩個通知。</string>
     <string name="fasting_notification_info_at_time">%1$s</string>
     <string name="fasting_notification_info_start_title">進食時段開始</string>
     <string name="fasting_notification_info_start_body">你可以開始進食，並在需要時順手紀錄餐點。</string>
@@ -618,7 +618,7 @@
 
     <!-- FastingReceiver -->
     <string name="fasting_start_title">%1$s 進食時段開始了</string>
-    <string name="fasting_start_body">你的進食時段是 %1$s–%2$s。吃東西時順手記錄，今天的數據會更準。</string>
+    <string name="fasting_start_body">你的進食時段是 %1$s–%2$s，吃東西時順手記錄，今天的數據會更準。</string>
     <string name="fasting_endsoon_title">進食時段還剩 1 小時</string>
     <string name="fasting_endsoon_body">這次進食時段會在 %1$s 結束。如果還有最後一餐，記得在結束前記錄。</string>
 
@@ -714,7 +714,7 @@
 
 
     <!-- HomeQuickActionMenu -->
-    <string name="quick_add_saved_foods">已保存食物</string>
+    <string name="quick_add_saved_foods">已儲存食物</string>
     <string name="quick_add_scan_food">掃描食物</string>
 
 
@@ -743,17 +743,17 @@
 
 
     <!-- SavedFoodsScreen -->
-    <string name="saved_foods_keep_15_days_hint">最近 15 天內保存的食物。</string>
-    <string name="saved_foods_unsave_dialog_title">移除已保存餐點？</string>
-    <string name="saved_foods_unsave_dialog_message">這筆餐點會從「已保存餐點」中移除，但紀錄仍會保留在最近紀錄中。</string>
+    <string name="saved_foods_keep_15_days_hint">最近 15 天內儲存的食物。</string>
+    <string name="saved_foods_unsave_dialog_title">移除已儲存餐點？</string>
+    <string name="saved_foods_unsave_dialog_message">這筆餐點會從「已儲存餐點」中移除，但紀錄仍會保留在最近紀錄中。</string>
     <string name="saved_foods_unsave_dialog_confirm">移除</string>
-    <string name="saved_foods_title">已保存食物</string>
+    <string name="saved_foods_title">已儲存食物</string>
     <string name="saved_foods_kcal">🔥 %1$d 卡路里</string>
     <string name="saved_foods_protein">🥩 %1$dg</string>
     <string name="saved_foods_carbs">🌾 %1$dg</string>
     <string name="saved_foods_fat">🥑 %1$dg</string>
     <string name="saved_foods_detail">詳情</string>
-    <string name="saved_foods_load_failed_title">已保存食物載入失敗</string>
+    <string name="saved_foods_load_failed_title">已儲存食物載入失敗</string>
 
 
     <!-- RecentUploadDetailScreen -->
@@ -782,7 +782,7 @@
     <string name="settings_title">設定</string>
     <string name="settings_choose_language">選擇語言</string>
     <string name="delete_account_dialog_title">刪除帳號？</string>
-    <string name="delete_account_dialog_body">您確定要刪除帳號嗎？此操作將永久刪除您在 CaloShape 中的資料，包括飲食紀錄、體重紀錄與相關設定。刪除後將無法復原。</string>
+    <string name="delete_account_dialog_body">您確定要刪除帳號嗎？此操作將永久刪除您在 CaloShape 中的資料，包括飲食紀錄、體重紀錄與相關設定，刪除後將無法復原。</string>
 
     <!-- Settings : restore_subscription -->
     <string name="restore_subscription_dialog_success_title">訂閱已恢復</string>
@@ -791,10 +791,10 @@
     <string name="restore_subscription_dialog_failed_title">恢復失敗</string>
     <string name="restore_subscription_dialog_bound_title">此訂閱已連結其他帳號</string>
     <string name="restore_subscription_dialog_success_body">你的訂閱已恢復到目前登入的 CaloShape 帳號。</string>
-    <string name="restore_subscription_dialog_payment_issue_body">你的訂閱已綁定到目前登入的 CaloShape 帳號，但 Google Play 仍回報付款異常。請到 Google Play 更新付款方式，以維持訂閱有效。</string>
+    <string name="restore_subscription_dialog_payment_issue_body">你的訂閱已綁定到目前登入的 CaloShape 帳號，但 Google Play 仍回報付款異常，請到 Google Play 更新付款方式，以維持訂閱有效。</string>
     <string name="restore_subscription_dialog_no_active_body">目前的 Google Play 帳號沒有可恢復的 CaloShape 訂閱。請確認使用購買時的 Google Play 帳號後再試。</string>
     <string name="restore_subscription_dialog_failed_body">目前無法恢復訂閱，請確認網路連線後，稍後再從設定頁重試。</string>
-    <string name="restore_subscription_dialog_bound_body">這筆 Google Play 訂閱已連結到另一個 CaloShape 帳號。請登入原帳號使用訂閱；若無法登入，請聯絡客服。</string>
+    <string name="restore_subscription_dialog_bound_body">這筆 Google Play 訂閱已連結到另一個 CaloShape 帳號，請登入原帳號使用訂閱；若無法登入，請聯絡客服。</string>
     <string name="restore_subscription_dialog_body">我們在目前這台裝置使用的 Google Play 帳號中，偵測到 CaloShape 仍有有效的訂閱或試用。你可以將這筆訂閱恢復到目前登入的 CaloShape 帳號。</string>
 
     <!-- Settings : Payment issue dialog -->
@@ -815,10 +815,10 @@
     <string name="settings_inbox">收件匣</string>
 
 
-    <string name="settings_terms_conditions">條款及細則</string>
-    <string name="settings_privacy_policy">私隱政策</string>
-    <string name="settings_support_email">客服電郵</string>
-    <string name="settings_delete_account">刪除帳戶？</string>
+    <string name="settings_terms_conditions">條款與條件</string>
+    <string name="settings_privacy_policy">隱私權政策</string>
+    <string name="settings_support_email">客服信箱</string>
+    <string name="settings_delete_account">刪除帳號？</string>
     <string name="settings_version">版本 %1$s</string>
 
 
@@ -1054,7 +1054,7 @@
     <!-- WidgetGuideScreen -->
     <string name="widget_guide_title">添加小工具</string>
     <string name="widget_guide_hero_title">把 CaloShape 加到手機桌面</string>
-    <string name="widget_guide_hero_body">不用打開 App，也能快速查看卡路里、巨量營養素與常用操作。</string>
+    <string name="widget_guide_hero_body">不用打開 App，也能快速查看卡路里、三大營養素與常用操作。</string>
     <string name="widget_guide_steps_title">依照以下步驟操作</string>
     <string name="widget_guide_step_1_title">長按手機桌面</string>
     <string name="widget_guide_step_1_body">在手機桌面的空白處長按，直到桌面選單出現。</string>

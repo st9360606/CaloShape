@@ -14,6 +14,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CalAI"
+rootProject.name = "CaloShape"
 include(":app")
 include(":baselineprofile")
