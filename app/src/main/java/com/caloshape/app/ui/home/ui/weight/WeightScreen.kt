@@ -19,10 +19,12 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
@@ -54,6 +56,7 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -431,26 +434,28 @@ private fun BottomLogWeightBar(
         Button(
             onClick = rememberClickWithHaptic(onClick = onLogClick),
             modifier = Modifier
-                .width(158.dp)
-                .height(52.dp),
+                .widthIn(min = 158.dp)
+                .heightIn(min = 52.dp),
             shape = RoundedCornerShape(999.dp),
             border = if (isDark) androidx.compose.foundation.BorderStroke(1.dp, HomeCardStyles.Action.addBorder()) else null,
             colors = ButtonDefaults.buttonColors(
                 containerColor = if (isDark) HomeCardStyles.Action.addContainer() else colors.primaryButtonContainer,
                 contentColor = if (isDark) HomeCardStyles.Action.addContent() else colors.primaryButtonContent
             ),
-            contentPadding = PaddingValues(horizontal = 20.dp)
+            contentPadding = PaddingValues(horizontal = 20.dp, vertical = 14.dp)
         ) {
             Icon(
                 imageVector = Icons.Filled.Add,
                 contentDescription = null,
-                modifier = Modifier.height(20.dp)
+                modifier = Modifier.size(20.dp)
             )
             Spacer(Modifier.width(8.dp))
             Text(
                 text = stringResource(R.string.weight_log_weight),
                 fontSize = 16.sp,
-                fontWeight = FontWeight.SemiBold
+                lineHeight = 20.sp,
+                fontWeight = FontWeight.SemiBold,
+                textAlign = TextAlign.Center
             )
         }
     }

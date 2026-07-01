@@ -611,6 +611,7 @@
 
     <string name="fasting_picker_title">अपना उपवास आरंभ करने का समय निर्धारित करें</string>
     <string name="fasting_picker_subtitle">हम आपको हर दिन इसी समय याद दिलाएंगे जब आपकी खाने की खिड़की शुरू होगी।</string>
+    <string name="fasting_plan_save_failed">सहेजना विफल रहा</string>
 
 
     <!-- FastingReceiver -->
@@ -964,6 +965,7 @@
     <!-- EditHeightScreen -->
     <string name="edit_height_title">अपनी ऊंचाई संपादित करें</string>
     <string name="edit_height_privacy_note">हम केवल आपके अनुभव और कैलोरी अनुमान सटीकता को बेहतर बनाने के लिए आपकी ऊंचाई का उपयोग करते हैं।</string>
+    <string name="edit_height_saved_locally_sync_failed">नेटवर्क त्रुटि। स्थानीय रूप से सहेजा गया, लेकिन सिंक नहीं हो सका।</string>
 
 
     <!-- EditAgeScreen -->
@@ -1011,6 +1013,10 @@
     <string name="edit_nutrition_sugar_goal">चीनी लक्ष्य</string>
     <string name="edit_nutrition_sodium_goal">सोडियम लक्ष्य</string>
     <string name="edit_nutrition_auto_generate_goals">स्वतः लक्ष्य उत्पन्न करें</string>
+    <string name="auto_generate_goals_success">सफलतापूर्वक जनरेट किया गया!</string>
+    <string name="auto_generate_goals_failed">जनरेट नहीं हो सका</string>
+    <string name="auto_generate_goals_failed_http_format">जनरेट नहीं हो सका (%1$d)</string>
+    <string name="auto_generate_goals_network_error">नेटवर्क त्रुटि। कृपया पुनः प्रयास करें।</string>
 
 
     <!-- RingColorsExplainedScreen -->

@@ -14,8 +14,10 @@ import java.io.IOException
 import javax.inject.Inject
 
 sealed class AutoGenEvent {
-    data class Success(val message: String) : AutoGenEvent()
-    data class Error(val message: String) : AutoGenEvent()
+    data object Success : AutoGenEvent()
+    data class HttpError(val code: Int) : AutoGenEvent()
+    data object NetworkError : AutoGenEvent()
+    data object Error : AutoGenEvent()
 }
 
 @HiltViewModel
@@ -44,15 +46,15 @@ class AutoGenerateGoalsCalcViewModel @Inject constructor(
             _committing.value = true
             runCatching { repo.commitFromLocal() }
                 .onSuccess {
-                    _events.tryEmit(AutoGenEvent.Success("Generated successfully!"))
+                    _events.tryEmit(AutoGenEvent.Success)
                 }
                 .onFailure { e ->
-                    val msg = when (e) {
-                        is HttpException -> "Generate failed (${e.code()})"
-                        is IOException -> "Network error, please try again."
-                        else -> e.message?.takeIf { it.isNotBlank() } ?: "Generate failed"
+                    val event = when (e) {
+                        is HttpException -> AutoGenEvent.HttpError(e.code())
+                        is IOException -> AutoGenEvent.NetworkError
+                        else -> AutoGenEvent.Error
                     }
-                    _events.tryEmit(AutoGenEvent.Error(msg))
+                    _events.tryEmit(event)
                 }
             _committing.value = false
         }

@@ -2,8 +2,10 @@ package com.caloshape.app.ui.home.ui.fasting.model
 
 import android.app.Application
 import android.util.Log
+import androidx.annotation.StringRes
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.caloshape.app.R
 import com.caloshape.app.data.fasting.api.FastingPlanDto
 import com.caloshape.app.data.fasting.model.FastingPlan
 import com.caloshape.app.data.fasting.notifications.FastingAlarmScheduler
@@ -27,7 +29,7 @@ data class FastingUiState(
     val start: LocalTime = LocalTime.of(9, 0),
     val end: LocalTime = LocalTime.of(17, 0),
     val enabled: Boolean = false,
-    val toastMessage: String? = null
+    @StringRes val toastMessageResId: Int? = null
 )
 private const val TAG = "FastingVM"
 @HiltViewModel
@@ -159,12 +161,16 @@ class FastingPlanViewModel @Inject constructor(
             }
 
             if (showToast) {
-                _state.value = _state.value.copy(toastMessage = "Saved successfully !")
+                _state.value = _state.value.copy(
+                    toastMessageResId = R.string.common_save_success
+                )
             }
         } catch (t: Throwable) {
             Log.e(TAG, "persistAndReschedule() failed", t)
             if (showToast) {
-                _state.value = _state.value.copy(toastMessage = "Save failed")
+                _state.value = _state.value.copy(
+                    toastMessageResId = R.string.fasting_plan_save_failed
+                )
             }
         }
     }
@@ -260,6 +266,6 @@ class FastingPlanViewModel @Inject constructor(
     }
 
     fun clearToast() {
-        _state.value = _state.value.copy(toastMessage = null)
+        _state.value = _state.value.copy(toastMessageResId = null)
     }
 }

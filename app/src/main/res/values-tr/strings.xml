@@ -611,6 +611,7 @@
 
     <string name="fasting_picker_title">Oruç başlangıç ​​saatinizi ayarlayın</string>
     <string name="fasting_picker_subtitle">Her gün bu saatte, yeme aralığınız başladığında size hatırlatacağız.</string>
+    <string name="fasting_plan_save_failed">Kaydetme başarısız</string>
 
 
     <!-- FastingReceiver -->
@@ -964,6 +965,7 @@
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Boyunuzu Düzenleyin</string>
     <string name="edit_height_privacy_note">Boyunuzu yalnızca deneyiminizi ve kalori tahmininizin doğruluğunu geliştirmek için kullanırız.</string>
+    <string name="edit_height_saved_locally_sync_failed">Ağ hatası. Yerel olarak kaydedildi ancak senkronize edilemedi.</string>
 
 
     <!-- EditAgeScreen -->
@@ -1011,6 +1013,10 @@
     <string name="edit_nutrition_sugar_goal">Şeker hedefi</string>
     <string name="edit_nutrition_sodium_goal">Sodyum hedefi</string>
     <string name="edit_nutrition_auto_generate_goals">Hedefleri otomatik oluştur</string>
+    <string name="auto_generate_goals_success">Başarıyla oluşturuldu!</string>
+    <string name="auto_generate_goals_failed">Oluşturma başarısız</string>
+    <string name="auto_generate_goals_failed_http_format">Oluşturma başarısız (%1$d)</string>
+    <string name="auto_generate_goals_network_error">Ağ hatası. Lütfen tekrar deneyin.</string>
 
 
     <!-- RingColorsExplainedScreen -->

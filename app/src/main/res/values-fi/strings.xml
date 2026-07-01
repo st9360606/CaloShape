@@ -611,6 +611,7 @@
 
     <string name="fasting_picker_title">Aseta paaston alkamisaika</string>
     <string name="fasting_picker_subtitle">Muistutamme sinua tähän aikaan joka päivä, kun ruokailuikkunasi alkaa.</string>
+    <string name="fasting_plan_save_failed">Tallennus epäonnistui</string>
 
 
     <!-- FastingReceiver -->
@@ -964,6 +965,7 @@
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Muokkaa pituuttasi</string>
     <string name="edit_height_privacy_note">Käytämme pituuttasi vain parantaaksemme kokemustasi ja kaloriarvioinnin tarkkuutta.</string>
+    <string name="edit_height_saved_locally_sync_failed">Verkkovirhe. Tallennettu paikallisesti, mutta synkronointi epäonnistui.</string>
 
 
     <!-- EditAgeScreen -->
@@ -1011,6 +1013,10 @@
     <string name="edit_nutrition_sugar_goal">Sokerin tavoite</string>
     <string name="edit_nutrition_sodium_goal">Natriumtavoite</string>
     <string name="edit_nutrition_auto_generate_goals">Luo tavoitteita automaattisesti</string>
+    <string name="auto_generate_goals_success">Luonti onnistui!</string>
+    <string name="auto_generate_goals_failed">Luonti epäonnistui</string>
+    <string name="auto_generate_goals_failed_http_format">Luonti epäonnistui (%1$d)</string>
+    <string name="auto_generate_goals_network_error">Verkkovirhe. Yritä uudelleen.</string>
 
 
     <!-- RingColorsExplainedScreen -->

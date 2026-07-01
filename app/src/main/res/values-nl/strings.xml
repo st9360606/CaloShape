@@ -611,6 +611,7 @@
 
     <string name="fasting_picker_title">Stel uw starttijd voor vasten in</string>
     <string name="fasting_picker_subtitle">We zullen u er elke dag op dit tijdstip aan herinneren wanneer uw eetvenster begint.</string>
+    <string name="fasting_plan_save_failed">Opslaan mislukt</string>
 
 
     <!-- FastingReceiver -->
@@ -964,6 +965,7 @@
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Bewerk uw lengte</string>
     <string name="edit_height_privacy_note">We gebruiken uw lengte alleen om uw ervaring en de nauwkeurigheid van uw calorieschatting te verbeteren.</string>
+    <string name="edit_height_saved_locally_sync_failed">Netwerkfout. Lokaal opgeslagen, maar synchroniseren is mislukt.</string>
 
 
     <!-- EditAgeScreen -->
@@ -1011,6 +1013,10 @@
     <string name="edit_nutrition_sugar_goal">Suiker doel</string>
     <string name="edit_nutrition_sodium_goal">Natrium doel</string>
     <string name="edit_nutrition_auto_generate_goals">Automatisch doelen genereren</string>
+    <string name="auto_generate_goals_success">Succesvol gegenereerd!</string>
+    <string name="auto_generate_goals_failed">Genereren mislukt</string>
+    <string name="auto_generate_goals_failed_http_format">Genereren mislukt (%1$d)</string>
+    <string name="auto_generate_goals_network_error">Netwerkfout. Probeer het opnieuw.</string>
 
 
     <!-- RingColorsExplainedScreen -->

@@ -611,6 +611,7 @@
 
     <string name="fasting_picker_title">Imposta l\'ora di inizio del digiuno</string>
     <string name="fasting_picker_subtitle">Ti ricorderemo ogni giorno a quest\'ora quando inizia la tua finestra alimentare.</string>
+    <string name="fasting_plan_save_failed">Salvataggio non riuscito</string>
 
 
     <!-- FastingReceiver -->
@@ -964,6 +965,7 @@
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Modifica la tua altezza</string>
     <string name="edit_height_privacy_note">Utilizziamo la tua altezza solo per migliorare la tua esperienza e la precisione della stima delle calorie.</string>
+    <string name="edit_height_saved_locally_sync_failed">Errore di rete. Salvato in locale, ma la sincronizzazione non è riuscita.</string>
 
 
     <!-- EditAgeScreen -->
@@ -1011,6 +1013,10 @@
     <string name="edit_nutrition_sugar_goal">Obiettivo zucchero</string>
     <string name="edit_nutrition_sodium_goal">Obiettivo sodio</string>
     <string name="edit_nutrition_auto_generate_goals">Generazione automatica degli obiettivi</string>
+    <string name="auto_generate_goals_success">Generazione completata!</string>
+    <string name="auto_generate_goals_failed">Generazione non riuscita</string>
+    <string name="auto_generate_goals_failed_http_format">Generazione non riuscita (%1$d)</string>
+    <string name="auto_generate_goals_network_error">Errore di rete. Riprova.</string>
 
 
     <!-- RingColorsExplainedScreen -->

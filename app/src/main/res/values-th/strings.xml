@@ -611,6 +611,7 @@
 
     <string name="fasting_picker_title">ตั้งเวลาเริ่มต้นการอดอาหารของคุณ</string>
     <string name="fasting_picker_subtitle">เราจะเตือนคุณในเวลานี้ในแต่ละวันเมื่อหน้าต่างการกินของคุณเริ่มต้นขึ้น</string>
+    <string name="fasting_plan_save_failed">บันทึกไม่สำเร็จ</string>
 
 
     <!-- FastingReceiver -->
@@ -963,6 +964,7 @@
     <!-- EditHeightScreen -->
     <string name="edit_height_title">แก้ไขความสูงของคุณ</string>
     <string name="edit_height_privacy_note">เราใช้ความสูงของคุณเพื่อปรับปรุงประสบการณ์ของคุณและความแม่นยำในการประมาณแคลอรี่เท่านั้น</string>
+    <string name="edit_height_saved_locally_sync_failed">เกิดข้อผิดพลาดของเครือข่าย บันทึกไว้ในอุปกรณ์แล้ว แต่ซิงค์ไม่สำเร็จ</string>
 
 
     <!-- EditAgeScreen -->
@@ -1010,6 +1012,10 @@
     <string name="edit_nutrition_sugar_goal">เป้าหมายน้ำตาล</string>
     <string name="edit_nutrition_sodium_goal">เป้าหมายโซเดียม</string>
     <string name="edit_nutrition_auto_generate_goals">สร้างเป้าหมายอัตโนมัติ</string>
+    <string name="auto_generate_goals_success">สร้างสำเร็จแล้ว!</string>
+    <string name="auto_generate_goals_failed">สร้างไม่สำเร็จ</string>
+    <string name="auto_generate_goals_failed_http_format">สร้างไม่สำเร็จ (%1$d)</string>
+    <string name="auto_generate_goals_network_error">เกิดข้อผิดพลาดของเครือข่าย โปรดลองอีกครั้ง</string>
 
 
     <!-- RingColorsExplainedScreen -->

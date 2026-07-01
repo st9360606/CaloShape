@@ -611,6 +611,7 @@
 
     <string name="fasting_picker_title">Atur waktu mulai puasa Anda</string>
     <string name="fasting_picker_subtitle">Kami akan mengingatkan Anda saat ini setiap hari ketika jendela makan Anda dimulai.</string>
+    <string name="fasting_plan_save_failed">Gagal menyimpan</string>
 
 
     <!-- FastingReceiver -->
@@ -963,6 +964,7 @@
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Edit Tinggi Badan Anda</string>
     <string name="edit_height_privacy_note">Kami hanya menggunakan tinggi badan Anda untuk meningkatkan pengalaman dan akurasi estimasi kalori Anda.</string>
+    <string name="edit_height_saved_locally_sync_failed">Kesalahan jaringan. Disimpan secara lokal, tetapi gagal disinkronkan.</string>
 
 
     <!-- EditAgeScreen -->
@@ -1010,6 +1012,10 @@
     <string name="edit_nutrition_sugar_goal">Tujuan gula</string>
     <string name="edit_nutrition_sodium_goal">Tujuan natrium</string>
     <string name="edit_nutrition_auto_generate_goals">Hasilkan sasaran secara otomatis</string>
+    <string name="auto_generate_goals_success">Berhasil dibuat!</string>
+    <string name="auto_generate_goals_failed">Gagal membuat</string>
+    <string name="auto_generate_goals_failed_http_format">Gagal membuat (%1$d)</string>
+    <string name="auto_generate_goals_network_error">Terjadi kesalahan jaringan. Silakan coba lagi.</string>
 
 
     <!-- RingColorsExplainedScreen -->

@@ -611,6 +611,7 @@
 
     <string name="fasting_picker_title">Ställ in din fasta starttid</string>
     <string name="fasting_picker_subtitle">Vi kommer att påminna dig vid denna tidpunkt varje dag när ditt matfönster börjar.</string>
+    <string name="fasting_plan_save_failed">Det gick inte att spara</string>
 
 
     <!-- FastingReceiver -->
@@ -964,6 +965,7 @@
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Redigera din längd</string>
     <string name="edit_height_privacy_note">Vi använder bara din längd för att förbättra din upplevelse och noggrannhet i din kaloriuppskattning.</string>
+    <string name="edit_height_saved_locally_sync_failed">Nätverksfel. Sparades lokalt, men synkroniseringen misslyckades.</string>
 
 
     <!-- EditAgeScreen -->
@@ -1011,6 +1013,10 @@
     <string name="edit_nutrition_sugar_goal">Sockermål</string>
     <string name="edit_nutrition_sodium_goal">Natriummål</string>
     <string name="edit_nutrition_auto_generate_goals">Skapa mål automatiskt</string>
+    <string name="auto_generate_goals_success">Genereringen lyckades!</string>
+    <string name="auto_generate_goals_failed">Det gick inte att generera</string>
+    <string name="auto_generate_goals_failed_http_format">Det gick inte att generera (%1$d)</string>
+    <string name="auto_generate_goals_network_error">Nätverksfel. Försök igen.</string>
 
 
     <!-- RingColorsExplainedScreen -->

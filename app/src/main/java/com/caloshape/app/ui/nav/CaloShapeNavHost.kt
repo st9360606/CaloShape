@@ -449,6 +449,7 @@ fun CaloShapeNavHost(
     val nav = rememberNavController()
     val currentBackStackEntry by nav.currentBackStackEntryFlow.collectAsState(initial = null)
     val currentRoute = currentBackStackEntry?.destination?.route
+    val commonSaveSuccessMessage = stringResource(R.string.common_save_success)
 
     val appCtx = LocalContext.current.applicationContext
     val ep = remember(appCtx) { EntryPointAccessors.fromApplication(appCtx, AppEntryPoint::class.java) }
@@ -1508,7 +1509,7 @@ fun CaloShapeNavHost(
                             // ✅ 只把結果交給「上一頁」顯示
                             nav.previousBackStackEntry
                                 ?.savedStateHandle
-                                ?.set(NavResults.SUCCESS_TOAST, "Saved successfully !")
+                                ?.set(NavResults.SUCCESS_TOAST, commonSaveSuccessMessage)
                             settingsVm.refreshProfileOnly()
                             nav.popBackStack()
                         }
@@ -1522,7 +1523,7 @@ fun CaloShapeNavHost(
                     onSaved = {
                         nav.previousBackStackEntry
                             ?.savedStateHandle
-                            ?.set(NavResults.SUCCESS_TOAST, "Saved successfully !")
+                            ?.set(NavResults.SUCCESS_TOAST, commonSaveSuccessMessage)
                         settingsVm.refreshProfileOnly()
                         nav.popBackStack()
                     }
@@ -1946,7 +1947,7 @@ fun CaloShapeNavHost(
                             // ✅ 回 Personal 顯示 toast（你 PERSONAL 已經有讀 NavResults.SUCCESS_TOAST）
                             nav.previousBackStackEntry
                                 ?.savedStateHandle
-                                ?.set(NavResults.SUCCESS_TOAST, "Saved successfully !")
+                                ?.set(NavResults.SUCCESS_TOAST, commonSaveSuccessMessage)
 
                             // ✅ 刷新 Users(me) 的 name（如果你已加 refreshMeOnly 就用它；沒加就先 refresh()）
                             runCatching { settingsVm.refreshMeOnly() }.getOrElse { settingsVm.refresh() }
@@ -1989,7 +1990,7 @@ fun CaloShapeNavHost(
                 onSaved = {
                     nav.previousBackStackEntry
                         ?.savedStateHandle
-                        ?.set(NavResults.SUCCESS_TOAST, "Saved successfully !")
+                        ?.set(NavResults.SUCCESS_TOAST, commonSaveSuccessMessage)
                     settingsVm.refreshProfileOnly()
                     nav.popBackStack()
                 }
@@ -2013,7 +2014,7 @@ fun CaloShapeNavHost(
                 onSaved = {
                     nav.previousBackStackEntry
                         ?.savedStateHandle
-                        ?.set(NavResults.SUCCESS_TOAST, "Saved successfully !")
+                        ?.set(NavResults.SUCCESS_TOAST, commonSaveSuccessMessage)
                     settingsVm.refreshProfileOnly()
                     nav.popBackStack()
                 }
@@ -2040,7 +2041,7 @@ fun CaloShapeNavHost(
                 onSaved = {
                     nav.previousBackStackEntry
                         ?.savedStateHandle
-                        ?.set(NavResults.SUCCESS_TOAST, "Saved successfully !")
+                        ?.set(NavResults.SUCCESS_TOAST, commonSaveSuccessMessage)
                     settingsVm.refreshProfileOnly()
                     nav.popBackStack()
                 }
@@ -2064,7 +2065,7 @@ fun CaloShapeNavHost(
                 onSaved = {
                     nav.previousBackStackEntry
                         ?.savedStateHandle
-                        ?.set(NavResults.SUCCESS_TOAST, "Saved successfully !")
+                        ?.set(NavResults.SUCCESS_TOAST, commonSaveSuccessMessage)
                     settingsVm.refreshProfileOnly()
                     nav.popBackStack()
                 }
@@ -2088,7 +2089,7 @@ fun CaloShapeNavHost(
                 onSaved = {
                     nav.previousBackStackEntry
                         ?.savedStateHandle
-                        ?.set(NavResults.SUCCESS_TOAST, "Saved successfully !")
+                        ?.set(NavResults.SUCCESS_TOAST, commonSaveSuccessMessage)
                     settingsVm.refreshProfileOnly()
                     nav.popBackStack()
                 }
@@ -2112,7 +2113,7 @@ fun CaloShapeNavHost(
                 onSaved = {
                     nav.previousBackStackEntry
                         ?.savedStateHandle
-                        ?.set(NavResults.SUCCESS_TOAST, "Saved successfully !")
+                        ?.set(NavResults.SUCCESS_TOAST, commonSaveSuccessMessage)
                     settingsVm.refreshProfileOnly()
                     nav.popBackStack()
                 }
@@ -2139,7 +2140,7 @@ fun CaloShapeNavHost(
                 onSaved = {
                     nav.previousBackStackEntry
                         ?.savedStateHandle
-                        ?.set(NavResults.SUCCESS_TOAST, "Saved successfully !")
+                        ?.set(NavResults.SUCCESS_TOAST, commonSaveSuccessMessage)
                     settingsVm.refreshProfileOnly()
                     nav.popBackStack()
                 }
@@ -2161,7 +2162,7 @@ fun CaloShapeNavHost(
                 onSaved = {
                     nav.previousBackStackEntry
                         ?.savedStateHandle
-                        ?.set(NavResults.SUCCESS_TOAST, "Saved successfully !")
+                        ?.set(NavResults.SUCCESS_TOAST, commonSaveSuccessMessage)
                     nav.popBackStack()
                 }
             )
@@ -2220,7 +2221,7 @@ fun CaloShapeNavHost(
                     onSaved = {
                         nav.previousBackStackEntry
                             ?.savedStateHandle
-                            ?.set(NavResults.SUCCESS_TOAST, "Saved successfully !")
+                            ?.set(NavResults.SUCCESS_TOAST, commonSaveSuccessMessage)
                         settingsVm.refreshProfileOnly()
                         nav.popBackStack()
                     },
@@ -2332,12 +2333,15 @@ fun CaloShapeNavHost(
                 LaunchedEffect(calcVm) {
                     calcVm.events.collectLatest { ev ->
                         when (ev) {
-                            is AutoGenEvent.Success -> {
+                            AutoGenEvent.Success -> {
+                                val message = context.getString(
+                                    R.string.auto_generate_goals_success
+                                )
                                 val target = runCatching {
                                     nav.getBackStackEntry(Routes.EDIT_NUTRITION_GOALS)
                                 }.getOrNull()
                                 target?.savedStateHandle?.set(NavResults.AUTO_GEN_RELOAD, true)
-                                target?.savedStateHandle?.set(NavResults.SUCCESS_TOAST, ev.message)
+                                target?.savedStateHandle?.set(NavResults.SUCCESS_TOAST, message)
 
                                 val popped = nav.popBackStack(
                                     Routes.EDIT_NUTRITION_GOALS,
@@ -2351,8 +2355,26 @@ fun CaloShapeNavHost(
                                 }
                             }
 
-                            is AutoGenEvent.Error -> {
-                                Toast.makeText(context, ev.message, Toast.LENGTH_SHORT).show()
+                            is AutoGenEvent.HttpError -> {
+                                val message = context.getString(
+                                    R.string.auto_generate_goals_failed_http_format,
+                                    ev.code
+                                )
+                                Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+                            }
+
+                            AutoGenEvent.NetworkError -> {
+                                val message = context.getString(
+                                    R.string.auto_generate_goals_network_error
+                                )
+                                Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+                            }
+
+                            AutoGenEvent.Error -> {
+                                val message = context.getString(
+                                    R.string.auto_generate_goals_failed
+                                )
+                                Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
                             }
                         }
                     }
@@ -2768,7 +2790,8 @@ fun CaloShapeNavHost(
         }
 
         composable(Routes.RECENT_UPLOAD_DETAIL) { backStackEntry ->
-            val activity = (LocalContext.current.findActivity() ?: hostActivity)
+            val context = LocalContext.current
+            val activity = (context.findActivity() ?: hostActivity)
             val recentUploadOwner = backStackEntry
 
             val flowVm: FoodLogFlowViewModel = viewModel(
@@ -2825,7 +2848,7 @@ fun CaloShapeNavHost(
 
                     nav.previousBackStackEntry
                         ?.savedStateHandle
-                        ?.set(NavResults.SUCCESS_TOAST, activity.getString(R.string.common_save_success))
+                        ?.set(NavResults.SUCCESS_TOAST, commonSaveSuccessMessage)
 
                     if (source == Routes.SAVED_FOODS) {
                         nav.safePopBackStack()

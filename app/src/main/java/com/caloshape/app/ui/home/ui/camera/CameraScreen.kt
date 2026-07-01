@@ -360,7 +360,7 @@ fun CameraScreen(
     val frameSizeRatio = 0.78f
     val frameOffsetYRatio = -0.12f
 
-    val sidePadding = 18.dp
+    val sidePadding = 12.dp
     val tileGap = 6.dp
     val tileH = 72.dp
     val tileCorner = 14.dp

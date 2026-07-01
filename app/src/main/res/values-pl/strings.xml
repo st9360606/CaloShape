@@ -611,6 +611,7 @@
 
     <string name="fasting_picker_title">Ustaw godzinę rozpoczęcia postu</string>
     <string name="fasting_picker_subtitle">Codziennie o tej porze będziemy Ci przypominać, kiedy zacznie się Twoje okno żywieniowe.</string>
+    <string name="fasting_plan_save_failed">Zapisywanie nie powiodło się</string>
 
 
     <!-- FastingReceiver -->
@@ -966,6 +967,7 @@
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Edytuj swój wzrost</string>
     <string name="edit_height_privacy_note">Twój wzrost wykorzystujemy wyłącznie w celu poprawy Twoich wrażeń i dokładności szacowania kalorii.</string>
+    <string name="edit_height_saved_locally_sync_failed">Błąd sieci. Zapisano lokalnie, ale synchronizacja nie powiodła się.</string>
 
 
     <!-- EditAgeScreen -->
@@ -1013,6 +1015,10 @@
     <string name="edit_nutrition_sugar_goal">Cel cukru</string>
     <string name="edit_nutrition_sodium_goal">Cel sodu</string>
     <string name="edit_nutrition_auto_generate_goals">Automatyczne generowanie celów</string>
+    <string name="auto_generate_goals_success">Wygenerowano pomyślnie!</string>
+    <string name="auto_generate_goals_failed">Generowanie nie powiodło się</string>
+    <string name="auto_generate_goals_failed_http_format">Generowanie nie powiodło się (%1$d)</string>
+    <string name="auto_generate_goals_network_error">Błąd sieci. Spróbuj ponownie.</string>
 
 
     <!-- RingColorsExplainedScreen -->

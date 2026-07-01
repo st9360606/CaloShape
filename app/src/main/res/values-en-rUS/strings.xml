@@ -612,6 +612,7 @@
 
     <string name="fasting_picker_title">Set your fasting start time</string>
     <string name="fasting_picker_subtitle">We’ll remind you at this time each day when your eating window starts.</string>
+    <string name="fasting_plan_save_failed">Save failed</string>
 
 
     <!-- FastingReceiver -->
@@ -965,6 +966,7 @@
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Edit Your Height</string>
     <string name="edit_height_privacy_note">We only use your height to improve your experience and calorie estimation accuracy.</string>
+    <string name="edit_height_saved_locally_sync_failed">Network error. Saved locally, but failed to sync.</string>
 
 
     <!-- EditAgeScreen -->
@@ -1012,6 +1014,10 @@
     <string name="edit_nutrition_sugar_goal">Sugar goal</string>
     <string name="edit_nutrition_sodium_goal">Sodium goal</string>
     <string name="edit_nutrition_auto_generate_goals">Auto generate goals</string>
+    <string name="auto_generate_goals_success">Generated successfully!</string>
+    <string name="auto_generate_goals_failed">Generate failed</string>
+    <string name="auto_generate_goals_failed_http_format">Generate failed (%1$d)</string>
+    <string name="auto_generate_goals_network_error">Network error, please try again.</string>
 
 
     <!-- RingColorsExplainedScreen -->

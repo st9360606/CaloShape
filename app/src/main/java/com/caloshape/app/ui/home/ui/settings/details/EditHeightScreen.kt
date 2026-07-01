@@ -154,10 +154,10 @@ fun EditHeightScreen(
         ) {
             Spacer(Modifier.height(80.dp))
 
-            if (ui.error != null) {
+            ui.errorMessageResId?.let { errorMessageResId ->
                 Spacer(Modifier.height(10.dp))
                 Text(
-                    text = ui.error!!,
+                    text = stringResource(errorMessageResId),
                     color = errorColor,
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier

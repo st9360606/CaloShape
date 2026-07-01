@@ -18,12 +18,14 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -455,14 +457,15 @@ fun HealthScoreCardModern(
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .height(cardHeight),
+            .heightIn(min = cardHeight),
         shape = CardStyles.Corner,
         colors = CardDefaults.cardColors(containerColor = HomeCardStyles.Surface.card()),
         border = HomeCardStyles.Surface.border()
     ) {
         Column(
             modifier = Modifier
-                .fillMaxSize()
+                .fillMaxWidth()
+                .heightIn(min = cardHeight)
                 .padding(horizontal = 18.dp, vertical = 12.dp)
         ) {
             Row(
@@ -518,9 +521,7 @@ fun HealthScoreCardModern(
                     fontSize = 14.sp,
                     lineHeight = 18.sp,
                     fontWeight = FontWeight.Normal
-                ),
-                maxLines = 2,
-                overflow = TextOverflow.Ellipsis
+                )
             )
         }
     }
@@ -827,7 +828,9 @@ fun StepsWorkoutRowModern(
     onWorkoutCardClick: () -> Unit = {}
 ) {
     Row(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(IntrinsicSize.Min),
         horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         val activityPrimaryStyle = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.SemiBold)
@@ -903,13 +906,17 @@ fun StepsWorkoutRowModern(
             secondary = stepsSecondary,
             ringColor = HomeCardStyles.Palette.steps(),
             progress = stepsProgress,
-            modifier = Modifier.weight(1f),
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxHeight(),
             cardHeight = cardHeight,
             ringSize = ringSize,
             ringStroke = ringStroke,
             centerDisk = centerDisk,
             gapTitleToPrimary = 8.dp,
             gapPrimaryToSecondary = 4.dp,
+            primaryMaxLines = Int.MAX_VALUE,
+            secondaryMaxLines = Int.MAX_VALUE,
             ringCenterContent = {
                 Image(
                     painter = painterResource(R.drawable.footstep),
@@ -968,7 +975,9 @@ fun StepsWorkoutRowModern(
             secondary = null,
             ringColor = HomeCardStyles.Palette.workout(),
             progress = workoutProgress,
-            modifier = Modifier.weight(1f),
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxHeight(),
             cardHeight = cardHeight,
             ringSize = ringSize,
             ringStroke = ringStroke,
@@ -1061,6 +1070,8 @@ fun ActivityStatCardSplit(
     titleTextStyle: TextStyle? = null,
     primaryTextStyle: TextStyle? = null,
     secondaryTextStyle: TextStyle? = null,
+    primaryMaxLines: Int = 1,
+    secondaryMaxLines: Int = 1,
     gapTitleToPrimary: Dp = 4.dp,
     gapPrimaryToSecondary: Dp = 2.dp,
     leftExtra: (@Composable () -> Unit)? = null,
@@ -1115,18 +1126,22 @@ fun ActivityStatCardSplit(
     Card(
         modifier = modifier
             .then(clickableMod)
-            .height(cardHeight),
+            .heightIn(min = cardHeight),
         shape = CardStyles.Corner,
         colors = CardDefaults.cardColors(containerColor = HomeCardStyles.Surface.card()),
         border = HomeCardStyles.Surface.border()
     ) {
-        Box(modifier = Modifier.fillMaxSize()) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(min = cardHeight)
+        ) {
 
             // ===== 底層內容（必要時 blur + dim）=====
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(cardHeight)
+                    .heightIn(min = cardHeight)
                     .then(if (blurBackground) Modifier.smartBlurAndDim() else Modifier)
                     .padding(horizontal = 14.dp, vertical = 12.dp),
                 verticalAlignment = Alignment.CenterVertically
@@ -1134,7 +1149,7 @@ fun ActivityStatCardSplit(
                 Box(
                     modifier = Modifier
                         .weight(1f)
-                        .fillMaxHeight()
+                        .heightIn(min = (cardHeight - 24.dp).coerceAtLeast(0.dp))
                 ) {
                     Column(
                         modifier = Modifier
@@ -1164,7 +1179,7 @@ fun ActivityStatCardSplit(
                                 text = primary,
                                 style = primaryStyle,
                                 color = HomeCardStyles.Text.primary(),
-                                maxLines = 1,
+                                maxLines = primaryMaxLines,
                                 overflow = TextOverflow.Ellipsis
                             )
                         }
@@ -1176,7 +1191,7 @@ fun ActivityStatCardSplit(
                                 text = secondary,
                                 style = secondaryStyle,
                                 color = HomeCardStyles.Text.secondary(),
-                                maxLines = 1,
+                                maxLines = secondaryMaxLines,
                                 overflow = TextOverflow.Ellipsis
                             )
                         } else {
@@ -1192,8 +1207,7 @@ fun ActivityStatCardSplit(
                 // 右側圓環
                 Box(
                     modifier = Modifier
-                        .weight(1f)
-                        .fillMaxHeight(),
+                        .weight(1f),
                     contentAlignment = Alignment.Center
                 ) {
                     Box(modifier = Modifier.size(ringSize), contentAlignment = Alignment.Center) {

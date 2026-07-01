@@ -612,6 +612,7 @@
 
     <string name="fasting_picker_title">단식 시작 시간 설정</string>
     <string name="fasting_picker_subtitle">We’ll remind you at this time each day when your eating window starts.</string>
+    <string name="fasting_plan_save_failed">저장하지 못했습니다</string>
 
 
     <!-- FastingReceiver -->
@@ -964,6 +965,7 @@
     <!-- EditHeightScreen -->
     <string name="edit_height_title">키 수정</string>
     <string name="edit_height_privacy_note">We only use your height to improve your experience and calorie estimation accuracy.</string>
+    <string name="edit_height_saved_locally_sync_failed">네트워크 오류입니다. 로컬에 저장했지만 동기화하지 못했습니다.</string>
 
 
     <!-- EditAgeScreen -->
@@ -1011,6 +1013,10 @@
     <string name="edit_nutrition_sugar_goal">당류 목표</string>
     <string name="edit_nutrition_sodium_goal">나트륨 목표</string>
     <string name="edit_nutrition_auto_generate_goals">목표 자동 생성</string>
+    <string name="auto_generate_goals_success">생성되었습니다!</string>
+    <string name="auto_generate_goals_failed">생성하지 못했습니다</string>
+    <string name="auto_generate_goals_failed_http_format">생성하지 못했습니다(%1$d)</string>
+    <string name="auto_generate_goals_network_error">네트워크 오류입니다. 다시 시도해 주세요.</string>
 
 
     <!-- RingColorsExplainedScreen -->

@@ -7,16 +7,19 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Bookmark
@@ -34,6 +37,7 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.caloshape.app.R
@@ -95,6 +99,8 @@ fun HomeQuickActionMenu(
         Row(
             modifier = Modifier
                 .align(Alignment.BottomCenter)
+                .fillMaxWidth()
+                .height(IntrinsicSize.Min)
                 .padding(
                     start = MenuSidePadding,
                     end = MenuSidePadding,
@@ -106,6 +112,9 @@ fun HomeQuickActionMenu(
                 label = stringResource(R.string.quick_add_saved_foods),
                 testTag = "quick_add_saved_foods_card",
                 onClick = onSavedFoodsClick,
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxHeight(),
                 icon = {
                     Icon(
                         imageVector = Icons.Filled.Bookmark,
@@ -120,6 +129,9 @@ fun HomeQuickActionMenu(
                 label = stringResource(R.string.quick_add_scan_food),
                 testTag = "quick_add_scan_food_card",
                 onClick = onScanFoodClick,
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxHeight(),
                 icon = {
                     ScanCameraIcon(
                         modifier = Modifier.size(30.dp),
@@ -143,6 +155,7 @@ private fun QuickActionCard(
     label: String,
     testTag: String,
     onClick: () -> Unit,
+    modifier: Modifier = Modifier,
     icon: @Composable () -> Unit
 ) {
     val hapticClick = rememberClickWithHaptic(onClick = onClick)
@@ -157,9 +170,8 @@ private fun QuickActionCard(
     }
 
     Card(
-        modifier = Modifier
-            .width(170.dp)
-            .height(125.dp)
+        modifier = modifier
+            .heightIn(min = 125.dp)
             .testTag(testTag)
             .caloShapeClickable(
                 interactionSource = remember { MutableInteractionSource() },
@@ -177,8 +189,9 @@ private fun QuickActionCard(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(top = 21.dp, bottom = 8.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+                .padding(horizontal = 12.dp, vertical = 16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
         ) {
             Box(
                 modifier = Modifier
@@ -198,7 +211,9 @@ private fun QuickActionCard(
                 text = label,
                 color = contentColor,
                 fontSize = 16.sp,
-                fontWeight = FontWeight.SemiBold
+                lineHeight = 20.sp,
+                fontWeight = FontWeight.SemiBold,
+                textAlign = TextAlign.Center
             )
         }
     }

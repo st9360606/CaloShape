@@ -690,12 +690,12 @@ fun HomeScreen(
 
                 // ★ 這兩個值就是你要調的數字（正數=上面減、下面加；負數相反）
                 val topSwap =
-                    16.dp    // 例：Calories -8dp；Macro +8dp  第一頁 Calories 變矮、Macro 變高（或相反），但整頁高度不變、不跳動。
+                    16.dp    // 上方卡略矮、下方卡略高。
                 val bottomSwap =
                     8.dp    // 例：Workout -12dp；Weight/Fasting +12dp 第二頁 Workout 變矮、Weight/Fasting 變高（或相反），整頁高度不變。
 
                 // ★ 兩邊總高度控制（共同升降）
-                val baseHeight = 126.dp    // ← 每張卡的基準高度（兩張卡都用這個），改這裡就能拉高/降低總高度
+                val baseHeight = 126.dp    // 各卡的最小基準高度；長文案可自行撐高。
                 val verticalGap = 14.dp    // ← 上下卡的間距
 
                 // 將 VM 狀態轉為卡片顯示字串
@@ -860,8 +860,8 @@ fun HomeScreen(
         // ===== ✅ Toast 疊加層（先顯示 Fasting，再顯示 Workout） =====
         val canShowWorkoutToast = !showWorkoutSheet.value
         val workoutToastResId = workoutUi.toastMessageResId
-        val fastingToast = fastingUi.toastMessage   // ★ 來自 FastingPlanViewModel
-        key(localeKey, workoutToastResId, fastingToast, showWorkoutGateError) {
+        val fastingToastResId = fastingUi.toastMessageResId
+        key(localeKey, workoutToastResId, fastingToastResId, showWorkoutGateError) {
             Box(Modifier.fillMaxSize()) {
                 when {
                     // 1️⃣ 優先顯示 Fasting 儲存結果（不管 Workout 有沒有）
@@ -876,12 +876,12 @@ fun HomeScreen(
                         }
                     }
 
-                    fastingToast != null -> {
+                    fastingToastResId != null -> {
                         SuccessTopToast(
-                            message = fastingToast,
+                            message = stringResource(fastingToastResId),
                             modifier = Modifier.align(Alignment.TopCenter)
                         )
-                        LaunchedEffect(fastingToast) {
+                        LaunchedEffect(fastingToastResId) {
                             delay(2000)
                             fastingVm.clearToast()   // ★ 呼叫剛剛加的 clearToast()
                         }
@@ -1045,9 +1045,7 @@ private fun TwoPagePager(
         goal = summary.tdee
     )
 
-    // 固定頁面總高度
     val spacerV = verticalGap
-    val pageHeight = baseHeight + baseHeight + spacerV
     val minCard = 96.dp
     val maxSwap = (baseHeight - minCard).coerceAtLeast(0.dp)
 
@@ -1065,13 +1063,12 @@ private fun TwoPagePager(
             state = pagerState,
             modifier = Modifier
                 .fillMaxWidth()
-                .height(pageHeight)
                 .then(modifier),
             pageSpacing = 38.dp,
             beyondViewportPageCount = 1
         ) { page ->
-            Box(modifier = Modifier.fillMaxSize()) {
-                Column(Modifier.fillMaxSize()) {
+            Box(modifier = Modifier.fillMaxWidth()) {
+                Column(Modifier.fillMaxWidth()) {
                     when (page) {
                         0 -> {
                             CaloriesCardModern(

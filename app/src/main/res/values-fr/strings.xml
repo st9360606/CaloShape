@@ -612,6 +612,7 @@
 
     <string name="fasting_picker_title">Définir l’heure de début du jeûne</string>
     <string name="fasting_picker_subtitle">We’ll remind you at this time each day when your eating window starts.</string>
+    <string name="fasting_plan_save_failed">Échec de l’enregistrement</string>
 
 
     <!-- FastingReceiver -->
@@ -965,6 +966,7 @@
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Modifier votre taille</string>
     <string name="edit_height_privacy_note">We only use your height to improve your experience and calorie estimation accuracy.</string>
+    <string name="edit_height_saved_locally_sync_failed">Erreur réseau. Enregistré localement, mais la synchronisation a échoué.</string>
 
 
     <!-- EditAgeScreen -->
@@ -1012,6 +1014,10 @@
     <string name="edit_nutrition_sugar_goal">Sucre objectif</string>
     <string name="edit_nutrition_sodium_goal">Sodium objectif</string>
     <string name="edit_nutrition_auto_generate_goals">Générer automatiquement les objectifs</string>
+    <string name="auto_generate_goals_success">Génération réussie !</string>
+    <string name="auto_generate_goals_failed">Échec de la génération</string>
+    <string name="auto_generate_goals_failed_http_format">Échec de la génération (%1$d)</string>
+    <string name="auto_generate_goals_network_error">Erreur réseau. Veuillez réessayer.</string>
 
 
     <!-- RingColorsExplainedScreen -->

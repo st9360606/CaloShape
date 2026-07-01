@@ -2,6 +2,8 @@ package com.caloshape.app.ui.home.ui.settings.details.model
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.annotation.StringRes
+import com.caloshape.app.R
 import com.caloshape.app.data.profile.repo.ProfileRepository
 import com.caloshape.app.data.profile.repo.UserProfileStore
 import com.caloshape.app.data.profile.repo.roundCm1
@@ -24,8 +26,8 @@ class EditHeightViewModel @Inject constructor(
     data class UiState(
         val initializing: Boolean = true,   // ✅ NEW
         val saving: Boolean = false,
-        val error: String? = null,
-        val toastMessage: String? = null
+        @StringRes val errorMessageResId: Int? = null,
+        @StringRes val toastMessageResId: Int? = null
     )
 
     data class InitialHeight(
@@ -61,7 +63,7 @@ class EditHeightViewModel @Inject constructor(
         initOnce = true
 
         viewModelScope.launch {
-            _ui.update { it.copy(initializing = true, error = null) }
+            _ui.update { it.copy(initializing = true, errorMessageResId = null) }
 
             // 先從本機拿 fallback（避免完全沒值）
             val local = runCatching { store.snapshot() }.getOrNull()
@@ -121,7 +123,13 @@ class EditHeightViewModel @Inject constructor(
         if (_ui.value.saving) return
 
         viewModelScope.launch {
-            _ui.update { it.copy(saving = true, error = null, toastMessage = null) }
+            _ui.update {
+                it.copy(
+                    saving = true,
+                    errorMessageResId = null,
+                    toastMessageResId = null
+                )
+            }
 
             val cmToSave: Float = if (useMetric) {
                 roundCm1(cmVal)
@@ -144,8 +152,8 @@ class EditHeightViewModel @Inject constructor(
                 _ui.update {
                     it.copy(
                         saving = false,
-                        error = null,
-                        toastMessage = "Saved successfully !"
+                        errorMessageResId = null,
+                        toastMessageResId = R.string.common_save_success
                     )
                 }
                 onSuccess()
@@ -157,15 +165,12 @@ class EditHeightViewModel @Inject constructor(
                         }
                 }
 
-            }.onFailure { e ->
-                val msg = e.message?.takeIf { it.isNotBlank() }
-                    ?: "Network error. Saved locally, but failed to sync."
-
+            }.onFailure {
                 _ui.update {
                     it.copy(
                         saving = false,
-                        error = msg,
-                        toastMessage = msg
+                        errorMessageResId = R.string.edit_height_saved_locally_sync_failed,
+                        toastMessageResId = R.string.edit_height_saved_locally_sync_failed
                     )
                 }
             }

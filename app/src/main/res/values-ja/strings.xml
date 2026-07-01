@@ -612,6 +612,7 @@
 
     <string name="fasting_picker_title">ファスティング開始時間を設定</string>
     <string name="fasting_picker_subtitle">We’ll remind you at this time each day when your eating window starts.</string>
+    <string name="fasting_plan_save_failed">保存に失敗しました</string>
 
 
     <!-- FastingReceiver -->
@@ -964,6 +965,7 @@
     <!-- EditHeightScreen -->
     <string name="edit_height_title">身長を編集</string>
     <string name="edit_height_privacy_note">We only use your height to improve your experience and calorie estimation accuracy.</string>
+    <string name="edit_height_saved_locally_sync_failed">ネットワークエラーです。ローカルに保存しましたが、同期できませんでした。</string>
 
 
     <!-- EditAgeScreen -->
@@ -1011,6 +1013,10 @@
     <string name="edit_nutrition_sugar_goal">糖質 目標</string>
     <string name="edit_nutrition_sodium_goal">ナトリウム 目標</string>
     <string name="edit_nutrition_auto_generate_goals">目標を自動生成</string>
+    <string name="auto_generate_goals_success">生成しました！</string>
+    <string name="auto_generate_goals_failed">生成に失敗しました</string>
+    <string name="auto_generate_goals_failed_http_format">生成に失敗しました（%1$d）</string>
+    <string name="auto_generate_goals_network_error">ネットワークエラーです。もう一度お試しください。</string>
 
 
     <!-- RingColorsExplainedScreen -->

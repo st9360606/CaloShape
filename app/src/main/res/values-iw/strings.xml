@@ -611,6 +611,7 @@
 
     <string name="fasting_picker_title">הגדר את זמן ההתחלה שלך בצום</string>
     <string name="fasting_picker_subtitle">אנו נזכיר לך בשעה זו בכל יום כאשר חלון האכילה שלך מתחיל.</string>
+    <string name="fasting_plan_save_failed">השמירה נכשלה</string>
 
 
     <!-- FastingReceiver -->
@@ -965,6 +966,7 @@
     <!-- EditHeightScreen -->
     <string name="edit_height_title">ערוך את הגובה שלך</string>
     <string name="edit_height_privacy_note">אנו משתמשים בגובה שלך רק כדי לשפר את החוויה שלך ואת דיוק הערכת הקלוריות שלך.</string>
+    <string name="edit_height_saved_locally_sync_failed">שגיאת רשת. נשמר מקומית, אך הסנכרון נכשל.</string>
 
 
     <!-- EditAgeScreen -->
@@ -1012,6 +1014,10 @@
     <string name="edit_nutrition_sugar_goal">מטרת סוכר</string>
     <string name="edit_nutrition_sodium_goal">גול נתרן</string>
     <string name="edit_nutrition_auto_generate_goals">יצירת יעדים אוטומטית</string>
+    <string name="auto_generate_goals_success">נוצר בהצלחה!</string>
+    <string name="auto_generate_goals_failed">היצירה נכשלה</string>
+    <string name="auto_generate_goals_failed_http_format">היצירה נכשלה (%1$d)</string>
+    <string name="auto_generate_goals_network_error">שגיאת רשת. נסו שוב.</string>
 
 
     <!-- RingColorsExplainedScreen -->

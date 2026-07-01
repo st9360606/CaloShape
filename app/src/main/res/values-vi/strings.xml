@@ -611,6 +611,7 @@
 
     <string name="fasting_picker_title">Đặt thời gian bắt đầu nhịn ăn của bạn</string>
     <string name="fasting_picker_subtitle">Chúng tôi sẽ nhắc bạn vào thời điểm này mỗi ngày khi thời gian ăn uống của bạn bắt đầu.</string>
+    <string name="fasting_plan_save_failed">Lưu không thành công</string>
 
 
     <!-- FastingReceiver -->
@@ -963,6 +964,7 @@
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Chỉnh sửa chiều cao của bạn</string>
     <string name="edit_height_privacy_note">Chúng tôi chỉ sử dụng chiều cao của bạn để cải thiện trải nghiệm và độ chính xác ước tính lượng calo của bạn.</string>
+    <string name="edit_height_saved_locally_sync_failed">Lỗi mạng. Đã lưu trên thiết bị nhưng không thể đồng bộ.</string>
 
 
     <!-- EditAgeScreen -->
@@ -1010,6 +1012,10 @@
     <string name="edit_nutrition_sugar_goal">Mục tiêu đường</string>
     <string name="edit_nutrition_sodium_goal">mục tiêu natri</string>
     <string name="edit_nutrition_auto_generate_goals">Tự động tạo mục tiêu</string>
+    <string name="auto_generate_goals_success">Tạo thành công!</string>
+    <string name="auto_generate_goals_failed">Tạo không thành công</string>
+    <string name="auto_generate_goals_failed_http_format">Tạo không thành công (%1$d)</string>
+    <string name="auto_generate_goals_network_error">Lỗi mạng. Vui lòng thử lại.</string>
 
 
     <!-- RingColorsExplainedScreen -->

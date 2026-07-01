@@ -1,5 +1,6 @@
 package com.caloshape.app.ui.subscription
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.graphics.Paint
 import androidx.compose.animation.core.Animatable
@@ -11,6 +12,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -65,6 +67,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
@@ -677,8 +680,6 @@ private fun OnboardSubscriptionIntro(
     onClose: () -> Unit,
     onContinue: () -> Unit
 ) {
-    val heroGap = 32.dp
-
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -691,20 +692,12 @@ private fun OnboardSubscriptionIntro(
                 .padding(top = 110.dp, bottom = 170.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(
+            ResponsivePaywallTitle(
                 text = stringResource(R.string.subscription_intro_title),
-                color = Color.Black,
-                fontSize = 32.sp,
-                lineHeight = 38.sp,
-                fontWeight = FontWeight.ExtraBold,
-                textAlign = TextAlign.Center,
-                letterSpacing = (-0.6).sp,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 4.dp)
+                normalBottomSpacing = 32.dp,
+                compactBottomSpacing = 20.dp,
+                horizontalPadding = 4.dp
             )
-
-            Spacer(Modifier.height(heroGap))
 
             Box(
                 modifier = Modifier
@@ -746,6 +739,7 @@ private fun OnboardSubscriptionIntro(
     }
 }
 
+@SuppressLint("UnusedBoxWithConstraintsScope")
 @Composable
 private fun OnboardDiscountSpinScreen(
     onContinue: () -> Unit
@@ -839,28 +833,31 @@ private fun OnboardDiscountSpinScreen(
                 .padding(top = 110.dp, bottom = 170.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(
+            ResponsivePaywallTitle(
                 text = stringResource(R.string.subscription_spin_title),
-                color = Color.Black,
-                fontSize = 32.sp,
-                lineHeight = 38.sp,
-                fontWeight = FontWeight.ExtraBold,
-                textAlign = TextAlign.Center,
-                modifier = Modifier.fillMaxWidth()
+                normalBottomSpacing = 24.dp,
+                compactBottomSpacing = 16.dp
             )
 
-            Spacer(Modifier.height(36.dp))
-
-            Box(
-                contentAlignment = Alignment.Center,
+            BoxWithConstraints(
+                contentAlignment = Alignment.TopCenter,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(390.dp)
+                    .weight(1f)
             ) {
+                val wheelTopOffset = 40.dp
+                val statusGap = 28.dp
+                val statusAreaHeight = 80.dp
+                val wheelSize = minOf(
+                    maxWidth,
+                    (maxHeight - wheelTopOffset - statusAreaHeight).coerceAtLeast(0.dp),
+                    330.dp
+                )
+
                 Box(
                     modifier = Modifier
-                        .size(330.dp)
-                        .offset(y = 30.dp),
+                        .size(wheelSize)
+                        .offset(y = wheelTopOffset),
                     contentAlignment = Alignment.Center
                 ) {
                     DiscountWheelMock(
@@ -874,23 +871,25 @@ private fun OnboardDiscountSpinScreen(
                             .offset(y = (-38).dp)
                     )
                 }
-            }
 
-            Spacer(Modifier.height(24.dp))
-
-            if (spinStarted) {
-                Text(
-                    text = if (spinFinished) {
-                        unlockedDiscountText
-                    } else {
-                        stringResource(R.string.subscription_spinning_button)
-                    },
-                    color = if (spinFinished) Color(0xFFE45F69) else Color(0xFF71717A),
-                    fontSize = 22.sp,
-                    lineHeight = 26.sp,
-                    fontWeight = FontWeight.ExtraBold,
-                    textAlign = TextAlign.Center
-                )
+                if (spinStarted) {
+                    Text(
+                        text = if (spinFinished) {
+                            unlockedDiscountText
+                        } else {
+                            stringResource(R.string.subscription_spinning_button)
+                        },
+                        color = if (spinFinished) Color(0xFFE45F69) else Color(0xFF71717A),
+                        fontSize = 22.sp,
+                        lineHeight = 26.sp,
+                        fontWeight = FontWeight.ExtraBold,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier
+                            .align(Alignment.TopCenter)
+                            .offset(y = wheelTopOffset + wheelSize + statusGap)
+                            .fillMaxWidth()
+                    )
+                }
             }
         }
 
@@ -902,6 +901,41 @@ private fun OnboardDiscountSpinScreen(
         )
     }
 }
+
+@Composable
+private fun ResponsivePaywallTitle(
+    text: String,
+    normalBottomSpacing: Dp,
+    compactBottomSpacing: Dp,
+    horizontalPadding: Dp = 0.dp
+) {
+    var compact by remember(text) { mutableStateOf(false) }
+
+    Text(
+        text = text,
+        color = Color.Black,
+        fontSize = if (compact) 28.sp else 32.sp,
+        lineHeight = if (compact) 33.sp else 38.sp,
+        fontWeight = FontWeight.ExtraBold,
+        textAlign = TextAlign.Center,
+        letterSpacing = (-0.6).sp,
+        onTextLayout = { result ->
+            if (!compact && result.lineCount > 2) {
+                compact = true
+            }
+        },
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = horizontalPadding)
+    )
+
+    Spacer(
+        Modifier.height(
+            if (compact) compactBottomSpacing else normalBottomSpacing
+        )
+    )
+}
+
 @Composable
 private fun OnboardOneTimeOfferScreen(
     purchasing: Boolean,
@@ -1676,9 +1710,7 @@ private fun BoxScope.OnboardPaywallBottomCta(
             fontSize = 14.sp,
             lineHeight = 17.sp,
             textAlign = TextAlign.Center,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-            modifier = Modifier.height(17.dp)
+            modifier = Modifier.fillMaxWidth()
         )
     }
 }

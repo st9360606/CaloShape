@@ -12,7 +12,7 @@
     <string name="common_dash">—</string>
     <string name="common_error">错误</string>
 
-    <string name="common_save_success">保存成功</string>
+    <string name="common_save_success">保存成功 !</string>
     <string name="common_today">今天</string>
     <string name="common_yesterday">昨天</string>
     <string name="common_unavailable_dash">—</string>
@@ -613,6 +613,7 @@
 
     <string name="fasting_picker_title">设定你的禁食开始时间</string>
     <string name="fasting_picker_subtitle">我们会在每天进食视窗开始时提醒你。</string>
+    <string name="fasting_plan_save_failed">保存失败</string>
 
 
     <!-- FastingReceiver -->
@@ -961,6 +962,7 @@
     <!-- EditHeightScreen -->
     <string name="edit_height_title">编辑身高</string>
     <string name="edit_height_privacy_note">我们只会用你的身高来改善体验与热量估算准确度。</string>
+    <string name="edit_height_saved_locally_sync_failed">网络错误。已保存到本机，但同步失败。</string>
 
 
     <!-- EditAgeScreen -->
@@ -1008,6 +1010,10 @@
     <string name="edit_nutrition_sugar_goal">糖分目标</string>
     <string name="edit_nutrition_sodium_goal">钠目标</string>
     <string name="edit_nutrition_auto_generate_goals">自动产生目标</string>
+    <string name="auto_generate_goals_success">生成成功！</string>
+    <string name="auto_generate_goals_failed">生成失败</string>
+    <string name="auto_generate_goals_failed_http_format">生成失败（%1$d）</string>
+    <string name="auto_generate_goals_network_error">网络错误，请重试。</string>
 
 
     <!-- RingColorsExplainedScreen -->

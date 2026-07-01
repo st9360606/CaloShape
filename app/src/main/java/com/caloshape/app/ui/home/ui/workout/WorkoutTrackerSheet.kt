@@ -211,7 +211,9 @@ fun WorkoutTrackerSheet(
                             onClose = { vm.dismissDialogs(); onClose() } // ★ 用具名參數
                         )
                         Spacer(Modifier.height(4.dp))
-                        EstimatingContent()
+                        EstimatingContent(
+                            modifier = Modifier.weight(1f)
+                        )
                     }
 
                     is SheetMode.Result -> Column(Modifier.fillMaxSize()) {
@@ -569,10 +571,11 @@ private fun SimpleHeaderBar(
 
 @Composable
 fun EstimatingContent(
+    modifier: Modifier = Modifier,
     // ★ 新增：整組（進度環＋主文案）往上抬高的距離
     centerLift: Dp = 110.dp,
     // ★ 新增：底部提示文字往上抬高的距離
-    bottomLift: Dp = 20.dp,
+    bottomLift: Dp = 65.dp,
     // 其餘保持你的預設視覺
     ringDiameter: Dp = 128.dp,
     ringWidth: Dp = 12.dp,
@@ -583,7 +586,7 @@ fun EstimatingContent(
     val isDark = colors.background == CaloShapeColors.Dark.background
 
     Box(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .background(if (isDark) HomeCardStyles.Sheet.surface() else colors.surface),
         contentAlignment = Alignment.Center
@@ -619,9 +622,12 @@ fun EstimatingContent(
             text = stringResource(R.string.workout_tracker_do_not_close),
             color = if (isDark) HomeCardStyles.Text.secondary() else Black.copy(alpha = 0.70f),
             style = MaterialTheme.typography.bodyMedium,
+            textAlign = TextAlign.Center,
             modifier = Modifier
                 .align(Alignment.BottomCenter)
-                .padding(horizontal = 24.dp, vertical = 28.dp)
+                .fillMaxWidth()
+                .padding(horizontal = 24.dp)
+                .padding(bottom = 28.dp)
                 .offset(y = -bottomLift) // ★ 再上移一點
         )
     }

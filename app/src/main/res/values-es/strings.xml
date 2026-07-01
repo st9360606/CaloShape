@@ -612,6 +612,7 @@
 
     <string name="fasting_picker_title">Establece la hora de inicio del ayuno</string>
     <string name="fasting_picker_subtitle">We’ll remind you at this time each day when your eating window starts.</string>
+    <string name="fasting_plan_save_failed">Error al guardar</string>
 
 
     <!-- FastingReceiver -->
@@ -965,6 +966,7 @@
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Editar tu altura</string>
     <string name="edit_height_privacy_note">We only use your height to improve your experience and calorie estimation accuracy.</string>
+    <string name="edit_height_saved_locally_sync_failed">Error de red. Se guardó localmente, pero no se pudo sincronizar.</string>
 
 
     <!-- EditAgeScreen -->
@@ -1012,6 +1014,10 @@
     <string name="edit_nutrition_sugar_goal">Azúcar meta</string>
     <string name="edit_nutrition_sodium_goal">Sodio meta</string>
     <string name="edit_nutrition_auto_generate_goals">Generar metas automáticamente</string>
+    <string name="auto_generate_goals_success">¡Generado correctamente!</string>
+    <string name="auto_generate_goals_failed">Error al generar</string>
+    <string name="auto_generate_goals_failed_http_format">Error al generar (%1$d)</string>
+    <string name="auto_generate_goals_network_error">Error de red. Inténtalo de nuevo.</string>
 
 
     <!-- RingColorsExplainedScreen -->
