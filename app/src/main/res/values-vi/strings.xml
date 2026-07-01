@@ -799,8 +799,7 @@
 
     <!-- Settings : Payment issue dialog -->
     <string name="payment_issue_dialog_title">Giữ phí bảo hiểm của bạn luôn hoạt động</string>
-    <string name="payment_issue_dialog_body">Quyền truy cập cao cấp của bạn hiện vẫn hoạt động nhưng khoản thanh toán của bạn cần được chú ý.</string>
-    <string name="payment_issue_dialog_supporting_body">Cập nhật phương thức thanh toán Google Play của bạn để tránh mất tính năng quét AI và tính năng cao cấp.</string>
+    <string name="payment_issue_dialog_body">Quyền truy cập Premium của bạn vẫn đang hoạt động. Hãy cập nhật phương thức thanh toán Google Play để tránh gián đoạn.</string>
     <string name="payment_issue_dialog_update_payment">Cập nhật phương thức thanh toán</string>
     <string name="payment_issue_dialog_badge">Thanh toán cần chú ý</string>
     <string name="payment_issue_dialog_premium_access">Quyền truy cập cao cấp</string>

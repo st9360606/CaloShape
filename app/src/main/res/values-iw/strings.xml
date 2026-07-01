@@ -799,8 +799,7 @@
 
     <!-- Settings : Payment issue dialog -->
     <string name="payment_issue_dialog_title">שמור על הפרימיום שלך פעיל</string>
-    <string name="payment_issue_dialog_body">גישת הפרימיום שלך עדיין פעילה לעת עתה, אך התשלום שלך זקוק לתשומת לב.</string>
-    <string name="payment_issue_dialog_supporting_body">עדכן את אמצעי התשלום שלך ב-Google Play כדי למנוע אובדן של סריקת AI ותכונות פרימיום.</string>
+    <string name="payment_issue_dialog_body">הגישה שלך ל-Premium עדיין פעילה. יש לעדכן את אמצעי התשלום ב-Google Play כדי למנוע הפסקה בשירות.</string>
     <string name="payment_issue_dialog_update_payment">עדכן את אמצעי התשלום</string>
     <string name="payment_issue_dialog_badge">התשלום מצריך תשומת לב</string>
     <string name="payment_issue_dialog_premium_access">גישה פרימיום</string>

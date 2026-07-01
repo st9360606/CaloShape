@@ -800,8 +800,7 @@
 
     <!-- Settings : Payment issue dialog -->
     <string name="payment_issue_dialog_title">Premiumを有効に保つ</string>
-    <string name="payment_issue_dialog_body">Your premium access is still active for now, but your payment needs attention.</string>
-    <string name="payment_issue_dialog_supporting_body">Update your Google Play payment method to avoid losing AI スキャン and premium features.</string>
+    <string name="payment_issue_dialog_body">Premiumへのアクセスは現在も有効です。中断を避けるため、Google Playのお支払い方法を更新してください。</string>
     <string name="payment_issue_dialog_update_payment">支払い方法を更新</string>
     <string name="payment_issue_dialog_badge">支払いの確認が必要</string>
     <string name="payment_issue_dialog_premium_access">Premium access</string>

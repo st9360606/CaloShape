@@ -799,8 +799,7 @@
 
     <!-- Settings : Payment issue dialog -->
     <string name="payment_issue_dialog_title">Pidä palkkiosi aktiivisena</string>
-    <string name="payment_issue_dialog_body">Premium-käyttöoikeutesi on edelleen aktiivinen toistaiseksi, mutta maksusi vaatii huomiota.</string>
-    <string name="payment_issue_dialog_supporting_body">Päivitä Google Play -maksutapasi, jotta et menetä tekoälyskannausta ja premium-ominaisuuksia.</string>
+    <string name="payment_issue_dialog_body">Premium-käyttöoikeutesi on edelleen voimassa. Päivitä Google Play -maksutapasi välttääksesi käyttökatkoksen.</string>
     <string name="payment_issue_dialog_update_payment">Päivitä maksutapa</string>
     <string name="payment_issue_dialog_badge">Maksu vaatii huomiota</string>
     <string name="payment_issue_dialog_premium_access">Premium pääsy</string>

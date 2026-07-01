@@ -497,7 +497,6 @@ private fun SettingsContent(
     val restoreDialogMaybeLaterText = stringResource(R.string.common_maybe_later)
     val paymentIssueTitle = stringResource(R.string.payment_issue_dialog_title)
     val paymentIssueBody = stringResource(R.string.payment_issue_dialog_body)
-    val paymentIssueSupportingBody = stringResource(R.string.payment_issue_dialog_supporting_body)
     val paymentIssueUpdatePaymentText = stringResource(R.string.payment_issue_dialog_update_payment)
     val paymentIssueBadgeText = stringResource(R.string.payment_issue_dialog_badge)
     val paymentIssuePremiumAccessText = stringResource(R.string.payment_issue_dialog_premium_access)
@@ -543,7 +542,6 @@ private fun SettingsContent(
             visible = showPaymentIssueDialog,
             title = paymentIssueTitle,
             body = paymentIssueBody,
-            supportingBody = paymentIssueSupportingBody,
             updatePaymentText = paymentIssueUpdatePaymentText,
             maybeLaterText = restoreDialogMaybeLaterText,
             closeText = restoreDialogCloseText,

@@ -46,7 +46,6 @@ fun PaymentIssueDialog(
     visible: Boolean,
     title: String,
     body: String,
-    supportingBody: String,
     updatePaymentText: String,
     maybeLaterText: String,
     closeText: String,
@@ -120,27 +119,11 @@ fun PaymentIssueDialog(
                     Text(
                         text = body,
                         color = colors.textSecondary,
-                        fontSize = 15.sp,
-                        lineHeight = 21.sp,
+                        fontSize = 14.sp,
+                        lineHeight = 20.sp,
                         fontWeight = FontWeight.Medium,
                         textAlign = TextAlign.Center,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 4.dp)
-                    )
-
-                    Spacer(Modifier.height(8.dp))
-
-                    Text(
-                        text = supportingBody,
-                        color = colors.textMuted,
-                        fontSize = 13.sp,
-                        lineHeight = 18.sp,
-                        fontWeight = FontWeight.Medium,
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 4.dp)
+                        modifier = Modifier.fillMaxWidth()
                     )
 
                     Spacer(Modifier.height(18.dp))

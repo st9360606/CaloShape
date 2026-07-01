@@ -799,8 +799,7 @@
 
     <!-- Settings : Payment issue dialog -->
     <string name="payment_issue_dialog_title">รักษาพรีเมี่ยมของคุณให้ใช้งานได้</string>
-    <string name="payment_issue_dialog_body">การเข้าถึงแบบพรีเมียมของคุณยังคงใช้งานได้ในขณะนี้ แต่การชำระเงินของคุณต้องการการดำเนินการ</string>
-    <string name="payment_issue_dialog_supporting_body">อัปเดตวิธีการชำระเงิน Google Play ของคุณเพื่อหลีกเลี่ยงการสูญเสียการสแกน AI และฟีเจอร์ระดับพรีเมียม</string>
+    <string name="payment_issue_dialog_body">สิทธิ์การใช้งาน Premium ของคุณยังคงใช้งานได้ โปรดอัปเดตวิธีการชำระเงินใน Google Play เพื่อหลีกเลี่ยงการหยุดชะงัก</string>
     <string name="payment_issue_dialog_update_payment">อัปเดตวิธีการชำระเงิน</string>
     <string name="payment_issue_dialog_badge">การชำระเงินต้องการความสนใจ</string>
     <string name="payment_issue_dialog_premium_access">การเข้าถึงระดับพรีเมียม</string>

@@ -28,7 +28,8 @@ val LANGS: List<LangOption> = listOf(
     LangOption("id", "Bahasa Indonesia", "🇮🇩", "ID"),
     LangOption("hi", "हिन्दी", "🇮🇳", "HI"),
     LangOption("he", "עברית", "🇮🇱", "IL"),
-    LangOption("tr", "Türkçe", "🇹🇷", "TR")
+    LangOption("tr", "Türkçe", "🇹🇷", "TR"),
+    LangOption("ar", "العربية", "🇸🇦", "AR")
 )
 
 fun langShortLabelFromTag(tag: String): String {

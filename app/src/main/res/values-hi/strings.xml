@@ -799,8 +799,7 @@
 
     <!-- Settings : Payment issue dialog -->
     <string name="payment_issue_dialog_title">अपना प्रीमियम सक्रिय रखें</string>
-    <string name="payment_issue_dialog_body">आपकी प्रीमियम पहुंच अभी भी सक्रिय है, लेकिन आपके भुगतान पर ध्यान देने की आवश्यकता है।</string>
-    <string name="payment_issue_dialog_supporting_body">एआई स्कैन और प्रीमियम सुविधाओं को खोने से बचने के लिए अपनी Google Play भुगतान विधि को अपडेट करें।</string>
+    <string name="payment_issue_dialog_body">आपका प्रीमियम एक्सेस अभी भी सक्रिय है। सेवा में रुकावट से बचने के लिए अपनी Google Play भुगतान विधि अपडेट करें।</string>
     <string name="payment_issue_dialog_update_payment">भुगतान विधि अद्यतन करें</string>
     <string name="payment_issue_dialog_badge">भुगतान पर ध्यान देने की जरूरत है</string>
     <string name="payment_issue_dialog_premium_access">प्रीमियम पहुंच</string>

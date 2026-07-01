@@ -799,8 +799,7 @@
 
     <!-- Settings : Payment issue dialog -->
     <string name="payment_issue_dialog_title">保持 Premium 啟用</string>
-    <string name="payment_issue_dialog_body">你的 Premium 權限目前仍可使用，但付款方式需要處理。</string>
-    <string name="payment_issue_dialog_supporting_body">請更新 Google Play 付款方式，避免失去 AI 掃描與 Premium 功能。</string>
+    <string name="payment_issue_dialog_body">你的 Premium 權限目前仍可使用，請更新 Google Play 付款方式，避免服務中斷。</string>
     <string name="payment_issue_dialog_update_payment">更新付款方式</string>
     <string name="payment_issue_dialog_badge">付款需要處理</string>
     <string name="payment_issue_dialog_premium_access">Premium 權限</string>

@@ -799,8 +799,7 @@
 
     <!-- Settings : Payment issue dialog -->
     <string name="payment_issue_dialog_title">Håll din premium aktiv</string>
-    <string name="payment_issue_dialog_body">Din premiumåtkomst är fortfarande aktiv för tillfället, men din betalning behöver uppmärksammas.</string>
-    <string name="payment_issue_dialog_supporting_body">Uppdatera din Google Play-betalningsmetod för att undvika att förlora AI-skanning och premiumfunktioner.</string>
+    <string name="payment_issue_dialog_body">Din Premium-åtkomst är fortfarande aktiv. Uppdatera din betalningsmetod i Google Play för att undvika avbrott.</string>
     <string name="payment_issue_dialog_update_payment">Uppdatera betalningsmetod</string>
     <string name="payment_issue_dialog_badge">Betalning kräver uppmärksamhet</string>
     <string name="payment_issue_dialog_premium_access">Premium tillgång</string>

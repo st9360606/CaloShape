@@ -799,8 +799,7 @@
 
     <!-- Settings : Payment issue dialog -->
     <string name="payment_issue_dialog_title">Premium\'unuzu aktif tutun</string>
-    <string name="payment_issue_dialog_body">Premium erişiminiz şimdilik hâlâ etkin ancak ödemenizle ilgilenilmesi gerekiyor.</string>
-    <string name="payment_issue_dialog_supporting_body">Yapay zeka taramasını ve premium özellikleri kaybetmemek için Google Play ödeme yönteminizi güncelleyin.</string>
+    <string name="payment_issue_dialog_body">Premium erişiminiz hâlâ etkin. Kesintiyi önlemek için Google Play ödeme yönteminizi güncelleyin.</string>
     <string name="payment_issue_dialog_update_payment">Ödeme yöntemini güncelle</string>
     <string name="payment_issue_dialog_badge">Ödemeye dikkat edilmesi gerekiyor</string>
     <string name="payment_issue_dialog_premium_access">Premium erişim</string>

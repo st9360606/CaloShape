@@ -66,7 +66,9 @@ object LanguageManager {
         "iw" to "he",
         "iw-il" to "he",
         "tr" to "tr",
-        "tr-tr" to "tr"
+        "tr-tr" to "tr",
+        "ar" to "ar",
+        "ar-sa" to "ar"
     )
 
     fun normalizeTag(raw: String?): String = canonicalTagOrNull(raw) ?: DEFAULT_LANGUAGE_TAG
@@ -124,6 +126,7 @@ object LanguageManager {
             "hi" -> "hi"
             "he", "iw" -> "he"
             "tr" -> "tr"
+            "ar" -> "ar"
             else -> null
         }
     }

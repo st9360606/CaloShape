@@ -799,8 +799,7 @@
 
     <!-- Settings : Payment issue dialog -->
     <string name="payment_issue_dialog_title">Utrzymuj aktywną subskrypcję</string>
-    <string name="payment_issue_dialog_body">Twój dostęp premium jest na razie nadal aktywny, ale Twoja płatność wymaga uwagi.</string>
-    <string name="payment_issue_dialog_supporting_body">Zaktualizuj metodę płatności w Google Play, aby uniknąć utraty skanowania AI i funkcji premium.</string>
+    <string name="payment_issue_dialog_body">Twój dostęp Premium jest nadal aktywny. Zaktualizuj metodę płatności w Google Play, aby uniknąć przerwy w dostępie.</string>
     <string name="payment_issue_dialog_update_payment">Zaktualizuj metodę płatności</string>
     <string name="payment_issue_dialog_badge">Płatność wymaga uwagi</string>
     <string name="payment_issue_dialog_premium_access">Dostęp premium</string>

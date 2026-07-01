@@ -22,7 +22,8 @@ class LanguageManagerTest {
             "es-MX" to "es-MX",
             "he-IL" to "he",
             "iw-IL" to "he",
-            "tr-TR" to "tr"
+            "tr-TR" to "tr",
+            "ar-SA" to "ar"
         )
 
         expectedTags.forEach { (input, expected) ->

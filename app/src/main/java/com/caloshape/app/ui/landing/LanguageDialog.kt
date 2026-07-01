@@ -71,7 +71,8 @@ val LANGS = listOf(
     LangItem("Bahasa Indonesia", "id", "🇮🇩"),
     LangItem("हिन्दी", "hi", "🇮🇳"),
     LangItem("עברית", "he", "🇮🇱"),
-    LangItem("Türkçe", "tr", "🇹🇷")
+    LangItem("Türkçe", "tr", "🇹🇷"),
+    LangItem("العربية", "ar", "🇸🇦")
 )
 
 @Composable
