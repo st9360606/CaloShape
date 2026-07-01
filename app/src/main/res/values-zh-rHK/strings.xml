@@ -158,7 +158,7 @@
 
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">你的目標是什麼呢？</string>
-    <string name="onboard_goal_subtitle">這有助于為您的熱量攝入制定計畫。</string>
+    <string name="onboard_goal_subtitle">這有助於為你的熱量攝取制定計畫。</string>
     <string name="goal_lose">減重</string>
     <string name="goal_maintain">維持體重</string>
     <string name="goal_gain">增重</string>
@@ -175,7 +175,6 @@
     <string name="onboard_weight_loss_comparison_title">使用CaloShape AI的\n減重效果是自己減重的\n三倍</string>
     <string name="onboard_weight_loss_comparison_without_ai">沒有\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">使用\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_twenty_percent">20%</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
     <string name="onboard_weight_loss_comparison_caption">CaloShape AI 讓一切變得簡單並\n督促你履行承諾</string>
 
@@ -218,10 +217,10 @@
 
     <!-- Onboarding: HealthPlanScreen -->
     <string name="plan_cta_start">開始使用</string>
-    <string name="plan_title_congrats">恭喜!</string>
+    <string name="plan_title_congrats">恭喜！</string>
     <string name="plan_subtitle_ready">你的個人健康計畫已完成！</string>
-    <string name="plan_disclaimer">來源請看下方「 查看參考來源 」</string>
-    <string name="plan_unit_kcal_day">kcal / day</string>
+    <string name="plan_disclaimer">來源請看下方「查看參考來源」</string>
+    <string name="plan_unit_kcal_day">kcal / 天</string>
 
     <string name="plan_macros_proteins">蛋白質</string>
     <string name="plan_macros_carbs">碳水</string>
@@ -341,23 +340,23 @@
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">卡路里 剩餘</string>
-    <string name="home_calories_eaten_label">卡路里 已攝入</string>
+    <string name="home_calories_eaten_label">卡路里 已攝取</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">蛋白質 剩餘</string>
-    <string name="home_protein_eaten_label">蛋白質 已攝入</string>
+    <string name="home_protein_eaten_label">蛋白質 已攝取</string>
     <string name="home_carbs_goal_label">碳水 剩餘</string>
-    <string name="home_carbs_eaten_label">碳水 已攝入</string>
+    <string name="home_carbs_eaten_label">碳水 已攝取</string>
     <string name="home_fats_goal_label">脂肪 剩餘</string>
-    <string name="home_fats_eaten_label">脂肪 已攝入</string>
+    <string name="home_fats_eaten_label">脂肪 已攝取</string>
     <string name="home_fiber_goal_label">纖維 剩餘</string>
-    <string name="home_fiber_eaten_label">纖維 已攝入</string>
-    <string name="home_sugar_goal_label">糖 剩餘</string>
-    <string name="home_sugar_eaten_label">糖 已攝入</string>
+    <string name="home_fiber_eaten_label">纖維 已攝取</string>
+    <string name="home_sugar_goal_label">糖分 剩餘</string>
+    <string name="home_sugar_eaten_label">糖分 已攝取</string>
     <string name="home_sodium_goal_label">鈉 剩餘</string>
-    <string name="home_sodium_eaten_label">鈉 已攝入</string>
+    <string name="home_sodium_eaten_label">鈉 已攝取</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
@@ -857,7 +856,7 @@
 
     <!-- Settings: Widget Guide -->
     <string name="settings_widgets_title">桌面小工具</string>
-    <string name="settings_widgets_how_to_add">如何添加？</string>
+    <string name="settings_widgets_how_to_add">如何新增？</string>
     <string name="log_your_food">記錄你的食物</string>
 
     <string name="settings_calories_goal_label">卡路里 剩餘</string>
@@ -1052,7 +1051,7 @@
 
 
     <!-- WidgetGuideScreen -->
-    <string name="widget_guide_title">添加小工具</string>
+    <string name="widget_guide_title">新增小工具</string>
     <string name="widget_guide_hero_title">把 CaloShape 加到手機桌面</string>
     <string name="widget_guide_hero_body">不用打開 App，也能快速查看卡路里、三大營養素與常用操作。</string>
     <string name="widget_guide_steps_title">依照以下步驟操作</string>
@@ -1074,7 +1073,6 @@
     <!-- CaloShapeNavHost -->
     <string name="url_terms">https://caloshape.com/terms</string>
     <string name="url_privacy">https://caloshape.com/privacy</string>
-    <string name="url_support_email">mailto:support@caloshape.com?subject=Support%20Request</string>
     <string name="camera_manual_entry_not_ready">手動輸入尚未完成，暫時改用標籤辨識。</string>
 
 

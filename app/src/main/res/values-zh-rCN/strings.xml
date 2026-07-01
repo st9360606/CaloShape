@@ -44,15 +44,15 @@
     <string name="err_manual_title">改用手动输入</string>
     <string name="err_manual_msg">你也可以直接手动输入食物与营养标签数据。</string>
 
-    <string name="err_support_title">请联络客服</string>
-    <string name="err_support_msg">若问题持续发生，请联络客服协助。</string>
+    <string name="err_support_title">请联系客服</string>
+    <string name="err_support_msg">若问题持续发生，请联系客服协助。</string>
 
     <string name="cta_try_label">拍食品标签</string>
     <string name="cta_enter_manually">手动输入</string>
 
     <string name="cta_check_network">检查网络</string>
     <string name="cta_retake">重拍</string>
-    <string name="cta_contact_support">联络客服</string>
+    <string name="cta_contact_support">联系客服</string>
     <string name="cta_rescan_barcode">重新扫描条形码</string>
 
 
@@ -68,7 +68,7 @@
 
 
     <!-- RequireSignInScreen -->
-    <string name="auth_sign_in_account_title">登录账户</string>
+    <string name="auth_sign_in_account_title">登录账号</string>
     <string name="auth_sign_in_with_google">使用 Google 登录</string>
     <string name="auth_signin_with_email">使用 Email 继续</string>
 
@@ -87,7 +87,7 @@
 
 
     <!-- SignInSheetHost 控制 Sheet 是否显示、处理状态、接外部 callback -->
-    <string name="err_google_no_account_hint">建议先到「设定 → 账号」新增 Google 账号，再重新尝试</string>
+    <string name="err_google_no_account_hint">建议先到「设置 → 账号」新增 Google 账号，再重新尝试</string>
     <string name="err_google_signin_failed">Google 登录失败</string>
 
 
@@ -114,7 +114,7 @@
 
     <!-- Onboarding: GenderSelectionScreen -->
     <string name="onboard_gender_title">选择你的性别</string>
-    <string name="onboard_gender_subtitle">这将用于校准你的自订计划。</string>
+    <string name="onboard_gender_subtitle">这将用于校准你的自定义计划。</string>
     <string name="onboard_male">男</string>
     <string name="onboard_female">女</string>
     <string name="onboard_other">其他</string>
@@ -132,18 +132,18 @@
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">你的身高是多少？</string>
     <string name="onboard_height_subtitle">我们只会用你的资料来改善使用体验与热量估算准确度。</string>
-    <string name="onboard_height_hint">这将用于校准你的自订计划。</string>
+    <string name="onboard_height_hint">这将用于校准你的自定义计划。</string>
 
 
     <!-- Onboarding: WeightSelectionScreen  -->
     <string name="onboard_weight_title">你的当前体重是多少？</string>
     <string name="onboard_weight_subtitle">我们仅使用您的数据来改善体验并提升卡路里估算准确度。</string>
-    <string name="onboard_weight_hint">这将用于校准你的自订计划。</string>
+    <string name="onboard_weight_hint">这将用于校准你的自定义计划。</string>
 
 
     <!-- Onboarding: ExerciseFrequencyScreen  -->
     <string name="onboard_ex_freq_title">你平均每周运动几次？</string>
-    <string name="onboard_ex_freq_subtitle">这将用于校准你的自订计划。</string>
+    <string name="onboard_ex_freq_subtitle">这将用于校准你的自定义计划。</string>
     <string name="ex_freq_0_title">0</string>
     <string name="ex_freq_0_sub">几乎不运动</string>
     <string name="ex_freq_1_3_title">1–3</string>
@@ -158,7 +158,7 @@
 
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">你的目标是什么呢？</string>
-    <string name="onboard_goal_subtitle">这有助于为您的热量摄入制定计划。</string>
+    <string name="onboard_goal_subtitle">这有助于为你的热量摄取制定计划。</string>
     <string name="goal_lose">减重</string>
     <string name="goal_maintain">维持体重</string>
     <string name="goal_gain">增重</string>
@@ -168,14 +168,13 @@
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">你的目标体重是多少？</string>
     <string name="onboard_goal_weight_subtitle">我们会根据这个目标，帮你规划更适合的每日热量建议。</string>
-    <string name="onboard_goal_weight_hint">这将用于校准你的自订计划。</string>
+    <string name="onboard_goal_weight_hint">这将用于校准你的自定义计划。</string>
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
     <string name="onboard_weight_loss_comparison_title">使用CaloShape AI的\n减重效果是自己减重的\n三倍</string>
     <string name="onboard_weight_loss_comparison_without_ai">没有\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">使用\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_twenty_percent">20%</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
     <string name="onboard_weight_loss_comparison_caption">CaloShape AI 让一切变得简单并\n督促你履行承诺</string>
 
@@ -218,9 +217,9 @@
 
     <!-- Onboarding: HealthPlanScreen -->
     <string name="plan_cta_start">开始使用</string>
-    <string name="plan_title_congrats">恭喜!</string>
+    <string name="plan_title_congrats">恭喜！</string>
     <string name="plan_subtitle_ready">你的个人健康计划已完成！</string>
-    <string name="plan_disclaimer">来源请看下方「 查看参考来源 」</string>
+    <string name="plan_disclaimer">来源请看下方「查看参考来源」</string>
     <string name="plan_unit_kcal_day">kcal / 天</string>
 
     <string name="plan_macros_proteins">蛋白质</string>
@@ -244,7 +243,7 @@
 
     <!-- Onboarding: OnboardReferralCodeScreen -->
     <string name="onboard_referral_code_input">输入推荐码（可选）</string>
-    <string name="onboard_referral_code_subtitle">您可以跳过此步骤</string>
+    <string name="onboard_referral_code_subtitle">你可以跳过此步骤</string>
     <string name="onboard_referral_code_input_label">推荐码</string>
     <string name="onboard_referral_code_placeholder">推荐码</string>
     <string name="onboard_referral_code_submit">提交</string>
@@ -280,7 +279,7 @@
     <string name="subscription_error_purchase_failed">购买失败，请再试一次。</string>
     <string name="subscription_error_purchase_pending">付款正在处理中，Google Play 确认后即可使用 Premium 功能。</string>
     <string name="subscription_error_trial_eligibility_failed">无法确认试用资格，请再试一次。</string>
-    <string name="restore_subscription_dialog_title">侦测到可恢复的订阅</string>
+    <string name="restore_subscription_dialog_title">检测到可恢复的订阅</string>
     <string name="settings_restore_subscription">恢复订阅</string>
     <string name="restore_subscription_dialog_restoring">恢复中…</string>
     <string name="common_maybe_later">稍后再说</string>
@@ -341,23 +340,23 @@
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">卡路里 剩余</string>
-    <string name="home_calories_eaten_label">卡路里 已摄入</string>
+    <string name="home_calories_eaten_label">卡路里 已摄取</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">蛋白质 剩余</string>
-    <string name="home_protein_eaten_label">蛋白质 已摄入</string>
+    <string name="home_protein_eaten_label">蛋白质 已摄取</string>
     <string name="home_carbs_goal_label">碳水 剩余</string>
-    <string name="home_carbs_eaten_label">碳水 已摄入</string>
+    <string name="home_carbs_eaten_label">碳水 已摄取</string>
     <string name="home_fats_goal_label">脂肪 剩余</string>
-    <string name="home_fats_eaten_label">脂肪 已摄入</string>
+    <string name="home_fats_eaten_label">脂肪 已摄取</string>
     <string name="home_fiber_goal_label">纤维 剩余</string>
-    <string name="home_fiber_eaten_label">纤维 已摄入</string>
-    <string name="home_sugar_goal_label">糖 剩余</string>
-    <string name="home_sugar_eaten_label">糖 已摄入</string>
+    <string name="home_fiber_eaten_label">纤维 已摄取</string>
+    <string name="home_sugar_goal_label">糖分 剩余</string>
+    <string name="home_sugar_eaten_label">糖分 已摄取</string>
     <string name="home_sodium_goal_label">钠 剩余</string>
-    <string name="home_sodium_eaten_label">钠 已摄入</string>
+    <string name="home_sodium_eaten_label">钠 已摄取</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
@@ -378,7 +377,7 @@
     <string name="steps_status_hc_not_installed">未安装</string>
     <string name="steps_status_hc_unavailable">无法使用</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
-    <string name="steps_secondary_no_data_yet">尚无资料</string>
+    <string name="steps_secondary_no_data_yet">暂无数据</string>
     <string name="steps_secondary_connect">连接</string>
     <string name="steps_hint_connect_google_health">连结 Google Health 取得步数资料</string>
     <string name="steps_hint_install_health_connect">安装 Health Connect 取得步数资料</string>
@@ -415,9 +414,9 @@
     <string name="progress_tab_last_week">上周</string>
     <string name="progress_tab_two_weeks_ago">两周前</string>
     <string name="progress_tab_three_weeks_ago">三周前</string>
-    <string name="progress_error_load_failed">载入失败</string>
-    <string name="workout_chart_error_load_failed">载入运动图表失败</string>
-    <string name="water_chart_error_load_failed">载入喝水图表失败</string>
+    <string name="progress_error_load_failed">加载失败</string>
+    <string name="workout_chart_error_load_failed">加载运动图表失败</string>
+    <string name="water_chart_error_load_failed">加载喝水图表失败</string>
 
 
     <!-- =========================
@@ -440,7 +439,7 @@
     <string name="bmi_info_title">什么是 BMI？</string>
     <string name="bmi_info_subtitle">身体质量指数</string>
     <string name="bmi_info_formula_title">计算公式</string>
-    <string name="bmi_info_formula_value">BMI = 体重（公斤）/ 身高（公尺）的平方</string>
+    <string name="bmi_info_formula_value">BMI = 体重（公斤）/ 身高（米）的平方</string>
     <string name="bmi_info_meaning_title">它代表什么</string>
     <string name="bmi_info_meaning_body">BMI 可用来大致判断你的体重是否落在相对健康的范围内。</string>
     <string name="bmi_info_note_title">请注意</string>
@@ -508,7 +507,7 @@
     <string name="workout_chart_goal">目标</string>
     <string name="workout_chart_value_kcal">%1$d kcal</string>
     <string name="workout_chart_7day_avg">7 日平均</string>
-    <string name="workout_chart_loading">载入中…</string>
+    <string name="workout_chart_loading">加载中…</string>
     <string name="workout_legend_burned">运动消耗量</string>
     <string name="workout_legend_daily_goal">每日目标</string>
     <string name="workout_tooltip_burned">消耗</string>
@@ -525,7 +524,7 @@
     <string name="water_chart_goal">目标</string>
     <string name="water_chart_value_ml">%1$s ml</string>
     <string name="water_chart_7day_avg">7 日平均</string>
-    <string name="water_chart_loading">载入中…</string>
+    <string name="water_chart_loading">加载中…</string>
     <string name="water_legend_intake">摄取量</string>
     <string name="water_legend_daily_goal">每日目标</string>
     <string name="water_tooltip_intake">摄取</string>
@@ -541,9 +540,9 @@
     <string name="progress_average_tab_60_days">60 天</string>
 
     <string name="progress_average_overview_title">平均总览</string>
-    <string name="progress_average_overview_subtitle">不含当天，只平均有资料的日期。</string>
+    <string name="progress_average_overview_subtitle">不含当天，只平均有数据的日期。</string>
     <string name="progress_average_days_badge">%1$d 日平均</string>
-    <string name="progress_average_loading">正在载入平均资料…</string>
+    <string name="progress_average_loading">正在加载平均数据…</string>
     <string name="progress_average_total_calories">总卡路里</string>
     <string name="progress_average_protein">蛋白质</string>
     <string name="progress_average_carbs">碳水</string>
@@ -779,7 +778,7 @@
 
 
     <!-- Settings -->
-    <string name="settings_title">设定</string>
+    <string name="settings_title">设置</string>
     <string name="settings_choose_language">选择语言</string>
     <string name="delete_account_dialog_title">删除账号？</string>
     <string name="delete_account_dialog_body">您确定要删除账号吗？此操作将永久删除您在 CaloShape 中的资料，包括饮食纪录、体重纪录与相关设定，删除后将无法复原。</string>
@@ -789,13 +788,13 @@
     <string name="restore_subscription_dialog_payment_issue_title">订阅已恢复，但付款仍有问题</string>
     <string name="restore_subscription_dialog_no_active_title">找不到有效的 Google Play 订阅</string>
     <string name="restore_subscription_dialog_failed_title">恢复失败</string>
-    <string name="restore_subscription_dialog_bound_title">此订阅已连结其他账号</string>
+    <string name="restore_subscription_dialog_bound_title">此订阅已绑定其他账号</string>
     <string name="restore_subscription_dialog_success_body">你的订阅已恢复到目前登录的 CaloShape 账号。</string>
     <string name="restore_subscription_dialog_payment_issue_body">你的订阅已绑定到目前登录的 CaloShape 账号，但 Google Play 仍回报付款异常，请到 Google Play 更新付款方式，以维持订阅有效。</string>
     <string name="restore_subscription_dialog_no_active_body">目前的 Google Play 账号没有可恢复的 CaloShape 订阅。请确认使用购买时的 Google Play 账号后再试。</string>
     <string name="restore_subscription_dialog_failed_body">目前无法恢复订阅，请确认网络连接后，稍后再从设定页重试。</string>
-    <string name="restore_subscription_dialog_bound_body">这笔 Google Play 订阅已连结到另一个 CaloShape 账号，请登录原账号使用订阅；若无法登录，请联络客服。</string>
-    <string name="restore_subscription_dialog_body">我们在目前这台装置使用的 Google Play 账号中，侦测到 CaloShape 仍有有效的订阅或试用。你可以将这笔订阅恢复到目前登录的 CaloShape 账号。</string>
+    <string name="restore_subscription_dialog_bound_body">这笔 Google Play 订阅已绑定到另一个 CaloShape 账号，请登录原账号使用订阅；若无法登录，请联系客服。</string>
+    <string name="restore_subscription_dialog_body">我们在目前这台设备使用的 Google Play 账号中，检测到 CaloShape 仍有有效的订阅或试用。你可以将这笔订阅恢复到目前登录的 CaloShape 账号。</string>
 
     <!-- Settings : Payment issue dialog -->
     <string name="payment_issue_dialog_title">保持 Premium 启用</string>
@@ -818,7 +817,7 @@
     <string name="settings_terms_conditions">条款与条件</string>
     <string name="settings_privacy_policy">隐私政策</string>
     <string name="settings_support_email">客服邮箱</string>
-    <string name="settings_delete_account">删除账户？</string>
+    <string name="settings_delete_account">删除账号？</string>
     <string name="settings_version">版本 %1$s</string>
 
 
@@ -849,8 +848,8 @@
     <string name="settings_appearance_dark">深色</string>
     <string name="settings_appearance_mode_title">选择外观</string>
     <string name="settings_appearance_light_description">维持目前明亮、干净的画面风格。</string>
-    <string name="settings_appearance_dark_description">使用较深、更柔和的介面，适合日常追踪。</string>
-    <string name="settings_preferences">偏好设定</string>
+    <string name="settings_appearance_dark_description">使用较深、更柔和的界面，适合日常追踪。</string>
+    <string name="settings_preferences">偏好设置</string>
     <string name="settings_appearance">外观</string>
 
     <string name="settings_language">语言</string>
@@ -932,8 +931,8 @@
     <string name="record_weight_camera_permission_required">需要相机权限。</string>
     <string name="record_weight_camera_preview_unavailable">相机仅可在运行中的 App 使用，预览无法使用。</string>
     <string name="record_weight_camera_screen_unavailable">此画面目前无法使用相机。</string>
-    <string name="record_weight_no_camera_app_found">此装置找不到相机 App。</string>
-    <string name="record_weight_enable_camera_permission_settings">请在设定中开启相机权限。</string>
+    <string name="record_weight_no_camera_app_found">此设备找不到相机 App。</string>
+    <string name="record_weight_enable_camera_permission_settings">请在设置中开启相机权限。</string>
 
     <string name="record_weight_title">记录体重</string>
     <string name="record_weight_save_failed">保存失败</string>
@@ -1043,8 +1042,8 @@
     <string name="notification_inbox_status_read">已读</string>
     <string name="notification_inbox_status_unread">未读</string>
 
-    <string name="notification_inbox_loading_title">正在载入通知</string>
-    <string name="notification_inbox_loading">正在载入通知…</string>
+    <string name="notification_inbox_loading_title">正在加载通知</string>
+    <string name="notification_inbox_loading">正在加载通知…</string>
     <string name="notification_inbox_empty_title">目前没有通知</string>
     <string name="notification_inbox_empty_body">平台通知会显示在这里</string>
     <string name="notification_inbox_error_title">无法载入通知</string>
@@ -1053,19 +1052,19 @@
 
     <!-- WidgetGuideScreen -->
     <string name="widget_guide_title">添加小组件</string>
-    <string name="widget_guide_hero_title">把 CaloShape 加到手机桌面</string>
+    <string name="widget_guide_hero_title">把 CaloShape 添加到手机桌面</string>
     <string name="widget_guide_hero_body">不用打开 App，也能快速查看卡路里、宏量营养素与常用操作。</string>
     <string name="widget_guide_steps_title">依照以下步骤操作</string>
     <string name="widget_guide_step_1_title">长按手机桌面</string>
-    <string name="widget_guide_step_1_body">在手机桌面的空白处长按，直到桌面选单出现。</string>
-    <string name="widget_guide_step_2_title">点选小组件</string>
-    <string name="widget_guide_step_2_body">在桌面选单中选择「小组件」或 Widgets。</string>
+    <string name="widget_guide_step_1_body">长按手机桌面的空白处，直到桌面菜单出现。</string>
+    <string name="widget_guide_step_2_title">点击小组件</string>
+    <string name="widget_guide_step_2_body">在桌面菜单中选择「小组件」或 Widgets。</string>
     <string name="widget_guide_step_3_title">找到 CaloShape AI</string>
-    <string name="widget_guide_step_3_body">向下滑动或搜寻 CaloShape AI，然后打开可用的小组件列表。</string>
-    <string name="widget_guide_step_4_title">拖曳小组件到桌面</string>
+    <string name="widget_guide_step_3_body">向下滑动或搜索 CaloShape AI，然后打开可用的小组件列表。</string>
+    <string name="widget_guide_step_4_title">拖动小组件到桌面</string>
     <string name="widget_guide_step_4_body">长按想使用的小组件，拖到想放的位置后放开手指。</string>
-    <string name="widget_guide_tip_title">找不到小组件选单？</string>
-    <string name="widget_guide_tip_body">不同手机品牌或桌面启动器名称可能不同。可以试试「主画面设定」、长按 CaloShape AI App 图示，或在桌面启动器中搜寻小组件。</string>
+    <string name="widget_guide_tip_title">找不到小组件菜单？</string>
+    <string name="widget_guide_tip_body">不同手机品牌或桌面启动器名称可能不同。可以试试「主屏幕设置」、长按 CaloShape AI App 图标，或在桌面启动器中搜索小组件。</string>
     <string name="widget_guide_done">我知道了</string>
     <string name="widget_guide_mock_home">首页</string>
     <string name="widget_guide_mock_widgets">小组件</string>
@@ -1074,7 +1073,6 @@
     <!-- CaloShapeNavHost -->
     <string name="url_terms">https://caloshape.com/terms</string>
     <string name="url_privacy">https://caloshape.com/privacy</string>
-    <string name="url_support_email">mailto:support@caloshape.com?subject=Support%20Request</string>
     <string name="camera_manual_entry_not_ready">手动输入尚未完成，暂时改用标签辨识。</string>
 
 

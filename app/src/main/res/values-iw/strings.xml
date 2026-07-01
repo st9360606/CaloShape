@@ -173,7 +173,6 @@
     <string name="onboard_weight_loss_comparison_title">שימוש ב-CaloShape AI יכול לשלש את יעילות הירידה במשקל\n</string>
     <string name="onboard_weight_loss_comparison_without_ai">ללא\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">עם\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_twenty_percent">20%</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
     <string name="onboard_weight_loss_comparison_caption">CaloShape AI עושה הכל פשוט\nושומר אותך אחראי</string>
 
@@ -1078,7 +1077,6 @@
     <!-- CaloShapeNavHost -->
     <string name="url_terms">https://caloshape.com/terms</string>
     <string name="url_privacy">https://caloshape.com/privacy</string>
-    <string name="url_support_email">mailto:support@caloshape.com?subject=Support%20Request</string>
     <string name="camera_manual_entry_not_ready">הזנה ידנית עדיין לא מוכנה. עובר לסריקת תוויות לעת עתה.</string>
 
 

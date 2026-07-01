@@ -173,7 +173,6 @@
     <string name="onboard_weight_loss_comparison_title">Sử dụng CaloShape AI có thể tăng gấp ba lần trọng lượng của bạn\nhiệu quả giảm cân</string>
     <string name="onboard_weight_loss_comparison_without_ai">Không có\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">Với\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_twenty_percent">20%</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
     <string name="onboard_weight_loss_comparison_caption">CaloShape AI khiến mọi thứ trở nên đơn giản\nvà giúp bạn có trách nhiệm</string>
 
@@ -1076,7 +1075,6 @@
     <!-- CaloShapeNavHost -->
     <string name="url_terms">https://caloshape.com/terms</string>
     <string name="url_privacy">https://caloshape.com/privacy</string>
-    <string name="url_support_email">mailto:support@caloshape.com?subject=Support%20Request</string>
     <string name="camera_manual_entry_not_ready">Việc nhập thủ công vẫn chưa sẵn sàng. Hiện đang chuyển sang quét nhãn.</string>
 
 
