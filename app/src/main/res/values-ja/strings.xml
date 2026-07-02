@@ -60,9 +60,9 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">写真を撮るだけで、kcalがわかります。</string>
+    <string name="landing_title">写真を撮るだけで、カロリーがわかる。</string>
     <string name="choose_language">言語を選択</string>
-    <string name="cta_get_started">始める</string>
+    <string name="cta_get_started">はじめる</string>
     <string name="cta_login_prefix">すでにアカウントをお持ちですか？</string>
     <string name="cta_login">サインイン</string>
 
@@ -125,7 +125,7 @@
 
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">年齢はいくつですか？</string>
-    <string name="onboard_age_subtitle">年齢は体験とkcal推定精度の向上にのみ使用します。</string>
+    <string name="onboard_age_subtitle">年齢は体験とカロリー推定精度の向上にのみ使用します。</string>
 
 
     <!-- Onboarding: HeightSelectionScreen -->
@@ -186,7 +186,7 @@
     <string name="onboard_notif_title">毎食を大切に！</string>
     <string name="onboard_notif_subtitle">食事記録のやさしいリマインダーを有効にすると、kcal、マクロ、進捗を目標に保ちやすくなります。うっかり忘れても、タイミングのよい通知ですぐに戻れます。</string>
     <string name="onboard_allow_notifications_cta">通知を許可</string>
-    <string name="notification_mock_app_title">AI kcal カウンター</string>
+    <string name="notification_mock_app_title">AIカロリーカウンター</string>
     <string name="onboard_notif_title_got_a_sec">食事は自動では記録されません 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">kcalとマクロを目標内に保つため、この食事を記録しましょう。</string>
 
@@ -260,7 +260,7 @@
     <string name="onboard_referral_code_error_invalid">この紹介コードは見つかりませんでした。</string>
     <string name="onboard_referral_code_error_self_referral">自分の紹介コードは使用できません。</string>
     <string name="onboard_referral_code_error_already_claimed">このアカウントではすでに紹介コードが適用されています。</string>
-    <string name="onboard_referral_code_error_already_subscribed">購読中のアカウントでは紹介コードを適用できません。</string>
+    <string name="onboard_referral_code_error_already_subscribed">定期購入中のアカウントでは紹介コードを適用できません。</string>
     <string name="onboard_referral_code_error_disabled">紹介機能は一時的に利用できません。</string>
     <string name="onboard_referral_code_error_risk">現在、紹介コードを適用できません。</string>
     <string name="onboard_referral_code_error_network">現在適用できません。後でもう一度お試しください。</string>
@@ -276,38 +276,38 @@
 
 
     <!-- Onboarding: OnboardSubscriptionIntro -->
-    <string name="subscription_intro_title">CaloShape AIを解除して
+    <string name="subscription_intro_title">CaloShape AIをアンロックして
 目標達成を早めましょう。</string>
     <string name="subscription_intro_helper_format">年額わずか%1$s（%2$s）</string>
     <string name="subscription_start_three_day_free_trial">3日間無料で試す</string>
     <string name="subscription_three_day_trial_helper_format">年額わずか%1$s（%2$s/月）</string>
-    <string name="subscription_already_owned_restore_required">Google Playアカウントにはすでに有効なCaloShapeサブスクリプションがあります。Premium機能を使用する前に、このCaloShapeアカウントへ復元してください。</string>
+    <string name="subscription_already_owned_restore_required">Google Playアカウントには有効なCaloShapeの定期購入があります。Premium機能を使用する前に、このCaloShapeアカウントへ復元してください。</string>
     <string name="subscription_error_no_active_purchase">有効な購入が見つかりません。</string>
     <string name="subscription_error_restore_failed">購入を復元できませんでした。もう一度お試しください。</string>
     <string name="subscription_error_purchase_failed">購入に失敗しました。もう一度お試しください。</string>
     <string name="subscription_error_purchase_pending">お支払いを処理中です。Google Playで購入が確認されるとPremiumアクセスが利用可能になります。</string>
     <string name="subscription_error_trial_eligibility_failed">トライアルの利用可否を確認できません。もう一度お試しください。</string>
-    <string name="restore_subscription_dialog_title">サブスクリプションが見つかりました</string>
-    <string name="settings_restore_subscription">サブスクリプションを復元</string>
+    <string name="restore_subscription_dialog_title">定期購入が見つかりました</string>
+    <string name="settings_restore_subscription">定期購入を復元</string>
     <string name="restore_subscription_dialog_restoring">復元中…</string>
     <string name="common_maybe_later">あとで</string>
 
 
     <!-- Onboarding: OnboardDiscountSpinScreen-->
     <string name="subscription_spin_title">スピンして
-限定割引を解除</string>
+限定割引をアンロック</string>
     <string name="subscription_spin_helper_ready">スピンをタップして限定ギフトを表示します。</string>
     <string name="subscription_spin_button">スピン</string>
     <string name="subscription_spinning_button">スピン中…</string>
-    <string name="subscription_gift_offer_unlocked">ギフトオファーを解除しました</string>
+    <string name="subscription_gift_offer_unlocked">ギフトオファーをアンロックしました</string>
     <string name="subscription_spin_helper_wait">ホイールが止まるまでお待ちください。</string>
     <string name="subscription_spin_helper_revealed">このオファーはホイール停止後に表示されます。</string>
 
 
     <!-- Onboarding: OneTimeOfferHeroCard-->
-    <string name="subscription_gift_unlocked_title">ギフトを解除しました 🎁</string>
-    <string name="subscription_gift_price_unlocked">ギフト価格を解除しました</string>
-    <string name="subscription_unlock_premium_for_only">Premiumをこの価格で解除</string>
+    <string name="subscription_gift_unlocked_title">ギフトをアンロックしました 🎁</string>
+    <string name="subscription_gift_price_unlocked">ギフト価格をアンロックしました</string>
+    <string name="subscription_unlock_premium_for_only">この価格でPremiumを利用開始</string>
     <string name="subscription_discount_body">食事をすばやくスキャン。マクロをよりスマートに記録。
 毎日プランを継続しましょう。</string>
     <string name="subscription_yearly_price_format">%1$s/年</string>
@@ -333,15 +333,15 @@
 
 
     <!-- HomeScreen -->
-    <string name="recently_uploaded">最近アップロード</string>
-    <string name="workout_membership_verify_failed">メンバーシップを確認できません。もう一度お試しください。</string>
+    <string name="recently_uploaded">最近の記録</string>
+    <string name="workout_membership_verify_failed">プラン情報を確認できません。もう一度お試しください。</string>
 
 
     <!-- MainBottomBar -->
     <string name="bottom_nav_home">ホーム</string>
     <string name="bottom_nav_progress">進捗</string>
     <string name="bottom_nav_weight">体重</string>
-    <string name="bottom_nav_fasting">断食</string>
+    <string name="bottom_nav_fasting">ファスティング</string>
     <string name="bottom_nav_workout">ワークアウト</string>
 
 
@@ -363,8 +363,8 @@
     <string name="home_fats_eaten_label">摂取脂質</string>
     <string name="home_fiber_goal_label">残り食物繊維</string>
     <string name="home_fiber_eaten_label">摂取食物繊維</string>
-    <string name="home_sugar_goal_label">残り糖質</string>
-    <string name="home_sugar_eaten_label">摂取糖質</string>
+    <string name="home_sugar_goal_label">残り糖類</string>
+    <string name="home_sugar_eaten_label">摂取糖類</string>
     <string name="home_sodium_goal_label">残りナトリウム</string>
     <string name="home_sodium_eaten_label">摂取ナトリウム</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
@@ -372,9 +372,9 @@
 
     <!-- HomeCards :  Health Score Card & Advice -->
     <string name="home_health_score_advice_zero">今日最初の食事を記録すると、栄養詳細に基づく健康スコアを確認できます。</string>
-    <string name="home_health_score_advice_very_low">今日の平均は低めです。タンパク質と食物繊維を増やし、糖質やナトリウムを控えることを考えてみましょう。</string>
+    <string name="home_health_score_advice_very_low">今日の平均は低めです。タンパク質と食物繊維を増やし、糖類やナトリウムを控えることを考えてみましょう。</string>
     <string name="home_health_score_advice_low">改善の余地があります。野菜と良質なタンパク質を追加してみましょう。</string>
-    <string name="home_health_score_advice_medium">順調です。量を安定させ、糖質、ナトリウム、食物繊維を意識しましょう。</string>
+    <string name="home_health_score_advice_medium">順調です。量を安定させ、糖類、ナトリウム、食物繊維を意識しましょう。</string>
     <string name="home_health_score_advice_good">今日は良いバランスです。栄養価の高い食品を選び続けましょう。</string>
     <string name="home_health_score_advice_excellent">今日は素晴らしいバランスです。継続的な習慣を作り続けましょう。</string>
     <string name="home_health_score_title">健康スコア</string>
@@ -406,7 +406,7 @@
 
 
     <!-- HomeCards : Fasting Card -->
-    <string name="fasting_card_plan_title">断食プラン</string>
+    <string name="fasting_card_plan_title">ファスティングプラン</string>
     <string name="fasting_card_start_time">開始時刻</string>
     <string name="fasting_card_end_time">終了時刻</string>
 
@@ -497,11 +497,11 @@
     <string name="progress_chart_grams">g</string>
     <string name="progress_chart_7day_avg">7日平均</string>
     <string name="progress_legend_fiber">食物繊維</string>
-    <string name="progress_legend_sugar">糖質</string>
+    <string name="progress_legend_sugar">糖類</string>
     <string name="progress_legend_sodium">ナトリウム</string>
-    <string name="progress_micronutrients_keep_it_up">食物繊維、糖質、ナトリウムのバランスを保ちましょう。</string>
+    <string name="progress_micronutrients_keep_it_up">食物繊維、糖類、ナトリウムのバランスを保ちましょう。</string>
     <string name="progress_tooltip_fiber">食物繊維</string>
-    <string name="progress_tooltip_sugar">糖質</string>
+    <string name="progress_tooltip_sugar">糖類</string>
     <string name="progress_tooltip_sodium">ナトリウム</string>
     <string name="progress_tooltip_mg_value">%1$d mg</string>
 
@@ -511,14 +511,14 @@
          ========================= -->
     <string name="workout_chart_goal_reached">今日の目標を達成しました</string>
     <string name="workout_chart_goal_left">今日の目標まで残り%1$d kcal</string>
-    <string name="workout_chart_title">ワークアウト消費</string>
+    <string name="workout_chart_title">運動消費</string>
     <string name="workout_chart_info_dialog_body">記録されたワークアウトと、毎日の歩数から推定された活動kcalが含まれます。</string>
     <string name="workout_chart_unit_kcal">kcal</string>
     <string name="workout_chart_goal">目標</string>
     <string name="workout_chart_value_kcal">%1$d kcal</string>
     <string name="workout_chart_7day_avg">7日平均</string>
     <string name="workout_chart_loading">読み込み中…</string>
-    <string name="workout_legend_burned">ワークアウト消費</string>
+    <string name="workout_legend_burned">運動消費</string>
     <string name="workout_legend_daily_goal">毎日の目標</string>
     <string name="workout_tooltip_burned">消費</string>
     <string name="workout_tooltip_kcal_value">%1$d kcal</string>
@@ -558,9 +558,9 @@
     <string name="progress_average_carbs">炭水化物</string>
     <string name="progress_average_fats">脂質</string>
     <string name="progress_average_fiber">食物繊維</string>
-    <string name="progress_average_sugar">糖質</string>
+    <string name="progress_average_sugar">糖類</string>
     <string name="progress_average_sodium">ナトリウム</string>
-    <string name="progress_average_workout">ワークアウト消費kcal</string>
+    <string name="progress_average_workout">運動消費</string>
     <string name="progress_average_water">水分摂取</string>
     <string name="progress_average_health_score">健康スコア</string>
     <string name="progress_average_steps">歩数</string>
@@ -599,11 +599,11 @@
 
 
     <!-- FastingPlansScreen -->
-    <string name="fasting_plan_title">断食プラン</string>
+    <string name="fasting_plan_title">ファスティングプラン</string>
     <string name="start_time">開始時刻</string>
     <string name="end_time">終了時刻</string>
     <string name="fasting_notification_info_status_on">リマインダーはオンです。デバイスの通知許可が有効な場合、これらのリマインダーは毎日繰り返されます。</string>
-    <string name="fasting_notification_info_status_off">リマインダーはオフです。通知を受け取るには、ホームの断食カードのスイッチをオンにしてください。</string>
+    <string name="fasting_notification_info_status_off">リマインダーはオフです。通知を受け取るには、ホームのファスティングカードのスイッチをオンにしてください。</string>
     <string name="fasting_notification_info_status_enabled_label">オン</string>
     <string name="fasting_notification_info_status_disabled_label">オフ</string>
     <string name="fasting_notification_info_title">リマインダーの仕組み</string>
@@ -616,18 +616,18 @@
 
     <string name="fasting_plan_desc_14_10">安定したリズムで始めましょう—14時間で食欲のサインとエネルギーを整えます。</string>
     <string name="fasting_plan_desc_16_8">人気があるのには理由があります—16時間で集中を保ち、引き締まったリズムへ。</string>
-    <string name="fasting_plan_desc_12_12">バランス型: 12時間断食し、12時間の食事時間内に食べる — 初心者に最適です。</string>
-    <string name="fasting_plan_desc_18_6">18時間の断食と6時間の食事時間 — 16:8より引き締まったスケジュールです。</string>
+    <string name="fasting_plan_desc_12_12">バランス型: 12時間ファスティングし、12時間の食事時間内に食べる — 初心者に最適です。</string>
+    <string name="fasting_plan_desc_18_6">18時間のファスティングと6時間の食事時間 — 16:8より引き締まったスケジュールです。</string>
     <string name="fasting_plan_desc_20_4">集中を保ちましょう—4時間の短い時間内で1〜2回の意識的な食事を。</string>
     <string name="fasting_plan_desc_22_2">2時間枠で意識的な1食を—水分摂取を忘れずに。</string>
 
-    <string name="fasting_picker_title">断食開始時刻を設定</string>
+    <string name="fasting_picker_title">ファスティング開始時刻を設定</string>
     <string name="fasting_picker_subtitle">食事時間が始まる時刻に毎日リマインドします。</string>
     <string name="fasting_plan_save_failed">保存に失敗しました</string>
 
 
     <!-- FastingReceiver -->
-    <string name="fasting_start_title">%1$sの食事時間が開いています</string>
+    <string name="fasting_start_title">%1$sの食事時間が始まりました</string>
     <string name="fasting_start_body">食事時間は%1$s–%2$sです。今日の記録を正確に保つため、食事を記録してください。</string>
     <string name="fasting_endsoon_title">食事時間は残り1時間です</string>
     <string name="fasting_endsoon_body">食事時間は%1$sに終了します。最後の食事を予定している場合は、終える前に記録してください。</string>
@@ -638,7 +638,7 @@
     <!-- WorkoutHistoryScreen -->
     <string name="workout_history_title">ワークアウト履歴</string>
     <string name="workout_history_summary_label">今日の消費</string>
-    <string name="workout_history_summary_body">今日のワークアウト消費の進捗を記録</string>
+    <string name="workout_history_summary_body">今日の運動消費の進捗を記録</string>
     <string name="workout_history_today_label">今日</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
     <string name="workout_history_avg_daily_label">7日平均 / 日</string>
@@ -750,7 +750,7 @@
 
 
     <!-- RecentlyUploadedEmptyCard -->
-    <string name="recently_uploaded_empty">最近アップロード</string>
+    <string name="recently_uploaded_empty">最近の記録</string>
     <string name="recently_uploaded_empty_hint">+をタップして今日最初の食事を追加</string>
 
 
@@ -779,7 +779,7 @@
     <string name="foodlog_detail_carbs">炭水化物</string>
     <string name="foodlog_detail_fats">脂質</string>
     <string name="foodlog_detail_fiber">食物繊維</string>
-    <string name="foodlog_detail_sugar">糖質</string>
+    <string name="foodlog_detail_sugar">糖類</string>
     <string name="foodlog_detail_sodium">ナトリウム</string>
     <string name="foodlog_detail_health_score">健康スコア</string>
 
@@ -797,17 +797,17 @@
     <string name="delete_account_dialog_body">本当にアカウントを削除しますか？食事ログ、体重記録、関連設定を含むCaloShapeデータが完全に削除されます。この操作は元に戻せません。</string>
 
 
-    <string name="restore_subscription_dialog_success_title">サブスクリプションを復元しました</string>
-    <string name="restore_subscription_dialog_payment_issue_title">サブスクリプションは復元されましたが、支払いの問題が残っています</string>
-    <string name="restore_subscription_dialog_no_active_title">有効なGoogle Playサブスクリプションが見つかりません</string>
+    <string name="restore_subscription_dialog_success_title">定期購入を復元しました</string>
+    <string name="restore_subscription_dialog_payment_issue_title">定期購入は復元されましたが、支払いの問題が残っています</string>
+    <string name="restore_subscription_dialog_no_active_title">有効なGoogle Playの定期購入が見つかりません</string>
     <string name="restore_subscription_dialog_failed_title">復元に失敗しました</string>
-    <string name="restore_subscription_dialog_bound_title">サブスクリプションは別のアカウントにリンクされています</string>
-    <string name="restore_subscription_dialog_success_body">サブスクリプションはこのCaloShapeアカウントに復元されました。</string>
-    <string name="restore_subscription_dialog_payment_issue_body">サブスクリプションはこのCaloShapeアカウントにリンクされていますが、Google Playではまだ支払いの問題が報告されています。継続するにはGoogle Playで支払い方法を更新してください。</string>
-    <string name="restore_subscription_dialog_no_active_body">現在のGoogle Playアカウントで有効なCaloShapeサブスクリプションが見つかりませんでした。購入に使用したGoogle Playアカウントを使っていることを確認し、もう一度お試しください。</string>
-    <string name="restore_subscription_dialog_failed_body">現在サブスクリプションを復元できません。接続を確認し、設定からもう一度お試しください。</string>
-    <string name="restore_subscription_dialog_bound_body">このGoogle Playサブスクリプションはすでに別のCaloShapeアカウントにリンクされています。利用するには元のアカウントでサインインするか、アクセスできない場合はサポートにお問い合わせください。</string>
-    <string name="restore_subscription_dialog_body">このデバイスのGoogle Playアカウントに関連付けられた有効なCaloShapeサブスクリプションまたはトライアルが見つかりました。現在サインインしているCaloShapeアカウントに復元できます。</string>
+    <string name="restore_subscription_dialog_bound_title">定期購入は別のアカウントにリンクされています</string>
+    <string name="restore_subscription_dialog_success_body">定期購入はこのCaloShapeアカウントに復元されました。</string>
+    <string name="restore_subscription_dialog_payment_issue_body">定期購入はこのCaloShapeアカウントにリンクされていますが、Google Playではまだ支払いの問題が報告されています。継続するにはGoogle Playで支払い方法を更新してください。</string>
+    <string name="restore_subscription_dialog_no_active_body">現在のGoogle Playアカウントで有効なCaloShapeの定期購入が見つかりませんでした。購入に使用したGoogle Playアカウントを使っていることを確認し、もう一度お試しください。</string>
+    <string name="restore_subscription_dialog_failed_body">現在、定期購入を復元できません。接続を確認し、設定からもう一度お試しください。</string>
+    <string name="restore_subscription_dialog_bound_body">このGoogle Playの定期購入はすでに別のCaloShapeアカウントにリンクされています。利用するには元のアカウントでサインインするか、アクセスできない場合はサポートにお問い合わせください。</string>
+    <string name="restore_subscription_dialog_body">このデバイスのGoogle Playアカウントに関連付けられた有効なCaloShapeの定期購入またはトライアルが見つかりました。現在サインインしているCaloShapeアカウントに復元できます。</string>
 
     <!-- Settings : Payment issue dialog -->
     <string name="payment_issue_dialog_title">Premiumを有効に保つ</string>
@@ -821,7 +821,7 @@
 
 
     <string name="settings_personal_details">個人情報</string>
-    <string name="settings_adjust_macronutrients">マクロ栄養素を調整</string>
+    <string name="settings_adjust_macronutrients">マクロを調整</string>
     <string name="settings_weight_history">体重履歴</string>
     <string name="settings_ring_colors_explained">カレンダーリング色ガイド</string>
     <string name="settings_inbox">受信箱</string>
@@ -837,7 +837,7 @@
     <string name="settings_membership_payment">支払いの問題</string>
     <string name="settings_membership_update_payment">支払いを更新</string>
     <string name="settings_membership_premium">Premium</string>
-    <string name="settings_membership_active_member">有効なメンバー</string>
+    <string name="settings_membership_active_member">Premium利用中</string>
     <string name="settings_membership_trial">トライアル</string>
     <string name="settings_membership_access_active">アクセス有効</string>
     <string name="settings_membership_free">無料</string>
@@ -845,8 +845,8 @@
     <string name="settings_membership_trial_ends_today">トライアルは今日終了します</string>
     <string name="settings_membership_until_format">%1$sまで</string>
     <plurals name="settings_membership_trial_days_left">
-        <item quantity="one">%1$d日残り</item>
-        <item quantity="other">%1$d日残り</item>
+        <item quantity="one">残り%1$d日</item>
+        <item quantity="other">残り%1$d日</item>
     </plurals>
 
 
@@ -855,7 +855,7 @@
     <string name="settings_premium_reward">Premium特典</string>
     <string name="settings_share_caloshape_with_friends">CaloShape AIを
 友達と共有</string>
-    <string name="settings_referral_reward_content">友達が購読すると、あなたは30日間無料になります。</string>
+    <string name="settings_referral_reward_content">友達が定期購入すると、あなたは30日間無料になります。</string>
     <string name="settings_get_30_days_free">30日間無料を獲得</string>
     <string name="settings_days_label">日</string>
 
@@ -897,7 +897,7 @@
     <string name="referral_premium_reward">Premium特典</string>
     <string name="referral_invite_friends">友達を招待</string>
     <string name="referral_earn_30_days_free">30日間無料を獲得</string>
-    <string name="referral_reward_unlocks_after_no_refund">友達が返金なしで購読すると特典が解除されます。</string>
+    <string name="referral_reward_unlocks_after_no_refund">友達が返金なしで定期購入すると特典が付与されます。</string>
     <string name="referral_code_copied">紹介コードをコピーしました。</string>
     <string name="referral_your_promo_code">あなたのプロモコード</string>
     <string name="referral_copy">コピー</string>
@@ -905,10 +905,10 @@
     <string name="referral_how_it_works">仕組み</string>
     <string name="referral_step_1_title">プロモコードを共有</string>
     <string name="referral_step_1_subtitle">食事をもっとスマートに記録したい友達にコードを送りましょう。</string>
-    <string name="referral_step_2_title">友達が購読</string>
-    <string name="referral_step_2_subtitle">友達があなたの招待を使って有料のCaloShape AIサブスクリプションを開始します。</string>
+    <string name="referral_step_2_title">友達が定期購入</string>
+    <string name="referral_step_2_subtitle">友達があなたの招待を使って有料のCaloShape AI定期購入を開始します。</string>
     <string name="referral_step_3_title">返金なしで特典付与</string>
-    <string name="referral_step_3_subtitle">返金なしでサブスクリプションが確認されると、あなたのPremium期間が延長されます。</string>
+    <string name="referral_step_3_subtitle">返金なしで定期購入が確認されると、あなたのPremium期間が延長されます。</string>
     <string name="referral_share_text">CaloShape AIで一緒に始めましょう！私の紹介コードはこちら:
 %1$s
 
@@ -1026,7 +1026,7 @@
     <string name="edit_nutrition_fat_goal">脂質目標</string>
     <string name="edit_nutrition_view_micronutrients">微量栄養素を見る</string>
     <string name="edit_nutrition_fiber_goal">食物繊維目標</string>
-    <string name="edit_nutrition_sugar_goal">糖質目標</string>
+    <string name="edit_nutrition_sugar_goal">糖類目標</string>
     <string name="edit_nutrition_sodium_goal">ナトリウム目標</string>
     <string name="edit_nutrition_auto_generate_goals">目標を自動生成</string>
     <string name="auto_generate_goals_success">生成しました！</string>
@@ -1125,9 +1125,9 @@
                     Not use
          ========================= -->
     <!-- PremiumRewardsScreen Not use -->
-    <string name="premium_rewards_subscription_title">サブスクリプション</string>
+    <string name="premium_rewards_subscription_title">定期購入</string>
     <string name="premium_rewards_history_title">特典履歴</string>
-    <string name="premium_rewards_loading_membership">メンバーシップを読み込み中…</string>
+    <string name="premium_rewards_loading_membership">プラン情報を読み込み中…</string>
     <string name="premium_rewards_status_title">Premiumステータス</string>
     <string name="premium_rewards_latest_title">最新の特典</string>
     <string name="premium_rewards_source_format">ソース: %1$s</string>
