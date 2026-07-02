@@ -1,1031 +1,745 @@
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <!-- App_Name -->
     <string name="app_name">CaloShape</string>
-
-
-    <!-- common -->
-    <string name="common_close">לִסְגוֹר</string>
-    <string name="common_save">לְהַצִיל</string>
-    <string name="common_cancel">לְבַטֵל</string>
-    <string name="common_continue_btn">לְהַמשִׁיך</string>
-    <string name="common_skip">לְדַלֵג</string>
+    <string name="common_close">סגור</string>
+    <string name="common_save">שמור</string>
+    <string name="common_cancel">בטל</string>
+    <string name="common_continue_btn">המשך</string>
+    <string name="common_skip">דלג</string>
     <string name="common_dash">—</string>
-    <string name="common_error">שְׁגִיאָה</string>
-
+    <string name="common_error">שגיאה</string>
     <string name="common_save_success">נשמר בהצלחה!</string>
-    <string name="common_today">הַיוֹם</string>
-    <string name="common_yesterday">אֶתמוֹל</string>
+    <string name="common_today">היום</string>
+    <string name="common_yesterday">אתמול</string>
     <string name="common_unavailable_dash">—</string>
     <string name="common_retry">נסה שוב</string>
-
-    <string name="common_delete">לִמְחוֹק</string>
-    <string name="common_deleting">מוחק...</string>
-
-    <string name="common_understood">מובן</string>
-    <string name="common_revert">לַחֲזוֹר</string>
-
-
-    <!-- ApiErrorUiMapper -->
+    <string name="common_delete">מחק</string>
+    <string name="common_deleting">מוחק…</string>
+    <string name="common_understood">הבנתי</string>
+    <string name="common_revert">בטל שינוי</string>
     <string name="err_barcode_not_found_title">המוצר לא נמצא</string>
-    <string name="err_barcode_not_found_msg">לא הצלחנו למצוא את הברקוד הזה. נסה לצלם את התווית התזונתית.</string>
-
-    <string name="err_barcode_lookup_failed_title">חיפוש נכשל</string>
-    <string name="err_barcode_lookup_failed_msg">לא הצלחנו להגיע למאגר המוצרים. בדוק את החיבור שלך ונסה שוב.</string>
-
+    <string name="err_barcode_not_found_msg">לא הצלחנו למצוא את הברקוד הזה. נסה לצלם את תווית הערכים התזונתיים.</string>
+    <string name="err_barcode_lookup_failed_title">החיפוש נכשל</string>
+    <string name="err_barcode_lookup_failed_msg">לא הצלחנו להתחבר למסד נתוני המוצרים. בדוק את החיבור ונסה שוב.</string>
     <string name="err_generic_title">משהו השתבש</string>
-    <string name="err_generic_msg">אנא נסה שוב.</string>
-
-    <string name="err_network_title">בעיה ברשת</string>
-    <string name="err_network_msg">בדוק את חיבור האינטרנט שלך ונסה שוב.</string>
-
-    <string name="err_photo_title">דרוש תמונה</string>
-    <string name="err_photo_msg">נסה לצלם שוב עם תאורה טובה יותר.</string>
-
-    <string name="err_manual_title">הכנס ידנית</string>
-    <string name="err_manual_msg">ניתן להזין פרטים באופן ידני.</string>
-
+    <string name="err_generic_msg">נסה שוב.</string>
+    <string name="err_network_title">בעיית רשת</string>
+    <string name="err_network_msg">בדוק את חיבור האינטרנט ונסה שוב.</string>
+    <string name="err_photo_title">נדרשת תמונה</string>
+    <string name="err_photo_msg">נסה לצלם שוב בתאורה טובה יותר.</string>
+    <string name="err_manual_title">הזן ידנית</string>
+    <string name="err_manual_msg">אפשר להזין את הפרטים ידנית.</string>
     <string name="err_support_title">צור קשר עם התמיכה</string>
-    <string name="err_support_msg">אנא צור קשר עם התמיכה אם הבעיה נמשכת.</string>
-
+    <string name="err_support_msg">אם הבעיה נמשכת, צור קשר עם התמיכה.</string>
     <string name="cta_try_label">סרוק תווית תזונה</string>
-    <string name="cta_enter_manually">הכנס ידנית</string>
-
-    <string name="cta_check_network">בדוק את הרשת</string>
-    <string name="cta_retake">לְצַלֵם שׁוּב</string>
+    <string name="cta_enter_manually">הזן ידנית</string>
+    <string name="cta_check_network">בדוק רשת</string>
+    <string name="cta_retake">צלם שוב</string>
     <string name="cta_contact_support">צור קשר עם התמיכה</string>
-    <string name="cta_rescan_barcode">סרוק מחדש את הברקוד</string>
-
-
-
-
-    <!-- Landing Screen -->
-    <string name="landing_title">צלם תמונה, דע את הקלוריות.</string>
+    <string name="cta_rescan_barcode">סרוק ברקוד שוב</string>
+    <string name="landing_title">צלם תמונה וגלה את ה-kcal.</string>
     <string name="choose_language">בחר שפה</string>
     <string name="cta_get_started">התחל</string>
     <string name="cta_login_prefix">כבר יש לך חשבון?</string>
     <string name="cta_login">היכנס</string>
-
-
-    <!-- RequireSignInScreen -->
     <string name="auth_sign_in_account_title">היכנס לחשבון שלך</string>
-    <string name="auth_sign_in_with_google">היכנס באמצעות גוגל</string>
-    <string name="auth_signin_with_email">המשך במייל</string>
-
-
-    <!-- SignInSheet-->
-    <string name="signin_title">היכנס</string>
-    <string name="signin_with_apple">היכנס באמצעות אפל</string>
-    <string name="signin_with_google">היכנס באמצעות גוגל</string>
-    <string name="signin_with_email">המשך במייל</string>
-    <string name="signin_legal_hint">על ידי המשך, אתה מסכים לתנאים של CaloShape</string>
+    <string name="auth_sign_in_with_google">היכנס עם Google</string>
+    <string name="auth_signin_with_email">המשך עם אימייל</string>
+    <string name="signin_title">כניסה</string>
+    <string name="signin_with_apple">היכנס עם Apple</string>
+    <string name="signin_with_google">היכנס עם Google</string>
+    <string name="signin_with_email">המשך עם אימייל</string>
+    <string name="signin_legal_hint">בהמשך אתה מסכים לתנאים של CaloShape</string>
     <string name="signin_terms">תנאים</string>
     <string name="signin_and">ו</string>
-    <string name="signin_privacy">מדיניות פרטיות</string>
+    <string name="signin_privacy">מדיניות הפרטיות</string>
     <string name="signin_url_terms">https://caloshape.com/terms</string>
     <string name="signin_url_privacy">https://caloshape.com/privacy</string>
-
-
-    <!-- SignInSheetHost 控制 Sheet 是否顯示、處理狀態、接外部 callback -->
     <string name="err_google_no_account_hint">טיפ: הוסף חשבון Google בהגדרות ← חשבונות ונסה שוב</string>
-    <string name="err_google_signin_failed">הכניסה של Google נכשלה</string>
-
-
-    <!-- EmailEnterScreen-->
-    <string name="email_sign_in_title">היכנס</string>
-    <string name="input_box_email_label">אֶלֶקטרוֹנִי</string>
-
-
-    <!-- EmailCodeScreen OTP -->
+    <string name="err_google_signin_failed">הכניסה עם Google נכשלה</string>
+    <string name="email_sign_in_title">כניסה</string>
+    <string name="input_box_email_label">אימייל</string>
     <string name="resend">שלח שוב</string>
-    <string name="resend_countdown">שלח מחדש (%1$d s)</string>
-
-    <string name="err_otp_invalid">הקוד שגוי. אנא נסה שוב.</string>
-    <string name="err_otp_too_many_attempts">יותר מדי ניסיונות. אנא נסה שוב מאוחר יותר.</string>
-    <string name="err_network_io">שגיאת רשת. אנא נסה שוב.</string>
-    <string name="err_server_unavailable">השירות אינו זמין באופן זמני. אנא נסה שוב מאוחר יותר.</string>
-    <string name="err_generic">משהו השתבש. אנא נסה שוב.</string>
-
+    <string name="resend_countdown">שלח שוב (%1$d שנ׳)</string>
+    <string name="err_otp_invalid">הקוד שגוי. נסה שוב.</string>
+    <string name="err_otp_too_many_attempts">יותר מדי ניסיונות. נסה שוב מאוחר יותר.</string>
+    <string name="err_network_io">שגיאת רשת. נסה שוב.</string>
+    <string name="err_server_unavailable">השירות אינו זמין זמנית. נסה שוב מאוחר יותר.</string>
+    <string name="err_generic">משהו השתבש. נסה שוב.</string>
     <string name="confirm_email_title">אשר את האימייל שלך</string>
-    <string name="confirm_email_hint">נא להזין את הקוד בן 4 הספרות שאליו שלחנו זה עתה</string>
+    <string name="confirm_email_hint">הזן את הקוד בן 4 הספרות ששלחנו זה עתה אל</string>
     <string name="didnt_receive_code">לא קיבלת את הקוד?</string>
-
-
-    <!-- Onboarding: GenderSelectionScreen -->
-    <string name="onboard_gender_title">בחר את המין שלך</string>
-    <string name="onboard_gender_subtitle">זה ישמש כדי לכייל את התוכנית המותאמת אישית שלך.</string>
-    <string name="onboard_male">זָכָר</string>
-    <string name="onboard_female">נְקֵבָה</string>
-    <string name="onboard_other">אַחֵר</string>
-
-
-    <!-- Onboarding: ReferralSourceScreen -->
+    <string name="onboard_gender_title">בחר את המגדר שלך</string>
+    <string name="onboard_gender_subtitle">המידע ישמש לכיול התוכנית האישית שלך.</string>
+    <string name="onboard_male">זכר</string>
+    <string name="onboard_female">נקבה</string>
+    <string name="onboard_other">אחר</string>
     <string name="onboard_referral_title">איך גילית אותנו?</string>
-
-
-    <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">בן כמה אתה?</string>
-    <string name="onboard_age_subtitle">אנו משתמשים בגילך רק כדי לשפר את החוויה שלך ואת דיוק הערכת הקלוריות שלך.</string>
-
-
-    <!-- Onboarding: HeightSelectionScreen -->
-    <string name="onboard_height_title">כמה אתה גבוה?</string>
-    <string name="onboard_height_subtitle">אנו משתמשים בנתונים שלך רק כדי לשפר את החוויה שלך ואת הערכות הקלוריות שלנו.</string>
-    <string name="onboard_height_hint">זה ישמש כדי לכייל את התוכנית המותאמת אישית שלך.</string>
-
-
-    <!-- Onboarding: WeightSelectionScreen -->
+    <string name="onboard_age_subtitle">אנחנו משתמשים בגיל שלך רק כדי לשפר את החוויה ואת דיוק הערכת ה-kcal.</string>
+    <string name="onboard_height_title">מה הגובה שלך?</string>
+    <string name="onboard_height_subtitle">אנחנו משתמשים בנתונים שלך רק כדי לשפר את החוויה ואת הערכות ה-kcal.</string>
+    <string name="onboard_height_hint">המידע ישמש לכיול התוכנית האישית שלך.</string>
     <string name="onboard_weight_title">כמה אתה שוקל?</string>
-    <string name="onboard_weight_subtitle">אנו משתמשים בנתונים שלך רק כדי לשפר את החוויה שלך ואת הערכות הקלוריות שלנו.</string>
-    <string name="onboard_weight_hint">זה ישמש כדי לכייל את התוכנית המותאמת אישית שלך.</string>
-
-
-    <!-- Onboarding: ExerciseFrequencyScreen  -->
+    <string name="onboard_weight_subtitle">אנחנו משתמשים בנתונים שלך רק כדי לשפר את החוויה ואת הערכות ה-kcal.</string>
+    <string name="onboard_weight_hint">המידע ישמש לכיול התוכנית האישית שלך.</string>
     <string name="onboard_ex_freq_title">באיזו תדירות אתה מתאמן בכל שבוע?</string>
-    <string name="onboard_ex_freq_subtitle">זה יעזור לכייל את התוכנית המותאמת אישית שלך.</string>
+    <string name="onboard_ex_freq_subtitle">זה יעזור לכייל את התוכנית האישית שלך.</string>
     <string name="ex_freq_0_title">0</string>
-    <string name="ex_freq_0_sub">כָּרוּך בִּישִׁיבָה</string>
+    <string name="ex_freq_0_sub">יושבני</string>
     <string name="ex_freq_1_3_title">1–3</string>
     <string name="ex_freq_1_3_sub">פעילות קלה</string>
     <string name="ex_freq_3_5_title">3–5</string>
-    <string name="ex_freq_3_5_sub">פעילות מתונה</string>
+    <string name="ex_freq_3_5_sub">פעילות בינונית</string>
     <string name="ex_freq_6_7_plus_title">6–7</string>
     <string name="ex_freq_6_7_plus_sub">פעילות גבוהה</string>
     <string name="ex_freq_7_plus_title">7+</string>
     <string name="ex_freq_7_plus_sub">פעילות גבוהה מאוד</string>
-
-
-    <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">מה המטרה שלך?</string>
-    <string name="onboard_goal_subtitle">זה עוזר לנו להתאים את תוכנית הקלוריות שלך.</string>
-    <string name="goal_lose">לָרֶדֶת בְּמִשְׁקָל</string>
-    <string name="goal_maintain">לְתַחְזֵק</string>
-    <string name="goal_gain">לַעֲלוֹת בְּמִשְׁקָל</string>
-    <string name="goal_healthy_eating">אכילה בריאה</string>
-
-
-    <!-- Onboarding: WeightGoalScreen -->
+    <string name="onboard_goal_subtitle">זה עוזר לנו להתאים את תוכנית ה-kcal שלך.</string>
+    <string name="goal_lose">לרדת במשקל</string>
+    <string name="goal_maintain">לשמור על המשקל</string>
+    <string name="goal_gain">לעלות במשקל</string>
+    <string name="goal_healthy_eating">לאכול בריא</string>
     <string name="onboard_goal_weight_title">מה משקל היעד שלך?</string>
-    <string name="onboard_goal_weight_subtitle">בהתבסס על מטרה זו, ניצור עבורך המלצה קלורית יומית מתאימה יותר.</string>
-    <string name="onboard_goal_weight_hint">זה ישמש כדי לכייל את התוכנית המותאמת אישית שלך.</string>
-
-
-    <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">שימוש ב-CaloShape AI יכול לשלש את יעילות הירידה במשקל\n</string>
-    <string name="onboard_weight_loss_comparison_without_ai">ללא\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_with_ai">עם\nCaloShape AI</string>
+    <string name="onboard_goal_weight_subtitle">על סמך יעד זה ניצור עבורך המלצת kcal יומית מתאימה יותר.</string>
+    <string name="onboard_goal_weight_hint">המידע ישמש לכיול התוכנית האישית שלך.</string>
+    <string name="onboard_weight_loss_comparison_title">השימוש ב-CaloShape AI יכול לשלש את יעילות
+הירידה במשקל שלך</string>
+    <string name="onboard_weight_loss_comparison_without_ai">בלי
+CaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_with_ai">עם
+CaloShape AI</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI עושה הכל פשוט\nושומר אותך אחראי</string>
-
-
-    <!-- Onboarding: NotificationPermissionScreen -->
-    <string name="onboard_notif_title">הפוך כל ארוחה לספור!</string>
-    <string name="onboard_notif_subtitle">אפשר התראות עבור תזכורות עדינות לרישום ארוחות - כך שהקלוריות, פקודות המאקרו וההתקדמות שלך יישארו במסלול. מחליקות קורות; דחיפות בזמן עוזרות לך לחזור מהר.</string>
-    <string name="onboard_allow_notifications_cta">אפשר הודעות</string>
-    <string name="notification_mock_app_title">מונה קלוריות בינה מלאכותית</string>
+    <string name="onboard_weight_loss_comparison_caption">CaloShape AI הופך הכול לפשוט
+ועוזר לך להישאר מחויב</string>
+    <string name="onboard_notif_title">גרום לכל ארוחה להיחשב!</string>
+    <string name="onboard_notif_subtitle">הפעל התראות כדי לקבל תזכורות עדינות לרישום ארוחות—כך ה-kcal, המאקרו וההתקדמות שלך יישארו במסלול. פספוסים קורים; תזכורות בזמן עוזרות לחזור מהר למסלול.</string>
+    <string name="onboard_allow_notifications_cta">אפשר התראות</string>
+    <string name="notification_mock_app_title">מונה kcal מבוסס AI</string>
     <string name="onboard_notif_title_got_a_sec">הארוחה שלך לא תירשם מעצמה 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">רשום את הארוחה הזו כדי לשמור על הקלוריות והמאקרו שלך על המסלול.</string>
-
-
-    <!-- Onboarding: HealthConnectIntroScreen -->
-    <string name="onboard_hc_connect_title_prefix">התחבר ל</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">רשום את הארוחה הזו כדי לשמור על ה-kcal והמאקרו במסלול.</string>
+    <string name="onboard_hc_connect_title_prefix">התחבר אל</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
-    <string name="onboard_hc_connect_body">סנכרן פעילות יומית בין CaloShape AI ואפליקציות בריאות כדי לקבל רשומות ותובנות מלאות יותר.</string>
-    <string name="onboard_hc_permission_rationale_title_prefix">למה CaloShape משתמש</string>
+    <string name="onboard_hc_connect_body">סנכרן פעילות יומית בין CaloShape AI לאפליקציות בריאות כדי לקבל רשומות ותובנות מלאות יותר.</string>
+    <string name="onboard_hc_permission_rationale_title_prefix">למה CaloShape משתמש ב</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape קורא את הצעדים, הקלוריות הפעילות ונתוני הפעילות הגופנית שלך כדי להעריך את שריפת הפעילות היומית, לעדכן את לוח המחוונים הקלוריות שלך ולשפר את תובנות ההתקדמות. אתה יכול לבטל את הגישה בכל עת ב-Health Connect.</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape קורא את הצעדים, ה-kcal הפעילים ונתוני האימון שלך כדי להעריך שריפת פעילות יומית, לעדכן את לוח ה-kcal ולשפר תובנות התקדמות. אפשר לבטל גישה בכל זמן ב-Health Connect.</string>
     <string name="onboard_hc_permission_rationale_button">הבנתי</string>
-
-
-    <!-- Onboarding: ComputationProgressScreen -->
-    <string name="progress_hero_title">יצירת תוכנית אישית</string>
-    <string name="progress_hero_subtitle">אנו משתמשים ביעדים, בנתוני הגוף וההעדפות שלך כדי להתאים את היעדים היומיומיים שלך.</string>
+    <string name="progress_hero_title">יוצר את התוכנית האישית שלך</string>
+    <string name="progress_hero_subtitle">אנחנו משתמשים ביעדים, בנתוני הגוף ובהעדפות שלך כדי להתאים את היעדים היומיים.</string>
     <string name="progress_footer_hint">זה לוקח רק רגע</string>
-    <string name="progress_center_caption">מכין את התוצאות שלך</string>
-    <string name="progress_phase_pill_1">בדיקת הפרופיל שלך</string>
-    <string name="progress_phase_pill_2">חישוב יעד הקלוריות שלך</string>
-    <string name="progress_phase_pill_3">איזון פקודות המאקרו היומיות שלך</string>
-    <string name="progress_phase_pill_4">סיום תובנות הבריאות שלך</string>
-    <string name="progress_card_title">הגדרת התוכנית שלך</string>
-    <string name="progress_row_calorie_target">יעד קלוריות יומי</string>
-    <string name="progress_row_carb_distribution">הפצת פחמימות</string>
-    <string name="progress_row_protein_recommendation">המלצה על חלבון</string>
-    <string name="progress_row_fat_recommendation">המלצה שמנה</string>
-    <string name="progress_row_health_score_estimate">אומדן ציון בריאות</string>
-
-
-    <!-- Onboarding: HealthPlanScreen -->
-    <string name="plan_cta_start">התחל</string>
+    <string name="progress_center_caption">מכינים את התוצאות שלך</string>
+    <string name="progress_phase_pill_1">בודקים את הפרופיל שלך</string>
+    <string name="progress_phase_pill_2">מחשבים את יעד ה-kcal שלך</string>
+    <string name="progress_phase_pill_3">מאזנים את המאקרו היומיים</string>
+    <string name="progress_phase_pill_4">מסיימים את תובנות הבריאות</string>
+    <string name="progress_card_title">מגדירים את התוכנית שלך</string>
+    <string name="progress_row_calorie_target">יעד kcal יומי</string>
+    <string name="progress_row_carb_distribution">חלוקת פחמימות</string>
+    <string name="progress_row_protein_recommendation">המלצת חלבון</string>
+    <string name="progress_row_fat_recommendation">המלצת שומן</string>
+    <string name="progress_row_health_score_estimate">הערכת ציון בריאות</string>
+    <string name="plan_cta_start">בוא נתחיל</string>
     <string name="plan_title_congrats">מזל טוב!</string>
     <string name="plan_subtitle_ready">תוכנית הבריאות האישית שלך מוכנה!</string>
-    <string name="plan_disclaimer">המקורות להלן: ראה את כל ההפניות ›</string>
-    <string name="plan_unit_kcal_day">קק\"ל ליום</string>
-
-    <string name="plan_macros_proteins">חֶלְבּוֹן</string>
+    <string name="plan_disclaimer">המקורות למטה: הצג את כל ההפניות ›</string>
+    <string name="plan_unit_kcal_day">kcal / יום</string>
+    <string name="plan_macros_proteins">חלבון</string>
     <string name="plan_macros_carbs">פחמימות</string>
     <string name="plan_macros_fat">שומנים</string>
     <string name="plan_unit_g">g</string>
-
     <string name="plan_water_daily">מים יומיים</string>
     <string name="plan_weight_current">משקל נוכחי</string>
-    <string name="plan_weight_delta">למשקל המטרה</string>
-
-    <string name="plan_goals_title">איך להגיע\n ליעדים שלך</string>
-    <string name="plan_goal_card_health_scores">ציוני הבריאות מנחים אותך, כך שההרגלים נוצרים באופן טבעי</string>
-    <string name="plan_goal_card_track_meals">רישום ארוחות בהקשה אחת, קל להישאר עקבי</string>
-    <string name="plan_goal_card_daily_calories">ראה בבירור את הקלוריות היומיות, ולעולם אל תאבד את המעקב</string>
-    <string name="plan_goal_card_balance_macros">פחמימות × חלבון × שומן, איזון חכם, תוצאות טובות יותר</string>
-    <string name="plan_sources_based_on">בהתבסס על הנחיות תזונה רשמיות,\nלעיון בלבד, לא ייעוץ רפואי.</string>
-    <string name="plan_sources_more">ראה את כל ההפניות ›</string>
+    <string name="plan_weight_delta">עד משקל היעד</string>
+    <string name="plan_goals_title">איך להגיע
+ליעדים שלך</string>
+    <string name="plan_goal_card_health_scores">ציוני בריאות מנחים אותך, כדי שהרגלים ייווצרו בטבעיות</string>
+    <string name="plan_goal_card_track_meals">רשום ארוחות בלחיצה אחת, קל להישאר עקבי</string>
+    <string name="plan_goal_card_daily_calories">ראה kcal יומיים בבירור ולעולם אל תאבד מעקב</string>
+    <string name="plan_goal_card_balance_macros">פחמימות × חלבון × שומן, איזון חכם ותוצאות טובות יותר</string>
+    <string name="plan_sources_based_on">מבוסס על הנחיות תזונה רשמיות,
+לייחוס בלבד, לא ייעוץ רפואי.</string>
+    <string name="plan_sources_more">הצג את כל ההפניות ›</string>
     <string name="plan_sources_hide">הסתר מקורות</string>
-
-
-    <!-- Onboarding: OnboardReferralCodeScreen -->
-    <string name="onboard_referral_code_input">הזן קוד הפניה\n(אופציונלי)</string>
-    <string name="onboard_referral_code_subtitle">אתה יכול לדלג על שלב זה</string>
+    <string name="onboard_referral_code_input">הזן קוד הפניה
+(אופציונלי)</string>
+    <string name="onboard_referral_code_subtitle">אפשר לדלג על שלב זה</string>
     <string name="onboard_referral_code_input_label">קוד הפניה</string>
     <string name="onboard_referral_code_placeholder">קוד הפניה</string>
-    <string name="onboard_referral_code_submit">לְהַגִישׁ</string>
-    <string name="onboard_referral_code_submitting">הַגָשָׁה…</string>
-    <string name="onboard_referral_code_applied">הוחל קוד הפניה!</string>
-
-    <string name="onboard_referral_code_error_invalid_format">השתמש באותיות ומספרים בלבד.</string>
+    <string name="onboard_referral_code_submit">שלח</string>
+    <string name="onboard_referral_code_submitting">שולח…</string>
+    <string name="onboard_referral_code_applied">קוד ההפניה הוחל!</string>
+    <string name="onboard_referral_code_error_invalid_format">השתמש באותיות ובמספרים בלבד.</string>
     <string name="onboard_referral_code_error_invalid">לא הצלחנו למצוא את קוד ההפניה הזה.</string>
-    <string name="onboard_referral_code_error_self_referral">אינך יכול להשתמש בקוד הפניה משלך.</string>
+    <string name="onboard_referral_code_error_self_referral">אי אפשר להשתמש בקוד ההפניה של עצמך.</string>
     <string name="onboard_referral_code_error_already_claimed">חשבון זה כבר החיל קוד הפניה.</string>
-    <string name="onboard_referral_code_error_already_subscribed">חשבונות רשומים אינם יכולים להחיל קוד הפניה.</string>
-    <string name="onboard_referral_code_error_disabled">הפניה אינה זמינה זמנית.</string>
-    <string name="onboard_referral_code_error_risk">אנחנו לא יכולים להחיל קוד הפניה כרגע.</string>
-    <string name="onboard_referral_code_error_network">אנחנו לא יכולים ליישם את זה כרגע. אנא נסה שוב מאוחר יותר.</string>
-    <string name="onboard_referral_code_error_unknown">לא ניתן להחיל קוד הפניה כרגע.\nאנא נסה שוב מאוחר יותר.</string>
-
-
-    <!-- Onboarding: OnboardSubscriptionScreen  Paywall -->
-    <string name="subscription_price_per_month_format">%1$s לחודש</string>
-    <string name="subscription_price_per_month_unit">/מו</string>
-    <string name="subscription_price_unavailable_title">המחיר לא זמין</string>
-    <string name="subscription_price_unavailable_body">לא הצלחנו לקבל את המחיר המקומי שלך ב-Google Play כרגע. אנא נסה שוב.</string>
-
-
-    <!-- Onboarding: OnboardSubscriptionIntro -->
-    <string name="subscription_intro_title">פתח את הנעילה של CaloShape AI כדי\nלהגיע ליעדים שלך מהר יותר.</string>
+    <string name="onboard_referral_code_error_already_subscribed">חשבונות עם מנוי לא יכולים להחיל קוד הפניה.</string>
+    <string name="onboard_referral_code_error_disabled">ההפניות אינן זמינות זמנית.</string>
+    <string name="onboard_referral_code_error_risk">אי אפשר להחיל קוד הפניה כרגע.</string>
+    <string name="onboard_referral_code_error_network">אי אפשר להחיל אותו כרגע. נסה שוב מאוחר יותר.</string>
+    <string name="onboard_referral_code_error_unknown">אי אפשר להחיל קוד הפניה כרגע.
+נסה שוב מאוחר יותר.</string>
+    <string name="subscription_price_per_month_format">%1$s/חודש</string>
+    <string name="subscription_price_per_month_unit">/חודש</string>
+    <string name="subscription_price_unavailable_title">המחיר אינו זמין</string>
+    <string name="subscription_price_unavailable_body">לא הצלחנו לקבל כרגע את המחיר המקומי שלך מ-Google Play. נסה שוב.</string>
+    <string name="subscription_intro_title">פתח את CaloShape AI כדי
+להגיע ליעדים מהר יותר.</string>
     <string name="subscription_intro_helper_format">רק %1$s לשנה (%2$s)</string>
-    <string name="subscription_start_three_day_free_trial">נסה בחינם למשך 3 ימים</string>
-    <string name="subscription_three_day_trial_helper_format">רק %1$s לשנה (%2$s לחודש)</string>
-    <string name="subscription_already_owned_restore_required">לחשבון Google Play שלך כבר יש מנוי CaloShape פעיל. שחזר אותו לחשבון CaloShape זה לפני השימוש בתכונות פרימיום.</string>
+    <string name="subscription_start_three_day_free_trial">נסה חינם למשך 3 ימים</string>
+    <string name="subscription_three_day_trial_helper_format">רק %1$s/שנה (%2$s/חודש)</string>
+    <string name="subscription_already_owned_restore_required">בחשבון Google Play שלך כבר יש מנוי CaloShape פעיל. שחזר אותו לחשבון CaloShape זה לפני שימוש בתכונות Premium.</string>
     <string name="subscription_error_no_active_purchase">לא נמצאה רכישה פעילה.</string>
-    <string name="subscription_error_restore_failed">לא ניתן לשחזר את הרכישה. אנא נסה שוב.</string>
-    <string name="subscription_error_purchase_failed">הרכישה נכשלה. אנא נסה שוב.</string>
-    <string name="subscription_error_purchase_pending">התשלום נמצא בעיבוד. גישת פרימיום תהיה זמינה לאחר ש-Google Play יאשר את הרכישה.</string>
-    <string name="subscription_error_trial_eligibility_failed">לא ניתן לבדוק זכאות לניסיון. אנא נסה שוב.</string>
+    <string name="subscription_error_restore_failed">לא ניתן לשחזר את הרכישה. נסה שוב.</string>
+    <string name="subscription_error_purchase_failed">הרכישה נכשלה. נסה שוב.</string>
+    <string name="subscription_error_purchase_pending">התשלום בעיבוד. גישת Premium תהיה זמינה לאחר ש-Google Play יאשר את הרכישה.</string>
+    <string name="subscription_error_trial_eligibility_failed">לא ניתן לבדוק זכאות לניסיון. נסה שוב.</string>
     <string name="restore_subscription_dialog_title">נמצא מנוי</string>
     <string name="settings_restore_subscription">שחזר מנוי</string>
-    <string name="restore_subscription_dialog_restoring">משחזר...</string>
+    <string name="restore_subscription_dialog_restoring">משחזר…</string>
     <string name="common_maybe_later">אולי מאוחר יותר</string>
-
-
-    <!-- Onboarding: OnboardDiscountSpinScreen-->
-    <string name="subscription_spin_title">סיבוב כדי לפתוח \nהנחה בלעדית</string>
-    <string name="subscription_spin_helper_ready">הקש על סיבוב כדי לחשוף את המתנה הבלעדית שלך.</string>
-    <string name="subscription_spin_button">לְסוֹבֵב</string>
-    <string name="subscription_spinning_button">מסתובב…</string>
+    <string name="subscription_spin_title">סובב כדי לפתוח
+הנחה בלעדית</string>
+    <string name="subscription_spin_helper_ready">הקש על סובב כדי לחשוף את המתנה הבלעדית שלך.</string>
+    <string name="subscription_spin_button">סובב</string>
+    <string name="subscription_spinning_button">מסובב…</string>
     <string name="subscription_gift_offer_unlocked">הצעת מתנה נפתחה</string>
-    <string name="subscription_spin_helper_wait">אנא המתן עד שהגלגל ייעצר.</string>
-    <string name="subscription_spin_helper_revealed">הצעה זו מתגלה לאחר שהגלגל נעצר.</string>
-
-
-    <!-- Onboarding: OneTimeOfferHeroCard-->
+    <string name="subscription_spin_helper_wait">המתן עד שהגלגל ייעצר.</string>
+    <string name="subscription_spin_helper_revealed">ההצעה תיחשף לאחר שהגלגל יעצור.</string>
     <string name="subscription_gift_unlocked_title">מתנה נפתחה 🎁</string>
     <string name="subscription_gift_price_unlocked">מחיר מתנה נפתח</string>
-    <string name="subscription_unlock_premium_for_only">ביטול נעילה של פרימיום רק</string>
-    <string name="subscription_discount_body">סרוק ארוחות מהר יותר. עקוב אחר פקודות מאקרו בצורה חכמה יותר.\nהישאר על התוכנית היומית.</string>
+    <string name="subscription_unlock_premium_for_only">פתח Premium רק ב</string>
+    <string name="subscription_discount_body">סרוק ארוחות מהר יותר. עקוב אחרי מאקרו בצורה חכמה יותר.
+הישאר בתוכנית מדי יום.</string>
     <string name="subscription_yearly_price_format">%1$s/שנה</string>
     <string name="subscription_urgency_coffee">פחות מקפה</string>
-    <string name="subscription_urgency_price_gone">לסגור את המסך הזה? המחיר הזה נעלם</string>
+    <string name="subscription_urgency_price_gone">לסגור את המסך? המחיר הזה ייעלם</string>
     <string name="subscription_urgency_waiting">למה אתה מחכה?</string>
-
-    <string name="subscription_trial_enabled">גרסת ניסיון חינם מופעלת</string>
+    <string name="subscription_trial_enabled">ניסיון חינם מופעל</string>
     <string name="subscription_trial_enable_prompt">לא בטוח? הפעל ניסיון חינם</string>
-    <string name="subscription_trial_checking_eligibility">בודק זמינות גרסת הניסיון...</string>
-    <string name="subscription_trial_already_used">ניסיון כבר בשימוש</string>
-    <string name="subscription_trial_unavailable">ניסיון חינם אינו זמין</string>
-
+    <string name="subscription_trial_checking_eligibility">בודק זמינות ניסיון…</string>
+    <string name="subscription_trial_already_used">הניסיון כבר נוצל</string>
+    <string name="subscription_trial_unavailable">ניסיון חינם לא זמין</string>
     <string name="subscription_badge_free_trial">ניסיון חינם</string>
     <string name="subscription_badge_lowest_price_ever">המחיר הנמוך ביותר אי פעם</string>
     <string name="subscription_yearly_plan">תוכנית שנתית</string>
     <string name="subscription_yearly_plan_price_format">12 חודשים · %1$s</string>
-
-    <string name="subscription_start_free_trial">נסה בחינם למשך 3 ימים</string>
-    <string name="subscription_trial_helper">ללא התחייבות - בטל בכל עת</string>
-    <string name="subscription_discount_terms_format">רק %1$s לשנה (%2$s לחודש)</string>
-    <string name="subscription_discount_trial_terms_format">ללא התחייבות - בטל בכל עת</string>
-
-
-    <!-- HomeScreen -->
-    <string name="recently_uploaded">הועלה לאחרונה</string>
-    <string name="workout_membership_verify_failed">לא ניתן לאמת חברות. אנא נסה שוב.</string>
-
-
-    <!-- MainBottomBar -->
-    <string name="bottom_nav_home">בַּיִת</string>
-    <string name="bottom_nav_progress">הִתקַדְמוּת</string>
-    <string name="bottom_nav_weight">מִשׁקָל</string>
-    <string name="bottom_nav_fasting">תַעֲנִית</string>
-    <string name="bottom_nav_workout">אִמוּן</string>
-
-
-    <!-- =============   HomeCards  ============= -->
-
-    <!-- HomeCards :  Calories Card -->
+    <string name="subscription_start_free_trial">נסה חינם למשך 3 ימים</string>
+    <string name="subscription_trial_helper">ללא התחייבות — אפשר לבטל בכל זמן</string>
+    <string name="subscription_discount_terms_format">רק %1$s/שנה (%2$s/חודש)</string>
+    <string name="subscription_discount_trial_terms_format">ללא התחייבות - אפשר לבטל בכל זמן</string>
+    <string name="recently_uploaded">הועלו לאחרונה</string>
+    <string name="workout_membership_verify_failed">לא ניתן לאמת את החברות. נסה שוב.</string>
+    <string name="bottom_nav_home">בית</string>
+    <string name="bottom_nav_progress">התקדמות</string>
+    <string name="bottom_nav_weight">משקל</string>
+    <string name="bottom_nav_fasting">צום</string>
+    <string name="bottom_nav_workout">אימון</string>
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">נשארו קלוריות</string>
-    <string name="home_calories_eaten_label">קלוריות שנאכלו</string>
-
-
-    <!-- HomeCards :  Nutrition Card -->
+    <string name="home_calories_goal_label">kcal שנותרו</string>
+    <string name="home_calories_eaten_label">kcal שנצרכו</string>
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
-    <string name="home_protein_goal_label">נשאר חלבון</string>
-    <string name="home_protein_eaten_label">חלבון אוכלים</string>
-    <string name="home_carbs_goal_label">נשארו פחמימות</string>
-    <string name="home_carbs_eaten_label">פחמימות נאכלות</string>
-    <string name="home_fats_goal_label">נשארו שומנים</string>
-    <string name="home_fats_eaten_label">שומנים נאכלים</string>
-    <string name="home_fiber_goal_label">נותרו סיבים</string>
-    <string name="home_fiber_eaten_label">סיבים נאכלים</string>
-    <string name="home_sugar_goal_label">נשאר סוכר</string>
-    <string name="home_sugar_eaten_label">סוכר נאכל</string>
-    <string name="home_sodium_goal_label">נשאר נתרן</string>
-    <string name="home_sodium_eaten_label">נתרן נאכל</string>
+    <string name="home_protein_goal_label">חלבון שנותר</string>
+    <string name="home_protein_eaten_label">חלבון שנצרך</string>
+    <string name="home_carbs_goal_label">פחמימות שנותרו</string>
+    <string name="home_carbs_eaten_label">פחמימות שנצרכו</string>
+    <string name="home_fats_goal_label">שומנים שנותרו</string>
+    <string name="home_fats_eaten_label">שומנים שנצרכו</string>
+    <string name="home_fiber_goal_label">סיבים שנותרו</string>
+    <string name="home_fiber_eaten_label">סיבים שנצרכו</string>
+    <string name="home_sugar_goal_label">סוכר שנותר</string>
+    <string name="home_sugar_eaten_label">סוכר שנצרך</string>
+    <string name="home_sodium_goal_label">נתרן שנותר</string>
+    <string name="home_sodium_eaten_label">נתרן שנצרך</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
-
-
-    <!-- HomeCards :  Health Score Card & Advice -->
-    <string name="home_health_score_advice_zero">רשם את הארוחה הראשונה שלך היום כדי לראות ציון בריאות המבוסס על פרטי התזונה שלה.</string>
-    <string name="home_health_score_advice_very_low">הממוצע להיום נמוך. שקול יותר חלבון, סיבים, ופחות סוכר או נתרן.</string>
-    <string name="home_health_score_advice_low">יש מקום להשתפר. נסו להוסיף ירקות וחלבון איכותי.</string>
-    <string name="home_health_score_advice_medium">אתה בדרך. שמור על מנות יציבות וצפה בסוכר, נתרן וסיבים.</string>
-    <string name="home_health_score_advice_good">איזון טוב היום. המשיכו לבחור במזונות עתירי תזונה.</string>
-    <string name="home_health_score_advice_excellent">איזון מצוין היום. המשיכו לבנות הרגלים עקביים.</string>
+    <string name="home_health_score_advice_zero">רשום את הארוחה הראשונה היום כדי לראות ציון בריאות לפי פרטי התזונה שלה.</string>
+    <string name="home_health_score_advice_very_low">הממוצע של היום נמוך. שקול יותר חלבון וסיבים ופחות סוכר או נתרן.</string>
+    <string name="home_health_score_advice_low">יש מקום לשיפור. נסה להוסיף ירקות וחלבון איכותי.</string>
+    <string name="home_health_score_advice_medium">אתה במסלול. שמור על מנות יציבות ושים לב לסוכר, נתרן וסיבים.</string>
+    <string name="home_health_score_advice_good">איזון טוב היום. המשך לבחור מזונות עשירים ברכיבים תזונתיים.</string>
+    <string name="home_health_score_advice_excellent">איזון מצוין היום. המשך לבנות הרגלים עקביים.</string>
     <string name="home_health_score_title">ציון בריאות</string>
     <string name="home_health_score_value">%1$d/10</string>
-
-
-    <!-- HomeCards : Step Card -->
-    <string name="steps_card_title">שלבים</string>
+    <string name="steps_card_title">צעדים</string>
     <string name="steps_status_permission_not_granted">לא מורשה</string>
     <string name="steps_status_hc_not_installed">לא מותקן</string>
     <string name="steps_status_hc_unavailable">לא זמין</string>
-    <string name="steps_secondary_est_kcal">≈ %1$d קק\"ל</string>
-    <string name="steps_secondary_no_data_yet">עדיין אין נתונים</string>
-    <string name="steps_secondary_connect">לְחַבֵּר</string>
-    <string name="steps_hint_connect_google_health">חבר את Google Health כדי לעקוב אחר הצעדים שלך</string>
-    <string name="steps_hint_install_health_connect">התקן את Health Connect כדי לעקוב אחר הצעדים שלך</string>
+    <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
+    <string name="steps_secondary_no_data_yet">אין נתונים עדיין</string>
+    <string name="steps_secondary_connect">התחבר</string>
+    <string name="steps_hint_connect_google_health">התחבר ל-Google Health כדי לעקוב אחרי הצעדים שלך</string>
+    <string name="steps_hint_install_health_connect">התקן את Health Connect כדי לעקוב אחרי הצעדים שלך</string>
     <string name="steps_hint_hc_unavailable">Health Connect אינו זמין במכשיר זה</string>
     <string name="steps_hint_retry">הסנכרון נכשל. הקש כדי לנסות שוב</string>
-
-
-    <!-- HomeCards : Workout Card -->
-    <string name="workout_card_title">אִמוּן</string>
-    <string name="workout_card_unit_kcal">קק\"ל</string>
-
-
-    <!-- HomeCards : Weight Card -->
-    <string name="weight_card_title">מִשׁקָל</string>
-    <string name="weight_card_of_goal">של המטרה</string>
-
-
-    <!-- HomeCards : Fasting Card -->
+    <string name="workout_card_title">אימון</string>
+    <string name="workout_card_unit_kcal">kcal</string>
+    <string name="weight_card_title">משקל</string>
+    <string name="weight_card_of_goal">מהיעד</string>
     <string name="fasting_card_plan_title">תוכנית צום</string>
     <string name="fasting_card_start_time">שעת התחלה</string>
     <string name="fasting_card_end_time">שעת סיום</string>
-
-
-    <!-- HomeCards : Water Card -->
-    <string name="water_intake_title">מַיִם</string>
+    <string name="water_intake_title">מים</string>
     <string name="water_intake_cups_format">(%1$d כוסות)</string>
-
-
-    <!-- =========================
-         ProgressScreen
-         ========================= -->
-    <string name="progress_screen_title">הִתקַדְמוּת</string>
+    <string name="progress_screen_title">התקדמות</string>
     <string name="progress_tab_this_week">השבוע</string>
-    <string name="progress_tab_last_week">שבוע שעבר</string>
-    <string name="progress_tab_two_weeks_ago">2 שבועות. לִפנֵי</string>
-    <string name="progress_tab_three_weeks_ago">3 שבועות. לִפנֵי</string>
+    <string name="progress_tab_last_week">השבוע שעבר</string>
+    <string name="progress_tab_two_weeks_ago">לפני 2 שבועות</string>
+    <string name="progress_tab_three_weeks_ago">לפני 3 שבועות</string>
     <string name="progress_error_load_failed">הטעינה נכשלה</string>
     <string name="workout_chart_error_load_failed">טעינת תרשים האימון נכשלה</string>
     <string name="water_chart_error_load_failed">טעינת תרשים המים נכשלה</string>
-
-
-    <!-- =========================
-         BMI Card / BMI Info Dialog
-         ========================= -->
     <string name="bmi_card_title">ה-BMI שלך</string>
     <string name="bmi_card_subtitle">המשקל שלך הוא</string>
-
-    <string name="bmi_status_underweight">תת משקל</string>
-    <string name="bmi_status_healthy">בָּרִיא</string>
+    <string name="bmi_status_underweight">תת-משקל</string>
+    <string name="bmi_status_healthy">בריא</string>
     <string name="bmi_status_overweight">עודף משקל</string>
-    <string name="bmi_status_obese">שָׁמֵן מְאֹד</string>
-    <string name="bmi_status_unknown">לֹא יְדוּעַ</string>
-
+    <string name="bmi_status_obese">השמנה</string>
+    <string name="bmi_status_unknown">לא ידוע</string>
     <string name="bmi_range_underweight">&lt;18.5</string>
     <string name="bmi_range_healthy">18.5–24.9</string>
     <string name="bmi_range_overweight">25.0–29.9</string>
     <string name="bmi_range_obese">&gt;30.0</string>
-
-    <string name="bmi_info_title">מה זה BMI?</string>
-    <string name="bmi_info_subtitle">מדד מסת הגוף</string>
-    <string name="bmi_info_formula_title">נוּסחָה</string>
-    <string name="bmi_info_formula_value">BMI = משקל (ק\"ג) / גובה (מ\"ר)</string>
+    <string name="bmi_info_title">מהו BMI?</string>
+    <string name="bmi_info_subtitle">מדד מסת גוף</string>
+    <string name="bmi_info_formula_title">נוסחה</string>
+    <string name="bmi_info_formula_value">BMI = משקל (kg) / גובה (m²)</string>
     <string name="bmi_info_meaning_title">מה זה אומר לך</string>
-    <string name="bmi_info_meaning_body">BMI עוזר להעריך אם משקל הגוף שלך נמצא בטווח בריא בדרך כלל.</string>
-    <string name="bmi_info_note_title">לִזכּוֹר</string>
-    <string name="bmi_info_note_body">BMI הוא מדריך כללי. זה לא מודד ישירות שומן בגוף, מסת שריר או בריאות כללית.</string>
+    <string name="bmi_info_meaning_body">BMI עוזר להעריך אם משקל הגוף שלך נמצא בטווח בריא באופן כללי.</string>
+    <string name="bmi_info_note_title">חשוב לזכור</string>
+    <string name="bmi_info_note_body">BMI הוא מדריך כללי. הוא לא מודד ישירות שומן גוף, מסת שריר או בריאות כללית.</string>
     <string name="bmi_info_cta">הבנתי</string>
-
-
-    <!-- =========================
-         NutritionChartCard
-         ========================= -->
-    <string name="progress_chart_7day_avg_calories">ממוצע של 7 ימים</string>
-    <string name="progress_chart_value_cals">%1$d קלוריות</string>
-    <string name="progress_chart_15day_avg_calories">ממוצע של 15 יום</string>
-    <string name="progress_chart_loading_total_calories_text">--.- קלוריות</string>
+    <string name="progress_chart_7day_avg_calories">ממוצע 7 ימים</string>
+    <string name="progress_chart_value_cals">%1$d kcal</string>
+    <string name="progress_chart_15day_avg_calories">ממוצע 15 ימים</string>
+    <string name="progress_chart_loading_total_calories_text">--.- kcal</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
-    <string name="progress_chart_total_calories">סך הכל קלוריות</string>
-    <string name="progress_chart_cals">cals</string>
-    <string name="progress_legend_protein">חֶלְבּוֹן</string>
+    <string name="progress_chart_total_calories">סה״כ kcal</string>
+    <string name="progress_chart_cals">kcal</string>
+    <string name="progress_legend_protein">חלבון</string>
     <string name="progress_legend_carbs">פחמימות</string>
     <string name="progress_legend_fats">שומנים</string>
-    <string name="progress_keep_it_up">תמשיך כך! ההתחלה היא החלק הקשה ביותר!</string>
-
-    <string name="progress_day_sun">שֶׁמֶש</string>
-    <string name="progress_day_mon">יום שני</string>
-    <string name="progress_day_tue">יום שלישי</string>
-    <string name="progress_day_wed">לְהִתְחַתֵן</string>
-    <string name="progress_day_thu">יום ה\'</string>
-    <string name="progress_day_fri">שישי</string>
-    <string name="progress_day_sat">שבת</string>
-
-    <string name="progress_tooltip_calories">קלוריות</string>
-    <string name="progress_tooltip_protein">חֶלְבּוֹן</string>
+    <string name="progress_keep_it_up">המשך כך! להתחיל זה החלק הכי קשה!</string>
+    <string name="progress_day_sun">א׳</string>
+    <string name="progress_day_mon">ב׳</string>
+    <string name="progress_day_tue">ג׳</string>
+    <string name="progress_day_wed">ד׳</string>
+    <string name="progress_day_thu">ה׳</string>
+    <string name="progress_day_fri">ו׳</string>
+    <string name="progress_day_sat">ש׳</string>
+    <string name="progress_tooltip_calories">kcal</string>
+    <string name="progress_tooltip_protein">חלבון</string>
     <string name="progress_tooltip_carbs">פחמימות</string>
     <string name="progress_tooltip_fats">שומנים</string>
     <string name="progress_tooltip_label_format">%1$s:</string>
     <string name="progress_tooltip_grams_value">%1$d g</string>
     <string name="progress_tooltip_plain_value">%1$d</string>
-
-
-    <!-- =========================
-         MicronutrientChartCard
-         ========================= -->
-    <string name="progress_micronutrients_title">מיקרו-נוטריינטים</string>
+    <string name="progress_micronutrients_title">מיקרונוטריינטים</string>
     <string name="progress_chart_grams">g</string>
-    <string name="progress_chart_7day_avg">ממוצע של 7 ימים</string>
-    <string name="progress_legend_fiber">סִיב</string>
-    <string name="progress_legend_sugar">סוּכָּר</string>
-    <string name="progress_legend_sodium">נַתרָן</string>
-    <string name="progress_micronutrients_keep_it_up">שמור על איזון סיבים, סוכר ונתרן.</string>
-    <string name="progress_tooltip_fiber">סִיב</string>
-    <string name="progress_tooltip_sugar">סוּכָּר</string>
-    <string name="progress_tooltip_sodium">נַתרָן</string>
+    <string name="progress_chart_7day_avg">ממוצע 7 ימים</string>
+    <string name="progress_legend_fiber">סיבים</string>
+    <string name="progress_legend_sugar">סוכר</string>
+    <string name="progress_legend_sodium">נתרן</string>
+    <string name="progress_micronutrients_keep_it_up">שמור על איזון בין סיבים, סוכר ונתרן.</string>
+    <string name="progress_tooltip_fiber">סיבים</string>
+    <string name="progress_tooltip_sugar">סוכר</string>
+    <string name="progress_tooltip_sodium">נתרן</string>
     <string name="progress_tooltip_mg_value">%1$d mg</string>
-
-
-    <!-- =========================
-         WorkoutChartCard
-         ========================= -->
-    <string name="workout_chart_goal_reached">המטרה הושגה היום</string>
-    <string name="workout_chart_goal_left">נותרו %1$d קק\"ל כדי להגיע למטרה להיום</string>
-    <string name="workout_chart_title">צריבה באימון</string>
-    <string name="workout_chart_info_dialog_body">כולל אימונים מתועדים וקלוריות פעילות המוערכות בצעדים יומיים.</string>
-    <string name="workout_chart_unit_kcal">קק\"ל</string>
-    <string name="workout_chart_goal">יַעַד</string>
-    <string name="workout_chart_value_kcal">%1$d קק\"ל</string>
-    <string name="workout_chart_7day_avg">ממוצע של 7 ימים</string>
-    <string name="workout_chart_loading">טְעִינָה…</string>
-    <string name="workout_legend_burned">האימון נשרף</string>
-    <string name="workout_legend_daily_goal">מטרה יומית</string>
+    <string name="workout_chart_goal_reached">היעד הושג היום</string>
+    <string name="workout_chart_goal_left">נותרו %1$d kcal כדי להגיע ליעד היום</string>
+    <string name="workout_chart_title">שריפת אימון</string>
+    <string name="workout_chart_info_dialog_body">כולל אימונים שנרשמו ו-kcal פעילות המוערכים מצעדים יומיים.</string>
+    <string name="workout_chart_unit_kcal">kcal</string>
+    <string name="workout_chart_goal">יעד</string>
+    <string name="workout_chart_value_kcal">%1$d kcal</string>
+    <string name="workout_chart_7day_avg">ממוצע 7 ימים</string>
+    <string name="workout_chart_loading">טוען…</string>
+    <string name="workout_legend_burned">נשרף באימון</string>
+    <string name="workout_legend_daily_goal">יעד יומי</string>
     <string name="workout_tooltip_burned">נשרף</string>
-    <string name="workout_tooltip_kcal_value">%1$d קק\"ל</string>
-
-
-    <!-- =========================
-         WaterChartCard
-         ========================= -->
-    <string name="water_chart_goal_reached">המטרה הושגה להיום</string>
-    <string name="water_chart_goal_left_ml">נותרו %1$s מ\"ל כדי להגיע ליעד להיום</string>
+    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+    <string name="water_chart_goal_reached">היעד הושג היום</string>
+    <string name="water_chart_goal_left_ml">נותרו %1$s ml כדי להגיע ליעד היום</string>
     <string name="water_chart_title">צריכת מים</string>
     <string name="water_chart_unit_ml">ml</string>
-    <string name="water_chart_goal">יַעַד</string>
-    <string name="water_chart_value_ml">%1$s מ\"ל</string>
-    <string name="water_chart_7day_avg">ממוצע של 7 ימים</string>
-    <string name="water_chart_loading">טְעִינָה…</string>
-    <string name="water_legend_intake">הַכנָסָה</string>
-    <string name="water_legend_daily_goal">מטרה יומית</string>
-    <string name="water_tooltip_intake">הַכנָסָה</string>
-    <string name="water_tooltip_ml_value">%1$d מ\"ל</string>
-
-
-    <!-- =========================
-         ProgressAverageOverviewSection
-         ========================= -->
+    <string name="water_chart_goal">יעד</string>
+    <string name="water_chart_value_ml">%1$s ml</string>
+    <string name="water_chart_7day_avg">ממוצע 7 ימים</string>
+    <string name="water_chart_loading">טוען…</string>
+    <string name="water_legend_intake">צריכה</string>
+    <string name="water_legend_daily_goal">יעד יומי</string>
+    <string name="water_tooltip_intake">צריכה</string>
+    <string name="water_tooltip_ml_value">%1$d ml</string>
     <string name="progress_average_tab_7_days">7 ימים</string>
     <string name="progress_average_tab_15_days">15 ימים</string>
     <string name="progress_average_tab_30_days">30 ימים</string>
-    <string name="progress_average_tab_60_days">60 יום</string>
-
-    <string name="progress_average_overview_title">סקירה ממוצעת</string>
-    <string name="progress_average_overview_subtitle">לא כולל היום וממוצע רק ימים עם נתונים.</string>
-    <string name="progress_average_days_badge">ממוצע %1$d יום</string>
-    <string name="progress_average_loading">טוען ממוצעים...</string>
-    <string name="progress_average_total_calories">סך הכל קלוריות</string>
-    <string name="progress_average_protein">חֶלְבּוֹן</string>
+    <string name="progress_average_tab_60_days">60 ימים</string>
+    <string name="progress_average_overview_title">סקירת ממוצעים</string>
+    <string name="progress_average_overview_subtitle">לא כולל את היום ומחשב ממוצע רק לימים עם נתונים.</string>
+    <string name="progress_average_days_badge">ממוצע %1$d ימים</string>
+    <string name="progress_average_loading">טוען ממוצעים…</string>
+    <string name="progress_average_total_calories">סה״כ kcal</string>
+    <string name="progress_average_protein">חלבון</string>
     <string name="progress_average_carbs">פחמימות</string>
     <string name="progress_average_fats">שומנים</string>
-    <string name="progress_average_fiber">סִיב</string>
-    <string name="progress_average_sugar">סוּכָּר</string>
-    <string name="progress_average_sodium">נַתרָן</string>
-    <string name="progress_average_workout">האימון נשרף</string>
+    <string name="progress_average_fiber">סיבים</string>
+    <string name="progress_average_sugar">סוכר</string>
+    <string name="progress_average_sodium">נתרן</string>
+    <string name="progress_average_workout">kcal שנשרפו באימון</string>
     <string name="progress_average_water">צריכת מים</string>
     <string name="progress_average_health_score">ציון בריאות</string>
-    <string name="progress_average_steps">שלבים</string>
+    <string name="progress_average_steps">צעדים</string>
     <string name="progress_average_health_score_value">%1$.1f / 10</string>
     <string name="progress_average_steps_value">%1$s צעדים</string>
-
-
-    <!--WeightScreen-->
-    <string name="weight_title">מִשׁקָל</string>
-    <string name="weight_overview_title">סקירה כללית</string>
-    <string name="weight_history_title">הִיסטוֹרִיָה</string>
+    <string name="weight_title">משקל</string>
+    <string name="weight_overview_title">סקירה</string>
+    <string name="weight_history_title">היסטוריה</string>
     <string name="weight_delete_success">נמחק בהצלחה!</string>
-    <string name="weight_delete_failed">המחיקה נכשלה. אנא נסה שוב.</string>
-    <string name="weight_log_weight">משקל יומן</string>
-
-
-    <!-- WeightComponents -->
-    <string name="weight_card_to_goal_weight">למשקל המטרה</string>
+    <string name="weight_delete_failed">המחיקה נכשלה. נסה שוב.</string>
+    <string name="weight_log_weight">רשום משקל</string>
+    <string name="weight_card_to_goal_weight">עד משקל היעד</string>
     <string name="weight_card_current_weight">משקל נוכחי</string>
-    <string name="weight_card_achieved_goal_format">השיג %1$s%% מהיעד</string>
+    <string name="weight_card_achieved_goal_format">הושג %1$s%% מהיעד</string>
     <string name="weight_chart_tab_30_days">30 ימים</string>
-    <string name="weight_chart_tab_60_days">60 יום</string>
-    <string name="weight_chart_tab_90_days">90 יום</string>
+    <string name="weight_chart_tab_60_days">60 ימים</string>
+    <string name="weight_chart_tab_90_days">90 ימים</string>
     <string name="weight_chart_tab_all_time">כל הזמן</string>
     <string name="weight_chart_title">מגמת משקל</string>
     <string name="weight_chart_goal_progress_badge">%1$s%% מהיעד</string>
-    <string name="weight_chart_goal_label">יַעַד</string>
-    <string name="weight_chart_to_goal">%1$s למטרה</string>
-    <string name="weight_goal_chart_empty_hint">רשום משקל כדי להתחיל את הטרנד שלך</string>
-    <string name="weight_chart_motivation">כל צעד קטן מקרב אותך אל המטרה שלך.</string>
-    <string name="weight_history_weight_label">מִשׁקָל</string>
-    <string name="weight_history_change_label">לְשַׁנוֹת</string>
-    <string name="weight_history_trend_loss">הֶפסֵד</string>
-    <string name="weight_history_trend_gain">לְהַשִׂיג</string>
-    <string name="weight_history_trend_stable">יַצִיב</string>
-
-
-    <!-- FastingPlansScreen -->
+    <string name="weight_chart_goal_label">יעד</string>
+    <string name="weight_chart_to_goal">%1$s עד היעד</string>
+    <string name="weight_goal_chart_empty_hint">רשום משקל כדי להתחיל את המגמה</string>
+    <string name="weight_chart_motivation">כל צעד קטן מקרב אותך ליעד.</string>
+    <string name="weight_history_weight_label">משקל</string>
+    <string name="weight_history_change_label">שינוי</string>
+    <string name="weight_history_trend_loss">ירידה</string>
+    <string name="weight_history_trend_gain">עלייה</string>
+    <string name="weight_history_trend_stable">יציב</string>
     <string name="fasting_plan_title">תוכנית צום</string>
     <string name="start_time">שעת התחלה</string>
     <string name="end_time">שעת סיום</string>
-    <string name="fasting_notification_info_status_on">התזכורות פועלות. אם מותרת הרשאת הודעות במכשיר, התזכורות הללו חוזרות על עצמן מדי יום.</string>
-    <string name="fasting_notification_info_status_off">התזכורות כבויות. הפעל את המתג בכרטיס צום ביתי כדי לקבל את ההתראות האלה.</string>
-    <string name="fasting_notification_info_status_enabled_label">עַל</string>
+    <string name="fasting_notification_info_status_on">התזכורות פועלות. אם הרשאת ההתראות במכשיר מאושרת, התזכורות יחזרו מדי יום.</string>
+    <string name="fasting_notification_info_status_off">התזכורות כבויות. הפעל את המתג בכרטיס הצום במסך הבית כדי לקבל התראות אלו.</string>
+    <string name="fasting_notification_info_status_enabled_label">פועל</string>
     <string name="fasting_notification_info_status_disabled_label">כבוי</string>
-    <string name="fasting_notification_info_title">איך פועלות תזכורות</string>
-    <string name="fasting_notification_info_subtitle">תוכנית %1$s שלך מסתיימת ב-%2$s. כאשר התזכורות פועלות, CaloShape שולח שתי התראות יומיות.</string>
+    <string name="fasting_notification_info_title">איך התזכורות עובדות</string>
+    <string name="fasting_notification_info_subtitle">תוכנית %1$s שלך מסתיימת ב-%2$s. כשהתזכורות פועלות, CaloShape שולח שתי התראות יומיות.</string>
     <string name="fasting_notification_info_at_time">ב-%1$s</string>
     <string name="fasting_notification_info_start_title">חלון האכילה מתחיל</string>
-    <string name="fasting_notification_info_start_body">אתה יכול להתחיל לאכול ולמנות ארוחות בעת הצורך.</string>
-    <string name="fasting_notification_info_endsoon_title">חלון האכילה מסתיים בקרוב</string>
-    <string name="fasting_notification_info_endsoon_body">שעה לפני סגירת החלון ב-%1$s, CaloShape מזכירה לך לסיים את הארוחה האחרונה שלך.</string>
-
-    <string name="fasting_plan_desc_14_10">היכנס בקלות עם קצב יציב - 14 שעות כדי לאפס את רמזי התיאבון והאנרגיה.</string>
-    <string name="fasting_plan_desc_16_8">חביב הקהל מסיבה כלשהי - 16 שעות כדי להישאר ממוקדים ובחריץ רזה.</string>
-    <string name="fasting_plan_desc_12_12">פיצול מאוזן: מהיר 12 שעות, אכל בתוך חלון של 12 שעות - מושלם למתחילים.</string>
-    <string name="fasting_plan_desc_18_6">18 שעות צום, עם חלון אכילה של 6 שעות - לוח זמנים דק יותר מ-16:8.</string>
-    <string name="fasting_plan_desc_20_4">הישאר ממוקד בלייזר - 1-2 ארוחות מודעת בתוך חלון צפוף של 4 שעות.</string>
-    <string name="fasting_plan_desc_22_2">ארוחה מכוונת אחת במשבצת של שעתיים - הקפידו על צריכת מים.</string>
-
-    <string name="fasting_picker_title">הגדר את זמן ההתחלה שלך בצום</string>
-    <string name="fasting_picker_subtitle">אנו נזכיר לך בשעה זו בכל יום כאשר חלון האכילה שלך מתחיל.</string>
+    <string name="fasting_notification_info_start_body">אפשר להתחיל לאכול ולרשום ארוחות בעת הצורך.</string>
+    <string name="fasting_notification_info_endsoon_title">חלון האכילה עומד להסתיים</string>
+    <string name="fasting_notification_info_endsoon_body">שעה לפני שהחלון נסגר ב-%1$s, CaloShape מזכיר לך לסיים את הארוחה האחרונה.</string>
+    <string name="fasting_plan_desc_14_10">התחל בקלות עם קצב יציב—14 שעות לאיפוס רמזי רעב ואנרגיה.</string>
+    <string name="fasting_plan_desc_16_8">מועדף על רבים מסיבה טובה—16 שעות כדי לשמור על מיקוד ושגרה רזה.</string>
+    <string name="fasting_plan_desc_12_12">חלוקה מאוזנת: צום 12 שעות ואכילה בחלון של 12 שעות — מושלם למתחילים.</string>
+    <string name="fasting_plan_desc_18_6">18 שעות צום עם חלון אכילה של 6 שעות — לוח זמנים מהודק יותר מ-16:8.</string>
+    <string name="fasting_plan_desc_20_4">הישאר ממוקד במיוחד—1–2 ארוחות מודעות בחלון צר של 4 שעות.</string>
+    <string name="fasting_plan_desc_22_2">ארוחה אחת מכוונת בחלון של 2 שעות—שמור על צריכת מים.</string>
+    <string name="fasting_picker_title">הגדר את שעת תחילת הצום</string>
+    <string name="fasting_picker_subtitle">נזכיר לך בשעה זו בכל יום כשחלון האכילה מתחיל.</string>
     <string name="fasting_plan_save_failed">השמירה נכשלה</string>
-
-
-    <!-- FastingReceiver -->
-    <string name="fasting_start_title">%1$s חלון האוכל פתוח</string>
-    <string name="fasting_start_body">חלון האכילה שלך פועל %1$s–%2$s. רישום ארוחות תוך כדי כדי לשמור על דיוק היום.</string>
-    <string name="fasting_endsoon_title">נותרה שעה אחת בחלון האכילה שלך</string>
-    <string name="fasting_endsoon_body">החלון שלך נסגר בשעה %1$s. אם אתם מתכננים ארוחה אחרונה, רשמו אותה לפני שאתם מסיימים.</string>
-
-
-
-
-    <!-- WorkoutHistoryScreen -->
-    <string name="workout_history_title">היסטוריית האימון</string>
-    <string name="workout_history_summary_label">היום נשרף</string>
-    <string name="workout_history_summary_body">עקוב אחר התקדמות שריפת האימון של היום</string>
-    <string name="workout_history_today_label">הַיוֹם</string>
-    <string name="workout_history_avg_daily_value">%1$d קק\"ל</string>
-    <string name="workout_history_avg_daily_label">ממוצע 7 ימים ליום</string>
-    <string name="workout_history_avg_label">ממוצע ל-7 ימים/מפגש</string>
-    <string name="workout_history_avg_value">%1$d קק\"ל</string>
-    <string name="workout_history_unit_kcal">קק\"ל</string>
-
+    <string name="fasting_start_title">חלון האכילה %1$s פתוח</string>
+    <string name="fasting_start_body">חלון האכילה שלך פועל מ-%1$s עד %2$s. רשום ארוחות תוך כדי כדי לשמור על דיוק היום.</string>
+    <string name="fasting_endsoon_title">נותרה שעה אחת בחלון האכילה</string>
+    <string name="fasting_endsoon_body">החלון נסגר ב-%1$s. אם אתה מתכנן ארוחה אחרונה, רשום אותה לפני הסיום.</string>
+    <string name="workout_history_title">היסטוריית אימונים</string>
+    <string name="workout_history_summary_label">נשרף היום</string>
+    <string name="workout_history_summary_body">עקוב אחרי התקדמות שריפת האימון של היום</string>
+    <string name="workout_history_today_label">היום</string>
+    <string name="workout_history_avg_daily_value">%1$d kcal</string>
+    <string name="workout_history_avg_daily_label">ממוצע 7 ימים / יום</string>
+    <string name="workout_history_avg_label">ממוצע 7 ימים / אימון</string>
+    <string name="workout_history_avg_value">%1$d kcal</string>
+    <string name="workout_history_unit_kcal">kcal</string>
     <string name="workout_history_empty_title">אין אימונים אחרונים</string>
     <string name="workout_history_empty">אין אימונים ב-7 הימים האחרונים.</string>
-    <string name="workout_history_recent_title">הפעלות האחרונות</string>
-    <string name="workout_history_minutes">%1$d דקות</string>
+    <string name="workout_history_recent_title">אימונים אחרונים</string>
+    <string name="workout_history_minutes">%1$d min</string>
     <string name="workout_history_kcal">%1$d</string>
     <string name="workout_history_date_time">%1$s · %2$s</string>
-    <string name="workout_history_kcal_with_unit">%1$d קק\"ל</string>
-
-    <string name="workout_history_loading_title">סנכרון אימונים</string>
-    <string name="workout_history_loading">טוען היסטוריית אימונים...</string>
-    <string name="workout_history_error_title">ההיסטוריה לא זמינה</string>
-
-    <string name="workout_history_delete_failed">המחיקה נכשלה. אנא נסה שוב.</string>
+    <string name="workout_history_kcal_with_unit">%1$d kcal</string>
+    <string name="workout_history_loading_title">מסנכרן אימונים</string>
+    <string name="workout_history_loading">טוען היסטוריית אימונים…</string>
+    <string name="workout_history_error_title">ההיסטוריה אינה זמינה</string>
+    <string name="workout_history_delete_failed">המחיקה נכשלה. נסה שוב.</string>
     <string name="workout_history_delete_success">נמחק בהצלחה!</string>
-    <string name="workout_history_error">לא ניתן לטעון את היסטוריית האימונים.</string>
-
-
-    <!-- WorkoutTrackerSheet -->
-    <string name="workout_tracker_title">מעקב אימונים</string>
-    <string name="workout_tracker_subtitle">תאר את סוג התרגיל ומשך הזמן</string>
-    <string name="workout_tracker_example_placeholder">דוגמה: 45 דקות ריצה</string>
-
+    <string name="workout_history_error">לא ניתן לטעון היסטוריית אימונים.</string>
+    <string name="workout_tracker_title">מעקב אימון</string>
+    <string name="workout_tracker_subtitle">תאר את סוג האימון ואת משך הזמן</string>
+    <string name="workout_tracker_example_placeholder">דוגמה: 45 min running</string>
     <string name="workout_tracker_select_from_list">או בחר מהרשימה</string>
     <string name="workout_tracker_show_less">הצג פחות</string>
     <string name="workout_tracker_show_more">הצג עוד (%1$d)</string>
-
-    <string name="workout_tracker_estimating_fallback">מעריך...</string>
-    <string name="workout_tracker_estimating_analyzing">מנתח את הפעילות שלך...</string>
-    <string name="workout_tracker_estimating_numbers">עובד על המספרים שלך...</string>
-    <string name="workout_tracker_estimating_calories">אומדן מאמץ, חישוב קלוריות...</string>
-    <string name="workout_tracker_do_not_close">נא לא לסגור את האפליקציה או לנעול את המכשיר</string>
-
-    <string name="workout_tracker_kcal_value">%1$d קק\"ל</string>
-    <string name="workout_tracker_minutes_activity">%1$d דקות %2$s</string>
+    <string name="workout_tracker_estimating_fallback">מעריך…</string>
+    <string name="workout_tracker_estimating_analyzing">מנתח את הפעילות שלך…</string>
+    <string name="workout_tracker_estimating_numbers">עובד על המספרים שלך…</string>
+    <string name="workout_tracker_estimating_calories">מעריך מאמץ ומחשב kcal…</string>
+    <string name="workout_tracker_do_not_close">אל תסגור את האפליקציה ואל תנעל את המכשיר</string>
+    <string name="workout_tracker_kcal_value">%1$d kcal</string>
+    <string name="workout_tracker_minutes_activity">%1$d min %2$s</string>
     <string name="workout_tracker_add_workout">הוסף אימון</string>
-
     <string name="workout_tracker_activity_content_label">פעילות אימון</string>
-    <string name="workout_preset_kcal_per_30_min">%1$d קק\"ל / 30 דקות</string>
-
+    <string name="workout_preset_kcal_per_30_min">%1$d kcal / 30 min</string>
     <string name="workout_tracker_save_success">נשמר בהצלחה!</string>
-    <string name="workout_tracker_save_failed">השמירה נכשלה. אנא נסה שוב.</string>
-    <string name="workout_tracker_refresh_failed">הרענון נכשל. אנא נסה שוב.</string>
-    <string name="workout_tracker_cancel">לְבַטֵל</string>
+    <string name="workout_tracker_save_failed">השמירה נכשלה. נסה שוב.</string>
+    <string name="workout_tracker_refresh_failed">הרענון נכשל. נסה שוב.</string>
+    <string name="workout_tracker_cancel">בטל</string>
     <string name="workout_tracker_try_again">נסה שוב</string>
-    <string name="workout_tracker_scan_failed_title">אה-הו! הסריקה נכשלה</string>
-    <string name="workout_tracker_scan_failed_body">ייתכן שתיאור האימון אינו נכון, או שהחיבור לאינטרנט חלש. לדוגמא: 30 דקות ריצה.</string>
-
-
-    <!-- workoutNameStringRes : Workout preset display names -->
+    <string name="workout_tracker_scan_failed_title">אופס! הסריקה נכשלה</string>
+    <string name="workout_tracker_scan_failed_body">תיאור האימון עשוי להיות שגוי או שחיבור האינטרנט חלש. לדוגמה: 30 min Running.</string>
     <string name="workout_preset_walking">הליכה</string>
-    <string name="workout_preset_running">רִיצָה</string>
+    <string name="workout_preset_running">ריצה</string>
     <string name="workout_preset_cycling">רכיבה על אופניים</string>
-    <string name="workout_preset_swimming">שְׂחִיָה</string>
+    <string name="workout_preset_swimming">שחייה</string>
     <string name="workout_preset_hiking">טיול רגלי</string>
-    <string name="workout_preset_aerobic_exercise">פעילות אירובית</string>
-    <string name="workout_preset_strength_training">אימוני כוח</string>
+    <string name="workout_preset_aerobic_exercise">אימון אירובי</string>
+    <string name="workout_preset_strength_training">אימון כוח</string>
     <string name="workout_preset_weight_training">אימון משקולות</string>
-    <string name="workout_preset_basketball">כַּדוּרסַל</string>
-    <string name="workout_preset_soccer">כַּדוּרֶגֶל</string>
-    <string name="workout_preset_tennis">טֶנִיס</string>
-    <string name="workout_preset_yoga">יוֹגָה</string>
-    <string name="workout_preset_badminton">בַּדמִינטוֹן</string>
-    <string name="workout_preset_baseball">כַּדוּר בָּסִיס</string>
-    <string name="workout_preset_softball">כַּדוּר בָּסִיס</string>
-    <string name="workout_preset_volleyball">כַּדוּר עָף</string>
-    <string name="workout_preset_table_tennis">טֶנִיס שׁוּלְחָן</string>
+    <string name="workout_preset_basketball">כדורסל</string>
+    <string name="workout_preset_soccer">כדורגל</string>
+    <string name="workout_preset_tennis">טניס</string>
+    <string name="workout_preset_yoga">יוגה</string>
+    <string name="workout_preset_badminton">בדמינטון</string>
+    <string name="workout_preset_baseball">בייסבול</string>
+    <string name="workout_preset_softball">סופטבול</string>
+    <string name="workout_preset_volleyball">כדורעף</string>
+    <string name="workout_preset_table_tennis">טניס שולחן</string>
     <string name="workout_preset_dancing_general">ריקוד</string>
     <string name="workout_preset_zumba">זומבה</string>
     <string name="workout_preset_pilates">פילאטיס</string>
-
-
-    <!-- DurationPickerSheet -->
     <string name="workout_duration_sheet_subtitle">הוסף את זמן האימון הזה ליומן הפעילות שלך</string>
-    <string name="workout_duration_hour_short">שעה</string>
-    <string name="workout_duration_minute_short">דקה</string>
-    <string name="workout_duration_save">לְהַצִיל</string>
-    <string name="workout_duration_cancel">לְבַטֵל</string>
-
-
-    <!-- HomeQuickActionMenu -->
-    <string name="quick_add_saved_foods">מזונות שמורים</string>
+    <string name="workout_duration_hour_short">hr</string>
+    <string name="workout_duration_minute_short">min</string>
+    <string name="workout_duration_save">שמור</string>
+    <string name="workout_duration_cancel">בטל</string>
+    <string name="quick_add_saved_foods">מאכלים שמורים</string>
     <string name="quick_add_scan_food">סרוק אוכל</string>
-
-
-    <!-- CameraScreen -->
     <string name="camera_mode_food">סרוק אוכל</string>
     <string name="camera_mode_barcode">ברקוד</string>
     <string name="camera_mode_label">תווית מזון</string>
     <string name="camera_mode_album">תמונות</string>
     <string name="camera_barcode_title">סורק ברקוד</string>
-    <string name="camera_label_title">סורק תוויות</string>
+    <string name="camera_label_title">סורק תווית</string>
     <string name="camera_need_permission">נדרשת הרשאת מצלמה כדי לסרוק</string>
-
-
-    <!-- RecentUploadCard -->
-    <string name="foodlog_pending_analysis">מנתח את האוכל שלך...</string>
+    <string name="foodlog_pending_analysis">מנתח את האוכל שלך…</string>
     <string name="foodlog_analysis_done">הניתוח הושלם</string>
-    <string name="recent_upload_kcal_text">🔥 %1$d קלוריות</string>
+    <string name="recent_upload_kcal_text">🔥 %1$d kcal</string>
     <string name="recent_upload_protein_text">🥩 %1$dg</string>
     <string name="recent_upload_carbs_text">🌾 %1$dg</string>
     <string name="recent_upload_fat_text">🥑 %1$dg</string>
-
-
-    <!-- RecentlyUploadedEmptyCard -->
-    <string name="recently_uploaded_empty">הועלה לאחרונה</string>
-    <string name="recently_uploaded_empty_hint">הקש על + כדי להוסיף את הארוחה הראשונה שלך ביום</string>
-
-
-    <!-- SavedFoodsScreen -->
-    <string name="saved_foods_keep_15_days_hint">מזונות שמורים מ-15 הימים האחרונים.</string>
-    <string name="saved_foods_unsave_dialog_title">להסיר ממזונות שמורים?</string>
-    <string name="saved_foods_unsave_dialog_message">ארוחה זו תוסר מרשימת המזונות השמורים שלך, אך היא עדיין תישאר ברשומות האחרונות שלך.</string>
-    <string name="saved_foods_unsave_dialog_confirm">לְהַסִיר</string>
-    <string name="saved_foods_title">מזונות שמורים</string>
-    <string name="saved_foods_kcal">🔥 %1$d קלוריות</string>
+    <string name="recently_uploaded_empty">הועלו לאחרונה</string>
+    <string name="recently_uploaded_empty_hint">הקש על + כדי להוסיף את הארוחה הראשונה של היום</string>
+    <string name="saved_foods_keep_15_days_hint">מאכלים שמורים מ-15 הימים האחרונים.</string>
+    <string name="saved_foods_unsave_dialog_title">להסיר ממאכלים שמורים?</string>
+    <string name="saved_foods_unsave_dialog_message">הארוחה הזו תוסר מרשימת המאכלים השמורים, אך תישאר ברשומות האחרונות שלך.</string>
+    <string name="saved_foods_unsave_dialog_confirm">הסר</string>
+    <string name="saved_foods_title">מאכלים שמורים</string>
+    <string name="saved_foods_kcal">🔥 %1$d kcal</string>
     <string name="saved_foods_protein">🥩 %1$dg</string>
     <string name="saved_foods_carbs">🌾 %1$dg</string>
     <string name="saved_foods_fat">🥑 %1$dg</string>
-    <string name="saved_foods_detail">פְּרָט</string>
-    <string name="saved_foods_load_failed_title">טעינת המזונות השמורים נכשלה</string>
-
-
-    <!-- RecentUploadDetailScreen -->
+    <string name="saved_foods_detail">פרטים</string>
+    <string name="saved_foods_load_failed_title">טעינת המאכלים השמורים נכשלה</string>
     <string name="foodlog_detail_load_failed">הטעינה נכשלה</string>
-    <string name="foodlog_unknown_food">אוכל לא ידוע</string>
+    <string name="foodlog_unknown_food">מזון לא ידוע</string>
     <string name="foodlog_no_image">אין תמונה</string>
-
-    <string name="foodlog_detail_title">תְזוּנָה</string>
-    <string name="foodlog_detail_calories">קלוריות</string>
-    <string name="foodlog_detail_protein">חֶלְבּוֹן</string>
+    <string name="foodlog_detail_title">תזונה</string>
+    <string name="foodlog_detail_calories">kcal</string>
+    <string name="foodlog_detail_protein">חלבון</string>
     <string name="foodlog_detail_carbs">פחמימות</string>
     <string name="foodlog_detail_fats">שומנים</string>
-    <string name="foodlog_detail_fiber">סִיב</string>
-    <string name="foodlog_detail_sugar">סוּכָּר</string>
-    <string name="foodlog_detail_sodium">נַתרָן</string>
+    <string name="foodlog_detail_fiber">סיבים</string>
+    <string name="foodlog_detail_sugar">סוכר</string>
+    <string name="foodlog_detail_sodium">נתרן</string>
     <string name="foodlog_detail_health_score">ציון בריאות</string>
-
-
-    <!-- DeleteFoodLogDialog -->
     <string name="foodlog_delete_dialog_title">למחוק רשומה?</string>
-    <string name="foodlog_delete_dialog_message">האם אתה בטוח שברצונך למחוק לצמיתות את רשומת הארוחה הזו? לא ניתן לבטל פעולה זו.</string>
-    <string name="foodlog_delete_dialog_confirm">לִמְחוֹק</string>
-
-
-    <!-- Settings -->
+    <string name="foodlog_delete_dialog_message">האם למחוק לצמיתות את רשומת הארוחה הזו? אי אפשר לבטל פעולה זו.</string>
+    <string name="foodlog_delete_dialog_confirm">מחק</string>
     <string name="settings_title">הגדרות</string>
     <string name="settings_choose_language">בחר שפה</string>
     <string name="delete_account_dialog_title">למחוק חשבון?</string>
-    <string name="delete_account_dialog_body">האם אתה בטוח שברצונך למחוק את חשבונך? פעולה זו תמחק לצמיתות את נתוני CaloShape שלך, כולל יומני מזון, רשומות משקל והגדרות קשורות. לא ניתן לבטל פעולה זו.</string>
-
-
+    <string name="delete_account_dialog_body">האם אתה בטוח שברצונך למחוק את החשבון? פעולה זו תמחק לצמיתות את נתוני CaloShape שלך, כולל יומני אוכל, רשומות משקל והגדרות קשורות. אי אפשר לבטל פעולה זו.</string>
     <string name="restore_subscription_dialog_success_title">המנוי שוחזר</string>
-    <string name="restore_subscription_dialog_payment_issue_title">המנוי שוחזר, בעיית התשלום נותרה בעינה</string>
-    <string name="restore_subscription_dialog_no_active_title">לא נמצא מנוי פעיל ל-Google Play</string>
+    <string name="restore_subscription_dialog_payment_issue_title">המנוי שוחזר, אך בעיית התשלום נמשכת</string>
+    <string name="restore_subscription_dialog_no_active_title">לא נמצא מנוי Google Play פעיל</string>
     <string name="restore_subscription_dialog_failed_title">השחזור נכשל</string>
-    <string name="restore_subscription_dialog_bound_title">מנוי מקושר לחשבון אחר</string>
+    <string name="restore_subscription_dialog_bound_title">המנוי מקושר לחשבון אחר</string>
     <string name="restore_subscription_dialog_success_body">המנוי שלך שוחזר לחשבון CaloShape זה.</string>
-    <string name="restore_subscription_dialog_payment_issue_body">המנוי שלך מקושר לחשבון CaloShape זה, אך Google Play עדיין מדווח על בעיית תשלום. עדכן את אמצעי התשלום שלך ב-Google Play כדי שהמינוי שלך יישאר פעיל.</string>
-    <string name="restore_subscription_dialog_no_active_body">לא הצלחנו למצוא מנוי CaloShape פעיל בחשבון Google Play הנוכחי. ודא שאתה משתמש בחשבון Google Play שביצע את הרכישה, ולאחר מכן נסה שוב.</string>
-    <string name="restore_subscription_dialog_failed_body">לא הצלחנו לשחזר את המנוי שלך כעת. בדוק את החיבור שלך ונסה שוב מההגדרות.</string>
-    <string name="restore_subscription_dialog_bound_body">מנוי זה ל-Google Play כבר מקושר לחשבון CaloShape אחר. היכנס לחשבון המקורי כדי להשתמש בו, או צור קשר עם התמיכה אם אינך יכול לגשת לחשבון זה.</string>
-    <string name="restore_subscription_dialog_body">מצאנו מנוי או גרסת ניסיון פעילים של CaloShape המשויכים לחשבון Google Play במכשיר זה. אתה יכול לשחזר אותו לחשבון CaloShape שאליו אתה מחובר כעת.</string>
-
-    <!-- Settings : Payment issue dialog -->
-    <string name="payment_issue_dialog_title">שמור על הפרימיום שלך פעיל</string>
-    <string name="payment_issue_dialog_body">הגישה שלך ל-Premium עדיין פעילה. יש לעדכן את אמצעי התשלום ב-Google Play כדי למנוע הפסקה בשירות.</string>
-    <string name="payment_issue_dialog_update_payment">עדכן את אמצעי התשלום</string>
-    <string name="payment_issue_dialog_badge">התשלום מצריך תשומת לב</string>
-    <string name="payment_issue_dialog_premium_access">גישה פרימיום</string>
-    <string name="payment_issue_dialog_active_for_now">פעיל לעת עתה</string>
+    <string name="restore_subscription_dialog_payment_issue_body">המנוי שלך מקושר לחשבון CaloShape זה, אבל Google Play עדיין מדווח על בעיית תשלום. עדכן את אמצעי התשלום ב-Google Play כדי לשמור על המנוי פעיל.</string>
+    <string name="restore_subscription_dialog_no_active_body">לא מצאנו מנוי CaloShape פעיל בחשבון Google Play הנוכחי. ודא שאתה משתמש בחשבון Google Play שביצע את הרכישה ונסה שוב.</string>
+    <string name="restore_subscription_dialog_failed_body">לא הצלחנו לשחזר את המנוי שלך כרגע. בדוק את החיבור ונסה שוב מההגדרות.</string>
+    <string name="restore_subscription_dialog_bound_body">מנוי Google Play זה כבר מקושר לחשבון CaloShape אחר. היכנס לחשבון המקורי כדי להשתמש בו, או צור קשר עם התמיכה אם אין לך גישה לחשבון.</string>
+    <string name="restore_subscription_dialog_body">מצאנו מנוי או ניסיון פעיל של CaloShape המשויך לחשבון Google Play במכשיר זה. אפשר לשחזר אותו לחשבון CaloShape שאליו אתה מחובר כעת.</string>
+    <string name="payment_issue_dialog_title">שמור על Premium פעיל</string>
+    <string name="payment_issue_dialog_body">גישת ה-Premium שלך עדיין פעילה. עדכן את אמצעי התשלום ב-Google Play כדי למנוע הפסקה.</string>
+    <string name="payment_issue_dialog_update_payment">עדכן אמצעי תשלום</string>
+    <string name="payment_issue_dialog_badge">התשלום דורש תשומת לב</string>
+    <string name="payment_issue_dialog_premium_access">גישת Premium</string>
+    <string name="payment_issue_dialog_active_for_now">פעיל כרגע</string>
     <string name="payment_issue_dialog_next_step">השלב הבא</string>
-    <string name="payment_issue_dialog_update_payment_short">עדכון תשלום</string>
-
-
+    <string name="payment_issue_dialog_update_payment_short">עדכן תשלום</string>
     <string name="settings_personal_details">פרטים אישיים</string>
-    <string name="settings_adjust_macronutrients">התאם מאקרו-נוטריינטים</string>
+    <string name="settings_adjust_macronutrients">התאם מאקרונוטריינטים</string>
     <string name="settings_weight_history">היסטוריית משקל</string>
-    <string name="settings_ring_colors_explained">מדריך צבע טבעות לוח שנה</string>
+    <string name="settings_ring_colors_explained">מדריך צבעי טבעות לוח שנה</string>
     <string name="settings_inbox">תיבת דואר נכנס</string>
-
-
     <string name="settings_terms_conditions">תנאים והגבלות</string>
     <string name="settings_privacy_policy">מדיניות פרטיות</string>
-    <string name="settings_support_email">אימייל לתמיכה</string>
+    <string name="settings_support_email">אימייל תמיכה</string>
     <string name="settings_delete_account">למחוק חשבון?</string>
     <string name="settings_version">גרסה %1$s</string>
-
-
-    <string name="settings_membership_payment">בעיה בתשלום</string>
-    <string name="settings_membership_update_payment">עדכון אמצעי תשלום</string>
-    <string name="settings_membership_premium">פרימיום</string>
-    <string name="settings_membership_active_member">חברות פעילה</string>
-    <string name="settings_membership_trial">תקופת ניסיון</string>
-    <string name="settings_membership_access_active">גישה פעילה</string>
+    <string name="settings_membership_payment">בעיית תשלום</string>
+    <string name="settings_membership_update_payment">עדכן תשלום</string>
+    <string name="settings_membership_premium">Premium</string>
+    <string name="settings_membership_active_member">חבר פעיל</string>
+    <string name="settings_membership_trial">ניסיון</string>
+    <string name="settings_membership_access_active">הגישה פעילה</string>
     <string name="settings_membership_free">חינם</string>
-    <string name="settings_membership_upgrade">שדרוג</string>
-    <string name="settings_membership_trial_ends_today">תקופת הניסיון מסתיימת היום</string>
-    <string name="settings_membership_until_format">בתוקף עד %1$s</string>
+    <string name="settings_membership_upgrade">שדרג</string>
+    <string name="settings_membership_trial_ends_today">הניסיון מסתיים היום</string>
+    <string name="settings_membership_until_format">עד %1$s</string>
     <plurals name="settings_membership_trial_days_left">
         <item quantity="one">נותר %1$d יום</item>
-        <item quantity="two">נותרו %1$d ימים</item>
         <item quantity="other">נותרו %1$d ימים</item>
     </plurals>
-
-
-    <!-- Settings: referral card -->
     <string name="settings_invite_friends">הזמן חברים</string>
-    <string name="settings_premium_reward">פרס פרימיום</string>
-    <string name="settings_share_caloshape_with_friends">שתף את CaloShape AI\nעם החברים שלך</string>
-    <string name="settings_referral_reward_content">הם מנויים. אתה מקבל 30 יום חינם.</string>
-    <string name="settings_get_30_days_free">קבל 30 יום בחינם</string>
+    <string name="settings_premium_reward">פרס Premium</string>
+    <string name="settings_share_caloshape_with_friends">שתף את CaloShape AI
+עם החברים שלך</string>
+    <string name="settings_referral_reward_content">הם נרשמים. אתה מקבל 30 ימים בחינם.</string>
+    <string name="settings_get_30_days_free">קבל 30 ימים בחינם</string>
     <string name="settings_days_label">ימים</string>
-
-    <string name="settings_appearance_light">אוֹר</string>
-    <string name="settings_appearance_dark">כֵּהֶה</string>
+    <string name="settings_appearance_light">בהיר</string>
+    <string name="settings_appearance_dark">כהה</string>
     <string name="settings_appearance_mode_title">בחר מראה</string>
     <string name="settings_appearance_light_description">שמור על המראה הבהיר והנקי הנוכחי.</string>
-    <string name="settings_appearance_dark_description">השתמש בממשק כהה ורך יותר למעקב יומיומי.</string>
+    <string name="settings_appearance_dark_description">השתמש בממשק כהה ורך יותר למעקב יומי.</string>
     <string name="settings_preferences">העדפות</string>
-    <string name="settings_appearance">הוֹפָעָה</string>
-
-    <string name="settings_language">שָׂפָה</string>
-
-
-    <!-- Settings: Widget Guide -->
-    <string name="settings_widgets_title">ווידג\'טים</string>
-    <string name="settings_widgets_how_to_add">איך מוסיפים?</string>
+    <string name="settings_appearance">מראה</string>
+    <string name="settings_language">שפה</string>
+    <string name="settings_widgets_title">וידג׳טים</string>
+    <string name="settings_widgets_how_to_add">איך להוסיף?</string>
     <string name="log_your_food">רשום את האוכל שלך</string>
-
-    <string name="settings_calories_goal_label">נשארו קלוריות</string>
-    <string name="settings_protein_goal_label">נשאר חלבון</string>
-    <string name="settings_carbs_goal_label">נשארו פחמימות</string>
-    <string name="settings_fats_goal_label">נשארו שומנים</string>
+    <string name="settings_calories_goal_label">kcal שנותרו</string>
+    <string name="settings_protein_goal_label">חלבון שנותר</string>
+    <string name="settings_carbs_goal_label">פחמימות שנותרו</string>
+    <string name="settings_fats_goal_label">שומנים שנותרו</string>
     <string name="settings_widget_scan_food">סרוק אוכל</string>
     <string name="settings_widget_barcode">ברקוד</string>
-
-    <string name="settings_logout_loading">מתנתק...</string>
+    <string name="settings_logout_loading">מתנתק…</string>
     <string name="settings_logout">התנתק</string>
-    <string name="settings_logout_failed">היציאה נכשלה. בדוק את החיבור שלך ונסה שוב.</string>
-
-
-    <!-- EditNameScreen -->
+    <string name="settings_logout_failed">ההתנתקות נכשלה. בדוק את החיבור ונסה שוב.</string>
     <string name="settings_edit_your_name_title">ערוך את שמך</string>
     <string name="edit_name_placeholder">הזן את שמך</string>
-
-
-    <!-- Referral Screen -->
     <string name="referral_title">הזמן חברים</string>
-    <string name="referral_premium_reward">פרס פרימיום</string>
+    <string name="referral_premium_reward">פרס Premium</string>
     <string name="referral_invite_friends">הזמן חברים</string>
-    <string name="referral_earn_30_days_free">הרווח 30 יום בחינם</string>
-    <string name="referral_reward_unlocks_after_no_refund">תגמול נפתח לאחר שהחבר שלך נרשם ללא החזר.</string>
-    <string name="referral_code_copied">קוד הפניה הועתק.</string>
-    <string name="referral_your_promo_code">קוד ההטבה שלך</string>
-    <string name="referral_copy">לְהַעְתִיק</string>
-    <string name="referral_share">לַחֲלוֹק</string>
+    <string name="referral_earn_30_days_free">הרווח 30 ימים בחינם</string>
+    <string name="referral_reward_unlocks_after_no_refund">הפרס נפתח לאחר שהחבר שלך נרשם ללא החזר.</string>
+    <string name="referral_code_copied">קוד ההפניה הועתק.</string>
+    <string name="referral_your_promo_code">קוד המבצע שלך</string>
+    <string name="referral_copy">העתק</string>
+    <string name="referral_share">שתף</string>
     <string name="referral_how_it_works">איך זה עובד</string>
-    <string name="referral_step_1_title">שתף את קוד ההטבה שלך</string>
-    <string name="referral_step_1_subtitle">שלח את הקוד שלך לחבר שרוצה לעקוב אחר אוכל בצורה חכמה יותר.</string>
-    <string name="referral_step_2_title">חבר שלך נרשם</string>
-    <string name="referral_step_2_subtitle">הם מתחילים מנוי CaloShape AI בתשלום באמצעות ההזמנה שלך.</string>
-    <string name="referral_step_3_title">אין החזר, אז תגמול</string>
-    <string name="referral_step_3_subtitle">לאחר אימות המנוי ללא החזר, תקופת הפרמיה שלך מתארכת.</string>
-    <string name="referral_share_text">הצטרפו אלי ל-CaloShape AI! קוד ההפניה שלי הוא:\n%1$s\n\n%2$s</string>
-    <string name="referral_share_subject">הצטרפו אלי ל-CaloShape AI</string>
+    <string name="referral_step_1_title">שתף את קוד המבצע שלך</string>
+    <string name="referral_step_1_subtitle">שלח את הקוד לחבר שרוצה לעקוב אחרי אוכל בצורה חכמה יותר.</string>
+    <string name="referral_step_2_title">החבר שלך נרשם</string>
+    <string name="referral_step_2_subtitle">הוא מתחיל מנוי CaloShape AI בתשלום באמצעות ההזמנה שלך.</string>
+    <string name="referral_step_3_title">אין החזר, ואז פרס</string>
+    <string name="referral_step_3_subtitle">לאחר שהמנוי מאומת ללא החזר, תקופת ה-Premium שלך מוארכת.</string>
+    <string name="referral_share_text">הצטרף אליי ב-CaloShape AI! קוד ההפניה שלי הוא:
+%1$s
+
+%2$s</string>
+    <string name="referral_share_subject">הצטרף אליי ב-CaloShape AI</string>
     <string name="referral_share_chooser_title">שתף באמצעות</string>
     <string name="referral_unable_to_open_share_options">לא ניתן לפתוח אפשרויות שיתוף.</string>
-
-
-    <!-- PersonalDetailsScreen -->
-    <string name="personal_details_goal_weight">משקל מטרה</string>
-    <string name="personal_details_change_goal">שנה מטרה</string>
+    <string name="personal_details_goal_weight">משקל יעד</string>
+    <string name="personal_details_change_goal">שנה יעד</string>
     <string name="personal_details_body_details_section">פרטי גוף</string>
     <string name="personal_details_current_weight">משקל נוכחי</string>
-    <string name="personal_details_height">גוֹבַה</string>
-    <string name="personal_details_age">גִיל</string>
-    <string name="personal_details_gender">מִין</string>
+    <string name="personal_details_height">גובה</string>
+    <string name="personal_details_age">גיל</string>
+    <string name="personal_details_gender">מגדר</string>
     <string name="personal_details_starting_weight">משקל התחלתי</string>
-    <string name="personal_details_daily_goals_section">מטרות יומיות</string>
-    <string name="personal_details_daily_step_goal">יעד צעד יומי</string>
+    <string name="personal_details_daily_goals_section">יעדים יומיים</string>
+    <string name="personal_details_daily_step_goal">יעד צעדים יומי</string>
     <string name="personal_details_daily_water_goal">יעד מים יומי</string>
-    <string name="personal_details_daily_workout_goal">מטרת אימון יומית</string>
+    <string name="personal_details_daily_workout_goal">יעד אימון יומי</string>
     <string name="personal_details_age_value">%1$d שנים</string>
     <string name="personal_details_steps_value">%1$d צעדים</string>
-    <string name="personal_details_water_value">%1$d מ\"ל</string>
-    <string name="personal_details_kcal_value">%1$d קק\"ל</string>
-    <string name="gender_male">זָכָר</string>
-    <string name="gender_female">נְקֵבָה</string>
-    <string name="gender_other">אַחֵר</string>
-
-
-    <!-- EditGoalWeightScreen -->
+    <string name="personal_details_water_value">%1$d ml</string>
+    <string name="personal_details_kcal_value">%1$d kcal</string>
+    <string name="gender_male">זכר</string>
+    <string name="gender_female">נקבה</string>
+    <string name="gender_other">אחר</string>
     <string name="edit_goal_weight_title">ערוך משקל יעד</string>
-    <string name="edit_goal_weight_progress_note">אנו נשתמש ביעד זה כדי לחשב את ההתקדמות שלך.</string>
+    <string name="edit_goal_weight_progress_note">נשתמש ביעד זה כדי לחשב את ההתקדמות שלך.</string>
     <string name="edit_goal_update_failed">עדכון משקל היעד נכשל</string>
-
-
-    <!-- RecordWeightScreen -->
     <string name="record_weight_camera_failed_to_open">המצלמה לא נפתחה.</string>
     <string name="record_weight_camera_permission_required">נדרשת הרשאת מצלמה.</string>
-    <string name="record_weight_camera_preview_unavailable">המצלמה פועלת רק באפליקציה הפועלת, לא בתצוגה מקדימה.</string>
+    <string name="record_weight_camera_preview_unavailable">המצלמה פועלת רק באפליקציה רצה, לא במצב Preview.</string>
     <string name="record_weight_camera_screen_unavailable">המצלמה אינה זמינה במסך זה.</string>
     <string name="record_weight_no_camera_app_found">לא נמצאה אפליקציית מצלמה במכשיר זה.</string>
-    <string name="record_weight_enable_camera_permission_settings">הפעל את הרשאת המצלמה בהגדרות.</string>
-
-    <string name="record_weight_title">שיא משקל</string>
+    <string name="record_weight_enable_camera_permission_settings">הפעל הרשאת מצלמה בהגדרות.</string>
+    <string name="record_weight_title">רשום משקל</string>
     <string name="record_weight_save_failed">השמירה נכשלה</string>
     <string name="record_weight_date_note">משקל זה יירשם עבור %1$s</string>
-
-    <string name="weight_date_sheet_title">בחר את תאריך השקילה שלך</string>
+    <string name="weight_date_sheet_title">בחר את תאריך השקילה</string>
     <string name="weight_date_sheet_subtitle">מתי עלית על המשקל?</string>
-    <string name="weight_date_sheet_month_january">יָנוּאָר</string>
-    <string name="weight_date_sheet_month_february">פֶבּרוּאָר</string>
-    <string name="weight_date_sheet_month_march">מַרס</string>
-    <string name="weight_date_sheet_month_april">אַפּרִיל</string>
-    <string name="weight_date_sheet_month_may">מַאִי</string>
-    <string name="weight_date_sheet_month_june">יוּנִי</string>
-    <string name="weight_date_sheet_month_july">יוּלִי</string>
-    <string name="weight_date_sheet_month_august">אוֹגוּסט</string>
-    <string name="weight_date_sheet_month_september">סֶפּטֶמבֶּר</string>
-    <string name="weight_date_sheet_month_october">אוֹקְטוֹבֶּר</string>
-    <string name="weight_date_sheet_month_november">נוֹבֶמבֶּר</string>
-    <string name="weight_date_sheet_month_december">דֵצֶמבֶּר</string>
-
-    <string name="record_weight_camera_not_available">מצלמה לא זמינה</string>
+    <string name="weight_date_sheet_month_january">ינואר</string>
+    <string name="weight_date_sheet_month_february">פברואר</string>
+    <string name="weight_date_sheet_month_march">מרץ</string>
+    <string name="weight_date_sheet_month_april">אפריל</string>
+    <string name="weight_date_sheet_month_may">מאי</string>
+    <string name="weight_date_sheet_month_june">יוני</string>
+    <string name="weight_date_sheet_month_july">יולי</string>
+    <string name="weight_date_sheet_month_august">אוגוסט</string>
+    <string name="weight_date_sheet_month_september">ספטמבר</string>
+    <string name="weight_date_sheet_month_october">אוקטובר</string>
+    <string name="weight_date_sheet_month_november">נובמבר</string>
+    <string name="weight_date_sheet_month_december">דצמבר</string>
+    <string name="record_weight_camera_not_available">המצלמה אינה זמינה</string>
     <string name="record_weight_take_photo">צלם תמונה</string>
-    <string name="record_weight_retake_photo">צלם מחדש תמונה</string>
-
-
-    <!-- EditHeightScreen -->
+    <string name="record_weight_retake_photo">צלם שוב</string>
     <string name="edit_height_title">ערוך את הגובה שלך</string>
-    <string name="edit_height_privacy_note">אנו משתמשים בגובה שלך רק כדי לשפר את החוויה שלך ואת דיוק הערכת הקלוריות שלך.</string>
+    <string name="edit_height_privacy_note">אנחנו משתמשים בגובה שלך רק כדי לשפר את החוויה ואת דיוק הערכת ה-kcal.</string>
     <string name="edit_height_saved_locally_sync_failed">שגיאת רשת. נשמר מקומית, אך הסנכרון נכשל.</string>
-
-
-    <!-- EditAgeScreen -->
     <string name="edit_age_title">ערוך את הגיל שלך</string>
-    <string name="edit_age_privacy_note">אנו משתמשים בגילך רק כדי לשפר את החוויה שלך ואת דיוק הערכת הקלוריות שלך.</string>
-
-
-    <!-- EditGenderScreen -->
+    <string name="edit_age_privacy_note">אנחנו משתמשים בגיל שלך רק כדי לשפר את החוויה ואת דיוק הערכת ה-kcal.</string>
     <string name="edit_gender_title">ערוך את המגדר שלך</string>
-    <string name="edit_gender_privacy_note">משמש רק כדי להתאים אישית ולשפר את דיוק האומדנים.</string>
-
-
-    <!-- EditStartingWeightScreen -->
+    <string name="edit_gender_privacy_note">משמש רק להתאמה אישית ולשיפור דיוק ההערכות.</string>
     <string name="edit_starting_weight_title">ערוך משקל התחלתי</string>
-    <string name="edit_start_weight_baseline_note">אנו נשתמש בו בתור הבסיס שלך להתקדמות.</string>
+    <string name="edit_start_weight_baseline_note">נשתמש בו כקו הבסיס שלך להתקדמות.</string>
     <string name="edit_starting_weight_update_failed">עדכון המשקל ההתחלתי נכשל</string>
-
-
-    <!-- EditDailyStepGoalScreen -->
-    <string name="edit_step_goal_title">ערוך יעד שלב</string>
+    <string name="edit_step_goal_title">ערוך יעד צעדים</string>
     <string name="edit_daily_step_goal_previous_format">יעד קודם %1$d צעדים</string>
-    <string name="edit_daily_step_goal_input_label">יעד צעד יומי</string>
-
-
-    <!-- EditWaterGoalScreen -->
-    <string name="edit_water_goal_title">ערוך את יעד המים</string>
-    <string name="edit_water_goal_previous_format">יעד קודם %1$d מ\"ל</string>
-    <string name="edit_water_goal_input_label">יעד מים יומי (מ\"ל)</string>
-
-
-    <!-- EditWorkoutGoalScreen -->
-    <string name="edit_workout_goal_title">ערוך את יעד האימון</string>
-    <string name="edit_workout_goal_previous_format">יעד קודם %1$d קק\"ל</string>
-    <string name="edit_workout_goal_input_label">יעד אימון יומי (קק\"ל)</string>
-
-
-    <!-- EditNutritionGoalsScreen -->
+    <string name="edit_daily_step_goal_input_label">יעד צעדים יומי</string>
+    <string name="edit_water_goal_title">ערוך יעד מים</string>
+    <string name="edit_water_goal_previous_format">יעד קודם %1$d ml</string>
+    <string name="edit_water_goal_input_label">יעד מים יומי (ml)</string>
+    <string name="edit_workout_goal_title">ערוך יעד אימון</string>
+    <string name="edit_workout_goal_previous_format">יעד קודם %1$d kcal</string>
+    <string name="edit_workout_goal_input_label">יעד אימון יומי (kcal)</string>
     <string name="edit_nutrition_goals_title">ערוך יעדי תזונה</string>
-    <string name="edit_nutrition_calorie_goal">יעד קלוריות</string>
-    <string name="edit_nutrition_protein_goal">מטרת חלבון</string>
+    <string name="edit_nutrition_calorie_goal">יעד kcal</string>
+    <string name="edit_nutrition_protein_goal">יעד חלבון</string>
     <string name="edit_nutrition_carb_goal">יעד פחמימות</string>
-    <string name="edit_nutrition_fat_goal">מטרה שמנה</string>
-    <string name="edit_nutrition_view_micronutrients">צפה במיקרו-נוטריינטים</string>
-    <string name="edit_nutrition_fiber_goal">מטרת סיבים</string>
-    <string name="edit_nutrition_sugar_goal">מטרת סוכר</string>
-    <string name="edit_nutrition_sodium_goal">גול נתרן</string>
-    <string name="edit_nutrition_auto_generate_goals">יצירת יעדים אוטומטית</string>
+    <string name="edit_nutrition_fat_goal">יעד שומן</string>
+    <string name="edit_nutrition_view_micronutrients">הצג מיקרונוטריינטים</string>
+    <string name="edit_nutrition_fiber_goal">יעד סיבים</string>
+    <string name="edit_nutrition_sugar_goal">יעד סוכר</string>
+    <string name="edit_nutrition_sodium_goal">יעד נתרן</string>
+    <string name="edit_nutrition_auto_generate_goals">צור יעדים אוטומטית</string>
     <string name="auto_generate_goals_success">נוצר בהצלחה!</string>
     <string name="auto_generate_goals_failed">היצירה נכשלה</string>
     <string name="auto_generate_goals_failed_http_format">היצירה נכשלה (%1$d)</string>
-    <string name="auto_generate_goals_network_error">שגיאת רשת. נסו שוב.</string>
-
-
-    <!-- RingColorsExplainedScreen -->
-    <string name="ring_colors_explained_title">צבעי טבעת תמרים</string>
-    <string name="ring_colors_explained_intro">טבעות תמרים עוזרות לך לראות במהירות איך כל יום משתווה ליעד הקלורי שלך.</string>
+    <string name="auto_generate_goals_network_error">שגיאת רשת, נסה שוב.</string>
+    <string name="ring_colors_explained_title">צבעי טבעות תאריך</string>
+    <string name="ring_colors_explained_intro">טבעות תאריך עוזרות לראות במהירות איך כל יום ביחס ליעד ה-kcal שלך.</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">תצוגה מקדימה של טבעת תאריך</string>
-
     <string name="ring_colors_preview_day_5">5</string>
     <string name="ring_colors_preview_day_6">6</string>
     <string name="ring_colors_preview_day_7">7</string>
@@ -1033,108 +747,83 @@
     <string name="ring_colors_preview_day_9">9</string>
     <string name="ring_colors_preview_day_10">10</string>
     <string name="ring_colors_preview_day_11">11</string>
-    <string name="ring_colors_explained_subtitle">הסבר על צבעי הטבעת</string>
-
-    <string name="ring_colors_green_title">יָרוֹק</string>
-    <string name="ring_colors_green_body">על היעד (בטווח של 100 קלוריות מהיעד)</string>
-    <string name="ring_colors_yellow_title">חוּם</string>
-    <string name="ring_colors_yellow_body">100-199 קלוריות מעל היעד שלך</string>
-    <string name="ring_colors_red_title">אָדוֹם</string>
-    <string name="ring_colors_red_body">200+ קלוריות מעל היעד שלך</string>
-    <string name="ring_colors_dotted_title">מְנוּקָד</string>
-    <string name="ring_colors_dotted_body">לא נרשמו ארוחות באותו היום</string>
-
-
-    <!-- NotificationInboxScreen Inbox -->
+    <string name="ring_colors_explained_subtitle">הסבר צבעי הטבעות</string>
+    <string name="ring_colors_green_title">ירוק</string>
+    <string name="ring_colors_green_body">בתוך היעד (בטווח של 100 kcal מהיעד)</string>
+    <string name="ring_colors_yellow_title">חום</string>
+    <string name="ring_colors_yellow_body">100–199 kcal מעל היעד שלך</string>
+    <string name="ring_colors_red_title">אדום</string>
+    <string name="ring_colors_red_body">200+ kcal מעל היעד שלך</string>
+    <string name="ring_colors_dotted_title">מנוקד</string>
+    <string name="ring_colors_dotted_body">לא נרשמו ארוחות באותו יום</string>
     <string name="notification_inbox_title">תיבת דואר נכנס</string>
-    <string name="notification_inbox_header_title">הודעות CaloShape</string>
-    <string name="notification_inbox_header_body">כל הודעות הפלטפורמה יופיעו כאן.</string>
-    <string name="notification_inbox_status_read">לִקְרוֹא</string>
+    <string name="notification_inbox_header_title">התראות CaloShape</string>
+    <string name="notification_inbox_header_body">כל התראות הפלטפורמה יופיעו כאן.</string>
+    <string name="notification_inbox_status_read">נקרא</string>
     <string name="notification_inbox_status_unread">לא נקרא</string>
-
-    <string name="notification_inbox_loading_title">טוען הודעות</string>
-    <string name="notification_inbox_loading">טוען הודעות...</string>
-    <string name="notification_inbox_empty_title">עדיין אין התראות</string>
-    <string name="notification_inbox_empty_body">הודעות פלטפורמה יופיעו כאן.</string>
-    <string name="notification_inbox_error_title">לא ניתן לטעון הודעות</string>
-    <string name="notification_inbox_error_body">אנא בדוק את החיבור שלך ונסה שוב.</string>
-
-
-    <!-- WidgetGuideScreen -->
-    <string name="widget_guide_title">הוסף ווידג\'ט</string>
-    <string name="widget_guide_hero_title">הוסף CaloShape למסך הבית שלך</string>
-    <string name="widget_guide_hero_body">עקוב אחר קלוריות, פקודות מאקרו ופעולות מהירות מבלי לפתוח את האפליקציה.</string>
-    <string name="widget_guide_steps_title">בצע את השלבים הבאים</string>
+    <string name="notification_inbox_loading_title">טוען התראות</string>
+    <string name="notification_inbox_loading">טוען התראות…</string>
+    <string name="notification_inbox_empty_title">אין התראות עדיין</string>
+    <string name="notification_inbox_empty_body">התראות הפלטפורמה יופיעו כאן.</string>
+    <string name="notification_inbox_error_title">לא ניתן לטעון התראות</string>
+    <string name="notification_inbox_error_body">בדוק את החיבור ונסה שוב.</string>
+    <string name="widget_guide_title">הוסף וידג׳ט</string>
+    <string name="widget_guide_hero_title">הוסף את CaloShape למסך הבית</string>
+    <string name="widget_guide_hero_body">עקוב אחרי kcal, מאקרו ופעולות מהירות בלי לפתוח את האפליקציה.</string>
+    <string name="widget_guide_steps_title">בצע את השלבים האלה</string>
     <string name="widget_guide_step_1_title">לחץ לחיצה ארוכה על מסך הבית</string>
-    <string name="widget_guide_step_1_body">לחץ והחזק אזור ריק במסך הבית של הטלפון שלך עד להופעת התפריט.</string>
-    <string name="widget_guide_step_2_title">הקש על ווידג\'טים</string>
-    <string name="widget_guide_step_2_body">בחר ווידג\'טים מתפריט מסך הבית.</string>
+    <string name="widget_guide_step_1_body">לחץ והחזק אזור ריק במסך הבית של הטלפון עד שהתפריט יופיע.</string>
+    <string name="widget_guide_step_2_title">הקש על וידג׳טים</string>
+    <string name="widget_guide_step_2_body">בחר וידג׳טים מתפריט מסך הבית.</string>
     <string name="widget_guide_step_3_title">מצא את CaloShape AI</string>
-    <string name="widget_guide_step_3_body">גלול או חפש CaloShape AI, ואז פתח את רשימת הווידג\'טים.</string>
-    <string name="widget_guide_step_4_title">גרור ווידג\'ט למקומו</string>
-    <string name="widget_guide_step_4_body">גע והחזק את הווידג\'ט, גרור אותו למסך הבית המועדף עליך ואז הרם את האצבע.</string>
-    <string name="widget_guide_tip_title">לא מצליח למצוא את תפריט הווידג\'טים?</string>
-    <string name="widget_guide_tip_body">מותגי טלפונים ומשגרים מסוימים משתמשים בשמות שונים. נסה את הגדרות הבית, לחיצה ארוכה על סמל אפליקציית CaloShape AI, או חפש ווידג\'טים במפעיל שלך.</string>
+    <string name="widget_guide_step_3_body">גלול או חפש את CaloShape AI ואז פתח את רשימת הווידג׳טים.</string>
+    <string name="widget_guide_step_4_title">גרור וידג׳ט למקום</string>
+    <string name="widget_guide_step_4_body">גע והחזק את הווידג׳ט, גרור אותו למסך הבית הרצוי ואז הרם את האצבע.</string>
+    <string name="widget_guide_tip_title">לא מוצא את תפריט הווידג׳טים?</string>
+    <string name="widget_guide_tip_body">בחלק ממותגי הטלפונים והלאנצ׳רים השמות שונים. נסה את הגדרות מסך הבית, לחיצה ארוכה על סמל CaloShape AI, או חיפוש וידג׳טים בלאנצ׳ר.</string>
     <string name="widget_guide_done">הבנתי</string>
-    <string name="widget_guide_mock_home">בַּיִת</string>
-    <string name="widget_guide_mock_widgets">ווידג\'טים</string>
-
-
-    <!-- CaloShapeNavHost -->
+    <string name="widget_guide_mock_home">בית</string>
+    <string name="widget_guide_mock_widgets">וידג׳טים</string>
     <string name="url_terms">https://caloshape.com/terms</string>
     <string name="url_privacy">https://caloshape.com/privacy</string>
-    <string name="camera_manual_entry_not_ready">הזנה ידנית עדיין לא מוכנה. עובר לסריקת תוויות לעת עתה.</string>
-
-
-    <!-- Android home screen widgets -->
+    <string name="camera_manual_entry_not_ready">הזנה ידנית עדיין לא מוכנה. עוברים בינתיים לסריקת תווית.</string>
     <string name="widget_preview_goal_kcal">1830</string>
     <string name="widget_preview_protein">120g</string>
     <string name="widget_preview_carbs">180g</string>
     <string name="widget_preview_fats">60g</string>
-    <string name="widget_calories_left">נשארו קלוריות</string>
-    <string name="widget_protein_left">נשאר חלבון</string>
-    <string name="widget_carbs_left">נשארו פחמימות</string>
-    <string name="widget_fats_left">נשארו שומנים</string>
-    <string name="widget_calories_description">ווידג\'ט קלוריות של CaloShape</string>
-    <string name="widget_macro_actions_description">פקודות מאקרו של CaloShape וווידג\'ט לפעולות מהירות</string>
-    <string name="widget_log_your_food">רשום את האוכל שלך</string>
-    <string name="widget_scan_food">סרוק אוכל</string>
-    <string name="widget_barcode">ברקוד</string>
+    <string name="widget_calories_left">Calories left</string>
+    <string name="widget_protein_left">Protein left</string>
+    <string name="widget_carbs_left">Carbs left</string>
+    <string name="widget_fats_left">Fats left</string>
+    <string name="widget_calories_description">CaloShape calories widget</string>
+    <string name="widget_macro_actions_description">CaloShape macros and quick actions widget</string>
+    <string name="widget_log_your_food">Log your food</string>
+    <string name="widget_scan_food">Scan food</string>
+    <string name="widget_barcode">Barcode</string>
     <string name="widget_grams_format">%1$dg</string>
-
-
-
-
-
-    <!-- =========================
-                    Not use
-         ========================= -->
-    <!-- PremiumRewardsScreen Not use -->
-    <string name="premium_rewards_subscription_title">מִנוּי</string>
-    <string name="premium_rewards_history_title">היסטוריית תגמול</string>
-    <string name="premium_rewards_loading_membership">טוען חברות...</string>
-    <string name="premium_rewards_status_title">סטטוס פרימיום</string>
+    <string name="premium_rewards_subscription_title">מנוי</string>
+    <string name="premium_rewards_history_title">היסטוריית פרסים</string>
+    <string name="premium_rewards_loading_membership">טוען חברות…</string>
+    <string name="premium_rewards_status_title">סטטוס Premium</string>
     <string name="premium_rewards_latest_title">הפרס האחרון</string>
     <string name="premium_rewards_source_format">מקור: %1$s</string>
     <string name="premium_rewards_channel_format">ערוץ: %1$s</string>
-    <string name="premium_rewards_grant_status_format">סטטוס מענק: %1$s</string>
+    <string name="premium_rewards_grant_status_format">סטטוס הענקה: %1$s</string>
     <string name="premium_rewards_status_format">סטטוס: %1$s</string>
-    <string name="premium_rewards_google_defer_format">Google דחה: %1$s</string>
-    <string name="premium_rewards_granted_at_format">ניתן ב: %1$s</string>
-    <string name="premium_rewards_old_expiry_format">תפוגה ישנה: %1$s</string>
-    <string name="premium_rewards_new_expiry_format">תפוגה חדשה: %1$s</string>
+    <string name="premium_rewards_google_defer_format">דחייה של Google: %1$s</string>
+    <string name="premium_rewards_granted_at_format">הוענק ב: %1$s</string>
+    <string name="premium_rewards_old_expiry_format">תאריך סיום קודם: %1$s</string>
+    <string name="premium_rewards_new_expiry_format">תאריך סיום חדש: %1$s</string>
     <string name="premium_rewards_error_format">שגיאה: %1$s</string>
     <string name="premium_rewards_days_added_format">ימים שנוספו: %1$d</string>
-    <string name="premium_rewards_empty_title">עדיין אין תגמולים</string>
-    <string name="premium_rewards_empty_body">הפניות מוצלחות יופיעו כאן לאחר האימות.</string>
+    <string name="premium_rewards_empty_title">אין פרסים עדיין</string>
+    <string name="premium_rewards_empty_body">הפניות מוצלחות יופיעו כאן לאחר אימות.</string>
     <string name="premium_rewards_channel_google_play_defer">תאריך החיוב של Google Play הוארך</string>
-    <string name="premium_rewards_channel_backend_only">תגמול פרימיום הוחל</string>
-    <string name="premium_rewards_grant_success">הַצלָחָה</string>
+    <string name="premium_rewards_channel_backend_only">פרס Premium הוחל</string>
+    <string name="premium_rewards_grant_success">הצלחה</string>
     <string name="premium_rewards_status_retrying">מנסה שוב</string>
-    <string name="premium_rewards_grant_not_granted">לא ניתן</string>
-    <string name="premium_rewards_google_defer_success">מורחב על ידי Google Play</string>
-    <string name="premium_rewards_google_defer_failed">נִכשָׁל</string>
-    <string name="premium_rewards_google_defer_not_required">לא חובה</string>
-
-
+    <string name="premium_rewards_grant_not_granted">לא הוענק</string>
+    <string name="premium_rewards_google_defer_success">הוארך על ידי Google Play</string>
+    <string name="premium_rewards_google_defer_failed">נכשל</string>
+    <string name="premium_rewards_google_defer_not_required">לא נדרש</string>
 </resources>

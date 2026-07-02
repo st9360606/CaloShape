@@ -13,7 +13,7 @@
     <string name="common_dash">—</string>
     <string name="common_error">오류</string>
 
-    <string name="common_save_success">저장되었습니다!</string>
+    <string name="common_save_success">성공적으로 저장되었습니다!</string>
     <string name="common_today">오늘</string>
     <string name="common_yesterday">어제</string>
     <string name="common_unavailable_dash">—</string>
@@ -22,53 +22,53 @@
     <string name="common_delete">삭제</string>
     <string name="common_deleting">삭제 중…</string>
 
-    <string name="common_understood">알겠습니다</string>
+    <string name="common_understood">확인</string>
     <string name="common_revert">되돌리기</string>
 
 
     <!-- ApiErrorUiMapper -->
     <string name="err_barcode_not_found_title">제품을 찾을 수 없습니다</string>
-    <string name="err_barcode_not_found_msg">We couldn’t find this barcode. Try taking a photo of the nutrition label.</string>
+    <string name="err_barcode_not_found_msg">이 바코드를 찾을 수 없습니다. 영양성분표 사진을 찍어 보세요.</string>
 
     <string name="err_barcode_lookup_failed_title">조회 실패</string>
-    <string name="err_barcode_lookup_failed_msg">We couldn’t reach the product database. Check your connection and try again.</string>
+    <string name="err_barcode_lookup_failed_msg">제품 데이터베이스에 연결할 수 없습니다. 연결을 확인하고 다시 시도하세요.</string>
 
     <string name="err_generic_title">문제가 발생했습니다</string>
     <string name="err_generic_msg">다시 시도해 주세요.</string>
 
     <string name="err_network_title">네트워크 문제</string>
-    <string name="err_network_msg">인터넷 연결을 확인하고 다시 시도해 주세요.</string>
+    <string name="err_network_msg">인터넷 연결을 확인하고 다시 시도하세요.</string>
 
     <string name="err_photo_title">사진이 필요합니다</string>
-    <string name="err_photo_msg">Try taking the photo again with better lighting.</string>
+    <string name="err_photo_msg">더 밝은 곳에서 사진을 다시 찍어 보세요.</string>
 
     <string name="err_manual_title">직접 입력</string>
-    <string name="err_manual_msg">You can enter details manually.</string>
+    <string name="err_manual_msg">세부 정보를 직접 입력할 수 있습니다.</string>
 
-    <string name="err_support_title">지원팀 문의</string>
-    <string name="err_support_msg">Please contact support if the issue persists.</string>
+    <string name="err_support_title">지원팀에 문의</string>
+    <string name="err_support_msg">문제가 계속되면 지원팀에 문의해 주세요.</string>
 
     <string name="cta_try_label">영양성분표 스캔</string>
     <string name="cta_enter_manually">직접 입력</string>
 
     <string name="cta_check_network">네트워크 확인</string>
     <string name="cta_retake">다시 촬영</string>
-    <string name="cta_contact_support">지원팀 문의</string>
+    <string name="cta_contact_support">지원팀에 문의</string>
     <string name="cta_rescan_barcode">바코드 다시 스캔</string>
 
 
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">사진 한 장으로 칼로리를 확인하세요.</string>
+    <string name="landing_title">사진 한 장으로 kcal를 확인하세요.</string>
     <string name="choose_language">언어 선택</string>
     <string name="cta_get_started">시작하기</string>
-    <string name="cta_login_prefix">이미 계정이 있나요?</string>
+    <string name="cta_login_prefix">이미 계정이 있으신가요?</string>
     <string name="cta_login">로그인</string>
 
 
     <!-- RequireSignInScreen -->
-    <string name="auth_sign_in_account_title">계정에 로그인하세요</string>
+    <string name="auth_sign_in_account_title">계정에 로그인</string>
     <string name="auth_sign_in_with_google">Google로 로그인</string>
     <string name="auth_signin_with_email">이메일로 계속</string>
 
@@ -78,17 +78,17 @@
     <string name="signin_with_apple">Apple로 로그인</string>
     <string name="signin_with_google">Google로 로그인</string>
     <string name="signin_with_email">이메일로 계속</string>
-    <string name="signin_legal_hint">계속하면 CaloShape 약관에 동의하는 것입니다</string>
-    <string name="signin_terms">약관</string>
+    <string name="signin_legal_hint">계속하면 CaloShape의</string>
+    <string name="signin_terms">이용약관</string>
     <string name="signin_and">및</string>
-    <string name="signin_privacy">개인정보 처리방침</string>
+    <string name="signin_privacy">개인정보처리방침에 동의하게 됩니다</string>
     <string name="signin_url_terms">https://caloshape.com/terms</string>
     <string name="signin_url_privacy">https://caloshape.com/privacy</string>
 
 
     <!-- SignInSheetHost 控制 Sheet 是否顯示、處理狀態、接外部 callback -->
-    <string name="err_google_no_account_hint">Tip: add a Google account in 설정 → Accounts and try again</string>
-    <string name="err_google_signin_failed">Google sign-in 실패</string>
+    <string name="err_google_no_account_hint">팁: 설정 → 계정에서 Google 계정을 추가한 뒤 다시 시도하세요</string>
+    <string name="err_google_signin_failed">Google 로그인에 실패했습니다</string>
 
 
     <!-- EmailEnterScreen-->
@@ -107,13 +107,13 @@
     <string name="err_generic">문제가 발생했습니다. 다시 시도해 주세요.</string>
 
     <string name="confirm_email_title">이메일 확인</string>
-    <string name="confirm_email_hint">방금 보낸 4자리 코드를 입력하세요</string>
-    <string name="didnt_receive_code">코드를 받지 못했나요?</string>
+    <string name="confirm_email_hint">방금 보낸 4자리 코드를 입력해 주세요</string>
+    <string name="didnt_receive_code">코드를 받지 못하셨나요?</string>
 
 
     <!-- Onboarding: GenderSelectionScreen -->
     <string name="onboard_gender_title">성별을 선택하세요</string>
-    <string name="onboard_gender_subtitle">맞춤 계획을 조정하는 데 사용됩니다.</string>
+    <string name="onboard_gender_subtitle">맞춤형 계획을 보정하는 데 사용됩니다.</string>
     <string name="onboard_male">남성</string>
     <string name="onboard_female">여성</string>
     <string name="onboard_other">기타</string>
@@ -124,102 +124,106 @@
 
 
     <!-- Onboarding: AgeSelectionScreen -->
-    <string name="onboard_age_title">나이가 어떻게 되나요?</string>
-    <string name="onboard_age_subtitle">We only use your age to improve your experience and calorie estimation accuracy.</string>
+    <string name="onboard_age_title">나이가 어떻게 되시나요?</string>
+    <string name="onboard_age_subtitle">나이는 사용 경험과 kcal 추정 정확도를 높이는 데만 사용됩니다.</string>
 
 
     <!-- Onboarding: HeightSelectionScreen -->
-    <string name="onboard_height_title">키가 어떻게 되나요?</string>
-    <string name="onboard_height_subtitle">We only use your data to improve your experience and our calorie estimates.</string>
-    <string name="onboard_height_hint">맞춤 계획을 조정하는 데 사용됩니다.</string>
+    <string name="onboard_height_title">키가 어떻게 되시나요?</string>
+    <string name="onboard_height_subtitle">데이터는 사용 경험과 kcal 추정 개선에만 사용됩니다.</string>
+    <string name="onboard_height_hint">맞춤형 계획을 보정하는 데 사용됩니다.</string>
 
 
     <!-- Onboarding: WeightSelectionScreen -->
-    <string name="onboard_weight_title">몸무게가 어떻게 되나요?</string>
-    <string name="onboard_weight_subtitle">We only use your data to improve your experience and our calorie estimates.</string>
-    <string name="onboard_weight_hint">맞춤 계획을 조정하는 데 사용됩니다.</string>
+    <string name="onboard_weight_title">체중이 어떻게 되시나요?</string>
+    <string name="onboard_weight_subtitle">데이터는 사용 경험과 kcal 추정 개선에만 사용됩니다.</string>
+    <string name="onboard_weight_hint">맞춤형 계획을 보정하는 데 사용됩니다.</string>
 
 
     <!-- Onboarding: ExerciseFrequencyScreen  -->
-    <string name="onboard_ex_freq_title">How often do you exercise each week?</string>
-    <string name="onboard_ex_freq_subtitle">This will help calibrate your personalized plan.</string>
+    <string name="onboard_ex_freq_title">일주일에 얼마나 자주 운동하시나요?</string>
+    <string name="onboard_ex_freq_subtitle">개인 맞춤 계획을 보정하는 데 도움이 됩니다.</string>
     <string name="ex_freq_0_title">0</string>
-    <string name="ex_freq_0_sub">Sedentary</string>
+    <string name="ex_freq_0_sub">활동량 낮음</string>
     <string name="ex_freq_1_3_title">1–3</string>
-    <string name="ex_freq_1_3_sub">Light activity</string>
+    <string name="ex_freq_1_3_sub">가벼운 활동</string>
     <string name="ex_freq_3_5_title">3–5</string>
-    <string name="ex_freq_3_5_sub">Moderate activity</string>
+    <string name="ex_freq_3_5_sub">보통 활동</string>
     <string name="ex_freq_6_7_plus_title">6–7</string>
-    <string name="ex_freq_6_7_plus_sub">High activity</string>
+    <string name="ex_freq_6_7_plus_sub">높은 활동</string>
     <string name="ex_freq_7_plus_title">7+</string>
-    <string name="ex_freq_7_plus_sub">Very high activity</string>
+    <string name="ex_freq_7_plus_sub">매우 높은 활동</string>
 
 
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">목표가 무엇인가요?</string>
-    <string name="onboard_goal_subtitle">This helps us tailor your calorie plan.</string>
+    <string name="onboard_goal_subtitle">kcal 계획을 맞춤 설정하는 데 도움이 됩니다.</string>
     <string name="goal_lose">체중 감량</string>
     <string name="goal_maintain">유지</string>
     <string name="goal_gain">체중 증가</string>
-    <string name="goal_healthy_eating">건강한 식사</string>
+    <string name="goal_healthy_eating">건강한 식습관</string>
 
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">목표 체중은 얼마인가요?</string>
-    <string name="onboard_goal_weight_subtitle">이 목표를 바탕으로 더 적합한 일일 칼로리 섭취량을 추천해 드립니다.</string>
-    <string name="onboard_goal_weight_hint">맞춤 계획을 조정하는 데 사용됩니다.</string>
+    <string name="onboard_goal_weight_subtitle">이 목표를 바탕으로 더 적합한 일일 kcal 권장량을 만들어 드립니다.</string>
+    <string name="onboard_goal_weight_hint">맞춤형 계획을 보정하는 데 사용됩니다.</string>
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">Using CaloShape AI can triple your weight\nloss efficiency</string>
-    <string name="onboard_weight_loss_comparison_without_ai">Without\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_with_ai">With\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_title">CaloShape AI를 사용하면 체중
+감량 효율을 3배 높일 수 있습니다</string>
+    <string name="onboard_weight_loss_comparison_without_ai">CaloShape AI
+없이</string>
+    <string name="onboard_weight_loss_comparison_with_ai">CaloShape AI
+사용</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI makes everything simple\nand keeps you accountable</string>
+    <string name="onboard_weight_loss_comparison_caption">CaloShape AI가 모든 것을 간단하게 만들고
+목표를 꾸준히 지키도록 도와줍니다</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
-    <string name="onboard_notif_title">모든 식사를 의미 있게 기록하세요!</string>
-    <string name="onboard_notif_subtitle">Enable notifications for gentle reminders to log meals—so your 칼로리, macros, and progress stay on track. Slip-ups happen; timely nudges help you bounce back fast.</string>
+    <string name="onboard_notif_title">매 끼니를 의미 있게 기록하세요!</string>
+    <string name="onboard_notif_subtitle">식사 기록 알림을 켜면 kcal, 매크로, 진행 상황을 목표에 맞게 유지할 수 있습니다. 실수는 누구에게나 생기지만, 적절한 알림이 빠르게 다시 돌아오도록 도와줍니다.</string>
     <string name="onboard_allow_notifications_cta">알림 허용</string>
-    <string name="notification_mock_app_title">AI 칼로리 카운터</string>
-    <string name="onboard_notif_title_got_a_sec">Your meal won’t log itself 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">Log this meal to keep your 칼로리 and macros on track.</string>
+    <string name="notification_mock_app_title">AI kcal 카운터</string>
+    <string name="onboard_notif_title_got_a_sec">식사는 저절로 기록되지 않아요 😉</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">kcal와 매크로를 목표에 맞게 유지하려면 이 식사를 기록하세요.</string>
 
 
     <!-- Onboarding: HealthConnectIntroScreen -->
-    <string name="onboard_hc_connect_title_prefix">연결 대상</string>
+    <string name="onboard_hc_connect_title_prefix">연결하기</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
-    <string name="onboard_hc_connect_body">Sync daily activity between CaloShape AI and health apps to get more complete records and insights.</string>
-    <string name="onboard_hc_permission_rationale_title_prefix">Why CaloShape uses</string>
+    <string name="onboard_hc_connect_body">CaloShape AI와 건강 앱 간의 일일 활동을 동기화하여 더 완전한 기록과 인사이트를 얻으세요.</string>
+    <string name="onboard_hc_permission_rationale_title_prefix">CaloShape가 사용하는 이유</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape reads your steps, active calories, and exercise data to estimate daily activity burn, update your calorie dashboard, and improve progress insights. You can revoke access anytime in 건강 Connect.</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape는 걸음 수, 활동 kcal, 운동 데이터를 읽어 일일 활동 소모량을 추정하고 kcal 대시보드를 업데이트하며 진행 인사이트를 개선합니다. Health Connect에서 언제든지 접근 권한을 취소할 수 있습니다.</string>
     <string name="onboard_hc_permission_rationale_button">알겠습니다</string>
 
 
     <!-- Onboarding: ComputationProgressScreen -->
-    <string name="progress_hero_title">맞춤 계획을 만드는 중</string>
-    <string name="progress_hero_subtitle">We’re using your 목표s, body data, and preferences to tailor your daily targets.</string>
+    <string name="progress_hero_title">개인 맞춤 계획을 만드는 중</string>
+    <string name="progress_hero_subtitle">목표, 신체 데이터, 선호도를 바탕으로 일일 목표를 맞춤 설정하고 있습니다.</string>
     <string name="progress_footer_hint">잠시만 기다려 주세요</string>
     <string name="progress_center_caption">결과 준비 중</string>
-    <string name="progress_phase_pill_1">Reviewing your profile</string>
-    <string name="progress_phase_pill_2">Calculating your calorie target</string>
-    <string name="progress_phase_pill_3">Balancing your daily macros</string>
-    <string name="progress_phase_pill_4">Finalizing your health insights</string>
-    <string name="progress_card_title">Setting up your plan</string>
-    <string name="progress_row_calorie_target">일일 calorie target</string>
-    <string name="progress_row_carb_distribution">Carb distribution</string>
-    <string name="progress_row_protein_recommendation">단백질 recommendation</string>
-    <string name="progress_row_fat_recommendation">Fat recommendation</string>
-    <string name="progress_row_health_score_estimate">건강 점수 estimate</string>
+    <string name="progress_phase_pill_1">프로필 검토 중</string>
+    <string name="progress_phase_pill_2">kcal 목표 계산 중</string>
+    <string name="progress_phase_pill_3">일일 매크로 균형 조정 중</string>
+    <string name="progress_phase_pill_4">건강 인사이트 마무리 중</string>
+    <string name="progress_card_title">계획 설정 중</string>
+    <string name="progress_row_calorie_target">일일 kcal 목표</string>
+    <string name="progress_row_carb_distribution">탄수화물 배분</string>
+    <string name="progress_row_protein_recommendation">단백질 권장량</string>
+    <string name="progress_row_fat_recommendation">지방 권장량</string>
+    <string name="progress_row_health_score_estimate">건강 점수 추정</string>
 
 
     <!-- Onboarding: HealthPlanScreen -->
     <string name="plan_cta_start">시작해 볼까요</string>
     <string name="plan_title_congrats">축하합니다!</string>
-    <string name="plan_subtitle_ready">개인 건강 계획이 준비되었습니다!</string>
-    <string name="plan_disclaimer">Sources are below: See all references ›</string>
-    <string name="plan_unit_kcal_day">kcal / day</string>
+    <string name="plan_subtitle_ready">개인 맞춤 건강 계획이 준비되었습니다!</string>
+    <string name="plan_disclaimer">출처는 아래에 있습니다: 모든 참고 자료 보기 ›</string>
+    <string name="plan_unit_kcal_day">kcal / 일</string>
 
     <string name="plan_macros_proteins">단백질</string>
     <string name="plan_macros_carbs">탄수화물</string>
@@ -230,54 +234,59 @@
     <string name="plan_weight_current">현재 체중</string>
     <string name="plan_weight_delta">목표 체중까지</string>
 
-    <string name="plan_goals_title">How to reach\nyour 목표s</string>
-    <string name="plan_goal_card_health_scores">건강 점수s guide you, so habits form naturally</string>
-    <string name="plan_goal_card_track_meals">Log meals in one tap, staying consistent is easy</string>
-    <string name="plan_goal_card_daily_calories">See daily 칼로리 clearly, and never lose track</string>
-    <string name="plan_goal_card_balance_macros">탄수화물 × protein × fat, smart balance, better results</string>
-    <string name="plan_sources_based_on">Based on official dietary guidelines,\nfor reference only, not medical advice.</string>
-    <string name="plan_sources_more">See all references ›</string>
-    <string name="plan_sources_hide">Hide sources</string>
+    <string name="plan_goals_title">목표를 달성하는
+방법</string>
+    <string name="plan_goal_card_health_scores">건강 점수가 자연스럽게 습관을 만들도록 안내합니다</string>
+    <string name="plan_goal_card_track_meals">한 번의 탭으로 식사를 기록해 꾸준함을 쉽게 유지하세요</string>
+    <string name="plan_goal_card_daily_calories">일일 kcal를 명확히 보고 목표를 놓치지 마세요</string>
+    <string name="plan_goal_card_balance_macros">탄수화물 × 단백질 × 지방, 스마트한 균형으로 더 나은 결과를 만드세요</string>
+    <string name="plan_sources_based_on">공식 식단 가이드라인을 기반으로 하며,
+참고용일 뿐 의료 조언이 아닙니다.</string>
+    <string name="plan_sources_more">모든 참고 자료 보기 ›</string>
+    <string name="plan_sources_hide">출처 숨기기</string>
 
 
     <!-- Onboarding: OnboardReferralCodeScreen -->
-    <string name="onboard_referral_code_input">Enter referral code\n(optional)</string>
-    <string name="onboard_referral_code_subtitle">You can skip this step</string>
+    <string name="onboard_referral_code_input">추천 코드 입력
+(선택 사항)</string>
+    <string name="onboard_referral_code_subtitle">이 단계는 건너뛸 수 있습니다</string>
     <string name="onboard_referral_code_input_label">추천 코드</string>
     <string name="onboard_referral_code_placeholder">추천 코드</string>
     <string name="onboard_referral_code_submit">제출</string>
     <string name="onboard_referral_code_submitting">제출 중…</string>
     <string name="onboard_referral_code_applied">추천 코드가 적용되었습니다!</string>
 
-    <string name="onboard_referral_code_error_invalid_format">Use letters and numbers only.</string>
-    <string name="onboard_referral_code_error_invalid">We couldn\'t find this referral code.</string>
-    <string name="onboard_referral_code_error_self_referral">You can\'t use your own referral code.</string>
-    <string name="onboard_referral_code_error_already_claimed">This account has already applied a referral code.</string>
-    <string name="onboard_referral_code_error_already_subscribed">Subscribed accounts can\'t apply a referral code.</string>
-    <string name="onboard_referral_code_error_disabled">Referral is temporarily unavailable.</string>
-    <string name="onboard_referral_code_error_risk">We can\'t apply a referral code right now.</string>
-    <string name="onboard_referral_code_error_network">We can\'t apply it right now. 나중에 다시 시도해 주세요.</string>
-    <string name="onboard_referral_code_error_unknown">Referral code can\'t be applied right now.\n나중에 다시 시도해 주세요.</string>
+    <string name="onboard_referral_code_error_invalid_format">문자와 숫자만 사용하세요.</string>
+    <string name="onboard_referral_code_error_invalid">이 추천 코드를 찾을 수 없습니다.</string>
+    <string name="onboard_referral_code_error_self_referral">본인의 추천 코드는 사용할 수 없습니다.</string>
+    <string name="onboard_referral_code_error_already_claimed">이 계정에는 이미 추천 코드가 적용되었습니다.</string>
+    <string name="onboard_referral_code_error_already_subscribed">구독 중인 계정은 추천 코드를 적용할 수 없습니다.</string>
+    <string name="onboard_referral_code_error_disabled">추천 기능을 일시적으로 사용할 수 없습니다.</string>
+    <string name="onboard_referral_code_error_risk">지금은 추천 코드를 적용할 수 없습니다.</string>
+    <string name="onboard_referral_code_error_network">지금은 적용할 수 없습니다. 나중에 다시 시도해 주세요.</string>
+    <string name="onboard_referral_code_error_unknown">지금은 추천 코드를 적용할 수 없습니다.
+나중에 다시 시도해 주세요.</string>
 
 
     <!-- Onboarding: OnboardSubscriptionScreen  Paywall -->
     <string name="subscription_price_per_month_format">%1$s/월</string>
     <string name="subscription_price_per_month_unit">/월</string>
-    <string name="subscription_price_unavailable_title">가격을 불러올 수 없음</string>
-    <string name="subscription_price_unavailable_body">현재 Google Play에서 지역별 가격을 가져올 수 없습니다. 다시 시도해 주세요.</string>
+    <string name="subscription_price_unavailable_title">가격을 확인할 수 없습니다</string>
+    <string name="subscription_price_unavailable_body">현재 Google Play의 현지 가격을 가져올 수 없습니다. 다시 시도해 주세요.</string>
 
 
     <!-- Onboarding: OnboardSubscriptionIntro -->
-    <string name="subscription_intro_title">Unlock CaloShape AI to\nreach your 목표s faster.</string>
-    <string name="subscription_intro_helper_format">Just %1$s per year (%2$s)</string>
-    <string name="subscription_start_three_day_free_trial">3일 무료 체험</string>
-    <string name="subscription_three_day_trial_helper_format">연 %1$s (월 환산 %2$s)</string>
-    <string name="subscription_already_owned_restore_required">Your Google Play account already has an active CaloShape subscription. Restore it to this CaloShape account before using premium features.</string>
-    <string name="subscription_error_no_active_purchase">활성 구매 내역을 찾을 수 없습니다.</string>
+    <string name="subscription_intro_title">CaloShape AI를 잠금 해제하고
+목표를 더 빠르게 달성하세요.</string>
+    <string name="subscription_intro_helper_format">연 %1$s만으로 이용 (%2$s)</string>
+    <string name="subscription_start_three_day_free_trial">3일 무료 체험 시작</string>
+    <string name="subscription_three_day_trial_helper_format">연 %1$s만으로 이용 (%2$s/월)</string>
+    <string name="subscription_already_owned_restore_required">Google Play 계정에 이미 활성 CaloShape 구독이 있습니다. Premium 기능을 사용하기 전에 이 CaloShape 계정으로 복원하세요.</string>
+    <string name="subscription_error_no_active_purchase">활성 구매를 찾을 수 없습니다.</string>
     <string name="subscription_error_restore_failed">구매를 복원할 수 없습니다. 다시 시도해 주세요.</string>
     <string name="subscription_error_purchase_failed">구매에 실패했습니다. 다시 시도해 주세요.</string>
-    <string name="subscription_error_purchase_pending">결제가 처리 중입니다. Google Play에서 구매를 확인하면 Premium을 이용할 수 있습니다.</string>
-    <string name="subscription_error_trial_eligibility_failed">무료 체험 자격을 확인할 수 없습니다. 다시 시도해 주세요.</string>
+    <string name="subscription_error_purchase_pending">결제가 처리 중입니다. Google Play에서 구매를 확인하면 Premium 이용이 가능해집니다.</string>
+    <string name="subscription_error_trial_eligibility_failed">체험 자격을 확인할 수 없습니다. 다시 시도해 주세요.</string>
     <string name="restore_subscription_dialog_title">구독을 찾았습니다</string>
     <string name="settings_restore_subscription">구독 복원</string>
     <string name="restore_subscription_dialog_restoring">복원 중…</string>
@@ -285,50 +294,52 @@
 
 
     <!-- Onboarding: OnboardDiscountSpinScreen-->
-    <string name="subscription_spin_title">Spin to unlock an\nexclusive discount</string>
-    <string name="subscription_spin_helper_ready">Tap Spin to reveal your exclusive gift.</string>
+    <string name="subscription_spin_title">돌려서
+독점 할인을 잠금 해제</string>
+    <string name="subscription_spin_helper_ready">돌리기를 탭해 독점 선물을 확인하세요.</string>
     <string name="subscription_spin_button">돌리기</string>
     <string name="subscription_spinning_button">돌리는 중…</string>
-    <string name="subscription_gift_offer_unlocked">Gift offer unlocked</string>
-    <string name="subscription_spin_helper_wait">Please wait until the wheel stops.</string>
-    <string name="subscription_spin_helper_revealed">This offer is revealed after the wheel stops.</string>
+    <string name="subscription_gift_offer_unlocked">선물 혜택 잠금 해제됨</string>
+    <string name="subscription_spin_helper_wait">휠이 멈출 때까지 기다려 주세요.</string>
+    <string name="subscription_spin_helper_revealed">이 혜택은 휠이 멈춘 후 공개됩니다.</string>
 
 
     <!-- Onboarding: OneTimeOfferHeroCard-->
-    <string name="subscription_gift_unlocked_title">선물 잠금 해제 🎁</string>
-    <string name="subscription_gift_price_unlocked">선물 가격 잠금 해제</string>
-    <string name="subscription_unlock_premium_for_only">Unlock premium for only</string>
-    <string name="subscription_discount_body">스캔 meals faster. Track macros smarter.\nStay on plan daily.</string>
+    <string name="subscription_gift_unlocked_title">선물이 잠금 해제되었습니다 🎁</string>
+    <string name="subscription_gift_price_unlocked">선물 가격 잠금 해제됨</string>
+    <string name="subscription_unlock_premium_for_only">이 가격으로 Premium 잠금 해제</string>
+    <string name="subscription_discount_body">식사를 더 빠르게 스캔하세요. 매크로를 더 똑똑하게 추적하세요.
+매일 계획을 지켜보세요.</string>
     <string name="subscription_yearly_price_format">%1$s/년</string>
-    <string name="subscription_urgency_coffee">Less than a coffee</string>
-    <string name="subscription_urgency_price_gone">Close this screen? This price is gone</string>
-    <string name="subscription_urgency_waiting">What are you waiting for?</string>
+    <string name="subscription_urgency_coffee">커피 한 잔보다 저렴하게</string>
+    <string name="subscription_urgency_price_gone">이 화면을 닫으면 이 가격은 사라집니다</string>
+    <string name="subscription_urgency_waiting">무엇을 기다리고 있나요?</string>
 
-    <string name="subscription_trial_enabled">무료 체험 사용 가능</string>
-    <string name="subscription_trial_enable_prompt">Not sure? Turn on free trial</string>
-    <string name="subscription_trial_checking_eligibility">Checking trial availability…</string>
-    <string name="subscription_trial_already_used">체험 이미 사용됨</string>
-    <string name="subscription_trial_unavailable">무료 체험 사용 불가</string>
+    <string name="subscription_trial_enabled">무료 체험 활성화됨</string>
+    <string name="subscription_trial_enable_prompt">확신이 없나요? 무료 체험을 켜세요</string>
+    <string name="subscription_trial_checking_eligibility">체험 가능 여부 확인 중…</string>
+    <string name="subscription_trial_already_used">체험이 이미 사용되었습니다</string>
+    <string name="subscription_trial_unavailable">무료 체험을 사용할 수 없습니다</string>
 
     <string name="subscription_badge_free_trial">무료 체험</string>
-    <string name="subscription_badge_lowest_price_ever">Lowest price ever</string>
-    <string name="subscription_yearly_plan">연간 요금제</string>
-    <string name="subscription_yearly_plan_price_format">12mo · %1$s</string>
+    <string name="subscription_badge_lowest_price_ever">역대 최저가</string>
+    <string name="subscription_yearly_plan">연간 플랜</string>
+    <string name="subscription_yearly_plan_price_format">12개월 · %1$s</string>
 
-    <string name="subscription_start_free_trial">3일 동안 무료로 체험하기</string>
-    <string name="subscription_trial_helper">약정 없음 — 언제든지 취소</string>
-    <string name="subscription_discount_terms_format">연 %1$s(월 %2$s)</string>
-    <string name="subscription_discount_trial_terms_format">약정 없음 - 언제든지 취소</string>
+    <string name="subscription_start_free_trial">3일 무료 체험 시작</string>
+    <string name="subscription_trial_helper">약정 없음 — 언제든지 취소 가능</string>
+    <string name="subscription_discount_terms_format">연 %1$s만으로 이용 (%2$s/월)</string>
+    <string name="subscription_discount_trial_terms_format">약정 없음 - 언제든지 취소 가능</string>
 
 
     <!-- HomeScreen -->
     <string name="recently_uploaded">최근 업로드</string>
-    <string name="workout_membership_verify_failed">Unable to verify membership. 다시 시도해 주세요.</string>
+    <string name="workout_membership_verify_failed">멤버십을 확인할 수 없습니다. 다시 시도해 주세요.</string>
 
 
     <!-- MainBottomBar -->
     <string name="bottom_nav_home">홈</string>
-    <string name="bottom_nav_progress">진행 상황</string>
+    <string name="bottom_nav_progress">진행</string>
     <string name="bottom_nav_weight">체중</string>
     <string name="bottom_nav_fasting">단식</string>
     <string name="bottom_nav_workout">운동</string>
@@ -338,34 +349,34 @@
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">남은 칼로리</string>
-    <string name="home_calories_eaten_label">섭취 칼로리</string>
+    <string name="home_calories_goal_label">남은 kcal</string>
+    <string name="home_calories_eaten_label">섭취한 kcal</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">남은 단백질</string>
-    <string name="home_protein_eaten_label">섭취 단백질</string>
+    <string name="home_protein_eaten_label">섭취한 단백질</string>
     <string name="home_carbs_goal_label">남은 탄수화물</string>
-    <string name="home_carbs_eaten_label">섭취 탄수화물</string>
+    <string name="home_carbs_eaten_label">섭취한 탄수화물</string>
     <string name="home_fats_goal_label">남은 지방</string>
-    <string name="home_fats_eaten_label">섭취 지방</string>
+    <string name="home_fats_eaten_label">섭취한 지방</string>
     <string name="home_fiber_goal_label">남은 식이섬유</string>
-    <string name="home_fiber_eaten_label">섭취 식이섬유</string>
+    <string name="home_fiber_eaten_label">섭취한 식이섬유</string>
     <string name="home_sugar_goal_label">남은 당류</string>
-    <string name="home_sugar_eaten_label">섭취 당류</string>
+    <string name="home_sugar_eaten_label">섭취한 당류</string>
     <string name="home_sodium_goal_label">남은 나트륨</string>
-    <string name="home_sodium_eaten_label">섭취 나트륨</string>
+    <string name="home_sodium_eaten_label">섭취한 나트륨</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
     <!-- HomeCards :  Health Score Card & Advice -->
-    <string name="home_health_score_advice_zero">Log your first meal today to see a health 점수 based on its nutrition details.</string>
-    <string name="home_health_score_advice_very_low">Today\'s average is low. Consider more protein, fiber, and lower sugar or sodium.</string>
-    <string name="home_health_score_advice_low">There\'s room to improve. Try adding vegetables and quality protein.</string>
-    <string name="home_health_score_advice_medium">You\'re on track. Keep portions steady and watch sugar, sodium, and fiber.</string>
-    <string name="home_health_score_advice_good">Good balance today. Keep choosing nutrient-dense 음식s.</string>
-    <string name="home_health_score_advice_excellent">Great balance today. Keep building consistent habits.</string>
+    <string name="home_health_score_advice_zero">오늘 첫 식사를 기록하면 영양 정보 기반의 건강 점수를 볼 수 있습니다.</string>
+    <string name="home_health_score_advice_very_low">오늘 평균이 낮습니다. 단백질과 식이섬유를 늘리고 당류나 나트륨은 줄여 보세요.</string>
+    <string name="home_health_score_advice_low">개선할 여지가 있습니다. 채소와 질 좋은 단백질을 더해 보세요.</string>
+    <string name="home_health_score_advice_medium">잘 진행 중입니다. 양을 일정하게 유지하고 당류, 나트륨, 식이섬유를 확인하세요.</string>
+    <string name="home_health_score_advice_good">오늘 균형이 좋습니다. 영양 밀도가 높은 음식을 계속 선택하세요.</string>
+    <string name="home_health_score_advice_excellent">오늘 균형이 훌륭합니다. 꾸준한 습관을 계속 만들어 가세요.</string>
     <string name="home_health_score_title">건강 점수</string>
     <string name="home_health_score_value">%1$d/10</string>
 
@@ -376,12 +387,12 @@
     <string name="steps_status_hc_not_installed">설치되지 않음</string>
     <string name="steps_status_hc_unavailable">사용 불가</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
-    <string name="steps_secondary_no_data_yet">아직 데이터가 없습니다</string>
+    <string name="steps_secondary_no_data_yet">아직 데이터 없음</string>
     <string name="steps_secondary_connect">연결</string>
-    <string name="steps_hint_connect_google_health">Connect Google 건강 to track your steps</string>
-    <string name="steps_hint_install_health_connect">Install 건강 Connect to track your steps</string>
-    <string name="steps_hint_hc_unavailable">건강 Connect isn’t available on this device</string>
-    <string name="steps_hint_retry">Sync 실패. Tap to retry</string>
+    <string name="steps_hint_connect_google_health">걸음 수 추적을 위해 Google Health에 연결하세요</string>
+    <string name="steps_hint_install_health_connect">걸음 수 추적을 위해 Health Connect를 설치하세요</string>
+    <string name="steps_hint_hc_unavailable">이 기기에서는 Health Connect를 사용할 수 없습니다</string>
+    <string name="steps_hint_retry">동기화 실패. 탭하여 다시 시도</string>
 
 
     <!-- HomeCards : Workout Card -->
@@ -391,7 +402,7 @@
 
     <!-- HomeCards : Weight Card -->
     <string name="weight_card_title">체중</string>
-    <string name="weight_card_of_goal">of 목표</string>
+    <string name="weight_card_of_goal">목표 중</string>
 
 
     <!-- HomeCards : Fasting Card -->
@@ -402,7 +413,7 @@
 
     <!-- HomeCards : Water Card -->
     <string name="water_intake_title">물</string>
-    <string name="water_intake_cups_format">(%1$d cups)</string>
+    <string name="water_intake_cups_format">(%1$d컵)</string>
 
 
     <!-- =========================
@@ -413,16 +424,16 @@
     <string name="progress_tab_last_week">지난주</string>
     <string name="progress_tab_two_weeks_ago">2주 전</string>
     <string name="progress_tab_three_weeks_ago">3주 전</string>
-    <string name="progress_error_load_failed">불러오지 못했습니다</string>
-    <string name="workout_chart_error_load_failed">Load 운동 chart 실패</string>
-    <string name="water_chart_error_load_failed">Load water chart 실패</string>
+    <string name="progress_error_load_failed">불러오기 실패</string>
+    <string name="workout_chart_error_load_failed">운동 차트를 불러오지 못했습니다</string>
+    <string name="water_chart_error_load_failed">물 섭취 차트를 불러오지 못했습니다</string>
 
 
     <!-- =========================
          BMI Card / BMI Info Dialog
          ========================= -->
     <string name="bmi_card_title">내 BMI</string>
-    <string name="bmi_card_subtitle">체중 상태</string>
+    <string name="bmi_card_subtitle">체중 상태는</string>
 
     <string name="bmi_status_underweight">저체중</string>
     <string name="bmi_status_healthy">건강</string>
@@ -435,14 +446,14 @@
     <string name="bmi_range_overweight">25.0–29.9</string>
     <string name="bmi_range_obese">&gt;30.0</string>
 
-    <string name="bmi_info_title">BMI란?</string>
+    <string name="bmi_info_title">BMI란 무엇인가요?</string>
     <string name="bmi_info_subtitle">체질량지수</string>
     <string name="bmi_info_formula_title">공식</string>
-    <string name="bmi_info_formula_value">BMI = 체중 (kg) / height (m²)</string>
-    <string name="bmi_info_meaning_title">알 수 있는 것</string>
-    <string name="bmi_info_meaning_body">BMI helps estimate whether your body 체중 is in a generally healthy range.</string>
-    <string name="bmi_info_note_title">참고하세요</string>
-    <string name="bmi_info_note_body">BMI is a general guide. It does not directly measure body fat, muscle mass, or overall health.</string>
+    <string name="bmi_info_formula_value">BMI = 체중 (kg) / 키 (m²)</string>
+    <string name="bmi_info_meaning_title">무엇을 알려주나요</string>
+    <string name="bmi_info_meaning_body">BMI는 체중이 일반적으로 건강한 범위에 있는지 추정하는 데 도움이 됩니다.</string>
+    <string name="bmi_info_note_title">기억해 주세요</string>
+    <string name="bmi_info_note_body">BMI는 일반적인 기준입니다. 체지방, 근육량 또는 전반적인 건강을 직접 측정하지는 않습니다.</string>
     <string name="bmi_info_cta">알겠습니다</string>
 
 
@@ -450,17 +461,17 @@
          NutritionChartCard
          ========================= -->
     <string name="progress_chart_7day_avg_calories">7일 평균</string>
-    <string name="progress_chart_value_cals">%1$d cals</string>
+    <string name="progress_chart_value_cals">%1$d kcal</string>
     <string name="progress_chart_15day_avg_calories">15일 평균</string>
-    <string name="progress_chart_loading_total_calories_text">--.- cals</string>
+    <string name="progress_chart_loading_total_calories_text">--.- kcal</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
-    <string name="progress_chart_total_calories">총 칼로리</string>
-    <string name="progress_chart_cals">칼로리</string>
+    <string name="progress_chart_total_calories">총 kcal</string>
+    <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">단백질</string>
     <string name="progress_legend_carbs">탄수화물</string>
     <string name="progress_legend_fats">지방</string>
-    <string name="progress_keep_it_up">계속하세요! 시작이 가장 어렵습니다!</string>
+    <string name="progress_keep_it_up">잘하고 있어요! 시작이 가장 어렵습니다!</string>
 
     <string name="progress_day_sun">일</string>
     <string name="progress_day_mon">월</string>
@@ -470,7 +481,7 @@
     <string name="progress_day_fri">금</string>
     <string name="progress_day_sat">토</string>
 
-    <string name="progress_tooltip_calories">칼로리</string>
+    <string name="progress_tooltip_calories">kcal</string>
     <string name="progress_tooltip_protein">단백질</string>
     <string name="progress_tooltip_carbs">탄수화물</string>
     <string name="progress_tooltip_fats">지방</string>
@@ -488,7 +499,7 @@
     <string name="progress_legend_fiber">식이섬유</string>
     <string name="progress_legend_sugar">당류</string>
     <string name="progress_legend_sodium">나트륨</string>
-    <string name="progress_micronutrients_keep_it_up">Keep your fiber, sugar, and sodium balanced.</string>
+    <string name="progress_micronutrients_keep_it_up">식이섬유, 당류, 나트륨의 균형을 유지하세요.</string>
     <string name="progress_tooltip_fiber">식이섬유</string>
     <string name="progress_tooltip_sugar">당류</string>
     <string name="progress_tooltip_sodium">나트륨</string>
@@ -499,17 +510,17 @@
          WorkoutChartCard
          ========================= -->
     <string name="workout_chart_goal_reached">오늘 목표 달성</string>
-    <string name="workout_chart_goal_left">%1$d kcal left to hit today\'s 목표</string>
-    <string name="workout_chart_title">운동 소모</string>
-    <string name="workout_chart_info_dialog_body">Includes logged 운동s and activity 칼로리 estimated from daily steps.</string>
+    <string name="workout_chart_goal_left">오늘 목표까지 %1$d kcal 남음</string>
+    <string name="workout_chart_title">운동 소모량</string>
+    <string name="workout_chart_info_dialog_body">기록한 운동과 일일 걸음 수로 추정한 활동 kcal가 포함됩니다.</string>
     <string name="workout_chart_unit_kcal">kcal</string>
     <string name="workout_chart_goal">목표</string>
     <string name="workout_chart_value_kcal">%1$d kcal</string>
     <string name="workout_chart_7day_avg">7일 평균</string>
-    <string name="workout_chart_loading">로딩 중…</string>
-    <string name="workout_legend_burned">운동 소모</string>
+    <string name="workout_chart_loading">불러오는 중…</string>
+    <string name="workout_legend_burned">운동 소모량</string>
     <string name="workout_legend_daily_goal">일일 목표</string>
-    <string name="workout_tooltip_burned">소모</string>
+    <string name="workout_tooltip_burned">소모량</string>
     <string name="workout_tooltip_kcal_value">%1$d kcal</string>
 
 
@@ -517,16 +528,16 @@
          WaterChartCard
          ========================= -->
     <string name="water_chart_goal_reached">오늘 목표 달성</string>
-    <string name="water_chart_goal_left_ml">%1$s ml left to reach today\'s 목표</string>
+    <string name="water_chart_goal_left_ml">오늘 목표까지 %1$s ml 남음</string>
     <string name="water_chart_title">물 섭취량</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">목표</string>
     <string name="water_chart_value_ml">%1$s ml</string>
     <string name="water_chart_7day_avg">7일 평균</string>
-    <string name="water_chart_loading">로딩 중…</string>
-    <string name="water_legend_intake">섭취</string>
+    <string name="water_chart_loading">불러오는 중…</string>
+    <string name="water_legend_intake">섭취량</string>
     <string name="water_legend_daily_goal">일일 목표</string>
-    <string name="water_tooltip_intake">섭취</string>
+    <string name="water_tooltip_intake">섭취량</string>
     <string name="water_tooltip_ml_value">%1$d ml</string>
 
 
@@ -539,29 +550,29 @@
     <string name="progress_average_tab_60_days">60일</string>
 
     <string name="progress_average_overview_title">평균 개요</string>
-    <string name="progress_average_overview_subtitle">오늘은 제외하고 데이터가 있는 날만 평균합니다.</string>
-    <string name="progress_average_days_badge">%1$d-day avg</string>
+    <string name="progress_average_overview_subtitle">오늘은 제외하고 데이터가 있는 날만 평균에 포함합니다.</string>
+    <string name="progress_average_days_badge">%1$d일 평균</string>
     <string name="progress_average_loading">평균 불러오는 중…</string>
-    <string name="progress_average_total_calories">총 칼로리</string>
+    <string name="progress_average_total_calories">총 kcal</string>
     <string name="progress_average_protein">단백질</string>
     <string name="progress_average_carbs">탄수화물</string>
     <string name="progress_average_fats">지방</string>
     <string name="progress_average_fiber">식이섬유</string>
     <string name="progress_average_sugar">당류</string>
     <string name="progress_average_sodium">나트륨</string>
-    <string name="progress_average_workout">운동 소모</string>
+    <string name="progress_average_workout">운동 소모량</string>
     <string name="progress_average_water">물 섭취량</string>
     <string name="progress_average_health_score">건강 점수</string>
     <string name="progress_average_steps">걸음 수</string>
     <string name="progress_average_health_score_value">%1$.1f / 10</string>
-    <string name="progress_average_steps_value">%1$s steps</string>
+    <string name="progress_average_steps_value">%1$s걸음</string>
 
 
     <!--WeightScreen-->
     <string name="weight_title">체중</string>
     <string name="weight_overview_title">개요</string>
     <string name="weight_history_title">기록</string>
-    <string name="weight_delete_success">삭제되었습니다!</string>
+    <string name="weight_delete_success">성공적으로 삭제되었습니다!</string>
     <string name="weight_delete_failed">삭제 실패. 다시 시도해 주세요.</string>
     <string name="weight_log_weight">체중 기록</string>
 
@@ -569,16 +580,16 @@
     <!-- WeightComponents -->
     <string name="weight_card_to_goal_weight">목표 체중까지</string>
     <string name="weight_card_current_weight">현재 체중</string>
-    <string name="weight_card_achieved_goal_format">Achieved %1$s%% of 목표</string>
+    <string name="weight_card_achieved_goal_format">목표의 %1$s%% 달성</string>
     <string name="weight_chart_tab_30_days">30일</string>
     <string name="weight_chart_tab_60_days">60일</string>
     <string name="weight_chart_tab_90_days">90일</string>
     <string name="weight_chart_tab_all_time">전체 기간</string>
     <string name="weight_chart_title">체중 추세</string>
-    <string name="weight_chart_goal_progress_badge">%1$s%% of 목표</string>
+    <string name="weight_chart_goal_progress_badge">목표의 %1$s%%</string>
     <string name="weight_chart_goal_label">목표</string>
-    <string name="weight_chart_to_goal">%1$s to 목표</string>
-    <string name="weight_goal_chart_empty_hint">Log 체중 to start your trend</string>
+    <string name="weight_chart_to_goal">목표까지 %1$s</string>
+    <string name="weight_goal_chart_empty_hint">체중을 기록해 추세를 시작하세요</string>
     <string name="weight_chart_motivation">작은 한 걸음이 목표에 더 가까워지게 합니다.</string>
     <string name="weight_history_weight_label">체중</string>
     <string name="weight_history_change_label">변화</string>
@@ -591,52 +602,52 @@
     <string name="fasting_plan_title">단식 계획</string>
     <string name="start_time">시작 시간</string>
     <string name="end_time">종료 시간</string>
-    <string name="fasting_notification_info_status_on">Reminders are on. If device notification permission is allowed, these reminders repeat daily.</string>
-    <string name="fasting_notification_info_status_off">Reminders are off. Turn on the switch on the Home fasting card to receive these notifications.</string>
+    <string name="fasting_notification_info_status_on">알림이 켜져 있습니다. 기기 알림 권한이 허용되어 있으면 이 알림이 매일 반복됩니다.</string>
+    <string name="fasting_notification_info_status_off">알림이 꺼져 있습니다. 이 알림을 받으려면 홈 단식 카드의 스위치를 켜세요.</string>
     <string name="fasting_notification_info_status_enabled_label">켜짐</string>
     <string name="fasting_notification_info_status_disabled_label">꺼짐</string>
     <string name="fasting_notification_info_title">알림 작동 방식</string>
-    <string name="fasting_notification_info_subtitle">Your %1$s plan ends at %2$s. When reminders are on, CaloShape sends two daily notifications.</string>
-    <string name="fasting_notification_info_at_time">At %1$s</string>
+    <string name="fasting_notification_info_subtitle">%1$s 계획은 %2$s에 종료됩니다. 알림이 켜져 있으면 CaloShape가 매일 두 번 알림을 보냅니다.</string>
+    <string name="fasting_notification_info_at_time">%1$s에</string>
     <string name="fasting_notification_info_start_title">식사 시간이 시작됩니다</string>
-    <string name="fasting_notification_info_start_body">You can start eating and log meals when needed.</string>
+    <string name="fasting_notification_info_start_body">필요할 때 식사를 시작하고 기록할 수 있습니다.</string>
     <string name="fasting_notification_info_endsoon_title">식사 시간이 곧 끝납니다</string>
-    <string name="fasting_notification_info_endsoon_body">One hour before the window closes at %1$s, CaloShape reminds you to finish your last meal.</string>
+    <string name="fasting_notification_info_endsoon_body">%1$s에 식사 시간이 닫히기 한 시간 전, CaloShape가 마지막 식사를 마무리하도록 알려줍니다.</string>
 
-    <string name="fasting_plan_desc_14_10">Ease in with a steady rhythm—14 hours to reset appetite cues and energy.</string>
-    <string name="fasting_plan_desc_16_8">Crowd favorite for a reason—16 hours to stay focused and in a lean groove.</string>
-    <string name="fasting_plan_desc_12_12">Balanced split: fast 12 hours, eat within a 12-hour window — perfect for beginners.</string>
-    <string name="fasting_plan_desc_18_6">18 hours of fasting, with a 6-hour eating window — a leaner schedule than 16:8.</string>
-    <string name="fasting_plan_desc_20_4">Stay laser-focused—1–2 mindful meals within a tight 4-hour window.</string>
-    <string name="fasting_plan_desc_22_2">One intentional meal in a 2-hour slot—keep water intake up.</string>
+    <string name="fasting_plan_desc_14_10">안정적인 리듬으로 시작하세요—14시간은 식욕 신호와 에너지를 재정비하는 데 도움이 됩니다.</string>
+    <string name="fasting_plan_desc_16_8">많은 사람이 선택하는 이유가 있습니다—16시간은 집중을 유지하고 가벼운 리듬을 만드는 데 좋습니다.</string>
+    <string name="fasting_plan_desc_12_12">균형 잡힌 분할: 12시간 단식, 12시간 식사 창 — 초보자에게 적합합니다.</string>
+    <string name="fasting_plan_desc_18_6">18시간 단식과 6시간 식사 창 — 16:8보다 더 타이트한 일정입니다.</string>
+    <string name="fasting_plan_desc_20_4">고도로 집중하세요—좁은 4시간 창 안에서 1–2끼를 신중하게 섭취합니다.</string>
+    <string name="fasting_plan_desc_22_2">2시간 안에 의도적인 한 끼—물 섭취를 충분히 유지하세요.</string>
 
     <string name="fasting_picker_title">단식 시작 시간 설정</string>
-    <string name="fasting_picker_subtitle">We’ll remind you at this time each day when your eating window starts.</string>
-    <string name="fasting_plan_save_failed">저장하지 못했습니다</string>
+    <string name="fasting_picker_subtitle">식사 시간이 시작될 때 매일 이 시간에 알려드립니다.</string>
+    <string name="fasting_plan_save_failed">저장 실패</string>
 
 
     <!-- FastingReceiver -->
-    <string name="fasting_start_title">%1$s eating window is open</string>
-    <string name="fasting_start_body">Your eating window runs %1$s–%2$s. Log meals as you go to keep today accurate.</string>
-    <string name="fasting_endsoon_title">1 hour left in your eating window</string>
-    <string name="fasting_endsoon_body">Your window closes at %1$s. If you plan one last meal, log it before you wrap up.</string>
+    <string name="fasting_start_title">%1$s 식사 시간이 열렸습니다</string>
+    <string name="fasting_start_body">식사 시간은 %1$s–%2$s입니다. 오늘 기록을 정확하게 유지하려면 식사를 할 때마다 기록하세요.</string>
+    <string name="fasting_endsoon_title">식사 시간이 1시간 남았습니다</string>
+    <string name="fasting_endsoon_body">식사 시간은 %1$s에 닫힙니다. 마지막 식사를 계획 중이라면 마무리 전에 기록하세요.</string>
 
 
 
 
     <!-- WorkoutHistoryScreen -->
     <string name="workout_history_title">운동 기록</string>
-    <string name="workout_history_summary_label">오늘 소모</string>
-    <string name="workout_history_summary_body">오늘 운동 소모 진행 상황 추적</string>
+    <string name="workout_history_summary_label">오늘 소모량</string>
+    <string name="workout_history_summary_body">오늘 운동 소모량 진행 상황을 추적하세요</string>
     <string name="workout_history_today_label">오늘</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
-    <string name="workout_history_avg_daily_label">7-day avg / day</string>
-    <string name="workout_history_avg_label">7-day avg / session</string>
+    <string name="workout_history_avg_daily_label">7일 평균 / 일</string>
+    <string name="workout_history_avg_label">7일 평균 / 세션</string>
     <string name="workout_history_avg_value">%1$d kcal</string>
     <string name="workout_history_unit_kcal">kcal</string>
 
     <string name="workout_history_empty_title">최근 운동 없음</string>
-    <string name="workout_history_empty">최근 7일간 운동 기록이 없습니다.</string>
+    <string name="workout_history_empty">최근 7일 동안 운동이 없습니다.</string>
     <string name="workout_history_recent_title">최근 세션</string>
     <string name="workout_history_minutes">%1$d분</string>
     <string name="workout_history_kcal">%1$d</string>
@@ -644,78 +655,78 @@
     <string name="workout_history_kcal_with_unit">%1$d kcal</string>
 
     <string name="workout_history_loading_title">운동 동기화 중</string>
-    <string name="workout_history_loading">로딩 중 운동 history…</string>
-    <string name="workout_history_error_title">기록을 사용할 수 없음</string>
+    <string name="workout_history_loading">운동 기록 불러오는 중…</string>
+    <string name="workout_history_error_title">기록을 사용할 수 없습니다</string>
 
     <string name="workout_history_delete_failed">삭제 실패. 다시 시도해 주세요.</string>
-    <string name="workout_history_delete_success">삭제되었습니다!</string>
-    <string name="workout_history_error">불러올 수 없음 운동 history.</string>
+    <string name="workout_history_delete_success">성공적으로 삭제되었습니다!</string>
+    <string name="workout_history_error">운동 기록을 불러올 수 없습니다.</string>
 
 
     <!-- WorkoutTrackerSheet -->
     <string name="workout_tracker_title">운동 추적기</string>
-    <string name="workout_tracker_subtitle">운동 종류와 시간을 입력하세요</string>
-    <string name="workout_tracker_example_placeholder">예: 45분 달리기</string>
+    <string name="workout_tracker_subtitle">운동 종류와 시간을 설명하세요</string>
+    <string name="workout_tracker_example_placeholder">예: 45 min running</string>
 
-    <string name="workout_tracker_select_from_list">or select from the list</string>
-    <string name="workout_tracker_show_less">Show less</string>
-    <string name="workout_tracker_show_more">Show more (%1$d)</string>
+    <string name="workout_tracker_select_from_list">또는 목록에서 선택</string>
+    <string name="workout_tracker_show_less">간단히 보기</string>
+    <string name="workout_tracker_show_more">더 보기 (%1$d)</string>
 
-    <string name="workout_tracker_estimating_fallback">Estimating…</string>
-    <string name="workout_tracker_estimating_analyzing">Analyzing your activity…</string>
-    <string name="workout_tracker_estimating_numbers">Working on your numbers…</string>
-    <string name="workout_tracker_estimating_calories">Estimating effort, calculating 칼로리…</string>
-    <string name="workout_tracker_do_not_close">Please do not close the app or lock your device</string>
+    <string name="workout_tracker_estimating_fallback">추정 중…</string>
+    <string name="workout_tracker_estimating_analyzing">활동 분석 중…</string>
+    <string name="workout_tracker_estimating_numbers">수치를 계산 중…</string>
+    <string name="workout_tracker_estimating_calories">운동 강도를 추정하고 kcal를 계산 중…</string>
+    <string name="workout_tracker_do_not_close">앱을 닫거나 기기를 잠그지 마세요</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
-    <string name="workout_tracker_minutes_activity">%1$d min %2$s</string>
+    <string name="workout_tracker_minutes_activity">%1$d분 %2$s</string>
     <string name="workout_tracker_add_workout">운동 추가</string>
 
-    <string name="workout_tracker_activity_content_label">운동 activity</string>
-    <string name="workout_preset_kcal_per_30_min">%1$d kcal / 30 min</string>
+    <string name="workout_tracker_activity_content_label">운동 활동</string>
+    <string name="workout_preset_kcal_per_30_min">%1$d kcal / 30분</string>
 
-    <string name="workout_tracker_save_success">저장되었습니다!</string>
-    <string name="workout_tracker_save_failed">Failed to save. 다시 시도해 주세요.</string>
-    <string name="workout_tracker_refresh_failed">Refresh 실패. 다시 시도해 주세요.</string>
+    <string name="workout_tracker_save_success">성공적으로 저장되었습니다!</string>
+    <string name="workout_tracker_save_failed">저장 실패. 다시 시도해 주세요.</string>
+    <string name="workout_tracker_refresh_failed">새로고침 실패. 다시 시도해 주세요.</string>
     <string name="workout_tracker_cancel">취소</string>
-    <string name="workout_tracker_try_again">Try again</string>
-    <string name="workout_tracker_scan_failed_title">Uh-oh! 스캔 실패</string>
-    <string name="workout_tracker_scan_failed_body">The 운동 description may be incorrect, or the internet connection is weak. For example: 30 min Running.</string>
+    <string name="workout_tracker_try_again">다시 시도</string>
+    <string name="workout_tracker_scan_failed_title">이런! 스캔에 실패했습니다</string>
+    <string name="workout_tracker_scan_failed_body">운동 설명이 올바르지 않거나 인터넷 연결이 약할 수 있습니다. 예: 30 min Running.</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->
     <string name="workout_preset_walking">걷기</string>
     <string name="workout_preset_running">달리기</string>
-    <string name="workout_preset_cycling">자전거</string>
+    <string name="workout_preset_cycling">자전거 타기</string>
     <string name="workout_preset_swimming">수영</string>
     <string name="workout_preset_hiking">하이킹</string>
-    <string name="workout_preset_aerobic_exercise">Aerobic exercise</string>
-    <string name="workout_preset_strength_training">Strength training</string>
-    <string name="workout_preset_weight_training">체중 training</string>
-    <string name="workout_preset_basketball">Basketball</string>
-    <string name="workout_preset_soccer">Soccer</string>
-    <string name="workout_preset_tennis">Tennis</string>
+    <string name="workout_preset_aerobic_exercise">유산소 운동</string>
+    <string name="workout_preset_strength_training">근력 운동</string>
+    <string name="workout_preset_weight_training">웨이트 트레이닝</string>
+    <string name="workout_preset_basketball">농구</string>
+    <string name="workout_preset_soccer">축구</string>
+    <string name="workout_preset_tennis">테니스</string>
     <string name="workout_preset_yoga">요가</string>
-    <string name="workout_preset_badminton">Badminton</string>
-    <string name="workout_preset_baseball">Baseball</string>
-    <string name="workout_preset_softball">Softball</string>
-    <string name="workout_preset_volleyball">Volleyball</string>
-    <string name="workout_preset_table_tennis">Table tennis</string>
-    <string name="workout_preset_dancing_general">Dancing</string>
-    <string name="workout_preset_zumba">Zumba</string>
-    <string name="workout_preset_pilates">Pilates</string>
+    <string name="workout_preset_badminton">배드민턴</string>
+    <string name="workout_preset_baseball">야구</string>
+    <string name="workout_preset_softball">소프트볼</string>
+    <string name="workout_preset_volleyball">배구</string>
+    <string name="workout_preset_table_tennis">탁구</string>
+    <string name="workout_preset_dancing_general">댄스</string>
+    <string name="workout_preset_zumba">줌바</string>
+    <string name="workout_preset_pilates">필라테스</string>
 
 
     <!-- DurationPickerSheet -->
-    <string name="workout_duration_sheet_subtitle">Add this 운동 time to your activity log</string>
-    <string name="workout_duration_hour_short">hr</string>
-    <string name="workout_duration_minute_short">min</string>
+    <string name="workout_duration_sheet_subtitle">이 운동 시간을 활동 기록에 추가하세요</string>
+    <string name="workout_duration_hour_short">시간</string>
+    <string name="workout_duration_minute_short">분</string>
     <string name="workout_duration_save">저장</string>
     <string name="workout_duration_cancel">취소</string>
 
 
     <!-- HomeQuickActionMenu -->
-    <string name="quick_add_saved_foods">Saved 음식s</string>
+    <string name="quick_add_saved_foods">저장한 음식</string>
     <string name="quick_add_scan_food">음식 스캔</string>
 
 
@@ -730,9 +741,9 @@
 
 
     <!-- RecentUploadCard -->
-    <string name="foodlog_pending_analysis">음식을 분석 중…</string>
+    <string name="foodlog_pending_analysis">음식을 분석하는 중…</string>
     <string name="foodlog_analysis_done">분석 완료</string>
-    <string name="recent_upload_kcal_text">🔥 %1$d 칼로리</string>
+    <string name="recent_upload_kcal_text">🔥 %1$d kcal</string>
     <string name="recent_upload_protein_text">🥩 %1$dg</string>
     <string name="recent_upload_carbs_text">🌾 %1$dg</string>
     <string name="recent_upload_fat_text">🥑 %1$dg</string>
@@ -740,30 +751,30 @@
 
     <!-- RecentlyUploadedEmptyCard -->
     <string name="recently_uploaded_empty">최근 업로드</string>
-    <string name="recently_uploaded_empty_hint">Tap + to add your first meal of the day</string>
+    <string name="recently_uploaded_empty_hint">오늘 첫 식사를 추가하려면 +를 탭하세요</string>
 
 
     <!-- SavedFoodsScreen -->
-    <string name="saved_foods_keep_15_days_hint">Saved 음식s from the last 15 days.</string>
-    <string name="saved_foods_unsave_dialog_title">Remove from saved 음식s?</string>
-    <string name="saved_foods_unsave_dialog_message">This meal will be removed from your Saved 음식s list, but it will still remain in your recent records.</string>
-    <string name="saved_foods_unsave_dialog_confirm">Remove</string>
-    <string name="saved_foods_title">Saved 음식s</string>
-    <string name="saved_foods_kcal">🔥 %1$d 칼로리</string>
+    <string name="saved_foods_keep_15_days_hint">최근 15일 동안 저장한 음식입니다.</string>
+    <string name="saved_foods_unsave_dialog_title">저장한 음식에서 제거할까요?</string>
+    <string name="saved_foods_unsave_dialog_message">이 식사는 저장한 음식 목록에서 제거되지만 최근 기록에는 계속 남아 있습니다.</string>
+    <string name="saved_foods_unsave_dialog_confirm">제거</string>
+    <string name="saved_foods_title">저장한 음식</string>
+    <string name="saved_foods_kcal">🔥 %1$d kcal</string>
     <string name="saved_foods_protein">🥩 %1$dg</string>
     <string name="saved_foods_carbs">🌾 %1$dg</string>
     <string name="saved_foods_fat">🥑 %1$dg</string>
-    <string name="saved_foods_detail">Detail</string>
-    <string name="saved_foods_load_failed_title">Saved 음식s 실패 to load</string>
+    <string name="saved_foods_detail">상세</string>
+    <string name="saved_foods_load_failed_title">저장한 음식을 불러오지 못했습니다</string>
 
 
     <!-- RecentUploadDetailScreen -->
-    <string name="foodlog_detail_load_failed">불러오지 못했습니다</string>
+    <string name="foodlog_detail_load_failed">불러오기 실패</string>
     <string name="foodlog_unknown_food">알 수 없는 음식</string>
     <string name="foodlog_no_image">이미지 없음</string>
 
     <string name="foodlog_detail_title">영양</string>
-    <string name="foodlog_detail_calories">칼로리</string>
+    <string name="foodlog_detail_calories">kcal</string>
     <string name="foodlog_detail_protein">단백질</string>
     <string name="foodlog_detail_carbs">탄수화물</string>
     <string name="foodlog_detail_fats">지방</string>
@@ -775,7 +786,7 @@
 
     <!-- DeleteFoodLogDialog -->
     <string name="foodlog_delete_dialog_title">기록을 삭제할까요?</string>
-    <string name="foodlog_delete_dialog_message">이 식사 기록을 영구적으로 삭제할까요? 이 작업은 되돌릴 수 없습니다.</string>
+    <string name="foodlog_delete_dialog_message">이 식사 기록을 영구적으로 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.</string>
     <string name="foodlog_delete_dialog_confirm">삭제</string>
 
 
@@ -783,74 +794,76 @@
     <string name="settings_title">설정</string>
     <string name="settings_choose_language">언어 선택</string>
     <string name="delete_account_dialog_title">계정을 삭제할까요?</string>
-    <string name="delete_account_dialog_body">Are you sure you want to delete your account? This will permanently delete your CaloShape data, including 음식 logs, 체중 records, and related settings. This action cannot be undone.</string>
+    <string name="delete_account_dialog_body">계정을 삭제하시겠습니까? 음식 기록, 체중 기록 및 관련 설정을 포함한 CaloShape 데이터가 영구적으로 삭제됩니다. 이 작업은 되돌릴 수 없습니다.</string>
 
 
-    <string name="restore_subscription_dialog_success_title">구독 복원 완료</string>
-    <string name="restore_subscription_dialog_payment_issue_title">Subscription restored, payment issue remains</string>
-    <string name="restore_subscription_dialog_no_active_title">활성 Google Play 구독을 찾을 수 없음</string>
+    <string name="restore_subscription_dialog_success_title">구독 복원됨</string>
+    <string name="restore_subscription_dialog_payment_issue_title">구독은 복원되었지만 결제 문제가 남아 있습니다</string>
+    <string name="restore_subscription_dialog_no_active_title">활성 Google Play 구독을 찾을 수 없습니다</string>
     <string name="restore_subscription_dialog_failed_title">복원 실패</string>
     <string name="restore_subscription_dialog_bound_title">다른 계정에 연결된 구독</string>
-    <string name="restore_subscription_dialog_success_body">Your subscription has been restored to this CaloShape account.</string>
-    <string name="restore_subscription_dialog_payment_issue_body">Your subscription is linked to this CaloShape account, but Google Play still reports a payment issue. Please update your payment method in Google Play to keep your subscription active.</string>
-    <string name="restore_subscription_dialog_no_active_body">현재 Google Play 계정에서 복원할 수 있는 CaloShape 구독을 찾지 못했습니다. 구매에 사용한 Google Play 계정인지 확인한 후 다시 시도해 주세요.</string>
-    <string name="restore_subscription_dialog_failed_body">We could not restore your subscription right now. Please check your connection and try again from 설정.</string>
-    <string name="restore_subscription_dialog_bound_body">이 Google Play 구독은 이미 다른 CaloShape 계정에 연결되어 있습니다. 기존 계정으로 로그인하거나 해당 계정에 접근할 수 없다면 고객 지원팀에 문의해 주세요.</string>
-    <string name="restore_subscription_dialog_body">We found an active CaloShape subscription or trial associated with the Google Play account on this device. You can restore it to the CaloShape account you’re currently signed in to.</string>
+    <string name="restore_subscription_dialog_success_body">구독이 이 CaloShape 계정으로 복원되었습니다.</string>
+    <string name="restore_subscription_dialog_payment_issue_body">구독은 이 CaloShape 계정에 연결되었지만 Google Play에서 여전히 결제 문제를 보고하고 있습니다. 구독을 계속 활성 상태로 유지하려면 Google Play에서 결제 수단을 업데이트하세요.</string>
+    <string name="restore_subscription_dialog_no_active_body">현재 Google Play 계정에서 활성 CaloShape 구독을 찾을 수 없습니다. 구매에 사용한 Google Play 계정인지 확인한 뒤 다시 시도하세요.</string>
+    <string name="restore_subscription_dialog_failed_body">지금은 구독을 복원할 수 없습니다. 연결을 확인하고 설정에서 다시 시도하세요.</string>
+    <string name="restore_subscription_dialog_bound_body">이 Google Play 구독은 이미 다른 CaloShape 계정에 연결되어 있습니다. 사용하려면 원래 계정으로 로그인하거나, 해당 계정에 접근할 수 없으면 지원팀에 문의하세요.</string>
+    <string name="restore_subscription_dialog_body">이 기기의 Google Play 계정에 연결된 활성 CaloShape 구독 또는 체험을 찾았습니다. 현재 로그인한 CaloShape 계정으로 복원할 수 있습니다.</string>
 
     <!-- Settings : Payment issue dialog -->
-    <string name="payment_issue_dialog_title">프리미엄을 유지하세요</string>
-    <string name="payment_issue_dialog_body">Premium 이용 권한은 현재 활성 상태입니다. 서비스 중단을 방지하려면 Google Play 결제 수단을 업데이트하세요.</string>
+    <string name="payment_issue_dialog_title">Premium을 활성 상태로 유지하세요</string>
+    <string name="payment_issue_dialog_body">Premium 이용 권한은 아직 활성 상태입니다. 중단을 피하려면 Google Play 결제 수단을 업데이트하세요.</string>
     <string name="payment_issue_dialog_update_payment">결제 수단 업데이트</string>
     <string name="payment_issue_dialog_badge">결제 확인 필요</string>
-    <string name="payment_issue_dialog_premium_access">Premium access</string>
-    <string name="payment_issue_dialog_active_for_now">Active for now</string>
-    <string name="payment_issue_dialog_next_step">Next step</string>
-    <string name="payment_issue_dialog_update_payment_short">Update payment</string>
+    <string name="payment_issue_dialog_premium_access">Premium 이용 권한</string>
+    <string name="payment_issue_dialog_active_for_now">현재 활성</string>
+    <string name="payment_issue_dialog_next_step">다음 단계</string>
+    <string name="payment_issue_dialog_update_payment_short">결제 업데이트</string>
 
 
     <string name="settings_personal_details">개인 정보</string>
     <string name="settings_adjust_macronutrients">매크로 영양소 조정</string>
     <string name="settings_weight_history">체중 기록</string>
     <string name="settings_ring_colors_explained">캘린더 링 색상 가이드</string>
-    <string name="settings_inbox">받은편지함</string>
+    <string name="settings_inbox">받은함</string>
 
 
-    <string name="settings_terms_conditions">이용 약관</string>
-    <string name="settings_privacy_policy">개인정보 처리방침</string>
+    <string name="settings_terms_conditions">이용약관</string>
+    <string name="settings_privacy_policy">개인정보처리방침</string>
     <string name="settings_support_email">지원 이메일</string>
     <string name="settings_delete_account">계정을 삭제할까요?</string>
-    <string name="settings_version">Version %1$s</string>
+    <string name="settings_version">버전 %1$s</string>
 
 
     <string name="settings_membership_payment">결제 문제</string>
-    <string name="settings_membership_update_payment">결제 정보 업데이트</string>
-    <string name="settings_membership_premium">프리미엄</string>
+    <string name="settings_membership_update_payment">결제 업데이트</string>
+    <string name="settings_membership_premium">Premium</string>
     <string name="settings_membership_active_member">활성 회원</string>
-    <string name="settings_membership_trial">무료 체험</string>
+    <string name="settings_membership_trial">체험</string>
     <string name="settings_membership_access_active">이용 가능</string>
     <string name="settings_membership_free">무료</string>
     <string name="settings_membership_upgrade">업그레이드</string>
-    <string name="settings_membership_trial_ends_today">무료 체험이 오늘 종료됩니다</string>
-    <string name="settings_membership_until_format">%1$s까지 유효</string>
+    <string name="settings_membership_trial_ends_today">체험이 오늘 종료됩니다</string>
+    <string name="settings_membership_until_format">%1$s까지</string>
     <plurals name="settings_membership_trial_days_left">
+        <item quantity="one">%1$d일 남음</item>
         <item quantity="other">%1$d일 남음</item>
     </plurals>
 
 
     <!-- Settings: referral card -->
     <string name="settings_invite_friends">친구 초대</string>
-    <string name="settings_premium_reward">프리미엄 보상</string>
-    <string name="settings_share_caloshape_with_friends">Share CaloShape AI\nwith your friends</string>
-    <string name="settings_referral_reward_content">They subscribe. You get 30 days free.</string>
-    <string name="settings_get_30_days_free">Get 30 days free</string>
+    <string name="settings_premium_reward">Premium 보상</string>
+    <string name="settings_share_caloshape_with_friends">친구에게 CaloShape AI
+공유하기</string>
+    <string name="settings_referral_reward_content">친구가 구독하면, 당신은 30일 무료 혜택을 받습니다.</string>
+    <string name="settings_get_30_days_free">30일 무료 받기</string>
     <string name="settings_days_label">일</string>
 
     <string name="settings_appearance_light">라이트</string>
     <string name="settings_appearance_dark">다크</string>
     <string name="settings_appearance_mode_title">화면 모드 선택</string>
-    <string name="settings_appearance_light_description">Keep the current bright, clean look.</string>
-    <string name="settings_appearance_dark_description">Use a darker, softer interface for everyday tracking.</string>
+    <string name="settings_appearance_light_description">현재의 밝고 깔끔한 모습을 유지합니다.</string>
+    <string name="settings_appearance_dark_description">일상 추적에 적합한 더 어둡고 부드러운 인터페이스를 사용합니다.</string>
     <string name="settings_preferences">환경설정</string>
     <string name="settings_appearance">화면 모드</string>
 
@@ -862,7 +875,7 @@
     <string name="settings_widgets_how_to_add">추가 방법</string>
     <string name="log_your_food">음식 기록</string>
 
-    <string name="settings_calories_goal_label">남은 칼로리</string>
+    <string name="settings_calories_goal_label">남은 kcal</string>
     <string name="settings_protein_goal_label">남은 단백질</string>
     <string name="settings_carbs_goal_label">남은 탄수화물</string>
     <string name="settings_fats_goal_label">남은 지방</string>
@@ -871,7 +884,7 @@
 
     <string name="settings_logout_loading">로그아웃 중…</string>
     <string name="settings_logout">로그아웃</string>
-    <string name="settings_logout_failed">Logout 실패. Check your connection and try again.</string>
+    <string name="settings_logout_failed">로그아웃 실패. 연결을 확인하고 다시 시도하세요.</string>
 
 
     <!-- EditNameScreen -->
@@ -881,25 +894,28 @@
 
     <!-- Referral Screen -->
     <string name="referral_title">친구 초대</string>
-    <string name="referral_premium_reward">프리미엄 보상</string>
+    <string name="referral_premium_reward">Premium 보상</string>
     <string name="referral_invite_friends">친구 초대</string>
-    <string name="referral_earn_30_days_free">Earn 30 days free</string>
-    <string name="referral_reward_unlocks_after_no_refund">Reward unlocks after your friend subscribes with no refund.</string>
+    <string name="referral_earn_30_days_free">30일 무료 받기</string>
+    <string name="referral_reward_unlocks_after_no_refund">친구가 환불 없이 구독하면 보상이 잠금 해제됩니다.</string>
     <string name="referral_code_copied">추천 코드가 복사되었습니다.</string>
     <string name="referral_your_promo_code">내 프로모션 코드</string>
     <string name="referral_copy">복사</string>
     <string name="referral_share">공유</string>
     <string name="referral_how_it_works">작동 방식</string>
-    <string name="referral_step_1_title">Share your promo code</string>
-    <string name="referral_step_1_subtitle">Send your code to a friend who wants to track 음식 smarter.</string>
-    <string name="referral_step_2_title">Your friend subscribes</string>
-    <string name="referral_step_2_subtitle">They start a paid CaloShape AI subscription using your invite.</string>
-    <string name="referral_step_3_title">No refund, then reward</string>
-    <string name="referral_step_3_subtitle">After the subscription is verified with no refund, your premium period is extended.</string>
-    <string name="referral_share_text">Join me on CaloShape AI! My referral code is:\n%1$s\n\n%2$s</string>
-    <string name="referral_share_subject">Join me on CaloShape AI</string>
-    <string name="referral_share_chooser_title">공유 방법</string>
-    <string name="referral_unable_to_open_share_options">Unable to open share options.</string>
+    <string name="referral_step_1_title">프로모션 코드 공유</string>
+    <string name="referral_step_1_subtitle">음식을 더 똑똑하게 기록하고 싶은 친구에게 코드를 보내세요.</string>
+    <string name="referral_step_2_title">친구가 구독합니다</string>
+    <string name="referral_step_2_subtitle">친구가 초대를 사용해 유료 CaloShape AI 구독을 시작합니다.</string>
+    <string name="referral_step_3_title">환불 없음, 그다음 보상</string>
+    <string name="referral_step_3_subtitle">구독이 환불 없이 확인되면 Premium 기간이 연장됩니다.</string>
+    <string name="referral_share_text">CaloShape AI에 함께해요! 내 추천 코드는:
+%1$s
+
+%2$s</string>
+    <string name="referral_share_subject">CaloShape AI에 함께하세요</string>
+    <string name="referral_share_chooser_title">공유 방법 선택</string>
+    <string name="referral_unable_to_open_share_options">공유 옵션을 열 수 없습니다.</string>
 
 
     <!-- PersonalDetailsScreen -->
@@ -926,24 +942,24 @@
 
     <!-- EditGoalWeightScreen -->
     <string name="edit_goal_weight_title">목표 체중 수정</string>
-    <string name="edit_goal_weight_progress_note">We will use this 목표 to calculate your progress.</string>
-    <string name="edit_goal_update_failed">업데이트 실패 목표 체중</string>
+    <string name="edit_goal_weight_progress_note">이 목표를 사용해 진행 상황을 계산합니다.</string>
+    <string name="edit_goal_update_failed">목표 체중 업데이트 실패</string>
 
 
     <!-- RecordWeightScreen -->
-    <string name="record_weight_camera_failed_to_open">Camera 실패 to open.</string>
-    <string name="record_weight_camera_permission_required">Camera permission required.</string>
-    <string name="record_weight_camera_preview_unavailable">Camera only works in the running app, not in Preview.</string>
-    <string name="record_weight_camera_screen_unavailable">Camera is not available in this screen.</string>
-    <string name="record_weight_no_camera_app_found">No camera app found on this device.</string>
-    <string name="record_weight_enable_camera_permission_settings">Please enable Camera permission in 설정.</string>
+    <string name="record_weight_camera_failed_to_open">카메라를 열지 못했습니다.</string>
+    <string name="record_weight_camera_permission_required">카메라 권한이 필요합니다.</string>
+    <string name="record_weight_camera_preview_unavailable">카메라는 Preview가 아닌 실행 중인 앱에서만 작동합니다.</string>
+    <string name="record_weight_camera_screen_unavailable">이 화면에서는 카메라를 사용할 수 없습니다.</string>
+    <string name="record_weight_no_camera_app_found">이 기기에서 카메라 앱을 찾을 수 없습니다.</string>
+    <string name="record_weight_enable_camera_permission_settings">설정에서 카메라 권한을 허용해 주세요.</string>
 
-    <string name="record_weight_title">Record 체중</string>
+    <string name="record_weight_title">체중 기록</string>
     <string name="record_weight_save_failed">저장 실패</string>
-    <string name="record_weight_date_note">This 체중 will be recorded for %1$s</string>
+    <string name="record_weight_date_note">이 체중은 %1$s에 기록됩니다</string>
 
-    <string name="weight_date_sheet_title">Select your weighing date</string>
-    <string name="weight_date_sheet_subtitle">When did you step on the scale?</string>
+    <string name="weight_date_sheet_title">체중 측정일 선택</string>
+    <string name="weight_date_sheet_subtitle">언제 체중계에 올라가셨나요?</string>
     <string name="weight_date_sheet_month_january">1월</string>
     <string name="weight_date_sheet_month_february">2월</string>
     <string name="weight_date_sheet_month_march">3월</string>
@@ -957,54 +973,54 @@
     <string name="weight_date_sheet_month_november">11월</string>
     <string name="weight_date_sheet_month_december">12월</string>
 
-    <string name="record_weight_camera_not_available">Camera not available</string>
-    <string name="record_weight_take_photo">Take a photo</string>
-    <string name="record_weight_retake_photo">Retake photo</string>
+    <string name="record_weight_camera_not_available">카메라를 사용할 수 없음</string>
+    <string name="record_weight_take_photo">사진 촬영</string>
+    <string name="record_weight_retake_photo">다시 촬영</string>
 
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">키 수정</string>
-    <string name="edit_height_privacy_note">We only use your height to improve your experience and calorie estimation accuracy.</string>
-    <string name="edit_height_saved_locally_sync_failed">네트워크 오류입니다. 로컬에 저장했지만 동기화하지 못했습니다.</string>
+    <string name="edit_height_privacy_note">키는 사용 경험과 kcal 추정 정확도 향상에만 사용됩니다.</string>
+    <string name="edit_height_saved_locally_sync_failed">네트워크 오류. 로컬에는 저장되었지만 동기화에 실패했습니다.</string>
 
 
     <!-- EditAgeScreen -->
     <string name="edit_age_title">나이 수정</string>
-    <string name="edit_age_privacy_note">We only use your age to improve your experience and calorie estimation accuracy.</string>
+    <string name="edit_age_privacy_note">나이는 사용 경험과 kcal 추정 정확도 향상에만 사용됩니다.</string>
 
 
     <!-- EditGenderScreen -->
     <string name="edit_gender_title">성별 수정</string>
-    <string name="edit_gender_privacy_note">Used only to personalize and improve estimate accuracy.</string>
+    <string name="edit_gender_privacy_note">개인화와 추정 정확도 향상에만 사용됩니다.</string>
 
 
     <!-- EditStartingWeightScreen -->
     <string name="edit_starting_weight_title">시작 체중 수정</string>
-    <string name="edit_start_weight_baseline_note">We will use it as your baseline for progress.</string>
-    <string name="edit_starting_weight_update_failed">업데이트 실패 starting 체중</string>
+    <string name="edit_start_weight_baseline_note">진행 상황의 기준으로 사용됩니다.</string>
+    <string name="edit_starting_weight_update_failed">시작 체중 업데이트 실패</string>
 
 
     <!-- EditDailyStepGoalScreen -->
     <string name="edit_step_goal_title">걸음 목표 수정</string>
-    <string name="edit_daily_step_goal_previous_format">Previous 목표 %1$d steps</string>
+    <string name="edit_daily_step_goal_previous_format">이전 목표 %1$d걸음</string>
     <string name="edit_daily_step_goal_input_label">일일 걸음 목표</string>
 
 
     <!-- EditWaterGoalScreen -->
     <string name="edit_water_goal_title">물 목표 수정</string>
-    <string name="edit_water_goal_previous_format">Previous 목표 %1$d ml</string>
-    <string name="edit_water_goal_input_label">일일 water 목표 (ml)</string>
+    <string name="edit_water_goal_previous_format">이전 목표 %1$d ml</string>
+    <string name="edit_water_goal_input_label">일일 물 목표 (ml)</string>
 
 
     <!-- EditWorkoutGoalScreen -->
     <string name="edit_workout_goal_title">운동 목표 수정</string>
-    <string name="edit_workout_goal_previous_format">Previous 목표 %1$d kcal</string>
+    <string name="edit_workout_goal_previous_format">이전 목표 %1$d kcal</string>
     <string name="edit_workout_goal_input_label">일일 운동 목표 (kcal)</string>
 
 
     <!-- EditNutritionGoalsScreen -->
     <string name="edit_nutrition_goals_title">영양 목표 수정</string>
-    <string name="edit_nutrition_calorie_goal">칼로리 목표</string>
+    <string name="edit_nutrition_calorie_goal">kcal 목표</string>
     <string name="edit_nutrition_protein_goal">단백질 목표</string>
     <string name="edit_nutrition_carb_goal">탄수화물 목표</string>
     <string name="edit_nutrition_fat_goal">지방 목표</string>
@@ -1013,15 +1029,15 @@
     <string name="edit_nutrition_sugar_goal">당류 목표</string>
     <string name="edit_nutrition_sodium_goal">나트륨 목표</string>
     <string name="edit_nutrition_auto_generate_goals">목표 자동 생성</string>
-    <string name="auto_generate_goals_success">생성되었습니다!</string>
-    <string name="auto_generate_goals_failed">생성하지 못했습니다</string>
-    <string name="auto_generate_goals_failed_http_format">생성하지 못했습니다(%1$d)</string>
+    <string name="auto_generate_goals_success">성공적으로 생성되었습니다!</string>
+    <string name="auto_generate_goals_failed">생성 실패</string>
+    <string name="auto_generate_goals_failed_http_format">생성 실패 (%1$d)</string>
     <string name="auto_generate_goals_network_error">네트워크 오류입니다. 다시 시도해 주세요.</string>
 
 
     <!-- RingColorsExplainedScreen -->
     <string name="ring_colors_explained_title">날짜 링 색상</string>
-    <string name="ring_colors_explained_intro">날짜 링으로 각 날짜가 칼로리 목표와 어떻게 비교되는지 빠르게 볼 수 있습니다.</string>
+    <string name="ring_colors_explained_intro">날짜 링은 각 날짜가 kcal 목표와 어떻게 비교되는지 빠르게 보여줍니다.</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">날짜 링 미리보기</string>
 
@@ -1035,45 +1051,45 @@
     <string name="ring_colors_explained_subtitle">링 색상 설명</string>
 
     <string name="ring_colors_green_title">초록</string>
-    <string name="ring_colors_green_body">목표 범위 내(100칼로리 이내)</string>
+    <string name="ring_colors_green_body">목표 범위 내 (목표에서 100 kcal 이내)</string>
     <string name="ring_colors_yellow_title">갈색</string>
-    <string name="ring_colors_yellow_body">목표보다 100~199칼로리 초과</string>
+    <string name="ring_colors_yellow_body">목표보다 100-199 kcal 초과</string>
     <string name="ring_colors_red_title">빨강</string>
-    <string name="ring_colors_red_body">목표보다 200칼로리 이상 초과</string>
+    <string name="ring_colors_red_body">목표보다 200+ kcal 초과</string>
     <string name="ring_colors_dotted_title">점선</string>
-    <string name="ring_colors_dotted_body">해당 날짜에 식사 기록 없음</string>
+    <string name="ring_colors_dotted_body">그날 기록된 식사가 없음</string>
 
 
     <!-- NotificationInboxScreen Inbox -->
-    <string name="notification_inbox_title">받은편지함</string>
+    <string name="notification_inbox_title">받은함</string>
     <string name="notification_inbox_header_title">CaloShape 알림</string>
     <string name="notification_inbox_header_body">모든 플랫폼 알림이 여기에 표시됩니다.</string>
     <string name="notification_inbox_status_read">읽음</string>
     <string name="notification_inbox_status_unread">읽지 않음</string>
 
-    <string name="notification_inbox_loading_title">로딩 중 notifications</string>
-    <string name="notification_inbox_loading">로딩 중 notifications…</string>
+    <string name="notification_inbox_loading_title">알림 불러오는 중</string>
+    <string name="notification_inbox_loading">알림 불러오는 중…</string>
     <string name="notification_inbox_empty_title">아직 알림 없음</string>
-    <string name="notification_inbox_empty_body">Platform notifications will appear here.</string>
+    <string name="notification_inbox_empty_body">플랫폼 알림이 여기에 표시됩니다.</string>
     <string name="notification_inbox_error_title">알림을 불러올 수 없습니다</string>
-    <string name="notification_inbox_error_body">Please check your connection and try again.</string>
+    <string name="notification_inbox_error_body">연결을 확인하고 다시 시도하세요.</string>
 
 
     <!-- WidgetGuideScreen -->
     <string name="widget_guide_title">위젯 추가</string>
     <string name="widget_guide_hero_title">홈 화면에 CaloShape 추가</string>
-    <string name="widget_guide_hero_body">Track 칼로리, macros, and quick actions without opening the app.</string>
+    <string name="widget_guide_hero_body">앱을 열지 않고 kcal, 매크로, 빠른 작업을 추적하세요.</string>
     <string name="widget_guide_steps_title">다음 단계를 따르세요</string>
-    <string name="widget_guide_step_1_title">홈 화면 길게 누르기</string>
-    <string name="widget_guide_step_1_body">Press and hold an empty area on your phone Home screen until the menu appears.</string>
+    <string name="widget_guide_step_1_title">홈 화면을 길게 누르기</string>
+    <string name="widget_guide_step_1_body">메뉴가 나타날 때까지 휴대폰 홈 화면의 빈 공간을 길게 누르세요.</string>
     <string name="widget_guide_step_2_title">위젯 탭</string>
-    <string name="widget_guide_step_2_body">Choose Widgets from the Home screen menu.</string>
+    <string name="widget_guide_step_2_body">홈 화면 메뉴에서 위젯을 선택하세요.</string>
     <string name="widget_guide_step_3_title">CaloShape AI 찾기</string>
-    <string name="widget_guide_step_3_body">Scroll or search for CaloShape AI, then open the widget list.</string>
+    <string name="widget_guide_step_3_body">스크롤하거나 CaloShape AI를 검색한 다음 위젯 목록을 여세요.</string>
     <string name="widget_guide_step_4_title">위젯을 원하는 위치로 드래그</string>
-    <string name="widget_guide_step_4_body">Touch and hold the widget, drag it to your preferred Home screen, then lift your finger.</string>
+    <string name="widget_guide_step_4_body">위젯을 길게 누르고 원하는 홈 화면으로 드래그한 뒤 손가락을 떼세요.</string>
     <string name="widget_guide_tip_title">위젯 메뉴를 찾을 수 없나요?</string>
-    <string name="widget_guide_tip_body">Some phone brands and launchers use different names. Try Home settings, long-pressing the CaloShape AI app icon, or searching for Widgets in your launcher.</string>
+    <string name="widget_guide_tip_body">일부 휴대폰 브랜드와 런처는 다른 이름을 사용합니다. 홈 설정, CaloShape AI 앱 아이콘 길게 누르기 또는 런처에서 위젯 검색을 시도해 보세요.</string>
     <string name="widget_guide_done">알겠습니다</string>
     <string name="widget_guide_mock_home">홈</string>
     <string name="widget_guide_mock_widgets">위젯</string>
@@ -1082,7 +1098,7 @@
     <!-- CaloShapeNavHost -->
     <string name="url_terms">https://caloshape.com/terms</string>
     <string name="url_privacy">https://caloshape.com/privacy</string>
-    <string name="camera_manual_entry_not_ready">Manual entry is not ready yet. Switching to label 스캔 for now.</string>
+    <string name="camera_manual_entry_not_ready">직접 입력은 아직 준비되지 않았습니다. 지금은 라벨 스캔으로 전환합니다.</string>
 
 
     <!-- Android home screen widgets -->
@@ -1090,15 +1106,15 @@
     <string name="widget_preview_protein">120g</string>
     <string name="widget_preview_carbs">180g</string>
     <string name="widget_preview_fats">60g</string>
-    <string name="widget_calories_left">남은 칼로리</string>
-    <string name="widget_protein_left">남은 단백질</string>
-    <string name="widget_carbs_left">남은 탄수화물</string>
-    <string name="widget_fats_left">남은 지방</string>
-    <string name="widget_calories_description">CaloShape 칼로리 위젯</string>
-    <string name="widget_macro_actions_description">CaloShape 매크로 및 빠른 작업 위젯</string>
-    <string name="widget_log_your_food">음식 기록</string>
-    <string name="widget_scan_food">음식 스캔</string>
-    <string name="widget_barcode">바코드</string>
+    <string name="widget_calories_left">Calories left</string>
+    <string name="widget_protein_left">Protein left</string>
+    <string name="widget_carbs_left">Carbs left</string>
+    <string name="widget_fats_left">Fats left</string>
+    <string name="widget_calories_description">CaloShape calories widget</string>
+    <string name="widget_macro_actions_description">CaloShape macros and quick actions widget</string>
+    <string name="widget_log_your_food">Log your food</string>
+    <string name="widget_scan_food">Scan food</string>
+    <string name="widget_barcode">Barcode</string>
     <string name="widget_grams_format">%1$dg</string>
 
 
@@ -1109,31 +1125,31 @@
                     Not use
          ========================= -->
     <!-- PremiumRewardsScreen Not use -->
-    <string name="premium_rewards_subscription_title">Subscription</string>
-    <string name="premium_rewards_history_title">Reward history</string>
-    <string name="premium_rewards_loading_membership">로딩 중 membership…</string>
-    <string name="premium_rewards_status_title">Premium Status</string>
-    <string name="premium_rewards_latest_title">Latest reward</string>
-    <string name="premium_rewards_source_format">Source: %1$s</string>
-    <string name="premium_rewards_channel_format">Channel: %1$s</string>
-    <string name="premium_rewards_grant_status_format">Grant status: %1$s</string>
-    <string name="premium_rewards_status_format">Status: %1$s</string>
-    <string name="premium_rewards_google_defer_format">Google defer: %1$s</string>
-    <string name="premium_rewards_granted_at_format">Granted at: %1$s</string>
-    <string name="premium_rewards_old_expiry_format">Old expiry: %1$s</string>
-    <string name="premium_rewards_new_expiry_format">New expiry: %1$s</string>
-    <string name="premium_rewards_error_format">Error: %1$s</string>
-    <string name="premium_rewards_days_added_format">Days added: %1$d</string>
-    <string name="premium_rewards_empty_title">No rewards yet</string>
-    <string name="premium_rewards_empty_body">Successful referrals will appear here after verification.</string>
-    <string name="premium_rewards_channel_google_play_defer">Google Play billing date extended</string>
-    <string name="premium_rewards_channel_backend_only">Premium reward applied</string>
-    <string name="premium_rewards_grant_success">Success</string>
-    <string name="premium_rewards_status_retrying">Retrying</string>
-    <string name="premium_rewards_grant_not_granted">Not granted</string>
-    <string name="premium_rewards_google_defer_success">Extended by Google Play</string>
-    <string name="premium_rewards_google_defer_failed">Failed</string>
-    <string name="premium_rewards_google_defer_not_required">Not required</string>
+    <string name="premium_rewards_subscription_title">구독</string>
+    <string name="premium_rewards_history_title">보상 기록</string>
+    <string name="premium_rewards_loading_membership">멤버십 불러오는 중…</string>
+    <string name="premium_rewards_status_title">Premium 상태</string>
+    <string name="premium_rewards_latest_title">최근 보상</string>
+    <string name="premium_rewards_source_format">출처: %1$s</string>
+    <string name="premium_rewards_channel_format">채널: %1$s</string>
+    <string name="premium_rewards_grant_status_format">지급 상태: %1$s</string>
+    <string name="premium_rewards_status_format">상태: %1$s</string>
+    <string name="premium_rewards_google_defer_format">Google 연기: %1$s</string>
+    <string name="premium_rewards_granted_at_format">지급 시각: %1$s</string>
+    <string name="premium_rewards_old_expiry_format">이전 만료일: %1$s</string>
+    <string name="premium_rewards_new_expiry_format">새 만료일: %1$s</string>
+    <string name="premium_rewards_error_format">오류: %1$s</string>
+    <string name="premium_rewards_days_added_format">추가된 일수: %1$d</string>
+    <string name="premium_rewards_empty_title">아직 보상이 없습니다</string>
+    <string name="premium_rewards_empty_body">성공한 추천은 확인 후 여기에 표시됩니다.</string>
+    <string name="premium_rewards_channel_google_play_defer">Google Play 결제일 연장됨</string>
+    <string name="premium_rewards_channel_backend_only">Premium 보상 적용됨</string>
+    <string name="premium_rewards_grant_success">성공</string>
+    <string name="premium_rewards_status_retrying">다시 시도 중</string>
+    <string name="premium_rewards_grant_not_granted">지급되지 않음</string>
+    <string name="premium_rewards_google_defer_success">Google Play에서 연장됨</string>
+    <string name="premium_rewards_google_defer_failed">실패</string>
+    <string name="premium_rewards_google_defer_not_required">필요 없음</string>
 
 
 </resources>

@@ -1,13 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
     <!-- App_Name -->
     <string name="app_name">CaloShape</string>
 
 
     <!-- common -->
-    <string name="common_close">Lähellä</string>
-    <string name="common_save">Tallentaa</string>
-    <string name="common_cancel">Peruuttaa</string>
-    <string name="common_continue_btn">Jatkaa</string>
+    <string name="common_close">Sulje</string>
+    <string name="common_save">Tallenna</string>
+    <string name="common_cancel">Peruuta</string>
+    <string name="common_continue_btn">Jatka</string>
     <string name="common_skip">Ohita</string>
     <string name="common_dash">—</string>
     <string name="common_error">Virhe</string>
@@ -18,37 +19,37 @@
     <string name="common_unavailable_dash">—</string>
     <string name="common_retry">Yritä uudelleen</string>
 
-    <string name="common_delete">Poistaa</string>
+    <string name="common_delete">Poista</string>
     <string name="common_deleting">Poistetaan…</string>
 
     <string name="common_understood">Ymmärretty</string>
-    <string name="common_revert">Palauta</string>
+    <string name="common_revert">Kumoa</string>
 
 
     <!-- ApiErrorUiMapper -->
-    <string name="err_barcode_not_found_title">Tuotetta ei löydy</string>
-    <string name="err_barcode_not_found_msg">Emme löytäneet tätä viivakoodia. Yritä ottaa valokuva ravintoarvomerkinnästä.</string>
+    <string name="err_barcode_not_found_title">Tuotetta ei löytynyt</string>
+    <string name="err_barcode_not_found_msg">Emme löytäneet tätä viivakoodia. Kokeile ottaa kuva ravintoarvomerkinnästä.</string>
 
     <string name="err_barcode_lookup_failed_title">Haku epäonnistui</string>
     <string name="err_barcode_lookup_failed_msg">Emme saaneet yhteyttä tuotetietokantaan. Tarkista yhteys ja yritä uudelleen.</string>
 
-    <string name="err_generic_title">Jotain meni pieleen</string>
+    <string name="err_generic_title">Jokin meni pieleen</string>
     <string name="err_generic_msg">Yritä uudelleen.</string>
 
     <string name="err_network_title">Verkko-ongelma</string>
     <string name="err_network_msg">Tarkista internetyhteytesi ja yritä uudelleen.</string>
 
-    <string name="err_photo_title">Valokuva tarvitaan</string>
-    <string name="err_photo_msg">Yritä ottaa valokuva uudelleen paremmalla valaistuksella.</string>
+    <string name="err_photo_title">Kuva tarvitaan</string>
+    <string name="err_photo_msg">Kokeile ottaa kuva uudelleen paremmassa valaistuksessa.</string>
 
-    <string name="err_manual_title">Syötä manuaalisesti</string>
-    <string name="err_manual_msg">Voit syöttää tiedot manuaalisesti.</string>
+    <string name="err_manual_title">Syötä käsin</string>
+    <string name="err_manual_msg">Voit syöttää tiedot käsin.</string>
 
     <string name="err_support_title">Ota yhteyttä tukeen</string>
     <string name="err_support_msg">Ota yhteyttä tukeen, jos ongelma jatkuu.</string>
 
     <string name="cta_try_label">Skannaa ravintoarvomerkintä</string>
-    <string name="cta_enter_manually">Syötä manuaalisesti</string>
+    <string name="cta_enter_manually">Syötä käsin</string>
 
     <string name="cta_check_network">Tarkista verkko</string>
     <string name="cta_retake">Ota uudelleen</string>
@@ -59,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">Ota valokuva, tiedä kalorit.</string>
+    <string name="landing_title">Ota kuva ja näe kcal.</string>
     <string name="choose_language">Valitse kieli</string>
     <string name="cta_get_started">Aloita</string>
     <string name="cta_login_prefix">Onko sinulla jo tili?</string>
@@ -68,26 +69,26 @@
 
     <!-- RequireSignInScreen -->
     <string name="auth_sign_in_account_title">Kirjaudu tilillesi</string>
-    <string name="auth_sign_in_with_google">Kirjaudu sisään Googlella</string>
+    <string name="auth_sign_in_with_google">Kirjaudu Googlella</string>
     <string name="auth_signin_with_email">Jatka sähköpostilla</string>
 
 
     <!-- SignInSheet-->
     <string name="signin_title">Kirjaudu sisään</string>
-    <string name="signin_with_apple">Kirjaudu sisään Applella</string>
-    <string name="signin_with_google">Kirjaudu sisään Googlella</string>
+    <string name="signin_with_apple">Kirjaudu Applella</string>
+    <string name="signin_with_google">Kirjaudu Googlella</string>
     <string name="signin_with_email">Jatka sähköpostilla</string>
-    <string name="signin_legal_hint">Jatkamalla hyväksyt CaloShapen ehdot</string>
-    <string name="signin_terms">Ehdot</string>
+    <string name="signin_legal_hint">Jatkamalla hyväksyt CaloShapen</string>
+    <string name="signin_terms">käyttöehdot</string>
     <string name="signin_and">ja</string>
-    <string name="signin_privacy">Tietosuojakäytäntö</string>
+    <string name="signin_privacy">tietosuojakäytännön</string>
     <string name="signin_url_terms">https://caloshape.com/terms</string>
     <string name="signin_url_privacy">https://caloshape.com/privacy</string>
 
 
     <!-- SignInSheetHost 控制 Sheet 是否顯示、處理狀態、接外部 callback -->
     <string name="err_google_no_account_hint">Vinkki: lisää Google-tili kohdassa Asetukset → Tilit ja yritä uudelleen</string>
-    <string name="err_google_signin_failed">Google-sisäänkirjautuminen epäonnistui</string>
+    <string name="err_google_signin_failed">Google-kirjautuminen epäonnistui</string>
 
 
     <!-- EmailEnterScreen-->
@@ -100,22 +101,22 @@
     <string name="resend_countdown">Lähetä uudelleen (%1$d s)</string>
 
     <string name="err_otp_invalid">Koodi on virheellinen. Yritä uudelleen.</string>
-    <string name="err_otp_too_many_attempts">Liikaa yrityksiä. Yritä myöhemmin uudelleen.</string>
+    <string name="err_otp_too_many_attempts">Liian monta yritystä. Yritä myöhemmin uudelleen.</string>
     <string name="err_network_io">Verkkovirhe. Yritä uudelleen.</string>
-    <string name="err_server_unavailable">Palvelu on tilapäisesti poissa käytöstä. Yritä myöhemmin uudelleen.</string>
-    <string name="err_generic">Jotain meni pieleen. Yritä uudelleen.</string>
+    <string name="err_server_unavailable">Palvelu ei ole tilapäisesti käytettävissä. Yritä myöhemmin uudelleen.</string>
+    <string name="err_generic">Jokin meni pieleen. Yritä uudelleen.</string>
 
-    <string name="confirm_email_title">Vahvista sähköpostiosoitteesi</string>
-    <string name="confirm_email_hint">Anna 4-numeroinen koodi, jolle lähetimme juuri</string>
+    <string name="confirm_email_title">Vahvista sähköpostisi</string>
+    <string name="confirm_email_hint">Syötä juuri lähettämämme 4-numeroinen koodi osoitteeseen</string>
     <string name="didnt_receive_code">Etkö saanut koodia?</string>
 
 
     <!-- Onboarding: GenderSelectionScreen -->
     <string name="onboard_gender_title">Valitse sukupuolesi</string>
-    <string name="onboard_gender_subtitle">Tätä käytetään mukautetun suunnitelmasi kalibrointiin.</string>
-    <string name="onboard_male">Uros</string>
-    <string name="onboard_female">Naaras</string>
-    <string name="onboard_other">muu</string>
+    <string name="onboard_gender_subtitle">Tätä käytetään henkilökohtaisen suunnitelmasi kalibrointiin.</string>
+    <string name="onboard_male">Mies</string>
+    <string name="onboard_female">Nainen</string>
+    <string name="onboard_other">Muu</string>
 
 
     <!-- Onboarding: ReferralSourceScreen -->
@@ -124,30 +125,30 @@
 
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">Kuinka vanha olet?</string>
-    <string name="onboard_age_subtitle">Käytämme ikääsi vain parantaaksemme kokemustasi ja kaloriarvioinnin tarkkuutta.</string>
+    <string name="onboard_age_subtitle">Käytämme ikääsi vain käyttökokemuksen ja kcal-arvioiden tarkkuuden parantamiseen.</string>
 
 
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">Kuinka pitkä olet?</string>
-    <string name="onboard_height_subtitle">Käytämme tietojasi vain käyttökokemuksesi ja kaloriarvioidemme parantamiseen.</string>
-    <string name="onboard_height_hint">Tätä käytetään mukautetun suunnitelmasi kalibrointiin.</string>
+    <string name="onboard_height_subtitle">Käytämme tietojasi vain käyttökokemuksen ja kcal-arvioidemme parantamiseen.</string>
+    <string name="onboard_height_hint">Tätä käytetään henkilökohtaisen suunnitelmasi kalibrointiin.</string>
 
 
     <!-- Onboarding: WeightSelectionScreen -->
     <string name="onboard_weight_title">Kuinka paljon painat?</string>
-    <string name="onboard_weight_subtitle">Käytämme tietojasi vain käyttökokemuksesi ja kaloriarvioidemme parantamiseen.</string>
-    <string name="onboard_weight_hint">Tätä käytetään mukautetun suunnitelmasi kalibrointiin.</string>
+    <string name="onboard_weight_subtitle">Käytämme tietojasi vain käyttökokemuksen ja kcal-arvioidemme parantamiseen.</string>
+    <string name="onboard_weight_hint">Tätä käytetään henkilökohtaisen suunnitelmasi kalibrointiin.</string>
 
 
     <!-- Onboarding: ExerciseFrequencyScreen  -->
-    <string name="onboard_ex_freq_title">Kuinka usein harrastat liikuntaa viikossa?</string>
+    <string name="onboard_ex_freq_title">Kuinka usein treenaat viikossa?</string>
     <string name="onboard_ex_freq_subtitle">Tämä auttaa kalibroimaan henkilökohtaisen suunnitelmasi.</string>
     <string name="ex_freq_0_title">0</string>
-    <string name="ex_freq_0_sub">Istuva</string>
+    <string name="ex_freq_0_sub">Liikkumaton</string>
     <string name="ex_freq_1_3_title">1–3</string>
-    <string name="ex_freq_1_3_sub">Kevyttä toimintaa</string>
+    <string name="ex_freq_1_3_sub">Kevyt aktiivisuus</string>
     <string name="ex_freq_3_5_title">3–5</string>
-    <string name="ex_freq_3_5_sub">Keskinkertaista toimintaa</string>
+    <string name="ex_freq_3_5_sub">Kohtalainen aktiivisuus</string>
     <string name="ex_freq_6_7_plus_title">6–7</string>
     <string name="ex_freq_6_7_plus_sub">Korkea aktiivisuus</string>
     <string name="ex_freq_7_plus_title">7+</string>
@@ -156,72 +157,72 @@
 
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">Mikä on tavoitteesi?</string>
-    <string name="onboard_goal_subtitle">Tämä auttaa meitä räätälöimään kalorisuunnitelmasi.</string>
-    <string name="goal_lose">Laihtua</string>
-    <string name="goal_maintain">Ylläpidä</string>
-    <string name="goal_gain">Lihoa</string>
-    <string name="goal_healthy_eating">Terveellinen syöminen</string>
+    <string name="onboard_goal_subtitle">Tämä auttaa meitä mukauttamaan kcal-suunnitelmasi.</string>
+    <string name="goal_lose">Pudottaa painoa</string>
+    <string name="goal_maintain">Ylläpitää</string>
+    <string name="goal_gain">Nostaa painoa</string>
+    <string name="goal_healthy_eating">Syödä terveellisesti</string>
 
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">Mikä on tavoitepainosi?</string>
-    <string name="onboard_goal_weight_subtitle">Tämän tavoitteen perusteella luomme sinulle sopivamman päivittäisen kalorisuosituksen.</string>
-    <string name="onboard_goal_weight_hint">Tätä käytetään mukautetun suunnitelmasi kalibrointiin.</string>
+    <string name="onboard_goal_weight_subtitle">Tämän tavoitteen perusteella luomme sinulle sopivamman päivittäisen kcal-suosituksen.</string>
+    <string name="onboard_goal_weight_hint">Tätä käytetään henkilökohtaisen suunnitelmasi kalibrointiin.</string>
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">CaloShape AI voi kolminkertaistaa painonpudotuksen\ntehokkuuden</string>
-    <string name="onboard_weight_loss_comparison_without_ai">Ilman\nCaloShape AI:ta</string>
-    <string name="onboard_weight_loss_comparison_with_ai">Kanssa\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_title">CaloShape AI voi kolminkertaistaa painon\npudotuksen tehokkuuden</string>
+    <string name="onboard_weight_loss_comparison_without_ai">Ilman\nCaloShape AI:tä</string>
+    <string name="onboard_weight_loss_comparison_with_ai">CaloShape AI:n\nkanssa</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI tekee kaikesta yksinkertaista\nja pitää sinut vastuullisena</string>
+    <string name="onboard_weight_loss_comparison_caption">CaloShape AI tekee kaikesta yksinkertaista\nja auttaa pysymään tavoitteessa</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
-    <string name="onboard_notif_title">Tee jokaisesta ateriasta merkitystä!</string>
-    <string name="onboard_notif_subtitle">Ota käyttöön lempeitä muistutuksia aterioiden kirjaamisesta, jotta kalorisi, makrosi ja edistymisesi pysyvät oikeilla jäljillä. Luiskahduksia tapahtuu; oikea-aikaiset tönäykset auttavat sinua palautumaan nopeasti.</string>
+    <string name="onboard_notif_title">Tee jokaisesta ateriasta merkityksellinen!</string>
+    <string name="onboard_notif_subtitle">Ota ilmoitukset käyttöön saadaksesi lempeitä muistutuksia aterioiden kirjaamisesta, jotta kcal, makrot ja edistyminen pysyvät raiteilla. Lipsahduksia sattuu; oikea-aikaiset muistutukset auttavat palaamaan nopeasti takaisin.</string>
     <string name="onboard_allow_notifications_cta">Salli ilmoitukset</string>
-    <string name="notification_mock_app_title">AI kalorilaskuri</string>
+    <string name="notification_mock_app_title">AI kcal -laskuri</string>
     <string name="onboard_notif_title_got_a_sec">Ateriasi ei kirjaudu itsestään 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">Kirjaa tämä ateria pitääksesi kalorit ja makrot oikeilla jäljillä.</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">Kirjaa tämä ateria, jotta kcal ja makrot pysyvät tavoitteessa.</string>
 
 
     <!-- Onboarding: HealthConnectIntroScreen -->
-    <string name="onboard_hc_connect_title_prefix">Yhdistä</string>
+    <string name="onboard_hc_connect_title_prefix">Yhdistä palveluun</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
-    <string name="onboard_hc_connect_body">Synkronoi päivittäinen toiminta CaloShape AI:n ja terveyssovellusten välillä saadaksesi täydellisempiä tietueita ja oivalluksia.</string>
+    <string name="onboard_hc_connect_body">Synkronoi päivittäinen aktiivisuus CaloShape AI:n ja terveyssovellusten välillä saadaksesi täydellisemmät tiedot ja oivallukset.</string>
     <string name="onboard_hc_permission_rationale_title_prefix">Miksi CaloShape käyttää</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape lukee askeleesi, aktiiviset kalorit ja harjoitustiedot arvioidakseen päivittäisen aktiivisuuden kulutuksen, päivittääkseen kalorien hallintapaneelin ja parantaakseen edistymistietoja. Voit peruuttaa käyttöoikeuden milloin tahansa Health Connectissa.</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape lukee askeleesi, aktiiviset kcal-arvot ja liikuntatiedot arvioidakseen päivittäistä aktiivisuuskulutusta, päivittääkseen kcal-näkymän ja parantaakseen edistymisoivalluksia. Voit peruuttaa käyttöoikeuden milloin tahansa Health Connectissa.</string>
     <string name="onboard_hc_permission_rationale_button">Selvä</string>
 
 
     <!-- Onboarding: ComputationProgressScreen -->
-    <string name="progress_hero_title">Henkilökohtaisen suunnitelmasi luominen</string>
-    <string name="progress_hero_subtitle">Käytämme tavoitteitasi, kehotietojasi ja mieltymyksiäsi päivittäisten tavoitteidesi räätälöimiseen.</string>
-    <string name="progress_footer_hint">Tämä kestää vain hetken</string>
-    <string name="progress_center_caption">Tulosten valmistelu</string>
-    <string name="progress_phase_pill_1">Tarkastelee profiiliasi</string>
-    <string name="progress_phase_pill_2">Kaloritavoitteesi laskeminen</string>
-    <string name="progress_phase_pill_3">Päivittäisten makrojen tasapainottaminen</string>
-    <string name="progress_phase_pill_4">Viimeistele terveystietosi</string>
-    <string name="progress_card_title">Suunnitelman laatiminen</string>
-    <string name="progress_row_calorie_target">Päivittäinen kaloritavoite</string>
-    <string name="progress_row_carb_distribution">Hiilihydraattien jakelu</string>
-    <string name="progress_row_protein_recommendation">Proteiini suositus</string>
-    <string name="progress_row_fat_recommendation">Rasva suositus</string>
-    <string name="progress_row_health_score_estimate">Terveyspistearvio</string>
+    <string name="progress_hero_title">Luodaan henkilökohtaista suunnitelmaasi</string>
+    <string name="progress_hero_subtitle">Käytämme tavoitteitasi, kehotietojasi ja mieltymyksiäsi päivittäisten tavoitteiden mukauttamiseen.</string>
+    <string name="progress_footer_hint">Tämä vie vain hetken</string>
+    <string name="progress_center_caption">Valmistellaan tuloksiasi</string>
+    <string name="progress_phase_pill_1">Tarkistetaan profiiliasi</string>
+    <string name="progress_phase_pill_2">Lasketaan kcal-tavoitettasi</string>
+    <string name="progress_phase_pill_3">Tasapainotetaan päivittäisiä makroja</string>
+    <string name="progress_phase_pill_4">Viimeistellään terveysoivalluksia</string>
+    <string name="progress_card_title">Määritetään suunnitelmaasi</string>
+    <string name="progress_row_calorie_target">Päivittäinen kcal-tavoite</string>
+    <string name="progress_row_carb_distribution">Hiilihydraattien jakauma</string>
+    <string name="progress_row_protein_recommendation">Proteiinisuositus</string>
+    <string name="progress_row_fat_recommendation">Rasvasuositus</string>
+    <string name="progress_row_health_score_estimate">Terveysarvion pisteet</string>
 
 
     <!-- Onboarding: HealthPlanScreen -->
-    <string name="plan_cta_start">Aloita</string>
+    <string name="plan_cta_start">Aloitetaan</string>
     <string name="plan_title_congrats">Onnittelut!</string>
     <string name="plan_subtitle_ready">Henkilökohtainen terveyssuunnitelmasi on valmis!</string>
-    <string name="plan_disclaimer">Lähteet ovat alla: Katso kaikki viitteet ›</string>
+    <string name="plan_disclaimer">Lähteet alla: Näytä kaikki viitteet ›</string>
     <string name="plan_unit_kcal_day">kcal / päivä</string>
 
     <string name="plan_macros_proteins">Proteiini</string>
-    <string name="plan_macros_carbs">Hiilihydraatteja</string>
+    <string name="plan_macros_carbs">Hiilihydraatit</string>
     <string name="plan_macros_fat">Rasvat</string>
     <string name="plan_unit_g">g</string>
 
@@ -229,116 +230,116 @@
     <string name="plan_weight_current">Nykyinen paino</string>
     <string name="plan_weight_delta">Tavoitepainoon</string>
 
-    <string name="plan_goals_title">Kuinka saavuttaa\ntavoitteesi</string>
-    <string name="plan_goal_card_health_scores">Terveyspisteet ohjaavat sinua, joten tottumukset muodostuvat luonnollisesti</string>
-    <string name="plan_goal_card_track_meals">Kirjaa ateriat yhdellä napautuksella, johdonmukaisuus on helppoa</string>
-    <string name="plan_goal_card_daily_calories">Näe päivittäiset kalorit selkeästi, äläkä koskaan menetä jälkeäsi</string>
-    <string name="plan_goal_card_balance_macros">Hiilihydraatit × proteiini × rasva, älykäs tasapaino, parempia tuloksia</string>
-    <string name="plan_sources_based_on">Perustuu virallisiin ravitsemussuosituksiin,\nvain viitteeksi, ei lääkärin neuvoja.</string>
-    <string name="plan_sources_more">Katso kaikki referenssit ›</string>
+    <string name="plan_goals_title">Näin saavutat\ntavoitteesi</string>
+    <string name="plan_goal_card_health_scores">Terveysarviot ohjaavat sinua, jotta tavat syntyvät luontevasti</string>
+    <string name="plan_goal_card_track_meals">Kirjaa ateriat yhdellä napautuksella, niin johdonmukaisuus on helppoa</string>
+    <string name="plan_goal_card_daily_calories">Näe päivittäiset kcal-arvot selkeästi äläkä menetä suuntaa</string>
+    <string name="plan_goal_card_balance_macros">Hiilihydraatit × proteiini × rasva, älykäs tasapaino ja paremmat tulokset</string>
+    <string name="plan_sources_based_on">Perustuu virallisiin ravitsemussuosituksiin,\nvain viitteeksi, ei lääketieteellistä neuvontaa.</string>
+    <string name="plan_sources_more">Näytä kaikki viitteet ›</string>
     <string name="plan_sources_hide">Piilota lähteet</string>
 
 
     <!-- Onboarding: OnboardReferralCodeScreen -->
-    <string name="onboard_referral_code_input">Anna viittauskoodi\n (valinnainen)</string>
+    <string name="onboard_referral_code_input">Syötä suosittelukoodi\n(valinnainen)</string>
     <string name="onboard_referral_code_subtitle">Voit ohittaa tämän vaiheen</string>
-    <string name="onboard_referral_code_input_label">Viittauskoodi</string>
-    <string name="onboard_referral_code_placeholder">Viittauskoodi</string>
+    <string name="onboard_referral_code_input_label">Suosittelukoodi</string>
+    <string name="onboard_referral_code_placeholder">Suosittelukoodi</string>
     <string name="onboard_referral_code_submit">Lähetä</string>
     <string name="onboard_referral_code_submitting">Lähetetään…</string>
-    <string name="onboard_referral_code_applied">Suosituskoodi käytössä!</string>
+    <string name="onboard_referral_code_applied">Suosittelukoodi lisätty!</string>
 
     <string name="onboard_referral_code_error_invalid_format">Käytä vain kirjaimia ja numeroita.</string>
-    <string name="onboard_referral_code_error_invalid">Emme löytäneet tätä viittauskoodia.</string>
-    <string name="onboard_referral_code_error_self_referral">Et voi käyttää omaa viittauskoodiasi.</string>
-    <string name="onboard_referral_code_error_already_claimed">Tämä tili on jo käyttänyt viittauskoodia.</string>
-    <string name="onboard_referral_code_error_already_subscribed">Tilatut tilit eivät voi käyttää viittauskoodia.</string>
-    <string name="onboard_referral_code_error_disabled">Suositus ei ole tilapäisesti saatavilla.</string>
-    <string name="onboard_referral_code_error_risk">Emme voi käyttää viittauskoodia juuri nyt.</string>
-    <string name="onboard_referral_code_error_network">Emme voi soveltaa sitä juuri nyt. Yritä myöhemmin uudelleen.</string>
-    <string name="onboard_referral_code_error_unknown">Viittauskoodia ei voi käyttää juuri nyt.\nYritä myöhemmin uudelleen.</string>
+    <string name="onboard_referral_code_error_invalid">Emme löytäneet tätä suosittelukoodia.</string>
+    <string name="onboard_referral_code_error_self_referral">Et voi käyttää omaa suosittelukoodiasi.</string>
+    <string name="onboard_referral_code_error_already_claimed">Tämä tili on jo käyttänyt suosittelukoodin.</string>
+    <string name="onboard_referral_code_error_already_subscribed">Tilaustilit eivät voi käyttää suosittelukoodia.</string>
+    <string name="onboard_referral_code_error_disabled">Suosittelu ei ole tilapäisesti käytettävissä.</string>
+    <string name="onboard_referral_code_error_risk">Emme voi käyttää suosittelukoodia juuri nyt.</string>
+    <string name="onboard_referral_code_error_network">Emme voi käyttää sitä juuri nyt. Yritä myöhemmin uudelleen.</string>
+    <string name="onboard_referral_code_error_unknown">Suosittelukoodia ei voi käyttää juuri nyt.\nYritä myöhemmin uudelleen.</string>
 
 
     <!-- Onboarding: OnboardSubscriptionScreen  Paywall -->
     <string name="subscription_price_per_month_format">%1$s/kk</string>
     <string name="subscription_price_per_month_unit">/kk</string>
-    <string name="subscription_price_unavailable_title">Hintaa ei saatavilla</string>
-    <string name="subscription_price_unavailable_body">Emme voineet saada paikallista Google Play -hintaasi juuri nyt. Yritä uudelleen.</string>
+    <string name="subscription_price_unavailable_title">Hinta ei ole saatavilla</string>
+    <string name="subscription_price_unavailable_body">Emme saaneet paikallista Google Play -hintaasi juuri nyt. Yritä uudelleen.</string>
 
 
     <!-- Onboarding: OnboardSubscriptionIntro -->
-    <string name="subscription_intro_title">Avaa CaloShape AI, jotta \nsaavutat tavoitteesi nopeammin.</string>
+    <string name="subscription_intro_title">Avaa CaloShape AI ja\nsaavuta tavoitteesi nopeammin.</string>
     <string name="subscription_intro_helper_format">Vain %1$s vuodessa (%2$s)</string>
     <string name="subscription_start_three_day_free_trial">Kokeile ilmaiseksi 3 päivää</string>
     <string name="subscription_three_day_trial_helper_format">Vain %1$s/vuosi (%2$s/kk)</string>
-    <string name="subscription_already_owned_restore_required">Google Play -tililläsi on jo aktiivinen CaloShape-tilaus. Palauta se tälle CaloShape-tilille ennen premium-ominaisuuksien käyttöä.</string>
-    <string name="subscription_error_no_active_purchase">Aktiivista ostosta ei löytynyt.</string>
-    <string name="subscription_error_restore_failed">Ostosta ei voitu palauttaa. Yritä uudelleen.</string>
+    <string name="subscription_already_owned_restore_required">Google Play -tililläsi on jo aktiivinen CaloShape-tilaus. Palauta se tälle CaloShape-tilille ennen Premium-ominaisuuksien käyttöä.</string>
+    <string name="subscription_error_no_active_purchase">Aktiivista ostoa ei löytynyt.</string>
+    <string name="subscription_error_restore_failed">Ostoa ei voitu palauttaa. Yritä uudelleen.</string>
     <string name="subscription_error_purchase_failed">Osto epäonnistui. Yritä uudelleen.</string>
-    <string name="subscription_error_purchase_pending">Maksua käsitellään. Premium-käyttöoikeus on saatavilla, kun Google Play vahvistaa ostoksen.</string>
-    <string name="subscription_error_trial_eligibility_failed">Kokeilukelpoisuutta ei voi tarkistaa. Yritä uudelleen.</string>
-    <string name="restore_subscription_dialog_title">Tilaus löydetty</string>
+    <string name="subscription_error_purchase_pending">Maksua käsitellään. Premium-käyttö avautuu, kun Google Play vahvistaa ostoksen.</string>
+    <string name="subscription_error_trial_eligibility_failed">Kokeilukelpoisuutta ei voitu tarkistaa. Yritä uudelleen.</string>
+    <string name="restore_subscription_dialog_title">Tilaus löytyi</string>
     <string name="settings_restore_subscription">Palauta tilaus</string>
     <string name="restore_subscription_dialog_restoring">Palautetaan…</string>
     <string name="common_maybe_later">Ehkä myöhemmin</string>
 
 
     <!-- Onboarding: OnboardDiscountSpinScreen-->
-    <string name="subscription_spin_title">Pyöräytä saadaksesi\nyksinomaisen alennuksen</string>
-    <string name="subscription_spin_helper_ready">Napauta Spin paljastaaksesi ainutlaatuisen lahjasi.</string>
-    <string name="subscription_spin_button">Pyöritä</string>
-    <string name="subscription_spinning_button">Kehruu…</string>
+    <string name="subscription_spin_title">Pyöräytä ja avaa\nyksinoikeudellinen alennus</string>
+    <string name="subscription_spin_helper_ready">Napauta Pyöräytä paljastaaksesi yksinoikeudellisen lahjasi.</string>
+    <string name="subscription_spin_button">Pyöräytä</string>
+    <string name="subscription_spinning_button">Pyöritetään…</string>
     <string name="subscription_gift_offer_unlocked">Lahjatarjous avattu</string>
     <string name="subscription_spin_helper_wait">Odota, kunnes pyörä pysähtyy.</string>
-    <string name="subscription_spin_helper_revealed">Tämä tarjous paljastetaan pyörän pysähtymisen jälkeen.</string>
+    <string name="subscription_spin_helper_revealed">Tämä tarjous paljastuu, kun pyörä pysähtyy.</string>
 
 
     <!-- Onboarding: OneTimeOfferHeroCard-->
     <string name="subscription_gift_unlocked_title">Lahja avattu 🎁</string>
-    <string name="subscription_gift_price_unlocked">Lahjan hinta lukitsematon</string>
-    <string name="subscription_unlock_premium_for_only">Avaa premium vain</string>
-    <string name="subscription_discount_body">Skannaa ateriat nopeammin. Seuraa makroja älykkäämmin.\nPysy suunnitelmassa päivittäin.</string>
+    <string name="subscription_gift_price_unlocked">Lahjahinta avattu</string>
+    <string name="subscription_unlock_premium_for_only">Avaa Premium vain hintaan</string>
+    <string name="subscription_discount_body">Skannaa ateriat nopeammin. Seuraa makroja älykkäämmin.\nPysy suunnitelmassa joka päivä.</string>
     <string name="subscription_yearly_price_format">%1$s/vuosi</string>
     <string name="subscription_urgency_coffee">Vähemmän kuin kahvi</string>
-    <string name="subscription_urgency_price_gone">Suljetaanko tämä näyttö? Tämä hinta on mennyt</string>
-    <string name="subscription_urgency_waiting">Mitä sinä odotat?</string>
+    <string name="subscription_urgency_price_gone">Suljetko tämän näytön? Tämä hinta katoaa</string>
+    <string name="subscription_urgency_waiting">Mitä vielä odotat?</string>
 
-    <string name="subscription_trial_enabled">Ilmainen kokeiluversio käytössä</string>
+    <string name="subscription_trial_enabled">Ilmainen kokeilu käytössä</string>
     <string name="subscription_trial_enable_prompt">Etkö ole varma? Ota ilmainen kokeilu käyttöön</string>
     <string name="subscription_trial_checking_eligibility">Tarkistetaan kokeilun saatavuutta…</string>
-    <string name="subscription_trial_already_used">Kokeilu jo käytössä</string>
+    <string name="subscription_trial_already_used">Kokeilu on jo käytetty</string>
     <string name="subscription_trial_unavailable">Ilmainen kokeilu ei ole saatavilla</string>
 
     <string name="subscription_badge_free_trial">Ilmainen kokeilu</string>
-    <string name="subscription_badge_lowest_price_ever">Halvin hinta ikinä</string>
-    <string name="subscription_yearly_plan">Vuosisuunnitelma</string>
-    <string name="subscription_yearly_plan_price_format">12kk · %1$s</string>
+    <string name="subscription_badge_lowest_price_ever">Kaikkien aikojen alin hinta</string>
+    <string name="subscription_yearly_plan">Vuosipaketti</string>
+    <string name="subscription_yearly_plan_price_format">12 kk · %1$s</string>
 
     <string name="subscription_start_free_trial">Kokeile ilmaiseksi 3 päivää</string>
-    <string name="subscription_trial_helper">Ei sitoumusta – peruuta milloin tahansa</string>
+    <string name="subscription_trial_helper">Ei sitoutumista — peruuta milloin tahansa</string>
     <string name="subscription_discount_terms_format">Vain %1$s/vuosi (%2$s/kk)</string>
-    <string name="subscription_discount_trial_terms_format">Ei sitoumuksia – peruuta milloin tahansa</string>
+    <string name="subscription_discount_trial_terms_format">Ei sitoutumista - peruuta milloin tahansa</string>
 
 
     <!-- HomeScreen -->
-    <string name="recently_uploaded">Äskettäin ladattu</string>
-    <string name="workout_membership_verify_failed">Jäsenyyttä ei voi vahvistaa. Yritä uudelleen.</string>
+    <string name="recently_uploaded">Äskettäin ladatut</string>
+    <string name="workout_membership_verify_failed">Jäsenyyttä ei voitu vahvistaa. Yritä uudelleen.</string>
 
 
     <!-- MainBottomBar -->
-    <string name="bottom_nav_home">Kotiin</string>
+    <string name="bottom_nav_home">Koti</string>
     <string name="bottom_nav_progress">Edistyminen</string>
     <string name="bottom_nav_weight">Paino</string>
     <string name="bottom_nav_fasting">Paasto</string>
-    <string name="bottom_nav_workout">Harjoittelu</string>
+    <string name="bottom_nav_workout">Treeni</string>
 
 
     <!-- =============   HomeCards  ============= -->
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">Kaloreita jäljellä</string>
-    <string name="home_calories_eaten_label">Syödyt kalorit</string>
+    <string name="home_calories_goal_label">kcal jäljellä</string>
+    <string name="home_calories_eaten_label">kcal syöty</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
@@ -347,50 +348,50 @@
     <string name="home_protein_eaten_label">Proteiinia syöty</string>
     <string name="home_carbs_goal_label">Hiilihydraatteja jäljellä</string>
     <string name="home_carbs_eaten_label">Hiilihydraatteja syöty</string>
-    <string name="home_fats_goal_label">Rasvoja jäljellä</string>
-    <string name="home_fats_eaten_label">Rasvat syöty</string>
-    <string name="home_fiber_goal_label">Kuitu jäljellä</string>
-    <string name="home_fiber_eaten_label">Kuitu syöty</string>
-    <string name="home_sugar_goal_label">Sokeri jäi</string>
-    <string name="home_sugar_eaten_label">Sokeri syöty</string>
-    <string name="home_sodium_goal_label">Natrium jäljellä</string>
-    <string name="home_sodium_eaten_label">Natrium syöty</string>
+    <string name="home_fats_goal_label">Rasvaa jäljellä</string>
+    <string name="home_fats_eaten_label">Rasvaa syöty</string>
+    <string name="home_fiber_goal_label">Kuitua jäljellä</string>
+    <string name="home_fiber_eaten_label">Kuitua syöty</string>
+    <string name="home_sugar_goal_label">Sokeria jäljellä</string>
+    <string name="home_sugar_eaten_label">Sokeria syöty</string>
+    <string name="home_sodium_goal_label">Natriumia jäljellä</string>
+    <string name="home_sodium_eaten_label">Natriumia syöty</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
     <!-- HomeCards :  Health Score Card & Advice -->
-    <string name="home_health_score_advice_zero">Kirjaa ensimmäinen ateriasi tänään nähdäksesi terveyspisteet sen ravitsemustietoihin perustuen.</string>
-    <string name="home_health_score_advice_very_low">Tämän päivän keskiarvo on alhainen. Harkitse enemmän proteiinia, kuitua ja vähemmän sokeria tai natriumia.</string>
-    <string name="home_health_score_advice_low">Parantamisen varaa on. Kokeile lisätä vihanneksia ja laadukasta proteiinia.</string>
-    <string name="home_health_score_advice_medium">Olet oikeilla jäljillä. Pidä annokset tasaisina ja tarkkaile sokeria, natriumia ja kuituja.</string>
-    <string name="home_health_score_advice_good">Hyvä tasapaino tänään. Jatka ravintopitoisten ruokien valitsemista.</string>
-    <string name="home_health_score_advice_excellent">Loistava tasapaino tänään. Jatka johdonmukaisten tapojen rakentamista.</string>
-    <string name="home_health_score_title">Terveyspisteet</string>
+    <string name="home_health_score_advice_zero">Kirjaa päivän ensimmäinen ateria nähdäksesi terveysarvion sen ravintotietojen perusteella.</string>
+    <string name="home_health_score_advice_very_low">Tämän päivän keskiarvo on matala. Harkitse enemmän proteiinia ja kuitua sekä vähemmän sokeria tai natriumia.</string>
+    <string name="home_health_score_advice_low">Parannettavaa on. Kokeile lisätä vihanneksia ja laadukasta proteiinia.</string>
+    <string name="home_health_score_advice_medium">Olet oikealla tiellä. Pidä annokset tasaisina ja seuraa sokeria, natriumia ja kuitua.</string>
+    <string name="home_health_score_advice_good">Hyvä tasapaino tänään. Jatka ravinteikkaiden ruokien valitsemista.</string>
+    <string name="home_health_score_advice_excellent">Erinomainen tasapaino tänään. Jatka johdonmukaisten tapojen rakentamista.</string>
+    <string name="home_health_score_title">Terveysarvio</string>
     <string name="home_health_score_value">%1$d/10</string>
 
 
     <!-- HomeCards : Step Card -->
-    <string name="steps_card_title">Vaiheet</string>
+    <string name="steps_card_title">Askeleet</string>
     <string name="steps_status_permission_not_granted">Ei valtuutettu</string>
     <string name="steps_status_hc_not_installed">Ei asennettu</string>
     <string name="steps_status_hc_unavailable">Ei saatavilla</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
-    <string name="steps_secondary_no_data_yet">Ei vielä dataa</string>
+    <string name="steps_secondary_no_data_yet">Ei tietoja vielä</string>
     <string name="steps_secondary_connect">Yhdistä</string>
-    <string name="steps_hint_connect_google_health">Yhdistä Google Health seurataksesi askeleitasi</string>
-    <string name="steps_hint_install_health_connect">Asenna Health Connect seurataksesi askeleitasi</string>
-    <string name="steps_hint_hc_unavailable">Health Connect ei ole käytettävissä tällä laitteella</string>
+    <string name="steps_hint_connect_google_health">Yhdistä Google Health seurataksesi askeliasi</string>
+    <string name="steps_hint_install_health_connect">Asenna Health Connect seurataksesi askeliasi</string>
+    <string name="steps_hint_hc_unavailable">Health Connect ei ole saatavilla tällä laitteella</string>
     <string name="steps_hint_retry">Synkronointi epäonnistui. Yritä uudelleen napauttamalla</string>
 
 
     <!-- HomeCards : Workout Card -->
-    <string name="workout_card_title">Harjoittelu</string>
+    <string name="workout_card_title">Treeni</string>
     <string name="workout_card_unit_kcal">kcal</string>
 
 
     <!-- HomeCards : Weight Card -->
     <string name="weight_card_title">Paino</string>
-    <string name="weight_card_of_goal">maalista</string>
+    <string name="weight_card_of_goal">tavoitteesta</string>
 
 
     <!-- HomeCards : Fasting Card -->
@@ -409,69 +410,69 @@
          ========================= -->
     <string name="progress_screen_title">Edistyminen</string>
     <string name="progress_tab_this_week">Tällä viikolla</string>
-    <string name="progress_tab_last_week">Viime viikolla</string>
-    <string name="progress_tab_two_weeks_ago">2 vk. sitten</string>
-    <string name="progress_tab_three_weeks_ago">3 vk. sitten</string>
+    <string name="progress_tab_last_week">Viime viikko</string>
+    <string name="progress_tab_two_weeks_ago">2 vk sitten</string>
+    <string name="progress_tab_three_weeks_ago">3 vk sitten</string>
     <string name="progress_error_load_failed">Lataus epäonnistui</string>
-    <string name="workout_chart_error_load_failed">Harjoituskaavion lataus epäonnistui</string>
-    <string name="water_chart_error_load_failed">Latausvesikaavio epäonnistui</string>
+    <string name="workout_chart_error_load_failed">Treenikaavion lataus epäonnistui</string>
+    <string name="water_chart_error_load_failed">Vesikaavion lataus epäonnistui</string>
 
 
     <!-- =========================
          BMI Card / BMI Info Dialog
          ========================= -->
-    <string name="bmi_card_title">Sinun BMI</string>
+    <string name="bmi_card_title">BMI-arvosi</string>
     <string name="bmi_card_subtitle">Painosi on</string>
 
-    <string name="bmi_status_underweight">Alipainoinen</string>
-    <string name="bmi_status_healthy">Terve</string>
-    <string name="bmi_status_overweight">Ylipainoinen</string>
-    <string name="bmi_status_obese">Lihava</string>
+    <string name="bmi_status_underweight">Alipaino</string>
+    <string name="bmi_status_healthy">Terveellinen</string>
+    <string name="bmi_status_overweight">Ylipaino</string>
+    <string name="bmi_status_obese">Lihavuus</string>
     <string name="bmi_status_unknown">Tuntematon</string>
 
     <string name="bmi_range_underweight">&lt;18.5</string>
-    <string name="bmi_range_healthy">18.5-24.9</string>
-    <string name="bmi_range_overweight">25.0-29.9</string>
-    <string name="bmi_range_obese">&gt;30,0</string>
+    <string name="bmi_range_healthy">18.5–24.9</string>
+    <string name="bmi_range_overweight">25.0–29.9</string>
+    <string name="bmi_range_obese">&gt;30.0</string>
 
     <string name="bmi_info_title">Mikä on BMI?</string>
-    <string name="bmi_info_subtitle">Kehon massaindeksi</string>
+    <string name="bmi_info_subtitle">Painoindeksi</string>
     <string name="bmi_info_formula_title">Kaava</string>
     <string name="bmi_info_formula_value">BMI = paino (kg) / pituus (m²)</string>
-    <string name="bmi_info_meaning_title">Mitä se kertoo sinulle</string>
-    <string name="bmi_info_meaning_body">BMI auttaa arvioimaan, onko painosi yleisesti ottaen terveellä alueella.</string>
-    <string name="bmi_info_note_title">Pitää mielessä</string>
-    <string name="bmi_info_note_body">BMI on yleinen ohje. Se ei mittaa suoraan kehon rasvaa, lihasmassaa tai yleistä terveyttä.</string>
+    <string name="bmi_info_meaning_title">Mitä se kertoo</string>
+    <string name="bmi_info_meaning_body">BMI auttaa arvioimaan, onko painosi yleisesti terveellisellä alueella.</string>
+    <string name="bmi_info_note_title">Muista</string>
+    <string name="bmi_info_note_body">BMI on yleinen ohje. Se ei mittaa suoraan kehon rasvaa, lihasmassaa tai kokonaisterveyttä.</string>
     <string name="bmi_info_cta">Selvä</string>
 
 
     <!-- =========================
          NutritionChartCard
          ========================= -->
-    <string name="progress_chart_7day_avg_calories">7 päivän keskim</string>
-    <string name="progress_chart_value_cals">%1$d cal</string>
-    <string name="progress_chart_15day_avg_calories">15 päivän keskim</string>
-    <string name="progress_chart_loading_total_calories_text">--.- cals</string>
+    <string name="progress_chart_7day_avg_calories">7 päivän ka.</string>
+    <string name="progress_chart_value_cals">%1$d kcal</string>
+    <string name="progress_chart_15day_avg_calories">15 päivän ka.</string>
+    <string name="progress_chart_loading_total_calories_text">--.- kcal</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
-    <string name="progress_chart_total_calories">Kalorit yhteensä</string>
-    <string name="progress_chart_cals">cals</string>
+    <string name="progress_chart_total_calories">kcal yhteensä</string>
+    <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Proteiini</string>
-    <string name="progress_legend_carbs">Hiilihydraatteja</string>
+    <string name="progress_legend_carbs">Hiilihydraatit</string>
     <string name="progress_legend_fats">Rasvat</string>
     <string name="progress_keep_it_up">Jatka samaan malliin! Aloittaminen on vaikein osa!</string>
 
-    <string name="progress_day_sun">Aurinko</string>
-    <string name="progress_day_mon">ma</string>
-    <string name="progress_day_tue">ti</string>
-    <string name="progress_day_wed">ke</string>
-    <string name="progress_day_thu">to</string>
-    <string name="progress_day_fri">pe</string>
-    <string name="progress_day_sat">la</string>
+    <string name="progress_day_sun">Su</string>
+    <string name="progress_day_mon">Ma</string>
+    <string name="progress_day_tue">Ti</string>
+    <string name="progress_day_wed">Ke</string>
+    <string name="progress_day_thu">To</string>
+    <string name="progress_day_fri">Pe</string>
+    <string name="progress_day_sat">La</string>
 
-    <string name="progress_tooltip_calories">Kalorit</string>
+    <string name="progress_tooltip_calories">kcal</string>
     <string name="progress_tooltip_protein">Proteiini</string>
-    <string name="progress_tooltip_carbs">Hiilihydraatteja</string>
+    <string name="progress_tooltip_carbs">Hiilihydraatit</string>
     <string name="progress_tooltip_fats">Rasvat</string>
     <string name="progress_tooltip_label_format">%1$s:</string>
     <string name="progress_tooltip_grams_value">%1$d g</string>
@@ -483,11 +484,11 @@
          ========================= -->
     <string name="progress_micronutrients_title">Mikroravinteet</string>
     <string name="progress_chart_grams">g</string>
-    <string name="progress_chart_7day_avg">7 päivän keskim</string>
+    <string name="progress_chart_7day_avg">7 päivän ka.</string>
     <string name="progress_legend_fiber">Kuitu</string>
     <string name="progress_legend_sugar">Sokeri</string>
     <string name="progress_legend_sodium">Natrium</string>
-    <string name="progress_micronutrients_keep_it_up">Pidä kuidusi, sokerisi ja natriumsi tasapainossa.</string>
+    <string name="progress_micronutrients_keep_it_up">Pidä kuitu, sokeri ja natrium tasapainossa.</string>
     <string name="progress_tooltip_fiber">Kuitu</string>
     <string name="progress_tooltip_sugar">Sokeri</string>
     <string name="progress_tooltip_sodium">Natrium</string>
@@ -498,17 +499,17 @@
          WorkoutChartCard
          ========================= -->
     <string name="workout_chart_goal_reached">Tavoite saavutettu tänään</string>
-    <string name="workout_chart_goal_left">%1$d kcal jäljellä tämän päivän maaliin</string>
-    <string name="workout_chart_title">Harjoituspoltto</string>
-    <string name="workout_chart_info_dialog_body">Sisältää kirjatut harjoitukset ja päivittäisten askelten perusteella arvioidut aktiivisuuskalorit.</string>
+    <string name="workout_chart_goal_left">%1$d kcal jäljellä tämän päivän tavoitteeseen</string>
+    <string name="workout_chart_title">Treenikulutus</string>
+    <string name="workout_chart_info_dialog_body">Sisältää kirjatut treenit ja päivittäisistä askeleista arvioidut aktiivisuuden kcal-arvot.</string>
     <string name="workout_chart_unit_kcal">kcal</string>
-    <string name="workout_chart_goal">Maali</string>
+    <string name="workout_chart_goal">Tavoite</string>
     <string name="workout_chart_value_kcal">%1$d kcal</string>
-    <string name="workout_chart_7day_avg">7 päivän keskim</string>
+    <string name="workout_chart_7day_avg">7 päivän ka.</string>
     <string name="workout_chart_loading">Ladataan…</string>
-    <string name="workout_legend_burned">Treeni poltti</string>
+    <string name="workout_legend_burned">Treenissä kulutettu</string>
     <string name="workout_legend_daily_goal">Päivittäinen tavoite</string>
-    <string name="workout_tooltip_burned">Poltettu</string>
+    <string name="workout_tooltip_burned">Kulutettu</string>
     <string name="workout_tooltip_kcal_value">%1$d kcal</string>
 
 
@@ -516,12 +517,12 @@
          WaterChartCard
          ========================= -->
     <string name="water_chart_goal_reached">Tämän päivän tavoite saavutettu</string>
-    <string name="water_chart_goal_left_ml">%1$s ml jäljellä tämän päivän tavoitteen saavuttamiseksi</string>
-    <string name="water_chart_title">Vedenotto</string>
+    <string name="water_chart_goal_left_ml">%1$s ml jäljellä tämän päivän tavoitteeseen</string>
+    <string name="water_chart_title">Veden saanti</string>
     <string name="water_chart_unit_ml">ml</string>
-    <string name="water_chart_goal">Maali</string>
+    <string name="water_chart_goal">Tavoite</string>
     <string name="water_chart_value_ml">%1$s ml</string>
-    <string name="water_chart_7day_avg">7 päivän keskim</string>
+    <string name="water_chart_7day_avg">7 päivän ka.</string>
     <string name="water_chart_loading">Ladataan…</string>
     <string name="water_legend_intake">Saanti</string>
     <string name="water_legend_daily_goal">Päivittäinen tavoite</string>
@@ -537,32 +538,32 @@
     <string name="progress_average_tab_30_days">30 päivää</string>
     <string name="progress_average_tab_60_days">60 päivää</string>
 
-    <string name="progress_average_overview_title">Keskimääräinen yleiskatsaus</string>
-    <string name="progress_average_overview_subtitle">Ei sisällä tätä päivää ja vain päivien keskiarvoa, joissa on tietoja.</string>
-    <string name="progress_average_days_badge">%1$d päivän keskim</string>
+    <string name="progress_average_overview_title">Keskiarvojen yhteenveto</string>
+    <string name="progress_average_overview_subtitle">Jättää tämän päivän pois ja laskee keskiarvon vain päivistä, joilla on tietoja.</string>
+    <string name="progress_average_days_badge">%1$d päivän ka.</string>
     <string name="progress_average_loading">Ladataan keskiarvoja…</string>
-    <string name="progress_average_total_calories">Kalorit yhteensä</string>
+    <string name="progress_average_total_calories">kcal yhteensä</string>
     <string name="progress_average_protein">Proteiini</string>
-    <string name="progress_average_carbs">Hiilihydraatteja</string>
+    <string name="progress_average_carbs">Hiilihydraatit</string>
     <string name="progress_average_fats">Rasvat</string>
     <string name="progress_average_fiber">Kuitu</string>
     <string name="progress_average_sugar">Sokeri</string>
     <string name="progress_average_sodium">Natrium</string>
-    <string name="progress_average_workout">Treeni poltti</string>
-    <string name="progress_average_water">Vedenotto</string>
-    <string name="progress_average_health_score">Terveyspisteet</string>
-    <string name="progress_average_steps">Vaiheet</string>
+    <string name="progress_average_workout">Treenissä kulutettu kcal</string>
+    <string name="progress_average_water">Veden saanti</string>
+    <string name="progress_average_health_score">Terveysarvio</string>
+    <string name="progress_average_steps">Askeleet</string>
     <string name="progress_average_health_score_value">%1$.1f / 10</string>
-    <string name="progress_average_steps_value">%1$s vaiheita</string>
+    <string name="progress_average_steps_value">%1$s askelta</string>
 
 
     <!--WeightScreen-->
     <string name="weight_title">Paino</string>
-    <string name="weight_overview_title">Yleiskatsaus</string>
+    <string name="weight_overview_title">Yhteenveto</string>
     <string name="weight_history_title">Historia</string>
     <string name="weight_delete_success">Poistettu onnistuneesti!</string>
-    <string name="weight_delete_failed">Poistaminen epäonnistui. Yritä uudelleen.</string>
-    <string name="weight_log_weight">Tukin paino</string>
+    <string name="weight_delete_failed">Poisto epäonnistui. Yritä uudelleen.</string>
+    <string name="weight_log_weight">Kirjaa paino</string>
 
 
     <!-- WeightComponents -->
@@ -572,17 +573,17 @@
     <string name="weight_chart_tab_30_days">30 päivää</string>
     <string name="weight_chart_tab_60_days">60 päivää</string>
     <string name="weight_chart_tab_90_days">90 päivää</string>
-    <string name="weight_chart_tab_all_time">Koko ajan</string>
+    <string name="weight_chart_tab_all_time">Koko aika</string>
     <string name="weight_chart_title">Painon trendi</string>
     <string name="weight_chart_goal_progress_badge">%1$s%% tavoitteesta</string>
-    <string name="weight_chart_goal_label">Maali</string>
-    <string name="weight_chart_to_goal">%1$s maaliin</string>
-    <string name="weight_goal_chart_empty_hint">Aloita trendisi kirjaamalla paino</string>
+    <string name="weight_chart_goal_label">Tavoite</string>
+    <string name="weight_chart_to_goal">%1$s tavoitteeseen</string>
+    <string name="weight_goal_chart_empty_hint">Kirjaa paino aloittaaksesi trendin</string>
     <string name="weight_chart_motivation">Jokainen pieni askel vie sinut lähemmäs tavoitettasi.</string>
     <string name="weight_history_weight_label">Paino</string>
-    <string name="weight_history_change_label">Muuttaa</string>
-    <string name="weight_history_trend_loss">MENETYS</string>
-    <string name="weight_history_trend_gain">SAADA</string>
+    <string name="weight_history_change_label">Muutos</string>
+    <string name="weight_history_trend_loss">LASKU</string>
+    <string name="weight_history_trend_gain">NOUSU</string>
     <string name="weight_history_trend_stable">VAKAA</string>
 
 
@@ -590,105 +591,105 @@
     <string name="fasting_plan_title">Paastosuunnitelma</string>
     <string name="start_time">Aloitusaika</string>
     <string name="end_time">Päättymisaika</string>
-    <string name="fasting_notification_info_status_on">Muistutukset ovat päällä. Jos laitteen ilmoituslupa on sallittu, nämä muistutukset toistuvat päivittäin.</string>
-    <string name="fasting_notification_info_status_off">Muistutukset ovat pois päältä. Ota nämä ilmoitukset käyttöön kytkemällä Koti-paastokortin kytkin päälle.</string>
+    <string name="fasting_notification_info_status_on">Muistutukset ovat käytössä. Jos laitteen ilmoituslupa on sallittu, nämä muistutukset toistuvat päivittäin.</string>
+    <string name="fasting_notification_info_status_off">Muistutukset ovat pois käytöstä. Ota kytkin käyttöön aloitusnäytön paastokortissa saadaksesi nämä ilmoitukset.</string>
     <string name="fasting_notification_info_status_enabled_label">Päällä</string>
     <string name="fasting_notification_info_status_disabled_label">Pois</string>
-    <string name="fasting_notification_info_title">Kuinka muistutukset toimivat</string>
-    <string name="fasting_notification_info_subtitle">%1$s-suunnitelmasi päättyy %2$s. Kun muistutukset ovat päällä, CaloShape lähettää kaksi päivittäistä ilmoitusta.</string>
-    <string name="fasting_notification_info_at_time">%1$s</string>
+    <string name="fasting_notification_info_title">Näin muistutukset toimivat</string>
+    <string name="fasting_notification_info_subtitle">%1$s-suunnitelmasi päättyy klo %2$s. Kun muistutukset ovat käytössä, CaloShape lähettää kaksi päivittäistä ilmoitusta.</string>
+    <string name="fasting_notification_info_at_time">Klo %1$s</string>
     <string name="fasting_notification_info_start_title">Syömisikkuna alkaa</string>
-    <string name="fasting_notification_info_start_body">Voit aloittaa syömisen ja kirjata ateriat tarvittaessa.</string>
-    <string name="fasting_notification_info_endsoon_title">Ruokailuikkuna loppuu pian</string>
-    <string name="fasting_notification_info_endsoon_body">Tuntia ennen kuin ikkuna sulkeutuu klo %1$s, CaloShape muistuttaa sinua lopettamaan viimeisen aterian.</string>
+    <string name="fasting_notification_info_start_body">Voit aloittaa syömisen ja kirjata aterioita tarvittaessa.</string>
+    <string name="fasting_notification_info_endsoon_title">Syömisikkuna päättyy pian</string>
+    <string name="fasting_notification_info_endsoon_body">Tuntia ennen kuin ikkuna sulkeutuu klo %1$s, CaloShape muistuttaa viimeistelemään viimeisen ateriasi.</string>
 
-    <string name="fasting_plan_desc_14_10">Rentoudu tasaisella rytmillä – 14 tuntia palauttaaksesi ruokahalun vihjeet ja energian.</string>
-    <string name="fasting_plan_desc_16_8">Yleisön suosikki syystä – 16 tuntia keskittymiseen ja laihaan uraan.</string>
-    <string name="fasting_plan_desc_12_12">Tasapainoinen jako: nopea 12 tuntia, syö 12 tunnin sisällä – täydellinen aloittelijoille.</string>
-    <string name="fasting_plan_desc_18_6">18 tuntia paastoa, 6 tunnin ruokailuikkuna – kevyempi aikataulu kuin 16:8.</string>
-    <string name="fasting_plan_desc_20_4">Pysy laserkeskeisenä – 1–2 tarkkaavaista ateriaa tiukan 4 tunnin sisällä.</string>
-    <string name="fasting_plan_desc_22_2">Yksi tarkoituksellinen ateria 2 tunnin välissä – pidä vedenotto yllä.</string>
+    <string name="fasting_plan_desc_14_10">Aloita tasaisella rytmillä — 14 tuntia auttaa nollaamaan ruokahalun ja energian vihjeitä.</string>
+    <string name="fasting_plan_desc_16_8">Suosikki syystä — 16 tuntia auttaa pysymään keskittyneenä ja kevyessä rytmissä.</string>
+    <string name="fasting_plan_desc_12_12">Tasapainoinen jako: paastoa 12 tuntia ja syö 12 tunnin ikkunassa — täydellinen aloittelijoille.</string>
+    <string name="fasting_plan_desc_18_6">18 tuntia paastoa ja 6 tunnin syömisikkuna — tiukempi aikataulu kuin 16:8.</string>
+    <string name="fasting_plan_desc_20_4">Pysy erittäin keskittyneenä — 1–2 harkittua ateriaa kapeassa 4 tunnin ikkunassa.</string>
+    <string name="fasting_plan_desc_22_2">Yksi tarkoituksellinen ateria 2 tunnin jaksossa — muista juoda vettä.</string>
 
-    <string name="fasting_picker_title">Aseta paaston alkamisaika</string>
-    <string name="fasting_picker_subtitle">Muistutamme sinua tähän aikaan joka päivä, kun ruokailuikkunasi alkaa.</string>
+    <string name="fasting_picker_title">Aseta paaston aloitusaika</string>
+    <string name="fasting_picker_subtitle">Muistutamme sinua tähän aikaan joka päivä, kun syömisikkunasi alkaa.</string>
     <string name="fasting_plan_save_failed">Tallennus epäonnistui</string>
 
 
     <!-- FastingReceiver -->
-    <string name="fasting_start_title">%1$s syömisikkuna on auki</string>
-    <string name="fasting_start_body">Ruokailuikkunasi on käynnissä %1$s–%2$s. Kirjaa ateriat matkallasi pitääksesi päivän tarkkoja.</string>
-    <string name="fasting_endsoon_title">1 tunti jäljellä ruokailuikkunassasi</string>
-    <string name="fasting_endsoon_body">Ikkunasi sulkeutuu klo %1$s. Jos suunnittelet viimeisen aterian, kirjaa se ennen kuin lopetat.</string>
+    <string name="fasting_start_title">%1$s-syömisikkuna on auki</string>
+    <string name="fasting_start_body">Syömisikkunasi on %1$s–%2$s. Kirjaa ateriat päivän aikana, jotta tämän päivän tiedot pysyvät tarkkoina.</string>
+    <string name="fasting_endsoon_title">Syömisikkunaa on jäljellä 1 tunti</string>
+    <string name="fasting_endsoon_body">Ikkunasi sulkeutuu klo %1$s. Jos suunnittelet vielä viimeistä ateriaa, kirjaa se ennen lopettamista.</string>
 
 
 
 
     <!-- WorkoutHistoryScreen -->
-    <string name="workout_history_title">Harjoitushistoria</string>
-    <string name="workout_history_summary_label">Tänään paloi</string>
-    <string name="workout_history_summary_body">Seuraa tämän päivän harjoituspolton edistymistä</string>
+    <string name="workout_history_title">Treenihistoria</string>
+    <string name="workout_history_summary_label">Kulutettu tänään</string>
+    <string name="workout_history_summary_body">Seuraa tämän päivän treenikulutuksen edistymistä</string>
     <string name="workout_history_today_label">Tänään</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
-    <string name="workout_history_avg_daily_label">7 päivän keskiarvo / päivä</string>
-    <string name="workout_history_avg_label">7 päivän keskiarvo / istunto</string>
+    <string name="workout_history_avg_daily_label">7 päivän ka. / päivä</string>
+    <string name="workout_history_avg_label">7 päivän ka. / harjoitus</string>
     <string name="workout_history_avg_value">%1$d kcal</string>
     <string name="workout_history_unit_kcal">kcal</string>
 
-    <string name="workout_history_empty_title">Ei viimeaikaisia ​​harjoituksia</string>
-    <string name="workout_history_empty">Ei harjoituksia viimeisen 7 päivän aikana.</string>
-    <string name="workout_history_recent_title">Viimeaikaiset istunnot</string>
+    <string name="workout_history_empty_title">Ei viimeaikaisia treenejä</string>
+    <string name="workout_history_empty">Ei treenejä viimeisen 7 päivän aikana.</string>
+    <string name="workout_history_recent_title">Viimeisimmät harjoitukset</string>
     <string name="workout_history_minutes">%1$d min</string>
     <string name="workout_history_kcal">%1$d</string>
     <string name="workout_history_date_time">%1$s · %2$s</string>
     <string name="workout_history_kcal_with_unit">%1$d kcal</string>
 
-    <string name="workout_history_loading_title">Harjoitusten synkronointi</string>
-    <string name="workout_history_loading">Ladataan harjoitushistoriaa…</string>
+    <string name="workout_history_loading_title">Synkronoidaan treenejä</string>
+    <string name="workout_history_loading">Ladataan treenihistoriaa…</string>
     <string name="workout_history_error_title">Historia ei ole saatavilla</string>
 
-    <string name="workout_history_delete_failed">Poistaminen epäonnistui. Yritä uudelleen.</string>
+    <string name="workout_history_delete_failed">Poisto epäonnistui. Yritä uudelleen.</string>
     <string name="workout_history_delete_success">Poistettu onnistuneesti!</string>
-    <string name="workout_history_error">Harjoitushistoriaa ei voi ladata.</string>
+    <string name="workout_history_error">Treenihistoriaa ei voitu ladata.</string>
 
 
     <!-- WorkoutTrackerSheet -->
-    <string name="workout_tracker_title">Treeni Tracker</string>
-    <string name="workout_tracker_subtitle">Kuvaile harjoituksen tyyppi ja kesto</string>
-    <string name="workout_tracker_example_placeholder">Esimerkki: 45 min juoksua</string>
+    <string name="workout_tracker_title">Treeniseuranta</string>
+    <string name="workout_tracker_subtitle">Kuvaile liikuntalaji ja kesto</string>
+    <string name="workout_tracker_example_placeholder">Esimerkki: 45 min running</string>
 
-    <string name="workout_tracker_select_from_list">tai valitse luettelosta</string>
+    <string name="workout_tracker_select_from_list">tai valitse listasta</string>
     <string name="workout_tracker_show_less">Näytä vähemmän</string>
     <string name="workout_tracker_show_more">Näytä lisää (%1$d)</string>
 
     <string name="workout_tracker_estimating_fallback">Arvioidaan…</string>
-    <string name="workout_tracker_estimating_analyzing">Analysoidaan toimintaasi…</string>
-    <string name="workout_tracker_estimating_numbers">Työskentelemme numeroidesi parissa…</string>
-    <string name="workout_tracker_estimating_calories">Arvioi ponnisteluja, laskee kaloreita…</string>
-    <string name="workout_tracker_do_not_close">Älä sulje sovellusta tai lukitse laitettasi</string>
+    <string name="workout_tracker_estimating_analyzing">Analysoidaan aktiivisuuttasi…</string>
+    <string name="workout_tracker_estimating_numbers">Lasketaan numeroitasi…</string>
+    <string name="workout_tracker_estimating_calories">Arvioidaan rasitusta ja lasketaan kcal…</string>
+    <string name="workout_tracker_do_not_close">Älä sulje sovellusta tai lukitse laitetta</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
     <string name="workout_tracker_minutes_activity">%1$d min %2$s</string>
-    <string name="workout_tracker_add_workout">Lisää harjoitus</string>
+    <string name="workout_tracker_add_workout">Lisää treeni</string>
 
-    <string name="workout_tracker_activity_content_label">Harjoittelutoimintaa</string>
+    <string name="workout_tracker_activity_content_label">Treenin aktiivisuus</string>
     <string name="workout_preset_kcal_per_30_min">%1$d kcal / 30 min</string>
 
     <string name="workout_tracker_save_success">Tallennettu onnistuneesti!</string>
-    <string name="workout_tracker_save_failed">Tallentaminen epäonnistui. Yritä uudelleen.</string>
+    <string name="workout_tracker_save_failed">Tallennus epäonnistui. Yritä uudelleen.</string>
     <string name="workout_tracker_refresh_failed">Päivitys epäonnistui. Yritä uudelleen.</string>
-    <string name="workout_tracker_cancel">Peruuttaa</string>
+    <string name="workout_tracker_cancel">Peruuta</string>
     <string name="workout_tracker_try_again">Yritä uudelleen</string>
-    <string name="workout_tracker_scan_failed_title">Oh-oh! Skannaus epäonnistui</string>
-    <string name="workout_tracker_scan_failed_body">Harjoituksen kuvaus voi olla virheellinen tai Internet-yhteys on heikko. Esimerkiksi: 30 min Juoksu.</string>
+    <string name="workout_tracker_scan_failed_title">Hups! Skannaus epäonnistui</string>
+    <string name="workout_tracker_scan_failed_body">Treenikuvaus voi olla virheellinen tai internetyhteys heikko. Esimerkiksi: 30 min Running.</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->
     <string name="workout_preset_walking">Kävely</string>
-    <string name="workout_preset_running">Juoksemassa</string>
+    <string name="workout_preset_running">Juoksu</string>
     <string name="workout_preset_cycling">Pyöräily</string>
-    <string name="workout_preset_swimming">Uima</string>
-    <string name="workout_preset_hiking">Patikointi</string>
-    <string name="workout_preset_aerobic_exercise">Aerobinen harjoitus</string>
+    <string name="workout_preset_swimming">Uinti</string>
+    <string name="workout_preset_hiking">Vaellus</string>
+    <string name="workout_preset_aerobic_exercise">Aerobinen liikunta</string>
     <string name="workout_preset_strength_training">Voimaharjoittelu</string>
     <string name="workout_preset_weight_training">Painoharjoittelu</string>
     <string name="workout_preset_basketball">Koripallo</string>
@@ -700,60 +701,60 @@
     <string name="workout_preset_softball">Softball</string>
     <string name="workout_preset_volleyball">Lentopallo</string>
     <string name="workout_preset_table_tennis">Pöytätennis</string>
-    <string name="workout_preset_dancing_general">Tanssiminen</string>
+    <string name="workout_preset_dancing_general">Tanssi</string>
     <string name="workout_preset_zumba">Zumba</string>
     <string name="workout_preset_pilates">Pilates</string>
 
 
     <!-- DurationPickerSheet -->
-    <string name="workout_duration_sheet_subtitle">Lisää tämä harjoitusaika aktiivisuuslokiisi</string>
+    <string name="workout_duration_sheet_subtitle">Lisää tämä treeniaika aktiivisuuslokiisi</string>
     <string name="workout_duration_hour_short">hr</string>
     <string name="workout_duration_minute_short">min</string>
-    <string name="workout_duration_save">Tallentaa</string>
-    <string name="workout_duration_cancel">Peruuttaa</string>
+    <string name="workout_duration_save">Tallenna</string>
+    <string name="workout_duration_cancel">Peruuta</string>
 
 
     <!-- HomeQuickActionMenu -->
-    <string name="quick_add_saved_foods">Säästetyt ruoat</string>
-    <string name="quick_add_scan_food">Skannaa ruokaa</string>
+    <string name="quick_add_saved_foods">Tallennetut ruoat</string>
+    <string name="quick_add_scan_food">Skannaa ruoka</string>
 
 
     <!-- CameraScreen -->
-    <string name="camera_mode_food">Skannaa ruokaa</string>
+    <string name="camera_mode_food">Skannaa ruoka</string>
     <string name="camera_mode_barcode">Viivakoodi</string>
-    <string name="camera_mode_label">Elintarvikkeiden etiketti</string>
-    <string name="camera_mode_album">Valokuvat</string>
+    <string name="camera_mode_label">Ruokamerkintä</string>
+    <string name="camera_mode_album">Kuvat</string>
     <string name="camera_barcode_title">Viivakoodinlukija</string>
-    <string name="camera_label_title">Tarra-skanneri</string>
-    <string name="camera_need_permission">Skannaukseen tarvitaan kameran lupa</string>
+    <string name="camera_label_title">Merkinnänlukija</string>
+    <string name="camera_need_permission">Kameralupa vaaditaan skannaamiseen</string>
 
 
     <!-- RecentUploadCard -->
-    <string name="foodlog_pending_analysis">Analysoi ruokaasi…</string>
+    <string name="foodlog_pending_analysis">Analysoidaan ruokaasi…</string>
     <string name="foodlog_analysis_done">Analyysi valmis</string>
-    <string name="recent_upload_kcal_text">🔥 %1$d kaloria</string>
+    <string name="recent_upload_kcal_text">🔥 %1$d kcal</string>
     <string name="recent_upload_protein_text">🥩 %1$dg</string>
     <string name="recent_upload_carbs_text">🌾 %1$dg</string>
     <string name="recent_upload_fat_text">🥑 %1$dg</string>
 
 
     <!-- RecentlyUploadedEmptyCard -->
-    <string name="recently_uploaded_empty">Äskettäin ladattu</string>
-    <string name="recently_uploaded_empty_hint">Lisää päivän ensimmäinen ateria napauttamalla +</string>
+    <string name="recently_uploaded_empty">Äskettäin ladatut</string>
+    <string name="recently_uploaded_empty_hint">Napauta + lisätäksesi päivän ensimmäisen ateriasi</string>
 
 
     <!-- SavedFoodsScreen -->
     <string name="saved_foods_keep_15_days_hint">Tallennetut ruoat viimeisten 15 päivän ajalta.</string>
     <string name="saved_foods_unsave_dialog_title">Poistetaanko tallennetuista ruoista?</string>
-    <string name="saved_foods_unsave_dialog_message">Tämä ateria poistetaan Saved Foods -luettelostasi, mutta se säilyy edelleen viimeaikaisissa tietueissasi.</string>
-    <string name="saved_foods_unsave_dialog_confirm">Poistaa</string>
-    <string name="saved_foods_title">Säästetyt ruoat</string>
-    <string name="saved_foods_kcal">🔥 %1$d kaloria</string>
+    <string name="saved_foods_unsave_dialog_message">Tämä ateria poistetaan Tallennetut ruoat -listalta, mutta se säilyy viimeaikaisissa tiedoissasi.</string>
+    <string name="saved_foods_unsave_dialog_confirm">Poista</string>
+    <string name="saved_foods_title">Tallennetut ruoat</string>
+    <string name="saved_foods_kcal">🔥 %1$d kcal</string>
     <string name="saved_foods_protein">🥩 %1$dg</string>
     <string name="saved_foods_carbs">🌾 %1$dg</string>
     <string name="saved_foods_fat">🥑 %1$dg</string>
-    <string name="saved_foods_detail">Yksityiskohta</string>
-    <string name="saved_foods_load_failed_title">Tallennettujen ruokien lataaminen epäonnistui</string>
+    <string name="saved_foods_detail">Tiedot</string>
+    <string name="saved_foods_load_failed_title">Tallennettujen ruokien lataus epäonnistui</string>
 
 
     <!-- RecentUploadDetailScreen -->
@@ -761,61 +762,61 @@
     <string name="foodlog_unknown_food">Tuntematon ruoka</string>
     <string name="foodlog_no_image">Ei kuvaa</string>
 
-    <string name="foodlog_detail_title">Ravitsemus</string>
-    <string name="foodlog_detail_calories">Kalorit</string>
+    <string name="foodlog_detail_title">Ravinto</string>
+    <string name="foodlog_detail_calories">kcal</string>
     <string name="foodlog_detail_protein">Proteiini</string>
-    <string name="foodlog_detail_carbs">Hiilihydraatteja</string>
+    <string name="foodlog_detail_carbs">Hiilihydraatit</string>
     <string name="foodlog_detail_fats">Rasvat</string>
     <string name="foodlog_detail_fiber">Kuitu</string>
     <string name="foodlog_detail_sugar">Sokeri</string>
     <string name="foodlog_detail_sodium">Natrium</string>
-    <string name="foodlog_detail_health_score">Terveyspisteet</string>
+    <string name="foodlog_detail_health_score">Terveysarvio</string>
 
 
     <!-- DeleteFoodLogDialog -->
-    <string name="foodlog_delete_dialog_title">Poistetaanko tietue?</string>
-    <string name="foodlog_delete_dialog_message">Haluatko varmasti poistaa tämän ateriatietueen pysyvästi? Tätä toimintoa ei voi kumota.</string>
-    <string name="foodlog_delete_dialog_confirm">Poistaa</string>
+    <string name="foodlog_delete_dialog_title">Poistetaanko merkintä?</string>
+    <string name="foodlog_delete_dialog_message">Haluatko varmasti poistaa tämän ateriamerkinnän pysyvästi? Tätä toimintoa ei voi kumota.</string>
+    <string name="foodlog_delete_dialog_confirm">Poista</string>
 
 
     <!-- Settings -->
     <string name="settings_title">Asetukset</string>
     <string name="settings_choose_language">Valitse kieli</string>
     <string name="delete_account_dialog_title">Poistetaanko tili?</string>
-    <string name="delete_account_dialog_body">Haluatko varmasti poistaa tilisi? Tämä poistaa pysyvästi CaloShape-tietosi, mukaan lukien ruokalokit, painotietueet ja niihin liittyvät asetukset. Tätä toimintoa ei voi kumota.</string>
+    <string name="delete_account_dialog_body">Haluatko varmasti poistaa tilisi? Tämä poistaa pysyvästi CaloShape-tietosi, mukaan lukien ruokakirjaukset, painomerkinnät ja niihin liittyvät asetukset. Tätä toimintoa ei voi kumota.</string>
 
 
     <string name="restore_subscription_dialog_success_title">Tilaus palautettu</string>
-    <string name="restore_subscription_dialog_payment_issue_title">Tilaus palautettu, maksuongelma jatkuu</string>
+    <string name="restore_subscription_dialog_payment_issue_title">Tilaus palautettu, mutta maksuongelma jatkuu</string>
     <string name="restore_subscription_dialog_no_active_title">Aktiivista Google Play -tilausta ei löytynyt</string>
     <string name="restore_subscription_dialog_failed_title">Palautus epäonnistui</string>
-    <string name="restore_subscription_dialog_bound_title">Tilaus linkitetty toiseen tiliin</string>
+    <string name="restore_subscription_dialog_bound_title">Tilaus on liitetty toiseen tiliin</string>
     <string name="restore_subscription_dialog_success_body">Tilauksesi on palautettu tälle CaloShape-tilille.</string>
-    <string name="restore_subscription_dialog_payment_issue_body">Tilauksesi on linkitetty tähän CaloShape-tiliin, mutta Google Play raportoi silti maksuongelmasta. Päivitä maksutapasi Google Playssa, jotta tilauksesi pysyy aktiivisena.</string>
-    <string name="restore_subscription_dialog_no_active_body">Emme löytäneet aktiivista CaloShape-tilausta nykyiseltä Google Play -tililtä. Varmista, että käytät Google Play -tiliä, jolla ostit, ja yritä sitten uudelleen.</string>
-    <string name="restore_subscription_dialog_failed_body">Emme voineet palauttaa tilaustasi juuri nyt. Tarkista yhteys ja yritä uudelleen asetuksista.</string>
-    <string name="restore_subscription_dialog_bound_body">Tämä Google Play -tilaus on jo linkitetty toiseen CaloShape-tiliin. Kirjaudu sisään alkuperäiseen tiliin käyttääksesi sitä tai ota yhteyttä tukeen, jos et pääse kyseiselle tilille.</string>
-    <string name="restore_subscription_dialog_body">Löysimme aktiivisen CaloShape-tilauksen tai kokeilujakson, joka liittyy Google Play -tiliin tällä laitteella. Voit palauttaa sen CaloShape-tilille, johon olet tällä hetkellä kirjautunut.</string>
+    <string name="restore_subscription_dialog_payment_issue_body">Tilauksesi on liitetty tähän CaloShape-tiliin, mutta Google Play ilmoittaa edelleen maksuongelmasta. Päivitä maksutapasi Google Playssa pitääksesi tilauksen aktiivisena.</string>
+    <string name="restore_subscription_dialog_no_active_body">Emme löytäneet aktiivista CaloShape-tilausta nykyiseltä Google Play -tililtä. Varmista, että käytät ostoksen tehnyttä Google Play -tiliä, ja yritä uudelleen.</string>
+    <string name="restore_subscription_dialog_failed_body">Emme voineet palauttaa tilaustasi juuri nyt. Tarkista yhteys ja yritä uudelleen Asetuksista.</string>
+    <string name="restore_subscription_dialog_bound_body">Tämä Google Play -tilaus on jo liitetty toiseen CaloShape-tiliin. Kirjaudu alkuperäiselle tilille käyttääksesi sitä tai ota yhteyttä tukeen, jos et pääse tilille.</string>
+    <string name="restore_subscription_dialog_body">Löysimme aktiivisen CaloShape-tilauksen tai kokeilun, joka liittyy tämän laitteen Google Play -tiliin. Voit palauttaa sen CaloShape-tilille, johon olet tällä hetkellä kirjautunut.</string>
 
     <!-- Settings : Payment issue dialog -->
-    <string name="payment_issue_dialog_title">Pidä palkkiosi aktiivisena</string>
-    <string name="payment_issue_dialog_body">Premium-käyttöoikeutesi on edelleen voimassa. Päivitä Google Play -maksutapasi välttääksesi käyttökatkoksen.</string>
+    <string name="payment_issue_dialog_title">Pidä Premium aktiivisena</string>
+    <string name="payment_issue_dialog_body">Premium-käyttösi on edelleen aktiivinen. Päivitä Google Play -maksutapasi välttääksesi katkoksen.</string>
     <string name="payment_issue_dialog_update_payment">Päivitä maksutapa</string>
     <string name="payment_issue_dialog_badge">Maksu vaatii huomiota</string>
-    <string name="payment_issue_dialog_premium_access">Premium pääsy</string>
-    <string name="payment_issue_dialog_active_for_now">Aktiivinen toistaiseksi</string>
-    <string name="payment_issue_dialog_next_step">Seuraava askel</string>
+    <string name="payment_issue_dialog_premium_access">Premium-käyttö</string>
+    <string name="payment_issue_dialog_active_for_now">Aktiivinen nyt</string>
+    <string name="payment_issue_dialog_next_step">Seuraava vaihe</string>
     <string name="payment_issue_dialog_update_payment_short">Päivitä maksu</string>
 
 
     <string name="settings_personal_details">Henkilötiedot</string>
     <string name="settings_adjust_macronutrients">Säädä makroravinteita</string>
-    <string name="settings_weight_history">Painon historia</string>
-    <string name="settings_ring_colors_explained">Kalenterirenkaan väriopas</string>
+    <string name="settings_weight_history">Painohistoria</string>
+    <string name="settings_ring_colors_explained">Kalenterirenkaiden väriopas</string>
     <string name="settings_inbox">Saapuneet</string>
 
 
-    <string name="settings_terms_conditions">Ehdot</string>
+    <string name="settings_terms_conditions">Käyttöehdot</string>
     <string name="settings_privacy_policy">Tietosuojakäytäntö</string>
     <string name="settings_support_email">Tuen sähköposti</string>
     <string name="settings_delete_account">Poistetaanko tili?</string>
@@ -827,11 +828,11 @@
     <string name="settings_membership_premium">Premium</string>
     <string name="settings_membership_active_member">Aktiivinen jäsen</string>
     <string name="settings_membership_trial">Kokeilu</string>
-    <string name="settings_membership_access_active">Käyttöoikeus voimassa</string>
+    <string name="settings_membership_access_active">Käyttö aktiivinen</string>
     <string name="settings_membership_free">Ilmainen</string>
     <string name="settings_membership_upgrade">Päivitä</string>
     <string name="settings_membership_trial_ends_today">Kokeilu päättyy tänään</string>
-    <string name="settings_membership_until_format">Voimassa %1$s asti</string>
+    <string name="settings_membership_until_format">Asti %1$s</string>
     <plurals name="settings_membership_trial_days_left">
         <item quantity="one">%1$d päivä jäljellä</item>
         <item quantity="other">%1$d päivää jäljellä</item>
@@ -841,18 +842,18 @@
     <!-- Settings: referral card -->
     <string name="settings_invite_friends">Kutsu ystäviä</string>
     <string name="settings_premium_reward">Premium-palkinto</string>
-    <string name="settings_share_caloshape_with_friends">Jaa CaloShape AI\nystävien kanssa</string>
-    <string name="settings_referral_reward_content">He tilaavat. Saat 30 päivää ilmaiseksi.</string>
+    <string name="settings_share_caloshape_with_friends">Jaa CaloShape AI\nystäviesi kanssa</string>
+    <string name="settings_referral_reward_content">He tilaavat. Sinä saat 30 päivää ilmaiseksi.</string>
     <string name="settings_get_30_days_free">Saat 30 päivää ilmaiseksi</string>
-    <string name="settings_days_label">päivää</string>
+    <string name="settings_days_label">Päivää</string>
 
-    <string name="settings_appearance_light">Kevyt</string>
+    <string name="settings_appearance_light">Vaalea</string>
     <string name="settings_appearance_dark">Tumma</string>
-    <string name="settings_appearance_mode_title">Valitse ulkonäkö</string>
-    <string name="settings_appearance_light_description">Säilytä nykyinen kirkas ja puhdas ilme.</string>
-    <string name="settings_appearance_dark_description">Käytä tummempaa, pehmeämpää käyttöliittymää päivittäiseen seurantaan.</string>
+    <string name="settings_appearance_mode_title">Valitse ulkoasu</string>
+    <string name="settings_appearance_light_description">Säilytä nykyinen kirkas ja selkeä ilme.</string>
+    <string name="settings_appearance_dark_description">Käytä tummempaa ja pehmeämpää käyttöliittymää päivittäiseen seurantaan.</string>
     <string name="settings_preferences">Asetukset</string>
-    <string name="settings_appearance">Ulkonäkö</string>
+    <string name="settings_appearance">Ulkoasu</string>
 
     <string name="settings_language">Kieli</string>
 
@@ -862,11 +863,11 @@
     <string name="settings_widgets_how_to_add">Kuinka lisätä?</string>
     <string name="log_your_food">Kirjaa ruokasi</string>
 
-    <string name="settings_calories_goal_label">Kaloreita jäljellä</string>
+    <string name="settings_calories_goal_label">kcal jäljellä</string>
     <string name="settings_protein_goal_label">Proteiinia jäljellä</string>
     <string name="settings_carbs_goal_label">Hiilihydraatteja jäljellä</string>
-    <string name="settings_fats_goal_label">Rasvoja jäljellä</string>
-    <string name="settings_widget_scan_food">Skannaa ruokaa</string>
+    <string name="settings_fats_goal_label">Rasvaa jäljellä</string>
+    <string name="settings_widget_scan_food">Skannaa ruoka</string>
     <string name="settings_widget_barcode">Viivakoodi</string>
 
     <string name="settings_logout_loading">Kirjaudutaan ulos…</string>
@@ -876,7 +877,7 @@
 
     <!-- EditNameScreen -->
     <string name="settings_edit_your_name_title">Muokkaa nimeäsi</string>
-    <string name="edit_name_placeholder">Kirjoita nimesi</string>
+    <string name="edit_name_placeholder">Syötä nimesi</string>
 
 
     <!-- Referral Screen -->
@@ -884,104 +885,104 @@
     <string name="referral_premium_reward">Premium-palkinto</string>
     <string name="referral_invite_friends">Kutsu ystäviä</string>
     <string name="referral_earn_30_days_free">Ansaitse 30 päivää ilmaiseksi</string>
-    <string name="referral_reward_unlocks_after_no_refund">Palkinnot avautuvat, kun ystäväsi tekee tilauksen ilman hyvitystä.</string>
-    <string name="referral_code_copied">Viittauskoodi kopioitu.</string>
-    <string name="referral_your_promo_code">Tarjouskoodisi</string>
-    <string name="referral_copy">Kopioida</string>
-    <string name="referral_share">Jakaa</string>
-    <string name="referral_how_it_works">Miten se toimii</string>
-    <string name="referral_step_1_title">Jaa tarjouskoodisi</string>
+    <string name="referral_reward_unlocks_after_no_refund">Palkinto avautuu, kun ystäväsi tilaa ilman hyvitystä.</string>
+    <string name="referral_code_copied">Suosittelukoodi kopioitu.</string>
+    <string name="referral_your_promo_code">Kampanjakoodisi</string>
+    <string name="referral_copy">Kopioi</string>
+    <string name="referral_share">Jaa</string>
+    <string name="referral_how_it_works">Näin se toimii</string>
+    <string name="referral_step_1_title">Jaa kampanjakoodisi</string>
     <string name="referral_step_1_subtitle">Lähetä koodisi ystävälle, joka haluaa seurata ruokaa älykkäämmin.</string>
     <string name="referral_step_2_title">Ystäväsi tilaa</string>
-    <string name="referral_step_2_subtitle">He aloittavat maksullisen CaloShape AI -tilauksen kutsusi avulla.</string>
-    <string name="referral_step_3_title">Ei palautusta, sitten palkinto</string>
-    <string name="referral_step_3_subtitle">Kun tilaus on vahvistettu ilman hyvitystä, palkkiojaksoasi pidennetään.</string>
-    <string name="referral_share_text">Liity kanssani CaloShape AI:hen! Viittauskoodini on:\n%1$s\n\n%2$s</string>
-    <string name="referral_share_subject">Liity kanssani CaloShape AI:hen</string>
-    <string name="referral_share_chooser_title">Jaa kautta</string>
-    <string name="referral_unable_to_open_share_options">Osakeoptioita ei voi avata.</string>
+    <string name="referral_step_2_subtitle">Hän aloittaa maksullisen CaloShape AI -tilauksen kutsusi avulla.</string>
+    <string name="referral_step_3_title">Ei hyvitystä, sitten palkinto</string>
+    <string name="referral_step_3_subtitle">Kun tilaus on vahvistettu ilman hyvitystä, Premium-jaksoasi pidennetään.</string>
+    <string name="referral_share_text">Liity mukaan CaloShape AI:hin! Suosittelukoodini on:\n%1$s\n\n%2$s</string>
+    <string name="referral_share_subject">Liity mukaan CaloShape AI:hin</string>
+    <string name="referral_share_chooser_title">Jaa käyttäen</string>
+    <string name="referral_unable_to_open_share_options">Jakamisvaihtoehtoja ei voitu avata.</string>
 
 
     <!-- PersonalDetailsScreen -->
-    <string name="personal_details_goal_weight">Tavoitteen paino</string>
-    <string name="personal_details_change_goal">Muuta tavoitetta</string>
-    <string name="personal_details_body_details_section">Rungon yksityiskohdat</string>
+    <string name="personal_details_goal_weight">Tavoitepaino</string>
+    <string name="personal_details_change_goal">Vaihda tavoite</string>
+    <string name="personal_details_body_details_section">Kehotiedot</string>
     <string name="personal_details_current_weight">Nykyinen paino</string>
-    <string name="personal_details_height">Korkeus</string>
+    <string name="personal_details_height">Pituus</string>
     <string name="personal_details_age">Ikä</string>
     <string name="personal_details_gender">Sukupuoli</string>
     <string name="personal_details_starting_weight">Aloituspaino</string>
     <string name="personal_details_daily_goals_section">Päivittäiset tavoitteet</string>
     <string name="personal_details_daily_step_goal">Päivittäinen askeltavoite</string>
     <string name="personal_details_daily_water_goal">Päivittäinen vesitavoite</string>
-    <string name="personal_details_daily_workout_goal">Päivittäinen harjoitustavoite</string>
+    <string name="personal_details_daily_workout_goal">Päivittäinen treenitavoite</string>
     <string name="personal_details_age_value">%1$d vuotta</string>
-    <string name="personal_details_steps_value">%1$d vaiheita</string>
+    <string name="personal_details_steps_value">%1$d askelta</string>
     <string name="personal_details_water_value">%1$d ml</string>
     <string name="personal_details_kcal_value">%1$d kcal</string>
-    <string name="gender_male">Uros</string>
-    <string name="gender_female">Naaras</string>
-    <string name="gender_other">muu</string>
+    <string name="gender_male">Mies</string>
+    <string name="gender_female">Nainen</string>
+    <string name="gender_other">Muu</string>
 
 
     <!-- EditGoalWeightScreen -->
-    <string name="edit_goal_weight_title">Muokkaa tavoitteen painoa</string>
+    <string name="edit_goal_weight_title">Muokkaa tavoitepainoa</string>
     <string name="edit_goal_weight_progress_note">Käytämme tätä tavoitetta edistymisesi laskemiseen.</string>
-    <string name="edit_goal_update_failed">Tavoitteen painon päivittäminen epäonnistui</string>
+    <string name="edit_goal_update_failed">Tavoitepainon päivitys epäonnistui</string>
 
 
     <!-- RecordWeightScreen -->
-    <string name="record_weight_camera_failed_to_open">Kameran avaaminen epäonnistui.</string>
-    <string name="record_weight_camera_permission_required">Kameran lupa vaaditaan.</string>
-    <string name="record_weight_camera_preview_unavailable">Kamera toimii vain käynnissä olevassa sovelluksessa, ei esikatselussa.</string>
-    <string name="record_weight_camera_screen_unavailable">Kamera ei ole käytettävissä tässä näytössä.</string>
-    <string name="record_weight_no_camera_app_found">Tältä laitteelta ei löytynyt kamerasovellusta.</string>
-    <string name="record_weight_enable_camera_permission_settings">Ota kameran käyttöoikeus käyttöön asetuksista.</string>
+    <string name="record_weight_camera_failed_to_open">Kameraa ei voitu avata.</string>
+    <string name="record_weight_camera_permission_required">Kameralupa vaaditaan.</string>
+    <string name="record_weight_camera_preview_unavailable">Kamera toimii vain käynnissä olevassa sovelluksessa, ei Preview-tilassa.</string>
+    <string name="record_weight_camera_screen_unavailable">Kamera ei ole käytettävissä tällä näytöllä.</string>
+    <string name="record_weight_no_camera_app_found">Laitteesta ei löytynyt kamerasovellusta.</string>
+    <string name="record_weight_enable_camera_permission_settings">Ota kameralupa käyttöön Asetuksissa.</string>
 
-    <string name="record_weight_title">Ennätyspaino</string>
+    <string name="record_weight_title">Kirjaa paino</string>
     <string name="record_weight_save_failed">Tallennus epäonnistui</string>
-    <string name="record_weight_date_note">Tämä paino tallennetaan %1$s</string>
+    <string name="record_weight_date_note">Tämä paino kirjataan päivälle %1$s</string>
 
-    <string name="weight_date_sheet_title">Valitse punnituspäivämääräsi</string>
-    <string name="weight_date_sheet_subtitle">Milloin astuit vaa\'alle?</string>
-    <string name="weight_date_sheet_month_january">tammikuu</string>
-    <string name="weight_date_sheet_month_february">helmikuu</string>
-    <string name="weight_date_sheet_month_march">maaliskuuta</string>
-    <string name="weight_date_sheet_month_april">huhtikuu</string>
-    <string name="weight_date_sheet_month_may">toukokuuta</string>
-    <string name="weight_date_sheet_month_june">kesäkuuta</string>
-    <string name="weight_date_sheet_month_july">heinäkuu</string>
-    <string name="weight_date_sheet_month_august">elokuu</string>
-    <string name="weight_date_sheet_month_september">syyskuu</string>
-    <string name="weight_date_sheet_month_october">lokakuu</string>
-    <string name="weight_date_sheet_month_november">marraskuu</string>
-    <string name="weight_date_sheet_month_december">joulukuu</string>
+    <string name="weight_date_sheet_title">Valitse punnituspäivä</string>
+    <string name="weight_date_sheet_subtitle">Milloin astuit vaa’alle?</string>
+    <string name="weight_date_sheet_month_january">Tammikuu</string>
+    <string name="weight_date_sheet_month_february">Helmikuu</string>
+    <string name="weight_date_sheet_month_march">Maaliskuu</string>
+    <string name="weight_date_sheet_month_april">Huhtikuu</string>
+    <string name="weight_date_sheet_month_may">Toukokuu</string>
+    <string name="weight_date_sheet_month_june">Kesäkuu</string>
+    <string name="weight_date_sheet_month_july">Heinäkuu</string>
+    <string name="weight_date_sheet_month_august">Elokuu</string>
+    <string name="weight_date_sheet_month_september">Syyskuu</string>
+    <string name="weight_date_sheet_month_october">Lokakuu</string>
+    <string name="weight_date_sheet_month_november">Marraskuu</string>
+    <string name="weight_date_sheet_month_december">Joulukuu</string>
 
     <string name="record_weight_camera_not_available">Kamera ei ole saatavilla</string>
-    <string name="record_weight_take_photo">Ota valokuva</string>
-    <string name="record_weight_retake_photo">Ota valokuva uudelleen</string>
+    <string name="record_weight_take_photo">Ota kuva</string>
+    <string name="record_weight_retake_photo">Ota kuva uudelleen</string>
 
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Muokkaa pituuttasi</string>
-    <string name="edit_height_privacy_note">Käytämme pituuttasi vain parantaaksemme kokemustasi ja kaloriarvioinnin tarkkuutta.</string>
+    <string name="edit_height_privacy_note">Käytämme pituuttasi vain käyttökokemuksen ja kcal-arvioiden tarkkuuden parantamiseen.</string>
     <string name="edit_height_saved_locally_sync_failed">Verkkovirhe. Tallennettu paikallisesti, mutta synkronointi epäonnistui.</string>
 
 
     <!-- EditAgeScreen -->
     <string name="edit_age_title">Muokkaa ikääsi</string>
-    <string name="edit_age_privacy_note">Käytämme ikääsi vain parantaaksemme kokemustasi ja kaloriarvioinnin tarkkuutta.</string>
+    <string name="edit_age_privacy_note">Käytämme ikääsi vain käyttökokemuksen ja kcal-arvioiden tarkkuuden parantamiseen.</string>
 
 
     <!-- EditGenderScreen -->
     <string name="edit_gender_title">Muokkaa sukupuoltasi</string>
-    <string name="edit_gender_privacy_note">Käytetään vain mukauttamiseen ja arvion tarkkuuden parantamiseen.</string>
+    <string name="edit_gender_privacy_note">Käytetään vain personointiin ja arvioiden tarkkuuden parantamiseen.</string>
 
 
     <!-- EditStartingWeightScreen -->
     <string name="edit_starting_weight_title">Muokkaa aloituspainoa</string>
-    <string name="edit_start_weight_baseline_note">Käytämme sitä etenemisen perustana.</string>
-    <string name="edit_starting_weight_update_failed">Aloituspainon päivittäminen epäonnistui</string>
+    <string name="edit_start_weight_baseline_note">Käytämme sitä edistymisesi lähtötasona.</string>
+    <string name="edit_starting_weight_update_failed">Aloituspainon päivitys epäonnistui</string>
 
 
     <!-- EditDailyStepGoalScreen -->
@@ -997,33 +998,33 @@
 
 
     <!-- EditWorkoutGoalScreen -->
-    <string name="edit_workout_goal_title">Muokkaa harjoitustavoitetta</string>
+    <string name="edit_workout_goal_title">Muokkaa treenitavoitetta</string>
     <string name="edit_workout_goal_previous_format">Edellinen tavoite %1$d kcal</string>
-    <string name="edit_workout_goal_input_label">Päivittäinen harjoitustavoite (kcal)</string>
+    <string name="edit_workout_goal_input_label">Päivittäinen treenitavoite (kcal)</string>
 
 
     <!-- EditNutritionGoalsScreen -->
-    <string name="edit_nutrition_goals_title">Muokkaa ravitsemustavoitteita</string>
-    <string name="edit_nutrition_calorie_goal">Kaloritavoite</string>
-    <string name="edit_nutrition_protein_goal">Proteiini tavoite</string>
+    <string name="edit_nutrition_goals_title">Muokkaa ravintotavoitteita</string>
+    <string name="edit_nutrition_calorie_goal">kcal-tavoite</string>
+    <string name="edit_nutrition_protein_goal">Proteiinitavoite</string>
     <string name="edit_nutrition_carb_goal">Hiilihydraattitavoite</string>
-    <string name="edit_nutrition_fat_goal">Rasva tavoite</string>
-    <string name="edit_nutrition_view_micronutrients">Katso mikroravinteet</string>
-    <string name="edit_nutrition_fiber_goal">Kuitu tavoite</string>
-    <string name="edit_nutrition_sugar_goal">Sokerin tavoite</string>
+    <string name="edit_nutrition_fat_goal">Rasvatavoite</string>
+    <string name="edit_nutrition_view_micronutrients">Näytä mikroravinteet</string>
+    <string name="edit_nutrition_fiber_goal">Kuitutavoite</string>
+    <string name="edit_nutrition_sugar_goal">Sokeritavoite</string>
     <string name="edit_nutrition_sodium_goal">Natriumtavoite</string>
-    <string name="edit_nutrition_auto_generate_goals">Luo tavoitteita automaattisesti</string>
-    <string name="auto_generate_goals_success">Luonti onnistui!</string>
+    <string name="edit_nutrition_auto_generate_goals">Luo tavoitteet automaattisesti</string>
+    <string name="auto_generate_goals_success">Luotu onnistuneesti!</string>
     <string name="auto_generate_goals_failed">Luonti epäonnistui</string>
     <string name="auto_generate_goals_failed_http_format">Luonti epäonnistui (%1$d)</string>
-    <string name="auto_generate_goals_network_error">Verkkovirhe. Yritä uudelleen.</string>
+    <string name="auto_generate_goals_network_error">Verkkovirhe, yritä uudelleen.</string>
 
 
     <!-- RingColorsExplainedScreen -->
-    <string name="ring_colors_explained_title">Päivämääräsormuksen värit</string>
-    <string name="ring_colors_explained_intro">Päivämäärärenkaat auttavat sinua näkemään nopeasti, miten kukin päivä vastaa kaloritavoitteesi.</string>
+    <string name="ring_colors_explained_title">Päivärenkaiden värit</string>
+    <string name="ring_colors_explained_intro">Päivärenkaat auttavat nopeasti näkemään, miten kukin päivä vertautuu kcal-tavoitteeseesi.</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
-    <string name="ring_colors_explained">Päivämäärän esikatselu</string>
+    <string name="ring_colors_explained">Päivärenkaan esikatselu</string>
 
     <string name="ring_colors_preview_day_5">5</string>
     <string name="ring_colors_preview_day_6">6</string>
@@ -1032,57 +1033,57 @@
     <string name="ring_colors_preview_day_9">9</string>
     <string name="ring_colors_preview_day_10">10</string>
     <string name="ring_colors_preview_day_11">11</string>
-    <string name="ring_colors_explained_subtitle">Sormuksen värit selitetty</string>
+    <string name="ring_colors_explained_subtitle">Renkaiden värit selitettynä</string>
 
     <string name="ring_colors_green_title">Vihreä</string>
-    <string name="ring_colors_green_body">Tavoitteessa (100 kalorin sisällä tavoitteesta)</string>
+    <string name="ring_colors_green_body">Tavoitteessa (100 kcal sisällä tavoitteesta)</string>
     <string name="ring_colors_yellow_title">Ruskea</string>
-    <string name="ring_colors_yellow_body">100-199 kaloria yli tavoitteesi</string>
+    <string name="ring_colors_yellow_body">100-199 kcal yli tavoitteesi</string>
     <string name="ring_colors_red_title">Punainen</string>
-    <string name="ring_colors_red_body">Yli 200 kaloria yli tavoitteesi</string>
-    <string name="ring_colors_dotted_title">Pisteellinen</string>
-    <string name="ring_colors_dotted_body">Sinä päivänä ei kirjattu aterioita</string>
+    <string name="ring_colors_red_body">200+ kcal yli tavoitteesi</string>
+    <string name="ring_colors_dotted_title">Pisteviiva</string>
+    <string name="ring_colors_dotted_body">Ei kirjattuja aterioita sinä päivänä</string>
 
 
     <!-- NotificationInboxScreen Inbox -->
     <string name="notification_inbox_title">Saapuneet</string>
     <string name="notification_inbox_header_title">CaloShape-ilmoitukset</string>
     <string name="notification_inbox_header_body">Kaikki alustan ilmoitukset näkyvät täällä.</string>
-    <string name="notification_inbox_status_read">Lukea</string>
+    <string name="notification_inbox_status_read">Luettu</string>
     <string name="notification_inbox_status_unread">Lukematon</string>
 
     <string name="notification_inbox_loading_title">Ladataan ilmoituksia</string>
     <string name="notification_inbox_loading">Ladataan ilmoituksia…</string>
-    <string name="notification_inbox_empty_title">Ei vielä ilmoituksia</string>
+    <string name="notification_inbox_empty_title">Ei ilmoituksia vielä</string>
     <string name="notification_inbox_empty_body">Alustan ilmoitukset näkyvät täällä.</string>
-    <string name="notification_inbox_error_title">Ilmoitusten lataaminen epäonnistui</string>
+    <string name="notification_inbox_error_title">Ilmoituksia ei voitu ladata</string>
     <string name="notification_inbox_error_body">Tarkista yhteys ja yritä uudelleen.</string>
 
 
     <!-- WidgetGuideScreen -->
     <string name="widget_guide_title">Lisää widget</string>
-    <string name="widget_guide_hero_title">Lisää CaloShape aloitusnäyttöön</string>
-    <string name="widget_guide_hero_body">Seuraa kaloreita, makroja ja nopeita toimintoja avaamatta sovellusta.</string>
-    <string name="widget_guide_steps_title">Noudata näitä ohjeita</string>
+    <string name="widget_guide_hero_title">Lisää CaloShape aloitusnäytölle</string>
+    <string name="widget_guide_hero_body">Seuraa kcal-arvoja, makroja ja pikatoimintoja avaamatta sovellusta.</string>
+    <string name="widget_guide_steps_title">Noudata näitä vaiheita</string>
     <string name="widget_guide_step_1_title">Paina pitkään aloitusnäyttöä</string>
-    <string name="widget_guide_step_1_body">Paina ja pidä painettuna puhelimen aloitusnäytön tyhjää aluetta, kunnes valikko tulee näkyviin.</string>
+    <string name="widget_guide_step_1_body">Paina pitkään tyhjää kohtaa puhelimen aloitusnäytöllä, kunnes valikko tulee näkyviin.</string>
     <string name="widget_guide_step_2_title">Napauta Widgetit</string>
     <string name="widget_guide_step_2_body">Valitse aloitusnäytön valikosta Widgetit.</string>
     <string name="widget_guide_step_3_title">Etsi CaloShape AI</string>
-    <string name="widget_guide_step_3_body">Vieritä tai etsi CaloShape AI ja avaa sitten widget-luettelo.</string>
+    <string name="widget_guide_step_3_body">Vieritä tai hae CaloShape AI, ja avaa sitten widget-luettelo.</string>
     <string name="widget_guide_step_4_title">Vedä widget paikalleen</string>
-    <string name="widget_guide_step_4_body">Kosketa widgetiä pitkään, vedä se haluamaasi aloitusnäyttöön ja nosta sitten sormesi.</string>
+    <string name="widget_guide_step_4_body">Paina widgetiä pitkään, vedä se haluamallesi aloitusnäytölle ja nosta sormi.</string>
     <string name="widget_guide_tip_title">Etkö löydä Widgetit-valikkoa?</string>
-    <string name="widget_guide_tip_body">Jotkut puhelinmerkit ja kantoraketit käyttävät eri nimiä. Kokeile Koti-asetuksia, paina CaloShape AI -sovelluskuvaketta pitkään tai etsi widgetejä käynnistysohjelmasta.</string>
+    <string name="widget_guide_tip_body">Joillakin puhelinmerkeillä ja launchereilla nimet voivat olla erilaisia. Kokeile aloitusnäytön asetuksia, CaloShape AI -sovelluskuvakkeen pitkää painallusta tai Widgetit-haun käyttöä launcherissa.</string>
     <string name="widget_guide_done">Selvä</string>
-    <string name="widget_guide_mock_home">Kotiin</string>
+    <string name="widget_guide_mock_home">Koti</string>
     <string name="widget_guide_mock_widgets">Widgetit</string>
 
 
     <!-- CaloShapeNavHost -->
     <string name="url_terms">https://caloshape.com/terms</string>
     <string name="url_privacy">https://caloshape.com/privacy</string>
-    <string name="camera_manual_entry_not_ready">Manuaalinen syöttö ei ole vielä valmis. Vaihdetaan tarraskannaukseen toistaiseksi.</string>
+    <string name="camera_manual_entry_not_ready">Käsinsyöttö ei ole vielä valmis. Vaihdetaan toistaiseksi merkinnän skannaukseen.</string>
 
 
     <!-- Android home screen widgets -->
@@ -1090,15 +1091,15 @@
     <string name="widget_preview_protein">120g</string>
     <string name="widget_preview_carbs">180g</string>
     <string name="widget_preview_fats">60g</string>
-    <string name="widget_calories_left">Kaloreita jäljellä</string>
-    <string name="widget_protein_left">Proteiinia jäljellä</string>
-    <string name="widget_carbs_left">Hiilihydraatteja jäljellä</string>
-    <string name="widget_fats_left">Rasvoja jäljellä</string>
-    <string name="widget_calories_description">CaloShape kaloriwidget</string>
-    <string name="widget_macro_actions_description">CaloShape-makrot ja pikatoimintojen widget</string>
-    <string name="widget_log_your_food">Kirjaa ruokasi</string>
-    <string name="widget_scan_food">Skannaa ruokaa</string>
-    <string name="widget_barcode">Viivakoodi</string>
+    <string name="widget_calories_left">Calories left</string>
+    <string name="widget_protein_left">Protein left</string>
+    <string name="widget_carbs_left">Carbs left</string>
+    <string name="widget_fats_left">Fats left</string>
+    <string name="widget_calories_description">CaloShape calories widget</string>
+    <string name="widget_macro_actions_description">CaloShape macros and quick actions widget</string>
+    <string name="widget_log_your_food">Log your food</string>
+    <string name="widget_scan_food">Scan food</string>
+    <string name="widget_barcode">Barcode</string>
     <string name="widget_grams_format">%1$dg</string>
 
 
@@ -1110,28 +1111,28 @@
          ========================= -->
     <!-- PremiumRewardsScreen Not use -->
     <string name="premium_rewards_subscription_title">Tilaus</string>
-    <string name="premium_rewards_history_title">Palkinnon historia</string>
+    <string name="premium_rewards_history_title">Palkintohistoria</string>
     <string name="premium_rewards_loading_membership">Ladataan jäsenyyttä…</string>
     <string name="premium_rewards_status_title">Premium-tila</string>
     <string name="premium_rewards_latest_title">Viimeisin palkinto</string>
     <string name="premium_rewards_source_format">Lähde: %1$s</string>
     <string name="premium_rewards_channel_format">Kanava: %1$s</string>
-    <string name="premium_rewards_grant_status_format">Apurahan tila: %1$s</string>
+    <string name="premium_rewards_grant_status_format">Myöntämisen tila: %1$s</string>
     <string name="premium_rewards_status_format">Tila: %1$s</string>
-    <string name="premium_rewards_google_defer_format">Google-lykkäys: %1$s</string>
+    <string name="premium_rewards_google_defer_format">Google-siirto: %1$s</string>
     <string name="premium_rewards_granted_at_format">Myönnetty: %1$s</string>
-    <string name="premium_rewards_old_expiry_format">Vanha voimassaoloaika: %1$s</string>
-    <string name="premium_rewards_new_expiry_format">Uusi voimassaoloaika: %1$s</string>
+    <string name="premium_rewards_old_expiry_format">Vanha päättymisaika: %1$s</string>
+    <string name="premium_rewards_new_expiry_format">Uusi päättymisaika: %1$s</string>
     <string name="premium_rewards_error_format">Virhe: %1$s</string>
-    <string name="premium_rewards_days_added_format">Lisätty päivät: %1$d</string>
-    <string name="premium_rewards_empty_title">Ei vielä palkintoja</string>
-    <string name="premium_rewards_empty_body">Onnistuneet viittaukset näkyvät täällä vahvistuksen jälkeen.</string>
-    <string name="premium_rewards_channel_google_play_defer">Google Playn laskutuspäivää jatkettu</string>
-    <string name="premium_rewards_channel_backend_only">Premium-palkinto käytössä</string>
-    <string name="premium_rewards_grant_success">Menestys</string>
+    <string name="premium_rewards_days_added_format">Päiviä lisätty: %1$d</string>
+    <string name="premium_rewards_empty_title">Ei palkintoja vielä</string>
+    <string name="premium_rewards_empty_body">Onnistuneet suosittelut näkyvät täällä vahvistuksen jälkeen.</string>
+    <string name="premium_rewards_channel_google_play_defer">Google Play -laskutuspäivää pidennetty</string>
+    <string name="premium_rewards_channel_backend_only">Premium-palkinto lisätty</string>
+    <string name="premium_rewards_grant_success">Onnistui</string>
     <string name="premium_rewards_status_retrying">Yritetään uudelleen</string>
     <string name="premium_rewards_grant_not_granted">Ei myönnetty</string>
-    <string name="premium_rewards_google_defer_success">Laajentanut Google Play</string>
+    <string name="premium_rewards_google_defer_success">Google Play pidensi</string>
     <string name="premium_rewards_google_defer_failed">Epäonnistui</string>
     <string name="premium_rewards_google_defer_not_required">Ei vaadita</string>
 

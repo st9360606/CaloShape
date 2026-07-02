@@ -28,41 +28,41 @@
 
     <!-- ApiErrorUiMapper -->
     <string name="err_barcode_not_found_title">Producto no encontrado</string>
-    <string name="err_barcode_not_found_msg">We couldn’t find this barcode. Try taking a photo of the nutrition label.</string>
+    <string name="err_barcode_not_found_msg">No pudimos encontrar este código de barras. Intenta tomar una foto de la etiqueta nutricional.</string>
 
-    <string name="err_barcode_lookup_failed_title">Error de búsqueda</string>
-    <string name="err_barcode_lookup_failed_msg">We couldn’t reach the product database. Check your connection and try again.</string>
+    <string name="err_barcode_lookup_failed_title">Error en la búsqueda</string>
+    <string name="err_barcode_lookup_failed_msg">No pudimos acceder a la base de datos de productos. Revisa tu conexión e inténtalo de nuevo.</string>
 
     <string name="err_generic_title">Algo salió mal</string>
     <string name="err_generic_msg">Inténtalo de nuevo.</string>
 
     <string name="err_network_title">Problema de red</string>
-    <string name="err_network_msg">Verifica tu conexión e inténtalo de nuevo.</string>
+    <string name="err_network_msg">Revisa tu conexión a internet e inténtalo de nuevo.</string>
 
-    <string name="err_photo_title">Se necesita foto</string>
-    <string name="err_photo_msg">Try taking the photo again with better lighting.</string>
+    <string name="err_photo_title">Foto necesaria</string>
+    <string name="err_photo_msg">Intenta tomar la foto otra vez con mejor iluminación.</string>
 
     <string name="err_manual_title">Ingresar manualmente</string>
-    <string name="err_manual_msg">You can enter details manually.</string>
+    <string name="err_manual_msg">Puedes ingresar los detalles manualmente.</string>
 
     <string name="err_support_title">Contactar soporte</string>
-    <string name="err_support_msg">Please contact support if the issue persists.</string>
+    <string name="err_support_msg">Contacta a soporte si el problema continúa.</string>
 
     <string name="cta_try_label">Escanear etiqueta nutricional</string>
     <string name="cta_enter_manually">Ingresar manualmente</string>
 
-    <string name="cta_check_network">Comprobar red</string>
+    <string name="cta_check_network">Revisar red</string>
     <string name="cta_retake">Volver a tomar</string>
     <string name="cta_contact_support">Contactar soporte</string>
-    <string name="cta_rescan_barcode">Reescanear código de barras</string>
+    <string name="cta_rescan_barcode">Volver a escanear código</string>
 
 
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">Haz una foto y conoce las calorías.</string>
+    <string name="landing_title">Toma una foto y conoce las kcal.</string>
     <string name="choose_language">Elegir idioma</string>
-    <string name="cta_get_started">Comenzar</string>
+    <string name="cta_get_started">Empezar</string>
     <string name="cta_login_prefix">¿Ya tienes una cuenta?</string>
     <string name="cta_login">Iniciar sesión</string>
 
@@ -70,15 +70,15 @@
     <!-- RequireSignInScreen -->
     <string name="auth_sign_in_account_title">Inicia sesión en tu cuenta</string>
     <string name="auth_sign_in_with_google">Iniciar sesión con Google</string>
-    <string name="auth_signin_with_email">Continuar con correo</string>
+    <string name="auth_signin_with_email">Continuar con correo electrónico</string>
 
 
     <!-- SignInSheet-->
     <string name="signin_title">Iniciar sesión</string>
     <string name="signin_with_apple">Iniciar sesión con Apple</string>
     <string name="signin_with_google">Iniciar sesión con Google</string>
-    <string name="signin_with_email">Continuar con correo</string>
-    <string name="signin_legal_hint">Al continuar aceptas los términos de CaloShape</string>
+    <string name="signin_with_email">Continuar con correo electrónico</string>
+    <string name="signin_legal_hint">Al continuar, aceptas los términos de CaloShape</string>
     <string name="signin_terms">Términos</string>
     <string name="signin_and">y</string>
     <string name="signin_privacy">Política de privacidad</string>
@@ -87,8 +87,8 @@
 
 
     <!-- SignInSheetHost 控制 Sheet 是否顯示、處理狀態、接外部 callback -->
-    <string name="err_google_no_account_hint">Tip: add a Google account in Ajustes → Accounts and try again</string>
-    <string name="err_google_signin_failed">Google sign-in falló</string>
+    <string name="err_google_no_account_hint">Consejo: agrega una cuenta de Google en Configuración → Cuentas e inténtalo de nuevo</string>
+    <string name="err_google_signin_failed">Error al iniciar sesión con Google</string>
 
 
     <!-- EmailEnterScreen-->
@@ -107,13 +107,13 @@
     <string name="err_generic">Algo salió mal. Inténtalo de nuevo.</string>
 
     <string name="confirm_email_title">Confirma tu correo</string>
-    <string name="confirm_email_hint">Ingresa el código de 4 dígitos que enviamos a</string>
+    <string name="confirm_email_hint">Ingresa el código de 4 dígitos que acabamos de enviar a</string>
     <string name="didnt_receive_code">¿No recibiste el código?</string>
 
 
     <!-- Onboarding: GenderSelectionScreen -->
     <string name="onboard_gender_title">Elige tu género</string>
-    <string name="onboard_gender_subtitle">Se usará para calibrar tu plan personalizado.</string>
+    <string name="onboard_gender_subtitle">Esto se usará para calibrar tu plan personalizado.</string>
     <string name="onboard_male">Masculino</string>
     <string name="onboard_female">Femenino</string>
     <string name="onboard_other">Otro</string>
@@ -125,101 +125,101 @@
 
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">¿Cuántos años tienes?</string>
-    <string name="onboard_age_subtitle">We only use your age to improve your experience and calorie estimation accuracy.</string>
+    <string name="onboard_age_subtitle">Solo usamos tu edad para mejorar tu experiencia y la precisión de la estimación de kcal.</string>
 
 
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">¿Cuánto mides?</string>
-    <string name="onboard_height_subtitle">We only use your data to improve your experience and our calorie estimates.</string>
-    <string name="onboard_height_hint">Se usará para calibrar tu plan personalizado.</string>
+    <string name="onboard_height_subtitle">Solo usamos tus datos para mejorar tu experiencia y nuestras estimaciones de kcal.</string>
+    <string name="onboard_height_hint">Esto se usará para calibrar tu plan personalizado.</string>
 
 
     <!-- Onboarding: WeightSelectionScreen -->
     <string name="onboard_weight_title">¿Cuánto pesas?</string>
-    <string name="onboard_weight_subtitle">We only use your data to improve your experience and our calorie estimates.</string>
-    <string name="onboard_weight_hint">Se usará para calibrar tu plan personalizado.</string>
+    <string name="onboard_weight_subtitle">Solo usamos tus datos para mejorar tu experiencia y nuestras estimaciones de kcal.</string>
+    <string name="onboard_weight_hint">Esto se usará para calibrar tu plan personalizado.</string>
 
 
     <!-- Onboarding: ExerciseFrequencyScreen  -->
-    <string name="onboard_ex_freq_title">How often do you exercise each week?</string>
-    <string name="onboard_ex_freq_subtitle">This will help calibrate your personalized plan.</string>
+    <string name="onboard_ex_freq_title">¿Con qué frecuencia haces ejercicio cada semana?</string>
+    <string name="onboard_ex_freq_subtitle">Esto ayudará a calibrar tu plan personalizado.</string>
     <string name="ex_freq_0_title">0</string>
-    <string name="ex_freq_0_sub">Sedentary</string>
+    <string name="ex_freq_0_sub">Sedentario</string>
     <string name="ex_freq_1_3_title">1–3</string>
-    <string name="ex_freq_1_3_sub">Light activity</string>
+    <string name="ex_freq_1_3_sub">Actividad ligera</string>
     <string name="ex_freq_3_5_title">3–5</string>
-    <string name="ex_freq_3_5_sub">Moderate activity</string>
+    <string name="ex_freq_3_5_sub">Actividad moderada</string>
     <string name="ex_freq_6_7_plus_title">6–7</string>
-    <string name="ex_freq_6_7_plus_sub">High activity</string>
+    <string name="ex_freq_6_7_plus_sub">Actividad alta</string>
     <string name="ex_freq_7_plus_title">7+</string>
-    <string name="ex_freq_7_plus_sub">Very high activity</string>
+    <string name="ex_freq_7_plus_sub">Actividad muy alta</string>
 
 
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">¿Cuál es tu objetivo?</string>
-    <string name="onboard_goal_subtitle">This helps us tailor your calorie plan.</string>
+    <string name="onboard_goal_subtitle">Esto nos ayuda a personalizar tu plan de kcal.</string>
     <string name="goal_lose">Perder peso</string>
     <string name="goal_maintain">Mantener</string>
-    <string name="goal_gain">Subir de peso</string>
+    <string name="goal_gain">Ganar peso</string>
     <string name="goal_healthy_eating">Alimentación saludable</string>
 
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">¿Cuál es tu peso objetivo?</string>
-    <string name="onboard_goal_weight_subtitle">Según este objetivo, te recomendaremos una ingesta diaria de calorías más adecuada.</string>
-    <string name="onboard_goal_weight_hint">Se usará para calibrar tu plan personalizado.</string>
+    <string name="onboard_goal_weight_subtitle">Según este objetivo, crearemos una recomendación diaria de kcal más adecuada para ti.</string>
+    <string name="onboard_goal_weight_hint">Esto se usará para calibrar tu plan personalizado.</string>
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">Using CaloShape AI can triple your weight\nloss efficiency</string>
-    <string name="onboard_weight_loss_comparison_without_ai">Without\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_with_ai">With\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_title">Usar CaloShape AI puede triplicar tu eficiencia\npara perder peso</string>
+    <string name="onboard_weight_loss_comparison_without_ai">Sin\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_with_ai">Con\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI makes everything simple\nand keeps you accountable</string>
+    <string name="onboard_weight_loss_comparison_caption">CaloShape AI hace todo más simple\ny te ayuda a mantener el compromiso</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">¡Haz que cada comida cuente!</string>
-    <string name="onboard_notif_subtitle">Enable notifications for gentle reminders to log meals—so your calorías, macros, and progress stay on track. Slip-ups happen; timely nudges help you bounce back fast.</string>
+    <string name="onboard_notif_subtitle">Activa las notificaciones para recibir recordatorios suaves de registrar comidas, y así mantener tus kcal, macros y progreso en buen camino. Los descuidos pasan; los avisos oportunos te ayudan a retomar rápido.</string>
     <string name="onboard_allow_notifications_cta">Permitir notificaciones</string>
-    <string name="notification_mock_app_title">Contador de calorías con IA</string>
-    <string name="onboard_notif_title_got_a_sec">Your meal won’t log itself 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">Log this meal to keep your calorías and macros on track.</string>
+    <string name="notification_mock_app_title">Contador de kcal con IA</string>
+    <string name="onboard_notif_title_got_a_sec">Tu comida no se registrará sola 😉</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">Registra esta comida para mantener tus kcal y macros en buen camino.</string>
 
 
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">Conectar con</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
-    <string name="onboard_hc_connect_body">Sync daily activity between CaloShape AI and health apps to get more complete records and insights.</string>
-    <string name="onboard_hc_permission_rationale_title_prefix">Why CaloShape uses</string>
+    <string name="onboard_hc_connect_body">Sincroniza la actividad diaria entre CaloShape AI y apps de salud para obtener registros e insights más completos.</string>
+    <string name="onboard_hc_permission_rationale_title_prefix">Por qué CaloShape usa</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape reads your steps, active calories, and exercise data to estimate daily activity burn, update your calorie dashboard, and improve progress insights. You can revoke access anytime in Salud Connect.</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape lee tus pasos, kcal activas y datos de ejercicio para estimar el gasto diario por actividad, actualizar tu panel de kcal y mejorar los insights de progreso. Puedes revocar el acceso en cualquier momento desde Health Connect.</string>
     <string name="onboard_hc_permission_rationale_button">Entendido</string>
 
 
     <!-- Onboarding: ComputationProgressScreen -->
     <string name="progress_hero_title">Creando tu plan personalizado</string>
-    <string name="progress_hero_subtitle">We’re using your metas, body data, and preferences to tailor your daily targets.</string>
-    <string name="progress_footer_hint">Esto toma solo un momento</string>
+    <string name="progress_hero_subtitle">Usamos tus objetivos, datos corporales y preferencias para personalizar tus metas diarias.</string>
+    <string name="progress_footer_hint">Solo tomará un momento</string>
     <string name="progress_center_caption">Preparando tus resultados</string>
-    <string name="progress_phase_pill_1">Reviewing your profile</string>
-    <string name="progress_phase_pill_2">Calculating your calorie target</string>
-    <string name="progress_phase_pill_3">Balancing your daily macros</string>
-    <string name="progress_phase_pill_4">Finalizing your health insights</string>
-    <string name="progress_card_title">Setting up your plan</string>
-    <string name="progress_row_calorie_target">Diario calorie target</string>
-    <string name="progress_row_carb_distribution">Carb distribution</string>
-    <string name="progress_row_protein_recommendation">Proteína recommendation</string>
-    <string name="progress_row_fat_recommendation">Fat recommendation</string>
-    <string name="progress_row_health_score_estimate">Salud puntuación estimate</string>
+    <string name="progress_phase_pill_1">Revisando tu perfil</string>
+    <string name="progress_phase_pill_2">Calculando tu objetivo de kcal</string>
+    <string name="progress_phase_pill_3">Equilibrando tus macros diarios</string>
+    <string name="progress_phase_pill_4">Finalizando tus insights de salud</string>
+    <string name="progress_card_title">Configurando tu plan</string>
+    <string name="progress_row_calorie_target">Objetivo diario de kcal</string>
+    <string name="progress_row_carb_distribution">Distribución de carbohidratos</string>
+    <string name="progress_row_protein_recommendation">Recomendación de proteína</string>
+    <string name="progress_row_fat_recommendation">Recomendación de grasa</string>
+    <string name="progress_row_health_score_estimate">Estimación de puntuación de salud</string>
 
 
     <!-- Onboarding: HealthPlanScreen -->
     <string name="plan_cta_start">Empecemos</string>
-    <string name="plan_title_congrats">¡Felicitaciones!</string>
-    <string name="plan_subtitle_ready">¡Tu plan de salud personalizado está listo!</string>
-    <string name="plan_disclaimer">Sources are below: See all references ›</string>
-    <string name="plan_unit_kcal_day">kcal / day</string>
+    <string name="plan_title_congrats">¡Felicidades!</string>
+    <string name="plan_subtitle_ready">¡Tu plan de salud personal está listo!</string>
+    <string name="plan_disclaimer">Fuentes abajo: Ver todas las referencias ›</string>
+    <string name="plan_unit_kcal_day">kcal / día</string>
 
     <string name="plan_macros_proteins">Proteína</string>
     <string name="plan_macros_carbs">Carbohidratos</string>
@@ -230,34 +230,34 @@
     <string name="plan_weight_current">Peso actual</string>
     <string name="plan_weight_delta">Hasta el peso objetivo</string>
 
-    <string name="plan_goals_title">How to reach\nyour metas</string>
-    <string name="plan_goal_card_health_scores">Salud puntuacións guide you, so habits form naturally</string>
-    <string name="plan_goal_card_track_meals">Log meals in one tap, staying consistent is easy</string>
-    <string name="plan_goal_card_daily_calories">See daily calorías clearly, and never lose track</string>
-    <string name="plan_goal_card_balance_macros">Carbohidratos × protein × fat, smart balance, better results</string>
-    <string name="plan_sources_based_on">Based on official dietary guidelines,\nfor reference only, not medical advice.</string>
-    <string name="plan_sources_more">See all references ›</string>
-    <string name="plan_sources_hide">Hide sources</string>
+    <string name="plan_goals_title">Cómo alcanzar\ntus objetivos</string>
+    <string name="plan_goal_card_health_scores">Las puntuaciones de salud te guían para que los hábitos se formen naturalmente</string>
+    <string name="plan_goal_card_track_meals">Registra comidas con un toque; mantener la constancia es fácil</string>
+    <string name="plan_goal_card_daily_calories">Ve tus kcal diarias con claridad y no pierdas el rumbo</string>
+    <string name="plan_goal_card_balance_macros">Carbohidratos × proteína × grasa, equilibrio inteligente, mejores resultados</string>
+    <string name="plan_sources_based_on">Basado en guías alimentarias oficiales,\nsolo como referencia, no es consejo médico.</string>
+    <string name="plan_sources_more">Ver todas las referencias ›</string>
+    <string name="plan_sources_hide">Ocultar fuentes</string>
 
 
     <!-- Onboarding: OnboardReferralCodeScreen -->
-    <string name="onboard_referral_code_input">Enter referral code\n(optional)</string>
-    <string name="onboard_referral_code_subtitle">You can skip this step</string>
-    <string name="onboard_referral_code_input_label">Código de invitación</string>
-    <string name="onboard_referral_code_placeholder">Código de invitación</string>
+    <string name="onboard_referral_code_input">Ingresa un código de referido\n(opcional)</string>
+    <string name="onboard_referral_code_subtitle">Puedes omitir este paso</string>
+    <string name="onboard_referral_code_input_label">Código de referido</string>
+    <string name="onboard_referral_code_placeholder">Código de referido</string>
     <string name="onboard_referral_code_submit">Enviar</string>
     <string name="onboard_referral_code_submitting">Enviando…</string>
-    <string name="onboard_referral_code_applied">¡Código aplicado!</string>
+    <string name="onboard_referral_code_applied">¡Código de referido aplicado!</string>
 
-    <string name="onboard_referral_code_error_invalid_format">Use letters and numbers only.</string>
-    <string name="onboard_referral_code_error_invalid">We couldn\'t find this referral code.</string>
-    <string name="onboard_referral_code_error_self_referral">You can\'t use your own referral code.</string>
-    <string name="onboard_referral_code_error_already_claimed">This account has already applied a referral code.</string>
-    <string name="onboard_referral_code_error_already_subscribed">Subscribed accounts can\'t apply a referral code.</string>
-    <string name="onboard_referral_code_error_disabled">Referral is temporarily unavailable.</string>
-    <string name="onboard_referral_code_error_risk">We can\'t apply a referral code right now.</string>
-    <string name="onboard_referral_code_error_network">We can\'t apply it right now. Inténtalo más tarde.</string>
-    <string name="onboard_referral_code_error_unknown">Referral code can\'t be applied right now.\nInténtalo más tarde.</string>
+    <string name="onboard_referral_code_error_invalid_format">Usa solo letras y números.</string>
+    <string name="onboard_referral_code_error_invalid">No pudimos encontrar este código de referido.</string>
+    <string name="onboard_referral_code_error_self_referral">No puedes usar tu propio código de referido.</string>
+    <string name="onboard_referral_code_error_already_claimed">Esta cuenta ya aplicó un código de referido.</string>
+    <string name="onboard_referral_code_error_already_subscribed">Las cuentas suscritas no pueden aplicar un código de referido.</string>
+    <string name="onboard_referral_code_error_disabled">El referido no está disponible temporalmente.</string>
+    <string name="onboard_referral_code_error_risk">No podemos aplicar un código de referido en este momento.</string>
+    <string name="onboard_referral_code_error_network">No podemos aplicarlo ahora. Inténtalo más tarde.</string>
+    <string name="onboard_referral_code_error_unknown">El código de referido no se puede aplicar ahora.\nInténtalo más tarde.</string>
 
 
     <!-- Onboarding: OnboardSubscriptionScreen  Paywall -->
@@ -268,16 +268,16 @@
 
 
     <!-- Onboarding: OnboardSubscriptionIntro -->
-    <string name="subscription_intro_title">Unlock CaloShape AI to\nreach your metas faster.</string>
-    <string name="subscription_intro_helper_format">Just %1$s per year (%2$s)</string>
-    <string name="subscription_start_three_day_free_trial">Probar gratis 3 días</string>
+    <string name="subscription_intro_title">Desbloquea CaloShape AI para\nalcanzar tus objetivos más rápido.</string>
+    <string name="subscription_intro_helper_format">Solo %1$s al año (%2$s)</string>
+    <string name="subscription_start_three_day_free_trial">Prueba gratis por 3 días</string>
     <string name="subscription_three_day_trial_helper_format">Solo %1$s/año (%2$s/mes)</string>
-    <string name="subscription_already_owned_restore_required">Your Google Play account already has an active CaloShape subscription. Restore it to this CaloShape account before using premium features.</string>
-    <string name="subscription_error_no_active_purchase">No se encontró ninguna compra activa.</string>
+    <string name="subscription_already_owned_restore_required">Tu cuenta de Google Play ya tiene una suscripción activa de CaloShape. Restáurala en esta cuenta de CaloShape antes de usar las funciones Premium.</string>
+    <string name="subscription_error_no_active_purchase">No se encontró una compra activa.</string>
     <string name="subscription_error_restore_failed">No se pudo restaurar la compra. Inténtalo de nuevo.</string>
-    <string name="subscription_error_purchase_failed">La compra ha fallado. Inténtalo de nuevo.</string>
-    <string name="subscription_error_purchase_pending">El pago se está procesando. Podrás usar Premium cuando Google Play confirme la compra.</string>
-    <string name="subscription_error_trial_eligibility_failed">No se pudo comprobar si cumples los requisitos para la prueba. Inténtalo de nuevo.</string>
+    <string name="subscription_error_purchase_failed">La compra falló. Inténtalo de nuevo.</string>
+    <string name="subscription_error_purchase_pending">El pago se está procesando. El acceso Premium estará disponible cuando Google Play confirme la compra.</string>
+    <string name="subscription_error_trial_eligibility_failed">No se pudo verificar la elegibilidad para la prueba. Inténtalo de nuevo.</string>
     <string name="restore_subscription_dialog_title">Suscripción encontrada</string>
     <string name="settings_restore_subscription">Restaurar suscripción</string>
     <string name="restore_subscription_dialog_restoring">Restaurando…</string>
@@ -285,37 +285,37 @@
 
 
     <!-- Onboarding: OnboardDiscountSpinScreen-->
-    <string name="subscription_spin_title">Spin to unlock an\nexclusive discount</string>
-    <string name="subscription_spin_helper_ready">Tap Spin to reveal your exclusive gift.</string>
+    <string name="subscription_spin_title">Gira para desbloquear un\ndescuento exclusivo</string>
+    <string name="subscription_spin_helper_ready">Toca Girar para revelar tu regalo exclusivo.</string>
     <string name="subscription_spin_button">Girar</string>
     <string name="subscription_spinning_button">Girando…</string>
-    <string name="subscription_gift_offer_unlocked">Gift offer unlocked</string>
-    <string name="subscription_spin_helper_wait">Please wait until the wheel stops.</string>
-    <string name="subscription_spin_helper_revealed">This offer is revealed after the wheel stops.</string>
+    <string name="subscription_gift_offer_unlocked">Oferta de regalo desbloqueada</string>
+    <string name="subscription_spin_helper_wait">Espera hasta que la rueda se detenga.</string>
+    <string name="subscription_spin_helper_revealed">Esta oferta se revela cuando la rueda se detiene.</string>
 
 
     <!-- Onboarding: OneTimeOfferHeroCard-->
     <string name="subscription_gift_unlocked_title">Regalo desbloqueado 🎁</string>
-    <string name="subscription_gift_price_unlocked">Precio especial desbloqueado</string>
-    <string name="subscription_unlock_premium_for_only">Unlock premium for only</string>
-    <string name="subscription_discount_body">Eescanearear meals faster. Track macros smarter.\nStay on plan daily.</string>
+    <string name="subscription_gift_price_unlocked">Precio de regalo desbloqueado</string>
+    <string name="subscription_unlock_premium_for_only">Desbloquea Premium por solo</string>
+    <string name="subscription_discount_body">Escanea comidas más rápido. Sigue macros de forma más inteligente.\nMantente en tu plan cada día.</string>
     <string name="subscription_yearly_price_format">%1$s/año</string>
-    <string name="subscription_urgency_coffee">Less than a coffee</string>
-    <string name="subscription_urgency_price_gone">Close this screen? This price is gone</string>
-    <string name="subscription_urgency_waiting">What are you waiting for?</string>
+    <string name="subscription_urgency_coffee">Menos que un café</string>
+    <string name="subscription_urgency_price_gone">¿Cerrar esta pantalla? Este precio desaparecerá</string>
+    <string name="subscription_urgency_waiting">¿Qué estás esperando?</string>
 
-    <string name="subscription_trial_enabled">Prueba gratis activada</string>
-    <string name="subscription_trial_enable_prompt">Not sure? Turn on free trial</string>
-    <string name="subscription_trial_checking_eligibility">Checking trial availability…</string>
-    <string name="subscription_trial_already_used">Prueba ya utilizada</string>
-    <string name="subscription_trial_unavailable">Prueba gratis no disponible</string>
+    <string name="subscription_trial_enabled">Prueba gratuita activada</string>
+    <string name="subscription_trial_enable_prompt">¿No estás seguro? Activa la prueba gratuita</string>
+    <string name="subscription_trial_checking_eligibility">Verificando disponibilidad de prueba…</string>
+    <string name="subscription_trial_already_used">Prueba ya usada</string>
+    <string name="subscription_trial_unavailable">Prueba gratuita no disponible</string>
 
-    <string name="subscription_badge_free_trial">Prueba gratis</string>
-    <string name="subscription_badge_lowest_price_ever">Lowest price ever</string>
+    <string name="subscription_badge_free_trial">Prueba gratuita</string>
+    <string name="subscription_badge_lowest_price_ever">Precio más bajo hasta ahora</string>
     <string name="subscription_yearly_plan">Plan anual</string>
-    <string name="subscription_yearly_plan_price_format">12mo · %1$s</string>
+    <string name="subscription_yearly_plan_price_format">12 meses · %1$s</string>
 
-    <string name="subscription_start_free_trial">Pruébalo gratis durante 3 días</string>
+    <string name="subscription_start_free_trial">Prueba gratuita por 3 días</string>
     <string name="subscription_trial_helper">Sin compromiso — cancela cuando quieras</string>
     <string name="subscription_discount_terms_format">Solo %1$s/año (%2$s/mes)</string>
     <string name="subscription_discount_trial_terms_format">Sin compromiso - Cancela cuando quieras</string>
@@ -323,7 +323,7 @@
 
     <!-- HomeScreen -->
     <string name="recently_uploaded">Subido recientemente</string>
-    <string name="workout_membership_verify_failed">Unable to verify membership. Inténtalo de nuevo.</string>
+    <string name="workout_membership_verify_failed">No se pudo verificar la membresía. Inténtalo de nuevo.</string>
 
 
     <!-- MainBottomBar -->
@@ -331,15 +331,15 @@
     <string name="bottom_nav_progress">Progreso</string>
     <string name="bottom_nav_weight">Peso</string>
     <string name="bottom_nav_fasting">Ayuno</string>
-    <string name="bottom_nav_workout">Entrenamiento</string>
+    <string name="bottom_nav_workout">Ejercicio</string>
 
 
     <!-- =============   HomeCards  ============= -->
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">Calorías restantes</string>
-    <string name="home_calories_eaten_label">Calorías consumidas</string>
+    <string name="home_calories_goal_label">kcal restantes</string>
+    <string name="home_calories_eaten_label">kcal consumidas</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
@@ -353,19 +353,19 @@
     <string name="home_fiber_goal_label">Fibra restante</string>
     <string name="home_fiber_eaten_label">Fibra consumida</string>
     <string name="home_sugar_goal_label">Azúcar restante</string>
-    <string name="home_sugar_eaten_label">Azúcar consumido</string>
+    <string name="home_sugar_eaten_label">Azúcar consumida</string>
     <string name="home_sodium_goal_label">Sodio restante</string>
     <string name="home_sodium_eaten_label">Sodio consumido</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
     <!-- HomeCards :  Health Score Card & Advice -->
-    <string name="home_health_score_advice_zero">Log your first meal today to see a health puntuación based on its nutrition details.</string>
-    <string name="home_health_score_advice_very_low">Today\'s average is low. Consider more protein, fiber, and lower sugar or sodium.</string>
-    <string name="home_health_score_advice_low">There\'s room to improve. Try adding vegetables and quality protein.</string>
-    <string name="home_health_score_advice_medium">You\'re on track. Keep portions steady and watch sugar, sodium, and fiber.</string>
-    <string name="home_health_score_advice_good">Good balance today. Keep choosing nutrient-dense comidas.</string>
-    <string name="home_health_score_advice_excellent">Great balance today. Keep building consistent habits.</string>
+    <string name="home_health_score_advice_zero">Registra tu primera comida de hoy para ver una puntuación de salud basada en sus detalles nutricionales.</string>
+    <string name="home_health_score_advice_very_low">El promedio de hoy es bajo. Considera más proteína, fibra y menos azúcar o sodio.</string>
+    <string name="home_health_score_advice_low">Hay margen para mejorar. Prueba añadir verduras y proteína de calidad.</string>
+    <string name="home_health_score_advice_medium">Vas por buen camino. Mantén porciones estables y vigila azúcar, sodio y fibra.</string>
+    <string name="home_health_score_advice_good">Buen equilibrio hoy. Sigue eligiendo alimentos ricos en nutrientes.</string>
+    <string name="home_health_score_advice_excellent">Gran equilibrio hoy. Sigue construyendo hábitos constantes.</string>
     <string name="home_health_score_title">Puntuación de salud</string>
     <string name="home_health_score_value">%1$d/10</string>
 
@@ -376,33 +376,33 @@
     <string name="steps_status_hc_not_installed">No instalado</string>
     <string name="steps_status_hc_unavailable">No disponible</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
-    <string name="steps_secondary_no_data_yet">Aún no hay datos</string>
+    <string name="steps_secondary_no_data_yet">Sin datos aún</string>
     <string name="steps_secondary_connect">Conectar</string>
-    <string name="steps_hint_connect_google_health">Connect Google Salud to track your steps</string>
-    <string name="steps_hint_install_health_connect">Install Salud Connect to track your steps</string>
-    <string name="steps_hint_hc_unavailable">Salud Connect isn’t available on this device</string>
-    <string name="steps_hint_retry">Sync falló. Tap to retry</string>
+    <string name="steps_hint_connect_google_health">Conecta Google Health para registrar tus pasos</string>
+    <string name="steps_hint_install_health_connect">Instala Health Connect para registrar tus pasos</string>
+    <string name="steps_hint_hc_unavailable">Health Connect no está disponible en este dispositivo</string>
+    <string name="steps_hint_retry">Falló la sincronización. Toca para reintentar</string>
 
 
     <!-- HomeCards : Workout Card -->
-    <string name="workout_card_title">Entrenamiento</string>
+    <string name="workout_card_title">Ejercicio</string>
     <string name="workout_card_unit_kcal">kcal</string>
 
 
     <!-- HomeCards : Weight Card -->
     <string name="weight_card_title">Peso</string>
-    <string name="weight_card_of_goal">of meta</string>
+    <string name="weight_card_of_goal">del objetivo</string>
 
 
     <!-- HomeCards : Fasting Card -->
     <string name="fasting_card_plan_title">Plan de ayuno</string>
     <string name="fasting_card_start_time">Hora de inicio</string>
-    <string name="fasting_card_end_time">Hora de fin</string>
+    <string name="fasting_card_end_time">Hora de finalización</string>
 
 
     <!-- HomeCards : Water Card -->
     <string name="water_intake_title">Agua</string>
-    <string name="water_intake_cups_format">(%1$d cups)</string>
+    <string name="water_intake_cups_format">(%1$d vasos)</string>
 
 
     <!-- =========================
@@ -414,15 +414,15 @@
     <string name="progress_tab_two_weeks_ago">Hace 2 sem.</string>
     <string name="progress_tab_three_weeks_ago">Hace 3 sem.</string>
     <string name="progress_error_load_failed">Error al cargar</string>
-    <string name="workout_chart_error_load_failed">Load entrenamiento chart falló</string>
-    <string name="water_chart_error_load_failed">Load water chart falló</string>
+    <string name="workout_chart_error_load_failed">Error al cargar gráfico de ejercicio</string>
+    <string name="water_chart_error_load_failed">Error al cargar gráfico de agua</string>
 
 
     <!-- =========================
          BMI Card / BMI Info Dialog
          ========================= -->
-    <string name="bmi_card_title">Tu IMC</string>
-    <string name="bmi_card_subtitle">Tu peso está</string>
+    <string name="bmi_card_title">Tu BMI</string>
+    <string name="bmi_card_subtitle">Tu peso es</string>
 
     <string name="bmi_status_underweight">Bajo peso</string>
     <string name="bmi_status_healthy">Saludable</string>
@@ -435,14 +435,14 @@
     <string name="bmi_range_overweight">25.0–29.9</string>
     <string name="bmi_range_obese">&gt;30.0</string>
 
-    <string name="bmi_info_title">¿Qué es el IMC?</string>
+    <string name="bmi_info_title">¿Qué es BMI?</string>
     <string name="bmi_info_subtitle">Índice de masa corporal</string>
     <string name="bmi_info_formula_title">Fórmula</string>
-    <string name="bmi_info_formula_value">BMI = peso (kg) / height (m²)</string>
-    <string name="bmi_info_meaning_title">Qué indica</string>
-    <string name="bmi_info_meaning_body">BMI helps estimate whether your body peso is in a generally healthy range.</string>
+    <string name="bmi_info_formula_value">BMI = peso (kg) / altura (m²)</string>
+    <string name="bmi_info_meaning_title">Qué te indica</string>
+    <string name="bmi_info_meaning_body">BMI ayuda a estimar si tu peso corporal está dentro de un rango generalmente saludable.</string>
     <string name="bmi_info_note_title">Ten en cuenta</string>
-    <string name="bmi_info_note_body">BMI is a general guide. It does not directly measure body fat, muscle mass, or overall health.</string>
+    <string name="bmi_info_note_body">BMI es una guía general. No mide directamente la grasa corporal, la masa muscular ni la salud general.</string>
     <string name="bmi_info_cta">Entendido</string>
 
 
@@ -450,17 +450,17 @@
          NutritionChartCard
          ========================= -->
     <string name="progress_chart_7day_avg_calories">Prom. 7 días</string>
-    <string name="progress_chart_value_cals">%1$d cals</string>
+    <string name="progress_chart_value_cals">%1$d kcal</string>
     <string name="progress_chart_15day_avg_calories">Prom. 15 días</string>
-    <string name="progress_chart_loading_total_calories_text">--.- cals</string>
+    <string name="progress_chart_loading_total_calories_text">--.- kcal</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
-    <string name="progress_chart_total_calories">Calorías totales</string>
-    <string name="progress_chart_cals">cal</string>
+    <string name="progress_chart_total_calories">kcal totales</string>
+    <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Proteína</string>
     <string name="progress_legend_carbs">Carbohidratos</string>
     <string name="progress_legend_fats">Grasas</string>
-    <string name="progress_keep_it_up">¡Sigue así! ¡Empezar es lo más difícil!</string>
+    <string name="progress_keep_it_up">¡Sigue así! Empezar es la parte más difícil.</string>
 
     <string name="progress_day_sun">Dom</string>
     <string name="progress_day_mon">Lun</string>
@@ -470,7 +470,7 @@
     <string name="progress_day_fri">Vie</string>
     <string name="progress_day_sat">Sáb</string>
 
-    <string name="progress_tooltip_calories">Calorías</string>
+    <string name="progress_tooltip_calories">kcal</string>
     <string name="progress_tooltip_protein">Proteína</string>
     <string name="progress_tooltip_carbs">Carbohidratos</string>
     <string name="progress_tooltip_fats">Grasas</string>
@@ -488,7 +488,7 @@
     <string name="progress_legend_fiber">Fibra</string>
     <string name="progress_legend_sugar">Azúcar</string>
     <string name="progress_legend_sodium">Sodio</string>
-    <string name="progress_micronutrients_keep_it_up">Keep your fiber, sugar, and sodium balanced.</string>
+    <string name="progress_micronutrients_keep_it_up">Mantén equilibrados la fibra, el azúcar y el sodio.</string>
     <string name="progress_tooltip_fiber">Fibra</string>
     <string name="progress_tooltip_sugar">Azúcar</string>
     <string name="progress_tooltip_sodium">Sodio</string>
@@ -498,17 +498,17 @@
     <!-- =========================
          WorkoutChartCard
          ========================= -->
-    <string name="workout_chart_goal_reached">Meta alcanzada hoy</string>
-    <string name="workout_chart_goal_left">%1$d kcal left to hit today\'s meta</string>
-    <string name="workout_chart_title">Quema de entrenamiento</string>
-    <string name="workout_chart_info_dialog_body">Includes logged entrenamientos and activity calorías estimated from daily steps.</string>
+    <string name="workout_chart_goal_reached">Objetivo alcanzado hoy</string>
+    <string name="workout_chart_goal_left">Faltan %1$d kcal para alcanzar el objetivo de hoy</string>
+    <string name="workout_chart_title">Gasto por ejercicio</string>
+    <string name="workout_chart_info_dialog_body">Incluye ejercicios registrados y kcal de actividad estimadas a partir de los pasos diarios.</string>
     <string name="workout_chart_unit_kcal">kcal</string>
-    <string name="workout_chart_goal">Meta</string>
+    <string name="workout_chart_goal">Objetivo</string>
     <string name="workout_chart_value_kcal">%1$d kcal</string>
     <string name="workout_chart_7day_avg">Prom. 7 días</string>
     <string name="workout_chart_loading">Cargando…</string>
-    <string name="workout_legend_burned">Quemado en entrenamiento</string>
-    <string name="workout_legend_daily_goal">Meta diaria</string>
+    <string name="workout_legend_burned">kcal quemadas por ejercicio</string>
+    <string name="workout_legend_daily_goal">Objetivo diario</string>
     <string name="workout_tooltip_burned">Quemado</string>
     <string name="workout_tooltip_kcal_value">%1$d kcal</string>
 
@@ -516,17 +516,17 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_goal_reached">Meta de hoy alcanzada</string>
-    <string name="water_chart_goal_left_ml">%1$s ml left to reach today\'s meta</string>
-    <string name="water_chart_title">Consumo de agua</string>
+    <string name="water_chart_goal_reached">Objetivo alcanzado por hoy</string>
+    <string name="water_chart_goal_left_ml">Faltan %1$s ml para alcanzar el objetivo de hoy</string>
+    <string name="water_chart_title">Ingesta de agua</string>
     <string name="water_chart_unit_ml">ml</string>
-    <string name="water_chart_goal">Meta</string>
+    <string name="water_chart_goal">Objetivo</string>
     <string name="water_chart_value_ml">%1$s ml</string>
     <string name="water_chart_7day_avg">Prom. 7 días</string>
     <string name="water_chart_loading">Cargando…</string>
-    <string name="water_legend_intake">Consumo</string>
-    <string name="water_legend_daily_goal">Meta diaria</string>
-    <string name="water_tooltip_intake">Consumo</string>
+    <string name="water_legend_intake">Ingesta</string>
+    <string name="water_legend_daily_goal">Objetivo diario</string>
+    <string name="water_tooltip_intake">Ingesta</string>
     <string name="water_tooltip_ml_value">%1$d ml</string>
 
 
@@ -539,22 +539,22 @@
     <string name="progress_average_tab_60_days">60 días</string>
 
     <string name="progress_average_overview_title">Resumen de promedios</string>
-    <string name="progress_average_overview_subtitle">Excluye hoy y promedia solo días con datos.</string>
-    <string name="progress_average_days_badge">%1$d-day avg</string>
+    <string name="progress_average_overview_subtitle">Excluye hoy y promedia solo los días con datos.</string>
+    <string name="progress_average_days_badge">Prom. %1$d días</string>
     <string name="progress_average_loading">Cargando promedios…</string>
-    <string name="progress_average_total_calories">Calorías totales</string>
+    <string name="progress_average_total_calories">kcal totales</string>
     <string name="progress_average_protein">Proteína</string>
     <string name="progress_average_carbs">Carbohidratos</string>
     <string name="progress_average_fats">Grasas</string>
     <string name="progress_average_fiber">Fibra</string>
     <string name="progress_average_sugar">Azúcar</string>
     <string name="progress_average_sodium">Sodio</string>
-    <string name="progress_average_workout">Quemado en entrenamiento</string>
-    <string name="progress_average_water">Consumo de agua</string>
+    <string name="progress_average_workout">kcal quemadas por ejercicio</string>
+    <string name="progress_average_water">Ingesta de agua</string>
     <string name="progress_average_health_score">Puntuación de salud</string>
     <string name="progress_average_steps">Pasos</string>
     <string name="progress_average_health_score_value">%1$.1f / 10</string>
-    <string name="progress_average_steps_value">%1$s steps</string>
+    <string name="progress_average_steps_value">%1$s pasos</string>
 
 
     <!--WeightScreen-->
@@ -569,17 +569,17 @@
     <!-- WeightComponents -->
     <string name="weight_card_to_goal_weight">Hasta el peso objetivo</string>
     <string name="weight_card_current_weight">Peso actual</string>
-    <string name="weight_card_achieved_goal_format">Achieved %1$s%% of meta</string>
+    <string name="weight_card_achieved_goal_format">Logrado %1$s%% del objetivo</string>
     <string name="weight_chart_tab_30_days">30 días</string>
     <string name="weight_chart_tab_60_days">60 días</string>
     <string name="weight_chart_tab_90_days">90 días</string>
     <string name="weight_chart_tab_all_time">Todo el tiempo</string>
     <string name="weight_chart_title">Tendencia de peso</string>
-    <string name="weight_chart_goal_progress_badge">%1$s%% of meta</string>
-    <string name="weight_chart_goal_label">Meta</string>
-    <string name="weight_chart_to_goal">%1$s to meta</string>
-    <string name="weight_goal_chart_empty_hint">Log peso to start your trend</string>
-    <string name="weight_chart_motivation">Cada pequeño paso te acerca a tu meta.</string>
+    <string name="weight_chart_goal_progress_badge">%1$s%% del objetivo</string>
+    <string name="weight_chart_goal_label">Objetivo</string>
+    <string name="weight_chart_to_goal">%1$s para el objetivo</string>
+    <string name="weight_goal_chart_empty_hint">Registra tu peso para iniciar tu tendencia</string>
+    <string name="weight_chart_motivation">Cada pequeño paso te acerca más a tu objetivo.</string>
     <string name="weight_history_weight_label">Peso</string>
     <string name="weight_history_change_label">Cambio</string>
     <string name="weight_history_trend_loss">PÉRDIDA</string>
@@ -590,97 +590,97 @@
     <!-- FastingPlansScreen -->
     <string name="fasting_plan_title">Plan de ayuno</string>
     <string name="start_time">Hora de inicio</string>
-    <string name="end_time">Hora de fin</string>
-    <string name="fasting_notification_info_status_on">Reminders are on. If device notification permission is allowed, these reminders repeat daily.</string>
-    <string name="fasting_notification_info_status_off">Reminders are off. Turn on the switch on the Home fasting card to receive these notifications.</string>
+    <string name="end_time">Hora de finalización</string>
+    <string name="fasting_notification_info_status_on">Los recordatorios están activados. Si el permiso de notificaciones del dispositivo está permitido, estos recordatorios se repiten diariamente.</string>
+    <string name="fasting_notification_info_status_off">Los recordatorios están desactivados. Activa el interruptor en la tarjeta de ayuno de Inicio para recibir estas notificaciones.</string>
     <string name="fasting_notification_info_status_enabled_label">Activado</string>
     <string name="fasting_notification_info_status_disabled_label">Desactivado</string>
     <string name="fasting_notification_info_title">Cómo funcionan los recordatorios</string>
-    <string name="fasting_notification_info_subtitle">Your %1$s plan ends at %2$s. When reminders are on, CaloShape sends two daily notifications.</string>
-    <string name="fasting_notification_info_at_time">At %1$s</string>
-    <string name="fasting_notification_info_start_title">Comienza la ventana para comer</string>
-    <string name="fasting_notification_info_start_body">You can start eating and log meals when needed.</string>
+    <string name="fasting_notification_info_subtitle">Tu plan %1$s termina a las %2$s. Cuando los recordatorios están activados, CaloShape envía dos notificaciones diarias.</string>
+    <string name="fasting_notification_info_at_time">A las %1$s</string>
+    <string name="fasting_notification_info_start_title">La ventana para comer comienza</string>
+    <string name="fasting_notification_info_start_body">Puedes empezar a comer y registrar comidas cuando lo necesites.</string>
     <string name="fasting_notification_info_endsoon_title">La ventana para comer termina pronto</string>
-    <string name="fasting_notification_info_endsoon_body">One hour before the window closes at %1$s, CaloShape reminds you to finish your last meal.</string>
+    <string name="fasting_notification_info_endsoon_body">Una hora antes de que la ventana cierre a las %1$s, CaloShape te recuerda terminar tu última comida.</string>
 
-    <string name="fasting_plan_desc_14_10">Ease in with a steady rhythm—14 hours to reset appetite cues and energy.</string>
-    <string name="fasting_plan_desc_16_8">Crowd favorite for a reason—16 hours to stay focused and in a lean groove.</string>
-    <string name="fasting_plan_desc_12_12">Balanced split: fast 12 hours, eat within a 12-hour window — perfect for beginners.</string>
-    <string name="fasting_plan_desc_18_6">18 hours of fasting, with a 6-hour eating window — a leaner schedule than 16:8.</string>
-    <string name="fasting_plan_desc_20_4">Stay laser-focused—1–2 mindful meals within a tight 4-hour window.</string>
-    <string name="fasting_plan_desc_22_2">One intentional meal in a 2-hour slot—keep water intake up.</string>
+    <string name="fasting_plan_desc_14_10">Empieza con un ritmo constante: 14 horas para reajustar señales de apetito y energía.</string>
+    <string name="fasting_plan_desc_16_8">Favorito por una razón: 16 horas para mantenerte concentrado y en buen ritmo.</string>
+    <string name="fasting_plan_desc_12_12">División equilibrada: ayuna 12 horas y come dentro de una ventana de 12 horas — perfecto para principiantes.</string>
+    <string name="fasting_plan_desc_18_6">18 horas de ayuno, con una ventana de comida de 6 horas — un horario más ajustado que 16:8.</string>
+    <string name="fasting_plan_desc_20_4">Mantente muy enfocado: 1–2 comidas conscientes dentro de una ventana estrecha de 4 horas.</string>
+    <string name="fasting_plan_desc_22_2">Una comida intencional en un intervalo de 2 horas; mantén una buena ingesta de agua.</string>
 
-    <string name="fasting_picker_title">Establece la hora de inicio del ayuno</string>
-    <string name="fasting_picker_subtitle">We’ll remind you at this time each day when your eating window starts.</string>
+    <string name="fasting_picker_title">Configura la hora de inicio del ayuno</string>
+    <string name="fasting_picker_subtitle">Te recordaremos a esta hora cada día cuando comience tu ventana para comer.</string>
     <string name="fasting_plan_save_failed">Error al guardar</string>
 
 
     <!-- FastingReceiver -->
-    <string name="fasting_start_title">%1$s eating window is open</string>
-    <string name="fasting_start_body">Your eating window runs %1$s–%2$s. Log meals as you go to keep today accurate.</string>
-    <string name="fasting_endsoon_title">1 hour left in your eating window</string>
-    <string name="fasting_endsoon_body">Your window closes at %1$s. If you plan one last meal, log it before you wrap up.</string>
+    <string name="fasting_start_title">La ventana para comer %1$s está abierta</string>
+    <string name="fasting_start_body">Tu ventana para comer va de %1$s a %2$s. Registra las comidas durante el día para mantener la precisión de hoy.</string>
+    <string name="fasting_endsoon_title">Queda 1 hora en tu ventana para comer</string>
+    <string name="fasting_endsoon_body">Tu ventana cierra a las %1$s. Si planeas una última comida, regístrala antes de terminar.</string>
 
 
 
 
     <!-- WorkoutHistoryScreen -->
-    <string name="workout_history_title">Historial de entrenamiento</string>
+    <string name="workout_history_title">Historial de ejercicio</string>
     <string name="workout_history_summary_label">Quemado hoy</string>
-    <string name="workout_history_summary_body">Sigue el progreso de quema de hoy</string>
+    <string name="workout_history_summary_body">Sigue el progreso de gasto por ejercicio de hoy</string>
     <string name="workout_history_today_label">Hoy</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
-    <string name="workout_history_avg_daily_label">7-day avg / day</string>
-    <string name="workout_history_avg_label">7-day avg / session</string>
+    <string name="workout_history_avg_daily_label">Prom. 7 días / día</string>
+    <string name="workout_history_avg_label">Prom. 7 días / sesión</string>
     <string name="workout_history_avg_value">%1$d kcal</string>
     <string name="workout_history_unit_kcal">kcal</string>
 
-    <string name="workout_history_empty_title">No hay entrenamientos recientes</string>
-    <string name="workout_history_empty">No hay entrenamientos en los últimos 7 días.</string>
+    <string name="workout_history_empty_title">Sin ejercicios recientes</string>
+    <string name="workout_history_empty">No hay ejercicios en los últimos 7 días.</string>
     <string name="workout_history_recent_title">Sesiones recientes</string>
     <string name="workout_history_minutes">%1$d min</string>
     <string name="workout_history_kcal">%1$d</string>
     <string name="workout_history_date_time">%1$s · %2$s</string>
     <string name="workout_history_kcal_with_unit">%1$d kcal</string>
 
-    <string name="workout_history_loading_title">Sincronizando entrenamientos</string>
-    <string name="workout_history_loading">Cargando entrenamiento history…</string>
+    <string name="workout_history_loading_title">Sincronizando ejercicios</string>
+    <string name="workout_history_loading">Cargando historial de ejercicio…</string>
     <string name="workout_history_error_title">Historial no disponible</string>
 
     <string name="workout_history_delete_failed">Error al eliminar. Inténtalo de nuevo.</string>
     <string name="workout_history_delete_success">¡Eliminado correctamente!</string>
-    <string name="workout_history_error">No se puede cargar entrenamiento history.</string>
+    <string name="workout_history_error">No se pudo cargar el historial de ejercicio.</string>
 
 
     <!-- WorkoutTrackerSheet -->
-    <string name="workout_tracker_title">Registro de entrenamiento</string>
+    <string name="workout_tracker_title">Registro de ejercicio</string>
     <string name="workout_tracker_subtitle">Describe el tipo de ejercicio y la duración</string>
-    <string name="workout_tracker_example_placeholder">Ejemplo: 45 min corriendo</string>
+    <string name="workout_tracker_example_placeholder">Ejemplo: 45 min running</string>
 
-    <string name="workout_tracker_select_from_list">or select from the list</string>
-    <string name="workout_tracker_show_less">Show less</string>
-    <string name="workout_tracker_show_more">Show more (%1$d)</string>
+    <string name="workout_tracker_select_from_list">o selecciona de la lista</string>
+    <string name="workout_tracker_show_less">Mostrar menos</string>
+    <string name="workout_tracker_show_more">Mostrar más (%1$d)</string>
 
-    <string name="workout_tracker_estimating_fallback">Estimating…</string>
-    <string name="workout_tracker_estimating_analyzing">Analyzing your activity…</string>
-    <string name="workout_tracker_estimating_numbers">Working on your numbers…</string>
-    <string name="workout_tracker_estimating_calories">Estimating effort, calculating calorías…</string>
-    <string name="workout_tracker_do_not_close">Please do not close the app or lock your device</string>
+    <string name="workout_tracker_estimating_fallback">Estimando…</string>
+    <string name="workout_tracker_estimating_analyzing">Analizando tu actividad…</string>
+    <string name="workout_tracker_estimating_numbers">Calculando tus números…</string>
+    <string name="workout_tracker_estimating_calories">Estimando esfuerzo y calculando kcal…</string>
+    <string name="workout_tracker_do_not_close">No cierres la app ni bloquees tu dispositivo</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
     <string name="workout_tracker_minutes_activity">%1$d min %2$s</string>
-    <string name="workout_tracker_add_workout">Agregar entrenamiento</string>
+    <string name="workout_tracker_add_workout">Agregar ejercicio</string>
 
-    <string name="workout_tracker_activity_content_label">Entrenamiento activity</string>
+    <string name="workout_tracker_activity_content_label">Actividad de ejercicio</string>
     <string name="workout_preset_kcal_per_30_min">%1$d kcal / 30 min</string>
 
     <string name="workout_tracker_save_success">¡Guardado correctamente!</string>
-    <string name="workout_tracker_save_failed">Failed to save. Inténtalo de nuevo.</string>
-    <string name="workout_tracker_refresh_failed">Refresh falló. Inténtalo de nuevo.</string>
+    <string name="workout_tracker_save_failed">Error al guardar. Inténtalo de nuevo.</string>
+    <string name="workout_tracker_refresh_failed">Error al actualizar. Inténtalo de nuevo.</string>
     <string name="workout_tracker_cancel">Cancelar</string>
-    <string name="workout_tracker_try_again">Try again</string>
-    <string name="workout_tracker_scan_failed_title">Uh-oh! Eescanearear falló</string>
-    <string name="workout_tracker_scan_failed_body">The entrenamiento description may be incorrect, or the internet connection is weak. For example: 30 min Running.</string>
+    <string name="workout_tracker_try_again">Intentar de nuevo</string>
+    <string name="workout_tracker_scan_failed_title">¡Ups! El escaneo falló</string>
+    <string name="workout_tracker_scan_failed_body">La descripción del ejercicio puede ser incorrecta o la conexión a internet es débil. Por ejemplo: 30 min Running.</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->
@@ -689,25 +689,25 @@
     <string name="workout_preset_cycling">Ciclismo</string>
     <string name="workout_preset_swimming">Natación</string>
     <string name="workout_preset_hiking">Senderismo</string>
-    <string name="workout_preset_aerobic_exercise">Aerobic exercise</string>
-    <string name="workout_preset_strength_training">Strength training</string>
-    <string name="workout_preset_weight_training">Peso training</string>
-    <string name="workout_preset_basketball">Basketball</string>
-    <string name="workout_preset_soccer">Soccer</string>
-    <string name="workout_preset_tennis">Tennis</string>
+    <string name="workout_preset_aerobic_exercise">Ejercicio aeróbico</string>
+    <string name="workout_preset_strength_training">Entrenamiento de fuerza</string>
+    <string name="workout_preset_weight_training">Entrenamiento con pesas</string>
+    <string name="workout_preset_basketball">Baloncesto</string>
+    <string name="workout_preset_soccer">Fútbol</string>
+    <string name="workout_preset_tennis">Tenis</string>
     <string name="workout_preset_yoga">Yoga</string>
-    <string name="workout_preset_badminton">Badminton</string>
-    <string name="workout_preset_baseball">Baseball</string>
-    <string name="workout_preset_softball">Softball</string>
-    <string name="workout_preset_volleyball">Volleyball</string>
-    <string name="workout_preset_table_tennis">Table tennis</string>
-    <string name="workout_preset_dancing_general">Dancing</string>
+    <string name="workout_preset_badminton">Bádminton</string>
+    <string name="workout_preset_baseball">Béisbol</string>
+    <string name="workout_preset_softball">Sóftbol</string>
+    <string name="workout_preset_volleyball">Voleibol</string>
+    <string name="workout_preset_table_tennis">Tenis de mesa</string>
+    <string name="workout_preset_dancing_general">Baile</string>
     <string name="workout_preset_zumba">Zumba</string>
     <string name="workout_preset_pilates">Pilates</string>
 
 
     <!-- DurationPickerSheet -->
-    <string name="workout_duration_sheet_subtitle">Add this entrenamiento time to your activity log</string>
+    <string name="workout_duration_sheet_subtitle">Agrega este tiempo de ejercicio a tu registro de actividad</string>
     <string name="workout_duration_hour_short">hr</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">Guardar</string>
@@ -715,14 +715,14 @@
 
 
     <!-- HomeQuickActionMenu -->
-    <string name="quick_add_saved_foods">Saved comidas</string>
+    <string name="quick_add_saved_foods">Alimentos guardados</string>
     <string name="quick_add_scan_food">Escanear comida</string>
 
 
     <!-- CameraScreen -->
     <string name="camera_mode_food">Escanear comida</string>
     <string name="camera_mode_barcode">Código de barras</string>
-    <string name="camera_mode_label">Etiqueta de alimento</string>
+    <string name="camera_mode_label">Etiqueta de comida</string>
     <string name="camera_mode_album">Fotos</string>
     <string name="camera_barcode_title">Escáner de código de barras</string>
     <string name="camera_label_title">Escáner de etiqueta</string>
@@ -732,7 +732,7 @@
     <!-- RecentUploadCard -->
     <string name="foodlog_pending_analysis">Analizando tu comida…</string>
     <string name="foodlog_analysis_done">Análisis completo</string>
-    <string name="recent_upload_kcal_text">🔥 %1$d calorías</string>
+    <string name="recent_upload_kcal_text">🔥 %1$d kcal</string>
     <string name="recent_upload_protein_text">🥩 %1$dg</string>
     <string name="recent_upload_carbs_text">🌾 %1$dg</string>
     <string name="recent_upload_fat_text">🥑 %1$dg</string>
@@ -740,21 +740,21 @@
 
     <!-- RecentlyUploadedEmptyCard -->
     <string name="recently_uploaded_empty">Subido recientemente</string>
-    <string name="recently_uploaded_empty_hint">Tap + to add your first meal of the day</string>
+    <string name="recently_uploaded_empty_hint">Toca + para añadir tu primera comida del día</string>
 
 
     <!-- SavedFoodsScreen -->
-    <string name="saved_foods_keep_15_days_hint">Saved comidas from the last 15 days.</string>
-    <string name="saved_foods_unsave_dialog_title">Remove from saved comidas?</string>
-    <string name="saved_foods_unsave_dialog_message">This meal will be removed from your Saved Comidas list, but it will still remain in your recent records.</string>
-    <string name="saved_foods_unsave_dialog_confirm">Remove</string>
-    <string name="saved_foods_title">Saved comidas</string>
-    <string name="saved_foods_kcal">🔥 %1$d calorías</string>
+    <string name="saved_foods_keep_15_days_hint">Alimentos guardados de los últimos 15 días.</string>
+    <string name="saved_foods_unsave_dialog_title">¿Eliminar de alimentos guardados?</string>
+    <string name="saved_foods_unsave_dialog_message">Esta comida se eliminará de tu lista de Alimentos guardados, pero permanecerá en tus registros recientes.</string>
+    <string name="saved_foods_unsave_dialog_confirm">Eliminar</string>
+    <string name="saved_foods_title">Alimentos guardados</string>
+    <string name="saved_foods_kcal">🔥 %1$d kcal</string>
     <string name="saved_foods_protein">🥩 %1$dg</string>
     <string name="saved_foods_carbs">🌾 %1$dg</string>
     <string name="saved_foods_fat">🥑 %1$dg</string>
-    <string name="saved_foods_detail">Detail</string>
-    <string name="saved_foods_load_failed_title">Saved comidas falló to load</string>
+    <string name="saved_foods_detail">Detalle</string>
+    <string name="saved_foods_load_failed_title">Error al cargar alimentos guardados</string>
 
 
     <!-- RecentUploadDetailScreen -->
@@ -763,7 +763,7 @@
     <string name="foodlog_no_image">Sin imagen</string>
 
     <string name="foodlog_detail_title">Nutrición</string>
-    <string name="foodlog_detail_calories">Calorías</string>
+    <string name="foodlog_detail_calories">kcal</string>
     <string name="foodlog_detail_protein">Proteína</string>
     <string name="foodlog_detail_carbs">Carbohidratos</string>
     <string name="foodlog_detail_fats">Grasas</string>
@@ -775,44 +775,44 @@
 
     <!-- DeleteFoodLogDialog -->
     <string name="foodlog_delete_dialog_title">¿Eliminar registro?</string>
-    <string name="foodlog_delete_dialog_message">¿Seguro que quieres eliminar permanentemente este registro? Esta acción no se puede deshacer.</string>
+    <string name="foodlog_delete_dialog_message">¿Seguro que quieres eliminar permanentemente este registro de comida? Esta acción no se puede deshacer.</string>
     <string name="foodlog_delete_dialog_confirm">Eliminar</string>
 
 
     <!-- Settings -->
-    <string name="settings_title">Ajustes</string>
+    <string name="settings_title">Configuración</string>
     <string name="settings_choose_language">Elegir idioma</string>
     <string name="delete_account_dialog_title">¿Eliminar cuenta?</string>
-    <string name="delete_account_dialog_body">Are you sure you want to delete your account? This will permanently delete your CaloShape data, including comida logs, peso records, and related settings. This action cannot be undone.</string>
+    <string name="delete_account_dialog_body">¿Seguro que quieres eliminar tu cuenta? Esto eliminará permanentemente tus datos de CaloShape, incluidos registros de comida, registros de peso y ajustes relacionados. Esta acción no se puede deshacer.</string>
 
 
     <string name="restore_subscription_dialog_success_title">Suscripción restaurada</string>
-    <string name="restore_subscription_dialog_payment_issue_title">Subscription restored, payment issue remains</string>
+    <string name="restore_subscription_dialog_payment_issue_title">Suscripción restaurada, pero el problema de pago continúa</string>
     <string name="restore_subscription_dialog_no_active_title">No se encontró una suscripción activa de Google Play</string>
     <string name="restore_subscription_dialog_failed_title">Error al restaurar</string>
     <string name="restore_subscription_dialog_bound_title">Suscripción vinculada a otra cuenta</string>
-    <string name="restore_subscription_dialog_success_body">Your subscription has been restored to this CaloShape account.</string>
-    <string name="restore_subscription_dialog_payment_issue_body">Your subscription is linked to this CaloShape account, but Google Play still reports a payment issue. Please update your payment method in Google Play to keep your subscription active.</string>
-    <string name="restore_subscription_dialog_no_active_body">No encontramos una suscripción activa de CaloShape en la cuenta actual de Google Play. Asegúrate de usar la cuenta con la que realizaste la compra e inténtalo de nuevo.</string>
-    <string name="restore_subscription_dialog_failed_body">We could not restore your subscription right now. Please check your connection and try again from Ajustes.</string>
-    <string name="restore_subscription_dialog_bound_body">Esta suscripción de Google Play ya está vinculada a otra cuenta de CaloShape. Inicia sesión en la cuenta original o contacta con soporte si no puedes acceder a ella.</string>
-    <string name="restore_subscription_dialog_body">We found an active CaloShape subscription or trial associated with the Google Play account on this device. You can restore it to the CaloShape account you’re currently signed in to.</string>
+    <string name="restore_subscription_dialog_success_body">Tu suscripción se ha restaurado en esta cuenta de CaloShape.</string>
+    <string name="restore_subscription_dialog_payment_issue_body">Tu suscripción está vinculada a esta cuenta de CaloShape, pero Google Play todavía informa un problema de pago. Actualiza tu método de pago en Google Play para mantener activa tu suscripción.</string>
+    <string name="restore_subscription_dialog_no_active_body">No pudimos encontrar una suscripción activa de CaloShape en la cuenta actual de Google Play. Asegúrate de usar la cuenta de Google Play que realizó la compra y vuelve a intentarlo.</string>
+    <string name="restore_subscription_dialog_failed_body">No pudimos restaurar tu suscripción en este momento. Revisa tu conexión e inténtalo de nuevo desde Configuración.</string>
+    <string name="restore_subscription_dialog_bound_body">Esta suscripción de Google Play ya está vinculada a otra cuenta de CaloShape. Inicia sesión en la cuenta original para usarla, o contacta a soporte si no puedes acceder a esa cuenta.</string>
+    <string name="restore_subscription_dialog_body">Encontramos una suscripción o prueba activa de CaloShape asociada con la cuenta de Google Play en este dispositivo. Puedes restaurarla en la cuenta de CaloShape en la que iniciaste sesión actualmente.</string>
 
     <!-- Settings : Payment issue dialog -->
-    <string name="payment_issue_dialog_title">Mantén tu Premium activo</string>
+    <string name="payment_issue_dialog_title">Mantén Premium activo</string>
     <string name="payment_issue_dialog_body">Tu acceso Premium sigue activo. Actualiza tu método de pago de Google Play para evitar interrupciones.</string>
     <string name="payment_issue_dialog_update_payment">Actualizar método de pago</string>
-    <string name="payment_issue_dialog_badge">Pago requiere atención</string>
-    <string name="payment_issue_dialog_premium_access">Premium access</string>
-    <string name="payment_issue_dialog_active_for_now">Active for now</string>
-    <string name="payment_issue_dialog_next_step">Next step</string>
-    <string name="payment_issue_dialog_update_payment_short">Update payment</string>
+    <string name="payment_issue_dialog_badge">El pago necesita atención</string>
+    <string name="payment_issue_dialog_premium_access">Acceso Premium</string>
+    <string name="payment_issue_dialog_active_for_now">Activo por ahora</string>
+    <string name="payment_issue_dialog_next_step">Siguiente paso</string>
+    <string name="payment_issue_dialog_update_payment_short">Actualizar pago</string>
 
 
-    <string name="settings_personal_details">Datos personales</string>
+    <string name="settings_personal_details">Detalles personales</string>
     <string name="settings_adjust_macronutrients">Ajustar macronutrientes</string>
     <string name="settings_weight_history">Historial de peso</string>
-    <string name="settings_ring_colors_explained">Guía de colores del anillo</string>
+    <string name="settings_ring_colors_explained">Guía de colores de anillos del calendario</string>
     <string name="settings_inbox">Bandeja de entrada</string>
 
 
@@ -820,7 +820,7 @@
     <string name="settings_privacy_policy">Política de privacidad</string>
     <string name="settings_support_email">Correo de soporte</string>
     <string name="settings_delete_account">¿Eliminar cuenta?</string>
-    <string name="settings_version">Version %1$s</string>
+    <string name="settings_version">Versión %1$s</string>
 
 
     <string name="settings_membership_payment">Problema de pago</string>
@@ -832,7 +832,7 @@
     <string name="settings_membership_free">Gratis</string>
     <string name="settings_membership_upgrade">Mejorar plan</string>
     <string name="settings_membership_trial_ends_today">La prueba termina hoy</string>
-    <string name="settings_membership_until_format">Hasta el %1$s</string>
+    <string name="settings_membership_until_format">Hasta %1$s</string>
     <plurals name="settings_membership_trial_days_left">
         <item quantity="one">Queda %1$d día</item>
         <item quantity="other">Quedan %1$d días</item>
@@ -842,16 +842,16 @@
     <!-- Settings: referral card -->
     <string name="settings_invite_friends">Invitar amigos</string>
     <string name="settings_premium_reward">Recompensa Premium</string>
-    <string name="settings_share_caloshape_with_friends">Share CaloShape AI\nwith your friends</string>
-    <string name="settings_referral_reward_content">They subscribe. You get 30 days free.</string>
-    <string name="settings_get_30_days_free">Get 30 days free</string>
+    <string name="settings_share_caloshape_with_friends">Comparte CaloShape AI\ncon tus amigos</string>
+    <string name="settings_referral_reward_content">Ellos se suscriben. Tú recibes 30 días gratis.</string>
+    <string name="settings_get_30_days_free">Obtén 30 días gratis</string>
     <string name="settings_days_label">Días</string>
 
     <string name="settings_appearance_light">Claro</string>
     <string name="settings_appearance_dark">Oscuro</string>
     <string name="settings_appearance_mode_title">Elegir apariencia</string>
-    <string name="settings_appearance_light_description">Keep the current bright, clean look.</string>
-    <string name="settings_appearance_dark_description">Use a darker, softer interface for everyday tracking.</string>
+    <string name="settings_appearance_light_description">Mantén el aspecto actual, claro y limpio.</string>
+    <string name="settings_appearance_dark_description">Usa una interfaz más oscura y suave para el seguimiento diario.</string>
     <string name="settings_preferences">Preferencias</string>
     <string name="settings_appearance">Apariencia</string>
 
@@ -861,9 +861,9 @@
     <!-- Settings: Widget Guide -->
     <string name="settings_widgets_title">Widgets</string>
     <string name="settings_widgets_how_to_add">¿Cómo agregar?</string>
-    <string name="log_your_food">Registrar comida</string>
+    <string name="log_your_food">Registra tu comida</string>
 
-    <string name="settings_calories_goal_label">Calorías restantes</string>
+    <string name="settings_calories_goal_label">kcal restantes</string>
     <string name="settings_protein_goal_label">Proteína restante</string>
     <string name="settings_carbs_goal_label">Carbohidratos restantes</string>
     <string name="settings_fats_goal_label">Grasas restantes</string>
@@ -872,7 +872,7 @@
 
     <string name="settings_logout_loading">Cerrando sesión…</string>
     <string name="settings_logout">Cerrar sesión</string>
-    <string name="settings_logout_failed">Logout falló. Check your connection and try again.</string>
+    <string name="settings_logout_failed">Error al cerrar sesión. Revisa tu conexión e inténtalo de nuevo.</string>
 
 
     <!-- EditNameScreen -->
@@ -884,38 +884,38 @@
     <string name="referral_title">Invitar amigos</string>
     <string name="referral_premium_reward">Recompensa Premium</string>
     <string name="referral_invite_friends">Invitar amigos</string>
-    <string name="referral_earn_30_days_free">Earn 30 days free</string>
-    <string name="referral_reward_unlocks_after_no_refund">Reward unlocks after your friend subscribes with no refund.</string>
-    <string name="referral_code_copied">Código copiado.</string>
+    <string name="referral_earn_30_days_free">Gana 30 días gratis</string>
+    <string name="referral_reward_unlocks_after_no_refund">La recompensa se desbloquea después de que tu amigo se suscriba sin reembolso.</string>
+    <string name="referral_code_copied">Código de referido copiado.</string>
     <string name="referral_your_promo_code">Tu código promocional</string>
     <string name="referral_copy">Copiar</string>
     <string name="referral_share">Compartir</string>
     <string name="referral_how_it_works">Cómo funciona</string>
-    <string name="referral_step_1_title">Share your promo code</string>
-    <string name="referral_step_1_subtitle">Send your code to a friend who wants to track comida smarter.</string>
-    <string name="referral_step_2_title">Your friend subscribes</string>
-    <string name="referral_step_2_subtitle">They start a paid CaloShape AI subscription using your invite.</string>
-    <string name="referral_step_3_title">No refund, then reward</string>
-    <string name="referral_step_3_subtitle">After the subscription is verified with no refund, your premium period is extended.</string>
-    <string name="referral_share_text">Join me on CaloShape AI! My referral code is:\n%1$s\n\n%2$s</string>
-    <string name="referral_share_subject">Join me on CaloShape AI</string>
-    <string name="referral_share_chooser_title">Compartir vía</string>
-    <string name="referral_unable_to_open_share_options">Unable to open share options.</string>
+    <string name="referral_step_1_title">Comparte tu código promocional</string>
+    <string name="referral_step_1_subtitle">Envía tu código a un amigo que quiera registrar comida de forma más inteligente.</string>
+    <string name="referral_step_2_title">Tu amigo se suscribe</string>
+    <string name="referral_step_2_subtitle">Inicia una suscripción pagada de CaloShape AI usando tu invitación.</string>
+    <string name="referral_step_3_title">Sin reembolso, luego recompensa</string>
+    <string name="referral_step_3_subtitle">Después de verificar la suscripción sin reembolso, tu periodo Premium se extiende.</string>
+    <string name="referral_share_text">¡Únete a mí en CaloShape AI! Mi código de referido es:\n%1$s\n\n%2$s</string>
+    <string name="referral_share_subject">Únete a mí en CaloShape AI</string>
+    <string name="referral_share_chooser_title">Compartir mediante</string>
+    <string name="referral_unable_to_open_share_options">No se pudieron abrir las opciones de compartir.</string>
 
 
     <!-- PersonalDetailsScreen -->
     <string name="personal_details_goal_weight">Peso objetivo</string>
-    <string name="personal_details_change_goal">Cambiar meta</string>
-    <string name="personal_details_body_details_section">Datos corporales</string>
+    <string name="personal_details_change_goal">Cambiar objetivo</string>
+    <string name="personal_details_body_details_section">Detalles corporales</string>
     <string name="personal_details_current_weight">Peso actual</string>
     <string name="personal_details_height">Altura</string>
     <string name="personal_details_age">Edad</string>
     <string name="personal_details_gender">Género</string>
     <string name="personal_details_starting_weight">Peso inicial</string>
-    <string name="personal_details_daily_goals_section">Metas diarias</string>
-    <string name="personal_details_daily_step_goal">Meta diaria de pasos</string>
-    <string name="personal_details_daily_water_goal">Meta diaria de agua</string>
-    <string name="personal_details_daily_workout_goal">Meta diaria de entrenamiento</string>
+    <string name="personal_details_daily_goals_section">Objetivos diarios</string>
+    <string name="personal_details_daily_step_goal">Objetivo diario de pasos</string>
+    <string name="personal_details_daily_water_goal">Objetivo diario de agua</string>
+    <string name="personal_details_daily_workout_goal">Objetivo diario de ejercicio</string>
     <string name="personal_details_age_value">%1$d años</string>
     <string name="personal_details_steps_value">%1$d pasos</string>
     <string name="personal_details_water_value">%1$d ml</string>
@@ -927,24 +927,24 @@
 
     <!-- EditGoalWeightScreen -->
     <string name="edit_goal_weight_title">Editar peso objetivo</string>
-    <string name="edit_goal_weight_progress_note">We will use this meta to calculate your progress.</string>
-    <string name="edit_goal_update_failed">Error al actualizar meta peso</string>
+    <string name="edit_goal_weight_progress_note">Usaremos este objetivo para calcular tu progreso.</string>
+    <string name="edit_goal_update_failed">Error al actualizar el peso objetivo</string>
 
 
     <!-- RecordWeightScreen -->
-    <string name="record_weight_camera_failed_to_open">Camera falló to open.</string>
-    <string name="record_weight_camera_permission_required">Camera permission required.</string>
-    <string name="record_weight_camera_preview_unavailable">Camera only works in the running app, not in Preview.</string>
-    <string name="record_weight_camera_screen_unavailable">Camera is not available in this screen.</string>
-    <string name="record_weight_no_camera_app_found">No camera app found on this device.</string>
-    <string name="record_weight_enable_camera_permission_settings">Please enable Camera permission in Ajustes.</string>
+    <string name="record_weight_camera_failed_to_open">No se pudo abrir la cámara.</string>
+    <string name="record_weight_camera_permission_required">Permiso de cámara requerido.</string>
+    <string name="record_weight_camera_preview_unavailable">La cámara solo funciona en la app en ejecución, no en Preview.</string>
+    <string name="record_weight_camera_screen_unavailable">La cámara no está disponible en esta pantalla.</string>
+    <string name="record_weight_no_camera_app_found">No se encontró una app de cámara en este dispositivo.</string>
+    <string name="record_weight_enable_camera_permission_settings">Activa el permiso de cámara en Configuración.</string>
 
-    <string name="record_weight_title">Record Peso</string>
+    <string name="record_weight_title">Registrar peso</string>
     <string name="record_weight_save_failed">Error al guardar</string>
-    <string name="record_weight_date_note">This peso will be recorded for %1$s</string>
+    <string name="record_weight_date_note">Este peso se registrará para %1$s</string>
 
-    <string name="weight_date_sheet_title">Select your weighing date</string>
-    <string name="weight_date_sheet_subtitle">When did you step on the scale?</string>
+    <string name="weight_date_sheet_title">Selecciona la fecha de pesaje</string>
+    <string name="weight_date_sheet_subtitle">¿Cuándo te subiste a la báscula?</string>
     <string name="weight_date_sheet_month_january">Enero</string>
     <string name="weight_date_sheet_month_february">Febrero</string>
     <string name="weight_date_sheet_month_march">Marzo</string>
@@ -958,73 +958,73 @@
     <string name="weight_date_sheet_month_november">Noviembre</string>
     <string name="weight_date_sheet_month_december">Diciembre</string>
 
-    <string name="record_weight_camera_not_available">Camera not available</string>
-    <string name="record_weight_take_photo">Take a photo</string>
-    <string name="record_weight_retake_photo">Retake photo</string>
+    <string name="record_weight_camera_not_available">Cámara no disponible</string>
+    <string name="record_weight_take_photo">Tomar foto</string>
+    <string name="record_weight_retake_photo">Volver a tomar foto</string>
 
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Editar tu altura</string>
-    <string name="edit_height_privacy_note">We only use your height to improve your experience and calorie estimation accuracy.</string>
-    <string name="edit_height_saved_locally_sync_failed">Error de red. Se guardó localmente, pero no se pudo sincronizar.</string>
+    <string name="edit_height_privacy_note">Solo usamos tu altura para mejorar tu experiencia y la precisión de la estimación de kcal.</string>
+    <string name="edit_height_saved_locally_sync_failed">Error de red. Guardado localmente, pero no se pudo sincronizar.</string>
 
 
     <!-- EditAgeScreen -->
     <string name="edit_age_title">Editar tu edad</string>
-    <string name="edit_age_privacy_note">We only use your age to improve your experience and calorie estimation accuracy.</string>
+    <string name="edit_age_privacy_note">Solo usamos tu edad para mejorar tu experiencia y la precisión de la estimación de kcal.</string>
 
 
     <!-- EditGenderScreen -->
     <string name="edit_gender_title">Editar tu género</string>
-    <string name="edit_gender_privacy_note">Used only to personalize and improve estimate accuracy.</string>
+    <string name="edit_gender_privacy_note">Se usa solo para personalizar y mejorar la precisión de la estimación.</string>
 
 
     <!-- EditStartingWeightScreen -->
     <string name="edit_starting_weight_title">Editar peso inicial</string>
-    <string name="edit_start_weight_baseline_note">We will use it as your baseline for progress.</string>
-    <string name="edit_starting_weight_update_failed">Error al actualizar starting peso</string>
+    <string name="edit_start_weight_baseline_note">Lo usaremos como referencia para tu progreso.</string>
+    <string name="edit_starting_weight_update_failed">Error al actualizar el peso inicial</string>
 
 
     <!-- EditDailyStepGoalScreen -->
-    <string name="edit_step_goal_title">Editar meta de pasos</string>
-    <string name="edit_daily_step_goal_previous_format">Previous meta %1$d steps</string>
-    <string name="edit_daily_step_goal_input_label">Meta diaria de pasos</string>
+    <string name="edit_step_goal_title">Editar objetivo de pasos</string>
+    <string name="edit_daily_step_goal_previous_format">Objetivo anterior %1$d pasos</string>
+    <string name="edit_daily_step_goal_input_label">Objetivo diario de pasos</string>
 
 
     <!-- EditWaterGoalScreen -->
-    <string name="edit_water_goal_title">Editar meta de agua</string>
-    <string name="edit_water_goal_previous_format">Previous meta %1$d ml</string>
-    <string name="edit_water_goal_input_label">Diario water meta (ml)</string>
+    <string name="edit_water_goal_title">Editar objetivo de agua</string>
+    <string name="edit_water_goal_previous_format">Objetivo anterior %1$d ml</string>
+    <string name="edit_water_goal_input_label">Objetivo diario de agua (ml)</string>
 
 
     <!-- EditWorkoutGoalScreen -->
-    <string name="edit_workout_goal_title">Editar meta de entrenamiento</string>
-    <string name="edit_workout_goal_previous_format">Previous meta %1$d kcal</string>
-    <string name="edit_workout_goal_input_label">Diario entrenamiento meta (kcal)</string>
+    <string name="edit_workout_goal_title">Editar objetivo de ejercicio</string>
+    <string name="edit_workout_goal_previous_format">Objetivo anterior %1$d kcal</string>
+    <string name="edit_workout_goal_input_label">Objetivo diario de ejercicio (kcal)</string>
 
 
     <!-- EditNutritionGoalsScreen -->
-    <string name="edit_nutrition_goals_title">Editar metas de nutrición</string>
-    <string name="edit_nutrition_calorie_goal">Meta de calorías</string>
-    <string name="edit_nutrition_protein_goal">Meta de proteína</string>
-    <string name="edit_nutrition_carb_goal">Meta de carbohidratos</string>
-    <string name="edit_nutrition_fat_goal">Meta de grasas</string>
+    <string name="edit_nutrition_goals_title">Editar objetivos de nutrición</string>
+    <string name="edit_nutrition_calorie_goal">Objetivo de kcal</string>
+    <string name="edit_nutrition_protein_goal">Objetivo de proteína</string>
+    <string name="edit_nutrition_carb_goal">Objetivo de carbohidratos</string>
+    <string name="edit_nutrition_fat_goal">Objetivo de grasa</string>
     <string name="edit_nutrition_view_micronutrients">Ver micronutrientes</string>
-    <string name="edit_nutrition_fiber_goal">Fibra meta</string>
-    <string name="edit_nutrition_sugar_goal">Azúcar meta</string>
-    <string name="edit_nutrition_sodium_goal">Sodio meta</string>
-    <string name="edit_nutrition_auto_generate_goals">Generar metas automáticamente</string>
+    <string name="edit_nutrition_fiber_goal">Objetivo de fibra</string>
+    <string name="edit_nutrition_sugar_goal">Objetivo de azúcar</string>
+    <string name="edit_nutrition_sodium_goal">Objetivo de sodio</string>
+    <string name="edit_nutrition_auto_generate_goals">Generar objetivos automáticamente</string>
     <string name="auto_generate_goals_success">¡Generado correctamente!</string>
     <string name="auto_generate_goals_failed">Error al generar</string>
     <string name="auto_generate_goals_failed_http_format">Error al generar (%1$d)</string>
-    <string name="auto_generate_goals_network_error">Error de red. Inténtalo de nuevo.</string>
+    <string name="auto_generate_goals_network_error">Error de red, inténtalo de nuevo.</string>
 
 
     <!-- RingColorsExplainedScreen -->
-    <string name="ring_colors_explained_title">Colores del anillo de fecha</string>
-    <string name="ring_colors_explained_intro">Los anillos de fecha te muestran rápidamente cómo va cada día frente a tu meta calórica.</string>
+    <string name="ring_colors_explained_title">Colores de anillos de fecha</string>
+    <string name="ring_colors_explained_intro">Los anillos de fecha te ayudan a ver rápidamente cómo se compara cada día con tu objetivo de kcal.</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
-    <string name="ring_colors_explained">Vista previa del anillo</string>
+    <string name="ring_colors_explained">Vista previa del anillo de fecha</string>
 
     <string name="ring_colors_preview_day_5">5</string>
     <string name="ring_colors_preview_day_6">6</string>
@@ -1033,14 +1033,14 @@
     <string name="ring_colors_preview_day_9">9</string>
     <string name="ring_colors_preview_day_10">10</string>
     <string name="ring_colors_preview_day_11">11</string>
-    <string name="ring_colors_explained_subtitle">Explicación de colores</string>
+    <string name="ring_colors_explained_subtitle">Explicación de colores de anillos</string>
 
     <string name="ring_colors_green_title">Verde</string>
-    <string name="ring_colors_green_body">En meta (dentro de 100 calorías)</string>
+    <string name="ring_colors_green_body">Dentro del objetivo (dentro de 100 kcal del objetivo)</string>
     <string name="ring_colors_yellow_title">Marrón</string>
-    <string name="ring_colors_yellow_body">100-199 calorías sobre tu meta</string>
+    <string name="ring_colors_yellow_body">100-199 kcal por encima de tu objetivo</string>
     <string name="ring_colors_red_title">Rojo</string>
-    <string name="ring_colors_red_body">200+ calorías sobre tu meta</string>
+    <string name="ring_colors_red_body">200+ kcal por encima de tu objetivo</string>
     <string name="ring_colors_dotted_title">Punteado</string>
     <string name="ring_colors_dotted_body">No hay comidas registradas ese día</string>
 
@@ -1048,33 +1048,33 @@
     <!-- NotificationInboxScreen Inbox -->
     <string name="notification_inbox_title">Bandeja de entrada</string>
     <string name="notification_inbox_header_title">Notificaciones de CaloShape</string>
-    <string name="notification_inbox_header_body">Todas las notificaciones aparecerán aquí.</string>
-    <string name="notification_inbox_status_read">Leído</string>
-    <string name="notification_inbox_status_unread">No leído</string>
+    <string name="notification_inbox_header_body">Todas las notificaciones de la plataforma aparecerán aquí.</string>
+    <string name="notification_inbox_status_read">Leída</string>
+    <string name="notification_inbox_status_unread">No leída</string>
 
-    <string name="notification_inbox_loading_title">Cargando notifications</string>
-    <string name="notification_inbox_loading">Cargando notifications…</string>
+    <string name="notification_inbox_loading_title">Cargando notificaciones</string>
+    <string name="notification_inbox_loading">Cargando notificaciones…</string>
     <string name="notification_inbox_empty_title">Aún no hay notificaciones</string>
-    <string name="notification_inbox_empty_body">Platform notifications will appear here.</string>
-    <string name="notification_inbox_error_title">No se pueden cargar las notificaciones</string>
-    <string name="notification_inbox_error_body">Please check your connection and try again.</string>
+    <string name="notification_inbox_empty_body">Las notificaciones de la plataforma aparecerán aquí.</string>
+    <string name="notification_inbox_error_title">No se pudieron cargar las notificaciones</string>
+    <string name="notification_inbox_error_body">Revisa tu conexión e inténtalo de nuevo.</string>
 
 
     <!-- WidgetGuideScreen -->
     <string name="widget_guide_title">Agregar widget</string>
     <string name="widget_guide_hero_title">Agrega CaloShape a tu pantalla de inicio</string>
-    <string name="widget_guide_hero_body">Track calorías, macros, and quick actions without opening the app.</string>
+    <string name="widget_guide_hero_body">Sigue kcal, macros y acciones rápidas sin abrir la app.</string>
     <string name="widget_guide_steps_title">Sigue estos pasos</string>
     <string name="widget_guide_step_1_title">Mantén presionada la pantalla de inicio</string>
-    <string name="widget_guide_step_1_body">Press and hold an empty area on your phone Home screen until the menu appears.</string>
+    <string name="widget_guide_step_1_body">Mantén presionada un área vacía de la pantalla de inicio de tu teléfono hasta que aparezca el menú.</string>
     <string name="widget_guide_step_2_title">Toca Widgets</string>
-    <string name="widget_guide_step_2_body">Choose Widgets from the Home screen menu.</string>
+    <string name="widget_guide_step_2_body">Elige Widgets en el menú de la pantalla de inicio.</string>
     <string name="widget_guide_step_3_title">Busca CaloShape AI</string>
-    <string name="widget_guide_step_3_body">Scroll or search for CaloShape AI, then open the widget list.</string>
+    <string name="widget_guide_step_3_body">Desplázate o busca CaloShape AI, luego abre la lista de widgets.</string>
     <string name="widget_guide_step_4_title">Arrastra un widget a su lugar</string>
-    <string name="widget_guide_step_4_body">Touch and hold the widget, drag it to your preferred Home screen, then lift your finger.</string>
+    <string name="widget_guide_step_4_body">Mantén presionado el widget, arrástralo a tu pantalla de inicio preferida y luego levanta el dedo.</string>
     <string name="widget_guide_tip_title">¿No encuentras el menú Widgets?</string>
-    <string name="widget_guide_tip_body">Some phone brands and launchers use different names. Try Home settings, long-pressing the CaloShape AI app icon, or searching for Widgets in your launcher.</string>
+    <string name="widget_guide_tip_body">Algunas marcas de teléfonos y launchers usan nombres diferentes. Prueba Configuración de inicio, mantén presionado el ícono de CaloShape AI o busca Widgets en tu launcher.</string>
     <string name="widget_guide_done">Entendido</string>
     <string name="widget_guide_mock_home">Inicio</string>
     <string name="widget_guide_mock_widgets">Widgets</string>
@@ -1083,7 +1083,7 @@
     <!-- CaloShapeNavHost -->
     <string name="url_terms">https://caloshape.com/terms</string>
     <string name="url_privacy">https://caloshape.com/privacy</string>
-    <string name="camera_manual_entry_not_ready">Manual entry is not ready yet. Switching to label escanear for now.</string>
+    <string name="camera_manual_entry_not_ready">La entrada manual aún no está lista. Cambiando a escaneo de etiqueta por ahora.</string>
 
 
     <!-- Android home screen widgets -->
@@ -1091,15 +1091,15 @@
     <string name="widget_preview_protein">120g</string>
     <string name="widget_preview_carbs">180g</string>
     <string name="widget_preview_fats">60g</string>
-    <string name="widget_calories_left">Calorías restantes</string>
-    <string name="widget_protein_left">Proteína restante</string>
-    <string name="widget_carbs_left">Carbohidratos restantes</string>
-    <string name="widget_fats_left">Grasas restantes</string>
-    <string name="widget_calories_description">Widget de calorías CaloShape</string>
-    <string name="widget_macro_actions_description">Widget de macros y acciones rápidas de CaloShape</string>
-    <string name="widget_log_your_food">Registrar comida</string>
-    <string name="widget_scan_food">Escanear comida</string>
-    <string name="widget_barcode">Código de barras</string>
+    <string name="widget_calories_left">Calories left</string>
+    <string name="widget_protein_left">Protein left</string>
+    <string name="widget_carbs_left">Carbs left</string>
+    <string name="widget_fats_left">Fats left</string>
+    <string name="widget_calories_description">CaloShape calories widget</string>
+    <string name="widget_macro_actions_description">CaloShape macros and quick actions widget</string>
+    <string name="widget_log_your_food">Log your food</string>
+    <string name="widget_scan_food">Scan food</string>
+    <string name="widget_barcode">Barcode</string>
     <string name="widget_grams_format">%1$dg</string>
 
 
@@ -1110,31 +1110,31 @@
                     Not use
          ========================= -->
     <!-- PremiumRewardsScreen Not use -->
-    <string name="premium_rewards_subscription_title">Subscription</string>
-    <string name="premium_rewards_history_title">Reward history</string>
-    <string name="premium_rewards_loading_membership">Cargando membership…</string>
-    <string name="premium_rewards_status_title">Premium Status</string>
-    <string name="premium_rewards_latest_title">Latest reward</string>
-    <string name="premium_rewards_source_format">Source: %1$s</string>
-    <string name="premium_rewards_channel_format">Channel: %1$s</string>
-    <string name="premium_rewards_grant_status_format">Grant status: %1$s</string>
-    <string name="premium_rewards_status_format">Status: %1$s</string>
-    <string name="premium_rewards_google_defer_format">Google defer: %1$s</string>
-    <string name="premium_rewards_granted_at_format">Granted at: %1$s</string>
-    <string name="premium_rewards_old_expiry_format">Old expiry: %1$s</string>
-    <string name="premium_rewards_new_expiry_format">New expiry: %1$s</string>
+    <string name="premium_rewards_subscription_title">Suscripción</string>
+    <string name="premium_rewards_history_title">Historial de recompensas</string>
+    <string name="premium_rewards_loading_membership">Cargando membresía…</string>
+    <string name="premium_rewards_status_title">Estado Premium</string>
+    <string name="premium_rewards_latest_title">Última recompensa</string>
+    <string name="premium_rewards_source_format">Fuente: %1$s</string>
+    <string name="premium_rewards_channel_format">Canal: %1$s</string>
+    <string name="premium_rewards_grant_status_format">Estado de concesión: %1$s</string>
+    <string name="premium_rewards_status_format">Estado: %1$s</string>
+    <string name="premium_rewards_google_defer_format">Aplazamiento de Google: %1$s</string>
+    <string name="premium_rewards_granted_at_format">Concedido en: %1$s</string>
+    <string name="premium_rewards_old_expiry_format">Vencimiento anterior: %1$s</string>
+    <string name="premium_rewards_new_expiry_format">Nuevo vencimiento: %1$s</string>
     <string name="premium_rewards_error_format">Error: %1$s</string>
-    <string name="premium_rewards_days_added_format">Days added: %1$d</string>
-    <string name="premium_rewards_empty_title">No rewards yet</string>
-    <string name="premium_rewards_empty_body">Successful referrals will appear here after verification.</string>
-    <string name="premium_rewards_channel_google_play_defer">Google Play billing date extended</string>
-    <string name="premium_rewards_channel_backend_only">Premium reward applied</string>
-    <string name="premium_rewards_grant_success">Success</string>
-    <string name="premium_rewards_status_retrying">Retrying</string>
-    <string name="premium_rewards_grant_not_granted">Not granted</string>
-    <string name="premium_rewards_google_defer_success">Extended by Google Play</string>
-    <string name="premium_rewards_google_defer_failed">Failed</string>
-    <string name="premium_rewards_google_defer_not_required">Not required</string>
+    <string name="premium_rewards_days_added_format">Días añadidos: %1$d</string>
+    <string name="premium_rewards_empty_title">Aún no hay recompensas</string>
+    <string name="premium_rewards_empty_body">Las referencias exitosas aparecerán aquí después de la verificación.</string>
+    <string name="premium_rewards_channel_google_play_defer">Fecha de facturación de Google Play extendida</string>
+    <string name="premium_rewards_channel_backend_only">Recompensa Premium aplicada</string>
+    <string name="premium_rewards_grant_success">Éxito</string>
+    <string name="premium_rewards_status_retrying">Reintentando</string>
+    <string name="premium_rewards_grant_not_granted">No concedido</string>
+    <string name="premium_rewards_google_defer_success">Extendido por Google Play</string>
+    <string name="premium_rewards_google_defer_failed">Fallido</string>
+    <string name="premium_rewards_google_defer_not_required">No requerido</string>
 
 
 </resources>

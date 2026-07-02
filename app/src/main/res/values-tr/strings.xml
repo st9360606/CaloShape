@@ -1,14 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
     <!-- App_Name -->
     <string name="app_name">CaloShape</string>
 
 
     <!-- common -->
-    <string name="common_close">Kapalı</string>
-    <string name="common_save">Kaydetmek</string>
-    <string name="common_cancel">İptal etmek</string>
-    <string name="common_continue_btn">Devam etmek</string>
-    <string name="common_skip">Atlamak</string>
+    <string name="common_close">Kapat</string>
+    <string name="common_save">Kaydet</string>
+    <string name="common_cancel">İptal</string>
+    <string name="common_continue_btn">Devam et</string>
+    <string name="common_skip">Atla</string>
     <string name="common_dash">—</string>
     <string name="common_error">Hata</string>
 
@@ -16,21 +17,21 @@
     <string name="common_today">Bugün</string>
     <string name="common_yesterday">Dün</string>
     <string name="common_unavailable_dash">—</string>
-    <string name="common_retry">Yeniden dene</string>
+    <string name="common_retry">Tekrar dene</string>
 
-    <string name="common_delete">Silmek</string>
+    <string name="common_delete">Sil</string>
     <string name="common_deleting">Siliniyor…</string>
 
-    <string name="common_understood">Anlaşıldı</string>
+    <string name="common_understood">Anladım</string>
     <string name="common_revert">Geri al</string>
 
 
     <!-- ApiErrorUiMapper -->
     <string name="err_barcode_not_found_title">Ürün bulunamadı</string>
-    <string name="err_barcode_not_found_msg">Bu barkodu bulamadık. Beslenme etiketinin fotoğrafını çekmeyi deneyin.</string>
+    <string name="err_barcode_not_found_msg">Bu barkodu bulamadık. Besin etiketi fotoğrafını çekmeyi deneyin.</string>
 
-    <string name="err_barcode_lookup_failed_title">Arama başarısız oldu</string>
-    <string name="err_barcode_lookup_failed_msg">Ürün veritabanına ulaşamadık. Bağlantınızı kontrol edip tekrar deneyin.</string>
+    <string name="err_barcode_lookup_failed_title">Arama başarısız</string>
+    <string name="err_barcode_lookup_failed_msg">Ürün veritabanına ulaşılamadı. Bağlantınızı kontrol edip tekrar deneyin.</string>
 
     <string name="err_generic_title">Bir şeyler ters gitti</string>
     <string name="err_generic_msg">Lütfen tekrar deneyin.</string>
@@ -39,115 +40,115 @@
     <string name="err_network_msg">Lütfen internet bağlantınızı kontrol edip tekrar deneyin.</string>
 
     <string name="err_photo_title">Fotoğraf gerekli</string>
-    <string name="err_photo_msg">Fotoğrafı daha iyi bir ışıkla tekrar çekmeyi deneyin.</string>
+    <string name="err_photo_msg">Fotoğrafı daha iyi ışıkta tekrar çekmeyi deneyin.</string>
 
-    <string name="err_manual_title">Manuel olarak girin</string>
+    <string name="err_manual_title">Manuel gir</string>
     <string name="err_manual_msg">Ayrıntıları manuel olarak girebilirsiniz.</string>
 
-    <string name="err_support_title">Desteğe başvurun</string>
+    <string name="err_support_title">Destekle iletişime geç</string>
     <string name="err_support_msg">Sorun devam ederse lütfen destekle iletişime geçin.</string>
 
-    <string name="cta_try_label">Beslenme etiketini tarayın</string>
-    <string name="cta_enter_manually">Manuel olarak girin</string>
+    <string name="cta_try_label">Besin etiketini tara</string>
+    <string name="cta_enter_manually">Manuel gir</string>
 
     <string name="cta_check_network">Ağı kontrol et</string>
     <string name="cta_retake">Tekrar çek</string>
-    <string name="cta_contact_support">Desteğe başvurun</string>
-    <string name="cta_rescan_barcode">Barkodu yeniden tarayın</string>
+    <string name="cta_contact_support">Destekle iletişime geç</string>
+    <string name="cta_rescan_barcode">Barkodu tekrar tara</string>
 
 
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">Fotoğraf çekin, kaloriyi öğrenin.</string>
-    <string name="choose_language">Dil seçin</string>
-    <string name="cta_get_started">Başlayın</string>
-    <string name="cta_login_prefix">Zaten bir hesabınız var mı?</string>
-    <string name="cta_login">Oturum aç</string>
+    <string name="landing_title">Fotoğraf çek, kalorileri öğren.</string>
+    <string name="choose_language">Dil seç</string>
+    <string name="cta_get_started">Başla</string>
+    <string name="cta_login_prefix">Zaten hesabın var mı?</string>
+    <string name="cta_login">Giriş yap</string>
 
 
     <!-- RequireSignInScreen -->
-    <string name="auth_sign_in_account_title">Hesabınızda oturum açın</string>
-    <string name="auth_sign_in_with_google">Google ile oturum açın</string>
-    <string name="auth_signin_with_email">E-postayla devam et</string>
+    <string name="auth_sign_in_account_title">Hesabına giriş yap</string>
+    <string name="auth_sign_in_with_google">Google ile giriş yap</string>
+    <string name="auth_signin_with_email">E-posta ile devam et</string>
 
 
     <!-- SignInSheet-->
-    <string name="signin_title">Oturum aç</string>
-    <string name="signin_with_apple">Apple\'la oturum açın</string>
-    <string name="signin_with_google">Google ile oturum açın</string>
-    <string name="signin_with_email">E-postayla devam et</string>
-    <string name="signin_legal_hint">Devam ederek CaloShape\'in şartlarını kabul etmiş olursunuz</string>
+    <string name="signin_title">Giriş yap</string>
+    <string name="signin_with_apple">Apple ile giriş yap</string>
+    <string name="signin_with_google">Google ile giriş yap</string>
+    <string name="signin_with_email">E-posta ile devam et</string>
+    <string name="signin_legal_hint">Devam ederek CaloShape’in</string>
     <string name="signin_terms">Şartlar</string>
-    <string name="signin_and">Ve</string>
+    <string name="signin_and">ve</string>
     <string name="signin_privacy">Gizlilik politikası</string>
     <string name="signin_url_terms">https://caloshape.com/terms</string>
     <string name="signin_url_privacy">https://caloshape.com/privacy</string>
 
 
     <!-- SignInSheetHost 控制 Sheet 是否顯示、處理狀態、接外部 callback -->
-    <string name="err_google_no_account_hint">İpucu: Ayarlar → Hesaplar\'a bir Google hesabı ekleyin ve tekrar deneyin</string>
-    <string name="err_google_signin_failed">Google\'da oturum açma başarısız oldu</string>
+    <string name="err_google_no_account_hint">İpucu: Ayarlar → Hesaplar bölümünden bir Google hesabı ekleyip tekrar deneyin</string>
+    <string name="err_google_signin_failed">Google ile giriş başarısız</string>
 
 
     <!-- EmailEnterScreen-->
-    <string name="email_sign_in_title">Oturum aç</string>
+    <string name="email_sign_in_title">Giriş yap</string>
     <string name="input_box_email_label">E-posta</string>
 
 
     <!-- EmailCodeScreen OTP -->
-    <string name="resend">Yeniden gönder</string>
-    <string name="resend_countdown">Yeniden gönder (%1$d s)</string>
+    <string name="resend">Tekrar gönder</string>
+    <string name="resend_countdown">Tekrar gönder (%1$d sn)</string>
 
-    <string name="err_otp_invalid">Kod yanlış. Lütfen tekrar deneyin.</string>
-    <string name="err_otp_too_many_attempts">Çok fazla deneme. Lütfen daha sonra tekrar deneyin.</string>
+    <string name="err_otp_invalid">Kod hatalı. Lütfen tekrar deneyin.</string>
+    <string name="err_otp_too_many_attempts">Çok fazla deneme yapıldı. Lütfen daha sonra tekrar deneyin.</string>
     <string name="err_network_io">Ağ hatası. Lütfen tekrar deneyin.</string>
     <string name="err_server_unavailable">Hizmet geçici olarak kullanılamıyor. Lütfen daha sonra tekrar deneyin.</string>
     <string name="err_generic">Bir şeyler ters gitti. Lütfen tekrar deneyin.</string>
 
-    <string name="confirm_email_title">E-postanızı onaylayın</string>
-    <string name="confirm_email_hint">Lütfen az önce gönderdiğimiz 4 haneli kodu giriniz</string>
+    <string name="confirm_email_title">E-postanı doğrula</string>
+    <string name="confirm_email_hint">Az önce gönderdiğimiz 4 haneli kodu girin:</string>
     <string name="didnt_receive_code">Kodu almadınız mı?</string>
 
 
     <!-- Onboarding: GenderSelectionScreen -->
-    <string name="onboard_gender_title">Cinsiyetinizi seçin</string>
-    <string name="onboard_gender_subtitle">Bu, özel planınızı kalibre etmek için kullanılacaktır.</string>
+    <string name="onboard_gender_title">Cinsiyetini seç</string>
+    <string name="onboard_gender_subtitle">Bu bilgi kişisel planını ayarlamak için kullanılacak.</string>
     <string name="onboard_male">Erkek</string>
-    <string name="onboard_female">Dişi</string>
+    <string name="onboard_female">Kadın</string>
     <string name="onboard_other">Diğer</string>
 
 
     <!-- Onboarding: ReferralSourceScreen -->
-    <string name="onboard_referral_title">Bizi nasıl keşfettiniz?</string>
+    <string name="onboard_referral_title">Bizi nasıl keşfettin?</string>
 
 
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">Kaç yaşındasın?</string>
-    <string name="onboard_age_subtitle">Yaşınızı yalnızca deneyiminizi ve kalori tahmininizin doğruluğunu geliştirmek için kullanırız.</string>
+    <string name="onboard_age_subtitle">Yaşını yalnızca deneyimini ve kalori tahmini doğruluğunu iyileştirmek için kullanıyoruz.</string>
 
 
     <!-- Onboarding: HeightSelectionScreen -->
-    <string name="onboard_height_title">Boyunuz kaç?</string>
-    <string name="onboard_height_subtitle">Verilerinizi yalnızca deneyiminizi ve kalori tahminlerimizi geliştirmek için kullanırız.</string>
-    <string name="onboard_height_hint">Bu, özel planınızı kalibre etmek için kullanılacaktır.</string>
+    <string name="onboard_height_title">Boyun kaç?</string>
+    <string name="onboard_height_subtitle">Verilerini yalnızca deneyimini ve kalori tahminlerimizi iyileştirmek için kullanıyoruz.</string>
+    <string name="onboard_height_hint">Bu bilgi kişisel planını ayarlamak için kullanılacak.</string>
 
 
     <!-- Onboarding: WeightSelectionScreen -->
-    <string name="onboard_weight_title">Kaç kilosun?</string>
-    <string name="onboard_weight_subtitle">Verilerinizi yalnızca deneyiminizi ve kalori tahminlerimizi geliştirmek için kullanırız.</string>
-    <string name="onboard_weight_hint">Bu, özel planınızı kalibre etmek için kullanılacaktır.</string>
+    <string name="onboard_weight_title">Kilon kaç?</string>
+    <string name="onboard_weight_subtitle">Verilerini yalnızca deneyimini ve kalori tahminlerimizi iyileştirmek için kullanıyoruz.</string>
+    <string name="onboard_weight_hint">Bu bilgi kişisel planını ayarlamak için kullanılacak.</string>
 
 
     <!-- Onboarding: ExerciseFrequencyScreen  -->
-    <string name="onboard_ex_freq_title">Her hafta ne sıklıkla egzersiz yapıyorsunuz?</string>
-    <string name="onboard_ex_freq_subtitle">Bu, kişiselleştirilmiş planınızı kalibre etmenize yardımcı olacaktır.</string>
+    <string name="onboard_ex_freq_title">Haftada ne sıklıkla egzersiz yapıyorsun?</string>
+    <string name="onboard_ex_freq_subtitle">Bu, kişisel planını daha doğru ayarlamamıza yardımcı olur.</string>
     <string name="ex_freq_0_title">0</string>
-    <string name="ex_freq_0_sub">hareketsiz</string>
+    <string name="ex_freq_0_sub">Hareketsiz</string>
     <string name="ex_freq_1_3_title">1–3</string>
     <string name="ex_freq_1_3_sub">Hafif aktivite</string>
     <string name="ex_freq_3_5_title">3–5</string>
-    <string name="ex_freq_3_5_sub">Orta düzeyde etkinlik</string>
+    <string name="ex_freq_3_5_sub">Orta aktivite</string>
     <string name="ex_freq_6_7_plus_title">6–7</string>
     <string name="ex_freq_6_7_plus_sub">Yüksek aktivite</string>
     <string name="ex_freq_7_plus_title">7+</string>
@@ -155,57 +156,57 @@
 
 
     <!-- Onboarding: GoalSelectionScreen  -->
-    <string name="onboard_goal_title">Amacınız nedir?</string>
-    <string name="onboard_goal_subtitle">Bu, kalori planınızı uyarlamamıza yardımcı olur.</string>
-    <string name="goal_lose">Kilo ver</string>
-    <string name="goal_maintain">Sürdürmek</string>
-    <string name="goal_gain">Kilo alın</string>
+    <string name="onboard_goal_title">Hedefin nedir?</string>
+    <string name="onboard_goal_subtitle">Bu, kalori planını sana göre uyarlamamıza yardımcı olur.</string>
+    <string name="goal_lose">Kilo vermek</string>
+    <string name="goal_maintain">Korumak</string>
+    <string name="goal_gain">Kilo almak</string>
     <string name="goal_healthy_eating">Sağlıklı beslenme</string>
 
 
     <!-- Onboarding: WeightGoalScreen -->
-    <string name="onboard_goal_weight_title">Hedef kilonuz nedir?</string>
-    <string name="onboard_goal_weight_subtitle">Bu hedeften yola çıkarak size daha uygun bir günlük kalori önerisi oluşturacağız.</string>
-    <string name="onboard_goal_weight_hint">Bu, özel planınızı kalibre etmek için kullanılacaktır.</string>
+    <string name="onboard_goal_weight_title">Hedef kilon kaç?</string>
+    <string name="onboard_goal_weight_subtitle">Bu hedefe göre sana daha uygun günlük kalori önerisi oluşturacağız.</string>
+    <string name="onboard_goal_weight_hint">Bu bilgi kişisel planını ayarlamak için kullanılacak.</string>
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">CaloShape AI\'yi kullanmak kilo verme verimliliğinizi üç katına çıkarabilir\n</string>
-    <string name="onboard_weight_loss_comparison_without_ai">\nCaloShape AI olmadan</string>
-    <string name="onboard_weight_loss_comparison_with_ai">\nCaloShape AI ile</string>
+    <string name="onboard_weight_loss_comparison_title">CaloShape AI kullanmak kilo verme\nverimliliğini üç katına çıkarabilir</string>
+    <string name="onboard_weight_loss_comparison_without_ai">CaloShape AI\nolmadan</string>
+    <string name="onboard_weight_loss_comparison_with_ai">CaloShape AI\nile</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI her şeyi basitleştirir\nve sizi sorumlu tutar</string>
+    <string name="onboard_weight_loss_comparison_caption">CaloShape AI her şeyi kolaylaştırır\nve hedeflerine bağlı kalmana yardım eder</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
-    <string name="onboard_notif_title">Her öğünün önemli olmasını sağlayın!</string>
-    <string name="onboard_notif_subtitle">Öğünleri kaydetmeye yönelik nazik hatırlatıcılar için bildirimleri etkinleştirin; böylece kalorileriniz, makrolarınız ve ilerlemeniz yolunda kalsın. Kaymalar olur; zamanında yapılan dürtmeler hızla toparlanmanıza yardımcı olur.</string>
+    <string name="onboard_notif_title">Her öğün değerli olsun!</string>
+    <string name="onboard_notif_subtitle">Öğünleri kaydetmen için nazik hatırlatmalar almak üzere bildirimleri aç. Böylece kalorilerin, makroların ve ilerlemen yolunda kalır.</string>
     <string name="onboard_allow_notifications_cta">Bildirimlere izin ver</string>
     <string name="notification_mock_app_title">AI Kalori Sayacı</string>
-    <string name="onboard_notif_title_got_a_sec">Yemeğiniz kendi kendine kaydedilmeyecek 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">Kalorilerinizi ve makrolarınızı yolunda tutmak için bu yemeği kaydedin.</string>
+    <string name="onboard_notif_title_got_a_sec">Öğünün kendini kaydetmeyecek 😉</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">Kalori ve makrolarını takipte tutmak için bu öğünü kaydet.</string>
 
 
     <!-- Onboarding: HealthConnectIntroScreen -->
-    <string name="onboard_hc_connect_title_prefix">Bağlan</string>
-    <string name="onboard_hc_connect_title_service">Sağlık Bağlantısı</string>
-    <string name="onboard_hc_connect_body">Daha eksiksiz kayıtlar ve öngörüler elde etmek için günlük aktiviteyi CaloShape AI ve sağlık uygulamaları arasında senkronize edin.</string>
-    <string name="onboard_hc_permission_rationale_title_prefix">CaloShape neden kullanıyor?</string>
-    <string name="onboard_hc_permission_rationale_title_service">Sağlık Bağlantısı</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape, günlük etkinlik yakımını tahmin etmek, kalori kontrol panelinizi güncellemek ve ilerleme öngörülerini geliştirmek için adımlarınızı, aktif kalorilerinizi ve egzersiz verilerinizi okur. Health Connect\'te erişimi istediğiniz zaman iptal edebilirsiniz.</string>
+    <string name="onboard_hc_connect_title_prefix">Bağlan:</string>
+    <string name="onboard_hc_connect_title_service">Health Connect</string>
+    <string name="onboard_hc_connect_body">Daha eksiksiz kayıtlar ve içgörüler için CaloShape AI ile sağlık uygulamaları arasında günlük aktiviteyi senkronize et.</string>
+    <string name="onboard_hc_permission_rationale_title_prefix">CaloShape neden kullanır:</string>
+    <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape günlük aktivite yakımını tahmin etmek, kalori panelini güncellemek ve ilerleme içgörülerini iyileştirmek için adımlarını, aktif kalorilerini ve egzersiz verilerini okur. Erişimi Health Connect üzerinden istediğin zaman kaldırabilirsin.</string>
     <string name="onboard_hc_permission_rationale_button">Anladım</string>
 
 
     <!-- Onboarding: ComputationProgressScreen -->
-    <string name="progress_hero_title">Kişiselleştirilmiş planınızı oluşturma</string>
-    <string name="progress_hero_subtitle">Günlük hedeflerinizi uyarlamak için hedeflerinizi, vücut verilerinizi ve tercihlerinizi kullanıyoruz.</string>
-    <string name="progress_footer_hint">Bu sadece bir dakikanızı alır</string>
-    <string name="progress_center_caption">Sonuçlarınızı hazırlama</string>
-    <string name="progress_phase_pill_1">Profiliniz inceleniyor</string>
-    <string name="progress_phase_pill_2">Kalori hedefinizi hesaplama</string>
-    <string name="progress_phase_pill_3">Günlük makrolarınızı dengeleme</string>
-    <string name="progress_phase_pill_4">Sağlık içgörülerinizi sonuçlandırma</string>
-    <string name="progress_card_title">Planınızı ayarlama</string>
+    <string name="progress_hero_title">Kişisel planın oluşturuluyor</string>
+    <string name="progress_hero_subtitle">Günlük hedeflerini kişiselleştirmek için hedeflerini, vücut verilerini ve tercihlerini kullanıyoruz.</string>
+    <string name="progress_footer_hint">Bu yalnızca kısa bir süre alır</string>
+    <string name="progress_center_caption">Sonuçların hazırlanıyor</string>
+    <string name="progress_phase_pill_1">Profilin inceleniyor</string>
+    <string name="progress_phase_pill_2">Kalori hedefin hesaplanıyor</string>
+    <string name="progress_phase_pill_3">Günlük makroların dengeleniyor</string>
+    <string name="progress_phase_pill_4">Sağlık içgörülerin tamamlanıyor</string>
+    <string name="progress_card_title">Planın ayarlanıyor</string>
     <string name="progress_row_calorie_target">Günlük kalori hedefi</string>
     <string name="progress_row_carb_distribution">Karbonhidrat dağılımı</string>
     <string name="progress_row_protein_recommendation">Protein önerisi</string>
@@ -214,157 +215,157 @@
 
 
     <!-- Onboarding: HealthPlanScreen -->
-    <string name="plan_cta_start">Başlayın</string>
+    <string name="plan_cta_start">Hadi başlayalım</string>
     <string name="plan_title_congrats">Tebrikler!</string>
-    <string name="plan_subtitle_ready">Kişisel sağlık planınız hazır!</string>
-    <string name="plan_disclaimer">Kaynaklar aşağıdadır: Tüm referansları görün ›</string>
-    <string name="plan_unit_kcal_day">kalori / gün</string>
+    <string name="plan_subtitle_ready">Kişisel sağlık planın hazır!</string>
+    <string name="plan_disclaimer">Kaynaklar aşağıda: tüm referansları gör ›</string>
+    <string name="plan_unit_kcal_day">kcal / gün</string>
 
     <string name="plan_macros_proteins">Protein</string>
-    <string name="plan_macros_carbs">Karbonhidratlar</string>
-    <string name="plan_macros_fat">Yağlar</string>
+    <string name="plan_macros_carbs">Karbonhidrat</string>
+    <string name="plan_macros_fat">Yağ</string>
     <string name="plan_unit_g">g</string>
 
-    <string name="plan_water_daily">Günlük Su</string>
-    <string name="plan_weight_current">Mevcut ağırlık</string>
-    <string name="plan_weight_delta">Hedef ağırlığına ulaşmak</string>
+    <string name="plan_water_daily">Günlük su</string>
+    <string name="plan_weight_current">Mevcut kilo</string>
+    <string name="plan_weight_delta">Hedef kiloya</string>
 
-    <string name="plan_goals_title">\nhedeflerinize nasıl ulaşacaksınız?</string>
-    <string name="plan_goal_card_health_scores">Sağlık puanları size rehberlik eder, böylece alışkanlıklar doğal olarak oluşur</string>
-    <string name="plan_goal_card_track_meals">Yemekleri tek dokunuşla kaydedin; tutarlı kalmak kolaydır</string>
-    <string name="plan_goal_card_daily_calories">Günlük kalorileri net bir şekilde görün ve takibinizi asla kaybetmeyin</string>
+    <string name="plan_goals_title">Hedeflerine\nnasıl ulaşırsın</string>
+    <string name="plan_goal_card_health_scores">Sağlık puanları sana rehberlik eder, alışkanlıklar doğalca oluşur</string>
+    <string name="plan_goal_card_track_meals">Öğünleri tek dokunuşla kaydet, düzenli kalmak kolaylaşır</string>
+    <string name="plan_goal_card_daily_calories">Günlük kalorileri net gör ve takibi asla kaybetme</string>
     <string name="plan_goal_card_balance_macros">Karbonhidrat × protein × yağ, akıllı denge, daha iyi sonuçlar</string>
-    <string name="plan_sources_based_on">Resmi beslenme kurallarına dayanmaktadır,\nyalnızca referans amaçlıdır, tıbbi tavsiye değildir.</string>
-    <string name="plan_sources_more">Tüm referansları görün ›</string>
+    <string name="plan_sources_based_on">Resmi beslenme kılavuzlarına dayanır,\nyalnızca referans içindir; tıbbi tavsiye değildir.</string>
+    <string name="plan_sources_more">Tüm referansları gör ›</string>
     <string name="plan_sources_hide">Kaynakları gizle</string>
 
 
     <!-- Onboarding: OnboardReferralCodeScreen -->
-    <string name="onboard_referral_code_input">Yönlendirme kodunu girin\n(isteğe bağlı)</string>
-    <string name="onboard_referral_code_subtitle">Bu adımı atlayabilirsiniz</string>
-    <string name="onboard_referral_code_input_label">Yönlendirme kodu</string>
-    <string name="onboard_referral_code_placeholder">Yönlendirme kodu</string>
-    <string name="onboard_referral_code_submit">Göndermek</string>
+    <string name="onboard_referral_code_input">Referans kodunu gir\n(isteğe bağlı)</string>
+    <string name="onboard_referral_code_subtitle">Bu adımı atlayabilirsin</string>
+    <string name="onboard_referral_code_input_label">Referans kodu</string>
+    <string name="onboard_referral_code_placeholder">Referans kodu</string>
+    <string name="onboard_referral_code_submit">Gönder</string>
     <string name="onboard_referral_code_submitting">Gönderiliyor…</string>
-    <string name="onboard_referral_code_applied">Tavsiye kodu uygulandı!</string>
+    <string name="onboard_referral_code_applied">Referans kodu uygulandı!</string>
 
-    <string name="onboard_referral_code_error_invalid_format">Yalnızca harf ve rakamları kullanın.</string>
-    <string name="onboard_referral_code_error_invalid">Bu yönlendirme kodunu bulamadık.</string>
-    <string name="onboard_referral_code_error_self_referral">Kendi referans kodunuzu kullanamazsınız.</string>
-    <string name="onboard_referral_code_error_already_claimed">Bu hesap zaten bir yönlendirme kodu uyguladı.</string>
-    <string name="onboard_referral_code_error_already_subscribed">Abone olunan hesaplara yönlendirme kodu uygulanamaz.</string>
-    <string name="onboard_referral_code_error_disabled">Yönlendirme geçici olarak kullanılamıyor.</string>
-    <string name="onboard_referral_code_error_risk">Şu anda yönlendirme kodunu uygulayamıyoruz.</string>
-    <string name="onboard_referral_code_error_network">Şu anda uygulayamıyoruz. Lütfen daha sonra tekrar deneyin.</string>
-    <string name="onboard_referral_code_error_unknown">Yönlendirme kodu şu anda uygulanamıyor.\nLütfen daha sonra tekrar deneyin.</string>
+    <string name="onboard_referral_code_error_invalid_format">Yalnızca harf ve rakam kullan.</string>
+    <string name="onboard_referral_code_error_invalid">Bu referans kodunu bulamadık.</string>
+    <string name="onboard_referral_code_error_self_referral">Kendi referans kodunu kullanamazsın.</string>
+    <string name="onboard_referral_code_error_already_claimed">Bu hesap zaten bir referans kodu kullanmış.</string>
+    <string name="onboard_referral_code_error_already_subscribed">Abone hesaplar referans kodu kullanamaz.</string>
+    <string name="onboard_referral_code_error_disabled">Referans sistemi geçici olarak kullanılamıyor.</string>
+    <string name="onboard_referral_code_error_risk">Şu anda referans kodu uygulanamıyor.</string>
+    <string name="onboard_referral_code_error_network">Şu anda uygulanamıyor. Lütfen daha sonra tekrar deneyin.</string>
+    <string name="onboard_referral_code_error_unknown">Referans kodu şu anda uygulanamıyor.\nLütfen daha sonra tekrar deneyin.</string>
 
 
     <!-- Onboarding: OnboardSubscriptionScreen  Paywall -->
     <string name="subscription_price_per_month_format">%1$s/ay</string>
     <string name="subscription_price_per_month_unit">/ay</string>
-    <string name="subscription_price_unavailable_title">Fiyat mevcut değil</string>
-    <string name="subscription_price_unavailable_body">Şu anda yerel Google Play fiyatınızı alamadık. Lütfen tekrar deneyin.</string>
+    <string name="subscription_price_unavailable_title">Fiyat kullanılamıyor</string>
+    <string name="subscription_price_unavailable_body">Yerel Google Play fiyatını şu anda alamadık. Lütfen tekrar deneyin.</string>
 
 
     <!-- Onboarding: OnboardSubscriptionIntro -->
-    <string name="subscription_intro_title">Hedeflerinize \ndaha hızlı ulaşmak için CaloShape AI\'nın kilidini açın.</string>
-    <string name="subscription_intro_helper_format">Yılda yalnızca %1$s (%2$s)</string>
-    <string name="subscription_start_three_day_free_trial">3 gün boyunca ücretsiz deneyin</string>
-    <string name="subscription_three_day_trial_helper_format">Yalnızca %1$s/yıl (%2$s/ay)</string>
-    <string name="subscription_already_owned_restore_required">Google Play hesabınızda zaten etkin bir CaloShape aboneliği var. Premium özellikleri kullanmadan önce bu CaloShape hesabına geri yükleyin.</string>
+    <string name="subscription_intro_title">Hedeflerine daha hızlı ulaşmak için\nCaloShape AI kilidini aç.</string>
+    <string name="subscription_intro_helper_format">Yılda sadece %1$s (%2$s)</string>
+    <string name="subscription_start_three_day_free_trial">3 gün ücretsiz dene</string>
+    <string name="subscription_three_day_trial_helper_format">Sadece %1$s/yıl (%2$s/ay)</string>
+    <string name="subscription_already_owned_restore_required">Google Play hesabında zaten aktif bir CaloShape aboneliği var. Premium özellikleri kullanmadan önce bunu bu CaloShape hesabına geri yükle.</string>
     <string name="subscription_error_no_active_purchase">Aktif satın alma bulunamadı.</string>
-    <string name="subscription_error_restore_failed">Satın alma işlemi geri yüklenemedi. Lütfen tekrar deneyin.</string>
-    <string name="subscription_error_purchase_failed">Satın alma başarısız oldu. Lütfen tekrar deneyin.</string>
-    <string name="subscription_error_purchase_pending">Ödeme işleniyor. Premium erişim, Google Play satın alma işlemini onayladıktan sonra mümkün olacaktır.</string>
-    <string name="subscription_error_trial_eligibility_failed">Deneme uygunluğu kontrol edilemiyor. Lütfen tekrar deneyin.</string>
+    <string name="subscription_error_restore_failed">Satın alma geri yüklenemedi. Lütfen tekrar deneyin.</string>
+    <string name="subscription_error_purchase_failed">Satın alma başarısız. Lütfen tekrar deneyin.</string>
+    <string name="subscription_error_purchase_pending">Ödeme işleniyor. Google Play satın almayı onayladıktan sonra Premium erişim kullanılabilir olacak.</string>
+    <string name="subscription_error_trial_eligibility_failed">Deneme uygunluğu kontrol edilemedi. Lütfen tekrar deneyin.</string>
     <string name="restore_subscription_dialog_title">Abonelik bulundu</string>
     <string name="settings_restore_subscription">Aboneliği geri yükle</string>
     <string name="restore_subscription_dialog_restoring">Geri yükleniyor…</string>
-    <string name="common_maybe_later">Belki daha sonra</string>
+    <string name="common_maybe_later">Belki sonra</string>
 
 
     <!-- Onboarding: OnboardDiscountSpinScreen-->
-    <string name="subscription_spin_title">Özel bir indirimin kilidini açmak için döndürün\n</string>
-    <string name="subscription_spin_helper_ready">Özel hediyenizi ortaya çıkarmak için Çevir\'e dokunun.</string>
-    <string name="subscription_spin_button">Döndürmek</string>
-    <string name="subscription_spinning_button">Dönüyor…</string>
-    <string name="subscription_gift_offer_unlocked">Hediye teklifinin kilidi açıldı</string>
-    <string name="subscription_spin_helper_wait">Lütfen tekerlek durana kadar bekleyin.</string>
-    <string name="subscription_spin_helper_revealed">Bu teklif çark durduktan sonra ortaya çıkar.</string>
+    <string name="subscription_spin_title">Özel indirimi açmak için\nçevir</string>
+    <string name="subscription_spin_helper_ready">Özel hediyeni görmek için Çevir’e dokun.</string>
+    <string name="subscription_spin_button">Çevir</string>
+    <string name="subscription_spinning_button">Çevriliyor…</string>
+    <string name="subscription_gift_offer_unlocked">Hediye teklifi açıldı</string>
+    <string name="subscription_spin_helper_wait">Lütfen çark durana kadar bekle.</string>
+    <string name="subscription_spin_helper_revealed">Bu teklif çark durduktan sonra gösterilir.</string>
 
 
     <!-- Onboarding: OneTimeOfferHeroCard-->
-    <string name="subscription_gift_unlocked_title">Hediyenin kilidi açıldı 🎁</string>
-    <string name="subscription_gift_price_unlocked">Hediye fiyatının kilidi açıldı</string>
-    <string name="subscription_unlock_premium_for_only">Yalnızca premiumun kilidini açın</string>
-    <string name="subscription_discount_body">Yemekleri daha hızlı tarayın. Makroları daha akıllı takip edin.\nGünlük plana sadık kalın.</string>
+    <string name="subscription_gift_unlocked_title">Hediye açıldı 🎁</string>
+    <string name="subscription_gift_price_unlocked">Hediye fiyatı açıldı</string>
+    <string name="subscription_unlock_premium_for_only">Premium’u sadece şu fiyata aç</string>
+    <string name="subscription_discount_body">Öğünleri daha hızlı tara. Makroları daha akıllı takip et.\nHer gün planda kal.</string>
     <string name="subscription_yearly_price_format">%1$s/yıl</string>
     <string name="subscription_urgency_coffee">Bir kahveden daha az</string>
-    <string name="subscription_urgency_price_gone">Bu ekran kapatılsın mı? Bu fiyat kaçtı</string>
+    <string name="subscription_urgency_price_gone">Bu ekranı kapatırsan bu fiyat gider</string>
     <string name="subscription_urgency_waiting">Ne bekliyorsun?</string>
 
-    <string name="subscription_trial_enabled">Ücretsiz deneme etkinleştirildi</string>
-    <string name="subscription_trial_enable_prompt">Emin değil misiniz? Ücretsiz denemeyi etkinleştirin</string>
-    <string name="subscription_trial_checking_eligibility">Deneme kullanılabilirliği kontrol ediliyor…</string>
-    <string name="subscription_trial_already_used">Deneme zaten kullanıldı</string>
+    <string name="subscription_trial_enabled">Ücretsiz deneme etkin</string>
+    <string name="subscription_trial_enable_prompt">Emin değil misin? Ücretsiz denemeyi aç</string>
+    <string name="subscription_trial_checking_eligibility">Deneme uygunluğu kontrol ediliyor…</string>
+    <string name="subscription_trial_already_used">Deneme zaten kullanılmış</string>
     <string name="subscription_trial_unavailable">Ücretsiz deneme kullanılamıyor</string>
 
     <string name="subscription_badge_free_trial">Ücretsiz deneme</string>
     <string name="subscription_badge_lowest_price_ever">Şimdiye kadarki en düşük fiyat</string>
     <string name="subscription_yearly_plan">Yıllık Plan</string>
-    <string name="subscription_yearly_plan_price_format">12ay · %1$s</string>
+    <string name="subscription_yearly_plan_price_format">12 ay · %1$s</string>
 
-    <string name="subscription_start_free_trial">3 gün boyunca ücretsiz deneyin</string>
-    <string name="subscription_trial_helper">Taahhüt yok; istediğiniz zaman iptal edin</string>
-    <string name="subscription_discount_terms_format">Yalnızca %1$s/yıl (%2$s/ay)</string>
-    <string name="subscription_discount_trial_terms_format">Taahhüt Yok - İstediğiniz Zaman İptal Edin</string>
+    <string name="subscription_start_free_trial">3 gün ücretsiz dene</string>
+    <string name="subscription_trial_helper">Taahhüt yok — istediğin zaman iptal et</string>
+    <string name="subscription_discount_terms_format">Sadece %1$s/yıl (%2$s/ay)</string>
+    <string name="subscription_discount_trial_terms_format">Taahhüt yok — istediğin zaman iptal et</string>
 
 
     <!-- HomeScreen -->
-    <string name="recently_uploaded">Yakın zamanda yüklenen</string>
-    <string name="workout_membership_verify_failed">Üyelik doğrulanamıyor. Lütfen tekrar deneyin.</string>
+    <string name="recently_uploaded">Son yüklenenler</string>
+    <string name="workout_membership_verify_failed">Üyelik doğrulanamadı. Lütfen tekrar deneyin.</string>
 
 
     <!-- MainBottomBar -->
-    <string name="bottom_nav_home">Ev</string>
-    <string name="bottom_nav_progress">İlerlemek</string>
-    <string name="bottom_nav_weight">Ağırlık</string>
+    <string name="bottom_nav_home">Ana sayfa</string>
+    <string name="bottom_nav_progress">İlerleme</string>
+    <string name="bottom_nav_weight">Kilo</string>
     <string name="bottom_nav_fasting">Oruç</string>
-    <string name="bottom_nav_workout">Antrenman yapmak</string>
+    <string name="bottom_nav_workout">Egzersiz</string>
 
 
     <!-- =============   HomeCards  ============= -->
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">Kalan kalori</string>
-    <string name="home_calories_eaten_label">Yenilen kaloriler</string>
+    <string name="home_calories_goal_label">Kalan kcal</string>
+    <string name="home_calories_eaten_label">Alınan kcal</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">Kalan protein</string>
-    <string name="home_protein_eaten_label">Yenilen protein</string>
+    <string name="home_protein_eaten_label">Alınan protein</string>
     <string name="home_carbs_goal_label">Kalan karbonhidrat</string>
-    <string name="home_carbs_eaten_label">Yenilen karbonhidratlar</string>
-    <string name="home_fats_goal_label">Kalan yağlar</string>
-    <string name="home_fats_eaten_label">Yenilen yağlar</string>
-    <string name="home_fiber_goal_label">Fiber sol</string>
-    <string name="home_fiber_eaten_label">Lif yenildi</string>
-    <string name="home_sugar_goal_label">Şeker kaldı</string>
-    <string name="home_sugar_eaten_label">Yenen şeker</string>
-    <string name="home_sodium_goal_label">Sodyum kaldı</string>
-    <string name="home_sodium_eaten_label">Yenen sodyum</string>
+    <string name="home_carbs_eaten_label">Alınan karbonhidrat</string>
+    <string name="home_fats_goal_label">Kalan yağ</string>
+    <string name="home_fats_eaten_label">Alınan yağ</string>
+    <string name="home_fiber_goal_label">Kalan lif</string>
+    <string name="home_fiber_eaten_label">Alınan lif</string>
+    <string name="home_sugar_goal_label">Kalan şeker</string>
+    <string name="home_sugar_eaten_label">Alınan şeker</string>
+    <string name="home_sodium_goal_label">Kalan sodyum</string>
+    <string name="home_sodium_eaten_label">Alınan sodyum</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
     <!-- HomeCards :  Health Score Card & Advice -->
-    <string name="home_health_score_advice_zero">Beslenme ayrıntılarına dayalı sağlık puanını görmek için bugün ilk yemeğinizi kaydedin.</string>
-    <string name="home_health_score_advice_very_low">Bugünün ortalaması düşük. Daha fazla protein, lif ve daha az şeker veya sodyum düşünün.</string>
-    <string name="home_health_score_advice_low">İyileştirilecek yer var. Sebze ve kaliteli protein eklemeyi deneyin.</string>
-    <string name="home_health_score_advice_medium">Doğru yoldasın. Porsiyonları sabit tutun ve şekeri, sodyumu ve lifi izleyin.</string>
-    <string name="home_health_score_advice_good">Bugün denge iyi. Besin değeri yoğun yiyecekleri seçmeye devam edin.</string>
-    <string name="home_health_score_advice_excellent">Bugün harika bir denge. Tutarlı alışkanlıklar oluşturmaya devam edin.</string>
+    <string name="home_health_score_advice_zero">Besin ayrıntılarına göre sağlık puanını görmek için bugün ilk öğününü kaydet.</string>
+    <string name="home_health_score_advice_very_low">Bugünün ortalaması düşük. Daha fazla protein ve lif, daha az şeker veya sodyum düşün.</string>
+    <string name="home_health_score_advice_low">Geliştirme alanı var. Sebze ve kaliteli protein eklemeyi dene.</string>
+    <string name="home_health_score_advice_medium">Doğru yoldasın. Porsiyonları sabit tut; şeker, sodyum ve lifi takip et.</string>
+    <string name="home_health_score_advice_good">Bugün iyi denge. Besin değeri yüksek yiyecekleri seçmeye devam et.</string>
+    <string name="home_health_score_advice_excellent">Bugün harika denge. Tutarlı alışkanlıklar oluşturmaya devam et.</string>
     <string name="home_health_score_title">Sağlık Puanı</string>
     <string name="home_health_score_value">%1$d/10</string>
 
@@ -372,107 +373,107 @@
     <!-- HomeCards : Step Card -->
     <string name="steps_card_title">Adımlar</string>
     <string name="steps_status_permission_not_granted">Yetkili değil</string>
-    <string name="steps_status_hc_not_installed">Kurulu değil</string>
+    <string name="steps_status_hc_not_installed">Yüklü değil</string>
     <string name="steps_status_hc_unavailable">Kullanılamıyor</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
     <string name="steps_secondary_no_data_yet">Henüz veri yok</string>
-    <string name="steps_secondary_connect">Bağlamak</string>
-    <string name="steps_hint_connect_google_health">Adımlarınızı takip etmek için Google Health\'i bağlayın</string>
-    <string name="steps_hint_install_health_connect">Adımlarınızı takip etmek için Health Connect\'i yükleyin</string>
+    <string name="steps_secondary_connect">Bağlan</string>
+    <string name="steps_hint_connect_google_health">Adımlarını takip etmek için Google Health’e bağlan</string>
+    <string name="steps_hint_install_health_connect">Adımlarını takip etmek için Health Connect’i yükle</string>
     <string name="steps_hint_hc_unavailable">Health Connect bu cihazda kullanılamıyor</string>
-    <string name="steps_hint_retry">Senkronizasyon başarısız oldu. Yeniden denemek için dokunun</string>
+    <string name="steps_hint_retry">Senkronizasyon başarısız. Tekrar denemek için dokun</string>
 
 
     <!-- HomeCards : Workout Card -->
-    <string name="workout_card_title">Antrenman yapmak</string>
+    <string name="workout_card_title">Egzersiz</string>
     <string name="workout_card_unit_kcal">kcal</string>
 
 
     <!-- HomeCards : Weight Card -->
-    <string name="weight_card_title">Ağırlık</string>
+    <string name="weight_card_title">Kilo</string>
     <string name="weight_card_of_goal">hedefin</string>
 
 
     <!-- HomeCards : Fasting Card -->
     <string name="fasting_card_plan_title">Oruç Planı</string>
-    <string name="fasting_card_start_time">Başlangıç ​​zamanı</string>
-    <string name="fasting_card_end_time">Bitiş zamanı</string>
+    <string name="fasting_card_start_time">Başlangıç saati</string>
+    <string name="fasting_card_end_time">Bitiş saati</string>
 
 
     <!-- HomeCards : Water Card -->
-    <string name="water_intake_title">su</string>
+    <string name="water_intake_title">Su</string>
     <string name="water_intake_cups_format">(%1$d bardak)</string>
 
 
     <!-- =========================
          ProgressScreen
          ========================= -->
-    <string name="progress_screen_title">İlerlemek</string>
+    <string name="progress_screen_title">İlerleme</string>
     <string name="progress_tab_this_week">Bu hafta</string>
     <string name="progress_tab_last_week">Geçen hafta</string>
-    <string name="progress_tab_two_weeks_ago">2 hafta. evvel</string>
-    <string name="progress_tab_three_weeks_ago">3 hafta. evvel</string>
-    <string name="progress_error_load_failed">Yükleme başarısız oldu</string>
-    <string name="workout_chart_error_load_failed">Antrenman grafiği yüklenemedi</string>
+    <string name="progress_tab_two_weeks_ago">2 hafta önce</string>
+    <string name="progress_tab_three_weeks_ago">3 hafta önce</string>
+    <string name="progress_error_load_failed">Yükleme başarısız</string>
+    <string name="workout_chart_error_load_failed">Egzersiz grafiği yüklenemedi</string>
     <string name="water_chart_error_load_failed">Su grafiği yüklenemedi</string>
 
 
     <!-- =========================
          BMI Card / BMI Info Dialog
          ========================= -->
-    <string name="bmi_card_title">BMI\'ınız</string>
-    <string name="bmi_card_subtitle">Ağırlığınız</string>
+    <string name="bmi_card_title">BMI değerin</string>
+    <string name="bmi_card_subtitle">Kilon</string>
 
-    <string name="bmi_status_underweight">Düşük kilolu</string>
+    <string name="bmi_status_underweight">Düşük kilo</string>
     <string name="bmi_status_healthy">Sağlıklı</string>
     <string name="bmi_status_overweight">Fazla kilolu</string>
     <string name="bmi_status_obese">Obez</string>
     <string name="bmi_status_unknown">Bilinmiyor</string>
 
-    <string name="bmi_range_underweight">&lt;18,5</string>
-    <string name="bmi_range_healthy">18,5–24,9</string>
+    <string name="bmi_range_underweight">&lt;18.5</string>
+    <string name="bmi_range_healthy">18.5–24.9</string>
     <string name="bmi_range_overweight">25.0–29.9</string>
     <string name="bmi_range_obese">&gt;30.0</string>
 
     <string name="bmi_info_title">BMI nedir?</string>
     <string name="bmi_info_subtitle">Vücut Kitle İndeksi</string>
     <string name="bmi_info_formula_title">Formül</string>
-    <string name="bmi_info_formula_value">BMI = ağırlık (kg) / boy (m²)</string>
-    <string name="bmi_info_meaning_title">Sana ne anlatıyor</string>
-    <string name="bmi_info_meaning_body">BMI, vücut ağırlığınızın genel olarak sağlıklı bir aralıkta olup olmadığını tahmin etmeye yardımcı olur.</string>
-    <string name="bmi_info_note_title">Aklında tut</string>
-    <string name="bmi_info_note_body">BMI genel bir kılavuzdur. Vücut yağını, kas kütlesini veya genel sağlığı doğrudan ölçmez.</string>
+    <string name="bmi_info_formula_value">BMI = kilo (kg) / boy (m²)</string>
+    <string name="bmi_info_meaning_title">Ne anlatır?</string>
+    <string name="bmi_info_meaning_body">BMI, vücut ağırlığının genel olarak sağlıklı aralıkta olup olmadığını tahmin etmeye yardımcı olur.</string>
+    <string name="bmi_info_note_title">Aklında bulunsun</string>
+    <string name="bmi_info_note_body">BMI genel bir göstergedir. Vücut yağını, kas kütlesini veya genel sağlığı doğrudan ölçmez.</string>
     <string name="bmi_info_cta">Anladım</string>
 
 
     <!-- =========================
          NutritionChartCard
          ========================= -->
-    <string name="progress_chart_7day_avg_calories">7 günlük ortalama</string>
-    <string name="progress_chart_value_cals">%1$d cal</string>
-    <string name="progress_chart_15day_avg_calories">15 günlük ortalama</string>
-    <string name="progress_chart_loading_total_calories_text">---.- cals</string>
+    <string name="progress_chart_7day_avg_calories">7 gün ort.</string>
+    <string name="progress_chart_value_cals">%1$d kcal</string>
+    <string name="progress_chart_15day_avg_calories">15 gün ort.</string>
+    <string name="progress_chart_loading_total_calories_text">--.- kcal</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
-    <string name="progress_chart_total_calories">Toplam kalori</string>
-    <string name="progress_chart_cals">cals</string>
+    <string name="progress_chart_total_calories">Toplam kcal</string>
+    <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Protein</string>
-    <string name="progress_legend_carbs">Karbonhidratlar</string>
-    <string name="progress_legend_fats">Yağlar</string>
-    <string name="progress_keep_it_up">Aynen böyle devam! Başlamak en zor kısımdır!</string>
+    <string name="progress_legend_carbs">Karbonhidrat</string>
+    <string name="progress_legend_fats">Yağ</string>
+    <string name="progress_keep_it_up">Devam et! Başlamak en zor kısımdır!</string>
 
-    <string name="progress_day_sun">Güneş</string>
-    <string name="progress_day_mon">Pazartesi</string>
-    <string name="progress_day_tue">Salı</string>
+    <string name="progress_day_sun">Paz</string>
+    <string name="progress_day_mon">Pzt</string>
+    <string name="progress_day_tue">Sal</string>
     <string name="progress_day_wed">Çar</string>
     <string name="progress_day_thu">Per</string>
-    <string name="progress_day_fri">Cuma</string>
-    <string name="progress_day_sat">Doygunluk</string>
+    <string name="progress_day_fri">Cum</string>
+    <string name="progress_day_sat">Cmt</string>
 
-    <string name="progress_tooltip_calories">Kalori</string>
+    <string name="progress_tooltip_calories">kcal</string>
     <string name="progress_tooltip_protein">Protein</string>
-    <string name="progress_tooltip_carbs">Karbonhidratlar</string>
-    <string name="progress_tooltip_fats">Yağlar</string>
+    <string name="progress_tooltip_carbs">Karbonhidrat</string>
+    <string name="progress_tooltip_fats">Yağ</string>
     <string name="progress_tooltip_label_format">%1$s:</string>
     <string name="progress_tooltip_grams_value">%1$d g</string>
     <string name="progress_tooltip_plain_value">%1$d</string>
@@ -483,12 +484,12 @@
          ========================= -->
     <string name="progress_micronutrients_title">Mikro besinler</string>
     <string name="progress_chart_grams">g</string>
-    <string name="progress_chart_7day_avg">7 günlük ortalama</string>
-    <string name="progress_legend_fiber">Elyaf</string>
+    <string name="progress_chart_7day_avg">7 gün ort.</string>
+    <string name="progress_legend_fiber">Lif</string>
     <string name="progress_legend_sugar">Şeker</string>
     <string name="progress_legend_sodium">Sodyum</string>
-    <string name="progress_micronutrients_keep_it_up">Lif, şeker ve sodyumunuzu dengede tutun.</string>
-    <string name="progress_tooltip_fiber">Elyaf</string>
+    <string name="progress_micronutrients_keep_it_up">Lif, şeker ve sodyumu dengede tut.</string>
+    <string name="progress_tooltip_fiber">Lif</string>
     <string name="progress_tooltip_sugar">Şeker</string>
     <string name="progress_tooltip_sodium">Sodyum</string>
     <string name="progress_tooltip_mg_value">%1$d mg</string>
@@ -497,35 +498,35 @@
     <!-- =========================
          WorkoutChartCard
          ========================= -->
-    <string name="workout_chart_goal_reached">Hedefe bugün ulaşıldı</string>
-    <string name="workout_chart_goal_left">Bugünlük golü atmak için %1$d kcal kaldı</string>
-    <string name="workout_chart_title">Egzersiz yanığı</string>
-    <string name="workout_chart_info_dialog_body">Kayıtlı antrenmanları ve günlük adımlardan tahmin edilen aktivite kalorilerini içerir.</string>
+    <string name="workout_chart_goal_reached">Bugünkü hedefe ulaşıldı</string>
+    <string name="workout_chart_goal_left">Bugünkü hedefe ulaşmak için %1$d kcal kaldı</string>
+    <string name="workout_chart_title">Egzersiz yakımı</string>
+    <string name="workout_chart_info_dialog_body">Kaydedilen egzersizleri ve günlük adımlardan tahmin edilen aktivite kalorilerini içerir.</string>
     <string name="workout_chart_unit_kcal">kcal</string>
-    <string name="workout_chart_goal">Amaç</string>
+    <string name="workout_chart_goal">Hedef</string>
     <string name="workout_chart_value_kcal">%1$d kcal</string>
-    <string name="workout_chart_7day_avg">7 günlük ortalama</string>
+    <string name="workout_chart_7day_avg">7 gün ort.</string>
     <string name="workout_chart_loading">Yükleniyor…</string>
-    <string name="workout_legend_burned">Antrenman yakıldı</string>
+    <string name="workout_legend_burned">Egzersiz yakımı</string>
     <string name="workout_legend_daily_goal">Günlük hedef</string>
-    <string name="workout_tooltip_burned">Yanmış</string>
+    <string name="workout_tooltip_burned">Yakılan</string>
     <string name="workout_tooltip_kcal_value">%1$d kcal</string>
 
 
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_goal_reached">Bugün için hedefe ulaşıldı</string>
-    <string name="water_chart_goal_left_ml">Bugünlük hedefe ulaşmak için %1$s ml kaldı</string>
-    <string name="water_chart_title">Su alımı</string>
+    <string name="water_chart_goal_reached">Bugünkü hedefe ulaşıldı</string>
+    <string name="water_chart_goal_left_ml">Bugünkü hedefe ulaşmak için %1$s ml kaldı</string>
+    <string name="water_chart_title">Su tüketimi</string>
     <string name="water_chart_unit_ml">ml</string>
-    <string name="water_chart_goal">Amaç</string>
+    <string name="water_chart_goal">Hedef</string>
     <string name="water_chart_value_ml">%1$s ml</string>
-    <string name="water_chart_7day_avg">7 günlük ortalama</string>
+    <string name="water_chart_7day_avg">7 gün ort.</string>
     <string name="water_chart_loading">Yükleniyor…</string>
-    <string name="water_legend_intake">Giriş</string>
+    <string name="water_legend_intake">Tüketim</string>
     <string name="water_legend_daily_goal">Günlük hedef</string>
-    <string name="water_tooltip_intake">Giriş</string>
+    <string name="water_tooltip_intake">Tüketim</string>
     <string name="water_tooltip_ml_value">%1$d ml</string>
 
 
@@ -537,19 +538,19 @@
     <string name="progress_average_tab_30_days">30 gün</string>
     <string name="progress_average_tab_60_days">60 gün</string>
 
-    <string name="progress_average_overview_title">Ortalamaya Genel Bakış</string>
-    <string name="progress_average_overview_subtitle">Bugünü hariç tutar ve yalnızca veri içeren günlerin ortalamasını alır.</string>
-    <string name="progress_average_days_badge">%1$d günlük ortalama</string>
+    <string name="progress_average_overview_title">Ortalama Özeti</string>
+    <string name="progress_average_overview_subtitle">Bugünü hariç tutar ve yalnızca veri olan günlerin ortalamasını alır.</string>
+    <string name="progress_average_days_badge">%1$d günlük ort.</string>
     <string name="progress_average_loading">Ortalamalar yükleniyor…</string>
-    <string name="progress_average_total_calories">Toplam kalori</string>
+    <string name="progress_average_total_calories">Toplam kcal</string>
     <string name="progress_average_protein">Protein</string>
-    <string name="progress_average_carbs">Karbonhidratlar</string>
-    <string name="progress_average_fats">Yağlar</string>
-    <string name="progress_average_fiber">Elyaf</string>
+    <string name="progress_average_carbs">Karbonhidrat</string>
+    <string name="progress_average_fats">Yağ</string>
+    <string name="progress_average_fiber">Lif</string>
     <string name="progress_average_sugar">Şeker</string>
     <string name="progress_average_sodium">Sodyum</string>
-    <string name="progress_average_workout">Antrenman yakıldı</string>
-    <string name="progress_average_water">Su alımı</string>
+    <string name="progress_average_workout">Egzersiz yakımı</string>
+    <string name="progress_average_water">Su tüketimi</string>
     <string name="progress_average_health_score">Sağlık puanı</string>
     <string name="progress_average_steps">Adımlar</string>
     <string name="progress_average_health_score_value">%1$.1f / 10</string>
@@ -557,140 +558,140 @@
 
 
     <!--WeightScreen-->
-    <string name="weight_title">Ağırlık</string>
-    <string name="weight_overview_title">Genel Bakış</string>
-    <string name="weight_history_title">Tarih</string>
+    <string name="weight_title">Kilo</string>
+    <string name="weight_overview_title">Özet</string>
+    <string name="weight_history_title">Geçmiş</string>
     <string name="weight_delete_success">Başarıyla silindi!</string>
-    <string name="weight_delete_failed">Silinemedi. Lütfen tekrar deneyin.</string>
-    <string name="weight_log_weight">Günlük ağırlığı</string>
+    <string name="weight_delete_failed">Silme başarısız. Lütfen tekrar deneyin.</string>
+    <string name="weight_log_weight">Kilo kaydet</string>
 
 
     <!-- WeightComponents -->
-    <string name="weight_card_to_goal_weight">Hedef ağırlığına ulaşmak</string>
-    <string name="weight_card_current_weight">Mevcut ağırlık</string>
-    <string name="weight_card_achieved_goal_format">Hedefin %%1$s%\'sine ulaşıldı</string>
+    <string name="weight_card_to_goal_weight">Hedef kiloya</string>
+    <string name="weight_card_current_weight">Mevcut kilo</string>
+    <string name="weight_card_achieved_goal_format">Hedefin %1$s%% kadarına ulaşıldı</string>
     <string name="weight_chart_tab_30_days">30 gün</string>
     <string name="weight_chart_tab_60_days">60 gün</string>
     <string name="weight_chart_tab_90_days">90 gün</string>
     <string name="weight_chart_tab_all_time">Tüm zamanlar</string>
-    <string name="weight_chart_title">Ağırlık eğilimi</string>
-    <string name="weight_chart_goal_progress_badge">Hedefin %1$s%%\'si</string>
-    <string name="weight_chart_goal_label">Amaç</string>
-    <string name="weight_chart_to_goal">Hedefe %1$s</string>
-    <string name="weight_goal_chart_empty_hint">Trendinizi başlatmak için ağırlığı kaydedin</string>
-    <string name="weight_chart_motivation">Her küçük adım sizi hedefinize yaklaştırır.</string>
-    <string name="weight_history_weight_label">Ağırlık</string>
-    <string name="weight_history_change_label">Değiştirmek</string>
-    <string name="weight_history_trend_loss">KAYIP</string>
-    <string name="weight_history_trend_gain">KAZANMAK</string>
-    <string name="weight_history_trend_stable">STABİL</string>
+    <string name="weight_chart_title">Kilo eğilimi</string>
+    <string name="weight_chart_goal_progress_badge">Hedefin %1$s%%</string>
+    <string name="weight_chart_goal_label">Hedef</string>
+    <string name="weight_chart_to_goal">Hedefe %1$s kaldı</string>
+    <string name="weight_goal_chart_empty_hint">Eğilimi başlatmak için kilo kaydet</string>
+    <string name="weight_chart_motivation">Her küçük adım seni hedefe yaklaştırır.</string>
+    <string name="weight_history_weight_label">Kilo</string>
+    <string name="weight_history_change_label">Değişim</string>
+    <string name="weight_history_trend_loss">AZALMA</string>
+    <string name="weight_history_trend_gain">ARTIŞ</string>
+    <string name="weight_history_trend_stable">SABİT</string>
 
 
     <!-- FastingPlansScreen -->
     <string name="fasting_plan_title">Oruç Planı</string>
-    <string name="start_time">Başlangıç ​​zamanı</string>
-    <string name="end_time">Bitiş zamanı</string>
-    <string name="fasting_notification_info_status_on">Hatırlatıcılar açık. Cihaz bildirimi iznine izin veriliyorsa bu hatırlatıcılar her gün tekrarlanır.</string>
-    <string name="fasting_notification_info_status_off">Hatırlatıcılar kapalı. Bu bildirimleri almak için Ev orucu kartındaki anahtarı açın.</string>
+    <string name="start_time">Başlangıç saati</string>
+    <string name="end_time">Bitiş saati</string>
+    <string name="fasting_notification_info_status_on">Hatırlatmalar açık. Cihaz bildirim izni açıksa bu hatırlatmalar her gün tekrarlanır.</string>
+    <string name="fasting_notification_info_status_off">Hatırlatmalar kapalı. Bu bildirimleri almak için Ana sayfadaki oruç kartındaki anahtarı aç.</string>
     <string name="fasting_notification_info_status_enabled_label">Açık</string>
     <string name="fasting_notification_info_status_disabled_label">Kapalı</string>
-    <string name="fasting_notification_info_title">Hatırlatıcılar nasıl çalışır?</string>
-    <string name="fasting_notification_info_subtitle">%1$s planınız %2$s tarihinde sona eriyor. Hatırlatıcılar açıkken CaloShape iki günlük bildirim gönderir.</string>
-    <string name="fasting_notification_info_at_time">%1$s adresinde</string>
-    <string name="fasting_notification_info_start_title">Yemek penceresi başlıyor</string>
-    <string name="fasting_notification_info_start_body">Gerektiğinde yemeye başlayabilir ve öğünleri kaydedebilirsiniz.</string>
-    <string name="fasting_notification_info_endsoon_title">Yemek yeme dönemi yakında sona eriyor</string>
-    <string name="fasting_notification_info_endsoon_body">%1$s saatinde pencerenin kapanmasından bir saat önce CaloShape size son yemeğinizi bitirmenizi hatırlatır.</string>
+    <string name="fasting_notification_info_title">Hatırlatmalar nasıl çalışır?</string>
+    <string name="fasting_notification_info_subtitle">%1$s planın %2$s saatinde biter. Hatırlatmalar açıkken CaloShape günde iki bildirim gönderir.</string>
+    <string name="fasting_notification_info_at_time">%1$s saatinde</string>
+    <string name="fasting_notification_info_start_title">Yeme penceresi başlar</string>
+    <string name="fasting_notification_info_start_body">Yemeye başlayabilir ve gerektiğinde öğün kaydedebilirsin.</string>
+    <string name="fasting_notification_info_endsoon_title">Yeme penceresi yakında bitiyor</string>
+    <string name="fasting_notification_info_endsoon_body">Pencere %1$s saatinde kapanmadan bir saat önce CaloShape son öğününü bitirmeni hatırlatır.</string>
 
-    <string name="fasting_plan_desc_14_10">İştah ipuçlarını ve enerjiyi sıfırlamak için 14 saat boyunca sabit bir ritimle rahatlayın.</string>
-    <string name="fasting_plan_desc_16_8">Kalabalığın favori olmasının bir nedeni var: 16 saat boyunca odaklanmış ve formda kalmak.</string>
-    <string name="fasting_plan_desc_12_12">Dengeli bölünme: 12 saat hızlı, 12 saatlik aralıkta yemek yiyin; yeni başlayanlar için mükemmel.</string>
-    <string name="fasting_plan_desc_18_6">6 saatlik bir yemek aralığıyla birlikte 18 saatlik oruç; 16:8\'den daha yalın bir program.</string>
-    <string name="fasting_plan_desc_20_4">Lazer odaklı kalın; 4 saatlik dar bir aralıkta 1-2 dikkatli öğün.</string>
-    <string name="fasting_plan_desc_22_2">2 saatlik aralıklarla kasıtlı bir öğün; su alımını yüksek tutun.</string>
+    <string name="fasting_plan_desc_14_10">Dengeli bir ritimle başla — iştah sinyallerini ve enerjiyi yenilemek için 14 saat.</string>
+    <string name="fasting_plan_desc_16_8">Boşuna favori değil — odaklanmak ve daha hafif bir ritme girmek için 16 saat.</string>
+    <string name="fasting_plan_desc_12_12">Dengeli bölünme: 12 saat oruç, 12 saat yeme penceresi — yeni başlayanlar için ideal.</string>
+    <string name="fasting_plan_desc_18_6">18 saat oruç ve 6 saat yeme penceresi — 16:8’den daha sıkı bir plan.</string>
+    <string name="fasting_plan_desc_20_4">Tam odakta kal — dar 4 saatlik pencerede 1–2 bilinçli öğün.</string>
+    <string name="fasting_plan_desc_22_2">2 saatlik aralıkta tek bilinçli öğün — su tüketimini yüksek tut.</string>
 
-    <string name="fasting_picker_title">Oruç başlangıç ​​saatinizi ayarlayın</string>
-    <string name="fasting_picker_subtitle">Her gün bu saatte, yeme aralığınız başladığında size hatırlatacağız.</string>
+    <string name="fasting_picker_title">Oruç başlangıç saatini ayarla</string>
+    <string name="fasting_picker_subtitle">Yeme penceren başladığında seni her gün bu saatte hatırlatacağız.</string>
     <string name="fasting_plan_save_failed">Kaydetme başarısız</string>
 
 
     <!-- FastingReceiver -->
     <string name="fasting_start_title">%1$s yeme penceresi açık</string>
-    <string name="fasting_start_body">Yemek yeme aralığınız %1$s–%2$s çalışır. Bugünü doğru tutmak için gittiğiniz öğünleri kaydedin.</string>
-    <string name="fasting_endsoon_title">Yemek pencerenizde 1 saat kaldı</string>
-    <string name="fasting_endsoon_body">Pencereniz %1$s saatinde kapanıyor. Son bir yemek planlıyorsanız, yemeğinizi bitirmeden önce kaydedin.</string>
+    <string name="fasting_start_body">Yeme penceren %1$s–%2$s arasında. Bugünün verilerini doğru tutmak için öğünlerini gün içinde kaydet.</string>
+    <string name="fasting_endsoon_title">Yeme pencerende 1 saat kaldı</string>
+    <string name="fasting_endsoon_body">Penceren %1$s saatinde kapanıyor. Son bir öğün planlıyorsan bitirmeden önce kaydet.</string>
 
 
 
 
     <!-- WorkoutHistoryScreen -->
-    <string name="workout_history_title">Antrenman Geçmişi</string>
-    <string name="workout_history_summary_label">Bugün yandı</string>
-    <string name="workout_history_summary_body">Bugünkü antrenman yakma ilerlemesini takip edin</string>
+    <string name="workout_history_title">Egzersiz Geçmişi</string>
+    <string name="workout_history_summary_label">Bugün yakılan</string>
+    <string name="workout_history_summary_body">Bugünkü egzersiz yakım ilerlemesini takip et</string>
     <string name="workout_history_today_label">Bugün</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
-    <string name="workout_history_avg_daily_label">7 günlük ortalama / gün</string>
-    <string name="workout_history_avg_label">7 günlük ortalama / oturum</string>
+    <string name="workout_history_avg_daily_label">7 gün ort. / gün</string>
+    <string name="workout_history_avg_label">7 gün ort. / seans</string>
     <string name="workout_history_avg_value">%1$d kcal</string>
     <string name="workout_history_unit_kcal">kcal</string>
 
-    <string name="workout_history_empty_title">Yakın zamanda yapılan antrenman yok</string>
-    <string name="workout_history_empty">Son 7 günde antrenman yok.</string>
-    <string name="workout_history_recent_title">Son oturumlar</string>
-    <string name="workout_history_minutes">%1$d dk.</string>
+    <string name="workout_history_empty_title">Son egzersiz yok</string>
+    <string name="workout_history_empty">Son 7 günde egzersiz yok.</string>
+    <string name="workout_history_recent_title">Son seanslar</string>
+    <string name="workout_history_minutes">%1$d min</string>
     <string name="workout_history_kcal">%1$d</string>
     <string name="workout_history_date_time">%1$s · %2$s</string>
     <string name="workout_history_kcal_with_unit">%1$d kcal</string>
 
-    <string name="workout_history_loading_title">Antrenmanları senkronize etme</string>
-    <string name="workout_history_loading">Antrenman geçmişi yükleniyor…</string>
+    <string name="workout_history_loading_title">Egzersizler senkronize ediliyor</string>
+    <string name="workout_history_loading">Egzersiz geçmişi yükleniyor…</string>
     <string name="workout_history_error_title">Geçmiş kullanılamıyor</string>
 
-    <string name="workout_history_delete_failed">Silinemedi. Lütfen tekrar deneyin.</string>
+    <string name="workout_history_delete_failed">Silme başarısız. Lütfen tekrar deneyin.</string>
     <string name="workout_history_delete_success">Başarıyla silindi!</string>
-    <string name="workout_history_error">Antrenman geçmişi yüklenemiyor.</string>
+    <string name="workout_history_error">Egzersiz geçmişi yüklenemedi.</string>
 
 
     <!-- WorkoutTrackerSheet -->
-    <string name="workout_tracker_title">Antrenman Takipçisi</string>
+    <string name="workout_tracker_title">Egzersiz Takipçisi</string>
     <string name="workout_tracker_subtitle">Egzersiz türünü ve süresini açıklayın</string>
-    <string name="workout_tracker_example_placeholder">Örnek: 45 dakika koşu</string>
+    <string name="workout_tracker_example_placeholder">Örnek: 45 min koşu</string>
 
-    <string name="workout_tracker_select_from_list">veya listeden seçin</string>
+    <string name="workout_tracker_select_from_list">veya listeden seç</string>
     <string name="workout_tracker_show_less">Daha az göster</string>
-    <string name="workout_tracker_show_more">Daha fazlasını göster (%1$d)</string>
+    <string name="workout_tracker_show_more">Daha fazla göster (%1$d)</string>
 
     <string name="workout_tracker_estimating_fallback">Tahmin ediliyor…</string>
-    <string name="workout_tracker_estimating_analyzing">Etkinliğiniz analiz ediliyor…</string>
-    <string name="workout_tracker_estimating_numbers">Sayılarınız üzerinde çalışıyoruz…</string>
-    <string name="workout_tracker_estimating_calories">Çabayı tahmin etmek, kaloriyi hesaplamak…</string>
-    <string name="workout_tracker_do_not_close">Lütfen uygulamayı kapatmayın veya cihazınızı kilitlemeyin</string>
+    <string name="workout_tracker_estimating_analyzing">Aktiviten analiz ediliyor…</string>
+    <string name="workout_tracker_estimating_numbers">Rakamların hesaplanıyor…</string>
+    <string name="workout_tracker_estimating_calories">Efor tahmin ediliyor, kaloriler hesaplanıyor…</string>
+    <string name="workout_tracker_do_not_close">Lütfen uygulamayı kapatmayın veya cihazı kilitlemeyin</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
-    <string name="workout_tracker_minutes_activity">%1$d dk %2$s</string>
-    <string name="workout_tracker_add_workout">Antrenman ekle</string>
+    <string name="workout_tracker_minutes_activity">%1$d min %2$s</string>
+    <string name="workout_tracker_add_workout">Egzersiz ekle</string>
 
     <string name="workout_tracker_activity_content_label">Egzersiz aktivitesi</string>
-    <string name="workout_preset_kcal_per_30_min">%1$d kcal / 30 dk</string>
+    <string name="workout_preset_kcal_per_30_min">%1$d kcal / 30 min</string>
 
     <string name="workout_tracker_save_success">Başarıyla kaydedildi!</string>
-    <string name="workout_tracker_save_failed">Kaydedilemedi. Lütfen tekrar deneyin.</string>
-    <string name="workout_tracker_refresh_failed">Yenileme başarısız oldu. Lütfen tekrar deneyin.</string>
-    <string name="workout_tracker_cancel">İptal etmek</string>
-    <string name="workout_tracker_try_again">Tekrar deneyin</string>
-    <string name="workout_tracker_scan_failed_title">Uh-oh! Tarama başarısız oldu</string>
-    <string name="workout_tracker_scan_failed_body">Antrenman açıklaması yanlış olabilir veya internet bağlantısı zayıf olabilir. Örneğin: 30 dk Koşu.</string>
+    <string name="workout_tracker_save_failed">Kaydetme başarısız. Lütfen tekrar deneyin.</string>
+    <string name="workout_tracker_refresh_failed">Yenileme başarısız. Lütfen tekrar deneyin.</string>
+    <string name="workout_tracker_cancel">İptal</string>
+    <string name="workout_tracker_try_again">Tekrar dene</string>
+    <string name="workout_tracker_scan_failed_title">Eyvah! Tarama başarısız</string>
+    <string name="workout_tracker_scan_failed_body">Egzersiz açıklaması yanlış olabilir veya internet bağlantısı zayıf olabilir. Örnek: 30 min koşu.</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->
-    <string name="workout_preset_walking">Yürüme</string>
-    <string name="workout_preset_running">Koşma</string>
-    <string name="workout_preset_cycling">Bisikletçilik</string>
+    <string name="workout_preset_walking">Yürüyüş</string>
+    <string name="workout_preset_running">Koşu</string>
+    <string name="workout_preset_cycling">Bisiklet</string>
     <string name="workout_preset_swimming">Yüzme</string>
     <string name="workout_preset_hiking">Doğa yürüyüşü</string>
     <string name="workout_preset_aerobic_exercise">Aerobik egzersiz</string>
-    <string name="workout_preset_strength_training">Güç antrenmanı</string>
-    <string name="workout_preset_weight_training">Ağırlık çalışması</string>
+    <string name="workout_preset_strength_training">Kuvvet antrenmanı</string>
+    <string name="workout_preset_weight_training">Ağırlık antrenmanı</string>
     <string name="workout_preset_basketball">Basketbol</string>
     <string name="workout_preset_soccer">Futbol</string>
     <string name="workout_preset_tennis">Tenis</string>
@@ -702,53 +703,53 @@
     <string name="workout_preset_table_tennis">Masa tenisi</string>
     <string name="workout_preset_dancing_general">Dans</string>
     <string name="workout_preset_zumba">Zumba</string>
-    <string name="workout_preset_pilates">pilates</string>
+    <string name="workout_preset_pilates">Pilates</string>
 
 
     <!-- DurationPickerSheet -->
-    <string name="workout_duration_sheet_subtitle">Bu antrenman süresini aktivite günlüğünüze ekleyin</string>
-    <string name="workout_duration_hour_short">saat</string>
-    <string name="workout_duration_minute_short">dk.</string>
-    <string name="workout_duration_save">Kaydetmek</string>
-    <string name="workout_duration_cancel">İptal etmek</string>
+    <string name="workout_duration_sheet_subtitle">Bu egzersiz süresini aktivite kaydına ekle</string>
+    <string name="workout_duration_hour_short">sa</string>
+    <string name="workout_duration_minute_short">min</string>
+    <string name="workout_duration_save">Kaydet</string>
+    <string name="workout_duration_cancel">İptal</string>
 
 
     <!-- HomeQuickActionMenu -->
-    <string name="quick_add_saved_foods">Kaydedilen gıdalar</string>
-    <string name="quick_add_scan_food">Yiyecekleri tarayın</string>
+    <string name="quick_add_saved_foods">Kaydedilen yiyecekler</string>
+    <string name="quick_add_scan_food">Yiyecek tara</string>
 
 
     <!-- CameraScreen -->
-    <string name="camera_mode_food">Yiyecekleri tarayın</string>
+    <string name="camera_mode_food">Yiyecek tara</string>
     <string name="camera_mode_barcode">Barkod</string>
     <string name="camera_mode_label">Gıda etiketi</string>
     <string name="camera_mode_album">Fotoğraflar</string>
     <string name="camera_barcode_title">Barkod Tarayıcı</string>
     <string name="camera_label_title">Etiket Tarayıcı</string>
-    <string name="camera_need_permission">Tarama için kamera izni gerekiyor</string>
+    <string name="camera_need_permission">Tarama için kamera izni gerekir</string>
 
 
     <!-- RecentUploadCard -->
-    <string name="foodlog_pending_analysis">Yemeğiniz analiz ediliyor…</string>
+    <string name="foodlog_pending_analysis">Yiyeceğin analiz ediliyor…</string>
     <string name="foodlog_analysis_done">Analiz tamamlandı</string>
-    <string name="recent_upload_kcal_text">🔥 %1$d kalori</string>
+    <string name="recent_upload_kcal_text">🔥 %1$d kcal</string>
     <string name="recent_upload_protein_text">🥩 %1$dg</string>
     <string name="recent_upload_carbs_text">🌾 %1$dg</string>
     <string name="recent_upload_fat_text">🥑 %1$dg</string>
 
 
     <!-- RecentlyUploadedEmptyCard -->
-    <string name="recently_uploaded_empty">Yakın zamanda yüklenen</string>
-    <string name="recently_uploaded_empty_hint">Günün ilk yemeğini eklemek için +\'ya dokunun</string>
+    <string name="recently_uploaded_empty">Son yüklenenler</string>
+    <string name="recently_uploaded_empty_hint">Günün ilk öğününü eklemek için + simgesine dokun</string>
 
 
     <!-- SavedFoodsScreen -->
-    <string name="saved_foods_keep_15_days_hint">Son 15 güne ait kayıtlı yiyecekler.</string>
-    <string name="saved_foods_unsave_dialog_title">Kaydedilen yiyeceklerden çıkarılsın mı?</string>
-    <string name="saved_foods_unsave_dialog_message">Bu yemek Kayıtlı Yiyecekler listenizden kaldırılacak ancak son kayıtlarınızda kalmaya devam edecek.</string>
-    <string name="saved_foods_unsave_dialog_confirm">Kaldırmak</string>
-    <string name="saved_foods_title">Kaydedilen gıdalar</string>
-    <string name="saved_foods_kcal">🔥 %1$d kalori</string>
+    <string name="saved_foods_keep_15_days_hint">Son 15 gündeki kaydedilen yiyecekler.</string>
+    <string name="saved_foods_unsave_dialog_title">Kaydedilen yiyeceklerden kaldırılsın mı?</string>
+    <string name="saved_foods_unsave_dialog_message">Bu öğün Kaydedilen Yiyecekler listesinden kaldırılır, ancak son kayıtlarında kalır.</string>
+    <string name="saved_foods_unsave_dialog_confirm">Kaldır</string>
+    <string name="saved_foods_title">Kaydedilen yiyecekler</string>
+    <string name="saved_foods_kcal">🔥 %1$d kcal</string>
     <string name="saved_foods_protein">🥩 %1$dg</string>
     <string name="saved_foods_carbs">🌾 %1$dg</string>
     <string name="saved_foods_fat">🥑 %1$dg</string>
@@ -757,16 +758,16 @@
 
 
     <!-- RecentUploadDetailScreen -->
-    <string name="foodlog_detail_load_failed">Yükleme başarısız oldu</string>
+    <string name="foodlog_detail_load_failed">Yükleme başarısız</string>
     <string name="foodlog_unknown_food">Bilinmeyen yiyecek</string>
-    <string name="foodlog_no_image">Resim yok</string>
+    <string name="foodlog_no_image">Görsel yok</string>
 
     <string name="foodlog_detail_title">Beslenme</string>
-    <string name="foodlog_detail_calories">Kalori</string>
+    <string name="foodlog_detail_calories">kcal</string>
     <string name="foodlog_detail_protein">Protein</string>
-    <string name="foodlog_detail_carbs">Karbonhidratlar</string>
-    <string name="foodlog_detail_fats">Yağlar</string>
-    <string name="foodlog_detail_fiber">Elyaf</string>
+    <string name="foodlog_detail_carbs">Karbonhidrat</string>
+    <string name="foodlog_detail_fats">Yağ</string>
+    <string name="foodlog_detail_fiber">Lif</string>
     <string name="foodlog_detail_sugar">Şeker</string>
     <string name="foodlog_detail_sodium">Sodyum</string>
     <string name="foodlog_detail_health_score">Sağlık puanı</string>
@@ -774,50 +775,50 @@
 
     <!-- DeleteFoodLogDialog -->
     <string name="foodlog_delete_dialog_title">Kayıt silinsin mi?</string>
-    <string name="foodlog_delete_dialog_message">Bu yemek kaydını kalıcı olarak silmek istediğinizden emin misiniz? Bu eylem geri alınamaz.</string>
-    <string name="foodlog_delete_dialog_confirm">Silmek</string>
+    <string name="foodlog_delete_dialog_message">Bu öğün kaydını kalıcı olarak silmek istediğine emin misin? Bu işlem geri alınamaz.</string>
+    <string name="foodlog_delete_dialog_confirm">Sil</string>
 
 
     <!-- Settings -->
     <string name="settings_title">Ayarlar</string>
-    <string name="settings_choose_language">Dil seçin</string>
+    <string name="settings_choose_language">Dil seç</string>
     <string name="delete_account_dialog_title">Hesap silinsin mi?</string>
-    <string name="delete_account_dialog_body">Hesabınızı silmek istediğinizden emin misiniz? Bu, yemek günlükleri, ağırlık kayıtları ve ilgili ayarlar da dahil olmak üzere CaloShape verilerinizi kalıcı olarak silecektir. Bu eylem geri alınamaz.</string>
+    <string name="delete_account_dialog_body">Hesabını silmek istediğine emin misin? Bu işlem yiyecek kayıtları, kilo kayıtları ve ilgili ayarlar dahil CaloShape verilerini kalıcı olarak siler. Bu işlem geri alınamaz.</string>
 
 
     <string name="restore_subscription_dialog_success_title">Abonelik geri yüklendi</string>
     <string name="restore_subscription_dialog_payment_issue_title">Abonelik geri yüklendi, ödeme sorunu devam ediyor</string>
     <string name="restore_subscription_dialog_no_active_title">Aktif Google Play aboneliği bulunamadı</string>
-    <string name="restore_subscription_dialog_failed_title">Geri yükleme başarısız oldu</string>
+    <string name="restore_subscription_dialog_failed_title">Geri yükleme başarısız</string>
     <string name="restore_subscription_dialog_bound_title">Abonelik başka bir hesaba bağlı</string>
-    <string name="restore_subscription_dialog_success_body">Aboneliğiniz bu CaloShape hesabına geri yüklendi.</string>
-    <string name="restore_subscription_dialog_payment_issue_body">Aboneliğiniz bu CaloShape hesabına bağlı ancak Google Play hâlâ bir ödeme sorunu bildiriyor. Aboneliğinizin etkin kalması için lütfen Google Play\'deki ödeme yönteminizi güncelleyin.</string>
-    <string name="restore_subscription_dialog_no_active_body">Mevcut Google Play hesabında aktif bir CaloShape aboneliği bulamadık. Satın alma işlemini gerçekleştiren Google Play hesabını kullandığınızdan emin olun ve tekrar deneyin.</string>
-    <string name="restore_subscription_dialog_failed_body">Şu anda aboneliğinizi geri yükleyemedik. Lütfen bağlantınızı kontrol edin ve Ayarlar\'dan tekrar deneyin.</string>
-    <string name="restore_subscription_dialog_bound_body">Bu Google Play aboneliği zaten başka bir CaloShape hesabına bağlı. Kullanmak için orijinal hesapta oturum açın veya söz konusu hesaba erişemiyorsanız destek ekibiyle iletişime geçin.</string>
-    <string name="restore_subscription_dialog_body">Bu cihazda Google Play hesabıyla ilişkili etkin bir CaloShape aboneliği veya deneme sürümü bulduk. Şu anda oturum açmış olduğunuz CaloShape hesabına geri yükleyebilirsiniz.</string>
+    <string name="restore_subscription_dialog_success_body">Aboneliğin bu CaloShape hesabına geri yüklendi.</string>
+    <string name="restore_subscription_dialog_payment_issue_body">Aboneliğin bu CaloShape hesabına bağlı, ancak Google Play hâlâ ödeme sorunu bildiriyor. Aboneliği aktif tutmak için Google Play’de ödeme yöntemini güncelle.</string>
+    <string name="restore_subscription_dialog_no_active_body">Mevcut Google Play hesabında aktif bir CaloShape aboneliği bulamadık. Satın almayı yapan Google Play hesabını kullandığından emin olup tekrar dene.</string>
+    <string name="restore_subscription_dialog_failed_body">Aboneliğin şu anda geri yüklenemedi. Bağlantını kontrol edip Ayarlar’dan tekrar dene.</string>
+    <string name="restore_subscription_dialog_bound_body">Bu Google Play aboneliği zaten başka bir CaloShape hesabına bağlı. Kullanmak için orijinal hesaba giriş yap veya o hesaba erişemiyorsan destekle iletişime geç.</string>
+    <string name="restore_subscription_dialog_body">Bu cihazdaki Google Play hesabıyla ilişkili aktif bir CaloShape aboneliği veya deneme bulduk. Bunu şu anda giriş yaptığın CaloShape hesabına geri yükleyebilirsin.</string>
 
     <!-- Settings : Payment issue dialog -->
-    <string name="payment_issue_dialog_title">Premium\'unuzu aktif tutun</string>
-    <string name="payment_issue_dialog_body">Premium erişiminiz hâlâ etkin. Kesintiyi önlemek için Google Play ödeme yönteminizi güncelleyin.</string>
+    <string name="payment_issue_dialog_title">Premium’u aktif tut</string>
+    <string name="payment_issue_dialog_body">Premium erişimin hâlâ aktif. Kesinti yaşamamak için Google Play ödeme yöntemini güncelle.</string>
     <string name="payment_issue_dialog_update_payment">Ödeme yöntemini güncelle</string>
-    <string name="payment_issue_dialog_badge">Ödemeye dikkat edilmesi gerekiyor</string>
+    <string name="payment_issue_dialog_badge">Ödeme ilgilenmeni gerektiriyor</string>
     <string name="payment_issue_dialog_premium_access">Premium erişim</string>
     <string name="payment_issue_dialog_active_for_now">Şimdilik aktif</string>
     <string name="payment_issue_dialog_next_step">Sonraki adım</string>
     <string name="payment_issue_dialog_update_payment_short">Ödemeyi güncelle</string>
 
 
-    <string name="settings_personal_details">Kişisel ayrıntılar</string>
-    <string name="settings_adjust_macronutrients">Makro besinleri ayarlayın</string>
-    <string name="settings_weight_history">Ağırlık geçmişi</string>
-    <string name="settings_ring_colors_explained">Takvim Halkası Renk Kılavuzu</string>
+    <string name="settings_personal_details">Kişisel bilgiler</string>
+    <string name="settings_adjust_macronutrients">Makro besinleri ayarla</string>
+    <string name="settings_weight_history">Kilo geçmişi</string>
+    <string name="settings_ring_colors_explained">Takvim Halka Renk Rehberi</string>
     <string name="settings_inbox">Gelen kutusu</string>
 
 
-    <string name="settings_terms_conditions">Şartlar ve koşullar</string>
+    <string name="settings_terms_conditions">Şartlar ve Koşullar</string>
     <string name="settings_privacy_policy">Gizlilik Politikası</string>
-    <string name="settings_support_email">Destek E-postası</string>
+    <string name="settings_support_email">Destek e-postası</string>
     <string name="settings_delete_account">Hesap silinsin mi?</string>
     <string name="settings_version">Sürüm %1$s</string>
 
@@ -825,13 +826,13 @@
     <string name="settings_membership_payment">Ödeme sorunu</string>
     <string name="settings_membership_update_payment">Ödemeyi güncelle</string>
     <string name="settings_membership_premium">Premium</string>
-    <string name="settings_membership_active_member">Aktif üyelik</string>
+    <string name="settings_membership_active_member">Aktif üye</string>
     <string name="settings_membership_trial">Deneme</string>
     <string name="settings_membership_access_active">Erişim aktif</string>
     <string name="settings_membership_free">Ücretsiz</string>
     <string name="settings_membership_upgrade">Yükselt</string>
-    <string name="settings_membership_trial_ends_today">Deneme bugün sona eriyor</string>
-    <string name="settings_membership_until_format">%1$s tarihine kadar geçerli</string>
+    <string name="settings_membership_trial_ends_today">Deneme bugün bitiyor</string>
+    <string name="settings_membership_until_format">%1$s tarihine kadar</string>
     <plurals name="settings_membership_trial_days_left">
         <item quantity="one">%1$d gün kaldı</item>
         <item quantity="other">%1$d gün kaldı</item>
@@ -839,111 +840,111 @@
 
 
     <!-- Settings: referral card -->
-    <string name="settings_invite_friends">Arkadaşlarınızı davet edin</string>
-    <string name="settings_premium_reward">Prim ödülü</string>
-    <string name="settings_share_caloshape_with_friends">CaloShape AI\narkadaşlarınızla paylaşın</string>
-    <string name="settings_referral_reward_content">Abone oluyorlar. 30 gün ücretsiz kullanabilirsiniz.</string>
-    <string name="settings_get_30_days_free">30 gün ücretsiz yararlanın</string>
-    <string name="settings_days_label">Günler</string>
+    <string name="settings_invite_friends">Arkadaşlarını davet et</string>
+    <string name="settings_premium_reward">Premium ödül</string>
+    <string name="settings_share_caloshape_with_friends">CaloShape AI’yı\narkadaşlarınla paylaş</string>
+    <string name="settings_referral_reward_content">Onlar abone olur. Sen 30 gün ücretsiz alırsın.</string>
+    <string name="settings_get_30_days_free">30 gün ücretsiz al</string>
+    <string name="settings_days_label">Gün</string>
 
-    <string name="settings_appearance_light">Işık</string>
-    <string name="settings_appearance_dark">Karanlık</string>
-    <string name="settings_appearance_mode_title">Görünümü seçin</string>
-    <string name="settings_appearance_light_description">Mevcut parlak ve temiz görünümü koruyun.</string>
-    <string name="settings_appearance_dark_description">Günlük takip için daha koyu, daha yumuşak bir arayüz kullanın.</string>
+    <string name="settings_appearance_light">Açık</string>
+    <string name="settings_appearance_dark">Koyu</string>
+    <string name="settings_appearance_mode_title">Görünüm seç</string>
+    <string name="settings_appearance_light_description">Mevcut parlak ve temiz görünümü koru.</string>
+    <string name="settings_appearance_dark_description">Günlük takip için daha koyu ve yumuşak bir arayüz kullan.</string>
     <string name="settings_preferences">Tercihler</string>
-    <string name="settings_appearance">Dış görünüş</string>
+    <string name="settings_appearance">Görünüm</string>
 
     <string name="settings_language">Dil</string>
 
 
     <!-- Settings: Widget Guide -->
-    <string name="settings_widgets_title">Widget\'lar</string>
+    <string name="settings_widgets_title">Widget’lar</string>
     <string name="settings_widgets_how_to_add">Nasıl eklenir?</string>
-    <string name="log_your_food">Yemeğinizi günlüğe kaydedin</string>
+    <string name="log_your_food">Yemeğini kaydet</string>
 
-    <string name="settings_calories_goal_label">Kalan kalori</string>
+    <string name="settings_calories_goal_label">Kalan kcal</string>
     <string name="settings_protein_goal_label">Kalan protein</string>
     <string name="settings_carbs_goal_label">Kalan karbonhidrat</string>
-    <string name="settings_fats_goal_label">Kalan yağlar</string>
-    <string name="settings_widget_scan_food">Yiyecekleri tarayın</string>
+    <string name="settings_fats_goal_label">Kalan yağ</string>
+    <string name="settings_widget_scan_food">Yiyecek tara</string>
     <string name="settings_widget_barcode">Barkod</string>
 
-    <string name="settings_logout_loading">Oturum kapatılıyor…</string>
-    <string name="settings_logout">Oturumu kapat</string>
-    <string name="settings_logout_failed">Oturum kapatma başarısız oldu. Bağlantınızı kontrol edip tekrar deneyin.</string>
+    <string name="settings_logout_loading">Çıkış yapılıyor…</string>
+    <string name="settings_logout">Çıkış yap</string>
+    <string name="settings_logout_failed">Çıkış başarısız. Bağlantını kontrol edip tekrar dene.</string>
 
 
     <!-- EditNameScreen -->
-    <string name="settings_edit_your_name_title">Adınızı Düzenleyin</string>
-    <string name="edit_name_placeholder">Adınızı girin</string>
+    <string name="settings_edit_your_name_title">Adını düzenle</string>
+    <string name="edit_name_placeholder">Adını gir</string>
 
 
     <!-- Referral Screen -->
-    <string name="referral_title">Arkadaşlarınızı davet edin</string>
-    <string name="referral_premium_reward">Prim ödülü</string>
-    <string name="referral_invite_friends">Arkadaşlarınızı davet edin</string>
-    <string name="referral_earn_30_days_free">30 gün ücretsiz kazanın</string>
-    <string name="referral_reward_unlocks_after_no_refund">Ödül, arkadaşınız para iadesi olmadan abone olduktan sonra açılır.</string>
-    <string name="referral_code_copied">Tavsiye kodu kopyalandı.</string>
-    <string name="referral_your_promo_code">Promosyon kodunuz</string>
+    <string name="referral_title">Arkadaşlarını davet et</string>
+    <string name="referral_premium_reward">Premium ödül</string>
+    <string name="referral_invite_friends">Arkadaşlarını davet et</string>
+    <string name="referral_earn_30_days_free">30 gün ücretsiz kazan</string>
+    <string name="referral_reward_unlocks_after_no_refund">Arkadaşın iadesiz şekilde abone olduktan sonra ödül açılır.</string>
+    <string name="referral_code_copied">Referans kodu kopyalandı.</string>
+    <string name="referral_your_promo_code">Promosyon kodun</string>
     <string name="referral_copy">Kopyala</string>
-    <string name="referral_share">Paylaşmak</string>
+    <string name="referral_share">Paylaş</string>
     <string name="referral_how_it_works">Nasıl çalışır?</string>
-    <string name="referral_step_1_title">Promosyon kodunuzu paylaşın</string>
-    <string name="referral_step_1_subtitle">Yiyecekleri daha akıllıca takip etmek isteyen bir arkadaşınıza kodunuzu gönderin.</string>
-    <string name="referral_step_2_title">Arkadaşın abone oluyor</string>
-    <string name="referral_step_2_subtitle">Davetinizi kullanarak ücretli bir CaloShape AI aboneliği başlatırlar.</string>
-    <string name="referral_step_3_title">Geri ödeme yok, sonra ödül</string>
-    <string name="referral_step_3_subtitle">Aboneliğiniz iade edilmeden doğrulandıktan sonra premium süreniz uzatılır.</string>
-    <string name="referral_share_text">CaloShape AI\'da bana katılın! Yönlendirme kodum:\n%1$s\n\n%2$s</string>
-    <string name="referral_share_subject">CaloShape AI\'da bana katılın</string>
-    <string name="referral_share_chooser_title">Şununla paylaş:</string>
-    <string name="referral_unable_to_open_share_options">Paylaşım seçenekleri açılamıyor.</string>
+    <string name="referral_step_1_title">Promosyon kodunu paylaş</string>
+    <string name="referral_step_1_subtitle">Yiyeceklerini daha akıllı takip etmek isteyen bir arkadaşına kodunu gönder.</string>
+    <string name="referral_step_2_title">Arkadaşın abone olur</string>
+    <string name="referral_step_2_subtitle">Davetini kullanarak ücretli CaloShape AI aboneliği başlatır.</string>
+    <string name="referral_step_3_title">İade yoksa ödül gelir</string>
+    <string name="referral_step_3_subtitle">Abonelik iadesiz olarak doğrulandıktan sonra premium süren uzatılır.</string>
+    <string name="referral_share_text">CaloShape AI’da bana katıl! Referans kodum:\n%1$s\n\n%2$s</string>
+    <string name="referral_share_subject">CaloShape AI’da bana katıl</string>
+    <string name="referral_share_chooser_title">Şununla paylaş</string>
+    <string name="referral_unable_to_open_share_options">Paylaşım seçenekleri açılamadı.</string>
 
 
     <!-- PersonalDetailsScreen -->
-    <string name="personal_details_goal_weight">Hedef ağırlığı</string>
+    <string name="personal_details_goal_weight">Hedef kilo</string>
     <string name="personal_details_change_goal">Hedefi değiştir</string>
-    <string name="personal_details_body_details_section">Gövde detayları</string>
-    <string name="personal_details_current_weight">Mevcut ağırlık</string>
-    <string name="personal_details_height">Yükseklik</string>
+    <string name="personal_details_body_details_section">Vücut bilgileri</string>
+    <string name="personal_details_current_weight">Mevcut kilo</string>
+    <string name="personal_details_height">Boy</string>
     <string name="personal_details_age">Yaş</string>
     <string name="personal_details_gender">Cinsiyet</string>
-    <string name="personal_details_starting_weight">Başlangıç ​​ağırlığı</string>
+    <string name="personal_details_starting_weight">Başlangıç kilosu</string>
     <string name="personal_details_daily_goals_section">Günlük hedefler</string>
     <string name="personal_details_daily_step_goal">Günlük adım hedefi</string>
     <string name="personal_details_daily_water_goal">Günlük su hedefi</string>
     <string name="personal_details_daily_workout_goal">Günlük egzersiz hedefi</string>
-    <string name="personal_details_age_value">%1$d yıl</string>
+    <string name="personal_details_age_value">%1$d yaş</string>
     <string name="personal_details_steps_value">%1$d adım</string>
     <string name="personal_details_water_value">%1$d ml</string>
     <string name="personal_details_kcal_value">%1$d kcal</string>
     <string name="gender_male">Erkek</string>
-    <string name="gender_female">Dişi</string>
+    <string name="gender_female">Kadın</string>
     <string name="gender_other">Diğer</string>
 
 
     <!-- EditGoalWeightScreen -->
-    <string name="edit_goal_weight_title">Hedef Ağırlığını Düzenle</string>
-    <string name="edit_goal_weight_progress_note">Bu hedefi ilerlemenizi hesaplamak için kullanacağız.</string>
-    <string name="edit_goal_update_failed">Hedef ağırlığı güncellenemedi</string>
+    <string name="edit_goal_weight_title">Hedef kiloyu düzenle</string>
+    <string name="edit_goal_weight_progress_note">İlerlemeni hesaplamak için bu hedefi kullanacağız.</string>
+    <string name="edit_goal_update_failed">Hedef kilo güncellenemedi</string>
 
 
     <!-- RecordWeightScreen -->
     <string name="record_weight_camera_failed_to_open">Kamera açılamadı.</string>
     <string name="record_weight_camera_permission_required">Kamera izni gerekli.</string>
-    <string name="record_weight_camera_preview_unavailable">Kamera yalnızca çalışan uygulamada çalışır, Önizleme\'de çalışmaz.</string>
-    <string name="record_weight_camera_screen_unavailable">Bu ekranda kamera mevcut değildir.</string>
+    <string name="record_weight_camera_preview_unavailable">Kamera yalnızca çalışan uygulamada çalışır, Önizleme’de değil.</string>
+    <string name="record_weight_camera_screen_unavailable">Kamera bu ekranda kullanılamıyor.</string>
     <string name="record_weight_no_camera_app_found">Bu cihazda kamera uygulaması bulunamadı.</string>
-    <string name="record_weight_enable_camera_permission_settings">Lütfen Ayarlar\'da Kamera iznini etkinleştirin.</string>
+    <string name="record_weight_enable_camera_permission_settings">Lütfen Ayarlar’dan kamera iznini etkinleştirin.</string>
 
-    <string name="record_weight_title">Ağırlığı Kaydedin</string>
-    <string name="record_weight_save_failed">Kaydetme başarısız oldu</string>
-    <string name="record_weight_date_note">Bu ağırlık %1$s için kaydedilecek</string>
+    <string name="record_weight_title">Kilo kaydet</string>
+    <string name="record_weight_save_failed">Kaydetme başarısız</string>
+    <string name="record_weight_date_note">Bu kilo %1$s için kaydedilecek</string>
 
-    <string name="weight_date_sheet_title">Tartım tarihinizi seçin</string>
-    <string name="weight_date_sheet_subtitle">Teraziye ne zaman çıktınız?</string>
+    <string name="weight_date_sheet_title">Tartılma tarihini seç</string>
+    <string name="weight_date_sheet_subtitle">Ne zaman tartıldın?</string>
     <string name="weight_date_sheet_month_january">Ocak</string>
     <string name="weight_date_sheet_month_february">Şubat</string>
     <string name="weight_date_sheet_month_march">Mart</string>
@@ -957,73 +958,73 @@
     <string name="weight_date_sheet_month_november">Kasım</string>
     <string name="weight_date_sheet_month_december">Aralık</string>
 
-    <string name="record_weight_camera_not_available">Kamera mevcut değil</string>
+    <string name="record_weight_camera_not_available">Kamera kullanılamıyor</string>
     <string name="record_weight_take_photo">Fotoğraf çek</string>
-    <string name="record_weight_retake_photo">Fotoğrafı yeniden çek</string>
+    <string name="record_weight_retake_photo">Fotoğrafı tekrar çek</string>
 
 
     <!-- EditHeightScreen -->
-    <string name="edit_height_title">Boyunuzu Düzenleyin</string>
-    <string name="edit_height_privacy_note">Boyunuzu yalnızca deneyiminizi ve kalori tahmininizin doğruluğunu geliştirmek için kullanırız.</string>
+    <string name="edit_height_title">Boyunu düzenle</string>
+    <string name="edit_height_privacy_note">Boyunu yalnızca deneyimini ve kalori tahmini doğruluğunu iyileştirmek için kullanıyoruz.</string>
     <string name="edit_height_saved_locally_sync_failed">Ağ hatası. Yerel olarak kaydedildi ancak senkronize edilemedi.</string>
 
 
     <!-- EditAgeScreen -->
-    <string name="edit_age_title">Yaşınızı Düzenleyin</string>
-    <string name="edit_age_privacy_note">Yaşınızı yalnızca deneyiminizi ve kalori tahmininizin doğruluğunu geliştirmek için kullanırız.</string>
+    <string name="edit_age_title">Yaşını düzenle</string>
+    <string name="edit_age_privacy_note">Yaşını yalnızca deneyimini ve kalori tahmini doğruluğunu iyileştirmek için kullanıyoruz.</string>
 
 
     <!-- EditGenderScreen -->
-    <string name="edit_gender_title">Cinsiyetinizi Düzenleyin</string>
-    <string name="edit_gender_privacy_note">Yalnızca tahmin doğruluğunu kişiselleştirmek ve geliştirmek için kullanılır.</string>
+    <string name="edit_gender_title">Cinsiyetini düzenle</string>
+    <string name="edit_gender_privacy_note">Yalnızca kişiselleştirme ve tahmin doğruluğunu iyileştirme için kullanılır.</string>
 
 
     <!-- EditStartingWeightScreen -->
-    <string name="edit_starting_weight_title">Başlangıç ​​Ağırlığını Düzenle</string>
-    <string name="edit_start_weight_baseline_note">Bunu ilerlemenin temeli olarak kullanacağız.</string>
-    <string name="edit_starting_weight_update_failed">Başlangıç ​​ağırlığı güncellenemedi</string>
+    <string name="edit_starting_weight_title">Başlangıç kilosunu düzenle</string>
+    <string name="edit_start_weight_baseline_note">Bunu ilerleme için başlangıç değerin olarak kullanacağız.</string>
+    <string name="edit_starting_weight_update_failed">Başlangıç kilosu güncellenemedi</string>
 
 
     <!-- EditDailyStepGoalScreen -->
-    <string name="edit_step_goal_title">Adım Hedefini Düzenle</string>
+    <string name="edit_step_goal_title">Adım hedefini düzenle</string>
     <string name="edit_daily_step_goal_previous_format">Önceki hedef %1$d adım</string>
     <string name="edit_daily_step_goal_input_label">Günlük adım hedefi</string>
 
 
     <!-- EditWaterGoalScreen -->
-    <string name="edit_water_goal_title">Su Hedefini Düzenle</string>
+    <string name="edit_water_goal_title">Su hedefini düzenle</string>
     <string name="edit_water_goal_previous_format">Önceki hedef %1$d ml</string>
     <string name="edit_water_goal_input_label">Günlük su hedefi (ml)</string>
 
 
     <!-- EditWorkoutGoalScreen -->
-    <string name="edit_workout_goal_title">Antrenman Hedefini Düzenle</string>
+    <string name="edit_workout_goal_title">Egzersiz hedefini düzenle</string>
     <string name="edit_workout_goal_previous_format">Önceki hedef %1$d kcal</string>
     <string name="edit_workout_goal_input_label">Günlük egzersiz hedefi (kcal)</string>
 
 
     <!-- EditNutritionGoalsScreen -->
-    <string name="edit_nutrition_goals_title">Beslenme Hedeflerini Düzenle</string>
+    <string name="edit_nutrition_goals_title">Beslenme hedeflerini düzenle</string>
     <string name="edit_nutrition_calorie_goal">Kalori hedefi</string>
     <string name="edit_nutrition_protein_goal">Protein hedefi</string>
     <string name="edit_nutrition_carb_goal">Karbonhidrat hedefi</string>
-    <string name="edit_nutrition_fat_goal">Şişman gol</string>
+    <string name="edit_nutrition_fat_goal">Yağ hedefi</string>
     <string name="edit_nutrition_view_micronutrients">Mikro besinleri görüntüle</string>
-    <string name="edit_nutrition_fiber_goal">Fiber hedefi</string>
+    <string name="edit_nutrition_fiber_goal">Lif hedefi</string>
     <string name="edit_nutrition_sugar_goal">Şeker hedefi</string>
     <string name="edit_nutrition_sodium_goal">Sodyum hedefi</string>
     <string name="edit_nutrition_auto_generate_goals">Hedefleri otomatik oluştur</string>
     <string name="auto_generate_goals_success">Başarıyla oluşturuldu!</string>
     <string name="auto_generate_goals_failed">Oluşturma başarısız</string>
     <string name="auto_generate_goals_failed_http_format">Oluşturma başarısız (%1$d)</string>
-    <string name="auto_generate_goals_network_error">Ağ hatası. Lütfen tekrar deneyin.</string>
+    <string name="auto_generate_goals_network_error">Ağ hatası, lütfen tekrar deneyin.</string>
 
 
     <!-- RingColorsExplainedScreen -->
-    <string name="ring_colors_explained_title">Tarih Halkası Renkleri</string>
-    <string name="ring_colors_explained_intro">Tarih halkaları, her günün kalori hedefinizle nasıl karşılaştırıldığını hızlı bir şekilde görmenize yardımcı olur.</string>
+    <string name="ring_colors_explained_title">Tarih Halka Renkleri</string>
+    <string name="ring_colors_explained_intro">Tarih halkaları, her günü kalori hedefinle hızlıca karşılaştırmanı sağlar.</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
-    <string name="ring_colors_explained">Tarih Yüzüğü Önizlemesi</string>
+    <string name="ring_colors_explained">Tarih Halkası Önizlemesi</string>
 
     <string name="ring_colors_preview_day_5">5</string>
     <string name="ring_colors_preview_day_6">6</string>
@@ -1035,48 +1036,48 @@
     <string name="ring_colors_explained_subtitle">Halka Renkleri Açıklaması</string>
 
     <string name="ring_colors_green_title">Yeşil</string>
-    <string name="ring_colors_green_body">Hedefte (hedefe 100 kalori dahilinde)</string>
+    <string name="ring_colors_green_body">Hedefte (hedeften 100 kcal içinde)</string>
     <string name="ring_colors_yellow_title">Kahverengi</string>
-    <string name="ring_colors_yellow_body">Hedefinizin 100-199 kalori üzerinde</string>
+    <string name="ring_colors_yellow_body">Hedefin 100–199 kcal üzerinde</string>
     <string name="ring_colors_red_title">Kırmızı</string>
-    <string name="ring_colors_red_body">Hedefinizin üzerinde 200+ kalori</string>
+    <string name="ring_colors_red_body">Hedefin 200+ kcal üzerinde</string>
     <string name="ring_colors_dotted_title">Noktalı</string>
-    <string name="ring_colors_dotted_body">O gün hiçbir yemek kaydedilmedi</string>
+    <string name="ring_colors_dotted_body">O gün öğün kaydedilmemiş</string>
 
 
     <!-- NotificationInboxScreen Inbox -->
     <string name="notification_inbox_title">Gelen kutusu</string>
     <string name="notification_inbox_header_title">CaloShape Bildirimleri</string>
-    <string name="notification_inbox_header_body">Tüm platform bildirimleri burada görünecektir.</string>
-    <string name="notification_inbox_status_read">Okumak</string>
-    <string name="notification_inbox_status_unread">Okunmamış</string>
+    <string name="notification_inbox_header_body">Tüm platform bildirimleri burada görünür.</string>
+    <string name="notification_inbox_status_read">Okundu</string>
+    <string name="notification_inbox_status_unread">Okunmadı</string>
 
     <string name="notification_inbox_loading_title">Bildirimler yükleniyor</string>
     <string name="notification_inbox_loading">Bildirimler yükleniyor…</string>
     <string name="notification_inbox_empty_title">Henüz bildirim yok</string>
-    <string name="notification_inbox_empty_body">Platform bildirimleri burada görünecektir.</string>
-    <string name="notification_inbox_error_title">Bildirimler yüklenemiyor</string>
-    <string name="notification_inbox_error_body">Lütfen bağlantınızı kontrol edip tekrar deneyin.</string>
+    <string name="notification_inbox_empty_body">Platform bildirimleri burada görünür.</string>
+    <string name="notification_inbox_error_title">Bildirimler yüklenemedi</string>
+    <string name="notification_inbox_error_body">Lütfen bağlantını kontrol edip tekrar dene.</string>
 
 
     <!-- WidgetGuideScreen -->
-    <string name="widget_guide_title">Widget Ekle</string>
-    <string name="widget_guide_hero_title">CaloShape\'i Ana ekranınıza ekleyin</string>
-    <string name="widget_guide_hero_body">Uygulamayı açmadan kalorileri, makroları ve hızlı eylemleri izleyin.</string>
-    <string name="widget_guide_steps_title">Bu adımları izleyin</string>
-    <string name="widget_guide_step_1_title">Ana ekrana uzun basın</string>
-    <string name="widget_guide_step_1_body">Menü görünene kadar telefonunuzun Ana ekranında boş bir alanı basılı tutun.</string>
-    <string name="widget_guide_step_2_title">Widget\'lara dokunun</string>
-    <string name="widget_guide_step_2_body">Ana ekran menüsünden Widget\'lar\'ı seçin.</string>
-    <string name="widget_guide_step_3_title">CaloShape AI\'yi bulun</string>
-    <string name="widget_guide_step_3_body">CaloShape AI\'yi kaydırın veya arayın, ardından widget listesini açın.</string>
-    <string name="widget_guide_step_4_title">Bir widget\'ı yerine sürükleyin</string>
-    <string name="widget_guide_step_4_body">Widget\'a dokunup basılı tutun, tercih ettiğiniz Ana ekrana sürükleyin ve ardından parmağınızı kaldırın.</string>
-    <string name="widget_guide_tip_title">Widget\'lar menüsünü bulamıyor musunuz?</string>
-    <string name="widget_guide_tip_body">Bazı telefon markaları ve başlatıcılar farklı isimler kullanır. Ev ayarlarını deneyin, CaloShape AI uygulaması simgesine uzun basın veya başlatıcınızda Widget\'lar arayın.</string>
+    <string name="widget_guide_title">Widget ekle</string>
+    <string name="widget_guide_hero_title">CaloShape’i ana ekranına ekle</string>
+    <string name="widget_guide_hero_body">Uygulamayı açmadan kalorileri, makroları ve hızlı işlemleri takip et.</string>
+    <string name="widget_guide_steps_title">Bu adımları izle</string>
+    <string name="widget_guide_step_1_title">Ana ekrana uzun bas</string>
+    <string name="widget_guide_step_1_body">Menü görünene kadar telefonunun ana ekranındaki boş bir alana basılı tut.</string>
+    <string name="widget_guide_step_2_title">Widget’lara dokun</string>
+    <string name="widget_guide_step_2_body">Ana ekran menüsünden Widget’ları seç.</string>
+    <string name="widget_guide_step_3_title">CaloShape AI’yı bul</string>
+    <string name="widget_guide_step_3_body">CaloShape AI’yı kaydırarak veya arayarak bul, ardından widget listesini aç.</string>
+    <string name="widget_guide_step_4_title">Widget’ı yerine sürükle</string>
+    <string name="widget_guide_step_4_body">Widget’a dokunup basılı tut, istediğin ana ekrana sürükle ve parmağını kaldır.</string>
+    <string name="widget_guide_tip_title">Widget menüsünü bulamıyor musun?</string>
+    <string name="widget_guide_tip_body">Bazı telefon markaları ve başlatıcılar farklı adlar kullanır. Ana ekran ayarlarını, CaloShape AI uygulama simgesine uzun basmayı veya başlatıcıda Widget aramayı dene.</string>
     <string name="widget_guide_done">Anladım</string>
-    <string name="widget_guide_mock_home">Ev</string>
-    <string name="widget_guide_mock_widgets">Widget\'lar</string>
+    <string name="widget_guide_mock_home">Ana sayfa</string>
+    <string name="widget_guide_mock_widgets">Widget’lar</string>
 
 
     <!-- CaloShapeNavHost -->
@@ -1090,15 +1091,15 @@
     <string name="widget_preview_protein">120g</string>
     <string name="widget_preview_carbs">180g</string>
     <string name="widget_preview_fats">60g</string>
-    <string name="widget_calories_left">Kalan kalori</string>
-    <string name="widget_protein_left">Kalan protein</string>
-    <string name="widget_carbs_left">Kalan karbonhidrat</string>
-    <string name="widget_fats_left">Kalan yağlar</string>
-    <string name="widget_calories_description">CaloShape kalori widget\'ı</string>
-    <string name="widget_macro_actions_description">CaloShape makroları ve hızlı eylemler widget\'ı</string>
-    <string name="widget_log_your_food">Yemeğinizi günlüğe kaydedin</string>
-    <string name="widget_scan_food">Yiyecekleri tarayın</string>
-    <string name="widget_barcode">Barkod</string>
+    <string name="widget_calories_left">Calories left</string>
+    <string name="widget_protein_left">Protein left</string>
+    <string name="widget_carbs_left">Carbs left</string>
+    <string name="widget_fats_left">Fats left</string>
+    <string name="widget_calories_description">CaloShape calories widget</string>
+    <string name="widget_macro_actions_description">CaloShape macros and quick actions widget</string>
+    <string name="widget_log_your_food">Log your food</string>
+    <string name="widget_scan_food">Scan food</string>
+    <string name="widget_barcode">Barcode</string>
     <string name="widget_grams_format">%1$dg</string>
 
 
@@ -1112,27 +1113,27 @@
     <string name="premium_rewards_subscription_title">Abonelik</string>
     <string name="premium_rewards_history_title">Ödül geçmişi</string>
     <string name="premium_rewards_loading_membership">Üyelik yükleniyor…</string>
-    <string name="premium_rewards_status_title">Prim Durumu</string>
-    <string name="premium_rewards_latest_title">En son ödül</string>
+    <string name="premium_rewards_status_title">Premium Durumu</string>
+    <string name="premium_rewards_latest_title">Son ödül</string>
     <string name="premium_rewards_source_format">Kaynak: %1$s</string>
     <string name="premium_rewards_channel_format">Kanal: %1$s</string>
-    <string name="premium_rewards_grant_status_format">İzin durumu: %1$s</string>
+    <string name="premium_rewards_grant_status_format">Verilme durumu: %1$s</string>
     <string name="premium_rewards_status_format">Durum: %1$s</string>
     <string name="premium_rewards_google_defer_format">Google erteleme: %1$s</string>
-    <string name="premium_rewards_granted_at_format">Verildiği tarih: %1$s</string>
-    <string name="premium_rewards_old_expiry_format">Eski geçerlilik tarihi: %1$s</string>
-    <string name="premium_rewards_new_expiry_format">Yeni geçerlilik tarihi: %1$s</string>
+    <string name="premium_rewards_granted_at_format">Verilme zamanı: %1$s</string>
+    <string name="premium_rewards_old_expiry_format">Eski bitiş: %1$s</string>
+    <string name="premium_rewards_new_expiry_format">Yeni bitiş: %1$s</string>
     <string name="premium_rewards_error_format">Hata: %1$s</string>
-    <string name="premium_rewards_days_added_format">Eklenen gün sayısı: %1$d</string>
+    <string name="premium_rewards_days_added_format">Eklenen gün: %1$d</string>
     <string name="premium_rewards_empty_title">Henüz ödül yok</string>
-    <string name="premium_rewards_empty_body">Doğrulamadan sonra başarılı yönlendirmeler burada görünecektir.</string>
-    <string name="premium_rewards_channel_google_play_defer">Google Play fatura tarihi uzatıldı</string>
-    <string name="premium_rewards_channel_backend_only">Prim ödülü uygulandı</string>
-    <string name="premium_rewards_grant_success">Başarı</string>
-    <string name="premium_rewards_status_retrying">Yeniden deneniyor</string>
-    <string name="premium_rewards_grant_not_granted">İzin verilmedi</string>
-    <string name="premium_rewards_google_defer_success">Google Play tarafından genişletildi</string>
-    <string name="premium_rewards_google_defer_failed">Arızalı</string>
+    <string name="premium_rewards_empty_body">Başarılı referanslar doğrulamadan sonra burada görünür.</string>
+    <string name="premium_rewards_channel_google_play_defer">Google Play faturalama tarihi uzatıldı</string>
+    <string name="premium_rewards_channel_backend_only">Premium ödül uygulandı</string>
+    <string name="premium_rewards_grant_success">Başarılı</string>
+    <string name="premium_rewards_status_retrying">Tekrar deneniyor</string>
+    <string name="premium_rewards_grant_not_granted">Verilmedi</string>
+    <string name="premium_rewards_google_defer_success">Google Play tarafından uzatıldı</string>
+    <string name="premium_rewards_google_defer_failed">Başarısız</string>
     <string name="premium_rewards_google_defer_not_required">Gerekli değil</string>
 
 
