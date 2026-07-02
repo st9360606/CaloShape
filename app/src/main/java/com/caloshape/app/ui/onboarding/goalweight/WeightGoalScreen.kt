@@ -54,7 +54,6 @@ import androidx.compose.ui.unit.sp
 import com.caloshape.app.R
 import com.caloshape.app.data.profile.repo.UserProfileStore
 import com.caloshape.app.data.profile.repo.roundKg1
-import com.caloshape.app.i18n.LocalLocaleController
 import com.caloshape.app.ui.common.design.CaloShapeOnboardingBottomContainer
 import com.caloshape.app.ui.common.design.CaloShapeOnboardingColors
 import com.caloshape.app.ui.common.design.CaloShapeOnboardingPrimaryButton
@@ -65,25 +64,7 @@ import com.caloshape.app.ui.common.haptic.rememberClickWithHaptic
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.launch
-import java.util.Locale
 import kotlin.math.roundToInt
-
-private fun isZhLanguageTag(tag: String): Boolean {
-    return tag.lowercase(Locale.ROOT).startsWith("zh")
-}
-
-@Composable
-private fun currentLanguageTag(): String {
-    val composeLocale = LocalLocaleController.current
-    val tag = composeLocale.tag
-    return tag.ifBlank { Locale.getDefault().toLanguageTag() }
-}
-
-@Composable
-private fun currentIsZhByAppLocale(): Boolean {
-    val tag = currentLanguageTag()
-    return remember(tag) { isZhLanguageTag(tag) }
-}
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
@@ -173,8 +154,9 @@ fun WeightGoalScreen(
     val lbsIntSel = lbsTenthsClamped / 10
     val lbsDecSel = lbsTenthsClamped % 10
 
-    val isZh = currentIsZhByAppLocale()
-    val subtitleToUnitSpacing = if (isZh) 60.dp else 25.dp
+    var titleLineCount by remember { mutableIntStateOf(1) }
+    val subtitleToUnitSpacing =
+        CaloShapeScreenFrame.onboardingTitleToSelectorSpacing(titleLineCount)
 
     val scope = rememberCoroutineScope()
 
@@ -291,7 +273,8 @@ fun WeightGoalScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = CaloShapeScreenFrame.contentHorizontalMedium),
-                textAlign = TextAlign.Center
+                textAlign = TextAlign.Center,
+                onTextLayout = { titleLineCount = it.lineCount }
             )
 
             Spacer(Modifier.height(8.dp))

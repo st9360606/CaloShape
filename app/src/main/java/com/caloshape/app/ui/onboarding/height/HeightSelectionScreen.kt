@@ -59,13 +59,13 @@ import com.caloshape.app.ui.common.design.CaloShapeOnboardingBottomContainer
 import com.caloshape.app.ui.common.design.CaloShapeOnboardingColors
 import com.caloshape.app.ui.common.design.CaloShapeOnboardingPrimaryButton
 import com.caloshape.app.ui.common.design.CaloShapeOnboardingTopBar
+import com.caloshape.app.ui.common.design.CaloShapeScreenFrame
 import com.caloshape.app.ui.common.haptic.HapticWheelTickEffect
 import com.caloshape.app.ui.common.haptic.rememberClickWithHaptic
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
-import com.caloshape.app.ui.common.design.CaloShapeScreenFrame
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
@@ -127,6 +127,10 @@ fun HeightSelectionScreen(
     var cmVal by rememberSaveable { mutableDoubleStateOf(initialCm) }
     var feet by rememberSaveable { mutableIntStateOf(initialFtIn.first) }
     var inches by rememberSaveable { mutableIntStateOf(initialFtIn.second) }
+
+    var titleLineCount by remember { mutableIntStateOf(1) }
+    val subtitleToUnitSpacing =
+        CaloShapeScreenFrame.onboardingTitleToSelectorSpacing(titleLineCount)
 
     // ✅ 只有「非儲存中」且「使用者尚未滑動」才讓 flow 回填（避免 Continue 時跳一下）
     LaunchedEffect(initialCm, isSaving) {
@@ -195,7 +199,8 @@ fun HeightSelectionScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = CaloShapeScreenFrame.contentHorizontalMedium),
-                textAlign = TextAlign.Center
+                textAlign = TextAlign.Center,
+                onTextLayout = { titleLineCount = it.lineCount }
             )
 
             Spacer(Modifier.height(8.dp))
@@ -212,7 +217,7 @@ fun HeightSelectionScreen(
                 textAlign = TextAlign.Center
             )
 
-            Spacer(Modifier.height(65.dp))
+            Spacer(Modifier.height(subtitleToUnitSpacing))
 
             UnitSegmented(
                 useMetric = useMetric,

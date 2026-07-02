@@ -69,19 +69,19 @@
 
     <!-- RequireSignInScreen -->
     <string name="auth_sign_in_account_title">アカウントにサインイン</string>
-    <string name="auth_sign_in_with_google">Googleでサインイン</string>
-    <string name="auth_signin_with_email">メールで続ける</string>
+    <string name="auth_sign_in_with_google">Sign in with Google</string>
+    <string name="auth_signin_with_email">Continue with email</string>
 
 
     <!-- SignInSheet-->
     <string name="signin_title">サインイン</string>
-    <string name="signin_with_apple">Appleでサインイン</string>
-    <string name="signin_with_google">Googleでサインイン</string>
-    <string name="signin_with_email">メールで続ける</string>
-    <string name="signin_legal_hint">続行すると、CaloShapeの</string>
-    <string name="signin_terms">利用規約</string>
-    <string name="signin_and">および</string>
-    <string name="signin_privacy">プライバシーポリシーに同意したことになります</string>
+    <string name="signin_with_apple">Sign in with Apple</string>
+    <string name="signin_with_google">Sign in with Google</string>
+    <string name="signin_with_email">Continue with email</string>
+    <string name="signin_legal_hint">By continuing you agree to CaloShape\'s</string>
+    <string name="signin_terms">Terms</string>
+    <string name="signin_and">and</string>
+    <string name="signin_privacy">Privacy policy</string>
     <string name="signin_url_terms">https://caloshape.com/terms</string>
     <string name="signin_url_privacy">https://caloshape.com/privacy</string>
 
@@ -93,7 +93,7 @@
 
     <!-- EmailEnterScreen-->
     <string name="email_sign_in_title">サインイン</string>
-    <string name="input_box_email_label">メール</string>
+    <string name="input_box_email_label">Email</string>
 
 
     <!-- EmailCodeScreen OTP -->
@@ -120,7 +120,7 @@
 
 
     <!-- Onboarding: ReferralSourceScreen -->
-    <string name="onboard_referral_title">どこでCaloShapeを知りましたか？</string>
+    <string name="onboard_referral_title">どこで知りましたか？</string>
 
 
     <!-- Onboarding: AgeSelectionScreen -->
@@ -130,13 +130,13 @@
 
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">身長はどれくらいですか？</string>
-    <string name="onboard_height_subtitle">データは体験とkcal推定の改善にのみ使用します。</string>
+    <string name="onboard_height_subtitle">身長は、カロリー推定精度の向上にのみ使用します。</string>
     <string name="onboard_height_hint">カスタムプランの調整に使用されます。</string>
 
 
     <!-- Onboarding: WeightSelectionScreen -->
     <string name="onboard_weight_title">体重はどれくらいですか？</string>
-    <string name="onboard_weight_subtitle">データは体験とkcal推定の改善にのみ使用します。</string>
+    <string name="onboard_weight_subtitle">体重は、カロリー推定精度の向上にのみ使用します。</string>
     <string name="onboard_weight_hint">カスタムプランの調整に使用されます。</string>
 
 
@@ -157,7 +157,7 @@
 
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">目標は何ですか？</string>
-    <string name="onboard_goal_subtitle">kcalプランを最適化するために使用します。</string>
+    <string name="onboard_goal_subtitle">カロリープランを最適化するために使用します。</string>
     <string name="goal_lose">体重を減らす</string>
     <string name="goal_maintain">維持する</string>
     <string name="goal_gain">体重を増やす</string>
@@ -166,7 +166,7 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">目標体重は？</string>
-    <string name="onboard_goal_weight_subtitle">この目標に基づいて、より適した毎日のkcal推奨を作成します。</string>
+    <string name="onboard_goal_weight_subtitle">この目標に基づいて、より適した毎日のカロリー目標を作成します。</string>
     <string name="onboard_goal_weight_hint">カスタムプランの調整に使用されます。</string>
 
 
@@ -183,12 +183,12 @@
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
-    <string name="onboard_notif_title">毎食を大切に！</string>
-    <string name="onboard_notif_subtitle">食事記録のやさしいリマインダーを有効にすると、kcal、マクロ、進捗を目標に保ちやすくなります。うっかり忘れても、タイミングのよい通知ですぐに戻れます。</string>
+    <string name="onboard_notif_title">毎食を大切に</string>
+    <string name="onboard_notif_subtitle">食事記録のやさしいリマインダーを有効にすると、カロリー、マクロ、進捗を目標に保ちやすくなります。うっかり忘れても、タイミングのよい通知ですぐに戻れます。</string>
     <string name="onboard_allow_notifications_cta">通知を許可</string>
     <string name="notification_mock_app_title">AIカロリーカウンター</string>
     <string name="onboard_notif_title_got_a_sec">食事は自動では記録されません 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">kcalとマクロを目標内に保つため、この食事を記録しましょう。</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">カロリーとマクロを目標内に保つため、この食事を記録しましょう。</string>
 
 
     <!-- Onboarding: HealthConnectIntroScreen -->
@@ -197,7 +197,7 @@
     <string name="onboard_hc_connect_body">CaloShape AIとヘルスアプリ間で毎日の活動を同期し、より完全な記録とインサイトを得られます。</string>
     <string name="onboard_hc_permission_rationale_title_prefix">CaloShapeが使用する理由</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShapeは歩数、活動kcal、運動データを読み取り、毎日の活動消費量の推定、kcalダッシュボードの更新、進捗インサイトの改善に使用します。アクセスはHealth Connectでいつでも取り消せます。</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShapeは歩数、活動カロリー、運動データを読み取り、毎日の活動消費量の推定、カロリーダッシュボードの更新、進捗インサイトの改善に使用します。アクセスはHealth Connectでいつでも取り消せます。</string>
     <string name="onboard_hc_permission_rationale_button">了解</string>
 
 
@@ -207,11 +207,11 @@
     <string name="progress_footer_hint">少しだけお待ちください</string>
     <string name="progress_center_caption">結果を準備中</string>
     <string name="progress_phase_pill_1">プロフィールを確認中</string>
-    <string name="progress_phase_pill_2">kcal目標を計算中</string>
+    <string name="progress_phase_pill_2">カロリー目標を計算中</string>
     <string name="progress_phase_pill_3">毎日のマクロを調整中</string>
     <string name="progress_phase_pill_4">健康インサイトを仕上げ中</string>
     <string name="progress_card_title">プランを設定中</string>
-    <string name="progress_row_calorie_target">毎日のkcal目標</string>
+    <string name="progress_row_calorie_target">毎日のカロリー目標</string>
     <string name="progress_row_carb_distribution">炭水化物の配分</string>
     <string name="progress_row_protein_recommendation">タンパク質の推奨量</string>
     <string name="progress_row_fat_recommendation">脂質の推奨量</string>
@@ -238,7 +238,7 @@
 方法</string>
     <string name="plan_goal_card_health_scores">健康スコアが自然な習慣づくりをサポートします</string>
     <string name="plan_goal_card_track_meals">ワンタップで食事を記録でき、継続が簡単です</string>
-    <string name="plan_goal_card_daily_calories">毎日のkcalを明確に確認し、見失いません</string>
+    <string name="plan_goal_card_daily_calories">毎日のカロリーを明確に確認し、見失いません</string>
     <string name="plan_goal_card_balance_macros">炭水化物 × タンパク質 × 脂質、スマートなバランスでより良い結果へ</string>
     <string name="plan_sources_based_on">公式の食事ガイドラインに基づいています。
 参考情報であり、医療上の助言ではありません。</string>
@@ -247,8 +247,7 @@
 
 
     <!-- Onboarding: OnboardReferralCodeScreen -->
-    <string name="onboard_referral_code_input">紹介コードを入力
-（任意）</string>
+    <string name="onboard_referral_code_input">紹介コードを入力</string>
     <string name="onboard_referral_code_subtitle">このステップはスキップできます</string>
     <string name="onboard_referral_code_input_label">紹介コード</string>
     <string name="onboard_referral_code_placeholder">紹介コード</string>
@@ -276,8 +275,8 @@
 
 
     <!-- Onboarding: OnboardSubscriptionIntro -->
-    <string name="subscription_intro_title">CaloShape AIをアンロックして
-目標達成を早めましょう。</string>
+    <string name="subscription_intro_title">CaloShape AI をアンロックして
+目標達成を早めましょう</string>
     <string name="subscription_intro_helper_format">年額わずか%1$s（%2$s）</string>
     <string name="subscription_start_three_day_free_trial">3日間無料で試す</string>
     <string name="subscription_three_day_trial_helper_format">年額わずか%1$s（%2$s/月）</string>
@@ -349,8 +348,8 @@
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">残りkcal</string>
-    <string name="home_calories_eaten_label">摂取kcal</string>
+    <string name="home_calories_goal_label">残りカロリー</string>
+    <string name="home_calories_eaten_label">摂取カロリー</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
@@ -466,7 +465,7 @@
     <string name="progress_chart_loading_total_calories_text">--.- kcal</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
-    <string name="progress_chart_total_calories">合計kcal</string>
+    <string name="progress_chart_total_calories">合計カロリー</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">タンパク質</string>
     <string name="progress_legend_carbs">炭水化物</string>
@@ -512,7 +511,7 @@
     <string name="workout_chart_goal_reached">今日の目標を達成しました</string>
     <string name="workout_chart_goal_left">今日の目標まで残り%1$d kcal</string>
     <string name="workout_chart_title">運動消費</string>
-    <string name="workout_chart_info_dialog_body">記録されたワークアウトと、毎日の歩数から推定された活動kcalが含まれます。</string>
+    <string name="workout_chart_info_dialog_body">記録したワークアウトと、毎日の歩数から推定した活動カロリーが含まれます。</string>
     <string name="workout_chart_unit_kcal">kcal</string>
     <string name="workout_chart_goal">目標</string>
     <string name="workout_chart_value_kcal">%1$d kcal</string>
@@ -553,7 +552,7 @@
     <string name="progress_average_overview_subtitle">今日を除外し、データがある日のみで平均を計算します。</string>
     <string name="progress_average_days_badge">%1$d日平均</string>
     <string name="progress_average_loading">平均を読み込み中…</string>
-    <string name="progress_average_total_calories">合計kcal</string>
+    <string name="progress_average_total_calories">合計カロリー</string>
     <string name="progress_average_protein">タンパク質</string>
     <string name="progress_average_carbs">炭水化物</string>
     <string name="progress_average_fats">脂質</string>
@@ -675,7 +674,7 @@
     <string name="workout_tracker_estimating_fallback">推定中…</string>
     <string name="workout_tracker_estimating_analyzing">活動を分析中…</string>
     <string name="workout_tracker_estimating_numbers">数値を計算中…</string>
-    <string name="workout_tracker_estimating_calories">負荷を推定し、kcalを計算中…</string>
+    <string name="workout_tracker_estimating_calories">負荷を推定し、カロリーを計算中…</string>
     <string name="workout_tracker_do_not_close">アプリを閉じたりデバイスをロックしたりしないでください</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
@@ -875,7 +874,7 @@
     <string name="settings_widgets_how_to_add">追加方法</string>
     <string name="log_your_food">食事を記録</string>
 
-    <string name="settings_calories_goal_label">残りkcal</string>
+    <string name="settings_calories_goal_label">残りカロリー</string>
     <string name="settings_protein_goal_label">残りタンパク質</string>
     <string name="settings_carbs_goal_label">残り炭水化物</string>
     <string name="settings_fats_goal_label">残り脂質</string>
@@ -980,13 +979,13 @@
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">身長を編集</string>
-    <string name="edit_height_privacy_note">身長は体験とkcal推定精度の向上にのみ使用します。</string>
+    <string name="edit_height_privacy_note">身長は、カロリー推定精度の向上にのみ使用します。</string>
     <string name="edit_height_saved_locally_sync_failed">ネットワークエラーです。ローカルに保存しましたが、同期に失敗しました。</string>
 
 
     <!-- EditAgeScreen -->
     <string name="edit_age_title">年齢を編集</string>
-    <string name="edit_age_privacy_note">年齢は体験とkcal推定精度の向上にのみ使用します。</string>
+    <string name="edit_age_privacy_note">年齢は、カロリー推定精度の向上にのみ使用します。</string>
 
 
     <!-- EditGenderScreen -->
@@ -1020,7 +1019,7 @@
 
     <!-- EditNutritionGoalsScreen -->
     <string name="edit_nutrition_goals_title">栄養目標を編集</string>
-    <string name="edit_nutrition_calorie_goal">kcal目標</string>
+    <string name="edit_nutrition_calorie_goal">カロリー目標</string>
     <string name="edit_nutrition_protein_goal">タンパク質目標</string>
     <string name="edit_nutrition_carb_goal">炭水化物目標</string>
     <string name="edit_nutrition_fat_goal">脂質目標</string>
@@ -1037,7 +1036,7 @@
 
     <!-- RingColorsExplainedScreen -->
     <string name="ring_colors_explained_title">日付リングの色</string>
-    <string name="ring_colors_explained_intro">日付リングで、各日がkcal目標と比べてどうだったかをすばやく確認できます。</string>
+    <string name="ring_colors_explained_intro">日付リングで、各日がカロリー目標と比べてどうだったかをすばやく確認できます。</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">日付リングのプレビュー</string>
 
@@ -1078,7 +1077,7 @@
     <!-- WidgetGuideScreen -->
     <string name="widget_guide_title">ウィジェットを追加</string>
     <string name="widget_guide_hero_title">CaloShapeをホーム画面に追加</string>
-    <string name="widget_guide_hero_body">アプリを開かずにkcal、マクロ、クイック操作を確認できます。</string>
+    <string name="widget_guide_hero_body">アプリを開かずにカロリー、マクロ、クイック操作を確認できます。</string>
     <string name="widget_guide_steps_title">手順に従ってください</string>
     <string name="widget_guide_step_1_title">ホーム画面を長押し</string>
     <string name="widget_guide_step_1_body">メニューが表示されるまで、スマートフォンのホーム画面の空いている場所を長押しします。</string>
