@@ -154,10 +154,6 @@ fun WeightGoalScreen(
     val lbsIntSel = lbsTenthsClamped / 10
     val lbsDecSel = lbsTenthsClamped % 10
 
-    var titleLineCount by remember { mutableIntStateOf(1) }
-    val subtitleToUnitSpacing =
-        CaloShapeScreenFrame.onboardingTitleToSelectorSpacing(titleLineCount)
-
     val scope = rememberCoroutineScope()
 
     val kgIntWheelState = rememberLazyListState()
@@ -272,9 +268,9 @@ fun WeightGoalScreen(
                 color = CaloShapeOnboardingColors.title(),
                 modifier = Modifier
                     .fillMaxWidth()
+                    .heightIn(min = 80.dp)
                     .padding(horizontal = CaloShapeScreenFrame.contentHorizontalMedium),
-                textAlign = TextAlign.Center,
-                onTextLayout = { titleLineCount = it.lineCount }
+                textAlign = TextAlign.Center
             )
 
             Spacer(Modifier.height(8.dp))
@@ -287,11 +283,12 @@ fun WeightGoalScreen(
                 ),
                 modifier = Modifier
                     .fillMaxWidth()
+                    .heightIn(min = 60.dp)
                     .padding(horizontal = CaloShapeScreenFrame.onboardingSubtitleHorizontal),
                 textAlign = TextAlign.Center
             )
 
-            Spacer(Modifier.height(subtitleToUnitSpacing))
+            Spacer(Modifier.height(5.dp))
 
             WeightUnitSegmented(
                 useMetric = useMetric,

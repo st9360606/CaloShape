@@ -241,15 +241,6 @@ object CaloShapeScreenFrame {
     val onboardingTitleHorizontal: Dp = contentHorizontalMedium
     val onboardingSubtitleHorizontal: Dp = 48.dp
 
-    /**
-     * Keeps the selector at a stable vertical position when an onboarding title wraps.
-     * Title line height is 40dp on the selection screens.
-     */
-    fun onboardingTitleToSelectorSpacing(titleLineCount: Int): Dp {
-        val wrappedLineHeight = (titleLineCount.coerceAtLeast(1) - 1) * 40
-        return (65 - wrappedLineHeight).coerceAtLeast(0).dp
-    }
-
     /** Main onboarding content horizontal distance. */
     val onboardingHorizontal: Dp = CaloShapeSpacing.screenHorizontal
     val onboardingWideHorizontal: Dp = contentHorizontalExtraWide

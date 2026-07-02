@@ -128,10 +128,6 @@ fun HeightSelectionScreen(
     var feet by rememberSaveable { mutableIntStateOf(initialFtIn.first) }
     var inches by rememberSaveable { mutableIntStateOf(initialFtIn.second) }
 
-    var titleLineCount by remember { mutableIntStateOf(1) }
-    val subtitleToUnitSpacing =
-        CaloShapeScreenFrame.onboardingTitleToSelectorSpacing(titleLineCount)
-
     // ✅ 只有「非儲存中」且「使用者尚未滑動」才讓 flow 回填（避免 Continue 時跳一下）
     LaunchedEffect(initialCm, isSaving) {
         if (!isSaving && !didUserEdit) {
@@ -198,9 +194,9 @@ fun HeightSelectionScreen(
                 color = CaloShapeOnboardingColors.title(),
                 modifier = Modifier
                     .fillMaxWidth()
+                    .heightIn(min = 80.dp)
                     .padding(horizontal = CaloShapeScreenFrame.contentHorizontalMedium),
-                textAlign = TextAlign.Center,
-                onTextLayout = { titleLineCount = it.lineCount }
+                textAlign = TextAlign.Center
             )
 
             Spacer(Modifier.height(8.dp))
@@ -213,11 +209,12 @@ fun HeightSelectionScreen(
                 ),
                 modifier = Modifier
                     .fillMaxWidth()
+                    .heightIn(min = 60.dp)
                     .padding(horizontal = CaloShapeScreenFrame.onboardingSubtitleHorizontal),
                 textAlign = TextAlign.Center
             )
 
-            Spacer(Modifier.height(subtitleToUnitSpacing))
+            Spacer(Modifier.height(5.dp))
 
             UnitSegmented(
                 useMetric = useMetric,
