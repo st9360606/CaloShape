@@ -56,9 +56,9 @@ import com.caloshape.app.data.profile.repo.UserProfileStore
 import com.caloshape.app.data.profile.repo.roundKg1
 import com.caloshape.app.ui.common.design.CaloShapeOnboardingBottomContainer
 import com.caloshape.app.ui.common.design.CaloShapeOnboardingColors
+import com.caloshape.app.ui.common.design.CaloShapeOnboardingPickerHeader
 import com.caloshape.app.ui.common.design.CaloShapeOnboardingPrimaryButton
 import com.caloshape.app.ui.common.design.CaloShapeOnboardingTopBar
-import com.caloshape.app.ui.common.design.CaloShapeScreenFrame
 import com.caloshape.app.ui.common.haptic.HapticWheelTickEffect
 import com.caloshape.app.ui.common.haptic.rememberClickWithHaptic
 import kotlinx.coroutines.flow.distinctUntilChanged
@@ -260,32 +260,9 @@ fun WeightGoalScreen(
                 .padding(inner),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(
-                text = stringResource(R.string.onboard_goal_weight_title),
-                fontSize = 34.sp,
-                fontWeight = FontWeight.ExtraBold,
-                lineHeight = 40.sp,
-                color = CaloShapeOnboardingColors.title(),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .heightIn(min = 80.dp)
-                    .padding(horizontal = CaloShapeScreenFrame.contentHorizontalMedium),
-                textAlign = TextAlign.Center
-            )
-
-            Spacer(Modifier.height(8.dp))
-
-            Text(
-                text = stringResource(R.string.onboard_goal_weight_subtitle),
-                style = MaterialTheme.typography.bodyMedium.copy(
-                    color = CaloShapeOnboardingColors.subtitle(),
-                    lineHeight = 20.sp
-                ),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .heightIn(min = 60.dp)
-                    .padding(horizontal = CaloShapeScreenFrame.onboardingSubtitleHorizontal),
-                textAlign = TextAlign.Center
+            CaloShapeOnboardingPickerHeader(
+                title = stringResource(R.string.onboard_goal_weight_title),
+                subtitle = stringResource(R.string.onboard_goal_weight_subtitle)
             )
 
             Spacer(Modifier.height(5.dp))
