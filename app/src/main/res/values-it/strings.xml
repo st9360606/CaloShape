@@ -481,7 +481,7 @@ Resta sul piano ogni giorno.</string>
     <string name="progress_day_fri">Ven</string>
     <string name="progress_day_sat">Sab</string>
 
-    <string name="progress_tooltip_calories">kcal</string>
+    <string name="progress_tooltip_calories">Calorie</string>
     <string name="progress_tooltip_protein">Proteine</string>
     <string name="progress_tooltip_carbs">Carboidrati</string>
     <string name="progress_tooltip_fats">Grassi</string>

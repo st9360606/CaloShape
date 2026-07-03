@@ -471,7 +471,7 @@
     <string name="progress_day_fri">週五</string>
     <string name="progress_day_sat">週六</string>
 
-    <string name="progress_tooltip_calories">熱量</string>
+    <string name="progress_tooltip_calories">卡路里</string>
     <string name="progress_tooltip_protein">蛋白質</string>
     <string name="progress_tooltip_carbs">碳水</string>
     <string name="progress_tooltip_fats">脂肪</string>

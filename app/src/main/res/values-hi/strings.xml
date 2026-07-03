@@ -470,7 +470,7 @@
     <string name="progress_day_fri">शुक्र</string>
     <string name="progress_day_sat">शनि</string>
 
-    <string name="progress_tooltip_calories">kcal</string>
+    <string name="progress_tooltip_calories">कैलोरी</string>
     <string name="progress_tooltip_protein">प्रोटीन</string>
     <string name="progress_tooltip_carbs">कार्ब्स</string>
     <string name="progress_tooltip_fats">फैट</string>

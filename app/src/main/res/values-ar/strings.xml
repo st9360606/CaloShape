@@ -470,7 +470,7 @@
     <string name="progress_day_fri">الجمعة</string>
     <string name="progress_day_sat">السبت</string>
 
-    <string name="progress_tooltip_calories">السعرات</string>
+    <string name="progress_tooltip_calories">السعرات الحرارية</string>
     <string name="progress_tooltip_protein">البروتين</string>
     <string name="progress_tooltip_carbs">الكربوهيدرات</string>
     <string name="progress_tooltip_fats">الدهون</string>

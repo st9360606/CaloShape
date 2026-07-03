@@ -470,7 +470,7 @@
     <string name="progress_day_fri">Cum</string>
     <string name="progress_day_sat">Cmt</string>
 
-    <string name="progress_tooltip_calories">kcal</string>
+    <string name="progress_tooltip_calories">Kalori</string>
     <string name="progress_tooltip_protein">Protein</string>
     <string name="progress_tooltip_carbs">Karbonhidrat</string>
     <string name="progress_tooltip_fats">Yağ</string>

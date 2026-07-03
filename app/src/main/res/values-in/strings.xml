@@ -481,7 +481,7 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="progress_day_fri">Jum</string>
     <string name="progress_day_sat">Sab</string>
 
-    <string name="progress_tooltip_calories">kcal</string>
+    <string name="progress_tooltip_calories">Kalori</string>
     <string name="progress_tooltip_protein">Protein</string>
     <string name="progress_tooltip_carbs">Karbohidrat</string>
     <string name="progress_tooltip_fats">Lemak</string>

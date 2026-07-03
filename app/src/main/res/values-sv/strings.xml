@@ -470,7 +470,7 @@
     <string name="progress_day_fri">Fre</string>
     <string name="progress_day_sat">Lör</string>
 
-    <string name="progress_tooltip_calories">kcal</string>
+    <string name="progress_tooltip_calories">Kalorier</string>
     <string name="progress_tooltip_protein">Protein</string>
     <string name="progress_tooltip_carbs">Kolhydrater</string>
     <string name="progress_tooltip_fats">Fett</string>

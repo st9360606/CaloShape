@@ -331,15 +331,15 @@
     <string name="bottom_nav_progress">Progrès</string>
     <string name="bottom_nav_weight">Poids</string>
     <string name="bottom_nav_fasting">Jeûne</string>
-    <string name="bottom_nav_workout">Entraînement</string>
+    <string name="bottom_nav_workout">Sport</string>
 
 
     <!-- =============   HomeCards  ============= -->
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">kcal restantes</string>
-    <string name="home_calories_eaten_label">kcal consommées</string>
+    <string name="home_calories_goal_label">Calories restantes</string>
+    <string name="home_calories_eaten_label">Calories consommées</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
@@ -352,8 +352,8 @@
     <string name="home_fats_eaten_label">Lipides consommés</string>
     <string name="home_fiber_goal_label">Fibres restantes</string>
     <string name="home_fiber_eaten_label">Fibres consommées</string>
-    <string name="home_sugar_goal_label">Sucre restant</string>
-    <string name="home_sugar_eaten_label">Sucre consommé</string>
+    <string name="home_sugar_goal_label">Sucres restants</string>
+    <string name="home_sugar_eaten_label">Sucres consommés</string>
     <string name="home_sodium_goal_label">Sodium restant</string>
     <string name="home_sodium_eaten_label">Sodium consommé</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
@@ -385,7 +385,7 @@
 
 
     <!-- HomeCards : Workout Card -->
-    <string name="workout_card_title">Entraînement</string>
+    <string name="workout_card_title">Sport</string>
     <string name="workout_card_unit_kcal">kcal</string>
 
 
@@ -409,10 +409,10 @@
          ProgressScreen
          ========================= -->
     <string name="progress_screen_title">Progrès</string>
-    <string name="progress_tab_this_week">Cette semaine</string>
-    <string name="progress_tab_last_week">La semaine dernière</string>
-    <string name="progress_tab_two_weeks_ago">Il y a 2 sem.</string>
-    <string name="progress_tab_three_weeks_ago">Il y a 3 sem.</string>
+    <string name="progress_tab_this_week">Cette sem.</string>
+    <string name="progress_tab_last_week">-1 sem.</string>
+    <string name="progress_tab_two_weeks_ago">-2 sem.</string>
+    <string name="progress_tab_three_weeks_ago">-3 sem.</string>
     <string name="progress_error_load_failed">Échec du chargement</string>
     <string name="workout_chart_error_load_failed">Échec du chargement du graphique d’entraînement</string>
     <string name="water_chart_error_load_failed">Échec du chargement du graphique d’eau</string>
@@ -422,13 +422,13 @@
          BMI Card / BMI Info Dialog
          ========================= -->
     <string name="bmi_card_title">Votre IMC</string>
-    <string name="bmi_card_subtitle">Votre poids est</string>
+    <string name="bmi_card_subtitle">Statut du poids</string>
 
-    <string name="bmi_status_underweight">Insuffisance pondérale</string>
+    <string name="bmi_status_underweight">Maigreur</string>
     <string name="bmi_status_healthy">Poids normal</string>
     <string name="bmi_status_overweight">Surpoids</string>
     <string name="bmi_status_obese">Obésité</string>
-    <string name="bmi_status_unknown">Inconnu</string>
+    <string name="bmi_status_unknown">Non défini</string>
 
     <string name="bmi_range_underweight">&lt;18.5</string>
     <string name="bmi_range_healthy">18.5–24.9</string>
@@ -455,12 +455,12 @@
     <string name="progress_chart_loading_total_calories_text">--.- kcal</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
-    <string name="progress_chart_total_calories">kcal totales</string>
+    <string name="progress_chart_total_calories">Calories totales</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Protéines</string>
     <string name="progress_legend_carbs">Glucides</string>
     <string name="progress_legend_fats">Lipides</string>
-    <string name="progress_keep_it_up">Continuez ainsi ! Commencer est toujours le plus difficile !</string>
+    <string name="progress_keep_it_up">Continuez ainsi ! Le plus dur est fait.</string>
 
     <string name="progress_day_sun">Dim</string>
     <string name="progress_day_mon">Lun</string>
@@ -470,7 +470,7 @@
     <string name="progress_day_fri">Ven</string>
     <string name="progress_day_sat">Sam</string>
 
-    <string name="progress_tooltip_calories">kcal</string>
+    <string name="progress_tooltip_calories">Calories</string>
     <string name="progress_tooltip_protein">Protéines</string>
     <string name="progress_tooltip_carbs">Glucides</string>
     <string name="progress_tooltip_fats">Lipides</string>
@@ -488,7 +488,7 @@
     <string name="progress_legend_fiber">Fibres</string>
     <string name="progress_legend_sugar">Sucre</string>
     <string name="progress_legend_sodium">Sodium</string>
-    <string name="progress_micronutrients_keep_it_up">Maintenez un bon équilibre entre fibres, sucre et sodium.</string>
+    <string name="progress_micronutrients_keep_it_up">Gardez un bon équilibre entre fibres, sucres et sodium.</string>
     <string name="progress_tooltip_fiber">Fibres</string>
     <string name="progress_tooltip_sugar">Sucre</string>
     <string name="progress_tooltip_sodium">Sodium</string>
@@ -499,7 +499,7 @@
          WorkoutChartCard
          ========================= -->
     <string name="workout_chart_goal_reached">Objectif atteint aujourd’hui</string>
-    <string name="workout_chart_goal_left">Encore %1$d kcal pour atteindre l’objectif du jour</string>
+    <string name="workout_chart_goal_left">Encore %1$d kcal pour l’objectif du jour</string>
     <string name="workout_chart_title">Dépense entraînement</string>
     <string name="workout_chart_info_dialog_body">Comprend les entraînements enregistrés et les calories d’activité estimées à partir des pas quotidiens.</string>
     <string name="workout_chart_unit_kcal">kcal</string>
@@ -517,7 +517,7 @@
          WaterChartCard
          ========================= -->
     <string name="water_chart_goal_reached">Objectif atteint pour aujourd’hui</string>
-    <string name="water_chart_goal_left_ml">Encore %1$s ml pour atteindre l’objectif du jour</string>
+    <string name="water_chart_goal_left_ml">Encore %1$s ml pour l’objectif du jour</string>
     <string name="water_chart_title">Apport en eau</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Objectif</string>
@@ -716,11 +716,11 @@
 
     <!-- HomeQuickActionMenu -->
     <string name="quick_add_saved_foods">Aliments enregistrés</string>
-    <string name="quick_add_scan_food">Scanner un aliment</string>
+    <string name="quick_add_scan_food">Scanner</string>
 
 
     <!-- CameraScreen -->
-    <string name="camera_mode_food">Scanner un aliment</string>
+    <string name="camera_mode_food">Repas</string>
     <string name="camera_mode_barcode">Code-barres</string>
     <string name="camera_mode_label">Étiquette</string>
     <string name="camera_mode_album">Photos</string>

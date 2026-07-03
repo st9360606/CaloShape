@@ -470,7 +470,7 @@
     <string name="progress_day_fri">Pe</string>
     <string name="progress_day_sat">La</string>
 
-    <string name="progress_tooltip_calories">kcal</string>
+    <string name="progress_tooltip_calories">Kalorit</string>
     <string name="progress_tooltip_protein">Proteiini</string>
     <string name="progress_tooltip_carbs">Hiilihydraatit</string>
     <string name="progress_tooltip_fats">Rasvat</string>

@@ -470,7 +470,7 @@
     <string name="progress_day_fri">Pt</string>
     <string name="progress_day_sat">Sb</string>
 
-    <string name="progress_tooltip_calories">kcal</string>
+    <string name="progress_tooltip_calories">Kalorie</string>
     <string name="progress_tooltip_protein">Białko</string>
     <string name="progress_tooltip_carbs">Węglowodany</string>
     <string name="progress_tooltip_fats">Tłuszcze</string>

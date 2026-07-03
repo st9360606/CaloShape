@@ -481,7 +481,7 @@
     <string name="progress_day_fri">금</string>
     <string name="progress_day_sat">토</string>
 
-    <string name="progress_tooltip_calories">kcal</string>
+    <string name="progress_tooltip_calories">칼로리</string>
     <string name="progress_tooltip_protein">단백질</string>
     <string name="progress_tooltip_carbs">탄수화물</string>
     <string name="progress_tooltip_fats">지방</string>

@@ -470,7 +470,7 @@
     <string name="progress_day_fri">Sex</string>
     <string name="progress_day_sat">Sáb</string>
 
-    <string name="progress_tooltip_calories">kcal</string>
+    <string name="progress_tooltip_calories">Calorias</string>
     <string name="progress_tooltip_protein">Proteína</string>
     <string name="progress_tooltip_carbs">Carboidratos</string>
     <string name="progress_tooltip_fats">Gorduras</string>

@@ -470,7 +470,7 @@
     <string name="progress_day_fri">ศ.</string>
     <string name="progress_day_sat">ส.</string>
 
-    <string name="progress_tooltip_calories">kcal</string>
+    <string name="progress_tooltip_calories">แคลอรี</string>
     <string name="progress_tooltip_protein">โปรตีน</string>
     <string name="progress_tooltip_carbs">คาร์บ</string>
     <string name="progress_tooltip_fats">ไขมัน</string>

@@ -470,7 +470,7 @@
     <string name="progress_day_fri">T6</string>
     <string name="progress_day_sat">T7</string>
 
-    <string name="progress_tooltip_calories">kcal</string>
+    <string name="progress_tooltip_calories">Calo</string>
     <string name="progress_tooltip_protein">Protein</string>
     <string name="progress_tooltip_carbs">Carb</string>
     <string name="progress_tooltip_fats">Chất béo</string>

@@ -480,7 +480,7 @@
     <string name="progress_day_fri">金</string>
     <string name="progress_day_sat">土</string>
 
-    <string name="progress_tooltip_calories">kcal</string>
+    <string name="progress_tooltip_calories">カロリー</string>
     <string name="progress_tooltip_protein">タンパク質</string>
     <string name="progress_tooltip_carbs">炭水化物</string>
     <string name="progress_tooltip_fats">脂質</string>

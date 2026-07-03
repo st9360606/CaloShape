@@ -470,7 +470,7 @@
     <string name="progress_day_fri">Vr</string>
     <string name="progress_day_sat">Za</string>
 
-    <string name="progress_tooltip_calories">kcal</string>
+    <string name="progress_tooltip_calories">Calorieën</string>
     <string name="progress_tooltip_protein">Eiwit</string>
     <string name="progress_tooltip_carbs">Koolhydraten</string>
     <string name="progress_tooltip_fats">Vetten</string>

@@ -328,7 +328,7 @@ CaloShape AI</string>
     <string name="progress_day_thu">ה׳</string>
     <string name="progress_day_fri">ו׳</string>
     <string name="progress_day_sat">ש׳</string>
-    <string name="progress_tooltip_calories">kcal</string>
+    <string name="progress_tooltip_calories">קלוריות</string>
     <string name="progress_tooltip_protein">חלבון</string>
     <string name="progress_tooltip_carbs">פחמימות</string>
     <string name="progress_tooltip_fats">שומנים</string>
