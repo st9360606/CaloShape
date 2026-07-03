@@ -470,7 +470,7 @@
     <string name="progress_legend_protein">タンパク質</string>
     <string name="progress_legend_carbs">炭水化物</string>
     <string name="progress_legend_fats">脂質</string>
-    <string name="progress_keep_it_up">その調子です！始めることが一番難しい部分です！</string>
+    <string name="progress_keep_it_up">その調子です！最初の一歩が一番大変です。</string>
 
     <string name="progress_day_sun">日</string>
     <string name="progress_day_mon">月</string>
@@ -498,7 +498,7 @@
     <string name="progress_legend_fiber">食物繊維</string>
     <string name="progress_legend_sugar">糖類</string>
     <string name="progress_legend_sodium">ナトリウム</string>
-    <string name="progress_micronutrients_keep_it_up">食物繊維、糖類、ナトリウムのバランスを保ちましょう。</string>
+    <string name="progress_micronutrients_keep_it_up">食物繊維・糖類・ナトリウムのバランスを保ちましょう。</string>
     <string name="progress_tooltip_fiber">食物繊維</string>
     <string name="progress_tooltip_sugar">糖類</string>
     <string name="progress_tooltip_sodium">ナトリウム</string>
