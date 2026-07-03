@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">Une photo, et vous connaissez les calories.</string>
+    <string name="landing_title">Une photo pour connaître les calories.</string>
     <string name="choose_language">Choisir la langue</string>
     <string name="cta_get_started">Commencer</string>
     <string name="cta_login_prefix">Vous avez déjà un compte ?</string>
@@ -141,7 +141,7 @@
 
 
     <!-- Onboarding: ExerciseFrequencyScreen  -->
-    <string name="onboard_ex_freq_title">À quelle fréquence vous entraînez-vous par semaine ?</string>
+    <string name="onboard_ex_freq_title">Combien de séances par semaine ?</string>
     <string name="onboard_ex_freq_subtitle">Cela permettra de calibrer votre programme personnalisé.</string>
     <string name="ex_freq_0_title">0</string>
     <string name="ex_freq_0_sub">Sédentaire</string>
@@ -180,10 +180,10 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">Chaque repas compte !</string>
-    <string name="onboard_notif_subtitle">Activez les notifications pour recevoir de légers rappels pour enregistrer vos repas — ainsi, vos calories, macros et progrès restent sur la bonne voie. Les oublis arrivent ; des rappels au bon moment vous aident à vous reprendre rapidement.</string>
+    <string name="onboard_notif_subtitle">Recevez de petits rappels pour enregistrer vos repas et suivre vos progrès sans effort.</string>
     <string name="onboard_allow_notifications_cta">Autoriser les notifications</string>
     <string name="notification_mock_app_title">Compteur de calories AI</string>
-    <string name="onboard_notif_title_got_a_sec">Votre repas ne va pas s’enregistrer tout seul 😉</string>
+    <string name="onboard_notif_title_got_a_sec">Pensez à vos repas 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Enregistrez ce repas pour garder vos calories et macros sur la bonne voie.</string>
 
 
@@ -573,7 +573,7 @@
     <string name="weight_chart_tab_30_days">30 jours</string>
     <string name="weight_chart_tab_60_days">60 jours</string>
     <string name="weight_chart_tab_90_days">90 jours</string>
-    <string name="weight_chart_tab_all_time">Tout le temps</string>
+    <string name="weight_chart_tab_all_time">Tout</string>
     <string name="weight_chart_title">Tendance du poids</string>
     <string name="weight_chart_goal_progress_badge">%1$s%% de l’objectif</string>
     <string name="weight_chart_goal_label">Objectif</string>
@@ -625,8 +625,8 @@
 
 
     <!-- WorkoutHistoryScreen -->
-    <string name="workout_history_title">Historique des entraînements</string>
-    <string name="workout_history_summary_label">Brûlées aujourd’hui</string>
+    <string name="workout_history_title">Historique d’activité</string>
+    <string name="workout_history_summary_label">Calories brûlées</string>
     <string name="workout_history_summary_body">Suivez votre progression des calories brûlées aujourd’hui</string>
     <string name="workout_history_today_label">Aujourd’hui</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
@@ -812,7 +812,7 @@
     <string name="settings_personal_details">Informations personnelles</string>
     <string name="settings_adjust_macronutrients">Ajuster les macronutriments</string>
     <string name="settings_weight_history">Historique de poids</string>
-    <string name="settings_ring_colors_explained">Guide des couleurs des cercles du calendrier</string>
+    <string name="settings_ring_colors_explained">Guide des couleurs du calendrier</string>
     <string name="settings_inbox">Boîte de réception</string>
 
 
@@ -861,14 +861,14 @@
     <!-- Settings: Widget Guide -->
     <string name="settings_widgets_title">Widgets</string>
     <string name="settings_widgets_how_to_add">Comment ajouter ?</string>
-    <string name="log_your_food">Enregistrer un aliment</string>
+    <string name="log_your_food">Log your food</string>
 
-    <string name="settings_calories_goal_label">Calories restantes</string>
-    <string name="settings_protein_goal_label">Protéines restantes</string>
-    <string name="settings_carbs_goal_label">Glucides restants</string>
-    <string name="settings_fats_goal_label">Lipides restants</string>
-    <string name="settings_widget_scan_food">Scanner un aliment</string>
-    <string name="settings_widget_barcode">Code-barres</string>
+    <string name="settings_calories_goal_label">Calories left</string>
+    <string name="settings_protein_goal_label">Protein left</string>
+    <string name="settings_carbs_goal_label">Carbs left</string>
+    <string name="settings_fats_goal_label">Fats left</string>
+    <string name="settings_widget_scan_food">Scan food</string>
+    <string name="settings_widget_barcode">Barcode</string>
 
     <string name="settings_logout_loading">Déconnexion en cours…</string>
     <string name="settings_logout">Se déconnecter</string>

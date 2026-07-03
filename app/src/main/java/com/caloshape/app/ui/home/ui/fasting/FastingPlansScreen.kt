@@ -12,11 +12,11 @@ import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -62,10 +62,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
@@ -187,25 +190,55 @@ fun FastingPlansScreen(
             ) {
                 Spacer(Modifier.height(2.dp))
 
-                LazyVerticalGrid(
-                    columns = GridCells.Fixed(2),
-                    verticalArrangement = Arrangement.spacedBy(16.dp),
-                    horizontalArrangement = Arrangement.spacedBy(16.dp),
-                    contentPadding = PaddingValues(vertical = 2.dp),
-                    modifier = Modifier.heightIn(max = 2000.dp)
-                ) {
-                    items(FastingPlan.entries) { plan ->
-                        val selected = plan == state.selected
+                val descriptionStyle = MaterialTheme.typography.bodySmall.copy(
+                    color = HomeCardStyles.Text.secondary(),
+                    lineHeight = 18.sp
+                )
+                val descriptionTexts = FastingPlan.entries.mapNotNull { plan ->
+                    fastingPlanDescriptionRes(plan)?.let { stringResource(it) }
+                }
+                val textMeasurer = rememberTextMeasurer()
+                val density = LocalDensity.current
 
-                        FastingPlanCard(plan, selected) {
-                            if (saving) return@FastingPlanCard
+                BoxWithConstraints(Modifier.fillMaxWidth()) {
+                    val cardWidth = (maxWidth - 16.dp) / 2
+                    val descriptionWidthPx = with(density) {
+                        maxOf(1.dp, cardWidth - 36.dp).roundToPx()
+                    }
+                    val descriptionHeight = with(density) {
+                        descriptionTexts.maxOfOrNull { description ->
+                            textMeasurer.measure(
+                                text = description,
+                                style = descriptionStyle,
+                                constraints = Constraints(maxWidth = descriptionWidthPx)
+                            ).size.height
+                        }?.toDp() ?: 18.dp
+                    }
 
-                            vm.onPlanSelected(plan)
+                    LazyVerticalGrid(
+                        columns = GridCells.Fixed(2),
+                        verticalArrangement = Arrangement.spacedBy(16.dp),
+                        horizontalArrangement = Arrangement.spacedBy(16.dp),
+                        contentPadding = PaddingValues(vertical = 2.dp),
+                        modifier = Modifier.heightIn(max = 2000.dp)
+                    ) {
+                        items(FastingPlan.entries) { plan ->
+                            val selected = plan == state.selected
 
-                            persistFastingPlan(
-                                showToast = false,
-                                navigateBack = false
-                            )
+                            FastingPlanCard(
+                                plan = plan,
+                                selected = selected,
+                                descriptionHeight = descriptionHeight
+                            ) {
+                                if (saving) return@FastingPlanCard
+
+                                vm.onPlanSelected(plan)
+
+                                persistFastingPlan(
+                                    showToast = false,
+                                    navigateBack = false
+                                )
+                            }
                         }
                     }
                 }
@@ -231,7 +264,6 @@ fun FastingPlansScreen(
                 ) {
                     Row(
                         modifier = Modifier
-                            .fillMaxWidth(0.4f)
                             .caloShapeClickable { showCupertinoPicker = true },
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.Center
@@ -243,7 +275,9 @@ fun FastingPlansScreen(
                                 fontSize = 20.sp,
                                 color = if (HomeCardStyles.isDark()) HomeCardStyles.Text.primary() else colors.textPrimary
                             ),
-                            modifier = Modifier.padding(start = 18.dp)
+                            modifier = Modifier.padding(start = 18.dp),
+                            maxLines = 1,
+                            softWrap = false
                         )
                         Spacer(Modifier.width(4.dp))
                         Icon(
@@ -281,8 +315,9 @@ fun FastingPlansScreen(
                             fontSize = 20.sp,
                             color = if (HomeCardStyles.isDark()) HomeCardStyles.Text.primary() else colors.textPrimary
                         ),
-                        modifier = Modifier.fillMaxWidth(0.4f),
-                        textAlign = TextAlign.Center
+                        textAlign = TextAlign.Center,
+                        maxLines = 1,
+                        softWrap = false
                     )
 
                     Spacer(Modifier.height(6.dp))
@@ -660,6 +695,7 @@ private fun NotificationTimelineRow(
 private fun FastingPlanCard(
     plan: FastingPlan,
     selected: Boolean,
+    descriptionHeight: Dp,
     onSelect: () -> Unit
 ) {
     val emoji = when (plan.code) {
@@ -672,32 +708,29 @@ private fun FastingPlanCard(
         else -> "🍽️"
     }
 
-    val descRes: Int? = when (plan.code) {
-        "14:10" -> R.string.fasting_plan_desc_14_10
-        "16:8" -> R.string.fasting_plan_desc_16_8
-        "12:12" -> R.string.fasting_plan_desc_12_12
-        "18:6" -> R.string.fasting_plan_desc_18_6
-        "20:4" -> R.string.fasting_plan_desc_20_4
-        "22:2" -> R.string.fasting_plan_desc_22_2
-        else -> null
-    }
+    val descRes = fastingPlanDescriptionRes(plan)
 
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .aspectRatio(0.9f)
+            .heightIn(min = 190.dp)
             .caloShapeClickableWithoutRipple(role = Role.Button, onClick = onSelect),
         shape = CardStyles.Corner,
         colors = CardDefaults.cardColors(containerColor = HomeCardStyles.Surface.card()),
         border = HomeCardStyles.Surface.border()
     ) {
         Box(
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier.fillMaxWidth()
         ) {
             Column(
                 modifier = Modifier
-                    .fillMaxSize()
-                    .padding(16.dp)
+                    .fillMaxWidth()
+                    .padding(
+                        start = 16.dp,
+                        top = 16.dp,
+                        end = 16.dp,
+                        bottom = 64.dp
+                    )
             ) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -728,7 +761,9 @@ private fun FastingPlanCard(
                             color = HomeCardStyles.Text.secondary(),
                             lineHeight = 18.sp
                         ),
-                        modifier = Modifier.padding(end = 4.dp)
+                        modifier = Modifier
+                            .height(descriptionHeight)
+                            .padding(end = 4.dp)
                     )
                 }
             }
@@ -746,6 +781,16 @@ private fun FastingPlanCard(
             }
         }
     }
+}
+
+private fun fastingPlanDescriptionRes(plan: FastingPlan): Int? = when (plan.code) {
+    "14:10" -> R.string.fasting_plan_desc_14_10
+    "16:8" -> R.string.fasting_plan_desc_16_8
+    "12:12" -> R.string.fasting_plan_desc_12_12
+    "18:6" -> R.string.fasting_plan_desc_18_6
+    "20:4" -> R.string.fasting_plan_desc_20_4
+    "22:2" -> R.string.fasting_plan_desc_22_2
+    else -> null
 }
 
 @Composable
