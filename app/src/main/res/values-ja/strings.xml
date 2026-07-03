@@ -340,8 +340,8 @@
     <string name="bottom_nav_home">ホーム</string>
     <string name="bottom_nav_progress">進捗</string>
     <string name="bottom_nav_weight">体重</string>
-    <string name="bottom_nav_fasting">ファスティング</string>
-    <string name="bottom_nav_workout">ワークアウト</string>
+    <string name="bottom_nav_fasting">断食</string>
+    <string name="bottom_nav_workout">運動</string>
 
 
     <!-- =============   HomeCards  ============= -->
@@ -750,7 +750,7 @@
 
     <!-- RecentlyUploadedEmptyCard -->
     <string name="recently_uploaded_empty">最近の記録</string>
-    <string name="recently_uploaded_empty_hint">+をタップして今日最初の食事を追加</string>
+    <string name="recently_uploaded_empty_hint">＋をタップして今日の食事を記録</string>
 
 
     <!-- SavedFoodsScreen -->
@@ -842,7 +842,7 @@
     <string name="settings_membership_free">無料</string>
     <string name="settings_membership_upgrade">アップグレード</string>
     <string name="settings_membership_trial_ends_today">トライアルは今日終了します</string>
-    <string name="settings_membership_until_format">%1$sまで</string>
+    <string name="settings_membership_until_format">%1$s まで</string>
     <plurals name="settings_membership_trial_days_left">
         <item quantity="one">残り%1$d日</item>
         <item quantity="other">残り%1$d日</item>
@@ -872,14 +872,14 @@
     <!-- Settings: Widget Guide -->
     <string name="settings_widgets_title">ウィジェット</string>
     <string name="settings_widgets_how_to_add">追加方法</string>
-    <string name="log_your_food">食事を記録</string>
 
-    <string name="settings_calories_goal_label">残りカロリー</string>
-    <string name="settings_protein_goal_label">残りタンパク質</string>
-    <string name="settings_carbs_goal_label">残り炭水化物</string>
-    <string name="settings_fats_goal_label">残り脂質</string>
-    <string name="settings_widget_scan_food">食事をスキャン</string>
-    <string name="settings_widget_barcode">バーコード</string>
+    <string name="log_your_food">Log your food</string>
+    <string name="settings_calories_goal_label">Calories left</string>
+    <string name="settings_protein_goal_label">Protein left</string>
+    <string name="settings_carbs_goal_label">Carbs left</string>
+    <string name="settings_fats_goal_label">Fats left</string>
+    <string name="settings_widget_scan_food">Scan food</string>
+    <string name="settings_widget_barcode">Barcode</string>
 
     <string name="settings_logout_loading">ログアウト中…</string>
     <string name="settings_logout">ログアウト</string>
