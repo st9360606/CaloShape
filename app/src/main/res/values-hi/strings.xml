@@ -861,14 +861,14 @@
     <!-- Settings: Widget Guide -->
     <string name="settings_widgets_title">Widgets</string>
     <string name="settings_widgets_how_to_add">कैसे जोड़ें?</string>
-    <string name="log_your_food">अपना भोजन लॉग करें</string>
+    <string name="log_your_food">Log your food</string>
 
-    <string name="settings_calories_goal_label">kcal शेष</string>
-    <string name="settings_protein_goal_label">प्रोटीन शेष</string>
-    <string name="settings_carbs_goal_label">कार्ब्स शेष</string>
-    <string name="settings_fats_goal_label">फैट शेष</string>
-    <string name="settings_widget_scan_food">भोजन स्कैन करें</string>
-    <string name="settings_widget_barcode">बारकोड</string>
+    <string name="settings_calories_goal_label">Calories left</string>
+    <string name="settings_protein_goal_label">Protein left</string>
+    <string name="settings_carbs_goal_label">Carbs left</string>
+    <string name="settings_fats_goal_label">Fats left</string>
+    <string name="settings_widget_scan_food">Scan food</string>
+    <string name="settings_widget_barcode">Barcode</string>
 
     <string name="settings_logout_loading">लॉग आउट हो रहा है…</string>
     <string name="settings_logout">लॉग आउट</string>

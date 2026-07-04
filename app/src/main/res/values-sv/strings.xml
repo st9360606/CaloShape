@@ -861,14 +861,14 @@
     <!-- Settings: Widget Guide -->
     <string name="settings_widgets_title">Widgetar</string>
     <string name="settings_widgets_how_to_add">Hur lägger man till?</string>
-    <string name="log_your_food">Logga din mat</string>
+    <string name="log_your_food">Log your food</string>
 
-    <string name="settings_calories_goal_label">kcal kvar</string>
-    <string name="settings_protein_goal_label">Protein kvar</string>
-    <string name="settings_carbs_goal_label">Kolhydrater kvar</string>
-    <string name="settings_fats_goal_label">Fett kvar</string>
-    <string name="settings_widget_scan_food">Skanna mat</string>
-    <string name="settings_widget_barcode">Streckkod</string>
+    <string name="settings_calories_goal_label">Calories left</string>
+    <string name="settings_protein_goal_label">Protein left</string>
+    <string name="settings_carbs_goal_label">Carbs left</string>
+    <string name="settings_fats_goal_label">Fats left</string>
+    <string name="settings_widget_scan_food">Scan food</string>
+    <string name="settings_widget_barcode">Barcode</string>
 
     <string name="settings_logout_loading">Loggar ut…</string>
     <string name="settings_logout">Logga ut</string>

@@ -861,14 +861,14 @@
     <!-- Settings: Widget Guide -->
     <string name="settings_widgets_title">Widżety</string>
     <string name="settings_widgets_how_to_add">Jak dodać?</string>
-    <string name="log_your_food">Zapisz jedzenie</string>
+    <string name="log_your_food">Log your food</string>
 
-    <string name="settings_calories_goal_label">Pozostało kcal</string>
-    <string name="settings_protein_goal_label">Pozostało białka</string>
-    <string name="settings_carbs_goal_label">Pozostało węglowodanów</string>
-    <string name="settings_fats_goal_label">Pozostało tłuszczu</string>
-    <string name="settings_widget_scan_food">Skanuj jedzenie</string>
-    <string name="settings_widget_barcode">Kod kreskowy</string>
+    <string name="settings_calories_goal_label">Calories left</string>
+    <string name="settings_protein_goal_label">Protein left</string>
+    <string name="settings_carbs_goal_label">Carbs left</string>
+    <string name="settings_fats_goal_label">Fats left</string>
+    <string name="settings_widget_scan_food">Scan food</string>
+    <string name="settings_widget_barcode">Barcode</string>
 
     <string name="settings_logout_loading">Wylogowywanie…</string>
     <string name="settings_logout">Wyloguj</string>

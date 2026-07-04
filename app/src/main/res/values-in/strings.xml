@@ -873,13 +873,13 @@ dengan teman Anda</string>
     <!-- Settings: Widget Guide -->
     <string name="settings_widgets_title">Widget</string>
     <string name="settings_widgets_how_to_add">Cara menambahkan?</string>
-    <string name="log_your_food">Catat makanan Anda</string>
+    <string name="log_your_food">Log your food</string>
 
-    <string name="settings_calories_goal_label">kcal tersisa</string>
-    <string name="settings_protein_goal_label">Protein tersisa</string>
-    <string name="settings_carbs_goal_label">Karbohidrat tersisa</string>
-    <string name="settings_fats_goal_label">Lemak tersisa</string>
-    <string name="settings_widget_scan_food">Pindai makanan</string>
+    <string name="settings_calories_goal_label">Calories left</string>
+    <string name="settings_protein_goal_label">Protein left</string>
+    <string name="settings_carbs_goal_label">Carbs left</string>
+    <string name="settings_fats_goal_label">Fats left</string>
+    <string name="settings_widget_scan_food">Scan food</string>
     <string name="settings_widget_barcode">Barcode</string>
 
     <string name="settings_logout_loading">Keluar…</string>

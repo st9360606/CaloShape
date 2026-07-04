@@ -873,14 +873,14 @@
     <!-- Settings: Widget Guide -->
     <string name="settings_widgets_title">위젯</string>
     <string name="settings_widgets_how_to_add">추가 방법</string>
-    <string name="log_your_food">음식 기록</string>
+    <string name="log_your_food">Log your food</string>
 
-    <string name="settings_calories_goal_label">남은 kcal</string>
-    <string name="settings_protein_goal_label">남은 단백질</string>
-    <string name="settings_carbs_goal_label">남은 탄수화물</string>
-    <string name="settings_fats_goal_label">남은 지방</string>
-    <string name="settings_widget_scan_food">음식 스캔</string>
-    <string name="settings_widget_barcode">바코드</string>
+    <string name="settings_calories_goal_label">Calories left</string>
+    <string name="settings_protein_goal_label">Protein left</string>
+    <string name="settings_carbs_goal_label">Carbs left</string>
+    <string name="settings_fats_goal_label">Fats left</string>
+    <string name="settings_widget_scan_food">Scan food</string>
+    <string name="settings_widget_barcode">Barcode</string>
 
     <string name="settings_logout_loading">로그아웃 중…</string>
     <string name="settings_logout">로그아웃</string>

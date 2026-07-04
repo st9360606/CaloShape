@@ -861,14 +861,14 @@
     <!-- Settings: Widget Guide -->
     <string name="settings_widgets_title">Widget’lar</string>
     <string name="settings_widgets_how_to_add">Nasıl eklenir?</string>
-    <string name="log_your_food">Yemeğini kaydet</string>
+    <string name="log_your_food">Log your food</string>
 
-    <string name="settings_calories_goal_label">Kalan kcal</string>
-    <string name="settings_protein_goal_label">Kalan protein</string>
-    <string name="settings_carbs_goal_label">Kalan karbonhidrat</string>
-    <string name="settings_fats_goal_label">Kalan yağ</string>
-    <string name="settings_widget_scan_food">Yiyecek tara</string>
-    <string name="settings_widget_barcode">Barkod</string>
+    <string name="settings_calories_goal_label">Calories left</string>
+    <string name="settings_protein_goal_label">Protein left</string>
+    <string name="settings_carbs_goal_label">Carbs left</string>
+    <string name="settings_fats_goal_label">Fats left</string>
+    <string name="settings_widget_scan_food">Scan food</string>
+    <string name="settings_widget_barcode">Barcode</string>
 
     <string name="settings_logout_loading">Çıkış yapılıyor…</string>
     <string name="settings_logout">Çıkış yap</string>

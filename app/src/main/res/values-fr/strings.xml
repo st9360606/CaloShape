@@ -1091,17 +1091,16 @@
     <string name="widget_preview_protein">120g</string>
     <string name="widget_preview_carbs">180g</string>
     <string name="widget_preview_fats">60g</string>
-    <string name="widget_calories_left">Calories restantes</string>
-    <string name="widget_protein_left">Protéines restantes</string>
-    <string name="widget_carbs_left">Glucides restants</string>
-    <string name="widget_fats_left">Lipides restants</string>
-    <string name="widget_calories_description">Widget des calories CaloShape</string>
-    <string name="widget_macro_actions_description">Widget des macros et actions rapides CaloShape</string>
-    <string name="widget_log_your_food">Enregistrer un aliment</string>
-    <string name="widget_scan_food">Scanner un aliment</string>
-    <string name="widget_barcode">Code-barres</string>
+    <string name="widget_calories_left">Calories left</string>
+    <string name="widget_protein_left">Protein left</string>
+    <string name="widget_carbs_left">Carbs left</string>
+    <string name="widget_fats_left">Fats left</string>
+    <string name="widget_calories_description">CaloShape calories widget</string>
+    <string name="widget_macro_actions_description">CaloShape macros and quick actions widget</string>
+    <string name="widget_log_your_food">Log your food</string>
+    <string name="widget_scan_food">Scan food</string>
+    <string name="widget_barcode">Barcode</string>
     <string name="widget_grams_format">%1$dg</string>
-
 
 
 

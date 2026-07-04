@@ -861,14 +861,14 @@
     <!-- Settings: Widget Guide -->
     <string name="settings_widgets_title">วิดเจ็ต</string>
     <string name="settings_widgets_how_to_add">เพิ่มอย่างไร?</string>
-    <string name="log_your_food">บันทึกอาหารของคุณ</string>
+    <string name="log_your_food">Log your food</string>
 
-    <string name="settings_calories_goal_label">kcal ที่เหลือ</string>
-    <string name="settings_protein_goal_label">โปรตีนที่เหลือ</string>
-    <string name="settings_carbs_goal_label">คาร์บที่เหลือ</string>
-    <string name="settings_fats_goal_label">ไขมันที่เหลือ</string>
-    <string name="settings_widget_scan_food">สแกนอาหาร</string>
-    <string name="settings_widget_barcode">บาร์โค้ด</string>
+    <string name="settings_calories_goal_label">Calories left</string>
+    <string name="settings_protein_goal_label">Protein left</string>
+    <string name="settings_carbs_goal_label">Carbs left</string>
+    <string name="settings_fats_goal_label">Fats left</string>
+    <string name="settings_widget_scan_food">Scan food</string>
+    <string name="settings_widget_barcode">Barcode</string>
 
     <string name="settings_logout_loading">กำลังออกจากระบบ…</string>
     <string name="settings_logout">ออกจากระบบ</string>

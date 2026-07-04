@@ -144,7 +144,7 @@
     <string name="onboard_ex_freq_title">Hoe vaak sport je per week?</string>
     <string name="onboard_ex_freq_subtitle">Dit helpt om je persoonlijke plan af te stemmen.</string>
     <string name="ex_freq_0_title">0</string>
-    <string name="ex_freq_0_sub">Zittend</string>
+    <string name="ex_freq_0_sub">Weinig actief</string>
     <string name="ex_freq_1_3_title">1–3</string>
     <string name="ex_freq_1_3_sub">Lichte activiteit</string>
     <string name="ex_freq_3_5_title">3–5</string>
@@ -159,7 +159,7 @@
     <string name="onboard_goal_title">Wat is je doel?</string>
     <string name="onboard_goal_subtitle">Dit helpt ons je kcal-plan aan te passen.</string>
     <string name="goal_lose">Afvallen</string>
-    <string name="goal_maintain">Onderhouden</string>
+    <string name="goal_maintain">Gewicht behouden</string>
     <string name="goal_gain">Aankomen</string>
     <string name="goal_healthy_eating">Gezond eten</string>
 
@@ -201,7 +201,7 @@
     <string name="progress_hero_title">Je persoonlijke plan wordt gemaakt</string>
     <string name="progress_hero_subtitle">We gebruiken je doelen, lichaamsgegevens en voorkeuren om je dagelijkse doelen aan te passen.</string>
     <string name="progress_footer_hint">Dit duurt maar even</string>
-    <string name="progress_center_caption">Je resultaten worden voorbereid</string>
+    <string name="progress_center_caption">Je resultaten worden berekend</string>
     <string name="progress_phase_pill_1">Je profiel wordt bekeken</string>
     <string name="progress_phase_pill_2">Je kcal-doel wordt berekend</string>
     <string name="progress_phase_pill_3">Je dagelijkse macro’s worden in balans gebracht</string>
@@ -231,10 +231,10 @@
     <string name="plan_weight_delta">Tot streefgewicht</string>
 
     <string name="plan_goals_title">Hoe je je doelen\nbereikt</string>
-    <string name="plan_goal_card_health_scores">Gezondheidsscores begeleiden je, zodat gewoonten vanzelf ontstaan</string>
-    <string name="plan_goal_card_track_meals">Log maaltijden met één tik; consistent blijven is eenvoudig</string>
-    <string name="plan_goal_card_daily_calories">Zie je dagelijkse kcal duidelijk en raak nooit het overzicht kwijt</string>
-    <string name="plan_goal_card_balance_macros">Koolhydraten × eiwit × vet, slimme balans, betere resultaten</string>
+    <string name="plan_goal_card_health_scores">Gezondheidsscores helpen je gezondere gewoonten op te bouwen</string>
+    <string name="plan_goal_card_track_meals">Log maaltijden met één tik en blijf makkelijker consequent</string>
+    <string name="plan_goal_card_daily_calories">Houd je dagelijkse kcal duidelijk in beeld</string>
+    <string name="plan_goal_card_balance_macros">Breng koolhydraten, eiwit en vet beter in balans</string>
     <string name="plan_sources_based_on">Gebaseerd op officiële voedingsrichtlijnen,\nalleen ter referentie, geen medisch advies.</string>
     <string name="plan_sources_more">Alle referenties bekijken ›</string>
     <string name="plan_sources_hide">Bronnen verbergen</string>
@@ -348,8 +348,8 @@
     <string name="home_protein_eaten_label">Eiwit gegeten</string>
     <string name="home_carbs_goal_label">Koolhydraten over</string>
     <string name="home_carbs_eaten_label">Koolhydraten gegeten</string>
-    <string name="home_fats_goal_label">Vet over</string>
-    <string name="home_fats_eaten_label">Vet gegeten</string>
+    <string name="home_fats_goal_label">Vetten over</string>
+    <string name="home_fats_eaten_label">Vetten gegeten</string>
     <string name="home_fiber_goal_label">Vezels over</string>
     <string name="home_fiber_eaten_label">Vezels gegeten</string>
     <string name="home_sugar_goal_label">Suiker over</string>
@@ -500,14 +500,14 @@
          ========================= -->
     <string name="workout_chart_goal_reached">Doel vandaag bereikt</string>
     <string name="workout_chart_goal_left">%1$d kcal over om het doel van vandaag te halen</string>
-    <string name="workout_chart_title">Trainingsverbranding</string>
-    <string name="workout_chart_info_dialog_body">Inclusief gelogde trainingen en activiteits-kcal geschat op basis van dagelijkse stappen.</string>
+    <string name="workout_chart_title">Activiteitsverbranding</string>
+    <string name="workout_chart_info_dialog_body">Inclusief gelogde trainingen en activiteits-kcal op basis van je dagelijkse stappen.</string>
     <string name="workout_chart_unit_kcal">kcal</string>
     <string name="workout_chart_goal">Doel</string>
     <string name="workout_chart_value_kcal">%1$d kcal</string>
     <string name="workout_chart_7day_avg">7-daags gem.</string>
     <string name="workout_chart_loading">Laden…</string>
-    <string name="workout_legend_burned">Training verbrand</string>
+    <string name="workout_legend_burned">Verbrand</string>
     <string name="workout_legend_daily_goal">Dagelijks doel</string>
     <string name="workout_tooltip_burned">Verbrand</string>
     <string name="workout_tooltip_kcal_value">%1$d kcal</string>
@@ -861,13 +861,13 @@
     <!-- Settings: Widget Guide -->
     <string name="settings_widgets_title">Widgets</string>
     <string name="settings_widgets_how_to_add">Hoe toevoegen?</string>
-    <string name="log_your_food">Log je voeding</string>
+    <string name="log_your_food">Log your food</string>
 
-    <string name="settings_calories_goal_label">kcal over</string>
-    <string name="settings_protein_goal_label">Eiwit over</string>
-    <string name="settings_carbs_goal_label">Koolhydraten over</string>
-    <string name="settings_fats_goal_label">Vet over</string>
-    <string name="settings_widget_scan_food">Voeding scannen</string>
+    <string name="settings_calories_goal_label">Calories left</string>
+    <string name="settings_protein_goal_label">Protein left</string>
+    <string name="settings_carbs_goal_label">Carbs left</string>
+    <string name="settings_fats_goal_label">Fats left</string>
+    <string name="settings_widget_scan_food">Scan food</string>
     <string name="settings_widget_barcode">Barcode</string>
 
     <string name="settings_logout_loading">Uitloggen…</string>

@@ -865,14 +865,14 @@
     <!-- Settings: Widget Guide -->
     <string name="settings_widgets_title">الأدوات</string>
     <string name="settings_widgets_how_to_add">كيف تضيفها؟</string>
-    <string name="log_your_food">سجّل طعامك</string>
+    <string name="log_your_food">Log your food</string>
 
-    <string name="settings_calories_goal_label">السعرات المتبقية</string>
-    <string name="settings_protein_goal_label">البروتين المتبقي</string>
-    <string name="settings_carbs_goal_label">الكربوهيدرات المتبقية</string>
-    <string name="settings_fats_goal_label">الدهون المتبقية</string>
-    <string name="settings_widget_scan_food">مسح الطعام</string>
-    <string name="settings_widget_barcode">الباركود</string>
+    <string name="settings_calories_goal_label">Calories left</string>
+    <string name="settings_protein_goal_label">Protein left</string>
+    <string name="settings_carbs_goal_label">Carbs left</string>
+    <string name="settings_fats_goal_label">Fats left</string>
+    <string name="settings_widget_scan_food">Scan food</string>
+    <string name="settings_widget_barcode">Barcode</string>
 
     <string name="settings_logout_loading">جارٍ تسجيل الخروج…</string>
     <string name="settings_logout">تسجيل الخروج</string>
