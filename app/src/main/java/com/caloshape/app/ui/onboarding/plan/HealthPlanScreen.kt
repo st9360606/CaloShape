@@ -731,8 +731,6 @@ private fun SourcesHeader(
                 lineHeight = 16.sp,
                 fontWeight = FontWeight.Medium,
                 textAlign = TextAlign.Center,
-                maxLines = 2,
-                overflow = TextOverflow.Ellipsis,
                 modifier = Modifier.widthIn(max = maxTextWidth)
             )
         }

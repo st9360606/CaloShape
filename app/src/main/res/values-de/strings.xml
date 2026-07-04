@@ -301,7 +301,7 @@
     <string name="subscription_discount_body">Mahlzeiten schneller scannen. Makros smarter verfolgen.\nTäglich auf Kurs bleiben.</string>
     <string name="subscription_yearly_price_format">%1$s/Jahr</string>
     <string name="subscription_urgency_coffee">Weniger als ein Kaffee</string>
-    <string name="subscription_urgency_price_gone">Schließt du diesen Bildschirm? Dann ist dieser Preis weg</string>
+    <string name="subscription_urgency_price_gone">Dieses Angebot ist nur jetzt verfügbar</string>
     <string name="subscription_urgency_waiting">Worauf wartest du?</string>
 
     <string name="subscription_trial_enabled">Kostenlose Testphase aktiviert</string>

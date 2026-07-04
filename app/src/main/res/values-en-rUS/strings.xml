@@ -456,7 +456,7 @@
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
     <string name="progress_chart_total_calories">Total calories</string>
-    <string name="progress_chart_cals">cals</string>
+    <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Protein</string>
     <string name="progress_legend_carbs">Carbs</string>
     <string name="progress_legend_fats">Fats</string>

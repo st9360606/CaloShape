@@ -180,68 +180,68 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">Chaque repas compte !</string>
-    <string name="onboard_notif_subtitle">Recevez de petits rappels pour enregistrer vos repas et suivre vos progrès sans effort.</string>
+    <string name="onboard_notif_subtitle">Recevez des rappels discrets au bon moment pour enregistrer vos repas, suivre vos calories et macros, et garder vos progrès visibles jour après jour.</string>
     <string name="onboard_allow_notifications_cta">Autoriser les notifications</string>
-    <string name="notification_mock_app_title">Compteur de calories AI</string>
-    <string name="onboard_notif_title_got_a_sec">Pensez à vos repas 😉</string>
+    <string name="notification_mock_app_title">Compteur de calories IA</string>
+    <string name="onboard_notif_title_got_a_sec">N’oubliez pas vos repas 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Enregistrez ce repas pour garder vos calories et macros sur la bonne voie.</string>
 
 
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">Se connecter à</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
-    <string name="onboard_hc_connect_body">Synchronisez l’activité quotidienne entre CaloShape AI et vos applications de santé pour obtenir des rapports et des analyses plus complets.</string>
+    <string name="onboard_hc_connect_body">Connectez vos données d’activité pour obtenir un suivi plus complet de vos calories, exercices et progrès.</string>
     <string name="onboard_hc_permission_rationale_title_prefix">Pourquoi CaloShape utilise</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape lit vos pas, vos calories actives et vos données d’exercice pour estimer votre dépense énergétique quotidienne, mettre à jour votre tableau de bord des calories et améliorer le suivi de vos progrès. Vous pouvez révoquer l’accès à tout moment dans Health Connect.</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape lit vos pas, vos calories actives et vos données d’exercice afin d’estimer votre dépense quotidienne, mettre à jour votre tableau de bord et améliorer le suivi de vos progrès. Vous pouvez révoquer l’accès à tout moment dans Health Connect.</string>
     <string name="onboard_hc_permission_rationale_button">Compris</string>
 
 
     <!-- Onboarding: ComputationProgressScreen -->
     <string name="progress_hero_title">Création de votre programme personnalisé</string>
-    <string name="progress_hero_subtitle">Nous utilisons vos objectifs, vos données corporelles et vos préférences pour adapter vos cibles quotidiennes.</string>
+    <string name="progress_hero_subtitle">Nous utilisons vos objectifs, vos données corporelles et vos préférences pour ajuster vos cibles quotidiennes.</string>
     <string name="progress_footer_hint">Cela ne prend qu’un instant</string>
-    <string name="progress_center_caption">Préparation de vos résultats</string>
+    <string name="progress_center_caption">Calcul des résultats</string>
     <string name="progress_phase_pill_1">Analyse de votre profil</string>
-    <string name="progress_phase_pill_2">Calcul de votre objectif de calories</string>
+    <string name="progress_phase_pill_2">Calcul de votre objectif calorique</string>
     <string name="progress_phase_pill_3">Équilibrage de vos macros quotidiennes</string>
-    <string name="progress_phase_pill_4">Finalisation de vos indicateurs de santé</string>
+    <string name="progress_phase_pill_4">Finalisation de vos indicateurs bien-être</string>
     <string name="progress_card_title">Configuration de votre programme</string>
-    <string name="progress_row_calorie_target">Objectif quotidien de calories</string>
+    <string name="progress_row_calorie_target">Objectif calorique quotidien</string>
     <string name="progress_row_carb_distribution">Répartition des glucides</string>
-    <string name="progress_row_protein_recommendation">Recommandation en protéines</string>
-    <string name="progress_row_fat_recommendation">Recommandation en lipides</string>
-    <string name="progress_row_health_score_estimate">Estimation du score de santé</string>
+    <string name="progress_row_protein_recommendation">Apport recommandé en protéines</string>
+    <string name="progress_row_fat_recommendation">Apport recommandé en lipides</string>
+    <string name="progress_row_health_score_estimate">Estimation du score bien-être</string>
 
 
     <!-- Onboarding: HealthPlanScreen -->
     <string name="plan_cta_start">C’est parti</string>
     <string name="plan_title_congrats">Félicitations !</string>
-    <string name="plan_subtitle_ready">Votre programme de santé personnel est prêt !</string>
-    <string name="plan_disclaimer">Les sources sont ci-dessous : Voir toutes les références ›</string>
-    <string name="plan_unit_kcal_day">kcal / jour</string>
+    <string name="plan_subtitle_ready">Votre programme personnalisé est prêt !</string>
+    <string name="plan_disclaimer">Références : voir toutes les sources ›</string>
+    <string name="plan_unit_kcal_day">kcal/jour</string>
 
     <string name="plan_macros_proteins">Protéines</string>
     <string name="plan_macros_carbs">Glucides</string>
     <string name="plan_macros_fat">Lipides</string>
     <string name="plan_unit_g">g</string>
 
-    <string name="plan_water_daily">Eau quotidienne</string>
+    <string name="plan_water_daily">Objectif d’eau quotidien</string>
     <string name="plan_weight_current">Poids actuel</string>
-    <string name="plan_weight_delta">Jusqu’au poids cible</string>
+    <string name="plan_weight_delta">Écart avec le poids cible</string>
 
     <string name="plan_goals_title">Comment atteindre\nvos objectifs</string>
-    <string name="plan_goal_card_health_scores">Les scores de santé vous guident pour que les habitudes se forment naturellement</string>
-    <string name="plan_goal_card_track_meals">Enregistrez vos repas en un seul geste, rester régulier devient facile</string>
-    <string name="plan_goal_card_daily_calories">Visualisez clairement vos calories quotidiennes et ne perdez jamais le fil</string>
-    <string name="plan_goal_card_balance_macros">Glucides × protéines × lipides, un équilibre intelligent pour de meilleurs résultats</string>
-    <string name="plan_sources_based_on">Basé sur les directives nutritionnelles officielles,\npour référence uniquement, ne constitue pas un avis médical.</string>
+    <string name="plan_goal_card_health_scores">Vos scores bien-être vous aident à créer de meilleures habitudes</string>
+    <string name="plan_goal_card_track_meals">Enregistrez vos repas facilement et restez régulier</string>
+    <string name="plan_goal_card_daily_calories">Suivez vos calories quotidiennes sans perdre le fil</string>
+    <string name="plan_goal_card_balance_macros">Gardez un bon équilibre entre glucides, protéines et lipides</string>
+    <string name="plan_sources_based_on">Basé sur des recommandations nutritionnelles reconnues. À titre indicatif uniquement, ne remplace pas un avis médical.</string>
     <string name="plan_sources_more">Voir toutes les références ›</string>
     <string name="plan_sources_hide">Masquer les sources</string>
 
 
     <!-- Onboarding: OnboardReferralCodeScreen -->
-    <string name="onboard_referral_code_input">Saisir le code de parrainage\n(facultatif)</string>
+    <string name="onboard_referral_code_input">Saisir le code de parrainage (facultatif)</string>
     <string name="onboard_referral_code_subtitle">Vous pouvez passer cette étape</string>
     <string name="onboard_referral_code_input_label">Code de parrainage</string>
     <string name="onboard_referral_code_placeholder">Code de parrainage</string>
@@ -257,7 +257,7 @@
     <string name="onboard_referral_code_error_disabled">Le parrainage est temporairement indisponible.</string>
     <string name="onboard_referral_code_error_risk">Impossible d’appliquer un code de parrainage pour le moment.</string>
     <string name="onboard_referral_code_error_network">Impossible de l’appliquer pour le moment. Veuillez réessayer plus tard.</string>
-    <string name="onboard_referral_code_error_unknown">Le code de parrainage ne peut pas être appliqué pour le moment.\nVeuillez réessayer plus tard.</string>
+    <string name="onboard_referral_code_error_unknown">Le code de parrainage ne peut pas être appliqué pour le moment. Veuillez réessayer plus tard.</string>
 
 
     <!-- Onboarding: OnboardSubscriptionScreen  Paywall -->
@@ -268,7 +268,7 @@
 
 
     <!-- Onboarding: OnboardSubscriptionIntro -->
-    <string name="subscription_intro_title">Débloquez CaloShape AI pour\natteindre vos objectifs plus vite.</string>
+    <string name="subscription_intro_title">Débloquez CaloShape AI pour atteindre vos objectifs plus vite.</string>
     <string name="subscription_intro_helper_format">Seulement %1$s par an (%2$s)</string>
     <string name="subscription_start_three_day_free_trial">Essayer gratuitement pendant 3 jours</string>
     <string name="subscription_three_day_trial_helper_format">Seulement %1$s/an (%2$s/mois)</string>
@@ -285,7 +285,7 @@
 
 
     <!-- Onboarding: OnboardDiscountSpinScreen-->
-    <string name="subscription_spin_title">Tournez la roue pour débloquer\nune remise exclusive</string>
+    <string name="subscription_spin_title">Tournez la roue pour débloquer une remise exclusive</string>
     <string name="subscription_spin_helper_ready">Appuyez sur Tourner pour révéler votre cadeau exclusif.</string>
     <string name="subscription_spin_button">Tourner</string>
     <string name="subscription_spinning_button">Rotation…</string>
@@ -294,31 +294,31 @@
     <string name="subscription_spin_helper_revealed">Cette offre sera révélée après l’arrêt de la roue.</string>
 
 
-    <!-- Onboarding: OneTimeOfferHeroCard-->
+    <!-- Onboarding: OneTimeOfferHeroCard -->
     <string name="subscription_gift_unlocked_title">Cadeau débloqué 🎁</string>
-    <string name="subscription_gift_price_unlocked">Prix cadeau débloqué</string>
-    <string name="subscription_unlock_premium_for_only">Débloquez le premium pour seulement</string>
-    <string name="subscription_discount_body">Scannez vos repas plus vite. Suivez vos macros plus intelligemment.\nRestez fidèle à votre programme au quotidien.</string>
+    <string name="subscription_gift_price_unlocked">Prix spécial débloqué</string>
+    <string name="subscription_unlock_premium_for_only">Premium dès</string>
+    <string name="subscription_discount_body">Scannez vos repas plus vite. Suivez vos macros facilement. Gardez le cap.</string>
     <string name="subscription_yearly_price_format">%1$s/an</string>
     <string name="subscription_urgency_coffee">Moins cher qu’un café</string>
-    <string name="subscription_urgency_price_gone">Fermer cet écran ? Ce prix va disparaître</string>
-    <string name="subscription_urgency_waiting">Qu’attendez-vous ?</string>
+    <string name="subscription_urgency_price_gone">Cette offre est disponible maintenant</string>
+    <string name="subscription_urgency_waiting">Prêt à commencer ?</string>
 
     <string name="subscription_trial_enabled">Essai gratuit activé</string>
-    <string name="subscription_trial_enable_prompt">Pas sûr(e) ? Activez l’essai gratuit</string>
-    <string name="subscription_trial_checking_eligibility">Vérification de la disponibilité de l’essai…</string>
+    <string name="subscription_trial_enable_prompt">Vous hésitez ? Essayez gratuitement</string>
+    <string name="subscription_trial_checking_eligibility">Vérification de l’essai gratuit…</string>
     <string name="subscription_trial_already_used">Essai déjà utilisé</string>
     <string name="subscription_trial_unavailable">Essai gratuit indisponible</string>
 
     <string name="subscription_badge_free_trial">Essai gratuit</string>
-    <string name="subscription_badge_lowest_price_ever">Le prix le plus bas jamais proposé</string>
-    <string name="subscription_yearly_plan">Abonnement annuel</string>
-    <string name="subscription_yearly_plan_price_format">12 mois · %1$s</string>
+    <string name="subscription_badge_lowest_price_ever">Offre spéciale</string>
+    <string name="subscription_yearly_plan">Annuel</string>
+    <string name="subscription_yearly_plan_price_format">%1$s / an</string>
 
     <string name="subscription_start_free_trial">Essayer gratuitement pendant 3 jours</string>
-    <string name="subscription_trial_helper">Sans engagement — annulez à tout moment</string>
-    <string name="subscription_discount_terms_format">Seulement %1$s/an (%2$s/mois)</string>
-    <string name="subscription_discount_trial_terms_format">Sans engagement - Annulez à tout moment</string>
+    <string name="subscription_trial_helper">Annulez à tout moment</string>
+    <string name="subscription_discount_terms_format">Seulement %1$s/an, soit %2$s/mois</string>
+    <string name="subscription_discount_trial_terms_format">Annulez à tout moment</string>
 
 
     <!-- HomeScreen -->

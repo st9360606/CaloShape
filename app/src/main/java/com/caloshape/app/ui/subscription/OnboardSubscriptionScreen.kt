@@ -995,11 +995,11 @@ private fun OnboardOneTimeOfferScreen(
                 monthlyEquivalent = monthlyEquivalent
             )
 
-            Spacer(Modifier.height(14.dp))
+            Spacer(Modifier.height(10.dp))
 
             OneTimeOfferUrgencyCard()
 
-            Spacer(Modifier.height(14.dp))
+            Spacer(Modifier.height(10.dp))
 
             OneTimeOfferTrialCard(
                 trialEnabled = trialEnabled,

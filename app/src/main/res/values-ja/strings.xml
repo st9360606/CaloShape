@@ -304,7 +304,7 @@
 
 
     <!-- Onboarding: OneTimeOfferHeroCard-->
-    <string name="subscription_gift_unlocked_title">ギフトをアンロックしました 🎁</string>
+    <string name="subscription_gift_unlocked_title">ギフトを獲得しました 🎁</string>
     <string name="subscription_gift_price_unlocked">ギフト価格をアンロックしました</string>
     <string name="subscription_unlock_premium_for_only">この価格でPremiumを利用開始</string>
     <string name="subscription_discount_body">食事をすばやくスキャン。マクロをよりスマートに記録。
