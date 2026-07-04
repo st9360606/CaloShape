@@ -61,7 +61,7 @@
 
     <!-- Landing Screen -->
     <string name="landing_title">Scatta una foto e scopri le kcal.</string>
-    <string name="choose_language">Scegli lingua</string>
+    <string name="choose_language">Scegli la lingua</string>
     <string name="cta_get_started">Inizia</string>
     <string name="cta_login_prefix">Hai già un account?</string>
     <string name="cta_login">Accedi</string>
@@ -70,15 +70,15 @@
     <!-- RequireSignInScreen -->
     <string name="auth_sign_in_account_title">Accedi al tuo account</string>
     <string name="auth_sign_in_with_google">Accedi con Google</string>
-    <string name="auth_signin_with_email">Continua con email</string>
+    <string name="auth_signin_with_email">Continua con l’email</string>
 
 
-    <!-- SignInSheet-->
+    <!-- SignInSheet -->
     <string name="signin_title">Accedi</string>
     <string name="signin_with_apple">Accedi con Apple</string>
     <string name="signin_with_google">Accedi con Google</string>
-    <string name="signin_with_email">Continua con email</string>
-    <string name="signin_legal_hint">Continuando accetti i Termini di CaloShape</string>
+    <string name="signin_with_email">Continua con l’email</string>
+    <string name="signin_legal_hint">Continuando, accetti i Termini di CaloShape</string>
     <string name="signin_terms">Termini</string>
     <string name="signin_and">e</string>
     <string name="signin_privacy">Informativa sulla privacy</string>
@@ -86,19 +86,19 @@
     <string name="signin_url_privacy">https://caloshape.com/privacy</string>
 
 
-    <!-- SignInSheetHost 控制 Sheet 是否顯示、處理狀態、接外部 callback -->
-    <string name="err_google_no_account_hint">Suggerimento: aggiungi un account Google in Impostazioni → Account e riprova</string>
+    <!-- SignInSheetHost -->
+    <string name="err_google_no_account_hint">Suggerimento: aggiungi un account Google in Impostazioni → Account e riprova.</string>
     <string name="err_google_signin_failed">Accesso con Google non riuscito</string>
 
 
-    <!-- EmailEnterScreen-->
+    <!-- EmailEnterScreen -->
     <string name="email_sign_in_title">Accedi</string>
     <string name="input_box_email_label">Email</string>
 
 
     <!-- EmailCodeScreen OTP -->
-    <string name="resend">Invia di nuovo</string>
-    <string name="resend_countdown">Invia di nuovo (%1$d s)</string>
+    <string name="resend">Reinvia</string>
+    <string name="resend_countdown">Reinvia (%1$d s)</string>
 
     <string name="err_otp_invalid">Il codice non è corretto. Riprova.</string>
     <string name="err_otp_too_many_attempts">Troppi tentativi. Riprova più tardi.</string>
@@ -106,14 +106,14 @@
     <string name="err_server_unavailable">Il servizio è temporaneamente non disponibile. Riprova più tardi.</string>
     <string name="err_generic">Qualcosa è andato storto. Riprova.</string>
 
-    <string name="confirm_email_title">Conferma la tua email</string>
+    <string name="confirm_email_title">Verifica la tua email</string>
     <string name="confirm_email_hint">Inserisci il codice a 4 cifre che abbiamo appena inviato a</string>
     <string name="didnt_receive_code">Non hai ricevuto il codice?</string>
 
 
     <!-- Onboarding: GenderSelectionScreen -->
     <string name="onboard_gender_title">Scegli il tuo genere</string>
-    <string name="onboard_gender_subtitle">Verrà usato per calibrare il tuo piano personalizzato.</string>
+    <string name="onboard_gender_subtitle">Lo useremo per calibrare il tuo piano personalizzato.</string>
     <string name="onboard_male">Maschio</string>
     <string name="onboard_female">Femmina</string>
     <string name="onboard_other">Altro</string>
@@ -125,24 +125,24 @@
 
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">Quanti anni hai?</string>
-    <string name="onboard_age_subtitle">Usiamo la tua età solo per migliorare l’esperienza e la precisione delle stime kcal.</string>
+    <string name="onboard_age_subtitle">Usiamo la tua età solo per migliorare l’esperienza e la precisione delle stime caloriche.</string>
 
 
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">Quanto sei alto?</string>
-    <string name="onboard_height_subtitle">Usiamo i tuoi dati solo per migliorare l’esperienza e le nostre stime kcal.</string>
-    <string name="onboard_height_hint">Verrà usato per calibrare il tuo piano personalizzato.</string>
+    <string name="onboard_height_subtitle">Usiamo i tuoi dati solo per migliorare l’esperienza e le nostre stime caloriche.</string>
+    <string name="onboard_height_hint">Lo useremo per calibrare il tuo piano personalizzato.</string>
 
 
     <!-- Onboarding: WeightSelectionScreen -->
     <string name="onboard_weight_title">Quanto pesi?</string>
-    <string name="onboard_weight_subtitle">Usiamo i tuoi dati solo per migliorare l’esperienza e le nostre stime kcal.</string>
-    <string name="onboard_weight_hint">Verrà usato per calibrare il tuo piano personalizzato.</string>
+    <string name="onboard_weight_subtitle">Usiamo i tuoi dati solo per migliorare l’esperienza e le nostre stime caloriche.</string>
+    <string name="onboard_weight_hint">Lo useremo per calibrare il tuo piano personalizzato.</string>
 
 
-    <!-- Onboarding: ExerciseFrequencyScreen  -->
+    <!-- Onboarding: ExerciseFrequencyScreen -->
     <string name="onboard_ex_freq_title">Quanto spesso ti alleni ogni settimana?</string>
-    <string name="onboard_ex_freq_subtitle">Questo aiuta a calibrare il tuo piano personalizzato.</string>
+    <string name="onboard_ex_freq_subtitle">Questo ci aiuta a calibrare il tuo piano personalizzato.</string>
     <string name="ex_freq_0_title">0</string>
     <string name="ex_freq_0_sub">Sedentario</string>
     <string name="ex_freq_1_3_title">1–3</string>
@@ -155,9 +155,9 @@
     <string name="ex_freq_7_plus_sub">Attività molto intensa</string>
 
 
-    <!-- Onboarding: GoalSelectionScreen  -->
+    <!-- Onboarding: GoalSelectionScreen -->
     <string name="onboard_goal_title">Qual è il tuo obiettivo?</string>
-    <string name="onboard_goal_subtitle">Ci aiuta ad adattare il tuo piano kcal.</string>
+    <string name="onboard_goal_subtitle">Ci aiuta ad adattare il tuo obiettivo calorico.</string>
     <string name="goal_lose">Perdere peso</string>
     <string name="goal_maintain">Mantenere</string>
     <string name="goal_gain">Aumentare di peso</string>
@@ -165,106 +165,106 @@
 
 
     <!-- Onboarding: WeightGoalScreen -->
-    <string name="onboard_goal_weight_title">Qual è il tuo peso obiettivo?</string>
-    <string name="onboard_goal_weight_subtitle">In base a questo obiettivo, creeremo per te una raccomandazione kcal giornaliera più adatta.</string>
-    <string name="onboard_goal_weight_hint">Verrà usato per calibrare il tuo piano personalizzato.</string>
+    <string name="onboard_goal_weight_title">Qual è il tuo peso target?</string>
+    <string name="onboard_goal_weight_subtitle">In base a questo obiettivo, creeremo una raccomandazione calorica giornaliera più adatta a te.</string>
+    <string name="onboard_goal_weight_hint">Lo useremo per calibrare il tuo piano personalizzato.</string>
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">Usare CaloShape AI può triplicare la tua efficienza
-nel perdere peso</string>
+    <string name="onboard_weight_loss_comparison_title">Con CaloShape AI è più facile
+seguire il piano e restare costante</string>
     <string name="onboard_weight_loss_comparison_without_ai">Senza
 CaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">Con
 CaloShape AI</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI rende tutto semplice
+    <string name="onboard_weight_loss_comparison_caption">CaloShape AI semplifica il monitoraggio
 e ti aiuta a restare costante</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">Fai contare ogni pasto!</string>
-    <string name="onboard_notif_subtitle">Attiva le notifiche per ricevere promemoria delicati per registrare i pasti, così kcal, macro e progressi restano in carreggiata. Gli sgarri capitano; promemoria tempestivi ti aiutano a riprenderti in fretta.</string>
-    <string name="onboard_allow_notifications_cta">Consenti notifiche</string>
-    <string name="notification_mock_app_title">Contatore kcal AI</string>
-    <string name="onboard_notif_title_got_a_sec">Il tuo pasto non si registra da solo 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">Registra questo pasto per mantenere kcal e macro in linea con l’obiettivo.</string>
+    <string name="onboard_notif_subtitle">Ricevi promemoria discreti per registrare i pasti al momento giusto, tenere sotto controllo kcal e macro, e seguire i progressi.</string>
+    <string name="onboard_allow_notifications_cta">Consenti le notifiche</string>
+    <string name="notification_mock_app_title">Contatore kcal IA</string>
+    <string name="onboard_notif_title_got_a_sec">Registra il pasto 😉</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">Registra il pasto e resta in linea con kcal e macro.</string>
 
 
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">Connettiti a</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
-    <string name="onboard_hc_connect_body">Sincronizza l’attività quotidiana tra CaloShape AI e le app salute per ottenere registri e insight più completi.</string>
+    <string name="onboard_hc_connect_body">Sincronizza passi, attività quotidiana e allenamenti tra CaloShape AI e le app per la salute, così i tuoi dati restano più completi e aggiornati.</string>
     <string name="onboard_hc_permission_rationale_title_prefix">Perché CaloShape usa</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape legge passi, kcal attive e dati di allenamento per stimare il consumo giornaliero da attività, aggiornare la dashboard kcal e migliorare gli insight sui progressi. Puoi revocare l’accesso in qualsiasi momento in Health Connect.</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape legge passi, calorie attive e dati di allenamento per stimare il consumo giornaliero da attività, aggiornare la dashboard calorie e migliorare il monitoraggio dei progressi. Puoi revocare l’accesso in qualsiasi momento in Health Connect.</string>
     <string name="onboard_hc_permission_rationale_button">Capito</string>
 
 
     <!-- Onboarding: ComputationProgressScreen -->
     <string name="progress_hero_title">Creazione del tuo piano personalizzato</string>
-    <string name="progress_hero_subtitle">Stiamo usando obiettivi, dati corporei e preferenze per adattare i tuoi target giornalieri.</string>
+    <string name="progress_hero_subtitle">Stiamo usando obiettivi, dati corporei e preferenze per adattare i tuoi obiettivi giornalieri.</string>
     <string name="progress_footer_hint">Ci vuole solo un momento</string>
-    <string name="progress_center_caption">Preparazione dei risultati</string>
-    <string name="progress_phase_pill_1">Revisione del profilo</string>
-    <string name="progress_phase_pill_2">Calcolo del target kcal</string>
+    <string name="progress_center_caption">Calcolo in corso</string>
+    <string name="progress_phase_pill_1">Analisi del profilo</string>
+    <string name="progress_phase_pill_2">Calcolo dell’obiettivo kcal</string>
     <string name="progress_phase_pill_3">Bilanciamento delle macro giornaliere</string>
-    <string name="progress_phase_pill_4">Finalizzazione degli insight salute</string>
+    <string name="progress_phase_pill_4">Finalizzazione degli indicatori benessere</string>
     <string name="progress_card_title">Configurazione del piano</string>
-    <string name="progress_row_calorie_target">Target kcal giornaliero</string>
+    <string name="progress_row_calorie_target">Obiettivo kcal giornaliero</string>
     <string name="progress_row_carb_distribution">Distribuzione carboidrati</string>
-    <string name="progress_row_protein_recommendation">Raccomandazione proteine</string>
-    <string name="progress_row_fat_recommendation">Raccomandazione grassi</string>
-    <string name="progress_row_health_score_estimate">Stima punteggio salute</string>
+    <string name="progress_row_protein_recommendation">Proteine consigliate</string>
+    <string name="progress_row_fat_recommendation">Grassi consigliati</string>
+    <string name="progress_row_health_score_estimate">Stima punteggio benessere</string>
 
 
     <!-- Onboarding: HealthPlanScreen -->
     <string name="plan_cta_start">Iniziamo</string>
     <string name="plan_title_congrats">Congratulazioni!</string>
-    <string name="plan_subtitle_ready">Il tuo piano salute personale è pronto!</string>
-    <string name="plan_disclaimer">Fonti sotto: vedi tutti i riferimenti ›</string>
-    <string name="plan_unit_kcal_day">kcal / giorno</string>
+    <string name="plan_subtitle_ready">Il tuo piano personalizzato è pronto!</string>
+    <string name="plan_disclaimer">Fonti: vedi tutti i riferimenti ›</string>
+    <string name="plan_unit_kcal_day">kcal/giorno</string>
 
     <string name="plan_macros_proteins">Proteine</string>
     <string name="plan_macros_carbs">Carboidrati</string>
     <string name="plan_macros_fat">Grassi</string>
     <string name="plan_unit_g">g</string>
 
-    <string name="plan_water_daily">Acqua giornaliera</string>
+    <string name="plan_water_daily">Obiettivo acqua</string>
     <string name="plan_weight_current">Peso attuale</string>
-    <string name="plan_weight_delta">Al peso obiettivo</string>
+    <string name="plan_weight_delta">Verso il peso target</string>
 
     <string name="plan_goals_title">Come raggiungere
 i tuoi obiettivi</string>
-    <string name="plan_goal_card_health_scores">I punteggi salute ti guidano, così le abitudini si formano naturalmente</string>
-    <string name="plan_goal_card_track_meals">Registra i pasti con un tocco: restare costante è facile</string>
-    <string name="plan_goal_card_daily_calories">Vedi chiaramente le kcal giornaliere e non perdere mai il controllo</string>
-    <string name="plan_goal_card_balance_macros">Carboidrati × proteine × grassi, equilibrio intelligente, risultati migliori</string>
-    <string name="plan_sources_based_on">Basato su linee guida alimentari ufficiali,
-solo a scopo informativo, non è un consiglio medico.</string>
+    <string name="plan_goal_card_health_scores">Punteggi benessere per guidarti</string>
+    <string name="plan_goal_card_track_meals">Registra i pasti e resta costante</string>
+    <string name="plan_goal_card_daily_calories">Segui le kcal e resta in linea</string>
+    <string name="plan_goal_card_balance_macros">Bilancia le macro e i tuoi obiettivi</string>
+    <string name="plan_sources_based_on">Basato su raccomandazioni nutrizionali riconosciute.
+Solo a scopo informativo, non sostituisce un parere medico.</string>
     <string name="plan_sources_more">Vedi tutti i riferimenti ›</string>
     <string name="plan_sources_hide">Nascondi fonti</string>
 
 
     <!-- Onboarding: OnboardReferralCodeScreen -->
-    <string name="onboard_referral_code_input">Inserisci codice referral
+    <string name="onboard_referral_code_input">Inserisci codice invito
 (opzionale)</string>
     <string name="onboard_referral_code_subtitle">Puoi saltare questo passaggio</string>
-    <string name="onboard_referral_code_input_label">Codice referral</string>
-    <string name="onboard_referral_code_placeholder">Codice referral</string>
+    <string name="onboard_referral_code_input_label">Codice invito</string>
+    <string name="onboard_referral_code_placeholder">Codice invito</string>
     <string name="onboard_referral_code_submit">Invia</string>
     <string name="onboard_referral_code_submitting">Invio…</string>
-    <string name="onboard_referral_code_applied">Codice referral applicato!</string>
+    <string name="onboard_referral_code_applied">Codice invito applicato!</string>
 
     <string name="onboard_referral_code_error_invalid_format">Usa solo lettere e numeri.</string>
-    <string name="onboard_referral_code_error_invalid">Non abbiamo trovato questo codice referral.</string>
-    <string name="onboard_referral_code_error_self_referral">Non puoi usare il tuo codice referral.</string>
-    <string name="onboard_referral_code_error_already_claimed">Questo account ha già applicato un codice referral.</string>
-    <string name="onboard_referral_code_error_already_subscribed">Gli account abbonati non possono applicare un codice referral.</string>
-    <string name="onboard_referral_code_error_disabled">Il referral è temporaneamente non disponibile.</string>
-    <string name="onboard_referral_code_error_risk">Non possiamo applicare un codice referral in questo momento.</string>
+    <string name="onboard_referral_code_error_invalid">Non abbiamo trovato questo codice invito.</string>
+    <string name="onboard_referral_code_error_self_referral">Non puoi usare il tuo codice invito.</string>
+    <string name="onboard_referral_code_error_already_claimed">Questo account ha già applicato un codice invito.</string>
+    <string name="onboard_referral_code_error_already_subscribed">Gli account abbonati non possono applicare un codice invito.</string>
+    <string name="onboard_referral_code_error_disabled">Gli inviti sono temporaneamente non disponibili.</string>
+    <string name="onboard_referral_code_error_risk">Non possiamo applicare un codice invito in questo momento.</string>
     <string name="onboard_referral_code_error_network">Non possiamo applicarlo ora. Riprova più tardi.</string>
-    <string name="onboard_referral_code_error_unknown">Il codice referral non può essere applicato ora.
+    <string name="onboard_referral_code_error_unknown">Il codice invito non può essere applicato ora.
 Riprova più tardi.</string>
 
 
