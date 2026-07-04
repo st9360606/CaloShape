@@ -493,7 +493,7 @@
     <string name="progress_legend_fiber">Ballaststoffe</string>
     <string name="progress_legend_sugar">Zucker</string>
     <string name="progress_legend_sodium">Natrium</string>
-    <string name="progress_micronutrients_keep_it_up">Halte Ballaststoffe, Zucker und Natrium im Gleichgewicht.</string>
+    <string name="progress_micronutrients_keep_it_up">Mikronährstoffe im Gleichgewicht.</string>
     <string name="progress_tooltip_fiber">Ballaststoffe</string>
     <string name="progress_tooltip_sugar">Zucker</string>
     <string name="progress_tooltip_sodium">Natrium</string>

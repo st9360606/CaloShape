@@ -845,7 +845,7 @@ private fun ProfileSubscriptionBadge(
         Row(
             modifier = Modifier
                 .height(30.dp)
-                .widthIn(min = 58.dp, max = 132.dp)
+                .widthIn(min = 58.dp, max = 192.dp)
                 .clip(RoundedCornerShape(999.dp))
                 .background(
                     brush = Brush.linearGradient(visual.backgroundColors)

@@ -321,7 +321,7 @@ private fun WorkoutHistorySummaryCard(
         tonalElevation = 0.dp
     ) {
         Column(
-            modifier = Modifier.padding(24.dp)
+            modifier = Modifier.padding(horizontal = 20.dp, vertical = 24.dp)
         ) {
             Text(
                 text = stringResource(R.string.workout_history_summary_label),

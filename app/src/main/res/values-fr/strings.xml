@@ -422,27 +422,27 @@
          BMI Card / BMI Info Dialog
          ========================= -->
     <string name="bmi_card_title">Votre IMC</string>
-    <string name="bmi_card_subtitle">Statut du poids</string>
+    <string name="bmi_card_subtitle">Catégorie IMC</string>
 
     <string name="bmi_status_underweight">Maigreur</string>
-    <string name="bmi_status_healthy">Poids normal</string>
+    <string name="bmi_status_healthy">Corpulence normale</string>
     <string name="bmi_status_overweight">Surpoids</string>
     <string name="bmi_status_obese">Obésité</string>
     <string name="bmi_status_unknown">Non défini</string>
 
-    <string name="bmi_range_underweight">&lt;18.5</string>
-    <string name="bmi_range_healthy">18.5–24.9</string>
-    <string name="bmi_range_overweight">25.0–29.9</string>
-    <string name="bmi_range_obese">&gt;30.0</string>
+    <string name="bmi_range_underweight">&lt;18,5</string>
+    <string name="bmi_range_healthy">18,5–24,9</string>
+    <string name="bmi_range_overweight">25,0–29,9</string>
+    <string name="bmi_range_obese">≥30,0</string>
 
     <string name="bmi_info_title">Qu’est-ce que l’IMC ?</string>
-    <string name="bmi_info_subtitle">Indice de Masse Corporelle</string>
+    <string name="bmi_info_subtitle">Indice de masse corporelle</string>
     <string name="bmi_info_formula_title">Formule</string>
-    <string name="bmi_info_formula_value">IMC = poids (kg) / hauteur (m²)</string>
-    <string name="bmi_info_meaning_title">Ce que cela vous indique</string>
-    <string name="bmi_info_meaning_body">L’IMC permet d’estimer si votre poids corporel se situe dans une fourchette globalement saine.</string>
+    <string name="bmi_info_formula_value">IMC = poids (kg) / taille² (m²)</string>
+    <string name="bmi_info_meaning_title">Ce que ça indique</string>
+    <string name="bmi_info_meaning_body">L’IMC aide à estimer si votre poids se situe dans une fourchette généralement saine.</string>
     <string name="bmi_info_note_title">À garder à l’esprit</string>
-    <string name="bmi_info_note_body">L’IMC est un guide général. Il ne mesure pas directement la graisse corporelle, la masse musculaire ou la santé globale.</string>
+    <string name="bmi_info_note_body">L’IMC est un indicateur général. Il ne mesure pas directement la graisse corporelle, la masse musculaire ni la santé globale.</string>
     <string name="bmi_info_cta">Compris</string>
 
 
@@ -488,7 +488,7 @@
     <string name="progress_legend_fiber">Fibres</string>
     <string name="progress_legend_sugar">Sucre</string>
     <string name="progress_legend_sodium">Sodium</string>
-    <string name="progress_micronutrients_keep_it_up">Gardez un bon équilibre entre fibres, sucres et sodium.</string>
+    <string name="progress_micronutrients_keep_it_up">Fibres, sucres et sodium en équilibre.</string>
     <string name="progress_tooltip_fiber">Fibres</string>
     <string name="progress_tooltip_sugar">Sucre</string>
     <string name="progress_tooltip_sodium">Sodium</string>
@@ -715,7 +715,7 @@
 
 
     <!-- HomeQuickActionMenu -->
-    <string name="quick_add_saved_foods">Aliments enregistrés</string>
+    <string name="quick_add_saved_foods">Enregistrés</string>
     <string name="quick_add_scan_food">Scanner</string>
 
 
@@ -826,11 +826,11 @@
     <string name="settings_membership_payment">Problème de paiement</string>
     <string name="settings_membership_update_payment">Mettre à jour le paiement</string>
     <string name="settings_membership_premium">Premium</string>
-    <string name="settings_membership_active_member">Membre actif</string>
-    <string name="settings_membership_trial">Essai</string>
+    <string name="settings_membership_active_member">Abonnement actif</string>
+    <string name="settings_membership_trial">Essai gratuit</string>
     <string name="settings_membership_access_active">Accès actif</string>
     <string name="settings_membership_free">Gratuit</string>
-    <string name="settings_membership_upgrade">Passer à la version supérieure</string>
+    <string name="settings_membership_upgrade">Passer à Premium</string>
     <string name="settings_membership_trial_ends_today">L’essai se termine aujourd’hui</string>
     <string name="settings_membership_until_format">Jusqu’au %1$s</string>
     <plurals name="settings_membership_trial_days_left">
