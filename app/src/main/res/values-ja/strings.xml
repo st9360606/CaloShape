@@ -125,18 +125,18 @@
 
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">年齢はいくつですか？</string>
-    <string name="onboard_age_subtitle">年齢は体験とカロリー推定精度の向上にのみ使用します。</string>
+    <string name="onboard_age_subtitle">年齢は、体験の向上とカロリー推定精度の改善のためにのみ使用します。</string>
 
 
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">身長はどれくらいですか？</string>
-    <string name="onboard_height_subtitle">身長は、カロリー推定精度の向上にのみ使用します。</string>
+    <string name="onboard_height_subtitle">データは、体験の向上とカロリー推定の改善のためにのみ使用します。</string>
     <string name="onboard_height_hint">カスタムプランの調整に使用されます。</string>
 
 
     <!-- Onboarding: WeightSelectionScreen -->
     <string name="onboard_weight_title">体重はどれくらいですか？</string>
-    <string name="onboard_weight_subtitle">体重は、カロリー推定精度の向上にのみ使用します。</string>
+    <string name="onboard_weight_subtitle">データは、体験の向上とカロリー推定の改善のためにのみ使用します。</string>
     <string name="onboard_weight_hint">カスタムプランの調整に使用されます。</string>
 
 
@@ -157,7 +157,7 @@
 
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">目標は何ですか？</string>
-    <string name="onboard_goal_subtitle">カロリープランを最適化するために使用します。</string>
+    <string name="onboard_goal_subtitle">これは、あなたに合わせたカロリープランを作るために役立ちます。</string>
     <string name="goal_lose">体重を減らす</string>
     <string name="goal_maintain">維持する</string>
     <string name="goal_gain">体重を増やす</string>
@@ -166,7 +166,7 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">目標体重は？</string>
-    <string name="onboard_goal_weight_subtitle">この目標に基づいて、より適した毎日のカロリー目標を作成します。</string>
+    <string name="onboard_goal_weight_subtitle">この目標に基づいて、あなたにより適した1日のカロリー推奨量を作成します。</string>
     <string name="onboard_goal_weight_hint">カスタムプランの調整に使用されます。</string>
 
 
@@ -184,11 +184,11 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">毎食を大切に</string>
-    <string name="onboard_notif_subtitle">食事記録のやさしいリマインダーを有効にすると、カロリー、マクロ、進捗を目標に保ちやすくなります。うっかり忘れても、タイミングのよい通知ですぐに戻れます。</string>
+    <string name="onboard_notif_subtitle">通知を有効にすると、食事記録のやさしいリマインダーを受け取れます。カロリー、マクロ、進捗を管理しやすくなります。記録忘れは誰にでもあります。タイムリーな通知がすぐに立て直す助けになります。</string>
     <string name="onboard_allow_notifications_cta">通知を許可</string>
     <string name="notification_mock_app_title">AIカロリーカウンター</string>
     <string name="onboard_notif_title_got_a_sec">食事は自動では記録されません 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">カロリーとマクロを目標内に保つため、この食事を記録しましょう。</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">この食事を記録して、カロリーとマクロを目標に沿って管理しましょう。</string>
 
 
     <!-- Onboarding: HealthConnectIntroScreen -->
@@ -197,7 +197,7 @@
     <string name="onboard_hc_connect_body">CaloShape AIとヘルスアプリ間で毎日の活動を同期し、より完全な記録とインサイトを得られます。</string>
     <string name="onboard_hc_permission_rationale_title_prefix">CaloShapeが使用する理由</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShapeは歩数、活動カロリー、運動データを読み取り、毎日の活動消費量の推定、カロリーダッシュボードの更新、進捗インサイトの改善に使用します。アクセスはHealth Connectでいつでも取り消せます。</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape は歩数、アクティブカロリー、運動データを読み取り、1日の活動消費量の推定、カロリーダッシュボードの更新、進捗インサイトの改善に使用します。Health Connect でいつでもアクセスを取り消せます。</string>
     <string name="onboard_hc_permission_rationale_button">了解</string>
 
 
@@ -238,7 +238,7 @@
 方法</string>
     <string name="plan_goal_card_health_scores">健康スコアが自然な習慣づくりをサポートします</string>
     <string name="plan_goal_card_track_meals">ワンタップで食事を記録でき、継続が簡単です</string>
-    <string name="plan_goal_card_daily_calories">毎日のカロリーを明確に確認し、見失いません</string>
+    <string name="plan_goal_card_daily_calories">1日のカロリーをわかりやすく確認し、見失わない</string>
     <string name="plan_goal_card_balance_macros">炭水化物 × タンパク質 × 脂質、スマートなバランスでより良い結果へ</string>
     <string name="plan_sources_based_on">公式の食事ガイドラインに基づいています。
 参考情報であり、医療上の助言ではありません。</string>
@@ -350,8 +350,6 @@
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">残りカロリー</string>
     <string name="home_calories_eaten_label">摂取カロリー</string>
-
-
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">残りタンパク質</string>
@@ -674,7 +672,7 @@
     <string name="workout_tracker_estimating_fallback">推定中…</string>
     <string name="workout_tracker_estimating_analyzing">活動を分析中…</string>
     <string name="workout_tracker_estimating_numbers">数値を計算中…</string>
-    <string name="workout_tracker_estimating_calories">負荷を推定し、カロリーを計算中…</string>
+    <string name="workout_tracker_estimating_calories">運動量を推定し、カロリーを計算中…</string>
     <string name="workout_tracker_do_not_close">アプリを閉じたりデバイスをロックしたりしないでください</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
@@ -979,15 +977,13 @@
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">身長を編集</string>
-    <string name="edit_height_privacy_note">身長は、カロリー推定精度の向上にのみ使用します。</string>
+    <string name="edit_height_privacy_note">身長は、体験の向上とカロリー推定精度の改善のためにのみ使用します。</string>
     <string name="edit_height_saved_locally_sync_failed">ネットワークエラーです。ローカルに保存しましたが、同期に失敗しました。</string>
 
 
     <!-- EditAgeScreen -->
     <string name="edit_age_title">年齢を編集</string>
-    <string name="edit_age_privacy_note">年齢は、カロリー推定精度の向上にのみ使用します。</string>
-
-
+    <string name="edit_age_privacy_note">年齢は、体験の向上とカロリー推定精度の改善のためにのみ使用します。</string>
     <!-- EditGenderScreen -->
     <string name="edit_gender_title">性別を編集</string>
     <string name="edit_gender_privacy_note">パーソナライズと推定精度の向上にのみ使用されます。</string>
@@ -1050,11 +1046,11 @@
     <string name="ring_colors_explained_subtitle">リング色の説明</string>
 
     <string name="ring_colors_green_title">緑</string>
-    <string name="ring_colors_green_body">目標内（目標から100 カロリー以内）</string>
+    <string name="ring_colors_green_body">目標範囲内（目標との差が100カロリー以内）</string>
     <string name="ring_colors_yellow_title">茶色</string>
-    <string name="ring_colors_yellow_body">目標を100〜199 カロリー超過</string>
+    <string name="ring_colors_yellow_body">目標より100〜199カロリー超過</string>
     <string name="ring_colors_red_title">赤</string>
-    <string name="ring_colors_red_body">目標を200 カロリー以上超過</string>
+    <string name="ring_colors_red_body">目標より200+カロリー超過</string>
     <string name="ring_colors_dotted_title">点線</string>
     <string name="ring_colors_dotted_body">その日に食事記録がありません</string>
 
@@ -1077,7 +1073,7 @@
     <!-- WidgetGuideScreen -->
     <string name="widget_guide_title">ウィジェットを追加</string>
     <string name="widget_guide_hero_title">CaloShapeをホーム画面に追加</string>
-    <string name="widget_guide_hero_body">アプリを開かずにカロリー、マクロ、クイック操作を確認できます。</string>
+    <string name="widget_guide_hero_body">アプリを開かずに、カロリー、マクロ、クイック操作を確認できます。</string>
     <string name="widget_guide_steps_title">手順に従ってください</string>
     <string name="widget_guide_step_1_title">ホーム画面を長押し</string>
     <string name="widget_guide_step_1_body">メニューが表示されるまで、スマートフォンのホーム画面の空いている場所を長押しします。</string>

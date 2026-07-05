@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">拍一下！AI 即刻算出你的餐點熱量</string>
+    <string name="landing_title">拍一下！AI 即刻算出你的餐點卡路里</string>
     <string name="choose_language">選擇語言</string>
     <string name="cta_get_started">開始使用</string>
     <string name="cta_login_prefix">已擁有帳號？</string>
@@ -126,12 +126,12 @@
 
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">你的年齡是？</string>
-    <string name="onboard_age_subtitle">我們只會用你的年齡來改善使用體驗與熱量估算準確度。</string>
+    <string name="onboard_age_subtitle">我們只會用你的年齡來改善使用體驗與卡路里估算準確度。</string>
 
 
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">你的身高是多少？</string>
-    <string name="onboard_height_subtitle">我們只會用你的資料來改善使用體驗與熱量估算準確度。</string>
+    <string name="onboard_height_subtitle">我們只會用你的資料來改善使用體驗與卡路里估算準確度。</string>
     <string name="onboard_height_hint">這將用於校準你的自訂計畫。</string>
 
 
@@ -158,7 +158,7 @@
 
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">你的目標是什麼呢？</string>
-    <string name="onboard_goal_subtitle">這有助於為你的熱量攝取制定計畫。</string>
+    <string name="onboard_goal_subtitle">這有助於為你的卡路里攝取制定計畫。</string>
     <string name="goal_lose">減重</string>
     <string name="goal_maintain">維持體重</string>
     <string name="goal_gain">增重</string>
@@ -167,7 +167,7 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">你的目標體重是多少？</string>
-    <string name="onboard_goal_weight_subtitle">我們會根據這個目標，幫你規劃更適合的每日熱量建議。</string>
+    <string name="onboard_goal_weight_subtitle">我們會根據這個目標，幫你規劃更適合的每日卡路里建議。</string>
     <string name="onboard_goal_weight_hint">這將用於校準你的自訂計畫。</string>
 
 
@@ -181,11 +181,11 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">每一餐都算數</string>
-    <string name="onboard_notif_subtitle">開啟通知後，我們會在合適的時間給你溫柔提醒，協助你養成餐點紀錄的節奏，讓你的熱量、三大營養素與進度保持在正軌，偶爾忘記很正常；及時提醒能幫你更快回到節奏。</string>
+    <string name="onboard_notif_subtitle">開啟通知後，我們會在合適的時間給你溫柔提醒，協助你養成餐點紀錄的節奏，讓你的卡路里、三大營養素與進度保持在正軌，偶爾忘記很正常；及時提醒能幫你更快回到節奏。</string>
     <string name="onboard_allow_notifications_cta">允許通知</string>
-    <string name="notification_mock_app_title">AI 熱量計算器</string>
+    <string name="notification_mock_app_title">AI 卡路里計算器</string>
     <string name="onboard_notif_title_got_a_sec">現在有 10 秒嗎？</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">記下這餐，熱量和三大營養素會立刻更新，進度一眼就懂。</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">記下這餐，卡路里和三大營養素會立刻更新，進度一眼就懂。</string>
 
 
     <!-- Onboarding: HealthConnectIntroScreen -->
@@ -194,7 +194,7 @@
     <string name="onboard_hc_connect_body">在 CaloShape AI 與健康應用之間同步日常活動，取得更完整的紀錄與分析。</string>
     <string name="onboard_hc_permission_rationale_title_prefix">為什麼 CaloShape 使用</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape 會讀取你的步數、活動熱量與運動資料，用來估算每日活動消耗、更新卡路里儀表板，並提供更完整的進度分析。你可以隨時在 Health Connect 中撤銷授權。</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape 會讀取你的步數、活動卡路里與運動資料，用來估算每日活動消耗、更新卡路里儀表板，並提供更完整的進度分析。你可以隨時在 Health Connect 中撤銷授權。</string>
     <string name="onboard_hc_permission_rationale_button">了解</string>
 
 
@@ -234,7 +234,7 @@
     <string name="plan_goals_title">如何達成你的目標</string>
     <string name="plan_goal_card_health_scores">健康評分指引，讓習慣自動養成</string>
     <string name="plan_goal_card_track_meals">一鍵紀錄餐點，持之以恆更簡單</string>
-    <string name="plan_goal_card_daily_calories">每日熱量清晰可見，進度永不偏航</string>
+    <string name="plan_goal_card_daily_calories">每日卡路里清晰可見，進度永不偏航</string>
     <string name="plan_goal_card_balance_macros">碳水×蛋白×脂肪，吃對才能更有效</string>
     <string name="plan_sources_based_on">根據官方飲食指引，僅供參考非醫療建議</string>
     <string name="plan_sources_more">查看參考來源 ›</string>
@@ -508,7 +508,7 @@
     <string name="activity_chart_value_kcal">%1$d kcal</string>
     <string name="activity_chart_7day_avg">7 日平均</string>
     <string name="activity_chart_loading">載入中…</string>
-    <string name="activity_legend_burned">消耗熱量</string>
+    <string name="activity_legend_burned">卡路里消耗</string>
     <string name="activity_legend_daily_goal">每日目標</string>
     <string name="activity_tooltip_burned">消耗</string>
     <string name="activity_tooltip_kcal_value">%1$d kcal</string>
@@ -663,7 +663,7 @@
     <string name="workout_tracker_estimating_fallback">估算中&#8230;</string>
     <string name="workout_tracker_estimating_analyzing">正在分析你的運動&#8230;</string>
     <string name="workout_tracker_estimating_numbers">正在計算運動數據&#8230;</string>
-    <string name="workout_tracker_estimating_calories">正在估算強度與消耗熱量&#8230;</string>
+    <string name="workout_tracker_estimating_calories">正在估算強度與消耗卡路里&#8230;</string>
     <string name="workout_tracker_do_not_close">請不要關閉 App 或鎖定裝置</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
@@ -961,13 +961,13 @@
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">編輯身高</string>
-    <string name="edit_height_privacy_note">我們只會用你的身高來改善體驗與熱量估算準確度。</string>
+    <string name="edit_height_privacy_note">我們只會用你的身高來改善體驗與卡路里估算準確度。</string>
     <string name="edit_height_saved_locally_sync_failed">網路錯誤。已儲存至裝置，但同步失敗。</string>
 
 
     <!-- EditAgeScreen -->
     <string name="edit_age_title">編輯年齡</string>
-    <string name="edit_age_privacy_note">我們只會用你的年齡來改善體驗與熱量估算準確度。</string>
+    <string name="edit_age_privacy_note">我們只會用你的年齡來改善體驗與卡路里估算準確度。</string>
 
 
     <!-- EditGenderScreen -->
@@ -1001,7 +1001,7 @@
 
     <!-- EditNutritionGoalsScreen -->
     <string name="edit_nutrition_goals_title">編輯營養目標</string>
-    <string name="edit_nutrition_calorie_goal">熱量目標</string>
+    <string name="edit_nutrition_calorie_goal">卡路里目標</string>
     <string name="edit_nutrition_protein_goal">蛋白質目標</string>
     <string name="edit_nutrition_carb_goal">碳水目標</string>
     <string name="edit_nutrition_fat_goal">脂肪目標</string>

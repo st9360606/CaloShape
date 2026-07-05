@@ -125,18 +125,18 @@
 
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">Quanti anni hai?</string>
-    <string name="onboard_age_subtitle">Usiamo la tua età solo per migliorare l’esperienza e la precisione delle stime caloriche.</string>
+    <string name="onboard_age_subtitle">Usiamo la tua età solo per migliorare la tua esperienza e la precisione della stima delle calorie.</string>
 
 
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">Quanto sei alto?</string>
-    <string name="onboard_height_subtitle">Usiamo i tuoi dati solo per migliorare l’esperienza e le nostre stime caloriche.</string>
+    <string name="onboard_height_subtitle">Usiamo i tuoi dati solo per migliorare la tua esperienza e le nostre stime delle calorie.</string>
     <string name="onboard_height_hint">Lo useremo per calibrare il tuo piano personalizzato.</string>
 
 
     <!-- Onboarding: WeightSelectionScreen -->
     <string name="onboard_weight_title">Quanto pesi?</string>
-    <string name="onboard_weight_subtitle">Usiamo i tuoi dati solo per migliorare l’esperienza e le nostre stime caloriche.</string>
+    <string name="onboard_weight_subtitle">Usiamo i tuoi dati solo per migliorare la tua esperienza e le nostre stime delle calorie.</string>
     <string name="onboard_weight_hint">Lo useremo per calibrare il tuo piano personalizzato.</string>
 
 
@@ -157,7 +157,7 @@
 
     <!-- Onboarding: GoalSelectionScreen -->
     <string name="onboard_goal_title">Qual è il tuo obiettivo?</string>
-    <string name="onboard_goal_subtitle">Ci aiuta ad adattare il tuo obiettivo calorico.</string>
+    <string name="onboard_goal_subtitle">Questo ci aiuta ad adattare il tuo piano calorico.</string>
     <string name="goal_lose">Perdere peso</string>
     <string name="goal_maintain">Mantenere</string>
     <string name="goal_gain">Aumentare di peso</string>
@@ -166,7 +166,7 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">Qual è il tuo peso target?</string>
-    <string name="onboard_goal_weight_subtitle">In base a questo obiettivo, creeremo una raccomandazione calorica giornaliera più adatta a te.</string>
+    <string name="onboard_goal_weight_subtitle">In base a questo obiettivo, creeremo per te una raccomandazione giornaliera di calorie più adatta.</string>
     <string name="onboard_goal_weight_hint">Lo useremo per calibrare il tuo piano personalizzato.</string>
 
 
@@ -184,20 +184,18 @@ e ti aiuta a restare costante</string>
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">Fai contare ogni pasto!</string>
-    <string name="onboard_notif_subtitle">Attiva le notifiche per ricevere promemoria discreti e registrare i pasti, così calorie, macro e progressi restano in linea. Gli imprevisti capitano; promemoria tempestivi ti aiutano a riprendere subito il ritmo.</string>
+    <string name="onboard_notif_subtitle">Attiva le notifiche per ricevere promemoria delicati per registrare i pasti, così calorie, macro e progressi restano in linea. Gli errori capitano; i promemoria al momento giusto aiutano a riprendere subito.</string>
     <string name="onboard_allow_notifications_cta">Consenti le notifiche</string>
-    <string name="notification_mock_app_title">Contatore calorie IA</string>
+    <string name="notification_mock_app_title">Contacalorie AI</string>
     <string name="onboard_notif_title_got_a_sec">Registra il pasto 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">Registra il pasto e resta in linea con calorie e macro.</string>
-
-
+    <string name="onboard_notif_subtitle_log_meal_goal">Registra questo pasto per mantenere calorie e macro in linea.</string>
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">Connettiti a</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
     <string name="onboard_hc_connect_body">Sincronizza passi, attività quotidiana e allenamenti tra CaloShape AI e le app per la salute, così i tuoi dati restano più completi e aggiornati.</string>
     <string name="onboard_hc_permission_rationale_title_prefix">Perché CaloShape usa</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape legge passi, calorie attive e dati di allenamento per stimare il consumo giornaliero da attività, aggiornare la dashboard calorie e migliorare il monitoraggio dei progressi. Puoi revocare l’accesso in qualsiasi momento in Health Connect.</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape legge passi, calorie attive e dati di esercizio per stimare il consumo giornaliero da attività, aggiornare la dashboard delle calorie e migliorare gli insight sui progressi. Puoi revocare l’accesso in qualsiasi momento in Health Connect.</string>
     <string name="onboard_hc_permission_rationale_button">Capito</string>
 
 
@@ -207,11 +205,11 @@ e ti aiuta a restare costante</string>
     <string name="progress_footer_hint">Ci vuole solo un momento</string>
     <string name="progress_center_caption">Calcolo in corso</string>
     <string name="progress_phase_pill_1">Analisi del profilo</string>
-    <string name="progress_phase_pill_2">Calcolo dell’obiettivo calorie</string>
+    <string name="progress_phase_pill_2">Calcolo del tuo obiettivo calorico</string>
     <string name="progress_phase_pill_3">Bilanciamento delle macro giornaliere</string>
     <string name="progress_phase_pill_4">Finalizzazione degli indicatori benessere</string>
     <string name="progress_card_title">Configurazione del piano</string>
-    <string name="progress_row_calorie_target">Obiettivo calorie giornaliero</string>
+    <string name="progress_row_calorie_target">Obiettivo calorico giornaliero</string>
     <string name="progress_row_carb_distribution">Distribuzione carboidrati</string>
     <string name="progress_row_protein_recommendation">Proteine consigliate</string>
     <string name="progress_row_fat_recommendation">Grassi consigliati</string>
@@ -238,7 +236,7 @@ e ti aiuta a restare costante</string>
 i tuoi obiettivi</string>
     <string name="plan_goal_card_health_scores">Punteggi benessere per guidarti</string>
     <string name="plan_goal_card_track_meals">Registra i pasti e resta costante</string>
-    <string name="plan_goal_card_daily_calories">Segui le calorie e resta in linea</string>
+    <string name="plan_goal_card_daily_calories">Vedi chiaramente le calorie giornaliere e non perdere mai il controllo</string>
     <string name="plan_goal_card_balance_macros">Bilancia le macro e i tuoi obiettivi</string>
     <string name="plan_sources_based_on">Basato su raccomandazioni nutrizionali riconosciute.
 Solo a scopo informativo, non sostituisce un parere medico.</string>
@@ -681,7 +679,7 @@ Resta sul piano ogni giorno.</string>
     <string name="workout_tracker_estimating_fallback">Stima…</string>
     <string name="workout_tracker_estimating_analyzing">Analisi della tua attività…</string>
     <string name="workout_tracker_estimating_numbers">Elaborazione dei tuoi numeri…</string>
-    <string name="workout_tracker_estimating_calories">Stima dello sforzo, calcolo calorie…</string>
+    <string name="workout_tracker_estimating_calories">Stima dello sforzo, calcolo delle calorie…</string>
     <string name="workout_tracker_do_not_close">Non chiudere l’app né bloccare il dispositivo</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
@@ -988,13 +986,13 @@ con i tuoi amici</string>
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Modifica altezza</string>
-    <string name="edit_height_privacy_note">Usiamo la tua altezza solo per migliorare l’esperienza e la precisione delle stime delle calorie.</string>
+    <string name="edit_height_privacy_note">Usiamo la tua altezza solo per migliorare la tua esperienza e la precisione della stima delle calorie.</string>
     <string name="edit_height_saved_locally_sync_failed">Errore di rete. Salvato localmente, ma sincronizzazione non riuscita.</string>
 
 
     <!-- EditAgeScreen -->
     <string name="edit_age_title">Modifica età</string>
-    <string name="edit_age_privacy_note">Usiamo la tua età solo per migliorare l’esperienza e la precisione delle stime delle calorie.</string>
+    <string name="edit_age_privacy_note">Usiamo la tua età solo per migliorare la tua esperienza e la precisione della stima delle calorie.</string>
 
 
     <!-- EditGenderScreen -->
@@ -1045,7 +1043,7 @@ con i tuoi amici</string>
 
     <!-- RingColorsExplainedScreen -->
     <string name="ring_colors_explained_title">Colori degli anelli</string>
-    <string name="ring_colors_explained_intro">Gli anelli del calendario ti aiutano a vedere rapidamente ogni giorno rispetto al tuo obiettivo calorie.</string>
+    <string name="ring_colors_explained_intro">Gli anelli della data ti aiutano a vedere rapidamente come ogni giorno si confronta con il tuo obiettivo calorico.</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">Anteprima anello</string>
 
@@ -1059,11 +1057,11 @@ con i tuoi amici</string>
     <string name="ring_colors_explained_subtitle">Spiegazione dei colori</string>
 
     <string name="ring_colors_green_title">Verde</string>
-    <string name="ring_colors_green_body">In target (entro 100 calorie dall’obiettivo)</string>
+    <string name="ring_colors_green_body">In obiettivo (entro 100 calorie dall’obiettivo)</string>
     <string name="ring_colors_yellow_title">Ambra</string>
-    <string name="ring_colors_yellow_body">100–199 calorie sopra l’obiettivo</string>
+    <string name="ring_colors_yellow_body">100–199 calorie sopra il tuo obiettivo</string>
     <string name="ring_colors_red_title">Rosso</string>
-    <string name="ring_colors_red_body">200 calorie o più sopra l’obiettivo</string>
+    <string name="ring_colors_red_body">200+ calorie sopra il tuo obiettivo</string>
     <string name="ring_colors_dotted_title">Punteggiato</string>
     <string name="ring_colors_dotted_body">Nessun pasto registrato quel giorno</string>
 
@@ -1086,7 +1084,7 @@ con i tuoi amici</string>
     <!-- WidgetGuideScreen -->
     <string name="widget_guide_title">Aggiungi un widget</string>
     <string name="widget_guide_hero_title">Aggiungi CaloShape alla schermata Home</string>
-    <string name="widget_guide_hero_body">Controlla calorie, macro e azioni rapide senza aprire l’app.</string>
+    <string name="widget_guide_hero_body">Monitora calorie, macro e azioni rapide senza aprire l’app.</string>
     <string name="widget_guide_steps_title">Segui questi passaggi</string>
     <string name="widget_guide_step_1_title">Tieni premuta la schermata Home</string>
     <string name="widget_guide_step_1_body">Tieni premuta un’area vuota della schermata Home del telefono finché non appare il menu.</string>

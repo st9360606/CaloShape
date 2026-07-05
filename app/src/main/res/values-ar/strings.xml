@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">التقط صورة واعرف السعرات.</string>
+    <string name="landing_title">التقط صورة واعرف السعرات الحرارية.</string>
     <string name="choose_language">اختيار اللغة</string>
     <string name="cta_get_started">ابدأ الآن</string>
     <string name="cta_login_prefix">لديك حساب بالفعل؟</string>
@@ -125,18 +125,16 @@
 
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">كم عمرك؟</string>
-    <string name="onboard_age_subtitle">نستخدم عمرك فقط لتحسين تجربتك ودقة تقدير السعرات.</string>
-
-
+    <string name="onboard_age_subtitle">نستخدم عمرك فقط لتحسين تجربتك ودقة تقدير السعرات الحرارية.</string>
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">ما طولك؟</string>
-    <string name="onboard_height_subtitle">نستخدم بياناتك فقط لتحسين تجربتك وتقديرات السعرات لدينا.</string>
+    <string name="onboard_height_subtitle">نستخدم بياناتك فقط لتحسين تجربتك وتقديرات السعرات الحرارية.</string>
     <string name="onboard_height_hint">سيُستخدم هذا لضبط خطتك المخصصة.</string>
 
 
     <!-- Onboarding: WeightSelectionScreen -->
     <string name="onboard_weight_title">كم وزنك؟</string>
-    <string name="onboard_weight_subtitle">نستخدم بياناتك فقط لتحسين تجربتك وتقديرات السعرات لدينا.</string>
+    <string name="onboard_weight_subtitle">نستخدم بياناتك فقط لتحسين تجربتك وتقديرات السعرات الحرارية.</string>
     <string name="onboard_weight_hint">سيُستخدم هذا لضبط خطتك المخصصة.</string>
 
 
@@ -157,7 +155,7 @@
 
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">ما هدفك؟</string>
-    <string name="onboard_goal_subtitle">يساعدنا هذا على تخصيص خطة السعرات لك.</string>
+    <string name="onboard_goal_subtitle">يساعدنا ذلك على تخصيص خطة السعرات الحرارية لك.</string>
     <string name="goal_lose">إنقاص الوزن</string>
     <string name="goal_maintain">الحفاظ على الوزن</string>
     <string name="goal_gain">زيادة الوزن</string>
@@ -166,7 +164,7 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">ما وزنك المستهدف؟</string>
-    <string name="onboard_goal_weight_subtitle">بناءً على هذا الهدف، سننشئ توصية أنسب للسعرات اليومية.</string>
+    <string name="onboard_goal_weight_subtitle">بناءً على هذا الهدف، سننشئ توصية يومية بالسعرات الحرارية تكون أكثر ملاءمة لك.</string>
     <string name="onboard_goal_weight_hint">سيُستخدم هذا لضبط خطتك المخصصة.</string>
 
 
@@ -180,20 +178,18 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">اجعل كل وجبة مهمة!</string>
-    <string name="onboard_notif_subtitle">فعّل الإشعارات لتلقي تذكيرات لطيفة لتسجيل الوجبات، حتى تبقى السعرات والماكروز والتقدم على المسار. تحدث الهفوات؛ والتنبيهات في الوقت المناسب تساعدك على العودة بسرعة.</string>
+    <string name="onboard_notif_subtitle">فعّل الإشعارات للحصول على تذكيرات لطيفة لتسجيل الوجبات، كي تبقى السعرات والعناصر الكبرى وتقدمك على المسار الصحيح. قد تحدث الهفوات؛ وتساعدك التنبيهات في الوقت المناسب على العودة بسرعة.</string>
     <string name="onboard_allow_notifications_cta">السماح بالإشعارات</string>
-    <string name="notification_mock_app_title">عداد السعرات بالذكاء الاصطناعي</string>
+    <string name="notification_mock_app_title">عداد السعرات الحرارية بالذكاء الاصطناعي</string>
     <string name="onboard_notif_title_got_a_sec">وجبتك لن تسجّل نفسها 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">سجّل هذه الوجبة للحفاظ على السعرات والماكروز ضمن المسار.</string>
-
-
+    <string name="onboard_notif_subtitle_log_meal_goal">سجّل هذه الوجبة للحفاظ على السعرات والعناصر الكبرى على المسار الصحيح.</string>
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">الاتصال بـ</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
     <string name="onboard_hc_connect_body">زامن النشاط اليومي بين CaloShape AI وتطبيقات الصحة للحصول على سجلات ورؤى أكثر اكتمالًا.</string>
     <string name="onboard_hc_permission_rationale_title_prefix">لماذا يستخدم CaloShape</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">يقرأ CaloShape خطواتك والسعرات النشطة وبيانات التمارين لتقدير حرق النشاط اليومي، وتحديث لوحة السعرات، وتحسين رؤى التقدم. يمكنك إلغاء الوصول في أي وقت من Health Connect.</string>
+    <string name="onboard_hc_permission_rationale_body">يقرأ CaloShape خطواتك والسعرات النشطة وبيانات التمارين لتقدير حرق النشاط اليومي، وتحديث لوحة السعرات الحرارية، وتحسين رؤى التقدم. يمكنك إلغاء الوصول في أي وقت من Health Connect.</string>
     <string name="onboard_hc_permission_rationale_button">فهمت</string>
 
 
@@ -203,11 +199,11 @@
     <string name="progress_footer_hint">لن يستغرق الأمر سوى لحظة</string>
     <string name="progress_center_caption">جارٍ تحضير نتائجك</string>
     <string name="progress_phase_pill_1">مراجعة ملفك الشخصي</string>
-    <string name="progress_phase_pill_2">حساب هدف السعرات</string>
+    <string name="progress_phase_pill_2">جارٍ حساب هدف السعرات الحرارية</string>
     <string name="progress_phase_pill_3">موازنة الماكروز اليومية</string>
     <string name="progress_phase_pill_4">إنهاء رؤى الصحة</string>
     <string name="progress_card_title">إعداد خطتك</string>
-    <string name="progress_row_calorie_target">هدف السعرات اليومي</string>
+    <string name="progress_row_calorie_target">هدف السعرات الحرارية اليومي</string>
     <string name="progress_row_carb_distribution">توزيع الكربوهيدرات</string>
     <string name="progress_row_protein_recommendation">توصية البروتين</string>
     <string name="progress_row_fat_recommendation">توصية الدهون</string>
@@ -233,7 +229,7 @@
     <string name="plan_goals_title">كيف تصل إلى\nأهدافك</string>
     <string name="plan_goal_card_health_scores">درجات الصحة ترشدك، فتتكوّن العادات بشكل طبيعي</string>
     <string name="plan_goal_card_track_meals">سجّل الوجبات بلمسة واحدة، والالتزام يصبح أسهل</string>
-    <string name="plan_goal_card_daily_calories">شاهد السعرات اليومية بوضوح ولا تفقد المسار</string>
+    <string name="plan_goal_card_daily_calories">شاهد السعرات اليومية بوضوح ولا تفقد المسار أبدًا</string>
     <string name="plan_goal_card_balance_macros">الكربوهيدرات × البروتين × الدهون، توازن ذكي ونتائج أفضل</string>
     <string name="plan_sources_based_on">استنادًا إلى الإرشادات الغذائية الرسمية،\nللمرجع فقط وليس نصيحة طبية.</string>
     <string name="plan_sources_more">عرض كل المراجع ›</string>
@@ -340,8 +336,6 @@
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">السعرات المتبقية</string>
     <string name="home_calories_eaten_label">السعرات المتناولة</string>
-
-
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">البروتين المتبقي</string>
@@ -664,7 +658,7 @@
     <string name="workout_tracker_estimating_fallback">جارٍ التقدير…</string>
     <string name="workout_tracker_estimating_analyzing">جارٍ تحليل نشاطك…</string>
     <string name="workout_tracker_estimating_numbers">جارٍ العمل على أرقامك…</string>
-    <string name="workout_tracker_estimating_calories">جارٍ تقدير الجهد وحساب السعرات…</string>
+    <string name="workout_tracker_estimating_calories">جارٍ تقدير الجهد وحساب السعرات الحرارية…</string>
     <string name="workout_tracker_do_not_close">يرجى عدم إغلاق التطبيق أو قفل جهازك</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
@@ -969,15 +963,13 @@
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">تعديل طولك</string>
-    <string name="edit_height_privacy_note">نستخدم طولك فقط لتحسين تجربتك ودقة تقدير السعرات.</string>
+    <string name="edit_height_privacy_note">نستخدم طولك فقط لتحسين تجربتك ودقة تقدير السعرات الحرارية.</string>
     <string name="edit_height_saved_locally_sync_failed">حدث خطأ في الشبكة. تم الحفظ محليًا، لكن تعذرت المزامنة.</string>
 
 
     <!-- EditAgeScreen -->
     <string name="edit_age_title">تعديل عمرك</string>
-    <string name="edit_age_privacy_note">نستخدم عمرك فقط لتحسين تجربتك ودقة تقدير السعرات.</string>
-
-
+    <string name="edit_age_privacy_note">نستخدم عمرك فقط لتحسين تجربتك ودقة تقدير السعرات الحرارية.</string>
     <!-- EditGenderScreen -->
     <string name="edit_gender_title">تعديل جنسك</string>
     <string name="edit_gender_privacy_note">يُستخدم فقط للتخصيص وتحسين دقة التقدير.</string>
@@ -1009,7 +1001,7 @@
 
     <!-- EditNutritionGoalsScreen -->
     <string name="edit_nutrition_goals_title">تعديل أهداف التغذية</string>
-    <string name="edit_nutrition_calorie_goal">هدف السعرات</string>
+    <string name="edit_nutrition_calorie_goal">هدف السعرات الحرارية</string>
     <string name="edit_nutrition_protein_goal">هدف البروتين</string>
     <string name="edit_nutrition_carb_goal">هدف الكربوهيدرات</string>
     <string name="edit_nutrition_fat_goal">هدف الدهون</string>
@@ -1026,7 +1018,7 @@
 
     <!-- RingColorsExplainedScreen -->
     <string name="ring_colors_explained_title">ألوان حلقات التاريخ</string>
-    <string name="ring_colors_explained_intro">تساعدك حلقات التاريخ على معرفة مقارنة كل يوم بهدف السعرات بسرعة.</string>
+    <string name="ring_colors_explained_intro">تساعدك حلقات التاريخ على رؤية مقارنة كل يوم بهدف السعرات الحرارية بسرعة.</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">معاينة حلقة التاريخ</string>
 
@@ -1040,7 +1032,7 @@
     <string name="ring_colors_explained_subtitle">شرح ألوان الحلقات</string>
 
     <string name="ring_colors_green_title">أخضر</string>
-    <string name="ring_colors_green_body">ضمن الهدف (في حدود 100 سعرة حرارية من الهدف)</string>
+    <string name="ring_colors_green_body">ضمن الهدف (بفارق 100 سعرة حرارية من الهدف)</string>
     <string name="ring_colors_yellow_title">بني</string>
     <string name="ring_colors_yellow_body">100-199 سعرة حرارية فوق هدفك</string>
     <string name="ring_colors_red_title">أحمر</string>
@@ -1067,7 +1059,7 @@
     <!-- WidgetGuideScreen -->
     <string name="widget_guide_title">إضافة أداة</string>
     <string name="widget_guide_hero_title">أضف CaloShape إلى الشاشة الرئيسية</string>
-    <string name="widget_guide_hero_body">تتبّع السعرات والماكروز والإجراءات السريعة دون فتح التطبيق.</string>
+    <string name="widget_guide_hero_body">تتبّع السعرات الحرارية والعناصر الكبرى والإجراءات السريعة دون فتح التطبيق.</string>
     <string name="widget_guide_steps_title">اتبع هذه الخطوات</string>
     <string name="widget_guide_step_1_title">اضغط مطولًا على الشاشة الرئيسية</string>
     <string name="widget_guide_step_1_body">اضغط مطولًا على منطقة فارغة في الشاشة الرئيسية لهاتفك حتى تظهر القائمة.</string>

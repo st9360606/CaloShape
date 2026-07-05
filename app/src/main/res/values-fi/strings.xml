@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">Ota kuva ja näe kalorit.</string>
+    <string name="landing_title">Ota kuva ja tiedä kalorit.</string>
     <string name="choose_language">Valitse kieli</string>
     <string name="cta_get_started">Aloita</string>
     <string name="cta_login_prefix">Onko sinulla jo tili?</string>
@@ -125,18 +125,16 @@
 
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">Kuinka vanha olet?</string>
-    <string name="onboard_age_subtitle">Käytämme ikääsi vain käyttökokemuksen ja kaloriarvioiden tarkkuuden parantamiseen.</string>
-
-
+    <string name="onboard_age_subtitle">Käytämme ikääsi vain kokemuksesi ja kaloriarvion tarkkuuden parantamiseen.</string>
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">Kuinka pitkä olet?</string>
-    <string name="onboard_height_subtitle">Käytämme tietojasi vain käyttökokemuksen ja kaloriarvioidemme parantamiseen.</string>
+    <string name="onboard_height_subtitle">Käytämme tietojasi vain kokemuksesi ja kaloriarvioidemme parantamiseen.</string>
     <string name="onboard_height_hint">Tätä käytetään henkilökohtaisen suunnitelmasi kalibrointiin.</string>
 
 
     <!-- Onboarding: WeightSelectionScreen -->
     <string name="onboard_weight_title">Kuinka paljon painat?</string>
-    <string name="onboard_weight_subtitle">Käytämme tietojasi vain käyttökokemuksen ja kaloriarvioidemme parantamiseen.</string>
+    <string name="onboard_weight_subtitle">Käytämme tietojasi vain kokemuksesi ja kaloriarvioidemme parantamiseen.</string>
     <string name="onboard_weight_hint">Tätä käytetään henkilökohtaisen suunnitelmasi kalibrointiin.</string>
 
 
@@ -157,7 +155,7 @@
 
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">Mikä on tavoitteesi?</string>
-    <string name="onboard_goal_subtitle">Tämä auttaa meitä mukauttamaan kalorisuunnitelmaasi.</string>
+    <string name="onboard_goal_subtitle">Tämä auttaa meitä mukauttamaan kalorisuunnitelmasi.</string>
     <string name="goal_lose">Pudottaa painoa</string>
     <string name="goal_maintain">Ylläpitää</string>
     <string name="goal_gain">Nostaa painoa</string>
@@ -180,20 +178,18 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">Tee jokaisesta ateriasta merkityksellinen!</string>
-    <string name="onboard_notif_subtitle">Ota ilmoitukset käyttöön saadaksesi lempeitä muistutuksia aterioiden kirjaamisesta, jotta kalorit, makrot ja edistyminen pysyvät raiteilla. Lipsahduksia sattuu; oikea-aikaiset muistutukset auttavat palaamaan nopeasti takaisin.</string>
+    <string name="onboard_notif_subtitle">Ota ilmoitukset käyttöön saadaksesi lempeitä muistutuksia aterioiden kirjaamisesta, jotta kalorit, makrot ja edistyminen pysyvät oikealla polulla. Lipsahduksia sattuu; oikea-aikaiset muistutukset auttavat palaamaan nopeasti.</string>
     <string name="onboard_allow_notifications_cta">Salli ilmoitukset</string>
     <string name="notification_mock_app_title">AI-kalorilaskuri</string>
     <string name="onboard_notif_title_got_a_sec">Ateriasi ei kirjaudu itsestään 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">Kirjaa tämä ateria, jotta kalorit ja makrot pysyvät tavoitteessa.</string>
-
-
+    <string name="onboard_notif_subtitle_log_meal_goal">Kirjaa tämä ateria, jotta kalorit ja makrot pysyvät oikealla polulla.</string>
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">Yhdistä palveluun</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
     <string name="onboard_hc_connect_body">Synkronoi päivittäinen aktiivisuus CaloShape AI:n ja terveyssovellusten välillä saadaksesi täydellisemmät tiedot ja oivallukset.</string>
     <string name="onboard_hc_permission_rationale_title_prefix">Miksi CaloShape käyttää</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape lukee askeleesi, aktiiviset kalorit ja liikuntatiedot arvioidakseen päivittäistä aktiivisuuskulutusta, päivittääkseen kalorinäkymän ja parantaakseen edistymisoivalluksia. Voit peruuttaa käyttöoikeuden milloin tahansa Health Connectissa.</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape lukee askeleesi, aktiiviset kalorisi ja liikuntatietosi arvioidakseen päivittäistä aktiivisuuskulutusta, päivittääkseen kalorikoontinäytön ja parantaakseen edistymisnäkymiä. Voit perua käyttöoikeuden milloin tahansa Health Connectissa.</string>
     <string name="onboard_hc_permission_rationale_button">Selvä</string>
 
 
@@ -203,7 +199,7 @@
     <string name="progress_footer_hint">Tämä vie vain hetken</string>
     <string name="progress_center_caption">Valmistellaan tuloksiasi</string>
     <string name="progress_phase_pill_1">Tarkistetaan profiiliasi</string>
-    <string name="progress_phase_pill_2">Lasketaan kaloritavoitettasi</string>
+    <string name="progress_phase_pill_2">Kaloritavoitettasi lasketaan</string>
     <string name="progress_phase_pill_3">Tasapainotetaan päivittäisiä makroja</string>
     <string name="progress_phase_pill_4">Viimeistellään terveysoivalluksia</string>
     <string name="progress_card_title">Määritetään suunnitelmaasi</string>
@@ -233,7 +229,7 @@
     <string name="plan_goals_title">Näin saavutat\ntavoitteesi</string>
     <string name="plan_goal_card_health_scores">Terveysarviot ohjaavat sinua, jotta tavat syntyvät luontevasti</string>
     <string name="plan_goal_card_track_meals">Kirjaa ateriat yhdellä napautuksella, niin johdonmukaisuus on helppoa</string>
-    <string name="plan_goal_card_daily_calories">Näe päivittäiset kalorit selkeästi äläkä menetä suuntaa</string>
+    <string name="plan_goal_card_daily_calories">Näe päivittäiset kalorit selkeästi, etkä menetä suuntaa</string>
     <string name="plan_goal_card_balance_macros">Hiilihydraatit × proteiini × rasva, älykäs tasapaino ja paremmat tulokset</string>
     <string name="plan_sources_based_on">Perustuu virallisiin ravitsemussuosituksiin,\nvain viitteeksi, ei lääketieteellistä neuvontaa.</string>
     <string name="plan_sources_more">Näytä kaikki viitteet ›</string>
@@ -339,9 +335,7 @@
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">Kalorit jäljellä</string>
-    <string name="home_calories_eaten_label">Kalorit syöty</string>
-
-
+    <string name="home_calories_eaten_label">Syödyt kalorit</string>
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">Proteiinia jäljellä</string>
@@ -664,7 +658,7 @@
     <string name="workout_tracker_estimating_fallback">Arvioidaan…</string>
     <string name="workout_tracker_estimating_analyzing">Analysoidaan aktiivisuuttasi…</string>
     <string name="workout_tracker_estimating_numbers">Lasketaan numeroitasi…</string>
-    <string name="workout_tracker_estimating_calories">Arvioidaan rasitusta ja lasketaan kaloreita…</string>
+    <string name="workout_tracker_estimating_calories">Arvioidaan rasitusta, lasketaan kaloreita…</string>
     <string name="workout_tracker_do_not_close">Älä sulje sovellusta tai lukitse laitetta</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
@@ -965,15 +959,13 @@
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Muokkaa pituuttasi</string>
-    <string name="edit_height_privacy_note">Käytämme pituuttasi vain käyttökokemuksen ja kaloriarvioiden tarkkuuden parantamiseen.</string>
+    <string name="edit_height_privacy_note">Käytämme pituuttasi vain kokemuksesi ja kaloriarvion tarkkuuden parantamiseen.</string>
     <string name="edit_height_saved_locally_sync_failed">Verkkovirhe. Tallennettu paikallisesti, mutta synkronointi epäonnistui.</string>
 
 
     <!-- EditAgeScreen -->
     <string name="edit_age_title">Muokkaa ikääsi</string>
-    <string name="edit_age_privacy_note">Käytämme ikääsi vain käyttökokemuksen ja kaloriarvioiden tarkkuuden parantamiseen.</string>
-
-
+    <string name="edit_age_privacy_note">Käytämme ikääsi vain kokemuksesi ja kaloriarvion tarkkuuden parantamiseen.</string>
     <!-- EditGenderScreen -->
     <string name="edit_gender_title">Muokkaa sukupuoltasi</string>
     <string name="edit_gender_privacy_note">Käytetään vain personointiin ja arvioiden tarkkuuden parantamiseen.</string>
@@ -1005,7 +997,7 @@
 
     <!-- EditNutritionGoalsScreen -->
     <string name="edit_nutrition_goals_title">Muokkaa ravintotavoitteita</string>
-    <string name="edit_nutrition_calorie_goal">kaloritavoite</string>
+    <string name="edit_nutrition_calorie_goal">Kaloritavoite</string>
     <string name="edit_nutrition_protein_goal">Proteiinitavoite</string>
     <string name="edit_nutrition_carb_goal">Hiilihydraattitavoite</string>
     <string name="edit_nutrition_fat_goal">Rasvatavoite</string>
@@ -1022,7 +1014,7 @@
 
     <!-- RingColorsExplainedScreen -->
     <string name="ring_colors_explained_title">Päivärenkaiden värit</string>
-    <string name="ring_colors_explained_intro">Päivärenkaat auttavat nopeasti näkemään, miten kukin päivä vertautuu kaloritavoitteeseesi.</string>
+    <string name="ring_colors_explained_intro">Päivärenkaat auttavat näkemään nopeasti, miten kukin päivä vertautuu kaloritavoitteeseesi.</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">Päivärenkaan esikatselu</string>
 
@@ -1036,7 +1028,7 @@
     <string name="ring_colors_explained_subtitle">Renkaiden värit selitettynä</string>
 
     <string name="ring_colors_green_title">Vihreä</string>
-    <string name="ring_colors_green_body">Tavoitteessa (100 kaloria sisällä tavoitteesta)</string>
+    <string name="ring_colors_green_body">Tavoitteessa (100 kalorin sisällä tavoitteesta)</string>
     <string name="ring_colors_yellow_title">Ruskea</string>
     <string name="ring_colors_yellow_body">100-199 kaloria yli tavoitteesi</string>
     <string name="ring_colors_red_title">Punainen</string>

@@ -125,18 +125,16 @@
 
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">Ile masz lat?</string>
-    <string name="onboard_age_subtitle">Używamy wieku tylko po to, aby poprawić działanie aplikacji i dokładność szacowania kalorii.</string>
-
-
+    <string name="onboard_age_subtitle">Używamy Twojego wieku wyłącznie, aby poprawić doświadczenie i dokładność szacowania kalorii.</string>
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">Jaki masz wzrost?</string>
-    <string name="onboard_height_subtitle">Używamy Twoich danych tylko po to, aby poprawić działanie aplikacji i nasze szacunki kalorii.</string>
+    <string name="onboard_height_subtitle">Używamy Twoich danych wyłącznie, aby poprawić doświadczenie i nasze szacunki kalorii.</string>
     <string name="onboard_height_hint">Użyjemy tego do dopasowania Twojego planu.</string>
 
 
     <!-- Onboarding: WeightSelectionScreen -->
     <string name="onboard_weight_title">Ile ważysz?</string>
-    <string name="onboard_weight_subtitle">Używamy Twoich danych tylko po to, aby poprawić działanie aplikacji i nasze szacunki kalorii.</string>
+    <string name="onboard_weight_subtitle">Używamy Twoich danych wyłącznie, aby poprawić doświadczenie i nasze szacunki kalorii.</string>
     <string name="onboard_weight_hint">Użyjemy tego do dopasowania Twojego planu.</string>
 
 
@@ -166,7 +164,7 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">Jaka jest Twoja waga docelowa?</string>
-    <string name="onboard_goal_weight_subtitle">Na podstawie tego celu przygotujemy lepszą dzienną rekomendację kalorii.</string>
+    <string name="onboard_goal_weight_subtitle">Na podstawie tego celu stworzymy dla Ciebie bardziej odpowiednie dzienne zalecenie kalorii.</string>
     <string name="onboard_goal_weight_hint">Użyjemy tego do dopasowania Twojego planu.</string>
 
 
@@ -180,20 +178,18 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">Niech każdy posiłek ma znaczenie!</string>
-    <string name="onboard_notif_subtitle">Włącz powiadomienia, aby otrzymywać delikatne przypomnienia o zapisywaniu posiłków — dzięki temu kalorie, makroskładniki i postępy pozostaną pod kontrolą. Potknięcia się zdarzają; przypomnienia we właściwym momencie pomagają szybko wrócić na właściwy tor.</string>
+    <string name="onboard_notif_subtitle">Włącz powiadomienia, aby otrzymywać delikatne przypomnienia o zapisywaniu posiłków, dzięki czemu kalorie, makro i postępy pozostaną na właściwym torze. Potknięcia się zdarzają; przypomnienia w odpowiednim czasie pomagają szybko wrócić na kurs.</string>
     <string name="onboard_allow_notifications_cta">Zezwól na powiadomienia</string>
     <string name="notification_mock_app_title">Licznik kalorii AI</string>
     <string name="onboard_notif_title_got_a_sec">Posiłek sam się nie zapisze 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">Zapisz ten posiłek, aby kontrolować kalorie i makroskładniki.</string>
-
-
+    <string name="onboard_notif_subtitle_log_meal_goal">Zapisz ten posiłek, aby utrzymać kalorie i makro na właściwym torze.</string>
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">Połącz z</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
     <string name="onboard_hc_connect_body">Synchronizuj codzienną aktywność między CaloShape AI a aplikacjami zdrowotnymi, aby uzyskać pełniejsze dane i wnioski.</string>
     <string name="onboard_hc_permission_rationale_title_prefix">Dlaczego CaloShape używa</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape odczytuje kroki, aktywne kalorie i dane treningowe, aby oszacować dzienne spalanie, aktualizować pulpit kalorii i ulepszać wgląd w postępy. Dostęp możesz cofnąć w Health Connect.</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape odczytuje Twoje kroki, aktywne kalorie i dane ćwiczeń, aby oszacować dzienne spalanie aktywności, aktualizować pulpit kalorii i poprawiać informacje o postępach. W każdej chwili możesz cofnąć dostęp w Health Connect.</string>
     <string name="onboard_hc_permission_rationale_button">Rozumiem</string>
 
 
@@ -203,7 +199,7 @@
     <string name="progress_footer_hint">To zajmie tylko chwilę</string>
     <string name="progress_center_caption">Przygotowujemy wyniki</string>
     <string name="progress_phase_pill_1">Sprawdzamy profil</string>
-    <string name="progress_phase_pill_2">Obliczamy cel kalorii</string>
+    <string name="progress_phase_pill_2">Obliczanie Twojego celu kalorii</string>
     <string name="progress_phase_pill_3">Równoważymy dzienne makro</string>
     <string name="progress_phase_pill_4">Finalizujemy wnioski zdrowotne</string>
     <string name="progress_card_title">Konfigurujemy plan</string>
@@ -233,7 +229,7 @@
     <string name="plan_goals_title">Jak osiągnąć\nswoje cele</string>
     <string name="plan_goal_card_health_scores">Oceny zdrowia pomagają Ci naturalnie budować nawyki</string>
     <string name="plan_goal_card_track_meals">Zapisuj posiłki jednym stuknięciem — regularność jest prosta</string>
-    <string name="plan_goal_card_daily_calories">Widzisz dzienne kalorie jasno i nie tracisz kontroli</string>
+    <string name="plan_goal_card_daily_calories">Wyraźnie widzisz dzienne kalorie i nigdy nie tracisz kontroli</string>
     <string name="plan_goal_card_balance_macros">Węglowodany × białko × tłuszcz — mądra równowaga, lepsze wyniki</string>
     <string name="plan_sources_based_on">Na podstawie oficjalnych wytycznych żywieniowych,\ntylko informacyjnie, nie jako porada medyczna.</string>
     <string name="plan_sources_more">Zobacz wszystkie odniesienia ›</string>
@@ -340,8 +336,6 @@
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">Pozostałe kalorie</string>
     <string name="home_calories_eaten_label">Spożyte kalorie</string>
-
-
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">Pozostało białka</string>
@@ -664,7 +658,7 @@
     <string name="workout_tracker_estimating_fallback">Szacowanie…</string>
     <string name="workout_tracker_estimating_analyzing">Analizowanie aktywności…</string>
     <string name="workout_tracker_estimating_numbers">Przeliczanie danych…</string>
-    <string name="workout_tracker_estimating_calories">Szacowanie wysiłku i obliczanie kalorii…</string>
+    <string name="workout_tracker_estimating_calories">Szacowanie wysiłku, obliczanie kalorii…</string>
     <string name="workout_tracker_do_not_close">Nie zamykaj aplikacji ani nie blokuj urządzenia</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
@@ -965,15 +959,13 @@
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Edytuj wzrost</string>
-    <string name="edit_height_privacy_note">Używamy Twojego wzrostu tylko po to, aby poprawić działanie aplikacji i dokładność szacowania kalorii.</string>
+    <string name="edit_height_privacy_note">Używamy Twojego wzrostu wyłącznie, aby poprawić doświadczenie i dokładność szacowania kalorii.</string>
     <string name="edit_height_saved_locally_sync_failed">Błąd sieci. Zapisano lokalnie, ale synchronizacja nie powiodła się.</string>
 
 
     <!-- EditAgeScreen -->
     <string name="edit_age_title">Edytuj wiek</string>
-    <string name="edit_age_privacy_note">Używamy wieku tylko po to, aby poprawić działanie aplikacji i dokładność szacowania kalorii.</string>
-
-
+    <string name="edit_age_privacy_note">Używamy Twojego wieku wyłącznie, aby poprawić doświadczenie i dokładność szacowania kalorii.</string>
     <!-- EditGenderScreen -->
     <string name="edit_gender_title">Edytuj płeć</string>
     <string name="edit_gender_privacy_note">Używane tylko do personalizacji i poprawy dokładności szacunków.</string>
@@ -1022,7 +1014,7 @@
 
     <!-- RingColorsExplainedScreen -->
     <string name="ring_colors_explained_title">Kolory pierścieni dat</string>
-    <string name="ring_colors_explained_intro">Pierścienie dat pomagają szybko zobaczyć, jak każdy dzień wypada względem celu kalorii.</string>
+    <string name="ring_colors_explained_intro">Pierścienie dat pomagają szybko zobaczyć, jak każdy dzień wypada względem Twojego celu kalorii.</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">Podgląd pierścienia daty</string>
 
@@ -1038,9 +1030,9 @@
     <string name="ring_colors_green_title">Zielony</string>
     <string name="ring_colors_green_body">W celu (w granicy 100 kalorii od celu)</string>
     <string name="ring_colors_yellow_title">Brązowy</string>
-    <string name="ring_colors_yellow_body">100–199 kalorii ponad cel</string>
+    <string name="ring_colors_yellow_body">100-199 kalorii ponad Twój cel</string>
     <string name="ring_colors_red_title">Czerwony</string>
-    <string name="ring_colors_red_body">200+ kalorii ponad cel</string>
+    <string name="ring_colors_red_body">200+ kalorii ponad Twój cel</string>
     <string name="ring_colors_dotted_title">Kropkowany</string>
     <string name="ring_colors_dotted_body">Brak zapisanych posiłków tego dnia</string>
 

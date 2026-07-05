@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">Foto machen, Kalorien kennen.</string>
+    <string name="landing_title">Foto machen. Kalorien erkennen.</string>
     <string name="choose_language">Sprache auswählen</string>
     <string name="cta_get_started">Loslegen</string>
     <string name="cta_login_prefix">Du hast bereits ein Konto?</string>
@@ -157,7 +157,7 @@
 
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">Was ist dein Ziel?</string>
-    <string name="onboard_goal_subtitle">Das hilft uns, deinen Kalorienplan anzupassen.</string>
+    <string name="onboard_goal_subtitle">Das hilft uns, deinen Kalorienplan auf dich abzustimmen.</string>
     <string name="goal_lose">Abnehmen</string>
     <string name="goal_maintain">Gewicht halten</string>
     <string name="goal_gain">Zunehmen</string>
@@ -180,11 +180,11 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">Jede Mahlzeit zählt!</string>
-    <string name="onboard_notif_subtitle">Aktiviere Benachrichtigungen für sanfte Erinnerungen zum Eintragen von Mahlzeiten – damit Kalorien, Makros und Fortschritt auf Kurs bleiben. Ausrutscher passieren; rechtzeitige Hinweise helfen dir, schnell zurückzufinden.</string>
+    <string name="onboard_notif_subtitle">Erhalte dezente Erinnerungen, um Mahlzeiten zu protokollieren und bei Kalorien, Makros und Fortschritt dranzubleiben.</string>
     <string name="onboard_allow_notifications_cta">Benachrichtigungen erlauben</string>
-    <string name="notification_mock_app_title">KI-Kalorienzähler</string>
-    <string name="onboard_notif_title_got_a_sec">Deine Mahlzeit trägt sich nicht von selbst ein 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">Trage diese Mahlzeit ein, um Kalorien und Makros im Blick zu behalten.</string>
+    <string name="notification_mock_app_title">AI-Kalorienzähler</string>
+    <string name="onboard_notif_title_got_a_sec">Zeit zum Eintragen 😉</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">Protokolliere diese Mahlzeit, damit deine Kalorien und Makros auf Kurs bleiben.</string>
 
 
     <!-- Onboarding: HealthConnectIntroScreen -->
@@ -231,10 +231,10 @@
     <string name="plan_weight_delta">Bis zum Zielgewicht</string>
 
     <string name="plan_goals_title">So erreichst du\ndeine Ziele</string>
-    <string name="plan_goal_card_health_scores">Gesundheitswerte führen dich, damit Gewohnheiten natürlich entstehen</string>
-    <string name="plan_goal_card_track_meals">Mahlzeiten mit einem Tippen eintragen – konsequent bleiben wird leicht</string>
-    <string name="plan_goal_card_daily_calories">Tägliche Kalorien klar sehen und nie den Überblick verlieren</string>
-    <string name="plan_goal_card_balance_macros">Kohlenhydrate × Protein × Fett – kluge Balance, bessere Ergebnisse</string>
+    <string name="plan_goal_card_health_scores">Gesundheitswerte für bessere Gewohnheiten</string>
+    <string name="plan_goal_card_track_meals">Mahlzeiten schnell per Fingertipp eintragen</string>
+    <string name="plan_goal_card_daily_calories">Tägliche Kalorien klar im Blick behalten</string>
+    <string name="plan_goal_card_balance_macros">Makros ausbalancieren und Ziele erreichen</string>
     <string name="plan_sources_based_on">Basierend auf offiziellen Ernährungsempfehlungen,\nnur zur Orientierung, keine medizinische Beratung.</string>
     <string name="plan_sources_more">Alle Referenzen anzeigen ›</string>
     <string name="plan_sources_hide">Quellen ausblenden</string>
@@ -664,7 +664,7 @@
     <string name="workout_tracker_estimating_fallback">Wird geschätzt…</string>
     <string name="workout_tracker_estimating_analyzing">Deine Aktivität wird analysiert…</string>
     <string name="workout_tracker_estimating_numbers">Deine Werte werden berechnet…</string>
-    <string name="workout_tracker_estimating_calories">Aufwand wird geschätzt, Kalorien werden berechnet…</string>
+    <string name="workout_tracker_estimating_calories">Aufwand wird eingeschätzt, Kalorien werden berechnet…</string>
     <string name="workout_tracker_do_not_close">Bitte schließe die App nicht und sperre dein Gerät nicht</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
@@ -1024,7 +1024,7 @@
 
     <!-- RingColorsExplainedScreen -->
     <string name="ring_colors_explained_title">Datum-Ringfarben</string>
-    <string name="ring_colors_explained_intro">Datum-Ringe helfen dir, schnell zu sehen, wie jeder Tag im Vergleich zu deinem Kalorienziel abschneidet.</string>
+    <string name="ring_colors_explained_intro">Datumsringe helfen dir, schnell zu sehen, wie jeder Tag im Vergleich zu deinem Kalorienziel abschneidet.</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">Datum-Ringvorschau</string>
 
@@ -1038,7 +1038,7 @@
     <string name="ring_colors_explained_subtitle">Ringfarben erklärt</string>
 
     <string name="ring_colors_green_title">Grün</string>
-    <string name="ring_colors_green_body">Im Zielbereich (innerhalb von 100 Kalorien des Ziels)</string>
+    <string name="ring_colors_green_body">Im Zielbereich (innerhalb von 100 Kalorien vom Ziel)</string>
     <string name="ring_colors_yellow_title">Braun</string>
     <string name="ring_colors_yellow_body">100–199 Kalorien über deinem Ziel</string>
     <string name="ring_colors_red_title">Rot</string>

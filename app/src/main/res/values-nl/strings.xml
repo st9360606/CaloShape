@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">Maak een foto en zie de calorieën.</string>
+    <string name="landing_title">Maak een foto en ontdek de calorieën.</string>
     <string name="choose_language">Taal kiezen</string>
     <string name="cta_get_started">Aan de slag</string>
     <string name="cta_login_prefix">Heb je al een account?</string>
@@ -125,7 +125,7 @@
 
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">Hoe oud ben je?</string>
-    <string name="onboard_age_subtitle">We gebruiken je leeftijd alleen om je ervaring en calorieschattingen te verbeteren.</string>
+    <string name="onboard_age_subtitle">We gebruiken je leeftijd alleen om je ervaring en de nauwkeurigheid van calorieschattingen te verbeteren.</string>
 
 
     <!-- Onboarding: HeightSelectionScreen -->
@@ -157,7 +157,7 @@
 
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">Wat is je doel?</string>
-    <string name="onboard_goal_subtitle">Dit helpt ons je calorieplan aan te passen.</string>
+    <string name="onboard_goal_subtitle">Dit helpt ons je calorieplan op jou af te stemmen.</string>
     <string name="goal_lose">Afvallen</string>
     <string name="goal_maintain">Gewicht behouden</string>
     <string name="goal_gain">Aankomen</string>
@@ -166,7 +166,7 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">Wat is je streefgewicht?</string>
-    <string name="onboard_goal_weight_subtitle">Op basis van dit doel maken we een beter passende dagelijkse calorieaanbeveling voor je.</string>
+    <string name="onboard_goal_weight_subtitle">Op basis van dit doel maken we een geschiktere dagelijkse calorieaanbeveling voor je.</string>
     <string name="onboard_goal_weight_hint">Dit wordt gebruikt om je persoonlijke plan af te stemmen.</string>
 
 
@@ -180,11 +180,11 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">Laat elke maaltijd meetellen!</string>
-    <string name="onboard_notif_subtitle">Schakel meldingen in voor vriendelijke herinneringen om maaltijden te loggen, zodat je calorieën, macro’s en voortgang op koers blijven. Een misstap kan gebeuren; tijdige duwtjes helpen je snel weer op weg.</string>
+    <string name="onboard_notif_subtitle">Ontvang subtiele herinneringen om maaltijden bij te houden en op koers te blijven met je calorieën, macro’s en voortgang.</string>
     <string name="onboard_allow_notifications_cta">Meldingen toestaan</string>
-    <string name="notification_mock_app_title">AI calorieën-teller</string>
+    <string name="notification_mock_app_title">AI-calorieteller</string>
     <string name="onboard_notif_title_got_a_sec">Je maaltijd logt zichzelf niet 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">Log deze maaltijd om je calorieën en macro’s op koers te houden.</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">Log deze maaltijd om je calorieën en macro’s op schema te houden.</string>
 
 
     <!-- Onboarding: HealthConnectIntroScreen -->
@@ -193,7 +193,7 @@
     <string name="onboard_hc_connect_body">Synchroniseer dagelijkse activiteit tussen CaloShape AI en gezondheidsapps voor completere gegevens en inzichten.</string>
     <string name="onboard_hc_permission_rationale_title_prefix">Waarom CaloShape gebruikmaakt van</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape leest je stappen, actieve calorieën en trainingsgegevens om je dagelijkse activiteitsverbranding te schatten, je caloriedashboard bij te werken en voortgangsinzichten te verbeteren. Je kunt de toegang op elk moment intrekken in Health Connect.</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape leest je stappen, actieve calorieën en trainingsgegevens om je dagelijkse activiteitsverbranding te schatten, je caloriedashboard bij te werken en voortgangsinzichten te verbeteren. Je kunt de toegang altijd intrekken in Health Connect.</string>
     <string name="onboard_hc_permission_rationale_button">Begrepen</string>
 
 
@@ -203,7 +203,7 @@
     <string name="progress_footer_hint">Dit duurt maar even</string>
     <string name="progress_center_caption">Je resultaten worden berekend</string>
     <string name="progress_phase_pill_1">Je profiel wordt bekeken</string>
-    <string name="progress_phase_pill_2">Je caloriedoel wordt berekend</string>
+    <string name="progress_phase_pill_2">Je caloriedoel berekenen</string>
     <string name="progress_phase_pill_3">Je dagelijkse macro’s worden in balans gebracht</string>
     <string name="progress_phase_pill_4">Je gezondheidsinzichten worden afgerond</string>
     <string name="progress_card_title">Je plan wordt ingesteld</string>
@@ -218,7 +218,7 @@
     <string name="plan_cta_start">Laten we beginnen</string>
     <string name="plan_title_congrats">Gefeliciteerd!</string>
     <string name="plan_subtitle_ready">Je persoonlijke gezondheidsplan is klaar!</string>
-    <string name="plan_disclaimer">Bronnen staan hieronder: bekijk alle referenties ›</string>
+    <string name="plan_disclaimer">Bronnen staan hieronder: Alle referenties bekijken ›</string>
     <string name="plan_unit_kcal_day">kcal / dag</string>
 
     <string name="plan_macros_proteins">Eiwit</string>
@@ -231,9 +231,9 @@
     <string name="plan_weight_delta">Tot streefgewicht</string>
 
     <string name="plan_goals_title">Hoe je je doelen\nbereikt</string>
-    <string name="plan_goal_card_health_scores">Gezondheidsscores helpen je gezondere gewoonten op te bouwen</string>
+    <string name="plan_goal_card_health_scores">Gezondheidsscores voor gezondere gewoonten</string>
     <string name="plan_goal_card_track_meals">Log maaltijden met één tik en blijf makkelijker consequent</string>
-    <string name="plan_goal_card_daily_calories">Houd je dagelijkse calorieën duidelijk in beeld</string>
+    <string name="plan_goal_card_daily_calories">Je dagelijkse calorieën in één oogopslag</string>
     <string name="plan_goal_card_balance_macros">Breng koolhydraten, eiwit en vet beter in balans</string>
     <string name="plan_sources_based_on">Gebaseerd op officiële voedingsrichtlijnen,\nalleen ter referentie, geen medisch advies.</string>
     <string name="plan_sources_more">Alle referenties bekijken ›</string>
@@ -663,7 +663,7 @@
     <string name="workout_tracker_estimating_fallback">Schatten…</string>
     <string name="workout_tracker_estimating_analyzing">Je activiteit analyseren…</string>
     <string name="workout_tracker_estimating_numbers">Je gegevens verwerken…</string>
-    <string name="workout_tracker_estimating_calories">Inspanning schatten en calorieën berekenen…</string>
+    <string name="workout_tracker_estimating_calories">Inspanning schatten, calorieën berekenen…</string>
     <string name="workout_tracker_do_not_close">Sluit de app niet en vergrendel je apparaat niet</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
@@ -969,13 +969,13 @@
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Lengte bewerken</string>
-    <string name="edit_height_privacy_note">We gebruiken je lengte alleen om je ervaring en calorieschattingen te verbeteren.</string>
+    <string name="edit_height_privacy_note">We gebruiken je lengte alleen om je ervaring en de nauwkeurigheid van calorieschattingen te verbeteren.</string>
     <string name="edit_height_saved_locally_sync_failed">Netwerkfout. Lokaal opgeslagen, maar synchroniseren mislukt.</string>
 
 
     <!-- EditAgeScreen -->
     <string name="edit_age_title">Leeftijd bewerken</string>
-    <string name="edit_age_privacy_note">We gebruiken je leeftijd alleen om je ervaring en calorieschattingen te verbeteren.</string>
+    <string name="edit_age_privacy_note">We gebruiken je leeftijd alleen om je ervaring en de nauwkeurigheid van calorieschattingen te verbeteren.</string>
 
 
     <!-- EditGenderScreen -->
@@ -1009,7 +1009,7 @@
 
     <!-- EditNutritionGoalsScreen -->
     <string name="edit_nutrition_goals_title">Voedingsdoelen bewerken</string>
-    <string name="edit_nutrition_calorie_goal">caloriedoel</string>
+    <string name="edit_nutrition_calorie_goal">Caloriedoel</string>
     <string name="edit_nutrition_protein_goal">Eiwitdoel</string>
     <string name="edit_nutrition_carb_goal">Koolhydraten doel</string>
     <string name="edit_nutrition_fat_goal">Vetdoel</string>
@@ -1026,7 +1026,7 @@
 
     <!-- RingColorsExplainedScreen -->
     <string name="ring_colors_explained_title">Ringkleuren</string>
-    <string name="ring_colors_explained_intro">Datumringen laten snel zien hoe elke dag zich verhoudt tot je caloriedoel.</string>
+    <string name="ring_colors_explained_intro">Datumringen helpen je snel te zien hoe elke dag zich verhoudt tot je caloriedoel.</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">Voorbeeld van datumring</string>
 
@@ -1040,7 +1040,7 @@
     <string name="ring_colors_explained_subtitle">Ringkleuren uitgelegd</string>
 
     <string name="ring_colors_green_title">Groen</string>
-    <string name="ring_colors_green_body">Op doel (binnen 100 calorieën van je doel)</string>
+    <string name="ring_colors_green_body">Op doel (binnen 100 calorieën van doel)</string>
     <string name="ring_colors_yellow_title">Bruin</string>
     <string name="ring_colors_yellow_body">100–199 calorieën boven je doel</string>
     <string name="ring_colors_red_title">Rood</string>
@@ -1067,7 +1067,7 @@
     <!-- WidgetGuideScreen -->
     <string name="widget_guide_title">Widget toevoegen</string>
     <string name="widget_guide_hero_title">Voeg CaloShape toe aan je startscherm</string>
-    <string name="widget_guide_hero_body">Houd calorieën, macro’s en snelle acties bij zonder de app te openen.</string>
+    <string name="widget_guide_hero_body">Volg calorieën, macro’s en snelle acties zonder de app te openen.</string>
     <string name="widget_guide_steps_title">Volg deze stappen</string>
 
     <string name="widget_guide_step_1_title">Houd het startscherm ingedrukt</string>

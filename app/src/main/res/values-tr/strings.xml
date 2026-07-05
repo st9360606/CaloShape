@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">Fotoğraf çek, kalorileri öğren.</string>
+    <string name="landing_title">Bir fotoğraf çekin, kalorileri öğrenin.</string>
     <string name="choose_language">Dil seç</string>
     <string name="cta_get_started">Başla</string>
     <string name="cta_login_prefix">Zaten hesabın var mı?</string>
@@ -125,18 +125,16 @@
 
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">Kaç yaşındasın?</string>
-    <string name="onboard_age_subtitle">Yaşını yalnızca deneyimini ve kalori tahmini doğruluğunu iyileştirmek için kullanıyoruz.</string>
-
-
+    <string name="onboard_age_subtitle">Yaşınızı yalnızca deneyiminizi ve kalori tahmini doğruluğunu iyileştirmek için kullanırız.</string>
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">Boyun kaç?</string>
-    <string name="onboard_height_subtitle">Verilerini yalnızca deneyimini ve kalori tahminlerimizi iyileştirmek için kullanıyoruz.</string>
+    <string name="onboard_height_subtitle">Verilerinizi yalnızca deneyiminizi ve kalori tahminlerimizi iyileştirmek için kullanırız.</string>
     <string name="onboard_height_hint">Bu bilgi kişisel planını ayarlamak için kullanılacak.</string>
 
 
     <!-- Onboarding: WeightSelectionScreen -->
     <string name="onboard_weight_title">Kilon kaç?</string>
-    <string name="onboard_weight_subtitle">Verilerini yalnızca deneyimini ve kalori tahminlerimizi iyileştirmek için kullanıyoruz.</string>
+    <string name="onboard_weight_subtitle">Verilerinizi yalnızca deneyiminizi ve kalori tahminlerimizi iyileştirmek için kullanırız.</string>
     <string name="onboard_weight_hint">Bu bilgi kişisel planını ayarlamak için kullanılacak.</string>
 
 
@@ -157,7 +155,7 @@
 
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">Hedefin nedir?</string>
-    <string name="onboard_goal_subtitle">Bu, kalori planını sana göre uyarlamamıza yardımcı olur.</string>
+    <string name="onboard_goal_subtitle">Bu, kalori planınızı size göre uyarlamamıza yardımcı olur.</string>
     <string name="goal_lose">Kilo vermek</string>
     <string name="goal_maintain">Korumak</string>
     <string name="goal_gain">Kilo almak</string>
@@ -166,7 +164,7 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">Hedef kilon kaç?</string>
-    <string name="onboard_goal_weight_subtitle">Bu hedefe göre sana daha uygun günlük kalori önerisi oluşturacağız.</string>
+    <string name="onboard_goal_weight_subtitle">Bu hedefe göre sizin için daha uygun bir günlük kalori önerisi oluşturacağız.</string>
     <string name="onboard_goal_weight_hint">Bu bilgi kişisel planını ayarlamak için kullanılacak.</string>
 
 
@@ -180,20 +178,18 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">Her öğün değerli olsun!</string>
-    <string name="onboard_notif_subtitle">Öğünleri kaydetmen için nazik hatırlatmalar almak üzere bildirimleri aç. Böylece kalorilerin, makroların ve ilerlemen yolunda kalır. Aksamalar olabilir; zamanında gelen hatırlatmalar hızla yeniden düzene girmeni sağlar.</string>
+    <string name="onboard_notif_subtitle">Yemekleri kaydetmeniz için nazik hatırlatmalar almak üzere bildirimleri etkinleştirin; böylece kalorileriniz, makrolarınız ve ilerlemeniz yolunda kalır. Aksamalar olabilir; zamanında gelen uyarılar hızlıca toparlanmanıza yardımcı olur.</string>
     <string name="onboard_allow_notifications_cta">Bildirimlere izin ver</string>
     <string name="notification_mock_app_title">AI Kalori Sayacı</string>
     <string name="onboard_notif_title_got_a_sec">Öğünün kendini kaydetmeyecek 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">Kalori ve makrolarını takipte tutmak için bu öğünü kaydet.</string>
-
-
+    <string name="onboard_notif_subtitle_log_meal_goal">Kalori ve makrolarınızı yolunda tutmak için bu öğünü kaydedin.</string>
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">Bağlan:</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
     <string name="onboard_hc_connect_body">Daha eksiksiz kayıtlar ve içgörüler için CaloShape AI ile sağlık uygulamaları arasında günlük aktiviteyi senkronize et.</string>
     <string name="onboard_hc_permission_rationale_title_prefix">CaloShape neden kullanır:</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape günlük aktivite yakımını tahmin etmek, kalori panelini güncellemek ve ilerleme içgörülerini iyileştirmek için adımlarını, aktif kalorilerini ve egzersiz verilerini okur. Erişimi Health Connect üzerinden istediğin zaman kaldırabilirsin.</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape; günlük aktivite yakımını tahmin etmek, kalori panelinizi güncellemek ve ilerleme içgörülerini iyileştirmek için adımlarınızı, aktif kalorilerinizi ve egzersiz verilerinizi okur. Health Connect üzerinden erişimi istediğiniz zaman iptal edebilirsiniz.</string>
     <string name="onboard_hc_permission_rationale_button">Anladım</string>
 
 
@@ -203,7 +199,7 @@
     <string name="progress_footer_hint">Bu yalnızca kısa bir süre alır</string>
     <string name="progress_center_caption">Sonuçların hazırlanıyor</string>
     <string name="progress_phase_pill_1">Profilin inceleniyor</string>
-    <string name="progress_phase_pill_2">Kalori hedefin hesaplanıyor</string>
+    <string name="progress_phase_pill_2">Kalori hedefiniz hesaplanıyor</string>
     <string name="progress_phase_pill_3">Günlük makroların dengeleniyor</string>
     <string name="progress_phase_pill_4">Sağlık içgörülerin tamamlanıyor</string>
     <string name="progress_card_title">Planın ayarlanıyor</string>
@@ -233,7 +229,7 @@
     <string name="plan_goals_title">Hedeflerine\nnasıl ulaşırsın</string>
     <string name="plan_goal_card_health_scores">Sağlık puanları sana rehberlik eder, alışkanlıklar doğalca oluşur</string>
     <string name="plan_goal_card_track_meals">Öğünleri tek dokunuşla kaydet, düzenli kalmak kolaylaşır</string>
-    <string name="plan_goal_card_daily_calories">Günlük kalorileri net gör ve takibi asla kaybetme</string>
+    <string name="plan_goal_card_daily_calories">Günlük kalorileri net görün ve takibi asla kaybetmeyin</string>
     <string name="plan_goal_card_balance_macros">Karbonhidrat × protein × yağ, akıllı denge, daha iyi sonuçlar</string>
     <string name="plan_sources_based_on">Resmi beslenme kılavuzlarına dayanır,\nyalnızca referans içindir; tıbbi tavsiye değildir.</string>
     <string name="plan_sources_more">Tüm referansları gör ›</string>
@@ -340,8 +336,6 @@
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">Kalan kalori</string>
     <string name="home_calories_eaten_label">Alınan kalori</string>
-
-
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">Kalan protein</string>
@@ -965,15 +959,13 @@
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Boyunu düzenle</string>
-    <string name="edit_height_privacy_note">Boyunu yalnızca deneyimini ve kalori tahmini doğruluğunu iyileştirmek için kullanıyoruz.</string>
+    <string name="edit_height_privacy_note">Boyunuzu yalnızca deneyiminizi ve kalori tahmini doğruluğunu iyileştirmek için kullanırız.</string>
     <string name="edit_height_saved_locally_sync_failed">Ağ hatası. Yerel olarak kaydedildi ancak senkronize edilemedi.</string>
 
 
     <!-- EditAgeScreen -->
     <string name="edit_age_title">Yaşını düzenle</string>
-    <string name="edit_age_privacy_note">Yaşını yalnızca deneyimini ve kalori tahmini doğruluğunu iyileştirmek için kullanıyoruz.</string>
-
-
+    <string name="edit_age_privacy_note">Yaşınızı yalnızca deneyiminizi ve kalori tahmini doğruluğunu iyileştirmek için kullanırız.</string>
     <!-- EditGenderScreen -->
     <string name="edit_gender_title">Cinsiyetini düzenle</string>
     <string name="edit_gender_privacy_note">Yalnızca kişiselleştirme ve tahmin doğruluğunu iyileştirme için kullanılır.</string>
@@ -1022,7 +1014,7 @@
 
     <!-- RingColorsExplainedScreen -->
     <string name="ring_colors_explained_title">Tarih Halka Renkleri</string>
-    <string name="ring_colors_explained_intro">Tarih halkaları, her günü kalori hedefinle hızlıca karşılaştırmanı sağlar.</string>
+    <string name="ring_colors_explained_intro">Tarih halkaları, her günün kalori hedefinizle nasıl karşılaştığını hızlıca görmenize yardımcı olur.</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">Tarih Halkası Önizlemesi</string>
 
@@ -1038,9 +1030,9 @@
     <string name="ring_colors_green_title">Yeşil</string>
     <string name="ring_colors_green_body">Hedefte (hedeften 100 kalori içinde)</string>
     <string name="ring_colors_yellow_title">Kahverengi</string>
-    <string name="ring_colors_yellow_body">Hedefin 100–199 kalori üzerinde</string>
+    <string name="ring_colors_yellow_body">Hedefinizin 100-199 kalori üstünde</string>
     <string name="ring_colors_red_title">Kırmızı</string>
-    <string name="ring_colors_red_body">Hedefin 200+ kalori üzerinde</string>
+    <string name="ring_colors_red_body">Hedefinizin 200+ kalori üstünde</string>
     <string name="ring_colors_dotted_title">Noktalı</string>
     <string name="ring_colors_dotted_body">O gün öğün kaydedilmemiş</string>
 
@@ -1063,7 +1055,7 @@
     <!-- WidgetGuideScreen -->
     <string name="widget_guide_title">Widget ekle</string>
     <string name="widget_guide_hero_title">CaloShape’i ana ekranına ekle</string>
-    <string name="widget_guide_hero_body">Uygulamayı açmadan kalorileri, makroları ve hızlı işlemleri takip et.</string>
+    <string name="widget_guide_hero_body">Uygulamayı açmadan kalorileri, makroları ve hızlı işlemleri takip edin.</string>
     <string name="widget_guide_steps_title">Bu adımları izle</string>
     <string name="widget_guide_step_1_title">Ana ekrana uzun bas</string>
     <string name="widget_guide_step_1_body">Menü görünene kadar telefonunun ana ekranındaki boş bir alana basılı tut.</string>

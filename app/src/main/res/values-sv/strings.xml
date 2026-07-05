@@ -125,18 +125,16 @@
 
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">Hur gammal är du?</string>
-    <string name="onboard_age_subtitle">Vi använder bara din ålder för att förbättra upplevelsen och precisionen i kaloriberäkningen.</string>
-
-
+    <string name="onboard_age_subtitle">Vi använder endast din ålder för att förbättra din upplevelse och precisionen i kaloriberäkningen.</string>
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">Hur lång är du?</string>
-    <string name="onboard_height_subtitle">Vi använder bara dina uppgifter för att förbättra upplevelsen och våra kaloriberäkningar.</string>
+    <string name="onboard_height_subtitle">Vi använder endast dina data för att förbättra din upplevelse och våra kaloriberäkningar.</string>
     <string name="onboard_height_hint">Detta används för att anpassa din personliga plan.</string>
 
 
     <!-- Onboarding: WeightSelectionScreen -->
     <string name="onboard_weight_title">Hur mycket väger du?</string>
-    <string name="onboard_weight_subtitle">Vi använder bara dina uppgifter för att förbättra upplevelsen och våra kaloriberäkningar.</string>
+    <string name="onboard_weight_subtitle">Vi använder endast dina data för att förbättra din upplevelse och våra kaloriberäkningar.</string>
     <string name="onboard_weight_hint">Detta används för att anpassa din personliga plan.</string>
 
 
@@ -157,7 +155,7 @@
 
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">Vad är ditt mål?</string>
-    <string name="onboard_goal_subtitle">Det hjälper oss att anpassa din kaloriplan.</string>
+    <string name="onboard_goal_subtitle">Detta hjälper oss att anpassa din kaloriplan.</string>
     <string name="goal_lose">Gå ner i vikt</string>
     <string name="goal_maintain">Bibehåll</string>
     <string name="goal_gain">Gå upp i vikt</string>
@@ -180,20 +178,18 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">Låt varje måltid räknas!</string>
-    <string name="onboard_notif_subtitle">Aktivera notiser för vänliga påminnelser om att logga måltider — så håller du kalorier, makron och framsteg på rätt spår. Misstag händer; påminnelser i rätt tid hjälper dig snabbt tillbaka.</string>
+    <string name="onboard_notif_subtitle">Aktivera notiser för mjuka påminnelser om att logga måltider, så att dina kalorier, makron och framsteg håller sig på rätt spår. Det är lätt att missa; påminnelser i rätt tid hjälper dig att komma tillbaka snabbt.</string>
     <string name="onboard_allow_notifications_cta">Tillåt notiser</string>
     <string name="notification_mock_app_title">AI-kaloriräknare</string>
     <string name="onboard_notif_title_got_a_sec">Måltiden loggar inte sig själv 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">Logga måltiden för att hålla kalorier och makron på rätt spår.</string>
-
-
+    <string name="onboard_notif_subtitle_log_meal_goal">Logga den här måltiden för att hålla kalorier och makron på rätt spår.</string>
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">Anslut till</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
     <string name="onboard_hc_connect_body">Synka daglig aktivitet mellan CaloShape AI och hälsoappar för mer kompletta data och insikter.</string>
     <string name="onboard_hc_permission_rationale_title_prefix">Varför CaloShape använder</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape läser dina steg, aktiva kalorier och träningsdata för att uppskatta daglig aktivitetsförbränning, uppdatera kaloripanelen och förbättra framstegsinsikter. Du kan när som helst återkalla åtkomsten i Health Connect.</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape läser dina steg, aktiva kalorier och träningsdata för att uppskatta daglig aktivitetsförbränning, uppdatera din kaloriöversikt och förbättra insikter om framsteg. Du kan återkalla åtkomst när som helst i Health Connect.</string>
     <string name="onboard_hc_permission_rationale_button">Jag förstår</string>
 
 
@@ -233,7 +229,7 @@
     <string name="plan_goals_title">Så når du\ndina mål</string>
     <string name="plan_goal_card_health_scores">Hälsobetyg vägleder dig så att vanor formas naturligt</string>
     <string name="plan_goal_card_track_meals">Logga måltider med ett tryck — regelbundenhet blir enkel</string>
-    <string name="plan_goal_card_daily_calories">Se dagliga kalorier tydligt och tappa aldrig överblicken</string>
+    <string name="plan_goal_card_daily_calories">Se dagliga kalorier tydligt och tappa aldrig bort dig</string>
     <string name="plan_goal_card_balance_macros">Kolhydrater × protein × fett, smart balans, bättre resultat</string>
     <string name="plan_sources_based_on">Baserat på officiella kostråd,\nendast som referens, inte medicinsk rådgivning.</string>
     <string name="plan_sources_more">Se alla referenser ›</string>
@@ -339,8 +335,7 @@
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">Kalorier kvar</string>
-    <string name="home_calories_eaten_label">Kalorier intaget</string>
-
+    <string name="home_calories_eaten_label">Intagna kalorier</string>
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">Protein kvar</string>
@@ -663,7 +658,7 @@
     <string name="workout_tracker_estimating_fallback">Uppskattar…</string>
     <string name="workout_tracker_estimating_analyzing">Analyserar din aktivitet…</string>
     <string name="workout_tracker_estimating_numbers">Beräknar dina siffror…</string>
-    <string name="workout_tracker_estimating_calories">Uppskattar ansträngning och beräknar kalorier…</string>
+    <string name="workout_tracker_estimating_calories">Uppskattar ansträngning, beräknar kalorier…</string>
     <string name="workout_tracker_do_not_close">Stäng inte appen och lås inte enheten</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
@@ -964,15 +959,13 @@
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Redigera din längd</string>
-    <string name="edit_height_privacy_note">Vi använder bara din längd för att förbättra upplevelsen och precisionen i kaloriberäkningen.</string>
+    <string name="edit_height_privacy_note">Vi använder endast din längd för att förbättra din upplevelse och precisionen i kaloriberäkningen.</string>
     <string name="edit_height_saved_locally_sync_failed">Nätverksfel. Sparat lokalt, men synkningen misslyckades.</string>
 
 
     <!-- EditAgeScreen -->
     <string name="edit_age_title">Redigera din ålder</string>
-    <string name="edit_age_privacy_note">Vi använder bara din ålder för att förbättra upplevelsen och precisionen i kaloriberäkningen.</string>
-
-
+    <string name="edit_age_privacy_note">Vi använder endast din ålder för att förbättra din upplevelse och precisionen i kaloriberäkningen.</string>
     <!-- EditGenderScreen -->
     <string name="edit_gender_title">Redigera ditt kön</string>
     <string name="edit_gender_privacy_note">Används bara för att personanpassa och förbättra beräkningsnoggrannheten.</string>
@@ -1021,7 +1014,7 @@
 
     <!-- RingColorsExplainedScreen -->
     <string name="ring_colors_explained_title">Datumringens färger</string>
-    <string name="ring_colors_explained_intro">Datumringar hjälper dig snabbt se hur varje dag står sig mot ditt kalorimål.</string>
+    <string name="ring_colors_explained_intro">Datumringar hjälper dig snabbt se hur varje dag jämförs med ditt kalorimål.</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">Förhandsvisning av datumring</string>
 
@@ -1037,7 +1030,7 @@
     <string name="ring_colors_green_title">Grön</string>
     <string name="ring_colors_green_body">På mål (inom 100 kalorier från målet)</string>
     <string name="ring_colors_yellow_title">Brun</string>
-    <string name="ring_colors_yellow_body">100–199 kalorier över ditt mål</string>
+    <string name="ring_colors_yellow_body">100-199 kalorier över ditt mål</string>
     <string name="ring_colors_red_title">Röd</string>
     <string name="ring_colors_red_body">200+ kalorier över ditt mål</string>
     <string name="ring_colors_dotted_title">Prickad</string>

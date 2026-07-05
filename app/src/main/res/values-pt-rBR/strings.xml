@@ -126,8 +126,6 @@
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">Quantos anos você tem?</string>
     <string name="onboard_age_subtitle">Usamos sua idade apenas para melhorar sua experiência e a precisão da estimativa de calorias.</string>
-
-
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">Qual é a sua altura?</string>
     <string name="onboard_height_subtitle">Usamos seus dados apenas para melhorar sua experiência e nossas estimativas de calorias.</string>
@@ -157,7 +155,7 @@
 
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">Qual é o seu objetivo?</string>
-    <string name="onboard_goal_subtitle">Isso nos ajuda a adaptar seu plano de calorias.</string>
+    <string name="onboard_goal_subtitle">Isso nos ajuda a personalizar seu plano de calorias.</string>
     <string name="goal_lose">Perder peso</string>
     <string name="goal_maintain">Manter</string>
     <string name="goal_gain">Ganhar peso</string>
@@ -166,7 +164,7 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">Qual é seu peso desejado?</string>
-    <string name="onboard_goal_weight_subtitle">Com base nesse objetivo, criaremos uma recomendação diária de calorias mais adequada para você.</string>
+    <string name="onboard_goal_weight_subtitle">Com base nesta meta, criaremos uma recomendação diária de calorias mais adequada para você.</string>
     <string name="onboard_goal_weight_hint">Isso será usado para ajustar seu plano personalizado.</string>
 
 
@@ -180,20 +178,18 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">Faça cada refeição valer a pena!</string>
-    <string name="onboard_notif_subtitle">Ative as notificações para receber lembretes gentis de registrar as refeições — assim suas calorias, macros e seu progresso permanecem no caminho certo. Deslizes acontecem; lembretes na hora certa ajudam você a retomar rapidamente.</string>
+    <string name="onboard_notif_subtitle">Ative as notificações para receber lembretes suaves para registrar refeições, assim suas calorias, macros e progresso ficam no caminho certo. Escorregões acontecem; avisos no momento certo ajudam você a se recuperar rápido.</string>
     <string name="onboard_allow_notifications_cta">Permitir notificações</string>
     <string name="notification_mock_app_title">Contador de calorias com IA</string>
     <string name="onboard_notif_title_got_a_sec">Sua refeição não vai se registrar sozinha 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">Registre esta refeição para manter calorias e macros no caminho certo.</string>
-
-
+    <string name="onboard_notif_subtitle_log_meal_goal">Registre esta refeição para manter suas calorias e macros no caminho certo.</string>
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">Conectar ao</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
     <string name="onboard_hc_connect_body">Sincronize a atividade diária entre o CaloShape AI e apps de saúde para ter registros e insights mais completos.</string>
     <string name="onboard_hc_permission_rationale_title_prefix">Por que o CaloShape usa</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">O CaloShape lê seus passos, calorias ativas e dados de exercícios para estimar o gasto diário, atualizar seu painel de calorias e melhorar os insights de progresso. Você pode revogar o acesso a qualquer momento no Health Connect.</string>
+    <string name="onboard_hc_permission_rationale_body">O CaloShape lê seus passos, calorias ativas e dados de exercício para estimar sua queima diária por atividade, atualizar seu painel de calorias e melhorar insights de progresso. Você pode revogar o acesso a qualquer momento no Health Connect.</string>
     <string name="onboard_hc_permission_rationale_button">Entendi</string>
 
 
@@ -340,8 +336,6 @@
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">Calorias restantes</string>
     <string name="home_calories_eaten_label">Calorias consumidas</string>
-
-
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">Proteína restante</string>
@@ -664,7 +658,7 @@
     <string name="workout_tracker_estimating_fallback">Estimando…</string>
     <string name="workout_tracker_estimating_analyzing">Analisando sua atividade…</string>
     <string name="workout_tracker_estimating_numbers">Calculando seus números…</string>
-    <string name="workout_tracker_estimating_calories">Estimando esforço e calculando calorias…</string>
+    <string name="workout_tracker_estimating_calories">Estimando esforço, calculando calorias…</string>
     <string name="workout_tracker_do_not_close">Não feche o app nem bloqueie o dispositivo</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
@@ -972,8 +966,6 @@
     <!-- EditAgeScreen -->
     <string name="edit_age_title">Editar sua idade</string>
     <string name="edit_age_privacy_note">Usamos sua idade apenas para melhorar sua experiência e a precisão da estimativa de calorias.</string>
-
-
     <!-- EditGenderScreen -->
     <string name="edit_gender_title">Editar seu gênero</string>
     <string name="edit_gender_privacy_note">Usado apenas para personalizar e melhorar a precisão das estimativas.</string>
@@ -1038,9 +1030,9 @@
     <string name="ring_colors_green_title">Verde</string>
     <string name="ring_colors_green_body">Na meta (dentro de 100 calorias da meta)</string>
     <string name="ring_colors_yellow_title">Marrom</string>
-    <string name="ring_colors_yellow_body">100–199 calorias acima da meta</string>
+    <string name="ring_colors_yellow_body">100-199 calorias acima da sua meta</string>
     <string name="ring_colors_red_title">Vermelho</string>
-    <string name="ring_colors_red_body">200+ calorias acima da meta</string>
+    <string name="ring_colors_red_body">200+ calorias acima da sua meta</string>
     <string name="ring_colors_dotted_title">Pontilhado</string>
     <string name="ring_colors_dotted_body">Nenhuma refeição registrada nesse dia</string>
 

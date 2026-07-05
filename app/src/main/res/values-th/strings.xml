@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">ถ่ายรูป แล้วรู้แคลอรีทันที</string>
+    <string name="landing_title">ถ่ายรูป แล้วรู้แคลอรี</string>
     <string name="choose_language">เลือกภาษา</string>
     <string name="cta_get_started">เริ่มต้น</string>
     <string name="cta_login_prefix">มีบัญชีอยู่แล้ว?</string>
@@ -125,18 +125,16 @@
 
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">คุณอายุเท่าไร?</string>
-    <string name="onboard_age_subtitle">เราใช้ข้อมูลอายุเพื่อปรับปรุงประสบการณ์และความแม่นยำในการประเมินแคลอรีเท่านั้น</string>
-
-
+    <string name="onboard_age_subtitle">เราใช้อายุของคุณเพื่อปรับปรุงประสบการณ์และความแม่นยำในการประเมินแคลอรีเท่านั้น</string>
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">คุณสูงเท่าไร?</string>
-    <string name="onboard_height_subtitle">เราใช้ข้อมูลของคุณเพื่อปรับปรุงประสบการณ์และการประเมินแคลอรีเท่านั้น</string>
+    <string name="onboard_height_subtitle">เราใช้ข้อมูลของคุณเพื่อปรับปรุงประสบการณ์และการประเมินแคลอรีของเราเท่านั้น</string>
     <string name="onboard_height_hint">ข้อมูลนี้จะใช้เพื่อปรับแผนส่วนตัวของคุณ</string>
 
 
     <!-- Onboarding: WeightSelectionScreen -->
     <string name="onboard_weight_title">คุณมีน้ำหนักเท่าไร?</string>
-    <string name="onboard_weight_subtitle">เราใช้ข้อมูลของคุณเพื่อปรับปรุงประสบการณ์และการประเมินแคลอรีเท่านั้น</string>
+    <string name="onboard_weight_subtitle">เราใช้ข้อมูลของคุณเพื่อปรับปรุงประสบการณ์และการประเมินแคลอรีของเราเท่านั้น</string>
     <string name="onboard_weight_hint">ข้อมูลนี้จะใช้เพื่อปรับแผนส่วนตัวของคุณ</string>
 
 
@@ -157,7 +155,7 @@
 
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">เป้าหมายของคุณคืออะไร?</string>
-    <string name="onboard_goal_subtitle">ข้อมูลนี้ช่วยให้เราปรับแผนแคลอรีให้เหมาะกับคุณ</string>
+    <string name="onboard_goal_subtitle">สิ่งนี้ช่วยให้เราปรับแผนแคลอรีให้เหมาะกับคุณ</string>
     <string name="goal_lose">ลดน้ำหนัก</string>
     <string name="goal_maintain">คงน้ำหนัก</string>
     <string name="goal_gain">เพิ่มน้ำหนัก</string>
@@ -180,20 +178,18 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">ให้ทุกมื้อมีความหมาย!</string>
-    <string name="onboard_notif_subtitle">เปิดการแจ้งเตือนเพื่อรับคำเตือนเบา ๆ ให้บันทึกมื้ออาหาร เพื่อให้แคลอรี มาโคร และความคืบหน้าอยู่ในแผน การพลาดบ้างเป็นเรื่องปกติ การเตือนที่ถูกเวลาช่วยให้คุณกลับมาได้อย่างรวดเร็ว</string>
+    <string name="onboard_notif_subtitle">เปิดการแจ้งเตือนเพื่อรับการเตือนเบา ๆ ให้บันทึกมื้ออาหาร เพื่อให้แคลอรี มาโคร และความคืบหน้าของคุณอยู่ในเส้นทางที่ดี การพลาดเกิดขึ้นได้ การเตือนที่เหมาะเวลาช่วยให้คุณกลับมาได้เร็ว</string>
     <string name="onboard_allow_notifications_cta">อนุญาตการแจ้งเตือน</string>
     <string name="notification_mock_app_title">ตัวนับแคลอรี AI</string>
     <string name="onboard_notif_title_got_a_sec">มื้ออาหารจะไม่บันทึกตัวเอง 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">บันทึกมื้อนี้เพื่อให้แคลอรีและมาโครอยู่ในแผน</string>
-
-
+    <string name="onboard_notif_subtitle_log_meal_goal">บันทึกมื้อนี้เพื่อให้แคลอรีและมาโครของคุณอยู่ในเส้นทางที่ดี</string>
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">เชื่อมต่อกับ</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
     <string name="onboard_hc_connect_body">ซิงค์กิจกรรมรายวันระหว่าง CaloShape AI และแอปสุขภาพ เพื่อให้ได้บันทึกและข้อมูลเชิงลึกที่ครบถ้วนขึ้น</string>
     <string name="onboard_hc_permission_rationale_title_prefix">เหตุผลที่ CaloShape ใช้</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape อ่านจำนวนก้าว แคลอรีจากกิจกรรม และข้อมูลการออกกำลังกาย เพื่อประเมินการเผาผลาญรายวัน อัปเดตแดชบอร์ดแคลอรี และปรับปรุงข้อมูลความคืบหน้า คุณสามารถยกเลิกสิทธิ์ได้ทุกเมื่อใน Health Connect</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape อ่านจำนวนก้าว แคลอรีจากกิจกรรม และข้อมูลการออกกำลังกายของคุณ เพื่อประเมินการเผาผลาญจากกิจกรรมรายวัน อัปเดตแดชบอร์ดแคลอรี และปรับปรุงข้อมูลเชิงลึกด้านความคืบหน้า คุณสามารถเพิกถอนสิทธิ์ได้ทุกเมื่อใน Health Connect</string>
     <string name="onboard_hc_permission_rationale_button">เข้าใจแล้ว</string>
 
 
@@ -203,11 +199,11 @@
     <string name="progress_footer_hint">ใช้เวลาเพียงครู่เดียว</string>
     <string name="progress_center_caption">กำลังเตรียมผลลัพธ์</string>
     <string name="progress_phase_pill_1">กำลังตรวจสอบโปรไฟล์</string>
-    <string name="progress_phase_pill_2">กำลังคำนวณเป้าหมายแคลอรี</string>
+    <string name="progress_phase_pill_2">กำลังคำนวณเป้าหมายแคลอรีของคุณ</string>
     <string name="progress_phase_pill_3">กำลังปรับสมดุลมาโครรายวัน</string>
     <string name="progress_phase_pill_4">กำลังสรุปข้อมูลสุขภาพ</string>
     <string name="progress_card_title">กำลังตั้งค่าแผนของคุณ</string>
-    <string name="progress_row_calorie_target">เป้าหมายแคลอรีรายวัน</string>
+    <string name="progress_row_calorie_target">เป้าหมายแคลอรีต่อวัน</string>
     <string name="progress_row_carb_distribution">สัดส่วนคาร์บ</string>
     <string name="progress_row_protein_recommendation">คำแนะนำโปรตีน</string>
     <string name="progress_row_fat_recommendation">คำแนะนำไขมัน</string>
@@ -233,7 +229,7 @@
     <string name="plan_goals_title">วิธีไปถึง\nเป้าหมายของคุณ</string>
     <string name="plan_goal_card_health_scores">คะแนนสุขภาพช่วยนำทาง ให้สร้างนิสัยได้อย่างเป็นธรรมชาติ</string>
     <string name="plan_goal_card_track_meals">บันทึกมื้ออาหารในแตะเดียว ทำให้สม่ำเสมอได้ง่าย</string>
-    <string name="plan_goal_card_daily_calories">เห็นแคลอรีรายวันชัดเจน ไม่หลุดจากแผน</string>
+    <string name="plan_goal_card_daily_calories">ดูแคลอรีรายวันได้ชัดเจน และไม่พลาดการติดตาม</string>
     <string name="plan_goal_card_balance_macros">คาร์บ × โปรตีน × ไขมัน สมดุลอย่างฉลาด ผลลัพธ์ดียิ่งขึ้น</string>
     <string name="plan_sources_based_on">อ้างอิงจากแนวทางโภชนาการอย่างเป็นทางการ\nใช้เพื่อการอ้างอิงเท่านั้น ไม่ใช่คำแนะนำทางการแพทย์</string>
     <string name="plan_sources_more">ดูแหล่งอ้างอิงทั้งหมด ›</string>
@@ -340,8 +336,6 @@
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">แคลอรีที่เหลือ</string>
     <string name="home_calories_eaten_label">แคลอรีที่กินแล้ว</string>
-
-
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">โปรตีนที่เหลือ</string>
@@ -965,15 +959,13 @@
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">แก้ไขส่วนสูงของคุณ</string>
-    <string name="edit_height_privacy_note">เราใช้ข้อมูลส่วนสูงของคุณเพื่อปรับปรุงประสบการณ์และความแม่นยำในการประเมินแคลอรีเท่านั้น</string>
+    <string name="edit_height_privacy_note">เราใช้ส่วนสูงของคุณเพื่อปรับปรุงประสบการณ์และความแม่นยำในการประเมินแคลอรีเท่านั้น</string>
     <string name="edit_height_saved_locally_sync_failed">ข้อผิดพลาดเครือข่าย บันทึกในเครื่องแล้ว แต่ซิงค์ไม่สำเร็จ</string>
 
 
     <!-- EditAgeScreen -->
     <string name="edit_age_title">แก้ไขอายุของคุณ</string>
-    <string name="edit_age_privacy_note">เราใช้ข้อมูลอายุเพื่อปรับปรุงประสบการณ์และความแม่นยำในการประเมินแคลอรีเท่านั้น</string>
-
-
+    <string name="edit_age_privacy_note">เราใช้อายุของคุณเพื่อปรับปรุงประสบการณ์และความแม่นยำในการประเมินแคลอรีเท่านั้น</string>
     <!-- EditGenderScreen -->
     <string name="edit_gender_title">แก้ไขเพศของคุณ</string>
     <string name="edit_gender_privacy_note">ใช้เพื่อปรับให้เหมาะกับคุณและเพิ่มความแม่นยำของการประเมินเท่านั้น</string>
@@ -1022,7 +1014,7 @@
 
     <!-- RingColorsExplainedScreen -->
     <string name="ring_colors_explained_title">สีวงแหวนวันที่</string>
-    <string name="ring_colors_explained_intro">วงแหวนวันที่ช่วยให้เห็นได้เร็วว่าแต่ละวันเทียบกับเป้าหมายแคลอรีอย่างไร</string>
+    <string name="ring_colors_explained_intro">วงแหวนวันที่ช่วยให้คุณเห็นได้อย่างรวดเร็วว่าแต่ละวันเทียบกับเป้าหมายแคลอรีของคุณอย่างไร</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">ตัวอย่างวงแหวนวันที่</string>
 
@@ -1036,11 +1028,11 @@
     <string name="ring_colors_explained_subtitle">คำอธิบายสีวงแหวน</string>
 
     <string name="ring_colors_green_title">เขียว</string>
-    <string name="ring_colors_green_body">อยู่ในเป้าหมาย (ภายใน 100 แคลอรี จากเป้าหมาย)</string>
+    <string name="ring_colors_green_body">ตรงเป้าหมาย (ภายใน 100 แคลอรีจากเป้าหมาย)</string>
     <string name="ring_colors_yellow_title">น้ำตาล</string>
-    <string name="ring_colors_yellow_body">เกินเป้าหมาย 100–199 แคลอรี</string>
+    <string name="ring_colors_yellow_body">เกินเป้าหมายของคุณ 100-199 แคลอรี</string>
     <string name="ring_colors_red_title">แดง</string>
-    <string name="ring_colors_red_body">เกินเป้าหมาย 200+ แคลอรี</string>
+    <string name="ring_colors_red_body">เกินเป้าหมายของคุณ 200+ แคลอรี</string>
     <string name="ring_colors_dotted_title">เส้นประ</string>
     <string name="ring_colors_dotted_body">ไม่มีการบันทึกมื้ออาหารในวันนั้น</string>
 
@@ -1063,7 +1055,7 @@
     <!-- WidgetGuideScreen -->
     <string name="widget_guide_title">เพิ่มวิดเจ็ต</string>
     <string name="widget_guide_hero_title">เพิ่ม CaloShape ไปยังหน้าจอหลัก</string>
-    <string name="widget_guide_hero_body">ติดตามแคลอรี มาโคร และใช้ทางลัดได้โดยไม่ต้องเปิดแอป</string>
+    <string name="widget_guide_hero_body">ติดตามแคลอรี มาโคร และการทำงานด่วนโดยไม่ต้องเปิดแอป</string>
     <string name="widget_guide_steps_title">ทำตามขั้นตอนเหล่านี้</string>
     <string name="widget_guide_step_1_title">กดค้างที่หน้าจอหลัก</string>
     <string name="widget_guide_step_1_body">กดค้างบริเวณว่างบนหน้าจอหลักของโทรศัพท์จนเมนูปรากฏ</string>

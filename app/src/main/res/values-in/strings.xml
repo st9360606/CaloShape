@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">Ambil foto, ketahui kalori-nya.</string>
+    <string name="landing_title">Ambil foto, ketahui kalorinya.</string>
     <string name="choose_language">Pilih bahasa</string>
     <string name="cta_get_started">Mulai</string>
     <string name="cta_login_prefix">Sudah punya akun?</string>
@@ -126,8 +126,6 @@
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">Berapa usia Anda?</string>
     <string name="onboard_age_subtitle">Kami hanya menggunakan usia Anda untuk meningkatkan pengalaman dan akurasi estimasi kalori.</string>
-
-
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">Berapa tinggi badan Anda?</string>
     <string name="onboard_height_subtitle">Kami hanya menggunakan data Anda untuk meningkatkan pengalaman dan estimasi kalori kami.</string>
@@ -184,13 +182,11 @@ dan membantu Anda tetap konsisten</string>
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">Jadikan setiap makanan berarti!</string>
-    <string name="onboard_notif_subtitle">Aktifkan notifikasi untuk pengingat lembut agar Anda mencatat makanan—supaya kalori, makro, dan progres tetap sesuai jalur. Kelupaan bisa terjadi; pengingat tepat waktu membantu Anda cepat kembali.</string>
+    <string name="onboard_notif_subtitle">Aktifkan notifikasi untuk pengingat lembut mencatat makanan, agar kalori, makro, dan progres Anda tetap sesuai jalur. Sesekali terlewat itu wajar; pengingat tepat waktu membantu Anda cepat kembali.</string>
     <string name="onboard_allow_notifications_cta">Izinkan notifikasi</string>
-    <string name="notification_mock_app_title">Penghitung kalori AI</string>
+    <string name="notification_mock_app_title">Penghitung Kalori AI</string>
     <string name="onboard_notif_title_got_a_sec">Makanan Anda tidak akan tercatat sendiri 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">Catat makanan ini agar kalori dan makro Anda tetap sesuai target.</string>
-
-
+    <string name="onboard_notif_subtitle_log_meal_goal">Catat makanan ini agar kalori dan makro Anda tetap sesuai jalur.</string>
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">Hubungkan ke</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
@@ -238,7 +234,7 @@ dan membantu Anda tetap konsisten</string>
 tujuan Anda</string>
     <string name="plan_goal_card_health_scores">Skor kesehatan memandu Anda, sehingga kebiasaan terbentuk alami</string>
     <string name="plan_goal_card_track_meals">Catat makanan dalam satu ketukan, tetap konsisten jadi mudah</string>
-    <string name="plan_goal_card_daily_calories">Lihat kalori harian dengan jelas dan jangan pernah kehilangan arah</string>
+    <string name="plan_goal_card_daily_calories">Lihat kalori harian dengan jelas dan jangan kehilangan arah</string>
     <string name="plan_goal_card_balance_macros">Karbohidrat × protein × lemak, keseimbangan cerdas, hasil lebih baik</string>
     <string name="plan_sources_based_on">Berdasarkan pedoman gizi resmi,
 hanya sebagai referensi, bukan nasihat medis.</string>
@@ -351,8 +347,6 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">Kalori tersisa</string>
     <string name="home_calories_eaten_label">Kalori dikonsumsi</string>
-
-
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">Protein tersisa</string>
@@ -675,7 +669,7 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="workout_tracker_estimating_fallback">Memperkirakan…</string>
     <string name="workout_tracker_estimating_analyzing">Menganalisis aktivitas Anda…</string>
     <string name="workout_tracker_estimating_numbers">Menghitung angka Anda…</string>
-    <string name="workout_tracker_estimating_calories">Memperkirakan usaha, menghitung kalori…</string>
+    <string name="workout_tracker_estimating_calories">Mengestimasi usaha, menghitung kalori…</string>
     <string name="workout_tracker_do_not_close">Jangan tutup aplikasi atau kunci perangkat Anda</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
@@ -980,15 +974,13 @@ dengan teman Anda</string>
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Edit Tinggi Anda</string>
-    <string name="edit_height_privacy_note">Kami hanya menggunakan tinggi Anda untuk meningkatkan pengalaman dan akurasi estimasi kalori.</string>
+    <string name="edit_height_privacy_note">Kami hanya menggunakan tinggi badan Anda untuk meningkatkan pengalaman dan akurasi estimasi kalori.</string>
     <string name="edit_height_saved_locally_sync_failed">Error jaringan. Disimpan secara lokal, tetapi gagal disinkronkan.</string>
 
 
     <!-- EditAgeScreen -->
     <string name="edit_age_title">Edit Usia Anda</string>
     <string name="edit_age_privacy_note">Kami hanya menggunakan usia Anda untuk meningkatkan pengalaman dan akurasi estimasi kalori.</string>
-
-
     <!-- EditGenderScreen -->
     <string name="edit_gender_title">Edit Jenis Kelamin Anda</string>
     <string name="edit_gender_privacy_note">Digunakan hanya untuk personalisasi dan meningkatkan akurasi estimasi.</string>
@@ -1037,7 +1029,7 @@ dengan teman Anda</string>
 
     <!-- RingColorsExplainedScreen -->
     <string name="ring_colors_explained_title">Warna Ring Tanggal</string>
-    <string name="ring_colors_explained_intro">Ring tanggal membantu Anda cepat melihat perbandingan setiap hari dengan target kalori Anda.</string>
+    <string name="ring_colors_explained_intro">Cincin tanggal membantu Anda cepat melihat perbandingan tiap hari dengan target kalori Anda.</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">Pratinjau Ring Tanggal</string>
 
@@ -1078,7 +1070,7 @@ dengan teman Anda</string>
     <!-- WidgetGuideScreen -->
     <string name="widget_guide_title">Tambah Widget</string>
     <string name="widget_guide_hero_title">Tambahkan CaloShape ke layar Beranda</string>
-    <string name="widget_guide_hero_body">Lacak kalori, makro, dan aksi cepat tanpa membuka aplikasi.</string>
+    <string name="widget_guide_hero_body">Lacak kalori, makro, dan tindakan cepat tanpa membuka aplikasi.</string>
     <string name="widget_guide_steps_title">Ikuti langkah-langkah ini</string>
     <string name="widget_guide_step_1_title">Tekan lama layar Beranda</string>
     <string name="widget_guide_step_1_body">Tekan dan tahan area kosong di layar Beranda ponsel hingga menu muncul.</string>

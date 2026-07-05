@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">拍一下！AI 即刻算出你的餐点热量</string>
+    <string name="landing_title">拍一下！AI 即刻算出你的餐点卡路里</string>
     <string name="choose_language">选择语言</string>
     <string name="cta_get_started">开始使用</string>
     <string name="cta_login_prefix">已拥有账号？</string>
@@ -126,18 +126,16 @@
 
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">你的年龄是？</string>
-    <string name="onboard_age_subtitle">我们只会用你的年龄来改善使用体验与热量估算准确度。</string>
-
-
+    <string name="onboard_age_subtitle">我们只会使用你的年龄来改善体验和卡路里估算准确性。</string>
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">你的身高是多少？</string>
-    <string name="onboard_height_subtitle">我们只会用你的资料来改善使用体验与热量估算准确度。</string>
+    <string name="onboard_height_subtitle">我们只会使用你的数据来改善体验和我们的卡路里估算。</string>
     <string name="onboard_height_hint">这将用于校准你的自定义计划。</string>
 
 
     <!-- Onboarding: WeightSelectionScreen  -->
     <string name="onboard_weight_title">你的当前体重是多少？</string>
-    <string name="onboard_weight_subtitle">我们仅使用您的数据来改善体验并提升卡路里估算准确度。</string>
+    <string name="onboard_weight_subtitle">我们只会使用你的数据来改善体验和我们的卡路里估算。</string>
     <string name="onboard_weight_hint">这将用于校准你的自定义计划。</string>
 
 
@@ -158,7 +156,7 @@
 
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">你的目标是什么呢？</string>
-    <string name="onboard_goal_subtitle">这有助于为你的热量摄取制定计划。</string>
+    <string name="onboard_goal_subtitle">这有助于我们为你定制卡路里计划。</string>
     <string name="goal_lose">减重</string>
     <string name="goal_maintain">维持体重</string>
     <string name="goal_gain">增重</string>
@@ -167,7 +165,7 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">你的目标体重是多少？</string>
-    <string name="onboard_goal_weight_subtitle">我们会根据这个目标，帮你规划更适合的每日热量建议。</string>
+    <string name="onboard_goal_weight_subtitle">根据这个目标，我们会为你生成更适合的每日卡路里建议。</string>
     <string name="onboard_goal_weight_hint">这将用于校准你的自定义计划。</string>
 
 
@@ -181,20 +179,18 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">每一餐都算数</string>
-    <string name="onboard_notif_subtitle">开启通知后，我们会在合适的时间给你温柔提醒，协助你养成餐点纪录的节奏，让你的热量、三大营养素与进度保持在正轨，偶尔忘记很正常；及时提醒能帮你更快回到节奏。</string>
+    <string name="onboard_notif_subtitle">开启通知，获取温和的餐食记录提醒，让你的卡路里、宏量营养和进度保持在正轨。偶尔漏记很正常，及时提醒能帮助你更快调整回来。</string>
     <string name="onboard_allow_notifications_cta">允许通知</string>
-    <string name="notification_mock_app_title">AI 热量计算器</string>
+    <string name="notification_mock_app_title">AI 卡路里计算器</string>
     <string name="onboard_notif_title_got_a_sec">现在有 10 秒吗？</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">记下这餐，热量和三大营养素会立刻更新，进度一眼就懂。</string>
-
-
+    <string name="onboard_notif_subtitle_log_meal_goal">记录这餐，让你的卡路里和宏量营养保持在正轨。</string>
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">连接到</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
     <string name="onboard_hc_connect_body">在 CaloShape AI 与健康应用之间同步日常活动，取得更完整的纪录与分析。</string>
     <string name="onboard_hc_permission_rationale_title_prefix">为什么 CaloShape 使用</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape 会读取你的步数、活动热量与运动资料，用来估算每日活动消耗、更新卡路里仪表板，并提供更完整的进度分析。你可以随时在 Health Connect 中撤销授权。</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape 会读取你的步数、活动卡路里和运动数据，用于估算每日活动消耗、更新卡路里仪表板，并改善进度洞察。你可以随时在 Health Connect 中撤销访问权限。</string>
     <string name="onboard_hc_permission_rationale_button">了解</string>
 
 
@@ -204,7 +200,7 @@
     <string name="progress_footer_hint">只需要一点点时间</string>
     <string name="progress_center_caption">正在准备结果</string>
     <string name="progress_phase_pill_1">正在整理你的个人资料</string>
-    <string name="progress_phase_pill_2">正在计算每日卡路里目标</string>
+    <string name="progress_phase_pill_2">正在计算你的卡路里目标</string>
     <string name="progress_phase_pill_3">正在平衡每日三大营养素</string>
     <string name="progress_phase_pill_4">正在完成健康评分分析</string>
     <string name="progress_card_title">正在为你设定计划</string>
@@ -234,7 +230,7 @@
     <string name="plan_goals_title">如何达成你的目标</string>
     <string name="plan_goal_card_health_scores">健康评分指引，让习惯自动养成</string>
     <string name="plan_goal_card_track_meals">一键纪录餐点，持之以恒更简单</string>
-    <string name="plan_goal_card_daily_calories">每日热量清晰可见，进度永不偏航</string>
+    <string name="plan_goal_card_daily_calories">清楚查看每日卡路里，不再失去追踪</string>
     <string name="plan_goal_card_balance_macros">碳水×蛋白×脂肪，吃对才能更有效</string>
     <string name="plan_sources_based_on">根据官方饮食指引，仅供参考非医疗建议</string>
     <string name="plan_sources_more">查看参考来源 ›</string>
@@ -508,7 +504,7 @@
     <string name="activity_chart_value_kcal">%1$d kcal</string>
     <string name="activity_chart_7day_avg">7 日平均</string>
     <string name="activity_chart_loading">加载中…</string>
-    <string name="activity_legend_burned">消耗热量</string>
+    <string name="activity_legend_burned">卡路里消耗</string>
     <string name="activity_legend_daily_goal">每日目标</string>
     <string name="activity_tooltip_burned">消耗</string>
     <string name="activity_tooltip_kcal_value">%1$d kcal</string>
@@ -663,7 +659,7 @@
     <string name="workout_tracker_estimating_fallback">估算中&#8230;</string>
     <string name="workout_tracker_estimating_analyzing">正在分析你的运动&#8230;</string>
     <string name="workout_tracker_estimating_numbers">正在计算运动数据&#8230;</string>
-    <string name="workout_tracker_estimating_calories">正在估算强度与消耗热量&#8230;</string>
+    <string name="workout_tracker_estimating_calories">正在估算运动强度并计算卡路里…</string>
     <string name="workout_tracker_do_not_close">请不要关闭 App 或锁定装置</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
@@ -961,13 +957,13 @@
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">编辑身高</string>
-    <string name="edit_height_privacy_note">我们只会用你的身高来改善体验与热量估算准确度。</string>
+    <string name="edit_height_privacy_note">我们只会使用你的身高来改善体验和卡路里估算准确性。</string>
     <string name="edit_height_saved_locally_sync_failed">网络错误。已保存到本机，但同步失败。</string>
 
 
     <!-- EditAgeScreen -->
     <string name="edit_age_title">编辑年龄</string>
-    <string name="edit_age_privacy_note">我们只会用你的年龄来改善体验与热量估算准确度。</string>
+    <string name="edit_age_privacy_note">我们只会使用你的年龄来改善体验和卡路里估算准确性。</string>
 
 
     <!-- EditGenderScreen -->
@@ -1001,7 +997,7 @@
 
     <!-- EditNutritionGoalsScreen -->
     <string name="edit_nutrition_goals_title">编辑营养目标</string>
-    <string name="edit_nutrition_calorie_goal">热量目标</string>
+    <string name="edit_nutrition_calorie_goal">卡路里目标</string>
     <string name="edit_nutrition_protein_goal">蛋白质目标</string>
     <string name="edit_nutrition_carb_goal">碳水目标</string>
     <string name="edit_nutrition_fat_goal">脂肪目标</string>
@@ -1018,7 +1014,7 @@
 
     <!-- RingColorsExplainedScreen -->
     <string name="ring_colors_explained_title">日期圆环颜色</string>
-    <string name="ring_colors_explained_intro">日期圆环会帮你快速看出每天是否接近卡路里目标。</string>
+    <string name="ring_colors_explained_intro">日期圆环可以帮你快速了解每天与卡路里目标的对比。</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">日期圆环演示</string>
 
@@ -1032,11 +1028,11 @@
     <string name="ring_colors_explained_subtitle">圆环颜色说明</string>
 
     <string name="ring_colors_green_title">绿色</string>
-    <string name="ring_colors_green_body">达标（距离目标 100 卡路里以内）</string>
+    <string name="ring_colors_green_body">达标（与目标相差 100 卡路里以内）</string>
     <string name="ring_colors_yellow_title">棕色</string>
-    <string name="ring_colors_yellow_body">超出目标 100–199 卡路里</string>
+    <string name="ring_colors_yellow_body">超过目标 100–199 卡路里</string>
     <string name="ring_colors_red_title">红色</string>
-    <string name="ring_colors_red_body">超出目标 200 卡路里以上</string>
+    <string name="ring_colors_red_body">超过目标 200+ 卡路里</string>
     <string name="ring_colors_dotted_title">虚线</string>
     <string name="ring_colors_dotted_body">当天没有记录餐点</string>
 
@@ -1059,7 +1055,7 @@
     <!-- WidgetGuideScreen -->
     <string name="widget_guide_title">添加小组件</string>
     <string name="widget_guide_hero_title">把 CaloShape 添加到手机桌面</string>
-    <string name="widget_guide_hero_body">不用打开 App，也能快速查看卡路里、宏量营养素与常用操作。</string>
+    <string name="widget_guide_hero_body">无需打开 App，也能追踪卡路里、宏量营养和快捷操作。</string>
     <string name="widget_guide_steps_title">依照以下步骤操作</string>
     <string name="widget_guide_step_1_title">长按手机桌面</string>
     <string name="widget_guide_step_1_body">长按手机桌面的空白处，直到桌面菜单出现。</string>
