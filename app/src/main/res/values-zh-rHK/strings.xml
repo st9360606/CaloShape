@@ -379,7 +379,7 @@
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
     <string name="steps_secondary_no_data_yet">尚無資料</string>
     <string name="steps_secondary_connect">連接</string>
-    <string name="steps_hint_connect_google_health">連結 Google Health 取得步數資料</string>
+    <string name="steps_hint_connect_google_health">連結 Health Connect 取得步數資料</string>
     <string name="steps_hint_install_health_connect">安裝 Health Connect 取得步數資料</string>
     <string name="steps_hint_hc_unavailable">此裝置無法使用 Health Connect</string>
     <string name="steps_hint_retry">同步失敗，點擊重試</string>
@@ -415,7 +415,7 @@
     <string name="progress_tab_two_weeks_ago">兩週前</string>
     <string name="progress_tab_three_weeks_ago">三週前</string>
     <string name="progress_error_load_failed">載入失敗</string>
-    <string name="workout_chart_error_load_failed">載入運動圖表失敗</string>
+    <string name="activity_chart_error_load_failed">載入活動圖表失敗</string>
     <string name="water_chart_error_load_failed">載入喝水圖表失敗</string>
 
 
@@ -497,21 +497,21 @@
 
 
     <!-- =========================
-         WorkoutChartCard
+         ActivityChartCard
          ========================= -->
-    <string name="workout_chart_goal_reached">今天已達成目標</string>
-    <string name="workout_chart_goal_left">距離今日目標還差 %1$d kcal</string>
-    <string name="workout_chart_title">運動消耗</string>
-    <string name="workout_chart_info_dialog_body">此數值包含手動記錄的運動，以及步數推估的日常活動消耗。</string>
-    <string name="workout_chart_unit_kcal">kcal</string>
-    <string name="workout_chart_goal">目標</string>
-    <string name="workout_chart_value_kcal">%1$d kcal</string>
-    <string name="workout_chart_7day_avg">7 日平均</string>
-    <string name="workout_chart_loading">載入中…</string>
-    <string name="workout_legend_burned">運動消耗量</string>
-    <string name="workout_legend_daily_goal">每日目標</string>
-    <string name="workout_tooltip_burned">消耗</string>
-    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+    <string name="activity_chart_goal_reached">今天已達成目標</string>
+    <string name="activity_chart_goal_left">距離今日目標還差 %1$d kcal</string>
+    <string name="activity_chart_title">活動消耗</string>
+    <string name="activity_chart_info_dialog_body">此數值包含手動記錄的運動，以及步數推估的日常活動消耗。</string>
+    <string name="activity_chart_unit_kcal">kcal</string>
+    <string name="activity_chart_goal">目標</string>
+    <string name="activity_chart_value_kcal">%1$d kcal</string>
+    <string name="activity_chart_7day_avg">7 日平均</string>
+    <string name="activity_chart_loading">載入中…</string>
+    <string name="activity_legend_burned">消耗熱量</string>
+    <string name="activity_legend_daily_goal">每日目標</string>
+    <string name="activity_tooltip_burned">消耗</string>
+    <string name="activity_tooltip_kcal_value">%1$d kcal</string>
 
 
     <!-- =========================
@@ -550,10 +550,10 @@
     <string name="progress_average_fiber">纖維</string>
     <string name="progress_average_sugar">糖</string>
     <string name="progress_average_sodium">鈉</string>
-    <string name="progress_average_workout">運動消耗</string>
+    <string name="progress_average_activity">活動消耗</string>
     <string name="progress_average_water">喝水量</string>
     <string name="progress_average_health_score">健康分數</string>
-    <string name="progress_average_steps">總步數</string>
+    <string name="progress_average_steps">平均步數</string>
     <string name="progress_average_health_score_value">%1$.1f / 10</string>
     <string name="progress_average_steps_value">%1$s 步</string>
 
@@ -706,7 +706,7 @@
 
 
     <!-- DurationPickerSheet -->
-    <string name="workout_duration_sheet_subtitle">將這次運動時間加入你的活動紀錄</string>
+    <string name="workout_duration_sheet_subtitle">將這次運動時間加入你的運動紀錄</string>
     <string name="workout_duration_hour_short">時</string>
     <string name="workout_duration_minute_short">分</string>
     <string name="workout_duration_save">儲存</string>

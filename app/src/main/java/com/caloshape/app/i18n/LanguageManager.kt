@@ -61,6 +61,7 @@ object LanguageManager {
         "in-id" to "id",
         "hi" to "hi",
         "hi-in" to "hi",
+        // Public locale tags use "he"; Android resources stay in values-iw for API 30-34.
         "he" to "he",
         "he-il" to "he",
         "iw" to "he",

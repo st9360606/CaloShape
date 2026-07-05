@@ -349,8 +349,8 @@ Tetap sesuai rencana setiap hari.</string>
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">kcal tersisa</string>
-    <string name="home_calories_eaten_label">kcal dimakan</string>
+    <string name="home_calories_goal_label">Kalori tersisa</string>
+    <string name="home_calories_eaten_label">Kalori dikonsumsi</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
@@ -389,7 +389,7 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
     <string name="steps_secondary_no_data_yet">Belum ada data</string>
     <string name="steps_secondary_connect">Hubungkan</string>
-    <string name="steps_hint_connect_google_health">Hubungkan Google Health untuk melacak langkah Anda</string>
+    <string name="steps_hint_connect_google_health">Hubungkan Health Connect untuk melacak langkah Anda</string>
     <string name="steps_hint_install_health_connect">Instal Health Connect untuk melacak langkah Anda</string>
     <string name="steps_hint_hc_unavailable">Health Connect tidak tersedia di perangkat ini</string>
     <string name="steps_hint_retry">Sinkronisasi gagal. Ketuk untuk mencoba lagi</string>
@@ -425,7 +425,7 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="progress_tab_two_weeks_ago">2 mgg lalu</string>
     <string name="progress_tab_three_weeks_ago">3 mgg lalu</string>
     <string name="progress_error_load_failed">Gagal memuat</string>
-    <string name="workout_chart_error_load_failed">Gagal memuat grafik olahraga</string>
+    <string name="activity_chart_error_load_failed">Gagal memuat grafik aktivitas</string>
     <string name="water_chart_error_load_failed">Gagal memuat grafik air</string>
 
 
@@ -507,21 +507,21 @@ Tetap sesuai rencana setiap hari.</string>
 
 
     <!-- =========================
-         WorkoutChartCard
+         ActivityChartCard
          ========================= -->
-    <string name="workout_chart_goal_reached">Target tercapai hari ini</string>
-    <string name="workout_chart_goal_left">%1$d kcal tersisa untuk mencapai target hari ini</string>
-    <string name="workout_chart_title">Pembakaran olahraga</string>
-    <string name="workout_chart_info_dialog_body">Termasuk olahraga yang dicatat dan kcal aktivitas yang diperkirakan dari langkah harian.</string>
-    <string name="workout_chart_unit_kcal">kcal</string>
-    <string name="workout_chart_goal">Target</string>
-    <string name="workout_chart_value_kcal">%1$d kcal</string>
-    <string name="workout_chart_7day_avg">Rata-rata 7 hari</string>
-    <string name="workout_chart_loading">Memuat…</string>
-    <string name="workout_legend_burned">Dibakar saat olahraga</string>
-    <string name="workout_legend_daily_goal">Target harian</string>
-    <string name="workout_tooltip_burned">Dibakar</string>
-    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+    <string name="activity_chart_goal_reached">Target tercapai hari ini</string>
+    <string name="activity_chart_goal_left">%1$d kcal tersisa untuk mencapai target hari ini</string>
+    <string name="activity_chart_title">Kalori aktivitas</string>
+    <string name="activity_chart_info_dialog_body">Termasuk olahraga yang dicatat dan kcal aktivitas yang diperkirakan dari langkah harian.</string>
+    <string name="activity_chart_unit_kcal">kcal</string>
+    <string name="activity_chart_goal">Target</string>
+    <string name="activity_chart_value_kcal">%1$d kcal</string>
+    <string name="activity_chart_7day_avg">Rata-rata 7 hari</string>
+    <string name="activity_chart_loading">Memuat…</string>
+    <string name="activity_legend_burned">Kalori terbakar</string>
+    <string name="activity_legend_daily_goal">Target harian</string>
+    <string name="activity_tooltip_burned">Dibakar</string>
+    <string name="activity_tooltip_kcal_value">%1$d kcal</string>
 
 
     <!-- =========================
@@ -560,7 +560,7 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="progress_average_fiber">Serat</string>
     <string name="progress_average_sugar">Gula</string>
     <string name="progress_average_sodium">Natrium</string>
-    <string name="progress_average_workout">kcal dibakar saat olahraga</string>
+    <string name="progress_average_activity">Kalori aktivitas</string>
     <string name="progress_average_water">Asupan air</string>
     <string name="progress_average_health_score">Skor kesehatan</string>
     <string name="progress_average_steps">Langkah</string>
@@ -637,7 +637,7 @@ Tetap sesuai rencana setiap hari.</string>
 
     <!-- WorkoutHistoryScreen -->
     <string name="workout_history_title">Riwayat Olahraga</string>
-    <string name="workout_history_summary_label">Dibakar hari ini</string>
+    <string name="workout_history_summary_label">Kalori olahraga hari ini</string>
     <string name="workout_history_summary_body">Lacak progres pembakaran olahraga hari ini</string>
     <string name="workout_history_today_label">Hari ini</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
@@ -666,7 +666,7 @@ Tetap sesuai rencana setiap hari.</string>
     <!-- WorkoutTrackerSheet -->
     <string name="workout_tracker_title">Pelacak Olahraga</string>
     <string name="workout_tracker_subtitle">Jelaskan jenis latihan dan durasinya</string>
-    <string name="workout_tracker_example_placeholder">Contoh: 45 min running</string>
+    <string name="workout_tracker_example_placeholder">Contoh: lari 45 menit</string>
 
     <string name="workout_tracker_select_from_list">atau pilih dari daftar</string>
     <string name="workout_tracker_show_less">Tampilkan lebih sedikit</string>
@@ -718,7 +718,7 @@ Tetap sesuai rencana setiap hari.</string>
 
 
     <!-- DurationPickerSheet -->
-    <string name="workout_duration_sheet_subtitle">Tambahkan waktu olahraga ini ke log aktivitas Anda</string>
+    <string name="workout_duration_sheet_subtitle">Tambahkan durasi olahraga ini ke log olahraga Anda</string>
     <string name="workout_duration_hour_short">hr</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">Simpan</string>

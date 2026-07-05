@@ -378,7 +378,7 @@
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
     <string name="steps_secondary_no_data_yet">Sem dados ainda</string>
     <string name="steps_secondary_connect">Conectar</string>
-    <string name="steps_hint_connect_google_health">Conecte o Google Health para acompanhar seus passos</string>
+    <string name="steps_hint_connect_google_health">Conecte o Health Connect para acompanhar seus passos</string>
     <string name="steps_hint_install_health_connect">Instale o Health Connect para acompanhar seus passos</string>
     <string name="steps_hint_hc_unavailable">O Health Connect não está disponível neste dispositivo</string>
     <string name="steps_hint_retry">A sincronização falhou. Toque para tentar novamente</string>
@@ -414,7 +414,7 @@
     <string name="progress_tab_two_weeks_ago">Há 2 sem.</string>
     <string name="progress_tab_three_weeks_ago">Há 3 sem.</string>
     <string name="progress_error_load_failed">Falha ao carregar</string>
-    <string name="workout_chart_error_load_failed">Falha ao carregar gráfico de treino</string>
+    <string name="activity_chart_error_load_failed">Falha ao carregar o gráfico de atividade</string>
     <string name="water_chart_error_load_failed">Falha ao carregar gráfico de água</string>
 
 
@@ -496,21 +496,21 @@
 
 
     <!-- =========================
-         WorkoutChartCard
+         ActivityChartCard
          ========================= -->
-    <string name="workout_chart_goal_reached">Meta alcançada hoje</string>
-    <string name="workout_chart_goal_left">%1$d kcal restantes para atingir a meta de hoje</string>
-    <string name="workout_chart_title">Gasto no treino</string>
-    <string name="workout_chart_info_dialog_body">Inclui treinos registrados e calorias de atividade estimadas pelos passos diários.</string>
-    <string name="workout_chart_unit_kcal">kcal</string>
-    <string name="workout_chart_goal">Meta</string>
-    <string name="workout_chart_value_kcal">%1$d kcal</string>
-    <string name="workout_chart_7day_avg">Média 7 dias</string>
-    <string name="workout_chart_loading">Carregando…</string>
-    <string name="workout_legend_burned">Gasto do treino</string>
-    <string name="workout_legend_daily_goal">Meta diária</string>
-    <string name="workout_tooltip_burned">Queimado</string>
-    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+    <string name="activity_chart_goal_reached">Meta alcançada hoje</string>
+    <string name="activity_chart_goal_left">%1$d kcal restantes para atingir a meta de hoje</string>
+    <string name="activity_chart_title">Gasto de atividade</string>
+    <string name="activity_chart_info_dialog_body">Inclui treinos registrados e calorias de atividade estimadas pelos passos diários.</string>
+    <string name="activity_chart_unit_kcal">kcal</string>
+    <string name="activity_chart_goal">Meta</string>
+    <string name="activity_chart_value_kcal">%1$d kcal</string>
+    <string name="activity_chart_7day_avg">Média 7 dias</string>
+    <string name="activity_chart_loading">Carregando…</string>
+    <string name="activity_legend_burned">Calorias queimadas</string>
+    <string name="activity_legend_daily_goal">Meta diária</string>
+    <string name="activity_tooltip_burned">Queimado</string>
+    <string name="activity_tooltip_kcal_value">%1$d kcal</string>
 
 
     <!-- =========================
@@ -549,7 +549,7 @@
     <string name="progress_average_fiber">Fibra</string>
     <string name="progress_average_sugar">Açúcar</string>
     <string name="progress_average_sodium">Sódio</string>
-    <string name="progress_average_workout">Gasto do treino</string>
+    <string name="progress_average_activity">Gasto de atividade</string>
     <string name="progress_average_water">Consumo de água</string>
     <string name="progress_average_health_score">Pontuação de saúde</string>
     <string name="progress_average_steps">Passos</string>
@@ -626,7 +626,7 @@
 
     <!-- WorkoutHistoryScreen -->
     <string name="workout_history_title">Histórico de treinos</string>
-    <string name="workout_history_summary_label">Queimado hoje</string>
+    <string name="workout_history_summary_label">Calorias de treino queimadas hoje</string>
     <string name="workout_history_summary_body">Acompanhe o progresso do gasto de treino de hoje</string>
     <string name="workout_history_today_label">Hoje</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
@@ -707,7 +707,7 @@
 
 
     <!-- DurationPickerSheet -->
-    <string name="workout_duration_sheet_subtitle">Adicione este tempo de treino ao seu registro de atividade</string>
+    <string name="workout_duration_sheet_subtitle">Adicione a duração deste treino ao seu registro de treinos</string>
     <string name="workout_duration_hour_short">h</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">Salvar</string>

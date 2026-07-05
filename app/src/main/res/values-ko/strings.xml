@@ -389,7 +389,7 @@
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
     <string name="steps_secondary_no_data_yet">아직 데이터 없음</string>
     <string name="steps_secondary_connect">연결</string>
-    <string name="steps_hint_connect_google_health">걸음 수 추적을 위해 Google Health에 연결하세요</string>
+    <string name="steps_hint_connect_google_health">걸음 수 추적을 위해 Health Connect에 연결하세요</string>
     <string name="steps_hint_install_health_connect">걸음 수 추적을 위해 Health Connect를 설치하세요</string>
     <string name="steps_hint_hc_unavailable">이 기기에서는 Health Connect를 사용할 수 없습니다</string>
     <string name="steps_hint_retry">동기화 실패. 탭하여 다시 시도</string>
@@ -425,7 +425,7 @@
     <string name="progress_tab_two_weeks_ago">2주 전</string>
     <string name="progress_tab_three_weeks_ago">3주 전</string>
     <string name="progress_error_load_failed">불러오기 실패</string>
-    <string name="workout_chart_error_load_failed">운동 차트를 불러오지 못했습니다</string>
+    <string name="activity_chart_error_load_failed">활동 차트를 불러오지 못했습니다</string>
     <string name="water_chart_error_load_failed">물 섭취 차트를 불러오지 못했습니다</string>
 
 
@@ -507,21 +507,21 @@
 
 
     <!-- =========================
-         WorkoutChartCard
+         ActivityChartCard
          ========================= -->
-    <string name="workout_chart_goal_reached">오늘 목표 달성</string>
-    <string name="workout_chart_goal_left">오늘 목표까지 %1$d kcal 남음</string>
-    <string name="workout_chart_title">운동 소모량</string>
-    <string name="workout_chart_info_dialog_body">기록한 운동과 일일 걸음 수로 추정한 활동 kcal가 포함됩니다.</string>
-    <string name="workout_chart_unit_kcal">kcal</string>
-    <string name="workout_chart_goal">목표</string>
-    <string name="workout_chart_value_kcal">%1$d kcal</string>
-    <string name="workout_chart_7day_avg">7일 평균</string>
-    <string name="workout_chart_loading">불러오는 중…</string>
-    <string name="workout_legend_burned">운동 소모량</string>
-    <string name="workout_legend_daily_goal">일일 목표</string>
-    <string name="workout_tooltip_burned">소모량</string>
-    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+    <string name="activity_chart_goal_reached">오늘 목표 달성</string>
+    <string name="activity_chart_goal_left">오늘 목표까지 %1$d kcal 남음</string>
+    <string name="activity_chart_title">활동 소모량</string>
+    <string name="activity_chart_info_dialog_body">기록한 운동과 일일 걸음 수로 추정한 활동 kcal가 포함됩니다.</string>
+    <string name="activity_chart_unit_kcal">kcal</string>
+    <string name="activity_chart_goal">목표</string>
+    <string name="activity_chart_value_kcal">%1$d kcal</string>
+    <string name="activity_chart_7day_avg">7일 평균</string>
+    <string name="activity_chart_loading">불러오는 중…</string>
+    <string name="activity_legend_burned">소모 칼로리</string>
+    <string name="activity_legend_daily_goal">일일 목표</string>
+    <string name="activity_tooltip_burned">소모량</string>
+    <string name="activity_tooltip_kcal_value">%1$d kcal</string>
 
 
     <!-- =========================
@@ -560,7 +560,7 @@
     <string name="progress_average_fiber">식이섬유</string>
     <string name="progress_average_sugar">당류</string>
     <string name="progress_average_sodium">나트륨</string>
-    <string name="progress_average_workout">운동 소모량</string>
+    <string name="progress_average_activity">활동 소모량</string>
     <string name="progress_average_water">물 섭취량</string>
     <string name="progress_average_health_score">건강 점수</string>
     <string name="progress_average_steps">걸음 수</string>
@@ -637,7 +637,7 @@
 
     <!-- WorkoutHistoryScreen -->
     <string name="workout_history_title">운동 기록</string>
-    <string name="workout_history_summary_label">오늘 소모량</string>
+    <string name="workout_history_summary_label">오늘 운동 소모량</string>
     <string name="workout_history_summary_body">오늘 운동 소모량 진행 상황을 추적하세요</string>
     <string name="workout_history_today_label">오늘</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
@@ -666,7 +666,7 @@
     <!-- WorkoutTrackerSheet -->
     <string name="workout_tracker_title">운동 추적기</string>
     <string name="workout_tracker_subtitle">운동 종류와 시간을 설명하세요</string>
-    <string name="workout_tracker_example_placeholder">예: 45 min running</string>
+    <string name="workout_tracker_example_placeholder">예: 45분 달리기</string>
 
     <string name="workout_tracker_select_from_list">또는 목록에서 선택</string>
     <string name="workout_tracker_show_less">간단히 보기</string>
@@ -718,7 +718,7 @@
 
 
     <!-- DurationPickerSheet -->
-    <string name="workout_duration_sheet_subtitle">이 운동 시간을 활동 기록에 추가하세요</string>
+    <string name="workout_duration_sheet_subtitle">이 운동 시간을 운동 기록에 추가하세요</string>
     <string name="workout_duration_hour_short">시간</string>
     <string name="workout_duration_minute_short">분</string>
     <string name="workout_duration_save">저장</string>

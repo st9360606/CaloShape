@@ -145,9 +145,9 @@ fun CaloriesCardModern(
                     fontWeight = FontWeight.Bold,
                     fontSize = valueFontSize
                 ),
-                labelStyle = MaterialTheme.typography.bodyMedium.copy(
+                labelStyle = MaterialTheme.typography.bodySmall.copy(
                     fontSize = labelFontSize,
-                    lineHeight = 15.sp,
+                    lineHeight = 16.sp,
                     fontWeight = FontWeight.Normal,
                     letterSpacing = 0.sp
                 ),

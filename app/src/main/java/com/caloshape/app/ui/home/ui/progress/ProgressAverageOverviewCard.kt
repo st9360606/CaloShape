@@ -293,8 +293,8 @@ private fun averageMetricsFor(item: ProgressAverageOverviewUi): List<AverageMetr
             accent = Color(0xFF5DA9D8)
         ),
         AverageMetricUi(
-            label = stringResource(R.string.progress_average_workout),
-            value = stringResource(R.string.workout_chart_value_kcal, item.workoutKcal),
+            label = stringResource(R.string.progress_average_activity),
+            value = stringResource(R.string.activity_chart_value_kcal, item.workoutKcal),
             emoji = "🏋️",
             accent = Color(0xFF8E72D6)
         ),

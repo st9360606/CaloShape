@@ -395,7 +395,7 @@ Resta sul piano ogni giorno.</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
     <string name="steps_secondary_no_data_yet">Ancora nessun dato</string>
     <string name="steps_secondary_connect">Connetti</string>
-    <string name="steps_hint_connect_google_health">Connetti Google Health per tracciare i passi</string>
+    <string name="steps_hint_connect_google_health">Connetti Health Connect per tracciare i passi</string>
     <string name="steps_hint_install_health_connect">Installa Health Connect per tracciare i passi</string>
     <string name="steps_hint_hc_unavailable">Health Connect non è disponibile su questo dispositivo</string>
     <string name="steps_hint_retry">Sincronizzazione non riuscita. Tocca per riprovare</string>
@@ -431,7 +431,7 @@ Resta sul piano ogni giorno.</string>
     <string name="progress_tab_two_weeks_ago">2 sett. fa</string>
     <string name="progress_tab_three_weeks_ago">3 sett. fa</string>
     <string name="progress_error_load_failed">Caricamento non riuscito</string>
-    <string name="workout_chart_error_load_failed">Impossibile caricare il grafico attività</string>
+    <string name="activity_chart_error_load_failed">Impossibile caricare il grafico attività</string>
     <string name="water_chart_error_load_failed">Impossibile caricare il grafico acqua</string>
 
 
@@ -514,21 +514,21 @@ Resta sul piano ogni giorno.</string>
 
 
     <!-- =========================
-         WorkoutChartCard
+         ActivityChartCard
          ========================= -->
-    <string name="workout_chart_goal_reached">Obiettivo raggiunto oggi</string>
-    <string name="workout_chart_goal_left">%1$d kcal restanti oggi</string>
-    <string name="workout_chart_title">Calorie attività</string>
-    <string name="workout_chart_info_dialog_body">Include gli allenamenti registrati e le kcal da attività stimate dai passi giornalieri.</string>
-    <string name="workout_chart_unit_kcal">kcal</string>
-    <string name="workout_chart_goal">Obiettivo</string>
-    <string name="workout_chart_value_kcal">%1$d kcal</string>
-    <string name="workout_chart_7day_avg">Media 7 gg</string>
-    <string name="workout_chart_loading">Caricamento…</string>
-    <string name="workout_legend_burned">Calorie bruciate</string>
-    <string name="workout_legend_daily_goal">Obiettivo giornaliero</string>
-    <string name="workout_tooltip_burned">Bruciate</string>
-    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+    <string name="activity_chart_goal_reached">Obiettivo raggiunto oggi</string>
+    <string name="activity_chart_goal_left">%1$d kcal restanti oggi</string>
+    <string name="activity_chart_title">Calorie attività</string>
+    <string name="activity_chart_info_dialog_body">Include gli allenamenti registrati e le kcal da attività stimate dai passi giornalieri.</string>
+    <string name="activity_chart_unit_kcal">kcal</string>
+    <string name="activity_chart_goal">Obiettivo</string>
+    <string name="activity_chart_value_kcal">%1$d kcal</string>
+    <string name="activity_chart_7day_avg">Media 7 gg</string>
+    <string name="activity_chart_loading">Caricamento…</string>
+    <string name="activity_legend_burned">Calorie bruciate</string>
+    <string name="activity_legend_daily_goal">Obiettivo giornaliero</string>
+    <string name="activity_tooltip_burned">Bruciate</string>
+    <string name="activity_tooltip_kcal_value">%1$d kcal</string>
 
 
     <!-- =========================
@@ -568,9 +568,9 @@ Resta sul piano ogni giorno.</string>
     <string name="progress_average_fiber">Fibre</string>
     <string name="progress_average_sugar">Zuccheri</string>
     <string name="progress_average_sodium">Sodio</string>
-    <string name="progress_average_workout">Calorie attività</string>
+    <string name="progress_average_activity">Calorie attività</string>
     <string name="progress_average_water">Acqua assunta</string>
-    <string name="progress_average_health_score">Benessere</string>
+    <string name="progress_average_health_score">Punteggio salute</string>
     <string name="progress_average_steps">Passi</string>
 
     <string name="progress_average_health_score_value">%1$.1f / 10</string>
@@ -643,8 +643,8 @@ Resta sul piano ogni giorno.</string>
 
     <!-- WorkoutHistoryScreen -->
     <string name="workout_history_title">Cronologia allenamenti</string>
-    <string name="workout_history_summary_label">Kcal bruciate oggi</string>
-    <string name="workout_history_summary_body">Monitora le calorie bruciate oggi</string>
+    <string name="workout_history_summary_label">Calorie bruciate con l’allenamento oggi</string>
+    <string name="workout_history_summary_body">Monitora le calorie bruciate con gli allenamenti di oggi</string>
     <string name="workout_history_today_label">Oggi</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
     <string name="workout_history_avg_daily_label">Media 7 gg/giorno</string>
@@ -672,7 +672,7 @@ Resta sul piano ogni giorno.</string>
     <!-- WorkoutTrackerSheet -->
     <string name="workout_tracker_title">Tracker allenamento</string>
     <string name="workout_tracker_subtitle">Descrivi il tipo di esercizio e la durata</string>
-    <string name="workout_tracker_example_placeholder">Esempio: 45 min running</string>
+    <string name="workout_tracker_example_placeholder">Esempio: 45 min di corsa</string>
 
     <string name="workout_tracker_select_from_list">oppure scegli dalla lista</string>
     <string name="workout_tracker_show_less">Mostra meno</string>
@@ -724,7 +724,7 @@ Resta sul piano ogni giorno.</string>
 
 
     <!-- DurationPickerSheet -->
-    <string name="workout_duration_sheet_subtitle">Aggiungi questo tempo di allenamento al tuo registro attività</string>
+    <string name="workout_duration_sheet_subtitle">Aggiungi la durata di questo allenamento al registro allenamenti</string>
     <string name="workout_duration_hour_short">hr</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">Salva</string>
@@ -938,7 +938,7 @@ con i tuoi amici</string>
     <string name="personal_details_daily_goals_section">Obiettivi giornalieri</string>
     <string name="personal_details_daily_step_goal">Obiettivo passi</string>
     <string name="personal_details_daily_water_goal">Obiettivo acqua</string>
-    <string name="personal_details_daily_workout_goal">Obiettivo attività</string>
+    <string name="personal_details_daily_workout_goal">Obiettivo allenamento giornaliero</string>
     <string name="personal_details_age_value">%1$d anni</string>
     <string name="personal_details_steps_value">%1$d passi</string>
     <string name="personal_details_water_value">%1$d ml</string>
@@ -1021,9 +1021,9 @@ con i tuoi amici</string>
 
 
     <!-- EditWorkoutGoalScreen -->
-    <string name="edit_workout_goal_title">Modifica obiettivo attività</string>
+    <string name="edit_workout_goal_title">Modifica obiettivo allenamento</string>
     <string name="edit_workout_goal_previous_format">Obiettivo precedente %1$d kcal</string>
-    <string name="edit_workout_goal_input_label">Obiettivo attività giornaliero (kcal)</string>
+    <string name="edit_workout_goal_input_label">Obiettivo allenamento giornaliero (kcal)</string>
 
 
     <!-- EditNutritionGoalsScreen -->

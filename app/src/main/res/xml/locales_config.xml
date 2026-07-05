@@ -19,6 +19,7 @@
     <locale android:name="th" />
     <locale android:name="id" />
     <locale android:name="hi" />
+    <!-- Use the canonical BCP 47 tag here; Hebrew resources use Android's values-iw qualifier. -->
     <locale android:name="he" />
     <locale android:name="tr" />
     <locale android:name="ar" />

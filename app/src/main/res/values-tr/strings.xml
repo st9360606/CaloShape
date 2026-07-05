@@ -378,7 +378,7 @@
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
     <string name="steps_secondary_no_data_yet">Henüz veri yok</string>
     <string name="steps_secondary_connect">Bağlan</string>
-    <string name="steps_hint_connect_google_health">Adımlarını takip etmek için Google Health’e bağlan</string>
+    <string name="steps_hint_connect_google_health">Adımlarını takip etmek için Health Connect’e bağlan</string>
     <string name="steps_hint_install_health_connect">Adımlarını takip etmek için Health Connect’i yükle</string>
     <string name="steps_hint_hc_unavailable">Health Connect bu cihazda kullanılamıyor</string>
     <string name="steps_hint_retry">Senkronizasyon başarısız. Tekrar denemek için dokun</string>
@@ -414,7 +414,7 @@
     <string name="progress_tab_two_weeks_ago">2 hafta önce</string>
     <string name="progress_tab_three_weeks_ago">3 hafta önce</string>
     <string name="progress_error_load_failed">Yükleme başarısız</string>
-    <string name="workout_chart_error_load_failed">Egzersiz grafiği yüklenemedi</string>
+    <string name="activity_chart_error_load_failed">Aktivite grafiği yüklenemedi</string>
     <string name="water_chart_error_load_failed">Su grafiği yüklenemedi</string>
 
 
@@ -496,21 +496,21 @@
 
 
     <!-- =========================
-         WorkoutChartCard
+         ActivityChartCard
          ========================= -->
-    <string name="workout_chart_goal_reached">Bugünkü hedefe ulaşıldı</string>
-    <string name="workout_chart_goal_left">Bugünkü hedefe ulaşmak için %1$d kcal kaldı</string>
-    <string name="workout_chart_title">Egzersiz yakımı</string>
-    <string name="workout_chart_info_dialog_body">Kaydedilen egzersizleri ve günlük adımlardan tahmin edilen aktivite kalorilerini içerir.</string>
-    <string name="workout_chart_unit_kcal">kcal</string>
-    <string name="workout_chart_goal">Hedef</string>
-    <string name="workout_chart_value_kcal">%1$d kcal</string>
-    <string name="workout_chart_7day_avg">7 gün ort.</string>
-    <string name="workout_chart_loading">Yükleniyor…</string>
-    <string name="workout_legend_burned">Egzersiz yakımı</string>
-    <string name="workout_legend_daily_goal">Günlük hedef</string>
-    <string name="workout_tooltip_burned">Yakılan</string>
-    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+    <string name="activity_chart_goal_reached">Bugünkü hedefe ulaşıldı</string>
+    <string name="activity_chart_goal_left">Bugünkü hedefe ulaşmak için %1$d kcal kaldı</string>
+    <string name="activity_chart_title">Aktivite yakımı</string>
+    <string name="activity_chart_info_dialog_body">Kaydedilen egzersizleri ve günlük adımlardan tahmin edilen aktivite kalorilerini içerir.</string>
+    <string name="activity_chart_unit_kcal">kcal</string>
+    <string name="activity_chart_goal">Hedef</string>
+    <string name="activity_chart_value_kcal">%1$d kcal</string>
+    <string name="activity_chart_7day_avg">7 gün ort.</string>
+    <string name="activity_chart_loading">Yükleniyor…</string>
+    <string name="activity_legend_burned">Yakılan kaloriler</string>
+    <string name="activity_legend_daily_goal">Günlük hedef</string>
+    <string name="activity_tooltip_burned">Yakılan</string>
+    <string name="activity_tooltip_kcal_value">%1$d kcal</string>
 
 
     <!-- =========================
@@ -549,7 +549,7 @@
     <string name="progress_average_fiber">Lif</string>
     <string name="progress_average_sugar">Şeker</string>
     <string name="progress_average_sodium">Sodyum</string>
-    <string name="progress_average_workout">Egzersiz yakımı</string>
+    <string name="progress_average_activity">Aktivite yakımı</string>
     <string name="progress_average_water">Su tüketimi</string>
     <string name="progress_average_health_score">Sağlık puanı</string>
     <string name="progress_average_steps">Adımlar</string>
@@ -626,7 +626,7 @@
 
     <!-- WorkoutHistoryScreen -->
     <string name="workout_history_title">Egzersiz Geçmişi</string>
-    <string name="workout_history_summary_label">Bugün yakılan</string>
+    <string name="workout_history_summary_label">Bugünkü egzersiz yakımı</string>
     <string name="workout_history_summary_body">Bugünkü egzersiz yakım ilerlemesini takip et</string>
     <string name="workout_history_today_label">Bugün</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
@@ -707,7 +707,7 @@
 
 
     <!-- DurationPickerSheet -->
-    <string name="workout_duration_sheet_subtitle">Bu egzersiz süresini aktivite kaydına ekle</string>
+    <string name="workout_duration_sheet_subtitle">Bu egzersizin süresini egzersiz kaydına ekle</string>
     <string name="workout_duration_hour_short">sa</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">Kaydet</string>

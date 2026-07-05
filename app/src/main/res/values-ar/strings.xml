@@ -339,7 +339,7 @@
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">السعرات المتبقية</string>
-    <string name="home_calories_eaten_label">السعرات المستهلكة</string>
+    <string name="home_calories_eaten_label">السعرات المتناولة</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
@@ -378,7 +378,7 @@
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
     <string name="steps_secondary_no_data_yet">لا توجد بيانات بعد</string>
     <string name="steps_secondary_connect">اتصال</string>
-    <string name="steps_hint_connect_google_health">اتصل بـ Google Health لتتبع خطواتك</string>
+    <string name="steps_hint_connect_google_health">اتصل بـ Health Connect لتتبع خطواتك</string>
     <string name="steps_hint_install_health_connect">ثبّت Health Connect لتتبع خطواتك</string>
     <string name="steps_hint_hc_unavailable">Health Connect غير متاح على هذا الجهاز</string>
     <string name="steps_hint_retry">فشلت المزامنة. اضغط لإعادة المحاولة</string>
@@ -414,7 +414,7 @@
     <string name="progress_tab_two_weeks_ago">قبل أسبوعين</string>
     <string name="progress_tab_three_weeks_ago">قبل 3 أسابيع</string>
     <string name="progress_error_load_failed">فشل التحميل</string>
-    <string name="workout_chart_error_load_failed">فشل تحميل مخطط التمرين</string>
+    <string name="activity_chart_error_load_failed">فشل تحميل مخطط النشاط</string>
     <string name="water_chart_error_load_failed">فشل تحميل مخطط الماء</string>
 
 
@@ -496,21 +496,21 @@
 
 
     <!-- =========================
-         WorkoutChartCard
+         ActivityChartCard
          ========================= -->
-    <string name="workout_chart_goal_reached">تم الوصول إلى هدف اليوم</string>
-    <string name="workout_chart_goal_left">بقي %1$d kcal للوصول إلى هدف اليوم</string>
-    <string name="workout_chart_title">حرق التمرين</string>
-    <string name="workout_chart_info_dialog_body">يشمل التمارين المسجلة وسعرات النشاط المقدرة من الخطوات اليومية.</string>
-    <string name="workout_chart_unit_kcal">kcal</string>
-    <string name="workout_chart_goal">الهدف</string>
-    <string name="workout_chart_value_kcal">%1$d kcal</string>
-    <string name="workout_chart_7day_avg">متوسط 7 أيام</string>
-    <string name="workout_chart_loading">جارٍ التحميل…</string>
-    <string name="workout_legend_burned">سعرات التمرين المحروقة</string>
-    <string name="workout_legend_daily_goal">الهدف اليومي</string>
-    <string name="workout_tooltip_burned">محروق</string>
-    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+    <string name="activity_chart_goal_reached">تم الوصول إلى هدف اليوم</string>
+    <string name="activity_chart_goal_left">بقي %1$d kcal للوصول إلى هدف اليوم</string>
+    <string name="activity_chart_title">حرق النشاط</string>
+    <string name="activity_chart_info_dialog_body">يشمل التمارين المسجلة وسعرات النشاط المقدرة من الخطوات اليومية.</string>
+    <string name="activity_chart_unit_kcal">kcal</string>
+    <string name="activity_chart_goal">الهدف</string>
+    <string name="activity_chart_value_kcal">%1$d kcal</string>
+    <string name="activity_chart_7day_avg">متوسط 7 أيام</string>
+    <string name="activity_chart_loading">جارٍ التحميل…</string>
+    <string name="activity_legend_burned">السعرات المحروقة</string>
+    <string name="activity_legend_daily_goal">الهدف اليومي</string>
+    <string name="activity_tooltip_burned">محروق</string>
+    <string name="activity_tooltip_kcal_value">%1$d kcal</string>
 
 
     <!-- =========================
@@ -540,7 +540,7 @@
 
     <string name="progress_average_overview_title">نظرة عامة على المتوسطات</string>
     <string name="progress_average_overview_subtitle">يستثني اليوم ويحسب المتوسط فقط للأيام التي تحتوي على بيانات.</string>
-    <string name="progress_average_days_badge">متوسط %1$d يوم</string>
+    <string name="progress_average_days_badge">متوسط الأيام (%1$d)</string>
     <string name="progress_average_loading">جارٍ تحميل المتوسطات…</string>
     <string name="progress_average_total_calories">إجمالي السعرات</string>
     <string name="progress_average_protein">البروتين</string>
@@ -549,7 +549,7 @@
     <string name="progress_average_fiber">الألياف</string>
     <string name="progress_average_sugar">السكر</string>
     <string name="progress_average_sodium">الصوديوم</string>
-    <string name="progress_average_workout">سعرات التمرين المحروقة</string>
+    <string name="progress_average_activity">حرق النشاط</string>
     <string name="progress_average_water">مدخول الماء</string>
     <string name="progress_average_health_score">درجة الصحة</string>
     <string name="progress_average_steps">الخطوات</string>
@@ -626,7 +626,7 @@
 
     <!-- WorkoutHistoryScreen -->
     <string name="workout_history_title">سجل التمارين</string>
-    <string name="workout_history_summary_label">محروق اليوم</string>
+    <string name="workout_history_summary_label">حرق التمرين اليوم</string>
     <string name="workout_history_summary_body">تتبّع تقدم حرق التمرين اليوم</string>
     <string name="workout_history_today_label">اليوم</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
@@ -655,7 +655,7 @@
     <!-- WorkoutTrackerSheet -->
     <string name="workout_tracker_title">متتبع التمارين</string>
     <string name="workout_tracker_subtitle">صف نوع التمرين والمدة</string>
-    <string name="workout_tracker_example_placeholder">مثال: 45 min running</string>
+    <string name="workout_tracker_example_placeholder">مثال: الجري لمدة 45 دقيقة</string>
 
     <string name="workout_tracker_select_from_list">أو اختر من القائمة</string>
     <string name="workout_tracker_show_less">عرض أقل</string>
@@ -707,7 +707,7 @@
 
 
     <!-- DurationPickerSheet -->
-    <string name="workout_duration_sheet_subtitle">أضف وقت هذا التمرين إلى سجل نشاطك</string>
+    <string name="workout_duration_sheet_subtitle">أضف مدة هذا التمرين إلى سجل التمارين</string>
     <string name="workout_duration_hour_short">hr</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">حفظ</string>

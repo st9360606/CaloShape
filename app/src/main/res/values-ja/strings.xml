@@ -388,7 +388,7 @@
     <string name="steps_secondary_est_kcal">約 %1$d kcal</string>
     <string name="steps_secondary_no_data_yet">まだデータがありません</string>
     <string name="steps_secondary_connect">接続</string>
-    <string name="steps_hint_connect_google_health">歩数を記録するにはGoogle Healthに接続してください</string>
+    <string name="steps_hint_connect_google_health">歩数を記録するには Health Connect に接続してください</string>
     <string name="steps_hint_install_health_connect">歩数を記録するにはHealth Connectをインストールしてください</string>
     <string name="steps_hint_hc_unavailable">このデバイスではHealth Connectを利用できません</string>
     <string name="steps_hint_retry">同期に失敗しました。タップして再試行</string>
@@ -424,7 +424,7 @@
     <string name="progress_tab_two_weeks_ago">2週間前</string>
     <string name="progress_tab_three_weeks_ago">3週間前</string>
     <string name="progress_error_load_failed">読み込みに失敗しました</string>
-    <string name="workout_chart_error_load_failed">ワークアウトチャートの読み込みに失敗しました</string>
+    <string name="activity_chart_error_load_failed">活動チャートの読み込みに失敗しました</string>
     <string name="water_chart_error_load_failed">水分チャートの読み込みに失敗しました</string>
 
 
@@ -506,21 +506,21 @@
 
 
     <!-- =========================
-         WorkoutChartCard
+         ActivityChartCard
          ========================= -->
-    <string name="workout_chart_goal_reached">今日の目標を達成しました</string>
-    <string name="workout_chart_goal_left">今日の目標まで残り%1$d kcal</string>
-    <string name="workout_chart_title">運動消費</string>
-    <string name="workout_chart_info_dialog_body">記録したワークアウトと、毎日の歩数から推定した活動カロリーが含まれます。</string>
-    <string name="workout_chart_unit_kcal">kcal</string>
-    <string name="workout_chart_goal">目標</string>
-    <string name="workout_chart_value_kcal">%1$d kcal</string>
-    <string name="workout_chart_7day_avg">7日平均</string>
-    <string name="workout_chart_loading">読み込み中…</string>
-    <string name="workout_legend_burned">運動消費</string>
-    <string name="workout_legend_daily_goal">毎日の目標</string>
-    <string name="workout_tooltip_burned">消費</string>
-    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+    <string name="activity_chart_goal_reached">今日の目標を達成しました</string>
+    <string name="activity_chart_goal_left">今日の目標まで残り%1$d kcal</string>
+    <string name="activity_chart_title">活動消費</string>
+    <string name="activity_chart_info_dialog_body">記録したワークアウトと、毎日の歩数から推定した活動カロリーが含まれます。</string>
+    <string name="activity_chart_unit_kcal">kcal</string>
+    <string name="activity_chart_goal">目標</string>
+    <string name="activity_chart_value_kcal">%1$d kcal</string>
+    <string name="activity_chart_7day_avg">7日平均</string>
+    <string name="activity_chart_loading">読み込み中…</string>
+    <string name="activity_legend_burned">消費カロリー</string>
+    <string name="activity_legend_daily_goal">毎日の目標</string>
+    <string name="activity_tooltip_burned">消費</string>
+    <string name="activity_tooltip_kcal_value">%1$d kcal</string>
 
 
     <!-- =========================
@@ -559,7 +559,7 @@
     <string name="progress_average_fiber">食物繊維</string>
     <string name="progress_average_sugar">糖類</string>
     <string name="progress_average_sodium">ナトリウム</string>
-    <string name="progress_average_workout">運動消費</string>
+    <string name="progress_average_activity">活動消費</string>
     <string name="progress_average_water">水分摂取</string>
     <string name="progress_average_health_score">健康スコア</string>
     <string name="progress_average_steps">歩数</string>
@@ -636,7 +636,7 @@
 
     <!-- WorkoutHistoryScreen -->
     <string name="workout_history_title">ワークアウト履歴</string>
-    <string name="workout_history_summary_label">今日の消費</string>
+    <string name="workout_history_summary_label">今日のワークアウト消費</string>
     <string name="workout_history_summary_body">今日の運動消費の進捗を記録</string>
     <string name="workout_history_today_label">今日</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
@@ -665,7 +665,7 @@
     <!-- WorkoutTrackerSheet -->
     <string name="workout_tracker_title">ワークアウトトラッカー</string>
     <string name="workout_tracker_subtitle">運動の種類と時間を入力してください</string>
-    <string name="workout_tracker_example_placeholder">例: 45 min running</string>
+    <string name="workout_tracker_example_placeholder">例: ランニング45分</string>
 
     <string name="workout_tracker_select_from_list">またはリストから選択</string>
     <string name="workout_tracker_show_less">少なく表示</string>
@@ -717,7 +717,7 @@
 
 
     <!-- DurationPickerSheet -->
-    <string name="workout_duration_sheet_subtitle">このワークアウト時間を活動ログに追加します</string>
+    <string name="workout_duration_sheet_subtitle">このワークアウト時間をワークアウト記録に追加します</string>
     <string name="workout_duration_hour_short">hr</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">保存</string>

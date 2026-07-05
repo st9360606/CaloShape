@@ -378,7 +378,7 @@
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
     <string name="steps_secondary_no_data_yet">Brak danych</string>
     <string name="steps_secondary_connect">Połącz</string>
-    <string name="steps_hint_connect_google_health">Połącz Google Health, aby śledzić kroki</string>
+    <string name="steps_hint_connect_google_health">Połącz Health Connect, aby śledzić kroki</string>
     <string name="steps_hint_install_health_connect">Zainstaluj Health Connect, aby śledzić kroki</string>
     <string name="steps_hint_hc_unavailable">Health Connect nie jest dostępny na tym urządzeniu</string>
     <string name="steps_hint_retry">Synchronizacja nie powiodła się. Stuknij, aby ponowić</string>
@@ -414,7 +414,7 @@
     <string name="progress_tab_two_weeks_ago">2 tyg. temu</string>
     <string name="progress_tab_three_weeks_ago">3 tyg. temu</string>
     <string name="progress_error_load_failed">Ładowanie nie powiodło się</string>
-    <string name="workout_chart_error_load_failed">Nie udało się wczytać wykresu treningu</string>
+    <string name="activity_chart_error_load_failed">Nie udało się wczytać wykresu aktywności</string>
     <string name="water_chart_error_load_failed">Nie udało się wczytać wykresu wody</string>
 
 
@@ -496,21 +496,21 @@
 
 
     <!-- =========================
-         WorkoutChartCard
+         ActivityChartCard
          ========================= -->
-    <string name="workout_chart_goal_reached">Cel osiągnięty dziś</string>
-    <string name="workout_chart_goal_left">%1$d kcal do dzisiejszego celu</string>
-    <string name="workout_chart_title">Spalanie treningowe</string>
-    <string name="workout_chart_info_dialog_body">Obejmuje zapisane treningi oraz kalorie aktywności szacowane z dziennych kroków.</string>
-    <string name="workout_chart_unit_kcal">kcal</string>
-    <string name="workout_chart_goal">Cel</string>
-    <string name="workout_chart_value_kcal">%1$d kcal</string>
-    <string name="workout_chart_7day_avg">Śr. 7 dni</string>
-    <string name="workout_chart_loading">Ładowanie…</string>
-    <string name="workout_legend_burned">Spalone w treningu</string>
-    <string name="workout_legend_daily_goal">Dzienny cel</string>
-    <string name="workout_tooltip_burned">Spalone</string>
-    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+    <string name="activity_chart_goal_reached">Cel osiągnięty dziś</string>
+    <string name="activity_chart_goal_left">%1$d kcal do dzisiejszego celu</string>
+    <string name="activity_chart_title">Spalanie aktywności</string>
+    <string name="activity_chart_info_dialog_body">Obejmuje zapisane treningi oraz kalorie aktywności szacowane z dziennych kroków.</string>
+    <string name="activity_chart_unit_kcal">kcal</string>
+    <string name="activity_chart_goal">Cel</string>
+    <string name="activity_chart_value_kcal">%1$d kcal</string>
+    <string name="activity_chart_7day_avg">Śr. 7 dni</string>
+    <string name="activity_chart_loading">Ładowanie…</string>
+    <string name="activity_legend_burned">Spalone kalorie</string>
+    <string name="activity_legend_daily_goal">Dzienny cel</string>
+    <string name="activity_tooltip_burned">Spalone</string>
+    <string name="activity_tooltip_kcal_value">%1$d kcal</string>
 
 
     <!-- =========================
@@ -549,7 +549,7 @@
     <string name="progress_average_fiber">Błonnik</string>
     <string name="progress_average_sugar">Cukier</string>
     <string name="progress_average_sodium">Sód</string>
-    <string name="progress_average_workout">Spalone w treningu</string>
+    <string name="progress_average_activity">Spalanie aktywności</string>
     <string name="progress_average_water">Spożycie wody</string>
     <string name="progress_average_health_score">Ocena zdrowia</string>
     <string name="progress_average_steps">Kroki</string>
@@ -626,7 +626,7 @@
 
     <!-- WorkoutHistoryScreen -->
     <string name="workout_history_title">Historia treningów</string>
-    <string name="workout_history_summary_label">Spalone dzisiaj</string>
+    <string name="workout_history_summary_label">Spalone dziś podczas treningu</string>
     <string name="workout_history_summary_body">Śledź dzisiejsze spalanie z treningu</string>
     <string name="workout_history_today_label">Dzisiaj</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
@@ -707,7 +707,7 @@
 
 
     <!-- DurationPickerSheet -->
-    <string name="workout_duration_sheet_subtitle">Dodaj ten czas treningu do dziennika aktywności</string>
+    <string name="workout_duration_sheet_subtitle">Dodaj czas tego treningu do dziennika treningów</string>
     <string name="workout_duration_hour_short">godz.</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">Zapisz</string>

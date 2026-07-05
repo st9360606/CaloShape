@@ -336,31 +336,26 @@
 
     <!-- =============   HomeCards  ============= -->
 
-    <!-- HomeCards :  Calories Card -->
+    <!-- HomeCards : Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">Kalorien übrig</string>
-    <string name="home_calories_eaten_label">Kalorien gegessen</string>
+    <string name="home_calories_eaten_label">Kalorien aufgenommen</string>
 
 
-    <!-- HomeCards :  Nutrition Card -->
+    <!-- HomeCards : Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">Protein übrig</string>
-    <string name="home_protein_eaten_label">Protein gegessen</string>
-
+    <string name="home_protein_eaten_label">Protein aufgenommen</string>
     <string name="home_carbs_goal_label">KH übrig</string>
-    <string name="home_carbs_eaten_label">KH gegessen</string>
-
+    <string name="home_carbs_eaten_label">KH aufgenommen</string>
     <string name="home_fats_goal_label">Fett übrig</string>
-    <string name="home_fats_eaten_label">Fett gegessen</string>
-
+    <string name="home_fats_eaten_label">Fett aufgenommen</string>
     <string name="home_fiber_goal_label">Ballastst. übrig</string>
-    <string name="home_fiber_eaten_label">Ballastst. gegessen</string>
-
+    <string name="home_fiber_eaten_label">Ballastst. aufgenommen</string>
     <string name="home_sugar_goal_label">Zucker übrig</string>
-    <string name="home_sugar_eaten_label">Zucker gegessen</string>
-
+    <string name="home_sugar_eaten_label">Zucker aufgenommen</string>
     <string name="home_sodium_goal_label">Natrium übrig</string>
-    <string name="home_sodium_eaten_label">Natrium gegessen</string>
+    <string name="home_sodium_eaten_label">Natrium aufgenommen</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
@@ -383,7 +378,7 @@
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
     <string name="steps_secondary_no_data_yet">Keine Daten</string>
     <string name="steps_secondary_connect">Verbinden</string>
-    <string name="steps_hint_connect_google_health">Verbinde Google Health, um deine Schritte zu verfolgen</string>
+    <string name="steps_hint_connect_google_health">Verbinde Health Connect, um deine Schritte zu verfolgen</string>
     <string name="steps_hint_install_health_connect">Installiere Health Connect, um deine Schritte zu verfolgen</string>
     <string name="steps_hint_hc_unavailable">Health Connect ist auf diesem Gerät nicht verfügbar</string>
     <string name="steps_hint_retry">Synchronisierung fehlgeschlagen. Tippen zum Wiederholen</string>
@@ -419,7 +414,7 @@
     <string name="progress_tab_two_weeks_ago">Vor 2 Wo.</string>
     <string name="progress_tab_three_weeks_ago">Vor 3 Wo.</string>
     <string name="progress_error_load_failed">Laden fehlgeschlagen</string>
-    <string name="workout_chart_error_load_failed">Trainingsdiagramm konnte nicht geladen werden</string>
+    <string name="activity_chart_error_load_failed">Aktivität laden fehlgeschlagen</string>
     <string name="water_chart_error_load_failed">Wasserdiagramm konnte nicht geladen werden</string>
 
 
@@ -427,36 +422,36 @@
          BMI Card / BMI Info Dialog
          ========================= -->
     <string name="bmi_card_title">Dein BMI</string>
-    <string name="bmi_card_subtitle">Dein Gewicht ist</string>
+    <string name="bmi_card_subtitle">Deine Einstufung</string>
 
     <string name="bmi_status_underweight">Untergewicht</string>
-    <string name="bmi_status_healthy">Gesund</string>
+    <string name="bmi_status_healthy">Normal</string>
     <string name="bmi_status_overweight">Übergewicht</string>
     <string name="bmi_status_obese">Adipositas</string>
     <string name="bmi_status_unknown">Unbekannt</string>
 
-    <string name="bmi_range_underweight">&lt;18.5</string>
-    <string name="bmi_range_healthy">18.5–24.9</string>
-    <string name="bmi_range_overweight">25.0–29.9</string>
-    <string name="bmi_range_obese">&gt;30.0</string>
+    <string name="bmi_range_underweight">&lt;18,5</string>
+    <string name="bmi_range_healthy">18,5–24,9</string>
+    <string name="bmi_range_overweight">25,0–29,9</string>
+    <string name="bmi_range_obese">&gt;30,0</string>
 
-    <string name="bmi_info_title">Was ist BMI?</string>
+    <string name="bmi_info_title">Was ist der BMI?</string>
     <string name="bmi_info_subtitle">Body-Mass-Index</string>
     <string name="bmi_info_formula_title">Formel</string>
-    <string name="bmi_info_formula_value">BMI = Gewicht (kg) / Größe (m²)</string>
-    <string name="bmi_info_meaning_title">Was er dir sagt</string>
-    <string name="bmi_info_meaning_body">Der BMI hilft einzuschätzen, ob dein Körpergewicht allgemein in einem gesunden Bereich liegt.</string>
+    <string name="bmi_info_formula_value">BMI = Gewicht (kg) / Körpergröße (m²)</string>
+    <string name="bmi_info_meaning_title">Was der BMI zeigt</string>
+    <string name="bmi_info_meaning_body">Der BMI hilft einzuschätzen, ob dein Körpergewicht in einem allgemeinen gesunden Bereich liegt.</string>
     <string name="bmi_info_note_title">Bitte beachten</string>
-    <string name="bmi_info_note_body">Der BMI ist ein allgemeiner Richtwert. Er misst nicht direkt Körperfett, Muskelmasse oder die allgemeine Gesundheit.</string>
+    <string name="bmi_info_note_body">Der BMI ist ein allgemeiner Richtwert. Er misst weder Körperfett noch Muskelmasse oder deine allgemeine Gesundheit direkt.</string>
     <string name="bmi_info_cta">Verstanden</string>
 
 
     <!-- =========================
          NutritionChartCard
          ========================= -->
-    <string name="progress_chart_7day_avg_calories">7-Tage-Durchschnitt</string>
+    <string name="progress_chart_7day_avg_calories">7-Tage-Ø</string>
     <string name="progress_chart_value_cals">%1$d kcal</string>
-    <string name="progress_chart_15day_avg_calories">15-Tage-Durchschnitt</string>
+    <string name="progress_chart_15day_avg_calories">15-Tage-Ø</string>
     <string name="progress_chart_loading_total_calories_text">--.- kcal</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
@@ -489,7 +484,7 @@
          ========================= -->
     <string name="progress_micronutrients_title">Mikronährstoffe</string>
     <string name="progress_chart_grams">g</string>
-    <string name="progress_chart_7day_avg">7-Tage-Durchschnitt</string>
+    <string name="progress_chart_7day_avg">7-Tage-Ø</string>
     <string name="progress_legend_fiber">Ballaststoffe</string>
     <string name="progress_legend_sugar">Zucker</string>
     <string name="progress_legend_sodium">Natrium</string>
@@ -501,21 +496,21 @@
 
 
     <!-- =========================
-         WorkoutChartCard
+         ActivityChartCard
          ========================= -->
-    <string name="workout_chart_goal_reached">Ziel heute erreicht</string>
-    <string name="workout_chart_goal_left">Noch %1$d kcal bis zum heutigen Ziel</string>
-    <string name="workout_chart_title">Trainingsverbrauch</string>
-    <string name="workout_chart_info_dialog_body">Enthält eingetragene Workouts und Aktivitätskalorien, die aus täglichen Schritten geschätzt werden.</string>
-    <string name="workout_chart_unit_kcal">kcal</string>
-    <string name="workout_chart_goal">Ziel</string>
-    <string name="workout_chart_value_kcal">%1$d kcal</string>
-    <string name="workout_chart_7day_avg">7-Tage-Durchschnitt</string>
-    <string name="workout_chart_loading">Wird geladen…</string>
-    <string name="workout_legend_burned">Training verbrannt</string>
-    <string name="workout_legend_daily_goal">Tagesziel</string>
-    <string name="workout_tooltip_burned">Verbrannt</string>
-    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+    <string name="activity_chart_goal_reached">Ziel heute erreicht</string>
+    <string name="activity_chart_goal_left">Noch %1$d kcal bis zum heutigen Ziel</string>
+    <string name="activity_chart_title">Aktive kcal</string>
+    <string name="activity_chart_info_dialog_body">Enthält eingetragene Workouts und Aktivitätskalorien, die aus täglichen Schritten geschätzt werden.</string>
+    <string name="activity_chart_unit_kcal">kcal</string>
+    <string name="activity_chart_goal">Ziel</string>
+    <string name="activity_chart_value_kcal">%1$d kcal</string>
+    <string name="activity_chart_7day_avg">7-Tage-Ø</string>
+    <string name="activity_chart_loading">Wird geladen…</string>
+    <string name="activity_legend_burned">Verbrannte Kalorien</string>
+    <string name="activity_legend_daily_goal">Tagesziel</string>
+    <string name="activity_tooltip_burned">Verbrannt</string>
+    <string name="activity_tooltip_kcal_value">%1$d kcal</string>
 
 
     <!-- =========================
@@ -527,7 +522,7 @@
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Ziel</string>
     <string name="water_chart_value_ml">%1$s ml</string>
-    <string name="water_chart_7day_avg">7-Tage-Durchschnitt</string>
+    <string name="water_chart_7day_avg">7-Tage-Ø</string>
     <string name="water_chart_loading">Wird geladen…</string>
     <string name="water_legend_intake">Aufnahme</string>
     <string name="water_legend_daily_goal">Tagesziel</string>
@@ -545,7 +540,7 @@
 
     <string name="progress_average_overview_title">Durchschnitt</string>
     <string name="progress_average_overview_subtitle">Schließt heute aus und mittelt nur Tage mit Daten.</string>
-    <string name="progress_average_days_badge">%1$d-Tage-Avg.</string>
+    <string name="progress_average_days_badge">%1$d-Tage-Ø</string>
     <string name="progress_average_loading">Durchschnittswerte werden geladen…</string>
     <string name="progress_average_total_calories">Gesamtkalorien</string>
     <string name="progress_average_protein">Protein</string>
@@ -554,7 +549,7 @@
     <string name="progress_average_fiber">Ballaststoffe</string>
     <string name="progress_average_sugar">Zucker</string>
     <string name="progress_average_sodium">Natrium</string>
-    <string name="progress_average_workout">Training verbrannt</string>
+    <string name="progress_average_activity">Aktive kcal</string>
     <string name="progress_average_water">Wasseraufnahme</string>
     <string name="progress_average_health_score">Gesundheitswert</string>
     <string name="progress_average_steps">Schritte</string>
@@ -631,12 +626,12 @@
 
     <!-- WorkoutHistoryScreen -->
     <string name="workout_history_title">Trainingsverlauf</string>
-    <string name="workout_history_summary_label">Heute verbrannt</string>
+    <string name="workout_history_summary_label">Trainingsverbrauch heute</string>
     <string name="workout_history_summary_body">Verfolge den heutigen Trainingsverbrauch</string>
     <string name="workout_history_today_label">Heute</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
-    <string name="workout_history_avg_daily_label">7-Tage-Durchschnitt / Tag</string>
-    <string name="workout_history_avg_label">7-Tage-Durchschnitt / Einheit</string>
+    <string name="workout_history_avg_daily_label">7-Tage-Ø / Tag</string>
+    <string name="workout_history_avg_label">7-Tage-Ø / Einheit</string>
     <string name="workout_history_avg_value">%1$d kcal</string>
     <string name="workout_history_unit_kcal">kcal</string>
 
@@ -712,7 +707,7 @@
 
 
     <!-- DurationPickerSheet -->
-    <string name="workout_duration_sheet_subtitle">Füge diese Trainingszeit deinem Aktivitätsprotokoll hinzu</string>
+    <string name="workout_duration_sheet_subtitle">Füge diese Dauer deinem Trainingslog hinzu</string>
     <string name="workout_duration_hour_short">Std.</string>
     <string name="workout_duration_minute_short">Min.</string>
     <string name="workout_duration_save">Speichern</string>

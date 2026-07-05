@@ -372,16 +372,16 @@
 
     <!-- HomeCards : Step Card -->
     <string name="steps_card_title">Pas</string>
-    <string name="steps_status_permission_not_granted">Non autorisé</string>
+    <string name="steps_status_permission_not_granted">Autorisation requise</string>
     <string name="steps_status_hc_not_installed">Non installé</string>
     <string name="steps_status_hc_unavailable">Indisponible</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
-    <string name="steps_secondary_no_data_yet">Aucune donnée pour l’instant</string>
-    <string name="steps_secondary_connect">Connecter</string>
-    <string name="steps_hint_connect_google_health">Connectez Google Health pour suivre vos pas</string>
+    <string name="steps_secondary_no_data_yet">Aucune donnée</string>
+    <string name="steps_secondary_connect">Associer</string>
+    <string name="steps_hint_connect_google_health">Associez Health Connect pour suivre vos pas</string>
     <string name="steps_hint_install_health_connect">Installez Health Connect pour suivre vos pas</string>
     <string name="steps_hint_hc_unavailable">Health Connect n’est pas disponible sur cet appareil</string>
-    <string name="steps_hint_retry">Échec de la synchronisation. Appuyez pour réessayer</string>
+    <string name="steps_hint_retry">Synchronisation échouée. Touchez pour réessayer</string>
 
 
     <!-- HomeCards : Workout Card -->
@@ -414,7 +414,7 @@
     <string name="progress_tab_two_weeks_ago">-2 sem.</string>
     <string name="progress_tab_three_weeks_ago">-3 sem.</string>
     <string name="progress_error_load_failed">Échec du chargement</string>
-    <string name="workout_chart_error_load_failed">Échec du chargement du graphique d’entraînement</string>
+    <string name="activity_chart_error_load_failed">Échec du chargement du graphique d’activité</string>
     <string name="water_chart_error_load_failed">Échec du chargement du graphique d’eau</string>
 
 
@@ -496,21 +496,21 @@
 
 
     <!-- =========================
-         WorkoutChartCard
+         ActivityChartCard
          ========================= -->
-    <string name="workout_chart_goal_reached">Objectif atteint aujourd’hui</string>
-    <string name="workout_chart_goal_left">Encore %1$d kcal pour l’objectif du jour</string>
-    <string name="workout_chart_title">Dépense entraînement</string>
-    <string name="workout_chart_info_dialog_body">Comprend les entraînements enregistrés et les calories d’activité estimées à partir des pas quotidiens.</string>
-    <string name="workout_chart_unit_kcal">kcal</string>
-    <string name="workout_chart_goal">Objectif</string>
-    <string name="workout_chart_value_kcal">%1$d kcal</string>
-    <string name="workout_chart_7day_avg">Moy. 7 jours</string>
-    <string name="workout_chart_loading">Chargement…</string>
-    <string name="workout_legend_burned">Calories brûlées</string>
-    <string name="workout_legend_daily_goal">Objectif quotidien</string>
-    <string name="workout_tooltip_burned">Brûlées</string>
-    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+    <string name="activity_chart_goal_reached">Objectif atteint aujourd’hui</string>
+    <string name="activity_chart_goal_left">Encore %1$d kcal pour l’objectif du jour</string>
+    <string name="activity_chart_title">Dépense d’activité</string>
+    <string name="activity_chart_info_dialog_body">Comprend les entraînements enregistrés et les calories d’activité estimées à partir des pas quotidiens.</string>
+    <string name="activity_chart_unit_kcal">kcal</string>
+    <string name="activity_chart_goal">Objectif</string>
+    <string name="activity_chart_value_kcal">%1$d kcal</string>
+    <string name="activity_chart_7day_avg">Moy. 7 jours</string>
+    <string name="activity_chart_loading">Chargement…</string>
+    <string name="activity_legend_burned">Calories brûlées</string>
+    <string name="activity_legend_daily_goal">Objectif quotidien</string>
+    <string name="activity_tooltip_burned">Brûlées</string>
+    <string name="activity_tooltip_kcal_value">%1$d kcal</string>
 
 
     <!-- =========================
@@ -549,7 +549,7 @@
     <string name="progress_average_fiber">Fibres</string>
     <string name="progress_average_sugar">Sucre</string>
     <string name="progress_average_sodium">Sodium</string>
-    <string name="progress_average_workout">Calories brûlées</string>
+    <string name="progress_average_activity">Dépense d’activité</string>
     <string name="progress_average_water">Apport en eau</string>
     <string name="progress_average_health_score">Score de santé</string>
     <string name="progress_average_steps">Pas</string>
@@ -625,13 +625,13 @@
 
 
     <!-- WorkoutHistoryScreen -->
-    <string name="workout_history_title">Historique d’activité</string>
-    <string name="workout_history_summary_label">Calories brûlées</string>
-    <string name="workout_history_summary_body">Suivez votre progression des calories brûlées aujourd’hui</string>
+    <string name="workout_history_title">Historique des entraînements</string>
+    <string name="workout_history_summary_label">Calories d’entraînement brûlées aujourd’hui</string>
+    <string name="workout_history_summary_body">Suivez les calories brûlées par vos entraînements aujourd’hui</string>
     <string name="workout_history_today_label">Aujourd’hui</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
-    <string name="workout_history_avg_daily_label">Moy. 7 jours / jour</string>
-    <string name="workout_history_avg_label">Moy. 7 jours / session</string>
+    <string name="workout_history_avg_daily_label">Moy. 7 j / jour</string>
+    <string name="workout_history_avg_label">Moy. 7 j / séance</string>
     <string name="workout_history_avg_value">%1$d kcal</string>
     <string name="workout_history_unit_kcal">kcal</string>
 
@@ -707,7 +707,7 @@
 
 
     <!-- DurationPickerSheet -->
-    <string name="workout_duration_sheet_subtitle">Ajoutez ce temps d’entraînement à votre journal d’activité</string>
+    <string name="workout_duration_sheet_subtitle">Ajoutez la durée de cet entraînement à votre journal d’entraînement</string>
     <string name="workout_duration_hour_short">hr</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">Enregistrer</string>

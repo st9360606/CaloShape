@@ -378,7 +378,7 @@
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
     <string name="steps_secondary_no_data_yet">Inga data ännu</string>
     <string name="steps_secondary_connect">Anslut</string>
-    <string name="steps_hint_connect_google_health">Anslut Google Health för att följa dina steg</string>
+    <string name="steps_hint_connect_google_health">Anslut Health Connect för att följa dina steg</string>
     <string name="steps_hint_install_health_connect">Installera Health Connect för att följa dina steg</string>
     <string name="steps_hint_hc_unavailable">Health Connect är inte tillgängligt på den här enheten</string>
     <string name="steps_hint_retry">Synkningen misslyckades. Tryck för att försöka igen</string>
@@ -414,7 +414,7 @@
     <string name="progress_tab_two_weeks_ago">För 2 v. sedan</string>
     <string name="progress_tab_three_weeks_ago">För 3 v. sedan</string>
     <string name="progress_error_load_failed">Kunde inte läsa in</string>
-    <string name="workout_chart_error_load_failed">Kunde inte läsa in träningsdiagram</string>
+    <string name="activity_chart_error_load_failed">Kunde inte läsa in aktivitetsdiagram</string>
     <string name="water_chart_error_load_failed">Kunde inte läsa in vattendiagram</string>
 
 
@@ -496,21 +496,21 @@
 
 
     <!-- =========================
-         WorkoutChartCard
+         ActivityChartCard
          ========================= -->
-    <string name="workout_chart_goal_reached">Målet nått i dag</string>
-    <string name="workout_chart_goal_left">%1$d kcal kvar till dagens mål</string>
-    <string name="workout_chart_title">Träningsförbränning</string>
-    <string name="workout_chart_info_dialog_body">Inkluderar loggade träningspass och aktivitetskalorier uppskattade från dagliga steg.</string>
-    <string name="workout_chart_unit_kcal">kcal</string>
-    <string name="workout_chart_goal">Mål</string>
-    <string name="workout_chart_value_kcal">%1$d kcal</string>
-    <string name="workout_chart_7day_avg">7-dagars snitt</string>
-    <string name="workout_chart_loading">Läser in…</string>
-    <string name="workout_legend_burned">Träning förbränd</string>
-    <string name="workout_legend_daily_goal">Dagligt mål</string>
-    <string name="workout_tooltip_burned">Förbränt</string>
-    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+    <string name="activity_chart_goal_reached">Målet nått i dag</string>
+    <string name="activity_chart_goal_left">%1$d kcal kvar till dagens mål</string>
+    <string name="activity_chart_title">Aktivitetsförbränning</string>
+    <string name="activity_chart_info_dialog_body">Inkluderar loggade träningspass och aktivitetskalorier uppskattade från dagliga steg.</string>
+    <string name="activity_chart_unit_kcal">kcal</string>
+    <string name="activity_chart_goal">Mål</string>
+    <string name="activity_chart_value_kcal">%1$d kcal</string>
+    <string name="activity_chart_7day_avg">7-dagars snitt</string>
+    <string name="activity_chart_loading">Läser in…</string>
+    <string name="activity_legend_burned">Förbrända kalorier</string>
+    <string name="activity_legend_daily_goal">Dagligt mål</string>
+    <string name="activity_tooltip_burned">Förbränt</string>
+    <string name="activity_tooltip_kcal_value">%1$d kcal</string>
 
 
     <!-- =========================
@@ -549,7 +549,7 @@
     <string name="progress_average_fiber">Fiber</string>
     <string name="progress_average_sugar">Socker</string>
     <string name="progress_average_sodium">Natrium</string>
-    <string name="progress_average_workout">Träning förbränd</string>
+    <string name="progress_average_activity">Aktivitetsförbränning</string>
     <string name="progress_average_water">Vattenintag</string>
     <string name="progress_average_health_score">Hälsobetyg</string>
     <string name="progress_average_steps">Steg</string>
@@ -626,7 +626,7 @@
 
     <!-- WorkoutHistoryScreen -->
     <string name="workout_history_title">Träningshistorik</string>
-    <string name="workout_history_summary_label">Förbränt i dag</string>
+    <string name="workout_history_summary_label">Träningsförbränning i dag</string>
     <string name="workout_history_summary_body">Följ dagens träningsförbränning</string>
     <string name="workout_history_today_label">I dag</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
@@ -707,7 +707,7 @@
 
 
     <!-- DurationPickerSheet -->
-    <string name="workout_duration_sheet_subtitle">Lägg till den här träningstiden i aktivitetsloggen</string>
+    <string name="workout_duration_sheet_subtitle">Lägg till träningspassets längd i träningsloggen</string>
     <string name="workout_duration_hour_short">tim</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">Spara</string>

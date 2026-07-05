@@ -268,7 +268,7 @@ CaloShape AI</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
     <string name="steps_secondary_no_data_yet">אין נתונים עדיין</string>
     <string name="steps_secondary_connect">התחבר</string>
-    <string name="steps_hint_connect_google_health">התחבר ל-Google Health כדי לעקוב אחרי הצעדים שלך</string>
+    <string name="steps_hint_connect_google_health">התחבר ל-Health Connect כדי לעקוב אחרי הצעדים שלך</string>
     <string name="steps_hint_install_health_connect">התקן את Health Connect כדי לעקוב אחרי הצעדים שלך</string>
     <string name="steps_hint_hc_unavailable">Health Connect אינו זמין במכשיר זה</string>
     <string name="steps_hint_retry">הסנכרון נכשל. הקש כדי לנסות שוב</string>
@@ -287,7 +287,7 @@ CaloShape AI</string>
     <string name="progress_tab_two_weeks_ago">לפני 2 שבועות</string>
     <string name="progress_tab_three_weeks_ago">לפני 3 שבועות</string>
     <string name="progress_error_load_failed">הטעינה נכשלה</string>
-    <string name="workout_chart_error_load_failed">טעינת תרשים האימון נכשלה</string>
+    <string name="activity_chart_error_load_failed">טעינת תרשים הפעילות נכשלה</string>
     <string name="water_chart_error_load_failed">טעינת תרשים המים נכשלה</string>
     <string name="bmi_card_title">ה-BMI שלך</string>
     <string name="bmi_card_subtitle">המשקל שלך הוא</string>
@@ -346,19 +346,19 @@ CaloShape AI</string>
     <string name="progress_tooltip_sugar">סוכר</string>
     <string name="progress_tooltip_sodium">נתרן</string>
     <string name="progress_tooltip_mg_value">%1$d mg</string>
-    <string name="workout_chart_goal_reached">היעד הושג היום</string>
-    <string name="workout_chart_goal_left">נותרו %1$d kcal כדי להגיע ליעד היום</string>
-    <string name="workout_chart_title">שריפת אימון</string>
-    <string name="workout_chart_info_dialog_body">כולל אימונים שנרשמו ו-kcal פעילות המוערכים מצעדים יומיים.</string>
-    <string name="workout_chart_unit_kcal">kcal</string>
-    <string name="workout_chart_goal">יעד</string>
-    <string name="workout_chart_value_kcal">%1$d kcal</string>
-    <string name="workout_chart_7day_avg">ממוצע 7 ימים</string>
-    <string name="workout_chart_loading">טוען…</string>
-    <string name="workout_legend_burned">נשרף באימון</string>
-    <string name="workout_legend_daily_goal">יעד יומי</string>
-    <string name="workout_tooltip_burned">נשרף</string>
-    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+    <string name="activity_chart_goal_reached">היעד הושג היום</string>
+    <string name="activity_chart_goal_left">נותרו %1$d kcal כדי להגיע ליעד היום</string>
+    <string name="activity_chart_title">שריפת פעילות</string>
+    <string name="activity_chart_info_dialog_body">כולל אימונים שנרשמו ו-kcal פעילות המוערכים מצעדים יומיים.</string>
+    <string name="activity_chart_unit_kcal">kcal</string>
+    <string name="activity_chart_goal">יעד</string>
+    <string name="activity_chart_value_kcal">%1$d kcal</string>
+    <string name="activity_chart_7day_avg">ממוצע 7 ימים</string>
+    <string name="activity_chart_loading">טוען…</string>
+    <string name="activity_legend_burned">קלוריות שנשרפו</string>
+    <string name="activity_legend_daily_goal">יעד יומי</string>
+    <string name="activity_tooltip_burned">נשרף</string>
+    <string name="activity_tooltip_kcal_value">%1$d kcal</string>
     <string name="water_chart_goal_reached">היעד הושג היום</string>
     <string name="water_chart_goal_left_ml">נותרו %1$s ml כדי להגיע ליעד היום</string>
     <string name="water_chart_title">צריכת מים</string>
@@ -386,7 +386,7 @@ CaloShape AI</string>
     <string name="progress_average_fiber">סיבים</string>
     <string name="progress_average_sugar">סוכר</string>
     <string name="progress_average_sodium">נתרן</string>
-    <string name="progress_average_workout">kcal שנשרפו באימון</string>
+    <string name="progress_average_activity">שריפת פעילות</string>
     <string name="progress_average_water">צריכת מים</string>
     <string name="progress_average_health_score">ציון בריאות</string>
     <string name="progress_average_steps">צעדים</string>
@@ -444,7 +444,7 @@ CaloShape AI</string>
     <string name="fasting_endsoon_title">נותרה שעה אחת בחלון האכילה</string>
     <string name="fasting_endsoon_body">החלון נסגר ב-%1$s. אם אתה מתכנן ארוחה אחרונה, רשום אותה לפני הסיום.</string>
     <string name="workout_history_title">היסטוריית אימונים</string>
-    <string name="workout_history_summary_label">נשרף היום</string>
+    <string name="workout_history_summary_label">שריפת אימון היום</string>
     <string name="workout_history_summary_body">עקוב אחרי התקדמות שריפת האימון של היום</string>
     <string name="workout_history_today_label">היום</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
@@ -467,7 +467,7 @@ CaloShape AI</string>
     <string name="workout_history_error">לא ניתן לטעון היסטוריית אימונים.</string>
     <string name="workout_tracker_title">מעקב אימון</string>
     <string name="workout_tracker_subtitle">תאר את סוג האימון ואת משך הזמן</string>
-    <string name="workout_tracker_example_placeholder">דוגמה: 45 min running</string>
+    <string name="workout_tracker_example_placeholder">דוגמה: 45 דקות ריצה</string>
     <string name="workout_tracker_select_from_list">או בחר מהרשימה</string>
     <string name="workout_tracker_show_less">הצג פחות</string>
     <string name="workout_tracker_show_more">הצג עוד (%1$d)</string>
@@ -508,7 +508,7 @@ CaloShape AI</string>
     <string name="workout_preset_dancing_general">ריקוד</string>
     <string name="workout_preset_zumba">זומבה</string>
     <string name="workout_preset_pilates">פילאטיס</string>
-    <string name="workout_duration_sheet_subtitle">הוסף את זמן האימון הזה ליומן הפעילות שלך</string>
+    <string name="workout_duration_sheet_subtitle">הוסף את משך האימון הזה ליומן האימונים שלך</string>
     <string name="workout_duration_hour_short">hr</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">שמור</string>
@@ -601,6 +601,7 @@ CaloShape AI</string>
     <string name="settings_membership_until_format">עד %1$s</string>
     <plurals name="settings_membership_trial_days_left">
         <item quantity="one">נותר %1$d יום</item>
+        <item quantity="two">נותרו %1$d ימים</item>
         <item quantity="other">נותרו %1$d ימים</item>
     </plurals>
     <string name="settings_invite_friends">הזמן חברים</string>

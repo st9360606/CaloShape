@@ -323,7 +323,7 @@
 
     <!-- HomeScreen -->
     <string name="recently_uploaded">Recent geüpload</string>
-    <string name="workout_membership_verify_failed">Lidmaatschap kon niet worden geverifieerd. Probeer het opnieuw.</string>
+    <string name="workout_membership_verify_failed">Abonnement kon niet worden gecontroleerd. Probeer het opnieuw.</string>
 
 
     <!-- MainBottomBar -->
@@ -359,27 +359,27 @@
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
-    <!-- HomeCards :  Health Score Card & Advice -->
-    <string name="home_health_score_advice_zero">Log vandaag je eerste maaltijd om een gezondheidsscore te zien op basis van de voedingsdetails.</string>
-    <string name="home_health_score_advice_very_low">Het gemiddelde van vandaag is laag. Overweeg meer eiwit en vezels, en minder suiker of natrium.</string>
-    <string name="home_health_score_advice_low">Er is ruimte voor verbetering. Voeg groenten en hoogwaardig eiwit toe.</string>
-    <string name="home_health_score_advice_medium">Je bent op de goede weg. Houd porties stabiel en let op suiker, natrium en vezels.</string>
+    <!-- HomeCards : Health Score Card & Advice -->
+    <string name="home_health_score_advice_zero">Log vandaag je eerste maaltijd om je gezondheidsscore te zien.</string>
+    <string name="home_health_score_advice_very_low">Je score van vandaag is laag. Probeer meer eiwit en vezels te nemen, en minder suiker of natrium.</string>
+    <string name="home_health_score_advice_low">Er is ruimte voor verbetering. Voeg groenten en goede eiwitbronnen toe.</string>
+    <string name="home_health_score_advice_medium">Je bent op de goede weg. Houd je porties stabiel en let op suiker, natrium en vezels.</string>
     <string name="home_health_score_advice_good">Goede balans vandaag. Blijf kiezen voor voedzame voeding.</string>
-    <string name="home_health_score_advice_excellent">Geweldige balans vandaag. Blijf consistente gewoonten opbouwen.</string>
+    <string name="home_health_score_advice_excellent">Uitstekende balans vandaag. Blijf deze gewoonten volhouden.</string>
     <string name="home_health_score_title">Gezondheidsscore</string>
     <string name="home_health_score_value">%1$d/10</string>
 
 
     <!-- HomeCards : Step Card -->
     <string name="steps_card_title">Stappen</string>
-    <string name="steps_status_permission_not_granted">Niet geautoriseerd</string>
+    <string name="steps_status_permission_not_granted">Geen toestemming</string>
     <string name="steps_status_hc_not_installed">Niet geïnstalleerd</string>
     <string name="steps_status_hc_unavailable">Niet beschikbaar</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
     <string name="steps_secondary_no_data_yet">Nog geen gegevens</string>
-    <string name="steps_secondary_connect">Verbinden</string>
-    <string name="steps_hint_connect_google_health">Verbind Google Health om je stappen te volgen</string>
-    <string name="steps_hint_install_health_connect">Installeer Health Connect om je stappen te volgen</string>
+    <string name="steps_secondary_connect">Koppelen</string>
+    <string name="steps_hint_connect_google_health">Koppel Health Connect om je stappen bij te houden</string>
+    <string name="steps_hint_install_health_connect">Installeer Health Connect om je stappen bij te houden</string>
     <string name="steps_hint_hc_unavailable">Health Connect is niet beschikbaar op dit apparaat</string>
     <string name="steps_hint_retry">Synchronisatie mislukt. Tik om opnieuw te proberen</string>
 
@@ -391,7 +391,7 @@
 
     <!-- HomeCards : Weight Card -->
     <string name="weight_card_title">Gewicht</string>
-    <string name="weight_card_of_goal">van doel</string>
+    <string name="weight_card_of_goal">van je doel</string>
 
 
     <!-- HomeCards : Fasting Card -->
@@ -402,19 +402,19 @@
 
     <!-- HomeCards : Water Card -->
     <string name="water_intake_title">Water</string>
-    <string name="water_intake_cups_format">(%1$d kopjes)</string>
+    <string name="water_intake_cups_format">(%1$d glazen)</string>
 
 
     <!-- =========================
-         ProgressScreen
-         ========================= -->
+     ProgressScreen
+     ========================= -->
     <string name="progress_screen_title">Voortgang</string>
     <string name="progress_tab_this_week">Deze week</string>
     <string name="progress_tab_last_week">Vorige week</string>
-    <string name="progress_tab_two_weeks_ago">2 weken geleden</string>
-    <string name="progress_tab_three_weeks_ago">3 weken geleden</string>
+    <string name="progress_tab_two_weeks_ago">2 wk terug</string>
+    <string name="progress_tab_three_weeks_ago">3 wk terug</string>
     <string name="progress_error_load_failed">Laden mislukt</string>
-    <string name="workout_chart_error_load_failed">Trainingsgrafiek laden mislukt</string>
+    <string name="activity_chart_error_load_failed">Activiteitsgrafiek laden mislukt</string>
     <string name="water_chart_error_load_failed">Watergrafiek laden mislukt</string>
 
 
@@ -439,28 +439,28 @@
     <string name="bmi_info_subtitle">Body Mass Index</string>
     <string name="bmi_info_formula_title">Formule</string>
     <string name="bmi_info_formula_value">BMI = gewicht (kg) / lengte (m²)</string>
-    <string name="bmi_info_meaning_title">Wat het je vertelt</string>
-    <string name="bmi_info_meaning_body">BMI helpt inschatten of je lichaamsgewicht binnen een algemeen gezonde range ligt.</string>
+    <string name="bmi_info_meaning_title">Wat dit betekent</string>
+    <string name="bmi_info_meaning_body">BMI helpt inschatten of je gewicht binnen een gezond bereik ligt.</string>
     <string name="bmi_info_note_title">Onthoud</string>
-    <string name="bmi_info_note_body">BMI is een algemene richtlijn. Het meet niet direct lichaamsvet, spiermassa of algehele gezondheid.</string>
+    <string name="bmi_info_note_body">BMI is een algemene richtlijn. Het meet niet direct lichaamsvet, spiermassa of je algehele gezondheid.</string>
     <string name="bmi_info_cta">Begrepen</string>
 
 
     <!-- =========================
          NutritionChartCard
          ========================= -->
-    <string name="progress_chart_7day_avg_calories">7-daags gem.</string>
+    <string name="progress_chart_7day_avg_calories">7 dgn gem.</string>
     <string name="progress_chart_value_cals">%1$d kcal</string>
-    <string name="progress_chart_15day_avg_calories">15-daags gem.</string>
+    <string name="progress_chart_15day_avg_calories">15 dgn gem.</string>
     <string name="progress_chart_loading_total_calories_text">--.- kcal</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
-    <string name="progress_chart_total_calories">Totaal kcal</string>
+    <string name="progress_chart_total_calories">Totale calorieën</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Eiwit</string>
     <string name="progress_legend_carbs">Koolhydraten</string>
     <string name="progress_legend_fats">Vetten</string>
-    <string name="progress_keep_it_up">Ga zo door! Beginnen is het moeilijkste deel!</string>
+    <string name="progress_keep_it_up">Goed bezig! Beginnen is het moeilijkste deel.</string>
 
     <string name="progress_day_sun">Zo</string>
     <string name="progress_day_mon">Ma</string>
@@ -484,11 +484,11 @@
          ========================= -->
     <string name="progress_micronutrients_title">Micronutriënten</string>
     <string name="progress_chart_grams">g</string>
-    <string name="progress_chart_7day_avg">7-daags gem.</string>
+    <string name="progress_chart_7day_avg">7 dgn gem.</string>
     <string name="progress_legend_fiber">Vezels</string>
     <string name="progress_legend_sugar">Suiker</string>
     <string name="progress_legend_sodium">Natrium</string>
-    <string name="progress_micronutrients_keep_it_up">Houd je vezels, suiker en natrium in balans.</string>
+    <string name="progress_micronutrients_keep_it_up">Houd vezels, suiker en natrium in balans.</string>
     <string name="progress_tooltip_fiber">Vezels</string>
     <string name="progress_tooltip_sugar">Suiker</string>
     <string name="progress_tooltip_sodium">Natrium</string>
@@ -496,33 +496,33 @@
 
 
     <!-- =========================
-         WorkoutChartCard
+         ActivityChartCard
          ========================= -->
-    <string name="workout_chart_goal_reached">Doel vandaag bereikt</string>
-    <string name="workout_chart_goal_left">%1$d kcal over om het doel van vandaag te halen</string>
-    <string name="workout_chart_title">Activiteitsverbranding</string>
-    <string name="workout_chart_info_dialog_body">Inclusief gelogde trainingen en activiteits-kcal op basis van je dagelijkse stappen.</string>
-    <string name="workout_chart_unit_kcal">kcal</string>
-    <string name="workout_chart_goal">Doel</string>
-    <string name="workout_chart_value_kcal">%1$d kcal</string>
-    <string name="workout_chart_7day_avg">7-daags gem.</string>
-    <string name="workout_chart_loading">Laden…</string>
-    <string name="workout_legend_burned">Verbrand</string>
-    <string name="workout_legend_daily_goal">Dagelijks doel</string>
-    <string name="workout_tooltip_burned">Verbrand</string>
-    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+    <string name="activity_chart_goal_reached">Doel vandaag bereikt</string>
+    <string name="activity_chart_goal_left">Nog %1$d kcal tot je doel</string>
+    <string name="activity_chart_title">Activiteitsverbruik</string>
+    <string name="activity_chart_info_dialog_body">Inclusief gelogde trainingen en activiteitscalorieën op basis van je dagelijkse stappen.</string>
+    <string name="activity_chart_unit_kcal">kcal</string>
+    <string name="activity_chart_goal">Doel</string>
+    <string name="activity_chart_value_kcal">%1$d kcal</string>
+    <string name="activity_chart_7day_avg">7 dgn gem.</string>
+    <string name="activity_chart_loading">Laden…</string>
+    <string name="activity_legend_burned">Verbrande calorieën</string>
+    <string name="activity_legend_daily_goal">Dagelijks doel</string>
+    <string name="activity_tooltip_burned">Verbrand</string>
+    <string name="activity_tooltip_kcal_value">%1$d kcal</string>
 
 
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_goal_reached">Doel voor vandaag bereikt</string>
-    <string name="water_chart_goal_left_ml">%1$s ml over om het doel van vandaag te bereiken</string>
+    <string name="water_chart_goal_reached">Doel vandaag bereikt</string>
+    <string name="water_chart_goal_left_ml">Nog %1$s ml tot je doel</string>
     <string name="water_chart_title">Waterinname</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Doel</string>
     <string name="water_chart_value_ml">%1$s ml</string>
-    <string name="water_chart_7day_avg">7-daags gem.</string>
+    <string name="water_chart_7day_avg">7 dgn gem.</string>
     <string name="water_chart_loading">Laden…</string>
     <string name="water_legend_intake">Inname</string>
     <string name="water_legend_daily_goal">Dagelijks doel</string>
@@ -539,17 +539,17 @@
     <string name="progress_average_tab_60_days">60 dagen</string>
 
     <string name="progress_average_overview_title">Gemiddeld overzicht</string>
-    <string name="progress_average_overview_subtitle">Sluit vandaag uit en berekent alleen het gemiddelde van dagen met gegevens.</string>
+    <string name="progress_average_overview_subtitle">Vandaag telt niet mee. Alleen dagen met gegevens worden gemiddeld.</string>
     <string name="progress_average_days_badge">%1$d-daags gem.</string>
     <string name="progress_average_loading">Gemiddelden laden…</string>
-    <string name="progress_average_total_calories">Totaal kcal</string>
+    <string name="progress_average_total_calories">Totale kcal</string>
     <string name="progress_average_protein">Eiwit</string>
     <string name="progress_average_carbs">Koolhydraten</string>
     <string name="progress_average_fats">Vetten</string>
     <string name="progress_average_fiber">Vezels</string>
     <string name="progress_average_sugar">Suiker</string>
     <string name="progress_average_sodium">Natrium</string>
-    <string name="progress_average_workout">Training verbrand</string>
+    <string name="progress_average_activity">Activiteitsverbruik</string>
     <string name="progress_average_water">Waterinname</string>
     <string name="progress_average_health_score">Gezondheidsscore</string>
     <string name="progress_average_steps">Stappen</string>
@@ -557,32 +557,33 @@
     <string name="progress_average_steps_value">%1$s stappen</string>
 
 
-    <!--WeightScreen-->
+    <!-- WeightScreen -->
     <string name="weight_title">Gewicht</string>
     <string name="weight_overview_title">Overzicht</string>
-    <string name="weight_history_title">Geschiedenis</string>
+    <string name="weight_history_title">Historie</string>
     <string name="weight_delete_success">Succesvol verwijderd!</string>
     <string name="weight_delete_failed">Verwijderen mislukt. Probeer het opnieuw.</string>
     <string name="weight_log_weight">Gewicht loggen</string>
 
 
     <!-- WeightComponents -->
-    <string name="weight_card_to_goal_weight">Tot streefgewicht</string>
+    <string name="weight_card_to_goal_weight">Tot je doel</string>
     <string name="weight_card_current_weight">Huidig gewicht</string>
-    <string name="weight_card_achieved_goal_format">%1$s%% van doel bereikt</string>
+    <string name="weight_card_achieved_goal_format">%1$s%% van je doel bereikt</string>
+
     <string name="weight_chart_tab_30_days">30 dagen</string>
     <string name="weight_chart_tab_60_days">60 dagen</string>
     <string name="weight_chart_tab_90_days">90 dagen</string>
     <string name="weight_chart_tab_all_time">Altijd</string>
     <string name="weight_chart_title">Gewichtstrend</string>
-    <string name="weight_chart_goal_progress_badge">%1$s%% van doel</string>
+    <string name="weight_chart_goal_progress_badge">%1$s%% van je doel</string>
     <string name="weight_chart_goal_label">Doel</string>
-    <string name="weight_chart_to_goal">%1$s tot doel</string>
+    <string name="weight_chart_to_goal">%1$s tot je doel</string>
     <string name="weight_goal_chart_empty_hint">Log gewicht om je trend te starten</string>
     <string name="weight_chart_motivation">Elke kleine stap brengt je dichter bij je doel.</string>
     <string name="weight_history_weight_label">Gewicht</string>
     <string name="weight_history_change_label">Verandering</string>
-    <string name="weight_history_trend_loss">VERLIES</string>
+    <string name="weight_history_trend_loss">AFNAME</string>
     <string name="weight_history_trend_gain">TOENAME</string>
     <string name="weight_history_trend_stable">STABIEL</string>
 
@@ -591,43 +592,41 @@
     <string name="fasting_plan_title">Vastenplan</string>
     <string name="start_time">Starttijd</string>
     <string name="end_time">Eindtijd</string>
-    <string name="fasting_notification_info_status_on">Herinneringen staan aan. Als meldingen op het apparaat zijn toegestaan, worden deze herinneringen dagelijks herhaald.</string>
-    <string name="fasting_notification_info_status_off">Herinneringen staan uit. Zet de schakelaar op de vastenkaarten op Home aan om deze meldingen te ontvangen.</string>
+    <string name="fasting_notification_info_status_on">Herinneringen staan aan. Als meldingen zijn toegestaan, worden ze dagelijks herhaald.</string>
+    <string name="fasting_notification_info_status_off">Herinneringen staan uit. Schakel ze in op de vastenkaart op Home.</string>
     <string name="fasting_notification_info_status_enabled_label">Aan</string>
     <string name="fasting_notification_info_status_disabled_label">Uit</string>
     <string name="fasting_notification_info_title">Hoe herinneringen werken</string>
-    <string name="fasting_notification_info_subtitle">Je %1$s-plan eindigt om %2$s. Wanneer herinneringen aanstaan, stuurt CaloShape dagelijks twee meldingen.</string>
+    <string name="fasting_notification_info_subtitle">Je %1$s-plan eindigt om %2$s. Als herinneringen aanstaan, stuurt CaloShape dagelijks twee meldingen.</string>
     <string name="fasting_notification_info_at_time">Om %1$s</string>
-    <string name="fasting_notification_info_start_title">Eetvenster start</string>
-    <string name="fasting_notification_info_start_body">Je kunt beginnen met eten en maaltijden loggen wanneer nodig.</string>
-    <string name="fasting_notification_info_endsoon_title">Eetvenster eindigt binnenkort</string>
-    <string name="fasting_notification_info_endsoon_body">Een uur voordat het venster om %1$s sluit, herinnert CaloShape je eraan je laatste maaltijd af te ronden.</string>
-
-    <string name="fasting_plan_desc_14_10">Begin rustig met een vast ritme—14 uur om hongerprikkels en energie te resetten.</string>
-    <string name="fasting_plan_desc_16_8">Niet voor niets populair—16 uur om gefocust te blijven en in een strakke routine te komen.</string>
-    <string name="fasting_plan_desc_12_12">Gebalanceerde verdeling: 12 uur vasten, eten binnen een venster van 12 uur — perfect voor beginners.</string>
-    <string name="fasting_plan_desc_18_6">18 uur vasten met een eetvenster van 6 uur — een strakker schema dan 16:8.</string>
-    <string name="fasting_plan_desc_20_4">Blijf scherp gefocust—1–2 bewuste maaltijden binnen een strak venster van 4 uur.</string>
-    <string name="fasting_plan_desc_22_2">Eén bewuste maaltijd in een venster van 2 uur—houd je waterinname op peil.</string>
-
-    <string name="fasting_picker_title">Stel je starttijd voor vasten in</string>
-    <string name="fasting_picker_subtitle">We herinneren je elke dag op dit tijdstip wanneer je eetvenster begint.</string>
+    <string name="fasting_notification_info_start_title">Eetvenster begint</string>
+    <string name="fasting_notification_info_start_body">Je kunt beginnen met eten en je maaltijden loggen.</string>
+    <string name="fasting_notification_info_endsoon_title">Eetvenster eindigt bijna</string>
+    <string name="fasting_notification_info_endsoon_body">Een uur voordat je venster om %1$s sluit, herinnert CaloShape je eraan je laatste maaltijd af te ronden.</string>
+    <string name="fasting_plan_desc_14_10">Rustige start: 14 uur vasten om je ritme te vinden.</string>
+    <string name="fasting_plan_desc_16_8">Populair schema: 16 uur vasten met een duidelijke routine.</string>
+    <string name="fasting_plan_desc_12_12">Evenwichtig schema: 12 uur vasten en 12 uur eten, ideaal voor beginners.</string>
+    <string name="fasting_plan_desc_18_6">18 uur vasten met een eetvenster van 6 uur — strakker dan 16:8.</string>
+    <string name="fasting_plan_desc_20_4">Strak schema: 1–2 bewuste maaltijden binnen 4 uur.</string>
+    <string name="fasting_plan_desc_22_2">Kort eetvenster van 2 uur — blijf goed drinken.</string>
+    <string name="fasting_picker_title">Stel je vastenstarttijd in</string>
+    <string name="fasting_picker_subtitle">We herinneren je elke dag wanneer je eetvenster begint.</string>
     <string name="fasting_plan_save_failed">Opslaan mislukt</string>
 
 
     <!-- FastingReceiver -->
     <string name="fasting_start_title">%1$s-eetvenster is open</string>
-    <string name="fasting_start_body">Je eetvenster loopt van %1$s–%2$s. Log maaltijden onderweg om vandaag nauwkeurig te houden.</string>
+    <string name="fasting_start_body">Je eetvenster loopt van %1$s tot %2$s. Log je maaltijden om vandaag nauwkeurig bij te houden.</string>
     <string name="fasting_endsoon_title">Nog 1 uur in je eetvenster</string>
-    <string name="fasting_endsoon_body">Je venster sluit om %1$s. Als je nog een laatste maaltijd plant, log die dan voordat je afsluit.</string>
+    <string name="fasting_endsoon_body">Je venster sluit om %1$s. Log je laatste maaltijd voordat je afsluit.</string>
 
 
 
 
     <!-- WorkoutHistoryScreen -->
-    <string name="workout_history_title">Trainingsgeschiedenis</string>
-    <string name="workout_history_summary_label">Vandaag verbrand</string>
-    <string name="workout_history_summary_body">Volg de voortgang van je trainingsverbranding vandaag</string>
+    <string name="workout_history_title">Trainingshistorie</string>
+    <string name="workout_history_summary_label">Vandaag verbrand tijdens training</string>
+    <string name="workout_history_summary_body">Bekijk hoeveel je vandaag met trainingen hebt verbrand</string>
     <string name="workout_history_today_label">Vandaag</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
     <string name="workout_history_avg_daily_label">7-daags gem. / dag</string>
@@ -636,7 +635,7 @@
     <string name="workout_history_unit_kcal">kcal</string>
 
     <string name="workout_history_empty_title">Geen recente trainingen</string>
-    <string name="workout_history_empty">Geen trainingen in de laatste 7 dagen.</string>
+    <string name="workout_history_empty">Geen trainingen in de afgelopen 7 dagen.</string>
     <string name="workout_history_recent_title">Recente sessies</string>
     <string name="workout_history_minutes">%1$d min</string>
     <string name="workout_history_kcal">%1$d</string>
@@ -644,34 +643,34 @@
     <string name="workout_history_kcal_with_unit">%1$d kcal</string>
 
     <string name="workout_history_loading_title">Trainingen synchroniseren</string>
-    <string name="workout_history_loading">Trainingsgeschiedenis laden…</string>
-    <string name="workout_history_error_title">Geschiedenis niet beschikbaar</string>
+    <string name="workout_history_loading">Trainingshistorie laden…</string>
+    <string name="workout_history_error_title">Historie niet beschikbaar</string>
 
     <string name="workout_history_delete_failed">Verwijderen mislukt. Probeer het opnieuw.</string>
     <string name="workout_history_delete_success">Succesvol verwijderd!</string>
-    <string name="workout_history_error">Kan trainingsgeschiedenis niet laden.</string>
+    <string name="workout_history_error">Kan trainingshistorie niet laden.</string>
 
 
     <!-- WorkoutTrackerSheet -->
     <string name="workout_tracker_title">Trainingstracker</string>
-    <string name="workout_tracker_subtitle">Beschrijf het type oefening en de duur</string>
+    <string name="workout_tracker_subtitle">Beschrijf je training en de duur</string>
     <string name="workout_tracker_example_placeholder">Voorbeeld: 45 min hardlopen</string>
 
-    <string name="workout_tracker_select_from_list">of selecteer uit de lijst</string>
+    <string name="workout_tracker_select_from_list">of kies uit de lijst</string>
     <string name="workout_tracker_show_less">Minder tonen</string>
     <string name="workout_tracker_show_more">Meer tonen (%1$d)</string>
 
     <string name="workout_tracker_estimating_fallback">Schatten…</string>
     <string name="workout_tracker_estimating_analyzing">Je activiteit analyseren…</string>
-    <string name="workout_tracker_estimating_numbers">Je cijfers verwerken…</string>
-    <string name="workout_tracker_estimating_calories">Inspanning schatten, kcal berekenen…</string>
+    <string name="workout_tracker_estimating_numbers">Je gegevens verwerken…</string>
+    <string name="workout_tracker_estimating_calories">Inspanning schatten en kcal berekenen…</string>
     <string name="workout_tracker_do_not_close">Sluit de app niet en vergrendel je apparaat niet</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
     <string name="workout_tracker_minutes_activity">%1$d min %2$s</string>
     <string name="workout_tracker_add_workout">Training toevoegen</string>
 
-    <string name="workout_tracker_activity_content_label">Trainingsactiviteit</string>
+    <string name="workout_tracker_activity_content_label">Training</string>
     <string name="workout_preset_kcal_per_30_min">%1$d kcal / 30 min</string>
 
     <string name="workout_tracker_save_success">Succesvol opgeslagen!</string>
@@ -679,8 +678,8 @@
     <string name="workout_tracker_refresh_failed">Vernieuwen mislukt. Probeer het opnieuw.</string>
     <string name="workout_tracker_cancel">Annuleren</string>
     <string name="workout_tracker_try_again">Opnieuw proberen</string>
-    <string name="workout_tracker_scan_failed_title">Oeps! Scan mislukt</string>
-    <string name="workout_tracker_scan_failed_body">De trainingsbeschrijving kan onjuist zijn, of de internetverbinding is zwak. Bijvoorbeeld: 30 min hardlopen.</string>
+    <string name="workout_tracker_scan_failed_title">Oeps, schatten mislukt</string>
+    <string name="workout_tracker_scan_failed_body">De beschrijving is mogelijk onduidelijk of je internetverbinding is zwak. Bijvoorbeeld: 30 min hardlopen.</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->
@@ -689,9 +688,9 @@
     <string name="workout_preset_cycling">Fietsen</string>
     <string name="workout_preset_swimming">Zwemmen</string>
     <string name="workout_preset_hiking">Hiken</string>
-    <string name="workout_preset_aerobic_exercise">Aerobe training</string>
+    <string name="workout_preset_aerobic_exercise">Cardio</string>
     <string name="workout_preset_strength_training">Krachttraining</string>
-    <string name="workout_preset_weight_training">Gewichtstraining</string>
+    <string name="workout_preset_weight_training">Gewichtheffen</string>
     <string name="workout_preset_basketball">Basketbal</string>
     <string name="workout_preset_soccer">Voetbal</string>
     <string name="workout_preset_tennis">Tennis</string>
@@ -707,7 +706,7 @@
 
 
     <!-- DurationPickerSheet -->
-    <string name="workout_duration_sheet_subtitle">Voeg deze trainingstijd toe aan je activiteitenlog</string>
+    <string name="workout_duration_sheet_subtitle">Voeg de duur van deze training toe aan je trainingslog</string>
     <string name="workout_duration_hour_short">u</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">Opslaan</string>

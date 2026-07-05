@@ -156,14 +156,14 @@ fun ProgressScreen(
                     ui.workoutError != null && ui.workoutChart.days.isEmpty() -> {
                         WorkoutErrorCard(
                             message = ui.workoutError?.takeIf { it.isNotBlank() }
-                                ?: stringResource(R.string.workout_chart_error_load_failed),
+                                ?: stringResource(R.string.activity_chart_error_load_failed),
                             onRetry = vm::retryWorkout,
                             modifier = Modifier.padding(horizontal = CaloShapeScreenFrame.contentHorizontalCompact)
                         )
                     }
 
                     else -> {
-                        WorkoutChartCard(
+                        ActivityChartCard(
                             chart = ui.workoutChart,
                             modifier = Modifier.padding(horizontal = CaloShapeScreenFrame.contentHorizontalCompact)
                         )

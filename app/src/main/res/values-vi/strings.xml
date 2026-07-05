@@ -378,7 +378,7 @@
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
     <string name="steps_secondary_no_data_yet">Chưa có dữ liệu</string>
     <string name="steps_secondary_connect">Kết nối</string>
-    <string name="steps_hint_connect_google_health">Kết nối Google Health để theo dõi số bước</string>
+    <string name="steps_hint_connect_google_health">Kết nối Health Connect để theo dõi số bước</string>
     <string name="steps_hint_install_health_connect">Cài Health Connect để theo dõi số bước</string>
     <string name="steps_hint_hc_unavailable">Health Connect không khả dụng trên thiết bị này</string>
     <string name="steps_hint_retry">Đồng bộ thất bại. Chạm để thử lại</string>
@@ -414,7 +414,7 @@
     <string name="progress_tab_two_weeks_ago">2 tuần trước</string>
     <string name="progress_tab_three_weeks_ago">3 tuần trước</string>
     <string name="progress_error_load_failed">Tải thất bại</string>
-    <string name="workout_chart_error_load_failed">Tải biểu đồ tập luyện thất bại</string>
+    <string name="activity_chart_error_load_failed">Không thể tải biểu đồ hoạt động</string>
     <string name="water_chart_error_load_failed">Tải biểu đồ nước thất bại</string>
 
 
@@ -496,21 +496,21 @@
 
 
     <!-- =========================
-         WorkoutChartCard
+         ActivityChartCard
          ========================= -->
-    <string name="workout_chart_goal_reached">Đã đạt mục tiêu hôm nay</string>
-    <string name="workout_chart_goal_left">Còn %1$d kcal để đạt mục tiêu hôm nay</string>
-    <string name="workout_chart_title">Kcal đốt từ tập luyện</string>
-    <string name="workout_chart_info_dialog_body">Bao gồm bài tập đã ghi lại và kcal hoạt động ước tính từ số bước hằng ngày.</string>
-    <string name="workout_chart_unit_kcal">kcal</string>
-    <string name="workout_chart_goal">Mục tiêu</string>
-    <string name="workout_chart_value_kcal">%1$d kcal</string>
-    <string name="workout_chart_7day_avg">TB 7 ngày</string>
-    <string name="workout_chart_loading">Đang tải…</string>
-    <string name="workout_legend_burned">Đốt từ tập luyện</string>
-    <string name="workout_legend_daily_goal">Mục tiêu hằng ngày</string>
-    <string name="workout_tooltip_burned">Đã đốt</string>
-    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+    <string name="activity_chart_goal_reached">Đã đạt mục tiêu hôm nay</string>
+    <string name="activity_chart_goal_left">Còn %1$d kcal để đạt mục tiêu hôm nay</string>
+    <string name="activity_chart_title">Kcal đốt từ hoạt động</string>
+    <string name="activity_chart_info_dialog_body">Bao gồm bài tập đã ghi lại và kcal hoạt động ước tính từ số bước hằng ngày.</string>
+    <string name="activity_chart_unit_kcal">kcal</string>
+    <string name="activity_chart_goal">Mục tiêu</string>
+    <string name="activity_chart_value_kcal">%1$d kcal</string>
+    <string name="activity_chart_7day_avg">TB 7 ngày</string>
+    <string name="activity_chart_loading">Đang tải…</string>
+    <string name="activity_legend_burned">Kcal đã đốt</string>
+    <string name="activity_legend_daily_goal">Mục tiêu hằng ngày</string>
+    <string name="activity_tooltip_burned">Đã đốt</string>
+    <string name="activity_tooltip_kcal_value">%1$d kcal</string>
 
 
     <!-- =========================
@@ -549,7 +549,7 @@
     <string name="progress_average_fiber">Chất xơ</string>
     <string name="progress_average_sugar">Đường</string>
     <string name="progress_average_sodium">Natri</string>
-    <string name="progress_average_workout">Đốt từ tập luyện</string>
+    <string name="progress_average_activity">Kcal đốt từ hoạt động</string>
     <string name="progress_average_water">Lượng nước uống</string>
     <string name="progress_average_health_score">Điểm sức khỏe</string>
     <string name="progress_average_steps">Bước</string>
@@ -626,7 +626,7 @@
 
     <!-- WorkoutHistoryScreen -->
     <string name="workout_history_title">Lịch sử tập luyện</string>
-    <string name="workout_history_summary_label">Đã đốt hôm nay</string>
+    <string name="workout_history_summary_label">Kcal đốt từ tập luyện hôm nay</string>
     <string name="workout_history_summary_body">Theo dõi tiến độ kcal đốt từ tập luyện hôm nay</string>
     <string name="workout_history_today_label">Hôm nay</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
@@ -707,7 +707,7 @@
 
 
     <!-- DurationPickerSheet -->
-    <string name="workout_duration_sheet_subtitle">Thêm thời gian tập luyện này vào nhật ký hoạt động</string>
+    <string name="workout_duration_sheet_subtitle">Thêm thời lượng bài tập này vào nhật ký tập luyện</string>
     <string name="workout_duration_hour_short">giờ</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">Lưu</string>

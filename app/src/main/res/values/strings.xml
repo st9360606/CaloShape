@@ -379,7 +379,7 @@
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
     <string name="steps_secondary_no_data_yet">No data yet</string>
     <string name="steps_secondary_connect">Connect</string>
-    <string name="steps_hint_connect_google_health">Connect Google Health to track your steps</string>
+    <string name="steps_hint_connect_google_health">Connect to Health Connect to track your steps</string>
     <string name="steps_hint_install_health_connect">Install Health Connect to track your steps</string>
     <string name="steps_hint_hc_unavailable">Health Connect isn’t available on this device</string>
     <string name="steps_hint_retry">Sync failed. Tap to retry</string>
@@ -415,7 +415,7 @@
     <string name="progress_tab_two_weeks_ago">2 wks. ago</string>
     <string name="progress_tab_three_weeks_ago">3 wks. ago</string>
     <string name="progress_error_load_failed">Load failed</string>
-    <string name="workout_chart_error_load_failed">Load workout chart failed</string>
+    <string name="activity_chart_error_load_failed">Failed to load activity chart</string>
     <string name="water_chart_error_load_failed">Load water chart failed</string>
 
 
@@ -497,21 +497,21 @@
 
 
     <!-- =========================
-         WorkoutChartCard
+         ActivityChartCard
          ========================= -->
-    <string name="workout_chart_goal_reached">Goal reached today</string>
-    <string name="workout_chart_goal_left">%1$d kcal left to hit today\'s goal</string>
-    <string name="workout_chart_title">Workout burn</string>
-    <string name="workout_chart_info_dialog_body">Includes logged workouts and activity calories estimated from daily steps.</string>
-    <string name="workout_chart_unit_kcal">kcal</string>
-    <string name="workout_chart_goal">Goal</string>
-    <string name="workout_chart_value_kcal">%1$d kcal</string>
-    <string name="workout_chart_7day_avg">7-day avg</string>
-    <string name="workout_chart_loading">Loading…</string>
-    <string name="workout_legend_burned">Workout burned</string>
-    <string name="workout_legend_daily_goal">Daily goal</string>
-    <string name="workout_tooltip_burned">Burned</string>
-    <string name="workout_tooltip_kcal_value">%1$d kcal</string>
+    <string name="activity_chart_goal_reached">Goal reached today</string>
+    <string name="activity_chart_goal_left">%1$d kcal left to hit today\'s goal</string>
+    <string name="activity_chart_title">Activity burn</string>
+    <string name="activity_chart_info_dialog_body">Includes logged workouts and activity calories estimated from daily steps.</string>
+    <string name="activity_chart_unit_kcal">kcal</string>
+    <string name="activity_chart_goal">Goal</string>
+    <string name="activity_chart_value_kcal">%1$d kcal</string>
+    <string name="activity_chart_7day_avg">7-day avg</string>
+    <string name="activity_chart_loading">Loading…</string>
+    <string name="activity_legend_burned">Calories burned</string>
+    <string name="activity_legend_daily_goal">Daily goal</string>
+    <string name="activity_tooltip_burned">Burned</string>
+    <string name="activity_tooltip_kcal_value">%1$d kcal</string>
 
 
     <!-- =========================
@@ -550,7 +550,7 @@
     <string name="progress_average_fiber">Fiber</string>
     <string name="progress_average_sugar">Sugar</string>
     <string name="progress_average_sodium">Sodium</string>
-    <string name="progress_average_workout">Workout burned</string>
+    <string name="progress_average_activity">Activity burn</string>
     <string name="progress_average_water">Water intake</string>
     <string name="progress_average_health_score">Health score</string>
     <string name="progress_average_steps">Steps</string>
@@ -627,7 +627,7 @@
 
     <!-- WorkoutHistoryScreen -->
     <string name="workout_history_title">Workout History</string>
-    <string name="workout_history_summary_label">Today burned</string>
+    <string name="workout_history_summary_label">Today\'s workout burn</string>
     <string name="workout_history_summary_body">Track today’s workout burn progress</string>
     <string name="workout_history_today_label">Today</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
@@ -708,7 +708,7 @@
 
 
     <!-- DurationPickerSheet -->
-    <string name="workout_duration_sheet_subtitle">Add this workout time to your activity log</string>
+    <string name="workout_duration_sheet_subtitle">Add this workout duration to your workout log</string>
     <string name="workout_duration_hour_short">hr</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">Save</string>

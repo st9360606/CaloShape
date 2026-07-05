@@ -69,27 +69,27 @@ private val WorkoutGoalLineColor = Color(0xFF3C9E45)
 private val WorkoutInfoIconText = Color(0xFF6B7078)
 
 @Composable
-internal fun WorkoutChartCard(
+internal fun ActivityChartCard(
     chart: WorkoutChartUi,
     modifier: Modifier = Modifier
 ) {
     val footerText = if (chart.reachedGoalToday) {
-        stringResource(R.string.workout_chart_goal_reached)
+        stringResource(R.string.activity_chart_goal_reached)
     } else {
-        stringResource(R.string.workout_chart_goal_left, chart.remainingKcal)
+        stringResource(R.string.activity_chart_goal_left, chart.remainingKcal)
     }
 
-    WorkoutChartCardFrame(
-        title = stringResource(R.string.workout_chart_title),
-        infoDialogText = stringResource(R.string.workout_chart_info_dialog_body),
+    ActivityChartCardFrame(
+        title = stringResource(R.string.activity_chart_title),
+        infoDialogText = stringResource(R.string.activity_chart_info_dialog_body),
         infoButtonContentDescription = "查看運動消耗說明",
         headlineValue = chart.todayBurnedKcal.toString(),
-        unitText = stringResource(R.string.workout_chart_unit_kcal),
+        unitText = stringResource(R.string.activity_chart_unit_kcal),
         deltaText = chart.deltaText,
-        goalText = stringResource(R.string.workout_chart_goal),
-        goalValue = stringResource(R.string.workout_chart_value_kcal, chart.goalKcal),
-        avgText = stringResource(R.string.workout_chart_7day_avg),
-        avgValue = stringResource(R.string.workout_chart_value_kcal, chart.averageKcal),
+        goalText = stringResource(R.string.activity_chart_goal),
+        goalValue = stringResource(R.string.activity_chart_value_kcal, chart.goalKcal),
+        avgText = stringResource(R.string.activity_chart_7day_avg),
+        avgValue = stringResource(R.string.activity_chart_value_kcal, chart.averageKcal),
         footerText = footerText,
         footerBackground = if (chart.reachedGoalToday) Color(0xFFEAF5E8) else Color(0xFFFFF3E6),
         footerTextColor = if (chart.reachedGoalToday) Color(0xFF3C9E45) else WorkoutBarColor,
@@ -109,18 +109,18 @@ internal fun WorkoutLoadingCard(
 ) {
     val colors = CaloShapeColors.current()
 
-    WorkoutChartCardFrame(
-        title = stringResource(R.string.workout_chart_title),
-        infoDialogText = stringResource(R.string.workout_chart_info_dialog_body),
+    ActivityChartCardFrame(
+        title = stringResource(R.string.activity_chart_title),
+        infoDialogText = stringResource(R.string.activity_chart_info_dialog_body),
         infoButtonContentDescription = "查看運動消耗說明",
         headlineValue = "--",
-        unitText = stringResource(R.string.workout_chart_unit_kcal),
+        unitText = stringResource(R.string.activity_chart_unit_kcal),
         deltaText = "--",
-        goalText = stringResource(R.string.workout_chart_goal),
+        goalText = stringResource(R.string.activity_chart_goal),
         goalValue = "--",
-        avgText = stringResource(R.string.workout_chart_7day_avg),
+        avgText = stringResource(R.string.activity_chart_7day_avg),
         avgValue = "--",
-        footerText = stringResource(R.string.workout_chart_loading),
+        footerText = stringResource(R.string.activity_chart_loading),
         footerBackground = colors.surfaceMuted,
         footerTextColor = colors.textSecondary,
         modifier = modifier
@@ -157,7 +157,7 @@ internal fun WorkoutErrorCard(
             .padding(horizontal = 26.dp, vertical = 26.dp)
     ) {
         Text(
-            text = stringResource(R.string.workout_chart_title),
+            text = stringResource(R.string.activity_chart_title),
             color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold
@@ -195,7 +195,7 @@ internal fun WorkoutErrorCard(
 }
 
 @Composable
-private fun WorkoutChartCardFrame(
+private fun ActivityChartCardFrame(
     title: String,
     infoDialogText: String,
     infoButtonContentDescription: String,
@@ -553,7 +553,7 @@ private fun WorkoutLegendRow() {
             Spacer(modifier = Modifier.width(8.dp))
 
             Text(
-                text = stringResource(R.string.workout_legend_burned),
+                text = stringResource(R.string.activity_legend_burned),
                 color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Medium
@@ -580,7 +580,7 @@ private fun WorkoutLegendRow() {
             Spacer(modifier = Modifier.width(8.dp))
 
             Text(
-                text = stringResource(R.string.workout_legend_daily_goal),
+                text = stringResource(R.string.activity_legend_daily_goal),
                 color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Medium
@@ -862,14 +862,14 @@ private fun WorkoutDayTooltip(
     day: WorkoutProgressDayUi,
     modifier: Modifier = Modifier
 ) {
-    val burnedLabel = stringResource(R.string.workout_tooltip_burned)
+    val burnedLabel = stringResource(R.string.activity_tooltip_burned)
 
     ChartTooltipCard(
         metrics = listOf(
             ChartTooltipMetricUi(
                 emoji = "🔥",
                 label = stringResource(R.string.progress_tooltip_label_format, burnedLabel),
-                value = stringResource(R.string.workout_tooltip_kcal_value, day.kcal)
+                value = stringResource(R.string.activity_tooltip_kcal_value, day.kcal)
             )
         ),
         dayLabel = localizedWorkoutDayLabel(day.dayLabel),

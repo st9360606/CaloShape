@@ -347,7 +347,7 @@ Relevant files:
 - `ui/home/ui/progress/ProgressScreen.kt`
 - `ui/home/ui/progress/NutritionChartCard.kt`
 - `ui/home/ui/progress/WaterChartCard.kt`
-- `ui/home/ui/progress/WorkoutChartCard.kt`
+- `ui/home/ui/progress/ActivityChartCard.kt`
 - `data/water/*`
 - `data/workout/*`
 - `data/weight/*`
