@@ -809,7 +809,6 @@ private fun remainingValue(goal: Int, eaten: Int): Int {
 
 @Composable
 fun StepsWorkoutRowModern(
-    summary: HomeSummary,
     workoutTotalKcalOverride: Int? = null,
     stepsOverride: Long? = null,
     activeKcalOverride: Int? = null,
@@ -955,8 +954,7 @@ fun StepsWorkoutRowModern(
         )
 
         // ===== Workout =====
-        val workoutKcal: Int = workoutTotalKcalOverride
-            ?: summary.todayActivity.activeKcal.roundToInt().coerceAtLeast(0)
+        val workoutKcal = workoutTotalKcalOverride?.coerceAtLeast(0) ?: 0
 
         val workoutPrimary = workoutKcal.toString()
 

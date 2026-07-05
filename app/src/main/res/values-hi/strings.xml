@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">फोटो लें और kcal जानें।</string>
+    <string name="landing_title">फोटो लें और कैलोरी जानें।</string>
     <string name="choose_language">भाषा चुनें</string>
     <string name="cta_get_started">शुरू करें</string>
     <string name="cta_login_prefix">पहले से खाता है?</string>
@@ -125,18 +125,18 @@
 
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">आपकी उम्र कितनी है?</string>
-    <string name="onboard_age_subtitle">हम आपकी उम्र का उपयोग केवल अनुभव और kcal अनुमान की सटीकता सुधारने के लिए करते हैं।</string>
+    <string name="onboard_age_subtitle">हम आपकी उम्र का उपयोग केवल अनुभव और कैलोरी अनुमान की सटीकता सुधारने के लिए करते हैं।</string>
 
 
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">आपकी लंबाई कितनी है?</string>
-    <string name="onboard_height_subtitle">हम आपके डेटा का उपयोग केवल अनुभव और kcal अनुमानों को बेहतर बनाने के लिए करते हैं।</string>
+    <string name="onboard_height_subtitle">हम आपके डेटा का उपयोग केवल अनुभव और कैलोरी अनुमानों को बेहतर बनाने के लिए करते हैं।</string>
     <string name="onboard_height_hint">इसका उपयोग आपकी कस्टम योजना को कैलिब्रेट करने के लिए किया जाएगा।</string>
 
 
     <!-- Onboarding: WeightSelectionScreen -->
     <string name="onboard_weight_title">आपका वजन कितना है?</string>
-    <string name="onboard_weight_subtitle">हम आपके डेटा का उपयोग केवल अनुभव और kcal अनुमानों को बेहतर बनाने के लिए करते हैं।</string>
+    <string name="onboard_weight_subtitle">हम आपके डेटा का उपयोग केवल अनुभव और कैलोरी अनुमानों को बेहतर बनाने के लिए करते हैं।</string>
     <string name="onboard_weight_hint">इसका उपयोग आपकी कस्टम योजना को कैलिब्रेट करने के लिए किया जाएगा।</string>
 
 
@@ -157,7 +157,7 @@
 
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">आपका लक्ष्य क्या है?</string>
-    <string name="onboard_goal_subtitle">यह हमें आपकी kcal योजना को अनुकूलित करने में मदद करता है।</string>
+    <string name="onboard_goal_subtitle">यह हमें आपकी कैलोरी योजना को अनुकूलित करने में मदद करता है।</string>
     <string name="goal_lose">वजन घटाना</string>
     <string name="goal_maintain">बनाए रखना</string>
     <string name="goal_gain">वजन बढ़ाना</string>
@@ -166,7 +166,7 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">आपका लक्ष्य वजन क्या है?</string>
-    <string name="onboard_goal_weight_subtitle">इस लक्ष्य के आधार पर, हम आपके लिए अधिक उपयुक्त दैनिक kcal सिफारिश बनाएंगे।</string>
+    <string name="onboard_goal_weight_subtitle">इस लक्ष्य के आधार पर, हम आपके लिए अधिक उपयुक्त दैनिक कैलोरी सिफारिश बनाएंगे।</string>
     <string name="onboard_goal_weight_hint">इसका उपयोग आपकी कस्टम योजना को कैलिब्रेट करने के लिए किया जाएगा।</string>
 
 
@@ -180,11 +180,11 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">हर भोजन को मायनेदार बनाएं!</string>
-    <string name="onboard_notif_subtitle">भोजन लॉग करने के हल्के रिमाइंडर पाने के लिए नोटिफिकेशन चालू करें—ताकि आपकी kcal, मैक्रो और प्रगति सही दिशा में रहें। चूक हो सकती है; सही समय पर रिमाइंडर आपको जल्दी वापस पटरी पर लाते हैं।</string>
+    <string name="onboard_notif_subtitle">भोजन लॉग करने के हल्के रिमाइंडर पाने के लिए नोटिफिकेशन चालू करें—ताकि आपकी कैलोरी, मैक्रो और प्रगति सही दिशा में रहें। चूक हो सकती है; सही समय पर रिमाइंडर आपको जल्दी वापस पटरी पर लाते हैं।</string>
     <string name="onboard_allow_notifications_cta">नोटिफिकेशन की अनुमति दें</string>
-    <string name="notification_mock_app_title">AI kcal काउंटर</string>
+    <string name="notification_mock_app_title">AI कैलोरी काउंटर</string>
     <string name="onboard_notif_title_got_a_sec">आपका भोजन खुद लॉग नहीं होगा 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">अपनी kcal और मैक्रो को लक्ष्य पर रखने के लिए यह भोजन लॉग करें।</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">अपनी कैलोरी और मैक्रो को लक्ष्य पर रखने के लिए यह भोजन लॉग करें।</string>
 
 
     <!-- Onboarding: HealthConnectIntroScreen -->
@@ -193,7 +193,7 @@
     <string name="onboard_hc_connect_body">अधिक पूर्ण रिकॉर्ड और इनसाइट्स पाने के लिए CaloShape AI और हेल्थ ऐप्स के बीच दैनिक गतिविधि सिंक करें।</string>
     <string name="onboard_hc_permission_rationale_title_prefix">CaloShape क्यों उपयोग करता है</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape आपके कदम, सक्रिय kcal और व्यायाम डेटा पढ़ता है ताकि दैनिक गतिविधि खर्च का अनुमान लगाया जा सके, kcal डैशबोर्ड अपडेट हो सके और प्रगति इनसाइट्स बेहतर हों। आप Health Connect में कभी भी एक्सेस वापस ले सकते हैं।</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape आपके कदम, सक्रिय कैलोरी और व्यायाम डेटा पढ़ता है ताकि दैनिक गतिविधि खर्च का अनुमान लगाया जा सके, कैलोरी डैशबोर्ड अपडेट हो सके और प्रगति इनसाइट्स बेहतर हों। आप Health Connect में कभी भी एक्सेस वापस ले सकते हैं।</string>
     <string name="onboard_hc_permission_rationale_button">समझ गया</string>
 
 
@@ -203,11 +203,11 @@
     <string name="progress_footer_hint">इसमें बस एक पल लगेगा</string>
     <string name="progress_center_caption">आपके परिणाम तैयार हो रहे हैं</string>
     <string name="progress_phase_pill_1">आपकी प्रोफ़ाइल की समीक्षा हो रही है</string>
-    <string name="progress_phase_pill_2">आपका kcal लक्ष्य गणना हो रहा है</string>
+    <string name="progress_phase_pill_2">आपका कैलोरी लक्ष्य गणना हो रहा है</string>
     <string name="progress_phase_pill_3">दैनिक मैक्रो संतुलित किए जा रहे हैं</string>
     <string name="progress_phase_pill_4">स्वास्थ्य इनसाइट्स अंतिम रूप दिए जा रहे हैं</string>
     <string name="progress_card_title">आपकी योजना सेट की जा रही है</string>
-    <string name="progress_row_calorie_target">दैनिक kcal लक्ष्य</string>
+    <string name="progress_row_calorie_target">दैनिक कैलोरी लक्ष्य</string>
     <string name="progress_row_carb_distribution">कार्ब वितरण</string>
     <string name="progress_row_protein_recommendation">प्रोटीन सिफारिश</string>
     <string name="progress_row_fat_recommendation">फैट सिफारिश</string>
@@ -233,7 +233,7 @@
     <string name="plan_goals_title">अपने लक्ष्यों तक\nकैसे पहुंचें</string>
     <string name="plan_goal_card_health_scores">स्वास्थ्य स्कोर आपका मार्गदर्शन करते हैं, ताकि आदतें स्वाभाविक रूप से बनें</string>
     <string name="plan_goal_card_track_meals">एक टैप में भोजन लॉग करें, नियमित रहना आसान है</string>
-    <string name="plan_goal_card_daily_calories">दैनिक kcal साफ़ देखें और ट्रैक कभी न खोएं</string>
+    <string name="plan_goal_card_daily_calories">दैनिक कैलोरी साफ़ देखें और ट्रैक कभी न खोएं</string>
     <string name="plan_goal_card_balance_macros">कार्ब्स × प्रोटीन × फैट, स्मार्ट संतुलन, बेहतर परिणाम</string>
     <string name="plan_sources_based_on">आधिकारिक आहार दिशानिर्देशों पर आधारित,\nकेवल संदर्भ के लिए, चिकित्सा सलाह नहीं।</string>
     <string name="plan_sources_more">सभी संदर्भ देखें ›</string>
@@ -664,7 +664,7 @@
     <string name="workout_tracker_estimating_fallback">अनुमान लगाया जा रहा है…</string>
     <string name="workout_tracker_estimating_analyzing">आपकी गतिविधि का विश्लेषण हो रहा है…</string>
     <string name="workout_tracker_estimating_numbers">आपके आंकड़ों पर काम हो रहा है…</string>
-    <string name="workout_tracker_estimating_calories">प्रयास का अनुमान और kcal की गणना हो रही है…</string>
+    <string name="workout_tracker_estimating_calories">प्रयास का अनुमान और कैलोरी की गणना हो रही है…</string>
     <string name="workout_tracker_do_not_close">कृपया ऐप बंद न करें या डिवाइस लॉक न करें</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
@@ -763,7 +763,7 @@
     <string name="foodlog_no_image">कोई छवि नहीं</string>
 
     <string name="foodlog_detail_title">पोषण</string>
-    <string name="foodlog_detail_calories">kcal</string>
+    <string name="foodlog_detail_calories">कैलोरी</string>
     <string name="foodlog_detail_protein">प्रोटीन</string>
     <string name="foodlog_detail_carbs">कार्ब्स</string>
     <string name="foodlog_detail_fats">फैट</string>
@@ -965,13 +965,13 @@
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">अपनी लंबाई संपादित करें</string>
-    <string name="edit_height_privacy_note">हम आपकी लंबाई का उपयोग केवल अनुभव और kcal अनुमान की सटीकता सुधारने के लिए करते हैं।</string>
+    <string name="edit_height_privacy_note">हम आपकी लंबाई का उपयोग केवल अनुभव और कैलोरी अनुमान की सटीकता सुधारने के लिए करते हैं।</string>
     <string name="edit_height_saved_locally_sync_failed">नेटवर्क त्रुटि। स्थानीय रूप से सेव हुआ, लेकिन सिंक विफल।</string>
 
 
     <!-- EditAgeScreen -->
     <string name="edit_age_title">अपनी उम्र संपादित करें</string>
-    <string name="edit_age_privacy_note">हम आपकी उम्र का उपयोग केवल अनुभव और kcal अनुमान की सटीकता सुधारने के लिए करते हैं।</string>
+    <string name="edit_age_privacy_note">हम आपकी उम्र का उपयोग केवल अनुभव और कैलोरी अनुमान की सटीकता सुधारने के लिए करते हैं।</string>
 
 
     <!-- EditGenderScreen -->
@@ -1005,7 +1005,7 @@
 
     <!-- EditNutritionGoalsScreen -->
     <string name="edit_nutrition_goals_title">पोषण लक्ष्य संपादित करें</string>
-    <string name="edit_nutrition_calorie_goal">kcal लक्ष्य</string>
+    <string name="edit_nutrition_calorie_goal">कैलोरी लक्ष्य</string>
     <string name="edit_nutrition_protein_goal">प्रोटीन लक्ष्य</string>
     <string name="edit_nutrition_carb_goal">कार्ब लक्ष्य</string>
     <string name="edit_nutrition_fat_goal">फैट लक्ष्य</string>
@@ -1022,7 +1022,7 @@
 
     <!-- RingColorsExplainedScreen -->
     <string name="ring_colors_explained_title">तारीख रिंग रंग</string>
-    <string name="ring_colors_explained_intro">तारीख रिंग आपको जल्दी दिखाती हैं कि प्रत्येक दिन आपके kcal लक्ष्य से कैसे तुलना करता है।</string>
+    <string name="ring_colors_explained_intro">तारीख रिंग आपको जल्दी दिखाती हैं कि प्रत्येक दिन आपके कैलोरी लक्ष्य से कैसे तुलना करता है।</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">तारीख रिंग पूर्वावलोकन</string>
 
@@ -1036,11 +1036,11 @@
     <string name="ring_colors_explained_subtitle">रिंग रंग समझाए गए</string>
 
     <string name="ring_colors_green_title">हरा</string>
-    <string name="ring_colors_green_body">लक्ष्य पर (लक्ष्य से 100 kcal के भीतर)</string>
+    <string name="ring_colors_green_body">लक्ष्य पर (लक्ष्य से 100 कैलोरी के भीतर)</string>
     <string name="ring_colors_yellow_title">भूरा</string>
-    <string name="ring_colors_yellow_body">आपके लक्ष्य से 100-199 kcal ऊपर</string>
+    <string name="ring_colors_yellow_body">आपके लक्ष्य से 100-199 कैलोरी ऊपर</string>
     <string name="ring_colors_red_title">लाल</string>
-    <string name="ring_colors_red_body">आपके लक्ष्य से 200+ kcal ऊपर</string>
+    <string name="ring_colors_red_body">आपके लक्ष्य से 200+ कैलोरी ऊपर</string>
     <string name="ring_colors_dotted_title">डॉटेड</string>
     <string name="ring_colors_dotted_body">उस दिन कोई भोजन लॉग नहीं हुआ</string>
 
@@ -1063,7 +1063,7 @@
     <!-- WidgetGuideScreen -->
     <string name="widget_guide_title">Widget जोड़ें</string>
     <string name="widget_guide_hero_title">CaloShape को अपनी होम स्क्रीन पर जोड़ें</string>
-    <string name="widget_guide_hero_body">ऐप खोले बिना kcal, मैक्रो और क्विक ऐक्शन ट्रैक करें।</string>
+    <string name="widget_guide_hero_body">ऐप खोले बिना कैलोरी, मैक्रो और क्विक ऐक्शन ट्रैक करें।</string>
     <string name="widget_guide_steps_title">इन चरणों का पालन करें</string>
     <string name="widget_guide_step_1_title">होम स्क्रीन को लंबा दबाएं</string>
     <string name="widget_guide_step_1_body">मेनू दिखाई देने तक अपने फोन की होम स्क्रीन के खाली हिस्से को दबाकर रखें।</string>

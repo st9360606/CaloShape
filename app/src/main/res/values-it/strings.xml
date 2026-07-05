@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">Scatta una foto e scopri le kcal.</string>
+    <string name="landing_title">Scatta una foto e scopri le calorie.</string>
     <string name="choose_language">Scegli la lingua</string>
     <string name="cta_get_started">Inizia</string>
     <string name="cta_login_prefix">Hai già un account?</string>
@@ -184,11 +184,11 @@ e ti aiuta a restare costante</string>
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">Fai contare ogni pasto!</string>
-    <string name="onboard_notif_subtitle">Ricevi promemoria discreti per registrare i pasti al momento giusto, tenere sotto controllo kcal e macro, e seguire i progressi.</string>
+    <string name="onboard_notif_subtitle">Attiva le notifiche per ricevere promemoria discreti e registrare i pasti, così calorie, macro e progressi restano in linea. Gli imprevisti capitano; promemoria tempestivi ti aiutano a riprendere subito il ritmo.</string>
     <string name="onboard_allow_notifications_cta">Consenti le notifiche</string>
-    <string name="notification_mock_app_title">Contatore kcal IA</string>
+    <string name="notification_mock_app_title">Contatore calorie IA</string>
     <string name="onboard_notif_title_got_a_sec">Registra il pasto 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">Registra il pasto e resta in linea con kcal e macro.</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">Registra il pasto e resta in linea con calorie e macro.</string>
 
 
     <!-- Onboarding: HealthConnectIntroScreen -->
@@ -207,11 +207,11 @@ e ti aiuta a restare costante</string>
     <string name="progress_footer_hint">Ci vuole solo un momento</string>
     <string name="progress_center_caption">Calcolo in corso</string>
     <string name="progress_phase_pill_1">Analisi del profilo</string>
-    <string name="progress_phase_pill_2">Calcolo dell’obiettivo kcal</string>
+    <string name="progress_phase_pill_2">Calcolo dell’obiettivo calorie</string>
     <string name="progress_phase_pill_3">Bilanciamento delle macro giornaliere</string>
     <string name="progress_phase_pill_4">Finalizzazione degli indicatori benessere</string>
     <string name="progress_card_title">Configurazione del piano</string>
-    <string name="progress_row_calorie_target">Obiettivo kcal giornaliero</string>
+    <string name="progress_row_calorie_target">Obiettivo calorie giornaliero</string>
     <string name="progress_row_carb_distribution">Distribuzione carboidrati</string>
     <string name="progress_row_protein_recommendation">Proteine consigliate</string>
     <string name="progress_row_fat_recommendation">Grassi consigliati</string>
@@ -238,7 +238,7 @@ e ti aiuta a restare costante</string>
 i tuoi obiettivi</string>
     <string name="plan_goal_card_health_scores">Punteggi benessere per guidarti</string>
     <string name="plan_goal_card_track_meals">Registra i pasti e resta costante</string>
-    <string name="plan_goal_card_daily_calories">Segui le kcal e resta in linea</string>
+    <string name="plan_goal_card_daily_calories">Segui le calorie e resta in linea</string>
     <string name="plan_goal_card_balance_macros">Bilancia le macro e i tuoi obiettivi</string>
     <string name="plan_sources_based_on">Basato su raccomandazioni nutrizionali riconosciute.
 Solo a scopo informativo, non sostituisce un parere medico.</string>
@@ -681,7 +681,7 @@ Resta sul piano ogni giorno.</string>
     <string name="workout_tracker_estimating_fallback">Stima…</string>
     <string name="workout_tracker_estimating_analyzing">Analisi della tua attività…</string>
     <string name="workout_tracker_estimating_numbers">Elaborazione dei tuoi numeri…</string>
-    <string name="workout_tracker_estimating_calories">Stima dello sforzo, calcolo kcal…</string>
+    <string name="workout_tracker_estimating_calories">Stima dello sforzo, calcolo calorie…</string>
     <string name="workout_tracker_do_not_close">Non chiudere l’app né bloccare il dispositivo</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
@@ -780,7 +780,7 @@ Resta sul piano ogni giorno.</string>
     <string name="foodlog_no_image">Nessuna immagine</string>
 
     <string name="foodlog_detail_title">Nutrizione</string>
-    <string name="foodlog_detail_calories">kcal</string>
+    <string name="foodlog_detail_calories">Calorie</string>
     <string name="foodlog_detail_protein">Proteine</string>
     <string name="foodlog_detail_carbs">Carboidrati</string>
     <string name="foodlog_detail_fats">Grassi</string>
@@ -988,13 +988,13 @@ con i tuoi amici</string>
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">Modifica altezza</string>
-    <string name="edit_height_privacy_note">Usiamo la tua altezza solo per migliorare l’esperienza e la precisione delle stime delle kcal.</string>
+    <string name="edit_height_privacy_note">Usiamo la tua altezza solo per migliorare l’esperienza e la precisione delle stime delle calorie.</string>
     <string name="edit_height_saved_locally_sync_failed">Errore di rete. Salvato localmente, ma sincronizzazione non riuscita.</string>
 
 
     <!-- EditAgeScreen -->
     <string name="edit_age_title">Modifica età</string>
-    <string name="edit_age_privacy_note">Usiamo la tua età solo per migliorare l’esperienza e la precisione delle stime delle kcal.</string>
+    <string name="edit_age_privacy_note">Usiamo la tua età solo per migliorare l’esperienza e la precisione delle stime delle calorie.</string>
 
 
     <!-- EditGenderScreen -->
@@ -1059,11 +1059,11 @@ con i tuoi amici</string>
     <string name="ring_colors_explained_subtitle">Spiegazione dei colori</string>
 
     <string name="ring_colors_green_title">Verde</string>
-    <string name="ring_colors_green_body">In target (entro 100 kcal dall’obiettivo)</string>
+    <string name="ring_colors_green_body">In target (entro 100 calorie dall’obiettivo)</string>
     <string name="ring_colors_yellow_title">Ambra</string>
-    <string name="ring_colors_yellow_body">100–199 kcal sopra l’obiettivo</string>
+    <string name="ring_colors_yellow_body">100–199 calorie sopra l’obiettivo</string>
     <string name="ring_colors_red_title">Rosso</string>
-    <string name="ring_colors_red_body">200 kcal o più sopra l’obiettivo</string>
+    <string name="ring_colors_red_body">200 calorie o più sopra l’obiettivo</string>
     <string name="ring_colors_dotted_title">Punteggiato</string>
     <string name="ring_colors_dotted_body">Nessun pasto registrato quel giorno</string>
 
@@ -1086,7 +1086,7 @@ con i tuoi amici</string>
     <!-- WidgetGuideScreen -->
     <string name="widget_guide_title">Aggiungi un widget</string>
     <string name="widget_guide_hero_title">Aggiungi CaloShape alla schermata Home</string>
-    <string name="widget_guide_hero_body">Controlla kcal, macro e azioni rapide senza aprire l’app.</string>
+    <string name="widget_guide_hero_body">Controlla calorie, macro e azioni rapide senza aprire l’app.</string>
     <string name="widget_guide_steps_title">Segui questi passaggi</string>
     <string name="widget_guide_step_1_title">Tieni premuta la schermata Home</string>
     <string name="widget_guide_step_1_body">Tieni premuta un’area vuota della schermata Home del telefono finché non appare il menu.</string>

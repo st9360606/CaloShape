@@ -180,7 +180,7 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">Låt varje måltid räknas!</string>
-    <string name="onboard_notif_subtitle">Aktivera notiser för vänliga påminnelser om att logga måltider — så håller du kalorier, makron och framsteg på rätt spår.</string>
+    <string name="onboard_notif_subtitle">Aktivera notiser för vänliga påminnelser om att logga måltider — så håller du kalorier, makron och framsteg på rätt spår. Misstag händer; påminnelser i rätt tid hjälper dig snabbt tillbaka.</string>
     <string name="onboard_allow_notifications_cta">Tillåt notiser</string>
     <string name="notification_mock_app_title">AI-kaloriräknare</string>
     <string name="onboard_notif_title_got_a_sec">Måltiden loggar inte sig själv 😉</string>
@@ -762,7 +762,7 @@
     <string name="foodlog_no_image">Ingen bild</string>
 
     <string name="foodlog_detail_title">Näring</string>
-    <string name="foodlog_detail_calories">kcal</string>
+    <string name="foodlog_detail_calories">Kalorier</string>
     <string name="foodlog_detail_protein">Protein</string>
     <string name="foodlog_detail_carbs">Kolhydrater</string>
     <string name="foodlog_detail_fats">Fett</string>
@@ -1035,11 +1035,11 @@
     <string name="ring_colors_explained_subtitle">Ringfärger förklarade</string>
 
     <string name="ring_colors_green_title">Grön</string>
-    <string name="ring_colors_green_body">På mål (inom 100 kcal från målet)</string>
+    <string name="ring_colors_green_body">På mål (inom 100 kalorier från målet)</string>
     <string name="ring_colors_yellow_title">Brun</string>
-    <string name="ring_colors_yellow_body">100–199 kcal över ditt mål</string>
+    <string name="ring_colors_yellow_body">100–199 kalorier över ditt mål</string>
     <string name="ring_colors_red_title">Röd</string>
-    <string name="ring_colors_red_body">200+ kcal över ditt mål</string>
+    <string name="ring_colors_red_body">200+ kalorier över ditt mål</string>
     <string name="ring_colors_dotted_title">Prickad</string>
     <string name="ring_colors_dotted_body">Inga måltider loggade den dagen</string>
 

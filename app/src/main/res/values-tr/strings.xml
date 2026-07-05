@@ -180,7 +180,7 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">Her öğün değerli olsun!</string>
-    <string name="onboard_notif_subtitle">Öğünleri kaydetmen için nazik hatırlatmalar almak üzere bildirimleri aç. Böylece kalorilerin, makroların ve ilerlemen yolunda kalır.</string>
+    <string name="onboard_notif_subtitle">Öğünleri kaydetmen için nazik hatırlatmalar almak üzere bildirimleri aç. Böylece kalorilerin, makroların ve ilerlemen yolunda kalır. Aksamalar olabilir; zamanında gelen hatırlatmalar hızla yeniden düzene girmeni sağlar.</string>
     <string name="onboard_allow_notifications_cta">Bildirimlere izin ver</string>
     <string name="notification_mock_app_title">AI Kalori Sayacı</string>
     <string name="onboard_notif_title_got_a_sec">Öğünün kendini kaydetmeyecek 😉</string>
@@ -763,7 +763,7 @@
     <string name="foodlog_no_image">Görsel yok</string>
 
     <string name="foodlog_detail_title">Beslenme</string>
-    <string name="foodlog_detail_calories">kcal</string>
+    <string name="foodlog_detail_calories">Kalori</string>
     <string name="foodlog_detail_protein">Protein</string>
     <string name="foodlog_detail_carbs">Karbonhidrat</string>
     <string name="foodlog_detail_fats">Yağ</string>
@@ -1036,11 +1036,11 @@
     <string name="ring_colors_explained_subtitle">Halka Renkleri Açıklaması</string>
 
     <string name="ring_colors_green_title">Yeşil</string>
-    <string name="ring_colors_green_body">Hedefte (hedeften 100 kcal içinde)</string>
+    <string name="ring_colors_green_body">Hedefte (hedeften 100 kalori içinde)</string>
     <string name="ring_colors_yellow_title">Kahverengi</string>
-    <string name="ring_colors_yellow_body">Hedefin 100–199 kcal üzerinde</string>
+    <string name="ring_colors_yellow_body">Hedefin 100–199 kalori üzerinde</string>
     <string name="ring_colors_red_title">Kırmızı</string>
-    <string name="ring_colors_red_body">Hedefin 200+ kcal üzerinde</string>
+    <string name="ring_colors_red_body">Hedefin 200+ kalori üzerinde</string>
     <string name="ring_colors_dotted_title">Noktalı</string>
     <string name="ring_colors_dotted_body">O gün öğün kaydedilmemiş</string>
 

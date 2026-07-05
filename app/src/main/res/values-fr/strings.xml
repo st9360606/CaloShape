@@ -180,7 +180,7 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">Chaque repas compte !</string>
-    <string name="onboard_notif_subtitle">Recevez des rappels discrets au bon moment pour enregistrer vos repas, suivre vos calories et macros, et garder vos progrès visibles jour après jour.</string>
+    <string name="onboard_notif_subtitle">Activez les notifications pour recevoir de légers rappels afin d’enregistrer vos repas et garder vos calories, vos macros et vos progrès sur la bonne voie. Les écarts arrivent ; des rappels au bon moment vous aident à reprendre rapidement le rythme.</string>
     <string name="onboard_allow_notifications_cta">Autoriser les notifications</string>
     <string name="notification_mock_app_title">Compteur de calories IA</string>
     <string name="onboard_notif_title_got_a_sec">N’oubliez pas vos repas 😉</string>
@@ -763,7 +763,7 @@
     <string name="foodlog_no_image">Pas d’image</string>
 
     <string name="foodlog_detail_title">Nutrition</string>
-    <string name="foodlog_detail_calories">kcal</string>
+    <string name="foodlog_detail_calories">Calories</string>
     <string name="foodlog_detail_protein">Protéines</string>
     <string name="foodlog_detail_carbs">Glucides</string>
     <string name="foodlog_detail_fats">Lipides</string>
@@ -1036,11 +1036,11 @@
     <string name="ring_colors_explained_subtitle">Explication des couleurs des cercles</string>
 
     <string name="ring_colors_green_title">Vert</string>
-    <string name="ring_colors_green_body">Dans la cible (à moins de 100 kcal de l’objectif)</string>
+    <string name="ring_colors_green_body">Dans la cible (à moins de 100 calories de l’objectif)</string>
     <string name="ring_colors_yellow_title">Marron</string>
-    <string name="ring_colors_yellow_body">De 100 à 199 kcal au-dessus de l’objectif</string>
+    <string name="ring_colors_yellow_body">De 100 à 199 calories au-dessus de l’objectif</string>
     <string name="ring_colors_red_title">Rouge</string>
-    <string name="ring_colors_red_body">Plus de 200 kcal au-dessus de l’objectif</string>
+    <string name="ring_colors_red_body">200 calories ou plus au-dessus de l’objectif</string>
     <string name="ring_colors_dotted_title">Pointillé</string>
     <string name="ring_colors_dotted_body">Aucun repas enregistré ce jour-là</string>
 

@@ -180,7 +180,7 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">Faça cada refeição valer a pena!</string>
-    <string name="onboard_notif_subtitle">Ative notificações para receber lembretes suaves para registrar refeições — assim suas calorias, macros e progresso ficam no caminho certo.</string>
+    <string name="onboard_notif_subtitle">Ative as notificações para receber lembretes gentis de registrar as refeições — assim suas calorias, macros e seu progresso permanecem no caminho certo. Deslizes acontecem; lembretes na hora certa ajudam você a retomar rapidamente.</string>
     <string name="onboard_allow_notifications_cta">Permitir notificações</string>
     <string name="notification_mock_app_title">Contador de calorias com IA</string>
     <string name="onboard_notif_title_got_a_sec">Sua refeição não vai se registrar sozinha 😉</string>
@@ -763,7 +763,7 @@
     <string name="foodlog_no_image">Sem imagem</string>
 
     <string name="foodlog_detail_title">Nutrição</string>
-    <string name="foodlog_detail_calories">kcal</string>
+    <string name="foodlog_detail_calories">Calorias</string>
     <string name="foodlog_detail_protein">Proteína</string>
     <string name="foodlog_detail_carbs">Carboidratos</string>
     <string name="foodlog_detail_fats">Gorduras</string>
@@ -1036,11 +1036,11 @@
     <string name="ring_colors_explained_subtitle">Explicação das cores dos anéis</string>
 
     <string name="ring_colors_green_title">Verde</string>
-    <string name="ring_colors_green_body">Na meta (dentro de 100 kcal da meta)</string>
+    <string name="ring_colors_green_body">Na meta (dentro de 100 calorias da meta)</string>
     <string name="ring_colors_yellow_title">Marrom</string>
-    <string name="ring_colors_yellow_body">100–199 kcal acima da meta</string>
+    <string name="ring_colors_yellow_body">100–199 calorias acima da meta</string>
     <string name="ring_colors_red_title">Vermelho</string>
-    <string name="ring_colors_red_body">200+ kcal acima da meta</string>
+    <string name="ring_colors_red_body">200+ calorias acima da meta</string>
     <string name="ring_colors_dotted_title">Pontilhado</string>
     <string name="ring_colors_dotted_body">Nenhuma refeição registrada nesse dia</string>
 

@@ -1040,11 +1040,11 @@
     <string name="ring_colors_explained_subtitle">شرح ألوان الحلقات</string>
 
     <string name="ring_colors_green_title">أخضر</string>
-    <string name="ring_colors_green_body">ضمن الهدف (في حدود 100 kcal من الهدف)</string>
+    <string name="ring_colors_green_body">ضمن الهدف (في حدود 100 سعرة حرارية من الهدف)</string>
     <string name="ring_colors_yellow_title">بني</string>
-    <string name="ring_colors_yellow_body">100-199 kcal فوق هدفك</string>
+    <string name="ring_colors_yellow_body">100-199 سعرة حرارية فوق هدفك</string>
     <string name="ring_colors_red_title">أحمر</string>
-    <string name="ring_colors_red_body">200+ kcal فوق هدفك</string>
+    <string name="ring_colors_red_body">200+ سعرة حرارية فوق هدفك</string>
     <string name="ring_colors_dotted_title">منقط</string>
     <string name="ring_colors_dotted_body">لا توجد وجبات مسجلة في ذلك اليوم</string>
 

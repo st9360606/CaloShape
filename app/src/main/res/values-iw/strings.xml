@@ -37,7 +37,7 @@
     <string name="cta_retake">צלם שוב</string>
     <string name="cta_contact_support">צור קשר עם התמיכה</string>
     <string name="cta_rescan_barcode">סרוק ברקוד שוב</string>
-    <string name="landing_title">צלם תמונה וגלה את ה-kcal.</string>
+    <string name="landing_title">צלם תמונה וגלה את הקלוריות.</string>
     <string name="choose_language">בחר שפה</string>
     <string name="cta_get_started">התחל</string>
     <string name="cta_login_prefix">כבר יש לך חשבון?</string>
@@ -76,12 +76,12 @@
     <string name="onboard_other">אחר</string>
     <string name="onboard_referral_title">איך גילית אותנו?</string>
     <string name="onboard_age_title">בן כמה אתה?</string>
-    <string name="onboard_age_subtitle">אנחנו משתמשים בגיל שלך רק כדי לשפר את החוויה ואת דיוק הערכת ה-kcal.</string>
+    <string name="onboard_age_subtitle">אנחנו משתמשים בגיל שלך רק כדי לשפר את החוויה ואת דיוק הערכת הקלוריות.</string>
     <string name="onboard_height_title">מה הגובה שלך?</string>
-    <string name="onboard_height_subtitle">אנחנו משתמשים בנתונים שלך רק כדי לשפר את החוויה ואת הערכות ה-kcal.</string>
+    <string name="onboard_height_subtitle">אנחנו משתמשים בנתונים שלך רק כדי לשפר את החוויה ואת הערכות הקלוריות.</string>
     <string name="onboard_height_hint">המידע ישמש לכיול התוכנית האישית שלך.</string>
     <string name="onboard_weight_title">כמה אתה שוקל?</string>
-    <string name="onboard_weight_subtitle">אנחנו משתמשים בנתונים שלך רק כדי לשפר את החוויה ואת הערכות ה-kcal.</string>
+    <string name="onboard_weight_subtitle">אנחנו משתמשים בנתונים שלך רק כדי לשפר את החוויה ואת הערכות הקלוריות.</string>
     <string name="onboard_weight_hint">המידע ישמש לכיול התוכנית האישית שלך.</string>
     <string name="onboard_ex_freq_title">באיזו תדירות אתה מתאמן בכל שבוע?</string>
     <string name="onboard_ex_freq_subtitle">זה יעזור לכייל את התוכנית האישית שלך.</string>
@@ -96,13 +96,13 @@
     <string name="ex_freq_7_plus_title">7+</string>
     <string name="ex_freq_7_plus_sub">פעילות גבוהה מאוד</string>
     <string name="onboard_goal_title">מה המטרה שלך?</string>
-    <string name="onboard_goal_subtitle">זה עוזר לנו להתאים את תוכנית ה-kcal שלך.</string>
+    <string name="onboard_goal_subtitle">זה עוזר לנו להתאים את תוכנית הקלוריות שלך.</string>
     <string name="goal_lose">לרדת במשקל</string>
     <string name="goal_maintain">לשמור על המשקל</string>
     <string name="goal_gain">לעלות במשקל</string>
     <string name="goal_healthy_eating">לאכול בריא</string>
     <string name="onboard_goal_weight_title">מה משקל היעד שלך?</string>
-    <string name="onboard_goal_weight_subtitle">על סמך יעד זה ניצור עבורך המלצת kcal יומית מתאימה יותר.</string>
+    <string name="onboard_goal_weight_subtitle">על סמך יעד זה ניצור עבורך המלצת קלוריות יומית מתאימה יותר.</string>
     <string name="onboard_goal_weight_hint">המידע ישמש לכיול התוכנית האישית שלך.</string>
     <string name="onboard_weight_loss_comparison_title">השימוש ב-CaloShape AI יכול לשלש את יעילות
 הירידה במשקל שלך</string>
@@ -114,28 +114,28 @@ CaloShape AI</string>
     <string name="onboard_weight_loss_comparison_caption">CaloShape AI הופך הכול לפשוט
 ועוזר לך להישאר מחויב</string>
     <string name="onboard_notif_title">גרום לכל ארוחה להיחשב!</string>
-    <string name="onboard_notif_subtitle">הפעל התראות כדי לקבל תזכורות עדינות לרישום ארוחות—כך ה-kcal, המאקרו וההתקדמות שלך יישארו במסלול. פספוסים קורים; תזכורות בזמן עוזרות לחזור מהר למסלול.</string>
+    <string name="onboard_notif_subtitle">הפעל התראות כדי לקבל תזכורות עדינות לרישום ארוחות—כך הקלוריות, המאקרו וההתקדמות שלך יישארו במסלול. פספוסים קורים; תזכורות בזמן עוזרות לחזור מהר למסלול.</string>
     <string name="onboard_allow_notifications_cta">אפשר התראות</string>
-    <string name="notification_mock_app_title">מונה kcal מבוסס AI</string>
+    <string name="notification_mock_app_title">מונה קלוריות מבוסס AI</string>
     <string name="onboard_notif_title_got_a_sec">הארוחה שלך לא תירשם מעצמה 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">רשום את הארוחה הזו כדי לשמור על ה-kcal והמאקרו במסלול.</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">רשום את הארוחה הזו כדי לשמור על הקלוריות והמאקרו במסלול.</string>
     <string name="onboard_hc_connect_title_prefix">התחבר אל</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
     <string name="onboard_hc_connect_body">סנכרן פעילות יומית בין CaloShape AI לאפליקציות בריאות כדי לקבל רשומות ותובנות מלאות יותר.</string>
     <string name="onboard_hc_permission_rationale_title_prefix">למה CaloShape משתמש ב</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape קורא את הצעדים, ה-kcal הפעילים ונתוני האימון שלך כדי להעריך שריפת פעילות יומית, לעדכן את לוח ה-kcal ולשפר תובנות התקדמות. אפשר לבטל גישה בכל זמן ב-Health Connect.</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape קורא את הצעדים, הקלוריות הפעילים ונתוני האימון שלך כדי להעריך שריפת פעילות יומית, לעדכן את לוח הקלוריות ולשפר תובנות התקדמות. אפשר לבטל גישה בכל זמן ב-Health Connect.</string>
     <string name="onboard_hc_permission_rationale_button">הבנתי</string>
     <string name="progress_hero_title">יוצר את התוכנית האישית שלך</string>
     <string name="progress_hero_subtitle">אנחנו משתמשים ביעדים, בנתוני הגוף ובהעדפות שלך כדי להתאים את היעדים היומיים.</string>
     <string name="progress_footer_hint">זה לוקח רק רגע</string>
     <string name="progress_center_caption">מכינים את התוצאות שלך</string>
     <string name="progress_phase_pill_1">בודקים את הפרופיל שלך</string>
-    <string name="progress_phase_pill_2">מחשבים את יעד ה-kcal שלך</string>
+    <string name="progress_phase_pill_2">מחשבים את יעד הקלוריות שלך</string>
     <string name="progress_phase_pill_3">מאזנים את המאקרו היומיים</string>
     <string name="progress_phase_pill_4">מסיימים את תובנות הבריאות</string>
     <string name="progress_card_title">מגדירים את התוכנית שלך</string>
-    <string name="progress_row_calorie_target">יעד kcal יומי</string>
+    <string name="progress_row_calorie_target">יעד קלוריות יומי</string>
     <string name="progress_row_carb_distribution">חלוקת פחמימות</string>
     <string name="progress_row_protein_recommendation">המלצת חלבון</string>
     <string name="progress_row_fat_recommendation">המלצת שומן</string>
@@ -156,7 +156,7 @@ CaloShape AI</string>
 ליעדים שלך</string>
     <string name="plan_goal_card_health_scores">ציוני בריאות מנחים אותך, כדי שהרגלים ייווצרו בטבעיות</string>
     <string name="plan_goal_card_track_meals">רשום ארוחות בלחיצה אחת, קל להישאר עקבי</string>
-    <string name="plan_goal_card_daily_calories">ראה kcal יומיים בבירור ולעולם אל תאבד מעקב</string>
+    <string name="plan_goal_card_daily_calories">ראה קלוריות יומיים בבירור ולעולם אל תאבד מעקב</string>
     <string name="plan_goal_card_balance_macros">פחמימות × חלבון × שומן, איזון חכם ותוצאות טובות יותר</string>
     <string name="plan_sources_based_on">מבוסס על הנחיות תזונה רשמיות,
 לייחוס בלבד, לא ייעוץ רפואי.</string>
@@ -474,7 +474,7 @@ CaloShape AI</string>
     <string name="workout_tracker_estimating_fallback">מעריך…</string>
     <string name="workout_tracker_estimating_analyzing">מנתח את הפעילות שלך…</string>
     <string name="workout_tracker_estimating_numbers">עובד על המספרים שלך…</string>
-    <string name="workout_tracker_estimating_calories">מעריך מאמץ ומחשב kcal…</string>
+    <string name="workout_tracker_estimating_calories">מעריך מאמץ ומחשב קלוריות…</string>
     <string name="workout_tracker_do_not_close">אל תסגור את האפליקציה ואל תנעל את המכשיר</string>
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
     <string name="workout_tracker_minutes_activity">%1$d min %2$s</string>
@@ -545,7 +545,7 @@ CaloShape AI</string>
     <string name="foodlog_unknown_food">מזון לא ידוע</string>
     <string name="foodlog_no_image">אין תמונה</string>
     <string name="foodlog_detail_title">תזונה</string>
-    <string name="foodlog_detail_calories">kcal</string>
+    <string name="foodlog_detail_calories">קלוריות</string>
     <string name="foodlog_detail_protein">חלבון</string>
     <string name="foodlog_detail_carbs">פחמימות</string>
     <string name="foodlog_detail_fats">שומנים</string>
@@ -705,10 +705,10 @@ CaloShape AI</string>
     <string name="record_weight_take_photo">צלם תמונה</string>
     <string name="record_weight_retake_photo">צלם שוב</string>
     <string name="edit_height_title">ערוך את הגובה שלך</string>
-    <string name="edit_height_privacy_note">אנחנו משתמשים בגובה שלך רק כדי לשפר את החוויה ואת דיוק הערכת ה-kcal.</string>
+    <string name="edit_height_privacy_note">אנחנו משתמשים בגובה שלך רק כדי לשפר את החוויה ואת דיוק הערכת הקלוריות.</string>
     <string name="edit_height_saved_locally_sync_failed">שגיאת רשת. נשמר מקומית, אך הסנכרון נכשל.</string>
     <string name="edit_age_title">ערוך את הגיל שלך</string>
-    <string name="edit_age_privacy_note">אנחנו משתמשים בגיל שלך רק כדי לשפר את החוויה ואת דיוק הערכת ה-kcal.</string>
+    <string name="edit_age_privacy_note">אנחנו משתמשים בגיל שלך רק כדי לשפר את החוויה ואת דיוק הערכת הקלוריות.</string>
     <string name="edit_gender_title">ערוך את המגדר שלך</string>
     <string name="edit_gender_privacy_note">משמש רק להתאמה אישית ולשיפור דיוק ההערכות.</string>
     <string name="edit_starting_weight_title">ערוך משקל התחלתי</string>
@@ -724,7 +724,7 @@ CaloShape AI</string>
     <string name="edit_workout_goal_previous_format">יעד קודם %1$d kcal</string>
     <string name="edit_workout_goal_input_label">יעד אימון יומי (kcal)</string>
     <string name="edit_nutrition_goals_title">ערוך יעדי תזונה</string>
-    <string name="edit_nutrition_calorie_goal">יעד kcal</string>
+    <string name="edit_nutrition_calorie_goal">יעד קלוריות</string>
     <string name="edit_nutrition_protein_goal">יעד חלבון</string>
     <string name="edit_nutrition_carb_goal">יעד פחמימות</string>
     <string name="edit_nutrition_fat_goal">יעד שומן</string>
@@ -738,7 +738,7 @@ CaloShape AI</string>
     <string name="auto_generate_goals_failed_http_format">היצירה נכשלה (%1$d)</string>
     <string name="auto_generate_goals_network_error">שגיאת רשת, נסה שוב.</string>
     <string name="ring_colors_explained_title">צבעי טבעות תאריך</string>
-    <string name="ring_colors_explained_intro">טבעות תאריך עוזרות לראות במהירות איך כל יום ביחס ליעד ה-kcal שלך.</string>
+    <string name="ring_colors_explained_intro">טבעות תאריך עוזרות לראות במהירות איך כל יום ביחס ליעד הקלוריות שלך.</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">תצוגה מקדימה של טבעת תאריך</string>
     <string name="ring_colors_preview_day_5">5</string>
@@ -750,11 +750,11 @@ CaloShape AI</string>
     <string name="ring_colors_preview_day_11">11</string>
     <string name="ring_colors_explained_subtitle">הסבר צבעי הטבעות</string>
     <string name="ring_colors_green_title">ירוק</string>
-    <string name="ring_colors_green_body">בתוך היעד (בטווח של 100 kcal מהיעד)</string>
+    <string name="ring_colors_green_body">בתוך היעד (בטווח של 100 קלוריות מהיעד)</string>
     <string name="ring_colors_yellow_title">חום</string>
-    <string name="ring_colors_yellow_body">100–199 kcal מעל היעד שלך</string>
+    <string name="ring_colors_yellow_body">100–199 קלוריות מעל היעד שלך</string>
     <string name="ring_colors_red_title">אדום</string>
-    <string name="ring_colors_red_body">200+ kcal מעל היעד שלך</string>
+    <string name="ring_colors_red_body">200+ קלוריות מעל היעד שלך</string>
     <string name="ring_colors_dotted_title">מנוקד</string>
     <string name="ring_colors_dotted_body">לא נרשמו ארוחות באותו יום</string>
     <string name="notification_inbox_title">תיבת דואר נכנס</string>
@@ -770,7 +770,7 @@ CaloShape AI</string>
     <string name="notification_inbox_error_body">בדוק את החיבור ונסה שוב.</string>
     <string name="widget_guide_title">הוסף וידג׳ט</string>
     <string name="widget_guide_hero_title">הוסף את CaloShape למסך הבית</string>
-    <string name="widget_guide_hero_body">עקוב אחרי kcal, מאקרו ופעולות מהירות בלי לפתוח את האפליקציה.</string>
+    <string name="widget_guide_hero_body">עקוב אחרי קלוריות, מאקרו ופעולות מהירות בלי לפתוח את האפליקציה.</string>
     <string name="widget_guide_steps_title">בצע את השלבים האלה</string>
     <string name="widget_guide_step_1_title">לחץ לחיצה ארוכה על מסך הבית</string>
     <string name="widget_guide_step_1_body">לחץ והחזק אזור ריק במסך הבית של הטלפון עד שהתפריט יופיע.</string>

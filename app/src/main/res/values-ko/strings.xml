@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">사진 한 장으로 kcal를 확인하세요.</string>
+    <string name="landing_title">사진 한 장으로 칼로리를 확인하세요.</string>
     <string name="choose_language">언어 선택</string>
     <string name="cta_get_started">시작하기</string>
     <string name="cta_login_prefix">이미 계정이 있으신가요?</string>
@@ -125,18 +125,18 @@
 
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">나이가 어떻게 되시나요?</string>
-    <string name="onboard_age_subtitle">나이는 사용 경험과 kcal 추정 정확도를 높이는 데만 사용됩니다.</string>
+    <string name="onboard_age_subtitle">나이는 사용 경험과 칼로리 추정 정확도를 높이는 데만 사용됩니다.</string>
 
 
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">키가 어떻게 되시나요?</string>
-    <string name="onboard_height_subtitle">데이터는 사용 경험과 kcal 추정 개선에만 사용됩니다.</string>
+    <string name="onboard_height_subtitle">데이터는 사용 경험과 칼로리 추정 개선에만 사용됩니다.</string>
     <string name="onboard_height_hint">맞춤형 계획을 보정하는 데 사용됩니다.</string>
 
 
     <!-- Onboarding: WeightSelectionScreen -->
     <string name="onboard_weight_title">체중이 어떻게 되시나요?</string>
-    <string name="onboard_weight_subtitle">데이터는 사용 경험과 kcal 추정 개선에만 사용됩니다.</string>
+    <string name="onboard_weight_subtitle">데이터는 사용 경험과 칼로리 추정 개선에만 사용됩니다.</string>
     <string name="onboard_weight_hint">맞춤형 계획을 보정하는 데 사용됩니다.</string>
 
 
@@ -157,7 +157,7 @@
 
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">목표가 무엇인가요?</string>
-    <string name="onboard_goal_subtitle">kcal 계획을 맞춤 설정하는 데 도움이 됩니다.</string>
+    <string name="onboard_goal_subtitle">칼로리 계획을 맞춤 설정하는 데 도움이 됩니다.</string>
     <string name="goal_lose">체중 감량</string>
     <string name="goal_maintain">유지</string>
     <string name="goal_gain">체중 증가</string>
@@ -166,7 +166,7 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">목표 체중은 얼마인가요?</string>
-    <string name="onboard_goal_weight_subtitle">이 목표를 바탕으로 더 적합한 일일 kcal 권장량을 만들어 드립니다.</string>
+    <string name="onboard_goal_weight_subtitle">이 목표를 바탕으로 더 적합한 일일 칼로리 권장량을 만들어 드립니다.</string>
     <string name="onboard_goal_weight_hint">맞춤형 계획을 보정하는 데 사용됩니다.</string>
 
 
@@ -184,11 +184,11 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">매 끼니를 의미 있게 기록하세요!</string>
-    <string name="onboard_notif_subtitle">식사 기록 알림을 켜면 kcal, 매크로, 진행 상황을 목표에 맞게 유지할 수 있습니다. 실수는 누구에게나 생기지만, 적절한 알림이 빠르게 다시 돌아오도록 도와줍니다.</string>
+    <string name="onboard_notif_subtitle">식사 기록 알림을 켜면 칼로리, 매크로, 진행 상황을 목표에 맞게 유지할 수 있습니다. 실수는 누구에게나 생기지만, 적절한 알림이 빠르게 다시 돌아오도록 도와줍니다.</string>
     <string name="onboard_allow_notifications_cta">알림 허용</string>
-    <string name="notification_mock_app_title">AI kcal 카운터</string>
+    <string name="notification_mock_app_title">AI 칼로리 카운터</string>
     <string name="onboard_notif_title_got_a_sec">식사는 저절로 기록되지 않아요 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">kcal와 매크로를 목표에 맞게 유지하려면 이 식사를 기록하세요.</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">칼로리와 매크로를 목표에 맞게 유지하려면 이 식사를 기록하세요.</string>
 
 
     <!-- Onboarding: HealthConnectIntroScreen -->
@@ -197,7 +197,7 @@
     <string name="onboard_hc_connect_body">CaloShape AI와 건강 앱 간의 일일 활동을 동기화하여 더 완전한 기록과 인사이트를 얻으세요.</string>
     <string name="onboard_hc_permission_rationale_title_prefix">CaloShape가 사용하는 이유</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape는 걸음 수, 활동 kcal, 운동 데이터를 읽어 일일 활동 소모량을 추정하고 kcal 대시보드를 업데이트하며 진행 인사이트를 개선합니다. Health Connect에서 언제든지 접근 권한을 취소할 수 있습니다.</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape는 걸음 수, 활동 칼로리, 운동 데이터를 읽어 일일 활동 소모량을 추정하고 칼로리 대시보드를 업데이트하며 진행 인사이트를 개선합니다. Health Connect에서 언제든지 접근 권한을 취소할 수 있습니다.</string>
     <string name="onboard_hc_permission_rationale_button">알겠습니다</string>
 
 
@@ -207,11 +207,11 @@
     <string name="progress_footer_hint">잠시만 기다려 주세요</string>
     <string name="progress_center_caption">결과 준비 중</string>
     <string name="progress_phase_pill_1">프로필 검토 중</string>
-    <string name="progress_phase_pill_2">kcal 목표 계산 중</string>
+    <string name="progress_phase_pill_2">칼로리 목표 계산 중</string>
     <string name="progress_phase_pill_3">일일 매크로 균형 조정 중</string>
     <string name="progress_phase_pill_4">건강 인사이트 마무리 중</string>
     <string name="progress_card_title">계획 설정 중</string>
-    <string name="progress_row_calorie_target">일일 kcal 목표</string>
+    <string name="progress_row_calorie_target">일일 칼로리 목표</string>
     <string name="progress_row_carb_distribution">탄수화물 배분</string>
     <string name="progress_row_protein_recommendation">단백질 권장량</string>
     <string name="progress_row_fat_recommendation">지방 권장량</string>
@@ -238,7 +238,7 @@
 방법</string>
     <string name="plan_goal_card_health_scores">건강 점수가 자연스럽게 습관을 만들도록 안내합니다</string>
     <string name="plan_goal_card_track_meals">한 번의 탭으로 식사를 기록해 꾸준함을 쉽게 유지하세요</string>
-    <string name="plan_goal_card_daily_calories">일일 kcal를 명확히 보고 목표를 놓치지 마세요</string>
+    <string name="plan_goal_card_daily_calories">일일 칼로리를 명확히 보고 목표를 놓치지 마세요</string>
     <string name="plan_goal_card_balance_macros">탄수화물 × 단백질 × 지방, 스마트한 균형으로 더 나은 결과를 만드세요</string>
     <string name="plan_sources_based_on">공식 식단 가이드라인을 기반으로 하며,
 참고용일 뿐 의료 조언이 아닙니다.</string>
@@ -675,7 +675,7 @@
     <string name="workout_tracker_estimating_fallback">추정 중…</string>
     <string name="workout_tracker_estimating_analyzing">활동 분석 중…</string>
     <string name="workout_tracker_estimating_numbers">수치를 계산 중…</string>
-    <string name="workout_tracker_estimating_calories">운동 강도를 추정하고 kcal를 계산 중…</string>
+    <string name="workout_tracker_estimating_calories">운동 강도를 추정하고 칼로리를 계산 중…</string>
     <string name="workout_tracker_do_not_close">앱을 닫거나 기기를 잠그지 마세요</string>
 
     <string name="workout_tracker_kcal_value">%1$d kcal</string>
@@ -774,7 +774,7 @@
     <string name="foodlog_no_image">이미지 없음</string>
 
     <string name="foodlog_detail_title">영양</string>
-    <string name="foodlog_detail_calories">kcal</string>
+    <string name="foodlog_detail_calories">칼로리</string>
     <string name="foodlog_detail_protein">단백질</string>
     <string name="foodlog_detail_carbs">탄수화물</string>
     <string name="foodlog_detail_fats">지방</string>
@@ -980,13 +980,13 @@
 
     <!-- EditHeightScreen -->
     <string name="edit_height_title">키 수정</string>
-    <string name="edit_height_privacy_note">키는 사용 경험과 kcal 추정 정확도 향상에만 사용됩니다.</string>
+    <string name="edit_height_privacy_note">키는 사용 경험과 칼로리 추정 정확도 향상에만 사용됩니다.</string>
     <string name="edit_height_saved_locally_sync_failed">네트워크 오류. 로컬에는 저장되었지만 동기화에 실패했습니다.</string>
 
 
     <!-- EditAgeScreen -->
     <string name="edit_age_title">나이 수정</string>
-    <string name="edit_age_privacy_note">나이는 사용 경험과 kcal 추정 정확도 향상에만 사용됩니다.</string>
+    <string name="edit_age_privacy_note">나이는 사용 경험과 칼로리 추정 정확도 향상에만 사용됩니다.</string>
 
 
     <!-- EditGenderScreen -->
@@ -1020,7 +1020,7 @@
 
     <!-- EditNutritionGoalsScreen -->
     <string name="edit_nutrition_goals_title">영양 목표 수정</string>
-    <string name="edit_nutrition_calorie_goal">kcal 목표</string>
+    <string name="edit_nutrition_calorie_goal">칼로리 목표</string>
     <string name="edit_nutrition_protein_goal">단백질 목표</string>
     <string name="edit_nutrition_carb_goal">탄수화물 목표</string>
     <string name="edit_nutrition_fat_goal">지방 목표</string>
@@ -1037,7 +1037,7 @@
 
     <!-- RingColorsExplainedScreen -->
     <string name="ring_colors_explained_title">날짜 링 색상</string>
-    <string name="ring_colors_explained_intro">날짜 링은 각 날짜가 kcal 목표와 어떻게 비교되는지 빠르게 보여줍니다.</string>
+    <string name="ring_colors_explained_intro">날짜 링은 각 날짜가 칼로리 목표와 어떻게 비교되는지 빠르게 보여줍니다.</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">날짜 링 미리보기</string>
 
@@ -1051,11 +1051,11 @@
     <string name="ring_colors_explained_subtitle">링 색상 설명</string>
 
     <string name="ring_colors_green_title">초록</string>
-    <string name="ring_colors_green_body">목표 범위 내 (목표에서 100 kcal 이내)</string>
+    <string name="ring_colors_green_body">목표 범위 내 (목표에서 100 칼로리 이내)</string>
     <string name="ring_colors_yellow_title">갈색</string>
-    <string name="ring_colors_yellow_body">목표보다 100-199 kcal 초과</string>
+    <string name="ring_colors_yellow_body">목표보다 100-199 칼로리 초과</string>
     <string name="ring_colors_red_title">빨강</string>
-    <string name="ring_colors_red_body">목표보다 200+ kcal 초과</string>
+    <string name="ring_colors_red_body">목표보다 200+ 칼로리 초과</string>
     <string name="ring_colors_dotted_title">점선</string>
     <string name="ring_colors_dotted_body">그날 기록된 식사가 없음</string>
 
@@ -1078,7 +1078,7 @@
     <!-- WidgetGuideScreen -->
     <string name="widget_guide_title">위젯 추가</string>
     <string name="widget_guide_hero_title">홈 화면에 CaloShape 추가</string>
-    <string name="widget_guide_hero_body">앱을 열지 않고 kcal, 매크로, 빠른 작업을 추적하세요.</string>
+    <string name="widget_guide_hero_body">앱을 열지 않고 칼로리, 매크로, 빠른 작업을 추적하세요.</string>
     <string name="widget_guide_steps_title">다음 단계를 따르세요</string>
     <string name="widget_guide_step_1_title">홈 화면을 길게 누르기</string>
     <string name="widget_guide_step_1_body">메뉴가 나타날 때까지 휴대폰 홈 화면의 빈 공간을 길게 누르세요.</string>

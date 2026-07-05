@@ -726,7 +726,6 @@ fun HomeScreen(
                 Spacer(Modifier.height(5.dp))
 
                 StepsWorkoutRowModern(
-                    summary = s,
                     workoutTotalKcalOverride = workoutSessionKcalToday,
                     stepsOverride = stepsToday,
                     activeKcalOverride = activeKcalToday,

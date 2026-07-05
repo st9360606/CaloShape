@@ -180,7 +180,7 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">Niech każdy posiłek ma znaczenie!</string>
-    <string name="onboard_notif_subtitle">Włącz powiadomienia, aby otrzymywać delikatne przypomnienia o zapisywaniu posiłków — dzięki temu kalorie, makroskładniki i postępy pozostaną pod kontrolą.</string>
+    <string name="onboard_notif_subtitle">Włącz powiadomienia, aby otrzymywać delikatne przypomnienia o zapisywaniu posiłków — dzięki temu kalorie, makroskładniki i postępy pozostaną pod kontrolą. Potknięcia się zdarzają; przypomnienia we właściwym momencie pomagają szybko wrócić na właściwy tor.</string>
     <string name="onboard_allow_notifications_cta">Zezwól na powiadomienia</string>
     <string name="notification_mock_app_title">Licznik kalorii AI</string>
     <string name="onboard_notif_title_got_a_sec">Posiłek sam się nie zapisze 😉</string>
@@ -763,7 +763,7 @@
     <string name="foodlog_no_image">Brak obrazu</string>
 
     <string name="foodlog_detail_title">Odżywianie</string>
-    <string name="foodlog_detail_calories">kcal</string>
+    <string name="foodlog_detail_calories">Kalorie</string>
     <string name="foodlog_detail_protein">Białko</string>
     <string name="foodlog_detail_carbs">Węglowodany</string>
     <string name="foodlog_detail_fats">Tłuszcze</string>
@@ -1036,11 +1036,11 @@
     <string name="ring_colors_explained_subtitle">Wyjaśnienie kolorów pierścieni</string>
 
     <string name="ring_colors_green_title">Zielony</string>
-    <string name="ring_colors_green_body">W celu (w granicy 100 kcal od celu)</string>
+    <string name="ring_colors_green_body">W celu (w granicy 100 kalorii od celu)</string>
     <string name="ring_colors_yellow_title">Brązowy</string>
-    <string name="ring_colors_yellow_body">100–199 kcal ponad cel</string>
+    <string name="ring_colors_yellow_body">100–199 kalorii ponad cel</string>
     <string name="ring_colors_red_title">Czerwony</string>
-    <string name="ring_colors_red_body">200+ kcal ponad cel</string>
+    <string name="ring_colors_red_body">200+ kalorii ponad cel</string>
     <string name="ring_colors_dotted_title">Kropkowany</string>
     <string name="ring_colors_dotted_body">Brak zapisanych posiłków tego dnia</string>
 

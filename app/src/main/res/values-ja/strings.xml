@@ -773,7 +773,7 @@
     <string name="foodlog_no_image">画像なし</string>
 
     <string name="foodlog_detail_title">栄養</string>
-    <string name="foodlog_detail_calories">kcal</string>
+    <string name="foodlog_detail_calories">カロリー</string>
     <string name="foodlog_detail_protein">タンパク質</string>
     <string name="foodlog_detail_carbs">炭水化物</string>
     <string name="foodlog_detail_fats">脂質</string>
@@ -1050,11 +1050,11 @@
     <string name="ring_colors_explained_subtitle">リング色の説明</string>
 
     <string name="ring_colors_green_title">緑</string>
-    <string name="ring_colors_green_body">目標内（目標から100 kcal以内）</string>
+    <string name="ring_colors_green_body">目標内（目標から100 カロリー以内）</string>
     <string name="ring_colors_yellow_title">茶色</string>
-    <string name="ring_colors_yellow_body">目標を100〜199 kcal超過</string>
+    <string name="ring_colors_yellow_body">目標を100〜199 カロリー超過</string>
     <string name="ring_colors_red_title">赤</string>
-    <string name="ring_colors_red_body">目標を200 kcal以上超過</string>
+    <string name="ring_colors_red_body">目標を200 カロリー以上超過</string>
     <string name="ring_colors_dotted_title">点線</string>
     <string name="ring_colors_dotted_body">その日に食事記録がありません</string>
 

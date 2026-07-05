@@ -180,7 +180,7 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">ให้ทุกมื้อมีความหมาย!</string>
-    <string name="onboard_notif_subtitle">เปิดการแจ้งเตือนเพื่อรับการเตือนเบา ๆ ให้บันทึกมื้ออาหาร เพื่อให้แคลอรี มาโคร และความคืบหน้าอยู่ในแผน</string>
+    <string name="onboard_notif_subtitle">เปิดการแจ้งเตือนเพื่อรับคำเตือนเบา ๆ ให้บันทึกมื้ออาหาร เพื่อให้แคลอรี มาโคร และความคืบหน้าอยู่ในแผน การพลาดบ้างเป็นเรื่องปกติ การเตือนที่ถูกเวลาช่วยให้คุณกลับมาได้อย่างรวดเร็ว</string>
     <string name="onboard_allow_notifications_cta">อนุญาตการแจ้งเตือน</string>
     <string name="notification_mock_app_title">ตัวนับแคลอรี AI</string>
     <string name="onboard_notif_title_got_a_sec">มื้ออาหารจะไม่บันทึกตัวเอง 😉</string>
@@ -763,7 +763,7 @@
     <string name="foodlog_no_image">ไม่มีรูปภาพ</string>
 
     <string name="foodlog_detail_title">โภชนาการ</string>
-    <string name="foodlog_detail_calories">kcal</string>
+    <string name="foodlog_detail_calories">แคลอรี</string>
     <string name="foodlog_detail_protein">โปรตีน</string>
     <string name="foodlog_detail_carbs">คาร์บ</string>
     <string name="foodlog_detail_fats">ไขมัน</string>
@@ -1036,11 +1036,11 @@
     <string name="ring_colors_explained_subtitle">คำอธิบายสีวงแหวน</string>
 
     <string name="ring_colors_green_title">เขียว</string>
-    <string name="ring_colors_green_body">อยู่ในเป้าหมาย (ภายใน 100 kcal จากเป้าหมาย)</string>
+    <string name="ring_colors_green_body">อยู่ในเป้าหมาย (ภายใน 100 แคลอรี จากเป้าหมาย)</string>
     <string name="ring_colors_yellow_title">น้ำตาล</string>
-    <string name="ring_colors_yellow_body">เกินเป้าหมาย 100–199 kcal</string>
+    <string name="ring_colors_yellow_body">เกินเป้าหมาย 100–199 แคลอรี</string>
     <string name="ring_colors_red_title">แดง</string>
-    <string name="ring_colors_red_body">เกินเป้าหมาย 200+ kcal</string>
+    <string name="ring_colors_red_body">เกินเป้าหมาย 200+ แคลอรี</string>
     <string name="ring_colors_dotted_title">เส้นประ</string>
     <string name="ring_colors_dotted_body">ไม่มีการบันทึกมื้ออาหารในวันนั้น</string>
 
