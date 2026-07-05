@@ -241,7 +241,7 @@
 
 
     <!-- Onboarding: OnboardReferralCodeScreen -->
-    <string name="onboard_referral_code_input">Voer verwijzingscode in\n(optioneel)</string>
+    <string name="onboard_referral_code_input">Uitnodigingscode\n(optioneel)</string>
     <string name="onboard_referral_code_subtitle">Je kunt deze stap overslaan</string>
     <string name="onboard_referral_code_input_label">Verwijzingscode</string>
     <string name="onboard_referral_code_placeholder">Verwijzingscode</string>
@@ -261,8 +261,8 @@
 
 
     <!-- Onboarding: OnboardSubscriptionScreen  Paywall -->
-    <string name="subscription_price_per_month_format">%1$s/maand</string>
-    <string name="subscription_price_per_month_unit">/maand</string>
+    <string name="subscription_price_per_month_format">%1$s/mnd</string>
+    <string name="subscription_price_per_month_unit">/mnd</string>
     <string name="subscription_price_unavailable_title">Prijs niet beschikbaar</string>
     <string name="subscription_price_unavailable_body">We konden je lokale Google Play-prijs nu niet ophalen. Probeer het opnieuw.</string>
 
@@ -271,7 +271,7 @@
     <string name="subscription_intro_title">Ontgrendel CaloShape AI om\nje doelen sneller te bereiken.</string>
     <string name="subscription_intro_helper_format">Slechts %1$s per jaar (%2$s)</string>
     <string name="subscription_start_three_day_free_trial">Probeer 3 dagen gratis</string>
-    <string name="subscription_three_day_trial_helper_format">Slechts %1$s/jaar (%2$s/maand)</string>
+    <string name="subscription_three_day_trial_helper_format">%1$s/jaar · %2$s/maand</string>
     <string name="subscription_already_owned_restore_required">Je Google Play-account heeft al een actief CaloShape-abonnement. Herstel dit naar dit CaloShape-account voordat je premiumfuncties gebruikt.</string>
     <string name="subscription_error_no_active_purchase">Geen actieve aankoop gevonden.</string>
     <string name="subscription_error_restore_failed">Aankoop kon niet worden hersteld. Probeer het opnieuw.</string>
@@ -313,11 +313,11 @@
     <string name="subscription_badge_free_trial">Gratis proefperiode</string>
     <string name="subscription_badge_lowest_price_ever">Laagste prijs ooit</string>
     <string name="subscription_yearly_plan">Jaarplan</string>
-    <string name="subscription_yearly_plan_price_format">12 maanden · %1$s</string>
+    <string name="subscription_yearly_plan_price_format">Jaar · %1$s</string>
 
     <string name="subscription_start_free_trial">Probeer 3 dagen gratis</string>
     <string name="subscription_trial_helper">Geen verplichting — op elk moment opzegbaar</string>
-    <string name="subscription_discount_terms_format">Slechts %1$s/jaar (%2$s/maand)</string>
+    <string name="subscription_discount_terms_format">%1$s/jaar · %2$s/maand</string>
     <string name="subscription_discount_trial_terms_format">Geen verplichting - op elk moment opzegbaar</string>
 
 
