@@ -455,7 +455,7 @@
     <string name="progress_chart_loading_total_calories_text">--.- kcal</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
-    <string name="progress_chart_total_calories">कुल kcal</string>
+    <string name="progress_chart_total_calories">कुल कैलोरी</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">प्रोटीन</string>
     <string name="progress_legend_carbs">कार्ब्स</string>
@@ -542,7 +542,7 @@
     <string name="progress_average_overview_subtitle">आज को छोड़ता है और केवल डेटा वाले दिनों का औसत निकालता है।</string>
     <string name="progress_average_days_badge">%1$d-दिन औसत</string>
     <string name="progress_average_loading">औसत लोड हो रहे हैं…</string>
-    <string name="progress_average_total_calories">कुल kcal</string>
+    <string name="progress_average_total_calories">कुल कैलोरी</string>
     <string name="progress_average_protein">प्रोटीन</string>
     <string name="progress_average_carbs">कार्ब्स</string>
     <string name="progress_average_fats">फैट</string>

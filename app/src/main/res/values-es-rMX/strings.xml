@@ -338,8 +338,8 @@
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">kcal restantes</string>
-    <string name="home_calories_eaten_label">kcal consumidas</string>
+    <string name="home_calories_goal_label">Calorías restantes</string>
+    <string name="home_calories_eaten_label">Calorías consumidas</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
@@ -455,7 +455,7 @@
     <string name="progress_chart_loading_total_calories_text">--.- kcal</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
-    <string name="progress_chart_total_calories">kcal totales</string>
+    <string name="progress_chart_total_calories">Calorías totales</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Proteína</string>
     <string name="progress_legend_carbs">Carbohidratos</string>
@@ -542,7 +542,7 @@
     <string name="progress_average_overview_subtitle">Excluye hoy y promedia solo los días con datos.</string>
     <string name="progress_average_days_badge">Prom. %1$d días</string>
     <string name="progress_average_loading">Cargando promedios…</string>
-    <string name="progress_average_total_calories">kcal totales</string>
+    <string name="progress_average_total_calories">Calorías totales</string>
     <string name="progress_average_protein">Proteína</string>
     <string name="progress_average_carbs">Carbohidratos</string>
     <string name="progress_average_fats">Grasas</string>

@@ -338,8 +338,8 @@
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">kcal jäljellä</string>
-    <string name="home_calories_eaten_label">kcal syöty</string>
+    <string name="home_calories_goal_label">Kalorit jäljellä</string>
+    <string name="home_calories_eaten_label">Kalorit syöty</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
@@ -455,7 +455,7 @@
     <string name="progress_chart_loading_total_calories_text">--.- kcal</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
-    <string name="progress_chart_total_calories">kcal yhteensä</string>
+    <string name="progress_chart_total_calories">Kalorit yhteensä</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Proteiini</string>
     <string name="progress_legend_carbs">Hiilihydraatit</string>
@@ -542,7 +542,7 @@
     <string name="progress_average_overview_subtitle">Jättää tämän päivän pois ja laskee keskiarvon vain päivistä, joilla on tietoja.</string>
     <string name="progress_average_days_badge">%1$d päivän ka.</string>
     <string name="progress_average_loading">Ladataan keskiarvoja…</string>
-    <string name="progress_average_total_calories">kcal yhteensä</string>
+    <string name="progress_average_total_calories">Kalorit yhteensä</string>
     <string name="progress_average_protein">Proteiini</string>
     <string name="progress_average_carbs">Hiilihydraatit</string>
     <string name="progress_average_fats">Rasvat</string>

@@ -338,8 +338,8 @@
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">Kalan kcal</string>
-    <string name="home_calories_eaten_label">Alınan kcal</string>
+    <string name="home_calories_goal_label">Kalan kalori</string>
+    <string name="home_calories_eaten_label">Alınan kalori</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
@@ -455,7 +455,7 @@
     <string name="progress_chart_loading_total_calories_text">--.- kcal</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
-    <string name="progress_chart_total_calories">Toplam kcal</string>
+    <string name="progress_chart_total_calories">Toplam kalori</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Protein</string>
     <string name="progress_legend_carbs">Karbonhidrat</string>
@@ -542,7 +542,7 @@
     <string name="progress_average_overview_subtitle">Bugünü hariç tutar ve yalnızca veri olan günlerin ortalamasını alır.</string>
     <string name="progress_average_days_badge">%1$d günlük ort.</string>
     <string name="progress_average_loading">Ortalamalar yükleniyor…</string>
-    <string name="progress_average_total_calories">Toplam kcal</string>
+    <string name="progress_average_total_calories">Toplam kalori</string>
     <string name="progress_average_protein">Protein</string>
     <string name="progress_average_carbs">Karbonhidrat</string>
     <string name="progress_average_fats">Yağ</string>

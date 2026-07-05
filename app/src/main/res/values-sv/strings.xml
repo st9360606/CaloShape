@@ -338,9 +338,8 @@
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">kcal kvar</string>
-    <string name="home_calories_eaten_label">kcal intagna</string>
-
+    <string name="home_calories_goal_label">Kalorier kvar</string>
+    <string name="home_calories_eaten_label">Kalorier intaget</string>
 
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
@@ -455,7 +454,7 @@
     <string name="progress_chart_loading_total_calories_text">--.- kcal</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
-    <string name="progress_chart_total_calories">Totalt kcal</string>
+    <string name="progress_chart_total_calories">Totala kalorier</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Protein</string>
     <string name="progress_legend_carbs">Kolhydrater</string>
@@ -542,7 +541,7 @@
     <string name="progress_average_overview_subtitle">Exkluderar i dag och beräknar snitt endast för dagar med data.</string>
     <string name="progress_average_days_badge">%1$d-dagars snitt</string>
     <string name="progress_average_loading">Läser in snitt…</string>
-    <string name="progress_average_total_calories">Totalt kcal</string>
+    <string name="progress_average_total_calories">Totala kalorier</string>
     <string name="progress_average_protein">Protein</string>
     <string name="progress_average_carbs">Kolhydrater</string>
     <string name="progress_average_fats">Fett</string>

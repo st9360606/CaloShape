@@ -542,7 +542,7 @@
     <string name="progress_average_overview_subtitle">Exclut aujourd’hui et calcule la moyenne uniquement pour les jours contenant des données.</string>
     <string name="progress_average_days_badge">Moy. %1$d jours</string>
     <string name="progress_average_loading">Chargement des moyennes…</string>
-    <string name="progress_average_total_calories">Total des calories</string>
+    <string name="progress_average_total_calories">Calories totales</string>
     <string name="progress_average_protein">Protéines</string>
     <string name="progress_average_carbs">Glucides</string>
     <string name="progress_average_fats">Lipides</string>

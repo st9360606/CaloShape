@@ -338,8 +338,8 @@
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">kcal over</string>
-    <string name="home_calories_eaten_label">kcal gegeten</string>
+    <string name="home_calories_goal_label">Calorieën over</string>
+    <string name="home_calories_eaten_label">Calorieën gegeten</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
@@ -542,7 +542,7 @@
     <string name="progress_average_overview_subtitle">Vandaag telt niet mee. Alleen dagen met gegevens worden gemiddeld.</string>
     <string name="progress_average_days_badge">%1$d-daags gem.</string>
     <string name="progress_average_loading">Gemiddelden laden…</string>
-    <string name="progress_average_total_calories">Totale kcal</string>
+    <string name="progress_average_total_calories">Totale calorieën</string>
     <string name="progress_average_protein">Eiwit</string>
     <string name="progress_average_carbs">Koolhydraten</string>
     <string name="progress_average_fats">Vetten</string>

@@ -466,7 +466,7 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="progress_chart_loading_total_calories_text">--.- kcal</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
-    <string name="progress_chart_total_calories">Total kcal</string>
+    <string name="progress_chart_total_calories">Total kalori</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Protein</string>
     <string name="progress_legend_carbs">Karbohidrat</string>
@@ -553,7 +553,7 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="progress_average_overview_subtitle">Mengecualikan hari ini dan menghitung rata-rata hanya dari hari yang memiliki data.</string>
     <string name="progress_average_days_badge">Rata-rata %1$d hari</string>
     <string name="progress_average_loading">Memuat rata-rata…</string>
-    <string name="progress_average_total_calories">Total kcal</string>
+    <string name="progress_average_total_calories">Total kalori</string>
     <string name="progress_average_protein">Protein</string>
     <string name="progress_average_carbs">Karbohidrat</string>
     <string name="progress_average_fats">Lemak</string>

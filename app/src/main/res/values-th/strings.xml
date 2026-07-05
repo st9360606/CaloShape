@@ -338,8 +338,8 @@
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">kcal ที่เหลือ</string>
-    <string name="home_calories_eaten_label">kcal ที่กินแล้ว</string>
+    <string name="home_calories_goal_label">แคลอรีที่เหลือ</string>
+    <string name="home_calories_eaten_label">แคลอรีที่กินแล้ว</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
@@ -455,7 +455,7 @@
     <string name="progress_chart_loading_total_calories_text">--.- kcal</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
-    <string name="progress_chart_total_calories">kcal รวม</string>
+    <string name="progress_chart_total_calories">แคลอรีรวม</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">โปรตีน</string>
     <string name="progress_legend_carbs">คาร์บ</string>
@@ -542,7 +542,7 @@
     <string name="progress_average_overview_subtitle">ไม่รวมวันนี้ และคำนวณเฉลี่ยเฉพาะวันที่มีข้อมูล</string>
     <string name="progress_average_days_badge">เฉลี่ย %1$d วัน</string>
     <string name="progress_average_loading">กำลังโหลดค่าเฉลี่ย…</string>
-    <string name="progress_average_total_calories">kcal รวม</string>
+    <string name="progress_average_total_calories">แคลอรีรวม</string>
     <string name="progress_average_protein">โปรตีน</string>
     <string name="progress_average_carbs">คาร์บ</string>
     <string name="progress_average_fats">ไขมัน</string>
