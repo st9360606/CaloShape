@@ -72,7 +72,6 @@ private val FatsColor = Color(0xFF6C93D8)
 @Composable
 internal fun NutritionChartCard(
     totalCaloriesText: String,
-    deltaText: String,
     average7Calories: Int,
     average15Calories: Int,
     days: List<ProgressBarDayUi>,
@@ -80,7 +79,6 @@ internal fun NutritionChartCard(
 ) {
     ProgressChartCardFrame(
         totalCaloriesText = totalCaloriesText,
-        deltaText = deltaText,
         average7Label = stringResource(R.string.progress_chart_7day_avg_calories),
         average7Value = stringResource(R.string.progress_chart_value_cals, average7Calories),
         average15Label = stringResource(R.string.progress_chart_15day_avg_calories),
@@ -97,9 +95,6 @@ internal fun LoadingCard(
 ) {
     ProgressChartCardFrame(
         totalCaloriesText = stringResource(R.string.progress_chart_loading_total_calories_text),
-        deltaText = "--",
-        deltaDisplayText = stringResource(R.string.progress_chart_loading_delta),
-        deltaColorOverride = Color(0xFF33A144),
         modifier = modifier
     ) {
         LoadingChartPlaceholder()
@@ -170,10 +165,7 @@ private fun resolveCaloriesValueText(totalCaloriesText: String): String {
 @Composable
 private fun ProgressChartCardFrame(
     totalCaloriesText: String,
-    deltaText: String,
     modifier: Modifier = Modifier,
-    deltaDisplayText: String? = null,
-    deltaColorOverride: Color? = null,
     average7Label: String? = null,
     average7Value: String? = null,
     average15Label: String? = null,
@@ -183,14 +175,6 @@ private fun ProgressChartCardFrame(
     val valueText = resolveCaloriesValueText(totalCaloriesText)
     val colors = CaloShapeColors.current()
     val isDark = colors.background == CaloShapeColors.Dark.background
-
-    val resolvedDeltaText = deltaDisplayText ?: if (deltaText == "--") {
-        stringResource(R.string.progress_chart_delta_placeholder)
-    } else {
-        deltaText
-    }
-
-    val resolvedDeltaColor = deltaColorOverride ?: resolveDeltaColor(resolvedDeltaText)
 
     Box(
         modifier = modifier
@@ -244,15 +228,6 @@ private fun ProgressChartCardFrame(
                             modifier = Modifier.padding(bottom = 4.dp)
                         )
 
-                        Spacer(modifier = Modifier.width(6.dp))
-
-                        Text(
-                            text = resolvedDeltaText,
-                            color = resolvedDeltaColor,
-                            fontSize = 17.sp,
-                            fontWeight = FontWeight.ExtraBold,
-                            modifier = Modifier.padding(bottom = 4.dp)
-                        )
                     }
                 }
 
@@ -265,6 +240,7 @@ private fun ProgressChartCardFrame(
                     Spacer(modifier = Modifier.width(12.dp))
 
                     Column(
+                        modifier = Modifier.offset(x = 12.dp),
                         horizontalAlignment = Alignment.End,
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
@@ -955,16 +931,6 @@ private fun LoadingChartPlaceholder() {
                 )
             }
         }
-    }
-}
-
-private fun resolveDeltaColor(resolvedDeltaText: String): Color {
-    val normalized = resolvedDeltaText.trim()
-
-    return when {
-        normalized.startsWith("↑") -> Color(0xFFE56C6C)
-        normalized.startsWith("↓") -> Color(0xFF329A3F)
-        else -> Color(0xFF74747A)
     }
 }
 

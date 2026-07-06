@@ -21,6 +21,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
@@ -478,57 +479,55 @@ private fun SuccessContent(
 ) {
     val displayTitle = item.title.ifBlank { stringResource(R.string.foodlog_analysis_done) }
 
-    Column(
-        modifier = Modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.Center
+    Box(
+        modifier = Modifier.fillMaxSize()
     ) {
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Center
         ) {
             Text(
                 text = displayTitle,
                 style = TitleTextStyle.copy(color = HomeCardStyles.Text.primary()),
                 maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
+
+            Spacer(modifier = Modifier.height(7.dp))
+
+            Text(
+                text = stringResource(R.string.recent_upload_kcal_text, item.kcal),
+                style = KcalTextStyle.copy(color = HomeCardStyles.Text.primary()),
+                maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f)
+                modifier = Modifier
+                    .offset(x = (-2).dp)
+                    .testTag("recent_upload_kcal")
             )
 
-            Spacer(modifier = Modifier.width(8.dp))
+            Spacer(modifier = Modifier.height(13.dp))
 
-            RecentUploadTimeChip(
-                timeText = item.timeText
-            )
-        }
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(12.dp, Alignment.Start),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                MacroText(
+                    text = stringResource(R.string.recent_upload_protein_text, item.proteinG)
+                )
+                MacroText(
+                    text = stringResource(R.string.recent_upload_carbs_text, item.carbsG)
+                )
+                MacroText(
+                    text = stringResource(R.string.recent_upload_fat_text, item.fatG)
+                )
 
-        Spacer(modifier = Modifier.height(7.dp))
+                Spacer(modifier = Modifier.weight(1f))
 
-        Text(
-            text = stringResource(R.string.recent_upload_kcal_text, item.kcal),
-            style = KcalTextStyle.copy(color = HomeCardStyles.Text.primary()),
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-            modifier = Modifier
-                .offset(x = (-2).dp)
-                .testTag("recent_upload_kcal")
-        )
-
-        Spacer(modifier = Modifier.height(13.dp))
-
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(12.dp, Alignment.Start),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            MacroText(
-                text = stringResource(R.string.recent_upload_protein_text, item.proteinG)
-            )
-            MacroText(
-                text = stringResource(R.string.recent_upload_carbs_text, item.carbsG)
-            )
-            MacroText(
-                text = stringResource(R.string.recent_upload_fat_text, item.fatG)
-            )
+                RecentUploadTimeChip(
+                    timeText = item.timeText
+                )
+            }
         }
     }
 }

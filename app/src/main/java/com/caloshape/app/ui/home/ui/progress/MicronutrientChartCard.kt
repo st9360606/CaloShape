@@ -60,7 +60,6 @@ import com.caloshape.app.ui.home.ui.progress.tooltip.chartTooltipPressTarget
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 import java.util.Locale
-import kotlin.math.abs
 import kotlin.math.ceil
 import kotlin.math.floor
 import kotlin.math.log10
@@ -71,7 +70,6 @@ private val MicronutrientFiberColor = Color(0xFFA78BFA)
 private val MicronutrientSugarColor = Color(0xFFF08AAF)
 private val MicronutrientSodiumColor = Color(0xFF73B6E6)
 
-private val MicronutrientMetaColor = Color(0xFF74747A)
 private val MicronutrientFooterBg = Color(0xFFF6F0FF)
 private val MicronutrientFooterText = Color(0xFFA37FE0)
 
@@ -86,7 +84,6 @@ internal fun MicronutrientChartCard(
 ) {
     val chartDays = normalizeMicronutrientWeekDays(days)
     val today = LocalDate.now()
-    val yesterday = today.minusDays(1)
 
     val displayDay = if (weekOffset == 0) {
         chartDays.firstOrNull { it.date == today.toString() }
@@ -98,21 +95,10 @@ internal fun MicronutrientChartCard(
         chartDays.getOrNull(6) ?: emptyMicronutrientDayUi("Sat")
     }
 
-    val compareDay = if (weekOffset == 0) {
-        chartDays.firstOrNull { it.date == yesterday.toString() }
-    } else {
-        chartDays.getOrNull(5)
-    }
-    val deltaText = calculateMicronutrientDeltaPercent(
-        todayValue = displayDay.micronutrientTotalG(),
-        yesterdayValue = compareDay?.micronutrientTotalG() ?: 0f
-    ).toMicronutrientDeltaText()
-
     MicronutrientChartCardFrame(
         title = stringResource(R.string.progress_micronutrients_title),
         headlineValue = formatMicronutrientGramPlain(displayDay.micronutrientTotalG()),
         unitText = stringResource(R.string.progress_chart_grams),
-        deltaText = deltaText,
         average7FiberG = average7FiberG,
         average7SugarG = average7SugarG,
         average7SodiumMg = average7SodiumMg,
@@ -127,19 +113,12 @@ private fun MicronutrientChartCardFrame(
     title: String,
     headlineValue: String,
     unitText: String,
-    deltaText: String,
     average7FiberG: Int,
     average7SugarG: Int,
     average7SodiumMg: Int,
     modifier: Modifier = Modifier,
     chartContent: @Composable () -> Unit
 ) {
-    val resolvedDeltaText = if (deltaText == "--") {
-        stringResource(R.string.progress_chart_delta_placeholder)
-    } else {
-        deltaText
-    }
-    val resolvedDeltaColor = resolveMicronutrientDeltaColor(resolvedDeltaText)
     val colors = CaloShapeColors.current()
     val isDark = colors.background == CaloShapeColors.Dark.background
     val footerBg = if (isDark) HomeCardStyles.Chart.footerSurface() else MicronutrientFooterBg
@@ -196,17 +175,6 @@ private fun MicronutrientChartCardFrame(
                             modifier = Modifier.padding(bottom = 4.dp)
                         )
 
-                        Spacer(modifier = Modifier.width(4.dp))
-
-                        Text(
-                            text = resolvedDeltaText,
-                            color = resolvedDeltaColor,
-                            fontSize = 17.sp,
-                            fontWeight = FontWeight.ExtraBold,
-                            maxLines = 1,
-                            softWrap = false,
-                            modifier = Modifier.padding(bottom = 4.dp)
-                        )
                     }
                 }
 
@@ -219,7 +187,8 @@ private fun MicronutrientChartCardFrame(
                     sodiumLabel = stringResource(R.string.progress_legend_sodium),
                     fiberValue = stringResource(R.string.progress_tooltip_grams_value, average7FiberG),
                     sugarValue = stringResource(R.string.progress_tooltip_grams_value, average7SugarG),
-                    sodiumValue = stringResource(R.string.progress_tooltip_mg_value, average7SodiumMg)
+                    sodiumValue = stringResource(R.string.progress_tooltip_mg_value, average7SodiumMg),
+                    modifier = Modifier.offset(x = 6.dp)
                 )
             }
 
@@ -793,39 +762,6 @@ private fun emptyMicronutrientDayUi(label: String): ProgressBarDayUi {
 private fun ProgressBarDayUi.sodiumG(): Float = sodiumMg / 1000f
 
 private fun ProgressBarDayUi.micronutrientTotalG(): Float = fiberG + sugarG + sodiumG()
-
-private fun calculateMicronutrientDeltaPercent(
-    todayValue: Float,
-    yesterdayValue: Float
-): Double? {
-    return when {
-        todayValue <= 0f && yesterdayValue <= 0f -> 0.0
-        yesterdayValue <= 0f -> 100.0
-        else -> ((todayValue - yesterdayValue).toDouble() / yesterdayValue.toDouble()) * 100.0
-    }
-}
-
-private fun Double?.toMicronutrientDeltaText(): String {
-    if (this == null) return "--"
-
-    val prefix = when {
-        this > 0 -> "↑ "
-        this < 0 -> "↓ "
-        else -> ""
-    }
-
-    val rounded = String.format(Locale.getDefault(), "%.1f", abs(this))
-    return "$prefix$rounded%"
-}
-
-private fun resolveMicronutrientDeltaColor(resolvedDeltaText: String): Color {
-    val normalized = resolvedDeltaText.trim()
-    return when {
-        normalized.startsWith("↑") -> Color(0xFFE56C6C)
-        normalized.startsWith("↓") -> Color(0xFF329A3F)
-        else -> MicronutrientMetaColor
-    }
-}
 
 private fun computeMicronutrientNiceAxisMax(rawMax: Float): Float {
     if (rawMax <= 0f) return 8f

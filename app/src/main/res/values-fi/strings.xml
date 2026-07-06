@@ -22,7 +22,7 @@
     <string name="common_delete">Poista</string>
     <string name="common_deleting">Poistetaan…</string>
 
-    <string name="common_understood">Ymmärretty</string>
+    <string name="common_understood">Selvä</string>
     <string name="common_revert">Kumoa</string>
 
 
@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">Ota kuva ja tiedä kalorit.</string>
+    <string name="landing_title">Ota kuva, näe kalorit.</string>
     <string name="choose_language">Valitse kieli</string>
     <string name="cta_get_started">Aloita</string>
     <string name="cta_login_prefix">Onko sinulla jo tili?</string>
@@ -156,8 +156,8 @@
     <!-- Onboarding: GoalSelectionScreen  -->
     <string name="onboard_goal_title">Mikä on tavoitteesi?</string>
     <string name="onboard_goal_subtitle">Tämä auttaa meitä mukauttamaan kalorisuunnitelmasi.</string>
-    <string name="goal_lose">Pudottaa painoa</string>
-    <string name="goal_maintain">Ylläpitää</string>
+    <string name="goal_lose">Laihtua</string>
+    <string name="goal_maintain">Pitää paino</string>
     <string name="goal_gain">Nostaa painoa</string>
     <string name="goal_healthy_eating">Syödä terveellisesti</string>
 
@@ -169,7 +169,7 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">CaloShape AI voi kolminkertaistaa painon\npudotuksen tehokkuuden</string>
+    <string name="onboard_weight_loss_comparison_title">CaloShape AI voi tehostaa\npainonpudotusta jopa 3×</string>
     <string name="onboard_weight_loss_comparison_without_ai">Ilman\nCaloShape AI:tä</string>
     <string name="onboard_weight_loss_comparison_with_ai">CaloShape AI:n\nkanssa</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
@@ -230,7 +230,7 @@
     <string name="plan_goal_card_health_scores">Terveysarviot ohjaavat sinua, jotta tavat syntyvät luontevasti</string>
     <string name="plan_goal_card_track_meals">Kirjaa ateriat yhdellä napautuksella, niin johdonmukaisuus on helppoa</string>
     <string name="plan_goal_card_daily_calories">Näe päivittäiset kalorit selkeästi, etkä menetä suuntaa</string>
-    <string name="plan_goal_card_balance_macros">Hiilihydraatit × proteiini × rasva, älykäs tasapaino ja paremmat tulokset</string>
+    <string name="plan_goal_card_balance_macros">Tasapainota hiilarit, proteiini ja rasva parempia tuloksia varten</string>
     <string name="plan_sources_based_on">Perustuu virallisiin ravitsemussuosituksiin,\nvain viitteeksi, ei lääketieteellistä neuvontaa.</string>
     <string name="plan_sources_more">Näytä kaikki viitteet ›</string>
     <string name="plan_sources_hide">Piilota lähteet</string>
@@ -314,17 +314,17 @@
     <string name="subscription_start_free_trial">Kokeile ilmaiseksi 3 päivää</string>
     <string name="subscription_trial_helper">Ei sitoutumista — peruuta milloin tahansa</string>
     <string name="subscription_discount_terms_format">Vain %1$s/vuosi (%2$s/kk)</string>
-    <string name="subscription_discount_trial_terms_format">Ei sitoutumista - peruuta milloin tahansa</string>
+    <string name="subscription_discount_trial_terms_format">Ei sitoutumista — peruuta milloin tahansa</string>
 
 
     <!-- HomeScreen -->
-    <string name="recently_uploaded">Äskettäin ladatut</string>
+    <string name="recently_uploaded">Viimeisimmät ateriat</string>
     <string name="workout_membership_verify_failed">Jäsenyyttä ei voitu vahvistaa. Yritä uudelleen.</string>
 
 
     <!-- MainBottomBar -->
     <string name="bottom_nav_home">Koti</string>
-    <string name="bottom_nav_progress">Edistyminen</string>
+    <string name="bottom_nav_progress">Kehitys</string>
     <string name="bottom_nav_weight">Paino</string>
     <string name="bottom_nav_fasting">Paasto</string>
     <string name="bottom_nav_workout">Treeni</string>
@@ -336,20 +336,22 @@
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">Kalorit jäljellä</string>
     <string name="home_calories_eaten_label">Syödyt kalorit</string>
+
+
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">Proteiinia jäljellä</string>
-    <string name="home_protein_eaten_label">Proteiinia syöty</string>
-    <string name="home_carbs_goal_label">Hiilihydraatteja jäljellä</string>
-    <string name="home_carbs_eaten_label">Hiilihydraatteja syöty</string>
+    <string name="home_protein_eaten_label">Syöty proteiini</string>
+    <string name="home_carbs_goal_label">Hiilareita jäljellä</string>
+    <string name="home_carbs_eaten_label">Syödyt hiilarit</string>
     <string name="home_fats_goal_label">Rasvaa jäljellä</string>
-    <string name="home_fats_eaten_label">Rasvaa syöty</string>
+    <string name="home_fats_eaten_label">Syöty rasva</string>
     <string name="home_fiber_goal_label">Kuitua jäljellä</string>
-    <string name="home_fiber_eaten_label">Kuitua syöty</string>
+    <string name="home_fiber_eaten_label">Syöty kuitu</string>
     <string name="home_sugar_goal_label">Sokeria jäljellä</string>
-    <string name="home_sugar_eaten_label">Sokeria syöty</string>
+    <string name="home_sugar_eaten_label">Syöty sokeri</string>
     <string name="home_sodium_goal_label">Natriumia jäljellä</string>
-    <string name="home_sodium_eaten_label">Natriumia syöty</string>
+    <string name="home_sodium_eaten_label">Saatu natrium</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
@@ -366,7 +368,7 @@
 
     <!-- HomeCards : Step Card -->
     <string name="steps_card_title">Askeleet</string>
-    <string name="steps_status_permission_not_granted">Ei valtuutettu</string>
+    <string name="steps_status_permission_not_granted">Ei käyttöoikeutta</string>
     <string name="steps_status_hc_not_installed">Ei asennettu</string>
     <string name="steps_status_hc_unavailable">Ei saatavilla</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
@@ -375,7 +377,7 @@
     <string name="steps_hint_connect_google_health">Yhdistä Health Connect seurataksesi askeliasi</string>
     <string name="steps_hint_install_health_connect">Asenna Health Connect seurataksesi askeliasi</string>
     <string name="steps_hint_hc_unavailable">Health Connect ei ole saatavilla tällä laitteella</string>
-    <string name="steps_hint_retry">Synkronointi epäonnistui. Yritä uudelleen napauttamalla</string>
+    <string name="steps_hint_retry">Synkronointi epäonnistui. Napauta ja yritä uudelleen.</string>
 
 
     <!-- HomeCards : Workout Card -->
@@ -454,7 +456,7 @@
     <string name="progress_legend_protein">Proteiini</string>
     <string name="progress_legend_carbs">Hiilihydraatit</string>
     <string name="progress_legend_fats">Rasvat</string>
-    <string name="progress_keep_it_up">Jatka samaan malliin! Aloittaminen on vaikein osa!</string>
+    <string name="progress_keep_it_up">Hyvin menee! Aloittaminen on vaikeinta.</string>
 
     <string name="progress_day_sun">Su</string>
     <string name="progress_day_mon">Ma</string>
@@ -494,7 +496,7 @@
          ========================= -->
     <string name="activity_chart_goal_reached">Tavoite saavutettu tänään</string>
     <string name="activity_chart_goal_left">%1$d kcal jäljellä tämän päivän tavoitteeseen</string>
-    <string name="activity_chart_title">Aktiivisuuden kulutus</string>
+    <string name="activity_chart_title">Aktiivisuuskulutus</string>
     <string name="activity_chart_info_dialog_body">Sisältää kirjatut treenit ja päivittäisistä askeleista arvioidut aktiivisuuden kcal-arvot.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">Tavoite</string>
@@ -543,7 +545,7 @@
     <string name="progress_average_fiber">Kuitu</string>
     <string name="progress_average_sugar">Sokeri</string>
     <string name="progress_average_sodium">Natrium</string>
-    <string name="progress_average_activity">Aktiivisuuden kulutus</string>
+    <string name="progress_average_activity">Aktiivisuuskulutus</string>
     <string name="progress_average_water">Veden saanti</string>
     <string name="progress_average_health_score">Terveysarvio</string>
     <string name="progress_average_steps">Askeleet</string>
@@ -573,7 +575,7 @@
     <string name="weight_chart_goal_label">Tavoite</string>
     <string name="weight_chart_to_goal">%1$s tavoitteeseen</string>
     <string name="weight_goal_chart_empty_hint">Kirjaa paino aloittaaksesi trendin</string>
-    <string name="weight_chart_motivation">Jokainen pieni askel vie sinut lähemmäs tavoitettasi.</string>
+    <string name="weight_chart_motivation">Jokainen askel vie lähemmäs tavoitetta.</string>
     <string name="weight_history_weight_label">Paino</string>
     <string name="weight_history_change_label">Muutos</string>
     <string name="weight_history_trend_loss">LASKU</string>
@@ -624,8 +626,8 @@
     <string name="workout_history_summary_body">Seuraa tämän päivän treenikulutuksen edistymistä</string>
     <string name="workout_history_today_label">Tänään</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
-    <string name="workout_history_avg_daily_label">7 päivän ka. / päivä</string>
-    <string name="workout_history_avg_label">7 päivän ka. / harjoitus</string>
+    <string name="workout_history_avg_daily_label">7 pv ka. / pv</string>
+    <string name="workout_history_avg_label">7 pv ka. / treeni</string>
     <string name="workout_history_avg_value">%1$d kcal</string>
     <string name="workout_history_unit_kcal">kcal</string>
 
@@ -716,7 +718,7 @@
     <!-- CameraScreen -->
     <string name="camera_mode_food">Skannaa ruoka</string>
     <string name="camera_mode_barcode">Viivakoodi</string>
-    <string name="camera_mode_label">Ruokamerkintä</string>
+    <string name="camera_mode_label">Ravintoarvot</string>
     <string name="camera_mode_album">Kuvat</string>
     <string name="camera_barcode_title">Viivakoodinlukija</string>
     <string name="camera_label_title">Merkinnänlukija</string>
@@ -733,7 +735,7 @@
 
 
     <!-- RecentlyUploadedEmptyCard -->
-    <string name="recently_uploaded_empty">Äskettäin ladatut</string>
+    <string name="recently_uploaded_empty">Viimeisimmät ateriat</string>
     <string name="recently_uploaded_empty_hint">Napauta + lisätäksesi päivän ensimmäisen ateriasi</string>
 
 
@@ -813,7 +815,7 @@
     <string name="settings_terms_conditions">Käyttöehdot</string>
     <string name="settings_privacy_policy">Tietosuojakäytäntö</string>
     <string name="settings_support_email">Tuen sähköposti</string>
-    <string name="settings_delete_account">Poistetaanko tili?</string>
+    <string name="settings_delete_account">Poista tili</string>
     <string name="settings_version">Versio %1$s</string>
 
 

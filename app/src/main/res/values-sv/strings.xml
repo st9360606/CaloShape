@@ -126,6 +126,8 @@
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">Hur gammal är du?</string>
     <string name="onboard_age_subtitle">Vi använder endast din ålder för att förbättra din upplevelse och precisionen i kaloriberäkningen.</string>
+
+
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">Hur lång är du?</string>
     <string name="onboard_height_subtitle">Vi använder endast dina data för att förbättra din upplevelse och våra kaloriberäkningar.</string>
@@ -157,7 +159,7 @@
     <string name="onboard_goal_title">Vad är ditt mål?</string>
     <string name="onboard_goal_subtitle">Detta hjälper oss att anpassa din kaloriplan.</string>
     <string name="goal_lose">Gå ner i vikt</string>
-    <string name="goal_maintain">Bibehåll</string>
+    <string name="goal_maintain">Hålla vikten</string>
     <string name="goal_gain">Gå upp i vikt</string>
     <string name="goal_healthy_eating">Hälsosam kost</string>
 
@@ -178,11 +180,13 @@
 
     <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">Låt varje måltid räknas!</string>
-    <string name="onboard_notif_subtitle">Aktivera notiser för mjuka påminnelser om att logga måltider, så att dina kalorier, makron och framsteg håller sig på rätt spår. Det är lätt att missa; påminnelser i rätt tid hjälper dig att komma tillbaka snabbt.</string>
+    <string name="onboard_notif_subtitle">Få diskreta påminnelser om att logga måltider och hålla koll på kalorier, makron och framsteg.</string>
     <string name="onboard_allow_notifications_cta">Tillåt notiser</string>
     <string name="notification_mock_app_title">AI-kaloriräknare</string>
     <string name="onboard_notif_title_got_a_sec">Måltiden loggar inte sig själv 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">Logga den här måltiden för att hålla kalorier och makron på rätt spår.</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">Logga måltiden för att hålla koll på kalorier och makron.</string>
+
+
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">Anslut till</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
@@ -207,7 +211,7 @@
     <string name="progress_row_carb_distribution">Kolhydratfördelning</string>
     <string name="progress_row_protein_recommendation">Proteinrekommendation</string>
     <string name="progress_row_fat_recommendation">Fettrekommendation</string>
-    <string name="progress_row_health_score_estimate">Uppskattat hälsobetyg</string>
+    <string name="progress_row_health_score_estimate">Uppskattad hälsopoäng</string>
 
 
     <!-- Onboarding: HealthPlanScreen -->
@@ -227,33 +231,33 @@
     <string name="plan_weight_delta">Till målvikt</string>
 
     <string name="plan_goals_title">Så når du\ndina mål</string>
-    <string name="plan_goal_card_health_scores">Hälsobetyg vägleder dig så att vanor formas naturligt</string>
-    <string name="plan_goal_card_track_meals">Logga måltider med ett tryck — regelbundenhet blir enkel</string>
-    <string name="plan_goal_card_daily_calories">Se dagliga kalorier tydligt och tappa aldrig bort dig</string>
-    <string name="plan_goal_card_balance_macros">Kolhydrater × protein × fett, smart balans, bättre resultat</string>
+    <string name="plan_goal_card_health_scores">Hälsopoäng hjälper dig skapa bättre vanor</string>
+    <string name="plan_goal_card_track_meals">Logga måltider med ett tryck och håll rutinen</string>
+    <string name="plan_goal_card_daily_calories">Håll koll på dagens kalorier</string>
+    <string name="plan_goal_card_balance_macros">Balansera protein, kolhydrater och fett</string>
     <string name="plan_sources_based_on">Baserat på officiella kostråd,\nendast som referens, inte medicinsk rådgivning.</string>
     <string name="plan_sources_more">Se alla referenser ›</string>
     <string name="plan_sources_hide">Dölj källor</string>
 
 
     <!-- Onboarding: OnboardReferralCodeScreen -->
-    <string name="onboard_referral_code_input">Ange värvningskod\n(valfritt)</string>
+    <string name="onboard_referral_code_input">Ange inbjudningskod\nvalfritt</string>
     <string name="onboard_referral_code_subtitle">Du kan hoppa över detta steg</string>
-    <string name="onboard_referral_code_input_label">Värvningskod</string>
-    <string name="onboard_referral_code_placeholder">Värvningskod</string>
+    <string name="onboard_referral_code_input_label">Inbjudningskod</string>
+    <string name="onboard_referral_code_placeholder">Inbjudningskod</string>
     <string name="onboard_referral_code_submit">Skicka</string>
     <string name="onboard_referral_code_submitting">Skickar…</string>
-    <string name="onboard_referral_code_applied">Värvningskod tillagd!</string>
+    <string name="onboard_referral_code_applied">Inbjudningskod tillagd!</string>
 
     <string name="onboard_referral_code_error_invalid_format">Använd endast bokstäver och siffror.</string>
-    <string name="onboard_referral_code_error_invalid">Vi kunde inte hitta den här värvningskoden.</string>
-    <string name="onboard_referral_code_error_self_referral">Du kan inte använda din egen värvningskod.</string>
-    <string name="onboard_referral_code_error_already_claimed">Det här kontot har redan använt en värvningskod.</string>
-    <string name="onboard_referral_code_error_already_subscribed">Konton med prenumeration kan inte använda värvningskod.</string>
+    <string name="onboard_referral_code_error_invalid">Vi kunde inte hitta den här inbjudningskoden.</string>
+    <string name="onboard_referral_code_error_self_referral">Du kan inte använda din egen inbjudningskod.</string>
+    <string name="onboard_referral_code_error_already_claimed">Det här kontot har redan använt en inbjudningskod.</string>
+    <string name="onboard_referral_code_error_already_subscribed">Konton med prenumeration kan inte använda inbjudningskod.</string>
     <string name="onboard_referral_code_error_disabled">Värvning är tillfälligt otillgängligt.</string>
-    <string name="onboard_referral_code_error_risk">Vi kan inte lägga till en värvningskod just nu.</string>
+    <string name="onboard_referral_code_error_risk">Vi kan inte lägga till en inbjudningskod just nu.</string>
     <string name="onboard_referral_code_error_network">Vi kan inte lägga till den just nu. Försök igen senare.</string>
-    <string name="onboard_referral_code_error_unknown">Värvningskoden kan inte användas just nu.\nFörsök igen senare.</string>
+    <string name="onboard_referral_code_error_unknown">Inbjudningskoden kan inte användas just nu.\nFörsök igen senare.</string>
 
 
     <!-- Onboarding: OnboardSubscriptionScreen  Paywall -->
@@ -297,11 +301,11 @@
     <string name="subscription_discount_body">Skanna måltider snabbare. Följ makron smartare.\nHåll planen varje dag.</string>
     <string name="subscription_yearly_price_format">%1$s/år</string>
     <string name="subscription_urgency_coffee">Mindre än en kaffe</string>
-    <string name="subscription_urgency_price_gone">Stänger du skärmen? Då försvinner priset</string>
-    <string name="subscription_urgency_waiting">Vad väntar du på?</string>
+    <string name="subscription_urgency_price_gone">Erbjudandet visas bara nu</string>
+    <string name="subscription_urgency_waiting">Redo att börja?</string>
 
     <string name="subscription_trial_enabled">Gratis provperiod aktiverad</string>
-    <string name="subscription_trial_enable_prompt">Osäker? Aktivera gratis provperiod</string>
+    <string name="subscription_trial_enable_prompt">Osäker? Starta gratis provperiod</string>
     <string name="subscription_trial_checking_eligibility">Kontrollerar provperiod…</string>
     <string name="subscription_trial_already_used">Provperiod redan använd</string>
     <string name="subscription_trial_unavailable">Gratis provperiod ej tillgänglig</string>
@@ -335,7 +339,9 @@
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">Kalorier kvar</string>
-    <string name="home_calories_eaten_label">Intagna kalorier</string>
+    <string name="home_calories_eaten_label">Kalorier intagna </string>
+
+
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">Protein kvar</string>
@@ -366,16 +372,16 @@
 
     <!-- HomeCards : Step Card -->
     <string name="steps_card_title">Steg</string>
-    <string name="steps_status_permission_not_granted">Inte auktoriserad</string>
+    <string name="steps_status_permission_not_granted">Ingen behörighet</string>
     <string name="steps_status_hc_not_installed">Inte installerad</string>
-    <string name="steps_status_hc_unavailable">Ej tillgängligt</string>
+    <string name="steps_status_hc_unavailable">Inte tillgängligt</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
-    <string name="steps_secondary_no_data_yet">Inga data ännu</string>
+    <string name="steps_secondary_no_data_yet">Inga uppgifter ännu</string>
     <string name="steps_secondary_connect">Anslut</string>
     <string name="steps_hint_connect_google_health">Anslut Health Connect för att följa dina steg</string>
     <string name="steps_hint_install_health_connect">Installera Health Connect för att följa dina steg</string>
     <string name="steps_hint_hc_unavailable">Health Connect är inte tillgängligt på den här enheten</string>
-    <string name="steps_hint_retry">Synkningen misslyckades. Tryck för att försöka igen</string>
+    <string name="steps_hint_retry">Synkningen misslyckades. Tryck för att försöka igen.</string>
 
 
     <!-- HomeCards : Workout Card -->
@@ -403,10 +409,10 @@
          ProgressScreen
          ========================= -->
     <string name="progress_screen_title">Framsteg</string>
-    <string name="progress_tab_this_week">Denna vecka</string>
-    <string name="progress_tab_last_week">Förra veckan</string>
-    <string name="progress_tab_two_weeks_ago">För 2 v. sedan</string>
-    <string name="progress_tab_three_weeks_ago">För 3 v. sedan</string>
+    <string name="progress_tab_this_week">Denna v.</string>
+    <string name="progress_tab_last_week">Förra v.</string>
+    <string name="progress_tab_two_weeks_ago">2 v. sen</string>
+    <string name="progress_tab_three_weeks_ago">3 v. sen</string>
     <string name="progress_error_load_failed">Kunde inte läsa in</string>
     <string name="activity_chart_error_load_failed">Kunde inte läsa in aktivitetsdiagram</string>
     <string name="water_chart_error_load_failed">Kunde inte läsa in vattendiagram</string>
@@ -454,7 +460,7 @@
     <string name="progress_legend_protein">Protein</string>
     <string name="progress_legend_carbs">Kolhydrater</string>
     <string name="progress_legend_fats">Fett</string>
-    <string name="progress_keep_it_up">Fortsätt så! Att komma igång är den svåraste delen!</string>
+    <string name="progress_keep_it_up">Fortsätt så! Starten är svårast.</string>
 
     <string name="progress_day_sun">Sön</string>
     <string name="progress_day_mon">Mån</string>
@@ -476,7 +482,7 @@
     <!-- =========================
          MicronutrientChartCard
          ========================= -->
-    <string name="progress_micronutrients_title">Mikronäringsämnen</string>
+    <string name="progress_micronutrients_title">Näringsdetaljer</string>
     <string name="progress_chart_grams">g</string>
     <string name="progress_chart_7day_avg">7-dagars snitt</string>
     <string name="progress_legend_fiber">Fiber</string>
@@ -494,7 +500,7 @@
          ========================= -->
     <string name="activity_chart_goal_reached">Målet nått i dag</string>
     <string name="activity_chart_goal_left">%1$d kcal kvar till dagens mål</string>
-    <string name="activity_chart_title">Aktivitetsförbränning</string>
+    <string name="activity_chart_title">Aktivitet</string>
     <string name="activity_chart_info_dialog_body">Inkluderar loggade träningspass och aktivitetskalorier uppskattade från dagliga steg.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">Mål</string>
@@ -543,9 +549,9 @@
     <string name="progress_average_fiber">Fiber</string>
     <string name="progress_average_sugar">Socker</string>
     <string name="progress_average_sodium">Natrium</string>
-    <string name="progress_average_activity">Aktivitetsförbränning</string>
+    <string name="progress_average_activity">Aktivitet</string>
     <string name="progress_average_water">Vattenintag</string>
-    <string name="progress_average_health_score">Hälsobetyg</string>
+    <string name="progress_average_health_score">Hälsopoäng</string>
     <string name="progress_average_steps">Steg</string>
     <string name="progress_average_health_score_value">%1$.1f / 10</string>
     <string name="progress_average_steps_value">%1$s steg</string>
@@ -716,7 +722,7 @@
     <!-- CameraScreen -->
     <string name="camera_mode_food">Skanna mat</string>
     <string name="camera_mode_barcode">Streckkod</string>
-    <string name="camera_mode_label">Livsmedelsetikett</string>
+    <string name="camera_mode_label">Etikett</string>
     <string name="camera_mode_album">Foton</string>
     <string name="camera_barcode_title">Streckkodsläsare</string>
     <string name="camera_label_title">Etikettskanner</string>
@@ -764,7 +770,7 @@
     <string name="foodlog_detail_fiber">Fiber</string>
     <string name="foodlog_detail_sugar">Socker</string>
     <string name="foodlog_detail_sodium">Natrium</string>
-    <string name="foodlog_detail_health_score">Hälsobetyg</string>
+    <string name="foodlog_detail_health_score">Hälsopoäng</string>
 
 
     <!-- DeleteFoodLogDialog -->
@@ -880,7 +886,7 @@
     <string name="referral_invite_friends">Bjud in vänner</string>
     <string name="referral_earn_30_days_free">Få 30 dagar gratis</string>
     <string name="referral_reward_unlocks_after_no_refund">Belöningen låses upp när din vän prenumererar utan återbetalning.</string>
-    <string name="referral_code_copied">Värvningskod kopierad.</string>
+    <string name="referral_code_copied">Inbjudningskod kopierad.</string>
     <string name="referral_your_promo_code">Din kampanjkod</string>
     <string name="referral_copy">Kopiera</string>
     <string name="referral_share">Dela</string>
@@ -891,7 +897,7 @@
     <string name="referral_step_2_subtitle">De startar en betald CaloShape AI-prenumeration med din inbjudan.</string>
     <string name="referral_step_3_title">Ingen återbetalning, sedan belöning</string>
     <string name="referral_step_3_subtitle">När prenumerationen har verifierats utan återbetalning förlängs din premiumperiod.</string>
-    <string name="referral_share_text">Gå med mig på CaloShape AI! Min värvningskod är:\n%1$s\n\n%2$s</string>
+    <string name="referral_share_text">Gå med mig på CaloShape AI! Min inbjudningskod är:\n%1$s\n\n%2$s</string>
     <string name="referral_share_subject">Gå med mig på CaloShape AI</string>
     <string name="referral_share_chooser_title">Dela via</string>
     <string name="referral_unable_to_open_share_options">Kunde inte öppna delningsalternativ.</string>
@@ -1001,7 +1007,7 @@
     <string name="edit_nutrition_protein_goal">Proteinmål</string>
     <string name="edit_nutrition_carb_goal">Kolhydratmål</string>
     <string name="edit_nutrition_fat_goal">Fettmål</string>
-    <string name="edit_nutrition_view_micronutrients">Visa mikronäringsämnen</string>
+    <string name="edit_nutrition_view_micronutrients">Visa näringsdetaljer</string>
     <string name="edit_nutrition_fiber_goal">Fibermål</string>
     <string name="edit_nutrition_sugar_goal">Sockermål</string>
     <string name="edit_nutrition_sodium_goal">Natriummål</string>
@@ -1030,7 +1036,7 @@
     <string name="ring_colors_green_title">Grön</string>
     <string name="ring_colors_green_body">På mål (inom 100 kalorier från målet)</string>
     <string name="ring_colors_yellow_title">Brun</string>
-    <string name="ring_colors_yellow_body">100-199 kalorier över ditt mål</string>
+    <string name="ring_colors_yellow_body">100–199 kalorier över ditt mål</string>
     <string name="ring_colors_red_title">Röd</string>
     <string name="ring_colors_red_body">200+ kalorier över ditt mål</string>
     <string name="ring_colors_dotted_title">Prickad</string>

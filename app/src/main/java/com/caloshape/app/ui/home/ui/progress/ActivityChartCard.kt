@@ -85,7 +85,6 @@ internal fun ActivityChartCard(
         infoButtonContentDescription = "查看運動消耗說明",
         headlineValue = chart.todayBurnedKcal.toString(),
         unitText = stringResource(R.string.activity_chart_unit_kcal),
-        deltaText = chart.deltaText,
         goalText = stringResource(R.string.activity_chart_goal),
         goalValue = stringResource(R.string.activity_chart_value_kcal, chart.goalKcal),
         avgText = stringResource(R.string.activity_chart_7day_avg),
@@ -115,7 +114,6 @@ internal fun WorkoutLoadingCard(
         infoButtonContentDescription = "查看運動消耗說明",
         headlineValue = "--",
         unitText = stringResource(R.string.activity_chart_unit_kcal),
-        deltaText = "--",
         goalText = stringResource(R.string.activity_chart_goal),
         goalValue = "--",
         avgText = stringResource(R.string.activity_chart_7day_avg),
@@ -201,7 +199,6 @@ private fun ActivityChartCardFrame(
     infoButtonContentDescription: String,
     headlineValue: String,
     unitText: String,
-    deltaText: String,
     goalText: String,
     goalValue: String,
     avgText: String,
@@ -218,12 +215,6 @@ private fun ActivityChartCardFrame(
         HomeCardStyles.Chart.footerSurface()
     } else {
         footerBackground
-    }
-    val resolvedDeltaText = if (deltaText == "--") "--%" else deltaText
-    val resolvedDeltaColor = when {
-        resolvedDeltaText.startsWith("↑") -> Color(0xFFE56C6C)
-        resolvedDeltaText.startsWith("↓") -> Color(0xFF329A3F)
-        else -> Color(0xFF74747A)
     }
     var showInfoDialog by remember { mutableStateOf(false) }
 
@@ -308,21 +299,13 @@ private fun ActivityChartCardFrame(
                             modifier = Modifier.padding(bottom = 4.dp)
                         )
 
-                        Spacer(modifier = Modifier.width(8.dp))
-
-                        Text(
-                            text = resolvedDeltaText,
-                            color = resolvedDeltaColor,
-                            fontSize = 17.sp,
-                            fontWeight = FontWeight.ExtraBold,
-                            modifier = Modifier.padding(bottom = 4.dp)
-                        )
                     }
                 }
 
                 Spacer(modifier = Modifier.width(12.dp))
 
                 Column(
+                    modifier = Modifier.offset(x = 12.dp),
                     horizontalAlignment = Alignment.End,
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {

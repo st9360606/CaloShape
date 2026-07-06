@@ -96,7 +96,7 @@ fun ProgressScreen(
                 WeekTabs(
                     selected = ui.selectedWeekOffset,
                     onSelect = vm::selectWeek,
-                    modifier = Modifier.padding(horizontal = CaloShapeScreenFrame.contentHorizontalCompact)
+                    modifier = Modifier.padding(horizontal = 12.dp)
                 )
             }
 
@@ -124,7 +124,6 @@ fun ProgressScreen(
                     item {
                         NutritionChartCard(
                             totalCaloriesText = ui.totalCaloriesText,
-                            deltaText = ui.deltaText,
                             average7Calories = ui.average7Calories,
                             average15Calories = ui.average15Calories,
                             days = ui.days,
