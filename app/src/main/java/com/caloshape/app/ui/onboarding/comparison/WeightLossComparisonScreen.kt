@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -158,7 +159,7 @@ private fun ComparisonCard(
                 )
             }
 
-            Spacer(Modifier.height(20.dp))
+            Spacer(Modifier.height(12.dp))
 
             Text(
                 text = stringResource(R.string.onboard_weight_loss_comparison_caption),
@@ -171,6 +172,7 @@ private fun ComparisonCard(
                 overflow = TextOverflow.Ellipsis,
                 modifier = Modifier
                     .widthIn(max = 300.dp)
+                    .heightIn(min = 66.dp)
                     .fillMaxWidth()
             )
         }

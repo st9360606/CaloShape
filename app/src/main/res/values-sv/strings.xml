@@ -298,7 +298,7 @@
     <string name="subscription_gift_unlocked_title">Gåva upplåst 🎁</string>
     <string name="subscription_gift_price_unlocked">Gåvopris upplåst</string>
     <string name="subscription_unlock_premium_for_only">Lås upp premium för bara</string>
-    <string name="subscription_discount_body">Skanna måltider snabbare. Följ makron smartare.\nHåll planen varje dag.</string>
+    <string name="subscription_discount_body">Skanna måltider snabbare. Följ makron smartare. Håll planen varje dag.</string>
     <string name="subscription_yearly_price_format">%1$s/år</string>
     <string name="subscription_urgency_coffee">Mindre än en kaffe</string>
     <string name="subscription_urgency_price_gone">Erbjudandet visas bara nu</string>

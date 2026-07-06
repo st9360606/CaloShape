@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">Ota kuva, näe kalorit.</string>
+    <string name="landing_title">Ota kuva ja näe kalorit hetkessä.</string>
     <string name="choose_language">Valitse kieli</string>
     <string name="cta_get_started">Aloita</string>
     <string name="cta_login_prefix">Onko sinulla jo tili?</string>
@@ -169,22 +169,24 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">CaloShape AI voi tehostaa\npainonpudotusta jopa 3×</string>
+    <string name="onboard_weight_loss_comparison_title">CaloShape AI auttaa tehostamaan\npainonpudotusta jopa 3×</string>
     <string name="onboard_weight_loss_comparison_without_ai">Ilman\nCaloShape AI:tä</string>
     <string name="onboard_weight_loss_comparison_with_ai">CaloShape AI:n\nkanssa</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI tekee kaikesta yksinkertaista\nja auttaa pysymään tavoitteessa</string>
+    <string name="onboard_weight_loss_comparison_caption">CaloShape AI tekee kaikesta yksinkertaista ja auttaa pysymään tavoitteessa</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
-    <string name="onboard_notif_title">Tee jokaisesta ateriasta merkityksellinen!</string>
-    <string name="onboard_notif_subtitle">Ota ilmoitukset käyttöön saadaksesi lempeitä muistutuksia aterioiden kirjaamisesta, jotta kalorit, makrot ja edistyminen pysyvät oikealla polulla. Lipsahduksia sattuu; oikea-aikaiset muistutukset auttavat palaamaan nopeasti.</string>
+    <string name="onboard_notif_title">Muista kirjata ateriasi</string>
+    <string name="onboard_notif_subtitle">Saat lempeitä muistutuksia aterioiden kirjaamiseen, jotta kalorit, makrot ja edistyminen pysyvät mukana.</string>
     <string name="onboard_allow_notifications_cta">Salli ilmoitukset</string>
     <string name="notification_mock_app_title">AI-kalorilaskuri</string>
     <string name="onboard_notif_title_got_a_sec">Ateriasi ei kirjaudu itsestään 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Kirjaa tämä ateria, jotta kalorit ja makrot pysyvät oikealla polulla.</string>
+
+
     <!-- Onboarding: HealthConnectIntroScreen -->
-    <string name="onboard_hc_connect_title_prefix">Yhdistä palveluun</string>
+    <string name="onboard_hc_connect_title_prefix">Yhdistä</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
     <string name="onboard_hc_connect_body">Synkronoi päivittäinen aktiivisuus CaloShape AI:n ja terveyssovellusten välillä saadaksesi täydellisemmät tiedot ja oivallukset.</string>
     <string name="onboard_hc_permission_rationale_title_prefix">Miksi CaloShape käyttää</string>
@@ -227,10 +229,10 @@
     <string name="plan_weight_delta">Tavoitepainoon</string>
 
     <string name="plan_goals_title">Näin saavutat\ntavoitteesi</string>
-    <string name="plan_goal_card_health_scores">Terveysarviot ohjaavat sinua, jotta tavat syntyvät luontevasti</string>
-    <string name="plan_goal_card_track_meals">Kirjaa ateriat yhdellä napautuksella, niin johdonmukaisuus on helppoa</string>
-    <string name="plan_goal_card_daily_calories">Näe päivittäiset kalorit selkeästi, etkä menetä suuntaa</string>
-    <string name="plan_goal_card_balance_macros">Tasapainota hiilarit, proteiini ja rasva parempia tuloksia varten</string>
+    <string name="plan_goal_card_health_scores">Rakenna parempia tapoja terveysarvion avulla</string>
+    <string name="plan_goal_card_track_meals">Kirjaa ateriat helposti yhdellä napautuksella</string>
+    <string name="plan_goal_card_daily_calories">Seuraa päivittäisiä kaloreita selkeästi</string>
+    <string name="plan_goal_card_balance_macros">Tasapainota hiilihydraatit, proteiini ja rasva</string>
     <string name="plan_sources_based_on">Perustuu virallisiin ravitsemussuosituksiin,\nvain viitteeksi, ei lääketieteellistä neuvontaa.</string>
     <string name="plan_sources_more">Näytä kaikki viitteet ›</string>
     <string name="plan_sources_hide">Piilota lähteet</string>
@@ -294,7 +296,7 @@
     <string name="subscription_gift_unlocked_title">Lahja avattu 🎁</string>
     <string name="subscription_gift_price_unlocked">Lahjahinta avattu</string>
     <string name="subscription_unlock_premium_for_only">Avaa Premium vain hintaan</string>
-    <string name="subscription_discount_body">Skannaa ateriat nopeammin. Seuraa makroja älykkäämmin.\nPysy suunnitelmassa joka päivä.</string>
+    <string name="subscription_discount_body">Skannaa ateriat nopeammin. Seuraa makroja älykkäämmin. Pysy suunnitelmassa joka päivä.</string>
     <string name="subscription_yearly_price_format">%1$s/vuosi</string>
     <string name="subscription_urgency_coffee">Vähemmän kuin kahvi</string>
     <string name="subscription_urgency_price_gone">Suljetko tämän näytön? Tämä hinta katoaa</string>
@@ -1032,7 +1034,7 @@
     <string name="ring_colors_green_title">Vihreä</string>
     <string name="ring_colors_green_body">Tavoitteessa (100 kalorin sisällä tavoitteesta)</string>
     <string name="ring_colors_yellow_title">Ruskea</string>
-    <string name="ring_colors_yellow_body">100-199 kaloria yli tavoitteesi</string>
+    <string name="ring_colors_yellow_body">100–199 kaloria yli tavoitteesi</string>
     <string name="ring_colors_red_title">Punainen</string>
     <string name="ring_colors_red_body">200+ kaloria yli tavoitteesi</string>
     <string name="ring_colors_dotted_title">Pisteviiva</string>
