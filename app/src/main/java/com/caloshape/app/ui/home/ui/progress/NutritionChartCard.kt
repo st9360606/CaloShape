@@ -270,7 +270,7 @@ private fun ProgressChartCardFrame(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(start = 8.dp),
+                    .padding(start = 2.dp),
                 horizontalArrangement = Arrangement.Center
             ) {
                 LegendChip(

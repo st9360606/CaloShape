@@ -334,22 +334,27 @@
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">Calorías restantes</string>
-    <string name="home_calories_eaten_label">Calorías consumidas</string>
+    <string name="home_calories_goal_label">Calorías</string>
+    <string name="home_calories_eaten_label">Calorías</string>
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
-    <string name="home_protein_goal_label">Proteína restante</string>
-    <string name="home_protein_eaten_label">Proteína consumida</string>
-    <string name="home_carbs_goal_label">Carbohidratos restantes</string>
-    <string name="home_carbs_eaten_label">Carbohidratos consumidos</string>
-    <string name="home_fats_goal_label">Grasas restantes</string>
-    <string name="home_fats_eaten_label">Grasas consumidas</string>
-    <string name="home_fiber_goal_label">Fibra restante</string>
-    <string name="home_fiber_eaten_label">Fibra consumida</string>
-    <string name="home_sugar_goal_label">Azúcar restante</string>
-    <string name="home_sugar_eaten_label">Azúcar consumida</string>
-    <string name="home_sodium_goal_label">Sodio restante</string>
-    <string name="home_sodium_eaten_label">Sodio consumido</string>
+    <string name="home_protein_goal_label">Proteína</string>
+    <string name="home_protein_eaten_label">Proteína</string>
+
+    <string name="home_carbs_goal_label">Carbohidratos</string>
+    <string name="home_carbs_eaten_label">Carbohidratos</string>
+
+    <string name="home_fats_goal_label">Grasas</string>
+    <string name="home_fats_eaten_label">Grasas</string>
+
+    <string name="home_fiber_goal_label">Fibra</string>
+    <string name="home_fiber_eaten_label">Fibra</string>
+
+    <string name="home_sugar_goal_label">Azúcar</string>
+    <string name="home_sugar_eaten_label">Azúcar</string>
+
+    <string name="home_sodium_goal_label">Sodio</string>
+    <string name="home_sodium_eaten_label">Sodio</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
@@ -390,8 +395,8 @@
 
     <!-- HomeCards : Fasting Card -->
     <string name="fasting_card_plan_title">Plan de ayuno</string>
-    <string name="fasting_card_start_time">Hora de inicio</string>
-    <string name="fasting_card_end_time">Hora de finalización</string>
+    <string name="fasting_card_start_time">Inicio</string>
+    <string name="fasting_card_end_time">Fin</string>
 
 
     <!-- HomeCards : Water Card -->
@@ -403,8 +408,8 @@
          ProgressScreen
          ========================= -->
     <string name="progress_screen_title">Progreso</string>
-    <string name="progress_tab_this_week">Esta semana</string>
-    <string name="progress_tab_last_week">Semana pasada</string>
+    <string name="progress_tab_this_week">Esta sem.</string>
+    <string name="progress_tab_last_week">Sem. pasada</string>
     <string name="progress_tab_two_weeks_ago">Hace 2 sem.</string>
     <string name="progress_tab_three_weeks_ago">Hace 3 sem.</string>
     <string name="progress_error_load_failed">Error al cargar</string>
@@ -482,7 +487,7 @@
     <string name="progress_legend_fiber">Fibra</string>
     <string name="progress_legend_sugar">Azúcar</string>
     <string name="progress_legend_sodium">Sodio</string>
-    <string name="progress_micronutrients_keep_it_up">Mantén equilibrados la fibra, el azúcar y el sodio.</string>
+    <string name="progress_micronutrients_keep_it_up">Mantén fibra, azúcar y sodio en equilibrio.</string>
     <string name="progress_tooltip_fiber">Fibra</string>
     <string name="progress_tooltip_sugar">Azúcar</string>
     <string name="progress_tooltip_sodium">Sodio</string>
@@ -493,7 +498,7 @@
          ActivityChartCard
          ========================= -->
     <string name="activity_chart_goal_reached">Objetivo alcanzado hoy</string>
-    <string name="activity_chart_goal_left">Faltan %1$d kcal para alcanzar el objetivo de hoy</string>
+    <string name="activity_chart_goal_left">Faltan %1$d kcal hoy</string>
     <string name="activity_chart_title">Gasto de actividad</string>
     <string name="activity_chart_info_dialog_body">Incluye ejercicios registrados y kcal de actividad estimadas a partir de los pasos diarios.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -511,7 +516,7 @@
          WaterChartCard
          ========================= -->
     <string name="water_chart_goal_reached">Objetivo alcanzado por hoy</string>
-    <string name="water_chart_goal_left_ml">Faltan %1$s ml para alcanzar el objetivo de hoy</string>
+    <string name="water_chart_goal_left_ml">Faltan %1$s ml hoy</string>
     <string name="water_chart_title">Ingesta de agua</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Objetivo</string>
@@ -545,7 +550,7 @@
     <string name="progress_average_sodium">Sodio</string>
     <string name="progress_average_activity">Gasto de actividad</string>
     <string name="progress_average_water">Ingesta de agua</string>
-    <string name="progress_average_health_score">Puntuación de salud</string>
+    <string name="progress_average_health_score">Índice de salud</string>
     <string name="progress_average_steps">Pasos</string>
     <string name="progress_average_health_score_value">%1$.1f / 10</string>
     <string name="progress_average_steps_value">%1$s pasos</string>
@@ -567,7 +572,7 @@
     <string name="weight_chart_tab_30_days">30 días</string>
     <string name="weight_chart_tab_60_days">60 días</string>
     <string name="weight_chart_tab_90_days">90 días</string>
-    <string name="weight_chart_tab_all_time">Todo el tiempo</string>
+    <string name="weight_chart_tab_all_time">Todo</string>
     <string name="weight_chart_title">Tendencia de peso</string>
     <string name="weight_chart_goal_progress_badge">%1$s%% del objetivo</string>
     <string name="weight_chart_goal_label">Objetivo</string>
@@ -709,14 +714,14 @@
 
 
     <!-- HomeQuickActionMenu -->
-    <string name="quick_add_saved_foods">Alimentos guardados</string>
+    <string name="quick_add_saved_foods">Guardados</string>
     <string name="quick_add_scan_food">Escanear comida</string>
 
 
     <!-- CameraScreen -->
-    <string name="camera_mode_food">Escanear comida</string>
-    <string name="camera_mode_barcode">Código de barras</string>
-    <string name="camera_mode_label">Etiqueta de comida</string>
+    <string name="camera_mode_food">Escanear</string>
+    <string name="camera_mode_barcode">Barras</string>
+    <string name="camera_mode_label">Etiqueta</string>
     <string name="camera_mode_album">Fotos</string>
     <string name="camera_barcode_title">Escáner de código de barras</string>
     <string name="camera_label_title">Escáner de etiqueta</string>
