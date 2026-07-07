@@ -338,24 +338,29 @@
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">Calories restantes</string>
-    <string name="home_calories_eaten_label">Calories consommées</string>
+    <string name="home_calories_goal_label">Calories</string>
+    <string name="home_calories_eaten_label">Calories</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
-    <string name="home_protein_goal_label">Protéines restantes</string>
-    <string name="home_protein_eaten_label">Protéines consommées</string>
-    <string name="home_carbs_goal_label">Glucides restants</string>
-    <string name="home_carbs_eaten_label">Glucides consommés</string>
-    <string name="home_fats_goal_label">Lipides restants</string>
-    <string name="home_fats_eaten_label">Lipides consommés</string>
-    <string name="home_fiber_goal_label">Fibres restantes</string>
-    <string name="home_fiber_eaten_label">Fibres consommées</string>
-    <string name="home_sugar_goal_label">Sucres restants</string>
-    <string name="home_sugar_eaten_label">Sucres consommés</string>
-    <string name="home_sodium_goal_label">Sodium restant</string>
-    <string name="home_sodium_eaten_label">Sodium consommé</string>
+    <string name="home_protein_goal_label">Protéines</string>
+    <string name="home_protein_eaten_label">Protéines</string>
+
+    <string name="home_carbs_goal_label">Glucides</string>
+    <string name="home_carbs_eaten_label">Glucides</string>
+
+    <string name="home_fats_goal_label">Lipides</string>
+    <string name="home_fats_eaten_label">Lipides</string>
+
+    <string name="home_fiber_goal_label">Fibres</string>
+    <string name="home_fiber_eaten_label">Fibres</string>
+
+    <string name="home_sugar_goal_label">Sucres</string>
+    <string name="home_sugar_eaten_label">Sucres</string>
+
+    <string name="home_sodium_goal_label">Sodium</string>
+    <string name="home_sodium_eaten_label">Sodium</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 

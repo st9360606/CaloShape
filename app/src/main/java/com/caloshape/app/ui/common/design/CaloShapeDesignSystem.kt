@@ -343,7 +343,7 @@ object CaloShapeTextStyles {
 
     @Composable
     fun secondaryButton(): TextStyle = MaterialTheme.typography.bodyLarge.copy(
-        fontSize = 17.sp,
+        fontSize = 18.sp,
         lineHeight = 20.sp,
         fontWeight = FontWeight.Medium,
         letterSpacing = 0.1.sp,

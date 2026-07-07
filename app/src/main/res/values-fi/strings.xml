@@ -394,8 +394,8 @@
 
     <!-- HomeCards : Fasting Card -->
     <string name="fasting_card_plan_title">Paastosuunnitelma</string>
-    <string name="fasting_card_start_time">Aloitusaika</string>
-    <string name="fasting_card_end_time">Päättymisaika</string>
+    <string name="fasting_card_start_time">Alkaa</string>
+    <string name="fasting_card_end_time">Päättyy</string>
 
 
     <!-- HomeCards : Water Card -->

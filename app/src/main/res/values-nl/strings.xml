@@ -338,24 +338,29 @@
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">Calorieën over</string>
-    <string name="home_calories_eaten_label">Calorieën gegeten</string>
+    <string name="home_calories_goal_label">Calorieën</string>
+    <string name="home_calories_eaten_label">Calorieën</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
-    <string name="home_protein_goal_label">Eiwit over</string>
-    <string name="home_protein_eaten_label">Eiwit gegeten</string>
-    <string name="home_carbs_goal_label">Koolhydraten over</string>
-    <string name="home_carbs_eaten_label">Koolhydraten gegeten</string>
-    <string name="home_fats_goal_label">Vetten over</string>
-    <string name="home_fats_eaten_label">Vetten gegeten</string>
-    <string name="home_fiber_goal_label">Vezels over</string>
-    <string name="home_fiber_eaten_label">Vezels gegeten</string>
-    <string name="home_sugar_goal_label">Suiker over</string>
-    <string name="home_sugar_eaten_label">Suiker gegeten</string>
-    <string name="home_sodium_goal_label">Natrium over</string>
-    <string name="home_sodium_eaten_label">Natrium ingenomen</string>
+    <string name="home_protein_goal_label">Eiwit</string>
+    <string name="home_protein_eaten_label">Eiwit</string>
+
+    <string name="home_carbs_goal_label">Koolhydraten</string>
+    <string name="home_carbs_eaten_label">Koolhydraten</string>
+
+    <string name="home_fats_goal_label">Vet</string>
+    <string name="home_fats_eaten_label">Vet</string>
+
+    <string name="home_fiber_goal_label">Vezels</string>
+    <string name="home_fiber_eaten_label">Vezels</string>
+
+    <string name="home_sugar_goal_label">Suiker</string>
+    <string name="home_sugar_eaten_label">Suiker</string>
+
+    <string name="home_sodium_goal_label">Natrium</string>
+    <string name="home_sodium_eaten_label">Natrium</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 

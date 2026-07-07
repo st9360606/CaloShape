@@ -169,7 +169,7 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">CaloShape AI może potroić skuteczność\nodchudzania</string>
+    <string name="onboard_weight_loss_comparison_title">Łatwiej trzymać się\nplanu z CaloShape AI</string>
     <string name="onboard_weight_loss_comparison_without_ai">Bez\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">Z\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
@@ -177,19 +177,21 @@
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
-    <string name="onboard_notif_title">Niech każdy posiłek ma znaczenie!</string>
-    <string name="onboard_notif_subtitle">Włącz powiadomienia, aby otrzymywać delikatne przypomnienia o zapisywaniu posiłków, dzięki czemu kalorie, makro i postępy pozostaną na właściwym torze. Potknięcia się zdarzają; przypomnienia w odpowiednim czasie pomagają szybko wrócić na kurs.</string>
+    <string name="onboard_notif_title">Nie zapomnij o posiłku!</string>
+    <string name="onboard_notif_subtitle">Włącz przypomnienia, aby łatwiej zapisywać posiłki, trzymać kalorie i makro pod kontrolą oraz nie gubić codziennego rytmu.</string>
     <string name="onboard_allow_notifications_cta">Zezwól na powiadomienia</string>
     <string name="notification_mock_app_title">Licznik kalorii AI</string>
     <string name="onboard_notif_title_got_a_sec">Posiłek sam się nie zapisze 😉</string>
-    <string name="onboard_notif_subtitle_log_meal_goal">Zapisz ten posiłek, aby utrzymać kalorie i makro na właściwym torze.</string>
+    <string name="onboard_notif_subtitle_log_meal_goal">Zapisz posiłek, aby utrzymać kalorie i makro pod kontrolą.</string>
+
+
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">Połącz z</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
-    <string name="onboard_hc_connect_body">Synchronizuj codzienną aktywność między CaloShape AI a aplikacjami zdrowotnymi, aby uzyskać pełniejsze dane i wnioski.</string>
+    <string name="onboard_hc_connect_body">Synchronizuj aktywność z aplikacjami zdrowotnymi, aby lepiej śledzić kalorie i postępy.</string>
     <string name="onboard_hc_permission_rationale_title_prefix">Dlaczego CaloShape używa</string>
     <string name="onboard_hc_permission_rationale_title_service">Health Connect</string>
-    <string name="onboard_hc_permission_rationale_body">CaloShape odczytuje Twoje kroki, aktywne kalorie i dane ćwiczeń, aby oszacować dzienne spalanie aktywności, aktualizować pulpit kalorii i poprawiać informacje o postępach. W każdej chwili możesz cofnąć dostęp w Health Connect.</string>
+    <string name="onboard_hc_permission_rationale_body">CaloShape odczytuje kroki, aktywne kalorie i ćwiczenia, aby szacować dzienne spalanie i aktualizować pulpit. Dostęp możesz cofnąć w Health Connect.</string>
     <string name="onboard_hc_permission_rationale_button">Rozumiem</string>
 
 
@@ -199,9 +201,9 @@
     <string name="progress_footer_hint">To zajmie tylko chwilę</string>
     <string name="progress_center_caption">Przygotowujemy wyniki</string>
     <string name="progress_phase_pill_1">Sprawdzamy profil</string>
-    <string name="progress_phase_pill_2">Obliczanie Twojego celu kalorii</string>
-    <string name="progress_phase_pill_3">Równoważymy dzienne makro</string>
-    <string name="progress_phase_pill_4">Finalizujemy wnioski zdrowotne</string>
+    <string name="progress_phase_pill_2">Obliczamy cel kalorii</string>
+    <string name="progress_phase_pill_3">Dobieramy makro</string>
+    <string name="progress_phase_pill_4">Kończymy analizę</string>
     <string name="progress_card_title">Konfigurujemy plan</string>
     <string name="progress_row_calorie_target">Dzienny cel kalorii</string>
     <string name="progress_row_carb_distribution">Rozkład węglowodanów</string>
@@ -214,7 +216,7 @@
     <string name="plan_cta_start">Zaczynajmy</string>
     <string name="plan_title_congrats">Gratulacje!</string>
     <string name="plan_subtitle_ready">Twój osobisty plan zdrowia jest gotowy!</string>
-    <string name="plan_disclaimer">Źródła poniżej: zobacz wszystkie odniesienia ›</string>
+    <string name="plan_disclaimer">Źródła poniżej: Zobacz wszystkie odniesienia ›</string>
     <string name="plan_unit_kcal_day">kcal / dzień</string>
 
     <string name="plan_macros_proteins">Białko</string>
@@ -227,10 +229,10 @@
     <string name="plan_weight_delta">Do wagi docelowej</string>
 
     <string name="plan_goals_title">Jak osiągnąć\nswoje cele</string>
-    <string name="plan_goal_card_health_scores">Oceny zdrowia pomagają Ci naturalnie budować nawyki</string>
-    <string name="plan_goal_card_track_meals">Zapisuj posiłki jednym stuknięciem — regularność jest prosta</string>
-    <string name="plan_goal_card_daily_calories">Wyraźnie widzisz dzienne kalorie i nigdy nie tracisz kontroli</string>
-    <string name="plan_goal_card_balance_macros">Węglowodany × białko × tłuszcz — mądra równowaga, lepsze wyniki</string>
+    <string name="plan_goal_card_health_scores">Ocena zdrowia pomaga budować lepsze nawyki</string>
+    <string name="plan_goal_card_track_meals">Zapisuj posiłki jednym stuknięciem</string>
+    <string name="plan_goal_card_daily_calories">Miej dzienne kalorie pod kontrolą</string>
+    <string name="plan_goal_card_balance_macros">Zrównoważ makro i łatwiej osiągaj cele</string>
     <string name="plan_sources_based_on">Na podstawie oficjalnych wytycznych żywieniowych,\ntylko informacyjnie, nie jako porada medyczna.</string>
     <string name="plan_sources_more">Zobacz wszystkie odniesienia ›</string>
     <string name="plan_sources_hide">Ukryj źródła</string>
@@ -309,7 +311,7 @@
     <string name="subscription_badge_free_trial">Okres próbny</string>
     <string name="subscription_badge_lowest_price_ever">Najniższa cena w historii</string>
     <string name="subscription_yearly_plan">Plan roczny</string>
-    <string name="subscription_yearly_plan_price_format">12 mies. · %1$s</string>
+    <string name="subscription_yearly_plan_price_format">Rok · %1$s</string>
 
     <string name="subscription_start_free_trial">Wypróbuj za darmo przez 3 dni</string>
     <string name="subscription_trial_helper">Bez zobowiązań — anuluj w dowolnym momencie</string>
@@ -323,7 +325,7 @@
 
 
     <!-- MainBottomBar -->
-    <string name="bottom_nav_home">Strona główna</string>
+    <string name="bottom_nav_home">Główna</string>
     <string name="bottom_nav_progress">Postępy</string>
     <string name="bottom_nav_weight">Waga</string>
     <string name="bottom_nav_fasting">Post</string>
@@ -334,22 +336,24 @@
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">Pozostałe kalorie</string>
-    <string name="home_calories_eaten_label">Spożyte kalorie</string>
+    <string name="home_calories_goal_label">Kalorie</string>
+    <string name="home_calories_eaten_label">Kalorie</string>
+
+
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
-    <string name="home_protein_goal_label">Pozostało białka</string>
-    <string name="home_protein_eaten_label">Spożyte białko</string>
-    <string name="home_carbs_goal_label">Pozostało węglowodanów</string>
-    <string name="home_carbs_eaten_label">Spożyte węglowodany</string>
-    <string name="home_fats_goal_label">Pozostało tłuszczu</string>
-    <string name="home_fats_eaten_label">Spożyte tłuszcze</string>
-    <string name="home_fiber_goal_label">Pozostało błonnika</string>
-    <string name="home_fiber_eaten_label">Spożyty błonnik</string>
-    <string name="home_sugar_goal_label">Pozostało cukru</string>
-    <string name="home_sugar_eaten_label">Spożyty cukier</string>
-    <string name="home_sodium_goal_label">Pozostało sodu</string>
-    <string name="home_sodium_eaten_label">Spożyty sód</string>
+    <string name="home_protein_goal_label">Białko</string>
+    <string name="home_protein_eaten_label">Białko</string>
+    <string name="home_carbs_goal_label">Węglowodany</string>
+    <string name="home_carbs_eaten_label">Węglowodany</string>
+    <string name="home_fats_goal_label">Tłuszcz</string>
+    <string name="home_fats_eaten_label">Tłuszcz</string>
+    <string name="home_fiber_goal_label">Błonnik</string>
+    <string name="home_fiber_eaten_label">Błonnik</string>
+    <string name="home_sugar_goal_label">Cukier</string>
+    <string name="home_sugar_eaten_label">Cukier</string>
+    <string name="home_sodium_goal_label">Sód</string>
+    <string name="home_sodium_eaten_label">Sód</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
@@ -390,8 +394,8 @@
 
     <!-- HomeCards : Fasting Card -->
     <string name="fasting_card_plan_title">Plan postu</string>
-    <string name="fasting_card_start_time">Godzina rozpoczęcia</string>
-    <string name="fasting_card_end_time">Godzina zakończenia</string>
+    <string name="fasting_card_start_time">Start</string>
+    <string name="fasting_card_end_time">Koniec</string>
 
 
     <!-- HomeCards : Water Card -->
@@ -403,8 +407,8 @@
          ProgressScreen
          ========================= -->
     <string name="progress_screen_title">Postępy</string>
-    <string name="progress_tab_this_week">Ten tydzień</string>
-    <string name="progress_tab_last_week">Poprzedni tydzień</string>
+    <string name="progress_tab_this_week">Ten tydz.</string>
+    <string name="progress_tab_last_week">Poprz. tydz.</string>
     <string name="progress_tab_two_weeks_ago">2 tyg. temu</string>
     <string name="progress_tab_three_weeks_ago">3 tyg. temu</string>
     <string name="progress_error_load_failed">Ładowanie nie powiodło się</string>
@@ -494,7 +498,7 @@
          ========================= -->
     <string name="activity_chart_goal_reached">Cel osiągnięty dziś</string>
     <string name="activity_chart_goal_left">%1$d kcal do dzisiejszego celu</string>
-    <string name="activity_chart_title">Spalanie aktywności</string>
+    <string name="activity_chart_title">Aktywność</string>
     <string name="activity_chart_info_dialog_body">Obejmuje zapisane treningi oraz kalorie aktywności szacowane z dziennych kroków.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">Cel</string>
@@ -543,7 +547,7 @@
     <string name="progress_average_fiber">Błonnik</string>
     <string name="progress_average_sugar">Cukier</string>
     <string name="progress_average_sodium">Sód</string>
-    <string name="progress_average_activity">Spalanie aktywności</string>
+    <string name="progress_average_activity">Aktywność</string>
     <string name="progress_average_water">Spożycie wody</string>
     <string name="progress_average_health_score">Ocena zdrowia</string>
     <string name="progress_average_steps">Kroki</string>
@@ -714,9 +718,9 @@
 
 
     <!-- CameraScreen -->
-    <string name="camera_mode_food">Skanuj jedzenie</string>
+    <string name="camera_mode_food">Jedzenie</string>
     <string name="camera_mode_barcode">Kod kreskowy</string>
-    <string name="camera_mode_label">Etykieta żywności</string>
+    <string name="camera_mode_label">Etykieta</string>
     <string name="camera_mode_album">Zdjęcia</string>
     <string name="camera_barcode_title">Skaner kodów kreskowych</string>
     <string name="camera_label_title">Skaner etykiet</string>
@@ -806,7 +810,7 @@
     <string name="settings_personal_details">Dane osobowe</string>
     <string name="settings_adjust_macronutrients">Dostosuj makroskładniki</string>
     <string name="settings_weight_history">Historia wagi</string>
-    <string name="settings_ring_colors_explained">Przewodnik po kolorach pierścieni kalendarza</string>
+    <string name="settings_ring_colors_explained">Kolory pierścieni kalendarza</string>
     <string name="settings_inbox">Skrzynka</string>
 
 
@@ -829,7 +833,9 @@
     <string name="settings_membership_until_format">Do %1$s</string>
     <plurals name="settings_membership_trial_days_left">
         <item quantity="one">%1$d dzień pozostał</item>
-        <item quantity="other">Pozostało %1$d dni</item>
+        <item quantity="few">Pozostały %1$d dni</item>
+        <item quantity="many">Pozostało %1$d dni</item>
+        <item quantity="other">Pozostało %1$d dnia</item>
     </plurals>
 
 
@@ -844,7 +850,7 @@
     <string name="settings_appearance_light">Jasny</string>
     <string name="settings_appearance_dark">Ciemny</string>
     <string name="settings_appearance_mode_title">Wybierz wygląd</string>
-    <string name="settings_appearance_light_description">Zachowaj jasny, czysty wygląd.</string>
+    <string name="settings_appearance_light_description">Użyj jasnego, czystego wyglądu, który sprawdza się na co dzień.</string>
     <string name="settings_appearance_dark_description">Użyj ciemniejszego, łagodniejszego interfejsu do codziennego śledzenia.</string>
     <string name="settings_preferences">Preferencje</string>
     <string name="settings_appearance">Wygląd</string>

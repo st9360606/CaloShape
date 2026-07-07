@@ -347,30 +347,24 @@ Resta sul piano ogni giorno.</string>
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">Calorie restanti</string>
-    <string name="home_calories_eaten_label">Calorie assunte</string>
+    <string name="home_calories_goal_label">Calorie</string>
+    <string name="home_calories_eaten_label">Calorie</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
-    <string name="home_protein_goal_label">Proteine restanti</string>
-    <string name="home_protein_eaten_label">Proteine assunte</string>
-
-    <string name="home_carbs_goal_label">Carboidrati restanti</string>
-    <string name="home_carbs_eaten_label">Carboidrati assunti</string>
-
-    <string name="home_fats_goal_label">Grassi restanti</string>
-    <string name="home_fats_eaten_label">Grassi assunti</string>
-
-    <string name="home_fiber_goal_label">Fibre restanti</string>
-    <string name="home_fiber_eaten_label">Fibre assunte</string>
-
-    <string name="home_sugar_goal_label">Zuccheri restanti</string>
-    <string name="home_sugar_eaten_label">Zuccheri assunti</string>
-
-    <string name="home_sodium_goal_label">Sodio restante</string>
-    <string name="home_sodium_eaten_label">Sodio assunto</string>
-
+    <string name="home_protein_goal_label">Proteine</string>
+    <string name="home_protein_eaten_label">Proteine</string>
+    <string name="home_carbs_goal_label">Carboidrati</string>
+    <string name="home_carbs_eaten_label">Carboidrati</string>
+    <string name="home_fats_goal_label">Grassi</string>
+    <string name="home_fats_eaten_label">Grassi</string>
+    <string name="home_fiber_goal_label">Fibre</string>
+    <string name="home_fiber_eaten_label">Fibre</string>
+    <string name="home_sugar_goal_label">Zuccheri</string>
+    <string name="home_sugar_eaten_label">Zuccheri</string>
+    <string name="home_sodium_goal_label">Sodio</string>
+    <string name="home_sodium_eaten_label">Sodio</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
@@ -411,8 +405,8 @@ Resta sul piano ogni giorno.</string>
 
     <!-- HomeCards : Fasting Card -->
     <string name="fasting_card_plan_title">Piano digiuno</string>
-    <string name="fasting_card_start_time">Ora di inizio</string>
-    <string name="fasting_card_end_time">Ora di fine</string>
+    <string name="fasting_card_start_time">Inizio</string>
+    <string name="fasting_card_end_time">Fine</string>
 
 
     <!-- HomeCards : Water Card -->
