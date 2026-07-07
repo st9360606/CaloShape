@@ -839,7 +839,6 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="settings_membership_trial_ends_today">Uji coba berakhir hari ini</string>
     <string name="settings_membership_until_format">Hingga %1$s</string>
     <plurals name="settings_membership_trial_days_left">
-        <item quantity="one">%1$d hari tersisa</item>
         <item quantity="other">%1$d hari tersisa</item>
     </plurals>
 

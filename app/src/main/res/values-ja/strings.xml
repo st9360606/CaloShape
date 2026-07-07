@@ -842,7 +842,6 @@
     <string name="settings_membership_trial_ends_today">トライアルは今日終了します</string>
     <string name="settings_membership_until_format">%1$s まで</string>
     <plurals name="settings_membership_trial_days_left">
-        <item quantity="one">残り%1$d日</item>
         <item quantity="other">残り%1$d日</item>
     </plurals>
 

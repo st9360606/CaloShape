@@ -18,7 +18,6 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -829,7 +828,7 @@ fun StepsWorkoutRowModern(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .height(IntrinsicSize.Min),
+            .height(cardHeight),
         horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         val activityPrimaryStyle = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.SemiBold)
@@ -930,7 +929,7 @@ fun StepsWorkoutRowModern(
                 {
                     StepsConnectHintCard(
                         text = text,
-                        modifier = Modifier.fillMaxWidth(0.8f),
+                        modifier = Modifier.fillMaxWidth(0.88f),
                         minHeight = 81.dp,
                         textStyle = MaterialTheme.typography.bodySmall.copy(
                             fontSize = 11.sp,                  // ✅ 字大小
@@ -1124,22 +1123,19 @@ fun ActivityStatCardSplit(
     Card(
         modifier = modifier
             .then(clickableMod)
-            .heightIn(min = cardHeight),
+            .height(cardHeight),
         shape = CardStyles.Corner,
         colors = CardDefaults.cardColors(containerColor = HomeCardStyles.Surface.card()),
         border = HomeCardStyles.Surface.border()
     ) {
         Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .heightIn(min = cardHeight)
+            modifier = Modifier.fillMaxSize()
         ) {
 
             // ===== 底層內容（必要時 blur + dim）=====
             Row(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .heightIn(min = cardHeight)
+                    .fillMaxSize()
                     .then(if (blurBackground) Modifier.smartBlurAndDim() else Modifier)
                     .padding(horizontal = 14.dp, vertical = 12.dp),
                 verticalAlignment = Alignment.CenterVertically
@@ -1147,7 +1143,7 @@ fun ActivityStatCardSplit(
                 Box(
                     modifier = Modifier
                         .weight(1f)
-                        .heightIn(min = (cardHeight - 24.dp).coerceAtLeast(0.dp))
+                        .fillMaxHeight()
                 ) {
                     Column(
                         modifier = Modifier

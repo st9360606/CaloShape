@@ -501,7 +501,7 @@ private fun SuccessContent(
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 modifier = Modifier
-                    .offset(x = (-2).dp)
+                    .offset(x = (-2).dp, y = 4.dp)
                     .testTag("recent_upload_kcal")
             )
 

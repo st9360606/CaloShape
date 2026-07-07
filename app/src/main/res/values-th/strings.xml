@@ -828,7 +828,6 @@
     <string name="settings_membership_trial_ends_today">ช่วงทดลองสิ้นสุดวันนี้</string>
     <string name="settings_membership_until_format">ถึง %1$s</string>
     <plurals name="settings_membership_trial_days_left">
-        <item quantity="one">เหลือ %1$d วัน</item>
         <item quantity="other">เหลือ %1$d วัน</item>
     </plurals>
 

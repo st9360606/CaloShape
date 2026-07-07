@@ -828,7 +828,6 @@
     <string name="settings_membership_trial_ends_today">Dùng thử kết thúc hôm nay</string>
     <string name="settings_membership_until_format">Đến %1$s</string>
     <plurals name="settings_membership_trial_days_left">
-        <item quantity="one">Còn %1$d ngày</item>
         <item quantity="other">Còn %1$d ngày</item>
     </plurals>
 

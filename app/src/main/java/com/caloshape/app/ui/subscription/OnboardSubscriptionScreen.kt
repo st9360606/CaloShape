@@ -974,7 +974,7 @@ private fun OnboardOneTimeOfferScreen(
                 .fillMaxSize()
                 .verticalScroll(scrollState)
                 .padding(horizontal = CaloShapeScreenFrame.contentHorizontalComfort)
-                .padding(top = 110.dp, bottom = 170.dp),
+                .padding(top = 100.dp, bottom = 170.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
@@ -1031,7 +1031,7 @@ private fun OnboardOneTimeOfferScreen(
             enabled = !purchasing,
             modifier = Modifier
                 .align(Alignment.TopStart)
-                .padding(top = 60.dp, start = 18.dp)
+                .padding(top = 56.dp, start = 18.dp)
                 .size(42.dp)
                 .zIndex(10f)
         ) {

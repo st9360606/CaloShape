@@ -829,6 +829,7 @@
     <string name="settings_membership_until_format">Até %1$s</string>
     <plurals name="settings_membership_trial_days_left">
         <item quantity="one">%1$d dia restante</item>
+        <item quantity="many">%1$d dias restantes</item>
         <item quantity="other">%1$d dias restantes</item>
     </plurals>
 

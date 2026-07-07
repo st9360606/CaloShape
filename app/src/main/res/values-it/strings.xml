@@ -843,9 +843,9 @@ Resta sul piano ogni giorno.</string>
     <string name="settings_membership_upgrade">Passa a Premium</string>
     <string name="settings_membership_trial_ends_today">La prova termina oggi</string>
     <string name="settings_membership_until_format">Fino al %1$s</string>
-
     <plurals name="settings_membership_trial_days_left">
         <item quantity="one">%1$d giorno rimasto</item>
+        <item quantity="many">%1$d giorni rimasti</item>
         <item quantity="other">%1$d giorni rimasti</item>
     </plurals>
 
