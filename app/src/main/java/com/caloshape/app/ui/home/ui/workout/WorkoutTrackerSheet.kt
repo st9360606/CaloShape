@@ -884,7 +884,11 @@ fun CalculationFailedContent(
             Text(
                 stringResource(R.string.workout_tracker_calculation_failed_title),
                 color = if (isDark) HomeCardStyles.Text.primary() else Black,
-                style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold)
+                style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 17.dp)
             )
 
             Spacer(Modifier.height(8.dp))
