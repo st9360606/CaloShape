@@ -70,14 +70,14 @@
     <!-- RequireSignInScreen -->
     <string name="auth_sign_in_account_title">Inicia sesión en tu cuenta</string>
     <string name="auth_sign_in_with_google">Iniciar sesión con Google</string>
-    <string name="auth_signin_with_email">Continuar con correo electrónico</string>
+    <string name="auth_signin_with_email">Continuar con email</string>
 
 
     <!-- SignInSheet-->
     <string name="signin_title">Iniciar sesión</string>
     <string name="signin_with_apple">Iniciar sesión con Apple</string>
     <string name="signin_with_google">Iniciar sesión con Google</string>
-    <string name="signin_with_email">Continuar con correo electrónico</string>
+    <string name="signin_with_email">Continuar con email</string>
     <string name="signin_legal_hint">Al continuar, aceptas los términos de CaloShape</string>
     <string name="signin_terms">Términos</string>
     <string name="signin_and">y</string>
@@ -164,7 +164,7 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">¿Cuál es tu peso objetivo?</string>
-    <string name="onboard_goal_weight_subtitle">Según este objetivo, crearemos una recomendación diaria de calorías más adecuada para ti.</string>
+    <string name="onboard_goal_weight_subtitle">Ajustaremos tus calorías diarias según tu objetivo.</string>
     <string name="onboard_goal_weight_hint">Esto se usará para calibrar tu plan personalizado.</string>
 
 
@@ -177,12 +177,14 @@
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
-    <string name="onboard_notif_title">¡Haz que cada comida cuente!</string>
-    <string name="onboard_notif_subtitle">Activa las notificaciones para recibir recordatorios suaves para registrar comidas, de modo que tus calorías, macros y progreso sigan en buen camino. Los tropiezos pasan; los avisos oportunos te ayudan a retomar rápido.</string>
+    <string name="onboard_notif_title">Un recordatorio a tiempo</string>
+    <string name="onboard_notif_subtitle">Activa recordatorios suaves para registrar tus comidas y mantener tus calorías, macros y progreso en buen camino. Si te despistas, te ayudamos a retomar rápido.</string>
     <string name="onboard_allow_notifications_cta">Permitir notificaciones</string>
     <string name="notification_mock_app_title">Contador de calorías con IA</string>
-    <string name="onboard_notif_title_got_a_sec">Tu comida no se registrará sola 😉</string>
+    <string name="onboard_notif_title_got_a_sec">Tu comida no se registra sola 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Registra esta comida para mantener tus calorías y macros en buen camino.</string>
+
+
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">Conectar con</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
@@ -227,17 +229,17 @@
     <string name="plan_weight_delta">Hasta el peso objetivo</string>
 
     <string name="plan_goals_title">Cómo alcanzar\ntus objetivos</string>
-    <string name="plan_goal_card_health_scores">Las puntuaciones de salud te guían para que los hábitos se formen naturalmente</string>
-    <string name="plan_goal_card_track_meals">Registra comidas con un toque; mantener la constancia es fácil</string>
-    <string name="plan_goal_card_daily_calories">Mira tus calorías diarias con claridad y no pierdas el control</string>
-    <string name="plan_goal_card_balance_macros">Carbohidratos × proteína × grasa, equilibrio inteligente, mejores resultados</string>
+    <string name="plan_goal_card_health_scores">Tu puntuación de salud te ayuda a crear hábitos</string>
+    <string name="plan_goal_card_track_meals">Registra tus comidas con un toque y sé constante</string>
+    <string name="plan_goal_card_daily_calories">Ve tus calorías diarias y mantén el rumbo</string>
+    <string name="plan_goal_card_balance_macros">Equilibra carbohidratos, proteínas y grasas</string>
     <string name="plan_sources_based_on">Basado en guías alimentarias oficiales,\nsolo como referencia, no es consejo médico.</string>
     <string name="plan_sources_more">Ver todas las referencias ›</string>
     <string name="plan_sources_hide">Ocultar fuentes</string>
 
 
     <!-- Onboarding: OnboardReferralCodeScreen -->
-    <string name="onboard_referral_code_input">Ingresa un código de referido\n(opcional)</string>
+    <string name="onboard_referral_code_input">Ingresa un código de referido (opcional)</string>
     <string name="onboard_referral_code_subtitle">Puedes omitir este paso</string>
     <string name="onboard_referral_code_input_label">Código de referido</string>
     <string name="onboard_referral_code_placeholder">Código de referido</string>
@@ -264,7 +266,7 @@
 
 
     <!-- Onboarding: OnboardSubscriptionIntro -->
-    <string name="subscription_intro_title">Desbloquea CaloShape AI para\nalcanzar tus objetivos más rápido.</string>
+    <string name="subscription_intro_title">Desbloquea CaloShape AI para alcanzar tus objetivos más rápido.</string>
     <string name="subscription_intro_helper_format">Solo %1$s al año (%2$s)</string>
     <string name="subscription_start_three_day_free_trial">Prueba gratis por 3 días</string>
     <string name="subscription_three_day_trial_helper_format">Solo %1$s/year (%2$s/mo)</string>

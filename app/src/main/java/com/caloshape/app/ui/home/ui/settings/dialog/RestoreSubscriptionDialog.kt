@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -95,7 +94,7 @@ fun RestoreSubscriptionDialog(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(
-                    modifier = Modifier.padding(horizontal = 26.dp, vertical = 24.dp)
+                    modifier = Modifier.padding(horizontal = 26.dp, vertical = 30.dp)
                 ) {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
@@ -181,12 +180,12 @@ fun RestoreSubscriptionDialog(
                                 ),
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .heightIn(min = 53.dp)
+                                    .height(53.dp)
                             ) {
                                 Text(
                                     text = if (isRestoring) restoringText else restoreText,
                                     fontSize = 15.sp,
-                                    fontWeight = FontWeight.Bold,
+                                    fontWeight = FontWeight.SemiBold,
                                     textAlign = TextAlign.Center
                                 )
                             }
@@ -206,7 +205,7 @@ fun RestoreSubscriptionDialog(
                                 ),
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .heightIn(min = 53.dp)
+                                    .height(53.dp)
                             ) {
                                 Text(
                                     text = maybeLaterText,
