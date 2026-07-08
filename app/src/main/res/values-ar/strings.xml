@@ -673,8 +673,8 @@
     <string name="workout_tracker_refresh_failed">فشل التحديث. يرجى المحاولة مرة أخرى.</string>
     <string name="workout_tracker_cancel">إلغاء</string>
     <string name="workout_tracker_try_again">حاول مرة أخرى</string>
-    <string name="workout_tracker_scan_failed_title">عذرًا! فشل المسح</string>
-    <string name="workout_tracker_scan_failed_body">قد يكون وصف التمرين غير صحيح أو اتصال الإنترنت ضعيفًا. مثال: 30 min Running.</string>
+    <string name="workout_tracker_calculation_failed_title">عذرًا، تعذّر حساب السعرات الحرارية</string>
+    <string name="workout_tracker_calculation_failed_body">قد يكون وصف التمرين غير صحيح أو اتصال الإنترنت ضعيفًا. مثال: الجري لمدة 30 دقيقة.</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->

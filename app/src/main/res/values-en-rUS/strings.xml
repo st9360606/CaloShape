@@ -679,8 +679,8 @@
     <string name="workout_tracker_refresh_failed">Refresh failed. Please try again.</string>
     <string name="workout_tracker_cancel">Cancel</string>
     <string name="workout_tracker_try_again">Try again</string>
-    <string name="workout_tracker_scan_failed_title">Uh-oh! Scan failed</string>
-    <string name="workout_tracker_scan_failed_body">The workout description may be incorrect, or the internet connection is weak. For example: 30 min Running.</string>
+    <string name="workout_tracker_calculation_failed_title">Oops, couldn’t calculate calories</string>
+    <string name="workout_tracker_calculation_failed_body">The workout description may be incorrect, or the internet connection is weak. For example: 30 min running.</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->

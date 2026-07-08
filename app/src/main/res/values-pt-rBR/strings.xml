@@ -673,8 +673,8 @@
     <string name="workout_tracker_refresh_failed">Falha ao atualizar. Tente novamente.</string>
     <string name="workout_tracker_cancel">Cancelar</string>
     <string name="workout_tracker_try_again">Tentar novamente</string>
-    <string name="workout_tracker_scan_failed_title">Ops! Falha ao escanear</string>
-    <string name="workout_tracker_scan_failed_body">A descrição do treino pode estar incorreta ou a conexão com a internet está fraca. Exemplo: 30 min corrida.</string>
+    <string name="workout_tracker_calculation_failed_title">Ops, não foi possível calcular as calorias</string>
+    <string name="workout_tracker_calculation_failed_body">A descrição do treino pode estar incorreta ou a conexão com a internet está fraca. Exemplo: 30 min corrida.</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->

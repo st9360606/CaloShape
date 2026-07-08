@@ -684,8 +684,8 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="workout_tracker_refresh_failed">Gagal memperbarui. Coba lagi.</string>
     <string name="workout_tracker_cancel">Batal</string>
     <string name="workout_tracker_try_again">Coba lagi</string>
-    <string name="workout_tracker_scan_failed_title">Ups! Pemindaian gagal</string>
-    <string name="workout_tracker_scan_failed_body">Deskripsi olahraga mungkin salah, atau koneksi internet lemah. Contoh: 30 min Running.</string>
+    <string name="workout_tracker_calculation_failed_title">Ups, kalori tidak dapat dihitung</string>
+    <string name="workout_tracker_calculation_failed_body">Deskripsi olahraga mungkin salah, atau koneksi internet lemah. Contoh: lari 30 menit.</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->

@@ -684,8 +684,8 @@
     <string name="workout_tracker_refresh_failed">Uppdatering misslyckades. Försök igen.</string>
     <string name="workout_tracker_cancel">Avbryt</string>
     <string name="workout_tracker_try_again">Försök igen</string>
-    <string name="workout_tracker_scan_failed_title">Oj då! Skanningen misslyckades</string>
-    <string name="workout_tracker_scan_failed_body">Träningsbeskrivningen kan vara fel eller internetanslutningen svag. Exempel: 30 min löpning.</string>
+    <string name="workout_tracker_calculation_failed_title">Oj, kalorierna kunde inte beräknas</string>
+    <string name="workout_tracker_calculation_failed_body">Träningsbeskrivningen kan vara fel eller internetanslutningen svag. Exempel: 30 min löpning.</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->

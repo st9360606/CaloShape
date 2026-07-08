@@ -673,8 +673,8 @@
     <string name="workout_tracker_refresh_failed">Yenileme başarısız. Lütfen tekrar deneyin.</string>
     <string name="workout_tracker_cancel">İptal</string>
     <string name="workout_tracker_try_again">Tekrar dene</string>
-    <string name="workout_tracker_scan_failed_title">Eyvah! Tarama başarısız</string>
-    <string name="workout_tracker_scan_failed_body">Egzersiz açıklaması yanlış olabilir veya internet bağlantısı zayıf olabilir. Örnek: 30 min koşu.</string>
+    <string name="workout_tracker_calculation_failed_title">Hay aksi, kaloriler hesaplanamadı</string>
+    <string name="workout_tracker_calculation_failed_body">Egzersiz açıklaması yanlış olabilir veya internet bağlantısı zayıf olabilir. Örnek: 30 min koşu.</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->

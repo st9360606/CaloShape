@@ -673,8 +673,8 @@
     <string name="workout_tracker_refresh_failed">रीफ्रेश विफल। कृपया फिर कोशिश करें।</string>
     <string name="workout_tracker_cancel">रद्द करें</string>
     <string name="workout_tracker_try_again">फिर कोशिश करें</string>
-    <string name="workout_tracker_scan_failed_title">उफ़! स्कैन विफल</string>
-    <string name="workout_tracker_scan_failed_body">वर्कआउट विवरण गलत हो सकता है, या इंटरनेट कनेक्शन कमजोर है। उदाहरण: 30 min Running.</string>
+    <string name="workout_tracker_calculation_failed_title">ओह, कैलोरी की गणना नहीं हो पाई</string>
+    <string name="workout_tracker_calculation_failed_body">वर्कआउट विवरण गलत हो सकता है, या इंटरनेट कनेक्शन कमजोर है। उदाहरण: 30 मिनट दौड़ना।</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->

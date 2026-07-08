@@ -104,7 +104,7 @@ private sealed interface SheetMode {
     data object Tracker : SheetMode
     data object Estimating : SheetMode
     data class Result(val result: EstimateResponse) : SheetMode
-    data object Failed : SheetMode
+    data object CalculationFailed : SheetMode
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -122,7 +122,7 @@ fun WorkoutTrackerSheet(
     val mode: SheetMode = when {
         ui.estimating -> SheetMode.Estimating
         ui.estimateResult != null -> SheetMode.Result(ui.estimateResult!!)
-        ui.errorScanFailed -> SheetMode.Failed
+        ui.calculationFailed -> SheetMode.CalculationFailed
         else -> SheetMode.Tracker
     }
 
@@ -232,13 +232,13 @@ fun WorkoutTrackerSheet(
                         )
                     }
 
-                    is SheetMode.Failed -> Column(Modifier.fillMaxSize()) {
+                    is SheetMode.CalculationFailed -> Column(Modifier.fillMaxSize()) {
                         SimpleHeaderBar(
                             title = stringResource(R.string.workout_tracker_title),
                             onClose = { vm.dismissDialogs(); onClose() } // ★ 用具名參數
                         )
                         Spacer(Modifier.height(4.dp))
-                        FailedContent(onTryAgain = onFlowTryAgain, onCancel = onFlowCancel)
+                        CalculationFailedContent(onTryAgain = onFlowTryAgain, onCancel = onFlowCancel)
                     }
                 }
             }
@@ -841,7 +841,7 @@ fun ResultContent(
     }
 }
 @Composable
-fun FailedContent(
+fun CalculationFailedContent(
     onTryAgain: () -> Unit,
     onCancel: () -> Unit
 ) {
@@ -882,7 +882,7 @@ fun FailedContent(
             Spacer(Modifier.height(20.dp))
 
             Text(
-                stringResource(R.string.workout_tracker_scan_failed_title),
+                stringResource(R.string.workout_tracker_calculation_failed_title),
                 color = if (isDark) HomeCardStyles.Text.primary() else Black,
                 style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold)
             )
@@ -890,7 +890,7 @@ fun FailedContent(
             Spacer(Modifier.height(8.dp))
 
             Text(
-                stringResource(R.string.workout_tracker_scan_failed_body),
+                stringResource(R.string.workout_tracker_calculation_failed_body),
                 color = if (isDark) HomeCardStyles.Text.secondary() else Black.copy(alpha = 0.6f),
                 style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Medium),
                 textAlign = TextAlign.Center,

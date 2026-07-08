@@ -673,8 +673,8 @@
     <string name="workout_tracker_refresh_failed">Làm mới thất bại. Vui lòng thử lại.</string>
     <string name="workout_tracker_cancel">Hủy</string>
     <string name="workout_tracker_try_again">Thử lại</string>
-    <string name="workout_tracker_scan_failed_title">Ôi! Quét thất bại</string>
-    <string name="workout_tracker_scan_failed_body">Mô tả bài tập có thể chưa đúng hoặc kết nối internet yếu. Ví dụ: chạy 30 min.</string>
+    <string name="workout_tracker_calculation_failed_title">Rất tiếc, không thể tính calo</string>
+    <string name="workout_tracker_calculation_failed_body">Mô tả bài tập có thể chưa đúng hoặc kết nối internet yếu. Ví dụ: chạy 30 min.</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->

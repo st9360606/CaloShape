@@ -683,8 +683,8 @@
     <string name="workout_tracker_refresh_failed">Vernieuwen mislukt. Probeer het opnieuw.</string>
     <string name="workout_tracker_cancel">Annuleren</string>
     <string name="workout_tracker_try_again">Opnieuw proberen</string>
-    <string name="workout_tracker_scan_failed_title">Oeps, schatten mislukt</string>
-    <string name="workout_tracker_scan_failed_body">De beschrijving is mogelijk onduidelijk of je internetverbinding is zwak. Bijvoorbeeld: 30 min hardlopen.</string>
+    <string name="workout_tracker_calculation_failed_title">Oeps, calorieën konden niet worden berekend</string>
+    <string name="workout_tracker_calculation_failed_body">De beschrijving is mogelijk onduidelijk of je internetverbinding is zwak. Bijvoorbeeld: 30 min hardlopen.</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->

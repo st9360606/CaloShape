@@ -685,8 +685,8 @@
     <string name="workout_tracker_refresh_failed">Aktualisieren fehlgeschlagen. Bitte versuche es erneut.</string>
     <string name="workout_tracker_cancel">Abbrechen</string>
     <string name="workout_tracker_try_again">Erneut versuchen</string>
-    <string name="workout_tracker_scan_failed_title">Ups! Scan fehlgeschlagen</string>
-    <string name="workout_tracker_scan_failed_body">Die Workout-Beschreibung ist möglicherweise falsch oder die Internetverbindung ist schwach. Beispiel: 30 min Laufen.</string>
+    <string name="workout_tracker_calculation_failed_title">Ups, Kalorien konnten nicht berechnet werden</string>
+    <string name="workout_tracker_calculation_failed_body">Die Workout-Beschreibung ist möglicherweise falsch oder die Internetverbindung ist schwach. Beispiel: 30 min Laufen.</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->

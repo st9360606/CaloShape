@@ -486,8 +486,8 @@ CaloShape AI</string>
     <string name="workout_tracker_refresh_failed">הרענון נכשל. נסה שוב.</string>
     <string name="workout_tracker_cancel">בטל</string>
     <string name="workout_tracker_try_again">נסה שוב</string>
-    <string name="workout_tracker_scan_failed_title">אופס! הסריקה נכשלה</string>
-    <string name="workout_tracker_scan_failed_body">תיאור האימון עשוי להיות שגוי או שחיבור האינטרנט חלש. לדוגמה: 30 min Running.</string>
+    <string name="workout_tracker_calculation_failed_title">אופס, לא הצלחנו לחשב קלוריות</string>
+    <string name="workout_tracker_calculation_failed_body">תיאור האימון עשוי להיות שגוי או שהחיבור לאינטרנט חלש. לדוגמה: 30 דקות ריצה.</string>
     <string name="workout_preset_walking">הליכה</string>
     <string name="workout_preset_running">ריצה</string>
     <string name="workout_preset_cycling">רכיבה על אופניים</string>

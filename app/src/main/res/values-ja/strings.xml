@@ -687,8 +687,8 @@
     <string name="workout_tracker_refresh_failed">更新に失敗しました。もう一度お試しください。</string>
     <string name="workout_tracker_cancel">キャンセル</string>
     <string name="workout_tracker_try_again">再試行</string>
-    <string name="workout_tracker_scan_failed_title">スキャンに失敗しました</string>
-    <string name="workout_tracker_scan_failed_body">ワークアウトの説明が正しくないか、インターネット接続が弱い可能性があります。例: 30 min Running.</string>
+    <string name="workout_tracker_calculation_failed_title">カロリーを計算できませんでした</string>
+    <string name="workout_tracker_calculation_failed_body">ワークアウトの説明が正しくないか、インターネット接続が弱い可能性があります。例: ランニング 30分。</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->

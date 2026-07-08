@@ -673,8 +673,8 @@
     <string name="workout_tracker_refresh_failed">รีเฟรชไม่สำเร็จ โปรดลองอีกครั้ง</string>
     <string name="workout_tracker_cancel">ยกเลิก</string>
     <string name="workout_tracker_try_again">ลองอีกครั้ง</string>
-    <string name="workout_tracker_scan_failed_title">อุ๊ย! สแกนไม่สำเร็จ</string>
-    <string name="workout_tracker_scan_failed_body">คำอธิบายการออกกำลังกายอาจไม่ถูกต้อง หรืออินเทอร์เน็ตอาจอ่อน ตัวอย่าง: วิ่ง 30 min</string>
+    <string name="workout_tracker_calculation_failed_title">ขออภัย คำนวณแคลอรี่ไม่ได้</string>
+    <string name="workout_tracker_calculation_failed_body">คำอธิบายการออกกำลังกายอาจไม่ถูกต้อง หรืออินเทอร์เน็ตอาจอ่อน ตัวอย่าง: วิ่ง 30 min</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->

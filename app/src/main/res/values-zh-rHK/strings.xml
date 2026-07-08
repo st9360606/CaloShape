@@ -678,8 +678,8 @@
     <string name="workout_tracker_refresh_failed">重新整理失敗，請再試一次。</string>
     <string name="workout_tracker_cancel">取消</string>
     <string name="workout_tracker_try_again">再試一次</string>
-    <string name="workout_tracker_scan_failed_title">糟糕，辨識失敗</string>
-    <string name="workout_tracker_scan_failed_body">運動描述可能不正確，或目前網路連線不穩。範例：跑步 30 分鐘。</string>
+    <string name="workout_tracker_calculation_failed_title">糟糕，無法計算卡路里</string>
+    <string name="workout_tracker_calculation_failed_body">運動描述可能不正確，或目前網路連線不穩。範例：跑步 30 分鐘。</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->

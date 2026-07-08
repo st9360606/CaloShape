@@ -677,8 +677,8 @@
     <string name="workout_tracker_refresh_failed">Odświeżenie nie powiodło się. Spróbuj ponownie.</string>
     <string name="workout_tracker_cancel">Anuluj</string>
     <string name="workout_tracker_try_again">Spróbuj ponownie</string>
-    <string name="workout_tracker_scan_failed_title">Ups! Skanowanie nie powiodło się</string>
-    <string name="workout_tracker_scan_failed_body">Opis treningu może być nieprawidłowy albo połączenie internetowe jest słabe. Przykład: 30 min biegania.</string>
+    <string name="workout_tracker_calculation_failed_title">Ups, nie udało się obliczyć kalorii</string>
+    <string name="workout_tracker_calculation_failed_body">Opis treningu może być nieprawidłowy albo połączenie internetowe jest słabe. Przykład: 30 min biegania.</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->

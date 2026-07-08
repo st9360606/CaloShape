@@ -673,8 +673,8 @@
     <string name="workout_tracker_refresh_failed">Error al actualizar. Inténtalo de nuevo.</string>
     <string name="workout_tracker_cancel">Cancelar</string>
     <string name="workout_tracker_try_again">Intentar de nuevo</string>
-    <string name="workout_tracker_scan_failed_title">¡Ups! El escaneo falló</string>
-    <string name="workout_tracker_scan_failed_body">La descripción del ejercicio puede ser incorrecta o la conexión a internet es débil. Por ejemplo: 30 min Running.</string>
+    <string name="workout_tracker_calculation_failed_title">Ups, no pudimos calcular las calorías</string>
+    <string name="workout_tracker_calculation_failed_body">La descripción del ejercicio puede ser incorrecta o la conexión a internet es débil. Por ejemplo: correr 30 min.</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->

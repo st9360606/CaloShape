@@ -43,7 +43,7 @@ data class WorkoutUiState(
     val estimateResult: EstimateResponse? = null,        // (6.jpg)
     val showDurationPickerFor: PresetWorkoutDto? = null, // (2.jpg)
     @StringRes val toastMessageResId: Int? = null,      // 成功 / 失敗吐司文字資源
-    val errorScanFailed: Boolean = false,                // Scan Failed (7.jpg)
+    val calculationFailed: Boolean = false,                // Calculation failed (7.jpg)
     val saving: Boolean = false,                         // 防止連點送出
     val subscriptionRequiredOnce: Boolean = false,
 
@@ -150,7 +150,7 @@ class WorkoutViewModel @Inject constructor(
             // 進入運轉中
             _ui.value = _ui.value.copy(
                 estimating = true,
-                errorScanFailed = false,
+                calculationFailed = false,
                 estimateResult = null
             )
 
@@ -169,14 +169,14 @@ class WorkoutViewModel @Inject constructor(
                     )
                     return@launch
                 }
-                _ui.value = _ui.value.copy(estimating = false, errorScanFailed = true)
+                _ui.value = _ui.value.copy(estimating = false, calculationFailed = true)
                 return@launch
             }
 
             if (resp.status == "ok") {
                 _ui.value = _ui.value.copy(estimating = false, estimateResult = resp)
             } else {
-                _ui.value = _ui.value.copy(estimating = false, errorScanFailed = true)
+                _ui.value = _ui.value.copy(estimating = false, calculationFailed = true)
             }
         }
     }
@@ -321,7 +321,7 @@ class WorkoutViewModel @Inject constructor(
         _ui.value = _ui.value.copy(
             estimating = false,
             estimateResult = null,
-            errorScanFailed = false,
+            calculationFailed = false,
             showDurationPickerFor = null
         )
     }

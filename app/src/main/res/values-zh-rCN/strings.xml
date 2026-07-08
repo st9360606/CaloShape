@@ -674,8 +674,8 @@
     <string name="workout_tracker_refresh_failed">刷新失败，请再试一次。</string>
     <string name="workout_tracker_cancel">取消</string>
     <string name="workout_tracker_try_again">再试一次</string>
-    <string name="workout_tracker_scan_failed_title">糟糕，辨识失败</string>
-    <string name="workout_tracker_scan_failed_body">运动描述可能不正确，或目前网络连接不稳。范例：跑步 30 分钟。</string>
+    <string name="workout_tracker_calculation_failed_title">糟糕，无法计算卡路里</string>
+    <string name="workout_tracker_calculation_failed_body">运动描述可能不正确，或目前网络连接不稳。范例：跑步 30 分钟。</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->

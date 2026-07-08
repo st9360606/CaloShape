@@ -684,8 +684,8 @@
     <string name="workout_tracker_refresh_failed">Échec de la mise à jour. Veuillez réessayer.</string>
     <string name="workout_tracker_cancel">Annuler</string>
     <string name="workout_tracker_try_again">Réessayer</string>
-    <string name="workout_tracker_scan_failed_title">Oups ! Échec de l’analyse</string>
-    <string name="workout_tracker_scan_failed_body">La description de l’entraînement est peut-être incorrecte, ou la connexion internet est faible. Par exemple : 30 min de course.</string>
+    <string name="workout_tracker_calculation_failed_title">Oups, impossible de calculer les calories</string>
+    <string name="workout_tracker_calculation_failed_body">La description de l’entraînement est peut-être incorrecte, ou la connexion internet est faible. Par exemple : 30 min de course.</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->

@@ -688,8 +688,8 @@ Resta sul piano ogni giorno.</string>
     <string name="workout_tracker_refresh_failed">Aggiornamento non riuscito. Riprova.</string>
     <string name="workout_tracker_cancel">Annulla</string>
     <string name="workout_tracker_try_again">Riprova</string>
-    <string name="workout_tracker_scan_failed_title">Ops! Scansione non riuscita</string>
-    <string name="workout_tracker_scan_failed_body">La descrizione dell’allenamento potrebbe essere errata oppure la connessione Internet debole. Per esempio: 30 min Running.</string>
+    <string name="workout_tracker_calculation_failed_title">Ops, non è stato possibile calcolare le calorie</string>
+    <string name="workout_tracker_calculation_failed_body">La descrizione dell’allenamento potrebbe essere errata oppure la connessione Internet debole. Per esempio: 30 min di corsa.</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->

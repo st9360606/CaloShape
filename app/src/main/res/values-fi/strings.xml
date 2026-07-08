@@ -677,8 +677,8 @@
     <string name="workout_tracker_refresh_failed">Päivitys epäonnistui. Yritä uudelleen.</string>
     <string name="workout_tracker_cancel">Peruuta</string>
     <string name="workout_tracker_try_again">Yritä uudelleen</string>
-    <string name="workout_tracker_scan_failed_title">Hups! Skannaus epäonnistui</string>
-    <string name="workout_tracker_scan_failed_body">Treenikuvaus voi olla virheellinen tai internetyhteys heikko. Esimerkiksi: 30 min Running.</string>
+    <string name="workout_tracker_calculation_failed_title">Hups, kaloreita ei voitu laskea</string>
+    <string name="workout_tracker_calculation_failed_body">Treenikuvaus voi olla virheellinen tai internetyhteys heikko. Esimerkiksi: 30 min juoksua.</string>
 
 
     <!-- workoutNameStringRes : Workout preset display names -->
