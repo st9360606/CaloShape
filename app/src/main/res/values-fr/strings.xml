@@ -568,6 +568,8 @@
     <string name="weight_history_title">Historique</string>
     <string name="weight_delete_success">Supprimé avec succès !</string>
     <string name="weight_delete_failed">Échec de la suppression. Veuillez réessayer.</string>
+    <string name="weight_delete_dialog_title">Supprimer le poids ?</string>
+    <string name="weight_delete_dialog_message">Voulez-vous vraiment supprimer définitivement cette mesure de poids ? Cette action est irréversible.</string>
     <string name="weight_log_weight">Enregistrer le poids</string>
 
 
@@ -654,6 +656,8 @@
 
     <string name="workout_history_delete_failed">Échec de la suppression. Veuillez réessayer.</string>
     <string name="workout_history_delete_success">Supprimé avec succès !</string>
+    <string name="workout_history_delete_dialog_title">Supprimer l’entraînement ?</string>
+    <string name="workout_history_delete_dialog_message">Voulez-vous vraiment supprimer définitivement cet entraînement ? Cette action est irréversible.</string>
     <string name="workout_history_error">Impossible de charger l’historique des entraînements.</string>
 
 

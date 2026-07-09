@@ -41,6 +41,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
@@ -58,6 +59,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.caloshape.app.R
+import com.caloshape.app.ui.common.CaloShapeConfirmDialog
 import com.caloshape.app.ui.common.haptic.caloShapeClickableWithoutRipple
 import com.caloshape.app.data.workout.api.WorkoutHistorySessionDto
 import com.caloshape.app.ui.home.HomeTab
@@ -137,7 +139,10 @@ fun WorkoutHistoryScreen(
     val history = ui.recentHistory
     val sessions = history?.sessions.orEmpty()
     val totalKcal = history?.totalKcal ?: 0
-    val waitingForInitialHistory = history == null && !ui.historyError
+    val hasLoadedHistory = history != null
+    val waitingForInitialHistory = !hasLoadedHistory && !ui.historyError
+    val deleteTargetSession = remember { mutableStateOf<WorkoutHistorySessionDto?>(null) }
+    val deleteRequested = remember { mutableStateOf(false) }
 
     val todayTotalKcal = ui.today?.totalKcalToday ?: 0
     val averageDailyKcal = (totalKcal.toDouble() / WorkoutHistoryRangeDays).roundToInt()
@@ -193,7 +198,7 @@ fun WorkoutHistoryScreen(
 
                 // 2. 狀態或歷史列表
                 when {
-                    ui.historyLoading || waitingForInitialHistory -> {
+                    waitingForInitialHistory -> {
                         item {
                             WorkoutHistoryStateCard(
                                 title = stringResource(R.string.workout_history_loading_title),
@@ -203,7 +208,7 @@ fun WorkoutHistoryScreen(
                         }
                     }
 
-                    ui.historyError -> {
+                    ui.historyError && !hasLoadedHistory -> {
                         item {
                             WorkoutHistoryStateCard(
                                 title = stringResource(R.string.workout_history_error_title),
@@ -261,13 +266,38 @@ fun WorkoutHistoryScreen(
                                 session = session,
                                 deleting = ui.deletingSessionIds.contains(session.id),
                                 onDeleteClick = {
-                                    vm.deleteHistorySession(session.id)
+                                    deleteTargetSession.value = session
                                 }
                             )
                         }
                     }
                 }
             }
+
+            val targetSession = deleteTargetSession.value
+            DeleteWorkoutHistorySessionDialog(
+                visible = targetSession != null,
+                onDismiss = {
+                    if (!deleteRequested.value) {
+                        deleteTargetSession.value = null
+                    }
+                },
+                onCancel = {
+                    if (!deleteRequested.value) {
+                        deleteTargetSession.value = null
+                    }
+                },
+                onDelete = {
+                    val targetId = deleteTargetSession.value?.id ?: return@DeleteWorkoutHistorySessionDialog
+                    if (deleteRequested.value) return@DeleteWorkoutHistorySessionDialog
+
+                    deleteRequested.value = true
+                    vm.deleteHistorySession(targetId)
+                },
+                deleting = targetSession?.id?.let { id ->
+                    deleteRequested.value && ui.deletingSessionIds.contains(id)
+                } == true
+            )
         }
 
         when (deleteToastType) {
@@ -291,6 +321,12 @@ fun WorkoutHistoryScreen(
 
     LaunchedEffect(deleteToastTick, deleteToastType) {
         if (deleteToastType != null) {
+            if (deleteRequested.value) {
+                deleteRequested.value = false
+                if (deleteToastType == WorkoutDeleteToastType.SUCCESS) {
+                    deleteTargetSession.value = null
+                }
+            }
             delay(2_000)
             vm.clearDeleteToast()
         }
@@ -302,6 +338,29 @@ fun WorkoutHistoryScreen(
             vm.clearDeleteToast()
         }
     }
+}
+
+@Composable
+private fun DeleteWorkoutHistorySessionDialog(
+    visible: Boolean,
+    onDismiss: () -> Unit,
+    onCancel: () -> Unit,
+    onDelete: () -> Unit,
+    deleting: Boolean
+) {
+    CaloShapeConfirmDialog(
+        visible = visible,
+        onDismiss = onDismiss,
+        onCancel = onCancel,
+        onConfirm = onDelete,
+        loading = deleting,
+        title = stringResource(R.string.workout_history_delete_dialog_title),
+        message = stringResource(R.string.workout_history_delete_dialog_message),
+        confirmText = stringResource(R.string.common_delete),
+        cancelText = stringResource(R.string.common_cancel),
+        confirmButtonColor = Color(0xFFE46A6A),
+        confirmContentColor = Color.White
+    )
 }
 
 @Composable

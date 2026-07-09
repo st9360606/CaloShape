@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -37,6 +36,7 @@ import androidx.compose.ui.window.DialogProperties
 import com.caloshape.app.R
 import com.caloshape.app.ui.common.design.CaloShapeColors
 import com.caloshape.app.ui.common.haptic.rememberClickWithHaptic
+import com.caloshape.app.ui.home.components.HomeCardStyles
 
 @Composable
 fun CaloShapeConfirmDialog(
@@ -58,6 +58,7 @@ fun CaloShapeConfirmDialog(
     val cancelClick = rememberClickWithHaptic(enabled = !loading, onClick = onCancel)
     val confirmClick = rememberClickWithHaptic(enabled = !loading, onClick = onConfirm)
     val colors = CaloShapeColors.current()
+    val isDark = colors.background == CaloShapeColors.Dark.background
 
     Dialog(
         onDismissRequest = { if (!loading) onDismiss() },
@@ -70,13 +71,13 @@ fun CaloShapeConfirmDialog(
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 18.dp)
-                .offset(y = (-28).dp),
+                .padding(horizontal = 18.dp),
             contentAlignment = Alignment.Center
         ) {
             Surface(
                 shape = RoundedCornerShape(16.dp),
-                color = colors.surface,
+                color = if (isDark) HomeCardStyles.Dialog.surface() else colors.surface,
+                border = if (isDark) BorderStroke(1.2.dp, HomeCardStyles.Dialog.border()) else null,
                 tonalElevation = 0.dp,
                 shadowElevation = 0.dp,
                 modifier = Modifier.fillMaxWidth()
@@ -99,7 +100,10 @@ fun CaloShapeConfirmDialog(
                         Box(
                             modifier = Modifier
                                 .size(33.dp)
-                                .background(colors.surfaceMuted, CircleShape),
+                                .background(
+                                    if (isDark) HomeCardStyles.Dialog.panel() else colors.surfaceMuted,
+                                    CircleShape
+                                ),
                             contentAlignment = Alignment.Center
                         ) {
                             IconButton(
@@ -122,7 +126,7 @@ fun CaloShapeConfirmDialog(
 
                     Text(
                         text = message,
-                        fontSize = 16.sp,
+                        fontSize = 15.sp,
                         lineHeight = 20.sp,
                         letterSpacing = 0.5.sp,
                         fontWeight = FontWeight.Normal,
@@ -144,7 +148,7 @@ fun CaloShapeConfirmDialog(
                             shape = RoundedCornerShape(999.dp),
                             border = BorderStroke(0.8.dp, colors.textPrimary.copy(alpha = 0.62f)),
                             colors = ButtonDefaults.outlinedButtonColors(
-                                containerColor = colors.surface,
+                                containerColor = if (isDark) HomeCardStyles.Dialog.panel() else colors.surface,
                                 contentColor = colors.textPrimary
                             ),
                             modifier = Modifier
@@ -153,7 +157,7 @@ fun CaloShapeConfirmDialog(
                         ) {
                             Text(
                                 text = cancelText,
-                                fontSize = 17.sp,
+                                fontSize = 15.sp,
                                 fontWeight = FontWeight.SemiBold
                             )
                         }
@@ -172,7 +176,7 @@ fun CaloShapeConfirmDialog(
                         ) {
                             Text(
                                 text = confirmText,
-                                fontSize = 17.sp,
+                                fontSize = 15.sp,
                                 fontWeight = FontWeight.SemiBold
                             )
                         }

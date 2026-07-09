@@ -557,6 +557,8 @@
     <string name="weight_history_title">इतिहास</string>
     <string name="weight_delete_success">सफलतापूर्वक हटाया गया!</string>
     <string name="weight_delete_failed">हटाना विफल। कृपया फिर कोशिश करें।</string>
+    <string name="weight_delete_dialog_title">वजन रिकॉर्ड हटाएं?</string>
+    <string name="weight_delete_dialog_message">क्या आप वाकई इस वजन रिकॉर्ड को स्थायी रूप से हटाना चाहते हैं? यह कार्रवाई वापस नहीं की जा सकती।</string>
     <string name="weight_log_weight">वजन लॉग करें</string>
 
 
@@ -643,6 +645,8 @@
 
     <string name="workout_history_delete_failed">हटाना विफल। कृपया फिर कोशिश करें।</string>
     <string name="workout_history_delete_success">सफलतापूर्वक हटाया गया!</string>
+    <string name="workout_history_delete_dialog_title">वर्कआउट रिकॉर्ड हटाएं?</string>
+    <string name="workout_history_delete_dialog_message">क्या आप वाकई इस वर्कआउट रिकॉर्ड को स्थायी रूप से हटाना चाहते हैं? यह कार्रवाई वापस नहीं की जा सकती।</string>
     <string name="workout_history_error">वर्कआउट इतिहास लोड नहीं हो सका।</string>
 
 

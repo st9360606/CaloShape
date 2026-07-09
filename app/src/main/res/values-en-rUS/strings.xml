@@ -563,6 +563,8 @@
     <string name="weight_history_title">History</string>
     <string name="weight_delete_success">Deleted successfully!</string>
     <string name="weight_delete_failed">Delete failed. Please try again.</string>
+    <string name="weight_delete_dialog_title">Delete weight record?</string>
+    <string name="weight_delete_dialog_message">Are you sure you want to permanently delete this weight record? This action cannot be undone.</string>
     <string name="weight_log_weight">Log weight</string>
 
 
@@ -649,6 +651,8 @@
 
     <string name="workout_history_delete_failed">Delete failed. Please try again.</string>
     <string name="workout_history_delete_success">Deleted successfully!</string>
+    <string name="workout_history_delete_dialog_title">Delete workout record?</string>
+    <string name="workout_history_delete_dialog_message">Are you sure you want to permanently delete this workout record? This action cannot be undone.</string>
     <string name="workout_history_error">Unable to load workout history.</string>
 
 

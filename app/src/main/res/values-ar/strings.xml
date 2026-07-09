@@ -557,6 +557,8 @@
     <string name="weight_history_title">السجل</string>
     <string name="weight_delete_success">تم الحذف بنجاح!</string>
     <string name="weight_delete_failed">فشل الحذف. يرجى المحاولة مرة أخرى.</string>
+    <string name="weight_delete_dialog_title">حذف سجل الوزن؟</string>
+    <string name="weight_delete_dialog_message">هل أنت متأكد أنك تريد حذف سجل الوزن هذا نهائيًا؟ لا يمكن التراجع عن هذا الإجراء.</string>
     <string name="weight_log_weight">تسجيل الوزن</string>
 
 
@@ -643,6 +645,8 @@
 
     <string name="workout_history_delete_failed">فشل الحذف. يرجى المحاولة مرة أخرى.</string>
     <string name="workout_history_delete_success">تم الحذف بنجاح!</string>
+    <string name="workout_history_delete_dialog_title">حذف سجل التمرين؟</string>
+    <string name="workout_history_delete_dialog_message">هل أنت متأكد أنك تريد حذف سجل التمرين هذا نهائيًا؟ لا يمكن التراجع عن هذا الإجراء.</string>
     <string name="workout_history_error">تعذر تحميل سجل التمارين.</string>
 
 

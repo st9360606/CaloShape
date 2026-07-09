@@ -557,6 +557,8 @@
     <string name="weight_history_title">Geçmiş</string>
     <string name="weight_delete_success">Başarıyla silindi!</string>
     <string name="weight_delete_failed">Silme başarısız. Lütfen tekrar deneyin.</string>
+    <string name="weight_delete_dialog_title">Kilo kaydı silinsin mi?</string>
+    <string name="weight_delete_dialog_message">Bu kilo kaydını kalıcı olarak silmek istediğine emin misin? Bu işlem geri alınamaz.</string>
     <string name="weight_log_weight">Kilo kaydet</string>
 
 
@@ -643,6 +645,8 @@
 
     <string name="workout_history_delete_failed">Silme başarısız. Lütfen tekrar deneyin.</string>
     <string name="workout_history_delete_success">Başarıyla silindi!</string>
+    <string name="workout_history_delete_dialog_title">Antrenman kaydı silinsin mi?</string>
+    <string name="workout_history_delete_dialog_message">Bu antrenman kaydını kalıcı olarak silmek istediğine emin misin? Bu işlem geri alınamaz.</string>
     <string name="workout_history_error">Egzersiz geçmişi yüklenemedi.</string>
 
 

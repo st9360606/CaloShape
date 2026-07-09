@@ -744,7 +744,7 @@ fun HomeScreen(
                     onWorkoutCardClick = { onOpenActivityHistory() }
                 )
                 // ===== Fourth block: 最近上傳
-                val recentSectionTopGap = 18.dp
+                val recentSectionTopGap = 20.dp
                 val recentSectionTitleBottomGap = 16.dp
                 val recentSectionTitleStart = 2.dp
 

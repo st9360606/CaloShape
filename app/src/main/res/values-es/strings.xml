@@ -566,6 +566,8 @@
     <string name="weight_history_title">Historial</string>
     <string name="weight_delete_success">¡Eliminado correctamente!</string>
     <string name="weight_delete_failed">Error al eliminar. Inténtalo de nuevo.</string>
+    <string name="weight_delete_dialog_title">¿Eliminar peso?</string>
+    <string name="weight_delete_dialog_message">¿Seguro que quieres eliminar permanentemente este registro de peso? Esta acción no se puede deshacer.</string>
     <string name="weight_log_weight">Registrar peso</string>
 
 
@@ -652,6 +654,8 @@
 
     <string name="workout_history_delete_failed">Error al eliminar. Inténtalo de nuevo.</string>
     <string name="workout_history_delete_success">¡Eliminado correctamente!</string>
+    <string name="workout_history_delete_dialog_title">¿Eliminar entrenamiento?</string>
+    <string name="workout_history_delete_dialog_message">¿Seguro que quieres eliminar permanentemente este entrenamiento? Esta acción no se puede deshacer.</string>
     <string name="workout_history_error">No se pudo cargar el historial de ejercicio.</string>
 
 

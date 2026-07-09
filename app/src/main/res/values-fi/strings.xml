@@ -566,6 +566,8 @@
     <string name="weight_history_title">Historia</string>
     <string name="weight_delete_success">Poistettu onnistuneesti!</string>
     <string name="weight_delete_failed">Poisto epäonnistui. Yritä uudelleen.</string>
+    <string name="weight_delete_dialog_title">Poistetaanko painomerkintä?</string>
+    <string name="weight_delete_dialog_message">Haluatko varmasti poistaa tämän painomerkinnän pysyvästi? Tätä toimintoa ei voi kumota.</string>
     <string name="weight_log_weight">Kirjaa paino</string>
 
 
@@ -652,6 +654,8 @@
 
     <string name="workout_history_delete_failed">Poisto epäonnistui. Yritä uudelleen.</string>
     <string name="workout_history_delete_success">Poistettu onnistuneesti!</string>
+    <string name="workout_history_delete_dialog_title">Poistetaanko treeni?</string>
+    <string name="workout_history_delete_dialog_message">Haluatko varmasti poistaa tämän treenin pysyvästi? Tätä toimintoa ei voi kumota.</string>
     <string name="workout_history_error">Treenihistoriaa ei voitu ladata.</string>
 
 

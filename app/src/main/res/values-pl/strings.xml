@@ -561,6 +561,8 @@
     <string name="weight_history_title">Historia</string>
     <string name="weight_delete_success">Usunięto pomyślnie!</string>
     <string name="weight_delete_failed">Usuwanie nie powiodło się. Spróbuj ponownie.</string>
+    <string name="weight_delete_dialog_title">Usunąć zapis wagi?</string>
+    <string name="weight_delete_dialog_message">Czy na pewno chcesz trwale usunąć ten zapis wagi? Tej akcji nie można cofnąć.</string>
     <string name="weight_log_weight">Zapisz wagę</string>
 
 
@@ -647,6 +649,8 @@
 
     <string name="workout_history_delete_failed">Usuwanie nie powiodło się. Spróbuj ponownie.</string>
     <string name="workout_history_delete_success">Usunięto pomyślnie!</string>
+    <string name="workout_history_delete_dialog_title">Usunąć trening?</string>
+    <string name="workout_history_delete_dialog_message">Czy na pewno chcesz trwale usunąć ten trening? Tej akcji nie można cofnąć.</string>
     <string name="workout_history_error">Nie udało się wczytać historii treningów.</string>
 
 

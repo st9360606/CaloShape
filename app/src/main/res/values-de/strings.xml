@@ -569,6 +569,8 @@
     <string name="weight_history_title">Verlauf</string>
     <string name="weight_delete_success">Erfolgreich gelöscht!</string>
     <string name="weight_delete_failed">Löschen fehlgeschlagen. Bitte versuche es erneut.</string>
+    <string name="weight_delete_dialog_title">Gewichtseintrag löschen?</string>
+    <string name="weight_delete_dialog_message">Möchtest du diesen Gewichtseintrag wirklich dauerhaft löschen? Diese Aktion kann nicht rückgängig gemacht werden.</string>
     <string name="weight_log_weight">Gewicht eintragen</string>
 
 
@@ -655,6 +657,8 @@
 
     <string name="workout_history_delete_failed">Löschen fehlgeschlagen. Bitte versuche es erneut.</string>
     <string name="workout_history_delete_success">Erfolgreich gelöscht!</string>
+    <string name="workout_history_delete_dialog_title">Trainingseintrag löschen?</string>
+    <string name="workout_history_delete_dialog_message">Möchtest du diesen Trainingseintrag wirklich dauerhaft löschen? Diese Aktion kann nicht rückgängig gemacht werden.</string>
     <string name="workout_history_error">Trainingsverlauf konnte nicht geladen werden.</string>
 
 

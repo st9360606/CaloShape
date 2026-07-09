@@ -46,8 +46,10 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -63,6 +65,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.caloshape.app.R
+import com.caloshape.app.ui.common.CaloShapeConfirmDialog
 import com.caloshape.app.ui.common.haptic.caloShapeClickableWithoutRipple
 import com.caloshape.app.data.profile.repo.UserProfileStore
 import com.caloshape.app.data.weight.api.WeightItemDto
@@ -85,6 +88,7 @@ import java.time.LocalDate
 import kotlin.math.abs
 import com.caloshape.app.ui.common.haptic.rememberClickWithHaptic
 
+@SuppressLint("UnusedBoxWithConstraintsScope")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WeightScreen(
@@ -99,6 +103,8 @@ fun WeightScreen(
     val deleteToastTick = ui.deleteToastTick
     val colors = CaloShapeColors.current()
     val isDark = colors.background == CaloShapeColors.Dark.background
+    var deleteTargetItem by remember { mutableStateOf<WeightItemDto?>(null) }
+    var deleteRequested by remember { mutableStateOf(false) }
 
     val historySorted = remember(ui.history7) {
         ui.history7.sortedByDescending { dto ->
@@ -223,13 +229,38 @@ fun WeightScreen(
                             previous = previous,
                             deleting = ui.deletingLogDates.contains(item.logDate),
                             onDeleteClick = {
-                                vm.deleteHistory(item.logDate)
+                                deleteTargetItem = item
                             }
                         )
                     }
                 }
             }
         }
+
+        val targetItem = deleteTargetItem
+        DeleteWeightHistoryDialog(
+            visible = targetItem != null,
+            onDismiss = {
+                if (!deleteRequested) {
+                    deleteTargetItem = null
+                }
+            },
+            onCancel = {
+                if (!deleteRequested) {
+                    deleteTargetItem = null
+                }
+            },
+            onDelete = {
+                val targetDate = deleteTargetItem?.logDate ?: return@DeleteWeightHistoryDialog
+                if (deleteRequested) return@DeleteWeightHistoryDialog
+
+                deleteRequested = true
+                vm.deleteHistory(targetDate)
+            },
+            deleting = targetItem?.logDate?.let { logDate ->
+                deleteRequested && ui.deletingLogDates.contains(logDate)
+            } == true
+        )
 
         when {
             error != null -> {
@@ -264,6 +295,12 @@ fun WeightScreen(
 
     LaunchedEffect(deleteToastTick, deleteToastType) {
         if (deleteToastType != null) {
+            if (deleteRequested) {
+                deleteRequested = false
+                if (deleteToastType == WeightViewModel.DeleteToastType.SUCCESS) {
+                    deleteTargetItem = null
+                }
+            }
             delay(2_000)
             vm.clearDeleteToast()
         }
@@ -276,6 +313,29 @@ fun WeightScreen(
             vm.clearDeleteToast()
         }
     }
+}
+
+@Composable
+private fun DeleteWeightHistoryDialog(
+    visible: Boolean,
+    onDismiss: () -> Unit,
+    onCancel: () -> Unit,
+    onDelete: () -> Unit,
+    deleting: Boolean
+) {
+    CaloShapeConfirmDialog(
+        visible = visible,
+        onDismiss = onDismiss,
+        onCancel = onCancel,
+        onConfirm = onDelete,
+        loading = deleting,
+        title = stringResource(R.string.weight_delete_dialog_title),
+        message = stringResource(R.string.weight_delete_dialog_message),
+        confirmText = stringResource(R.string.common_delete),
+        cancelText = stringResource(R.string.common_cancel),
+        confirmButtonColor = Color(0xFFE46A6A),
+        confirmContentColor = Color.White
+    )
 }
 
 @SuppressLint("UnusedBoxWithConstraintsScope")

@@ -568,6 +568,8 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="weight_history_title">Riwayat</string>
     <string name="weight_delete_success">Berhasil dihapus!</string>
     <string name="weight_delete_failed">Gagal menghapus. Coba lagi.</string>
+    <string name="weight_delete_dialog_title">Hapus catatan berat?</string>
+    <string name="weight_delete_dialog_message">Anda yakin ingin menghapus catatan berat ini secara permanen? Tindakan ini tidak dapat dibatalkan.</string>
     <string name="weight_log_weight">Catat berat</string>
 
 
@@ -654,6 +656,8 @@ Tetap sesuai rencana setiap hari.</string>
 
     <string name="workout_history_delete_failed">Gagal menghapus. Coba lagi.</string>
     <string name="workout_history_delete_success">Berhasil dihapus!</string>
+    <string name="workout_history_delete_dialog_title">Hapus catatan olahraga?</string>
+    <string name="workout_history_delete_dialog_message">Anda yakin ingin menghapus catatan olahraga ini secara permanen? Tindakan ini tidak dapat dibatalkan.</string>
     <string name="workout_history_error">Tidak dapat memuat riwayat olahraga.</string>
 
 

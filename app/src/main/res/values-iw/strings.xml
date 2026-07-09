@@ -397,6 +397,8 @@ CaloShape AI</string>
     <string name="weight_history_title">היסטוריה</string>
     <string name="weight_delete_success">נמחק בהצלחה!</string>
     <string name="weight_delete_failed">המחיקה נכשלה. נסה שוב.</string>
+    <string name="weight_delete_dialog_title">למחוק רשומת משקל?</string>
+    <string name="weight_delete_dialog_message">האם למחוק לצמיתות את רשומת המשקל הזו? אי אפשר לבטל פעולה זו.</string>
     <string name="weight_log_weight">רשום משקל</string>
     <string name="weight_card_to_goal_weight">עד משקל היעד</string>
     <string name="weight_card_current_weight">משקל נוכחי</string>
@@ -464,6 +466,8 @@ CaloShape AI</string>
     <string name="workout_history_error_title">ההיסטוריה אינה זמינה</string>
     <string name="workout_history_delete_failed">המחיקה נכשלה. נסה שוב.</string>
     <string name="workout_history_delete_success">נמחק בהצלחה!</string>
+    <string name="workout_history_delete_dialog_title">למחוק רשומת אימון?</string>
+    <string name="workout_history_delete_dialog_message">האם למחוק לצמיתות את רשומת האימון הזו? אי אפשר לבטל פעולה זו.</string>
     <string name="workout_history_error">לא ניתן לטעון היסטוריית אימונים.</string>
     <string name="workout_tracker_title">מעקב אימון</string>
     <string name="workout_tracker_subtitle">תאר את סוג האימון ואת משך הזמן</string>

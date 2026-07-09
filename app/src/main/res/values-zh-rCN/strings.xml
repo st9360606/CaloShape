@@ -560,6 +560,8 @@
     <string name="weight_history_title">历史纪录</string>
     <string name="weight_delete_success">删除成功</string>
     <string name="weight_delete_failed">删除失败，请稍后再试</string>
+    <string name="weight_delete_dialog_title">删除体重纪录？</string>
+    <string name="weight_delete_dialog_message">你确定要永久删除这笔体重纪录吗？此操作无法复原。</string>
     <string name="weight_log_weight">记录体重</string>
 
 
@@ -644,6 +646,8 @@
 
     <string name="workout_history_delete_failed">删除失败，请稍后再试</string>
     <string name="workout_history_delete_success">删除成功</string>
+    <string name="workout_history_delete_dialog_title">删除运动纪录？</string>
+    <string name="workout_history_delete_dialog_message">你确定要永久删除这笔运动纪录吗？此操作无法复原。</string>
     <string name="workout_history_error">无法载入运动纪录。</string>
 
 

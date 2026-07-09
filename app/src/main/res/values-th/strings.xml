@@ -557,6 +557,8 @@
     <string name="weight_history_title">ประวัติ</string>
     <string name="weight_delete_success">ลบสำเร็จ!</string>
     <string name="weight_delete_failed">ลบไม่สำเร็จ โปรดลองอีกครั้ง</string>
+    <string name="weight_delete_dialog_title">ลบบันทึกน้ำหนัก?</string>
+    <string name="weight_delete_dialog_message">คุณแน่ใจหรือไม่ว่าต้องการลบบันทึกน้ำหนักนี้ถาวร? การกระทำนี้ไม่สามารถย้อนกลับได้</string>
     <string name="weight_log_weight">บันทึกน้ำหนัก</string>
 
 
@@ -643,6 +645,8 @@
 
     <string name="workout_history_delete_failed">ลบไม่สำเร็จ โปรดลองอีกครั้ง</string>
     <string name="workout_history_delete_success">ลบสำเร็จ!</string>
+    <string name="workout_history_delete_dialog_title">ลบบันทึกการออกกำลังกาย?</string>
+    <string name="workout_history_delete_dialog_message">คุณแน่ใจหรือไม่ว่าต้องการลบบันทึกการออกกำลังกายนี้ถาวร? การกระทำนี้ไม่สามารถย้อนกลับได้</string>
     <string name="workout_history_error">ไม่สามารถโหลดประวัติการออกกำลังกายได้</string>
 
 

@@ -557,6 +557,8 @@
     <string name="weight_history_title">Lịch sử</string>
     <string name="weight_delete_success">Đã xóa thành công!</string>
     <string name="weight_delete_failed">Xóa thất bại. Vui lòng thử lại.</string>
+    <string name="weight_delete_dialog_title">Xóa bản ghi cân nặng?</string>
+    <string name="weight_delete_dialog_message">Bạn có chắc muốn xóa vĩnh viễn bản ghi cân nặng này không? Thao tác này không thể hoàn tác.</string>
     <string name="weight_log_weight">Ghi cân nặng</string>
 
 
@@ -643,6 +645,8 @@
 
     <string name="workout_history_delete_failed">Xóa thất bại. Vui lòng thử lại.</string>
     <string name="workout_history_delete_success">Đã xóa thành công!</string>
+    <string name="workout_history_delete_dialog_title">Xóa bản ghi tập luyện?</string>
+    <string name="workout_history_delete_dialog_message">Bạn có chắc muốn xóa vĩnh viễn bản ghi tập luyện này không? Thao tác này không thể hoàn tác.</string>
     <string name="workout_history_error">Không thể tải lịch sử tập luyện.</string>
 
 

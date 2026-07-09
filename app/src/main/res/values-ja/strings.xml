@@ -571,6 +571,8 @@
     <string name="weight_history_title">履歴</string>
     <string name="weight_delete_success">削除しました！</string>
     <string name="weight_delete_failed">削除に失敗しました。もう一度お試しください。</string>
+    <string name="weight_delete_dialog_title">体重記録を削除しますか？</string>
+    <string name="weight_delete_dialog_message">この体重記録を完全に削除してもよろしいですか？この操作は元に戻せません。</string>
     <string name="weight_log_weight">体重を記録</string>
 
 
@@ -657,6 +659,8 @@
 
     <string name="workout_history_delete_failed">削除に失敗しました。もう一度お試しください。</string>
     <string name="workout_history_delete_success">削除しました！</string>
+    <string name="workout_history_delete_dialog_title">ワークアウト記録を削除しますか？</string>
+    <string name="workout_history_delete_dialog_message">このワークアウト記録を完全に削除してもよろしいですか？この操作は元に戻せません。</string>
     <string name="workout_history_error">ワークアウト履歴を読み込めません。</string>
 
 

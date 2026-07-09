@@ -568,6 +568,8 @@
     <string name="weight_history_title">Historik</string>
     <string name="weight_delete_success">Raderat!</string>
     <string name="weight_delete_failed">Radering misslyckades. Försök igen.</string>
+    <string name="weight_delete_dialog_title">Radera viktpost?</string>
+    <string name="weight_delete_dialog_message">Är du säker på att du vill radera denna viktpost permanent? Åtgärden kan inte ångras.</string>
     <string name="weight_log_weight">Logga vikt</string>
 
 
@@ -654,6 +656,8 @@
 
     <string name="workout_history_delete_failed">Radering misslyckades. Försök igen.</string>
     <string name="workout_history_delete_success">Raderat!</string>
+    <string name="workout_history_delete_dialog_title">Radera träningspass?</string>
+    <string name="workout_history_delete_dialog_message">Är du säker på att du vill radera detta träningspass permanent? Åtgärden kan inte ångras.</string>
     <string name="workout_history_error">Kunde inte läsa in träningshistorik.</string>
 
 

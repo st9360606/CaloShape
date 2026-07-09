@@ -35,7 +35,7 @@ fun ScanFab(
         ),
         modifier = modifier
             .size(68.dp)
-            .offset(x = 6.dp, y = (-57).dp)
+            .offset(x = 10.dp, y = (-86).dp)
     ) {
         ScanCameraIcon(
             modifier = Modifier.size(45.dp),

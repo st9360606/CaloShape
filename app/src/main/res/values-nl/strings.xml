@@ -568,6 +568,8 @@
     <string name="weight_history_title">Historie</string>
     <string name="weight_delete_success">Succesvol verwijderd!</string>
     <string name="weight_delete_failed">Verwijderen mislukt. Probeer het opnieuw.</string>
+    <string name="weight_delete_dialog_title">Gewichtsrecord verwijderen?</string>
+    <string name="weight_delete_dialog_message">Weet je zeker dat je dit gewichtsrecord permanent wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.</string>
     <string name="weight_log_weight">Gewicht loggen</string>
 
 
@@ -653,6 +655,8 @@
 
     <string name="workout_history_delete_failed">Verwijderen mislukt. Probeer het opnieuw.</string>
     <string name="workout_history_delete_success">Succesvol verwijderd!</string>
+    <string name="workout_history_delete_dialog_title">Workoutrecord verwijderen?</string>
+    <string name="workout_history_delete_dialog_message">Weet je zeker dat je dit workoutrecord permanent wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.</string>
     <string name="workout_history_error">Kan trainingshistorie niet laden.</string>
 
 

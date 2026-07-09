@@ -574,6 +574,8 @@ Resta sul piano ogni giorno.</string>
     <string name="weight_history_title">Cronologia</string>
     <string name="weight_delete_success">Eliminato con successo!</string>
     <string name="weight_delete_failed">Eliminazione non riuscita. Riprova.</string>
+    <string name="weight_delete_dialog_title">Eliminare peso?</string>
+    <string name="weight_delete_dialog_message">Vuoi davvero eliminare definitivamente questo record di peso? Questa azione non può essere annullata.</string>
     <string name="weight_log_weight">Registra il peso</string>
 
 
@@ -658,6 +660,8 @@ Resta sul piano ogni giorno.</string>
 
     <string name="workout_history_delete_failed">Eliminazione non riuscita. Riprova.</string>
     <string name="workout_history_delete_success">Eliminato con successo!</string>
+    <string name="workout_history_delete_dialog_title">Eliminare allenamento?</string>
+    <string name="workout_history_delete_dialog_message">Vuoi davvero eliminare definitivamente questo allenamento? Questa azione non può essere annullata.</string>
     <string name="workout_history_error">Impossibile caricare la cronologia allenamenti.</string>
 
 
