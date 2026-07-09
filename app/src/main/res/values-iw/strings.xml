@@ -266,7 +266,7 @@ CaloShape AI</string>
     <string name="steps_status_hc_not_installed">לא מותקן</string>
     <string name="steps_status_hc_unavailable">לא זמין</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
-    <string name="steps_secondary_no_data_yet">אין נתונים עדיין</string>
+    <string name="steps_secondary_no_data_yet">אין נתונים</string>
     <string name="steps_secondary_connect">התחבר</string>
     <string name="steps_hint_connect_google_health">התחבר ל-Health Connect כדי לעקוב אחרי הצעדים שלך</string>
     <string name="steps_hint_install_health_connect">התקן את Health Connect כדי לעקוב אחרי הצעדים שלך</string>

@@ -379,7 +379,7 @@
     <string name="steps_status_hc_not_installed">No instalado</string>
     <string name="steps_status_hc_unavailable">No disponible</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
-    <string name="steps_secondary_no_data_yet">Sin datos aún</string>
+    <string name="steps_secondary_no_data_yet">Sin datos</string>
     <string name="steps_secondary_connect">Conectar</string>
     <string name="steps_hint_connect_google_health">Conecta Health Connect para registrar tus pasos</string>
     <string name="steps_hint_install_health_connect">Instala Health Connect para registrar tus pasos</string>

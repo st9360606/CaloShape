@@ -385,7 +385,7 @@ Resta sul piano ogni giorno.</string>
     <string name="steps_status_hc_not_installed">Non installato</string>
     <string name="steps_status_hc_unavailable">Non disponibile</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
-    <string name="steps_secondary_no_data_yet">Ancora nessun dato</string>
+    <string name="steps_secondary_no_data_yet">Nessun dato</string>
     <string name="steps_secondary_connect">Connetti</string>
     <string name="steps_hint_connect_google_health">Connetti Health Connect per tracciare i passi</string>
     <string name="steps_hint_install_health_connect">Installa Health Connect per tracciare i passi</string>

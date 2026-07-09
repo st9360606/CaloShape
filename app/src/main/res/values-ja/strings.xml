@@ -381,10 +381,10 @@
     <!-- HomeCards : Step Card -->
     <string name="steps_card_title">歩数</string>
     <string name="steps_status_permission_not_granted">未許可</string>
-    <string name="steps_status_hc_not_installed">未インストール</string>
+    <string name="steps_status_hc_not_installed">未導入</string>
     <string name="steps_status_hc_unavailable">利用不可</string>
-    <string name="steps_secondary_est_kcal">約 %1$d kcal</string>
-    <string name="steps_secondary_no_data_yet">まだデータがありません</string>
+    <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
+    <string name="steps_secondary_no_data_yet">データなし</string>
     <string name="steps_secondary_connect">接続</string>
     <string name="steps_hint_connect_google_health">歩数を記録するには Health Connect に接続してください</string>
     <string name="steps_hint_install_health_connect">歩数を記録するにはHealth Connectをインストールしてください</string>

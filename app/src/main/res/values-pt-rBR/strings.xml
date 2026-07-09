@@ -366,11 +366,11 @@
 
     <!-- HomeCards : Step Card -->
     <string name="steps_card_title">Passos</string>
-    <string name="steps_status_permission_not_granted">Não autorizado</string>
+    <string name="steps_status_permission_not_granted">Sem acesso</string>
     <string name="steps_status_hc_not_installed">Não instalado</string>
     <string name="steps_status_hc_unavailable">Indisponível</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
-    <string name="steps_secondary_no_data_yet">Sem dados ainda</string>
+    <string name="steps_secondary_no_data_yet">Sem dados</string>
     <string name="steps_secondary_connect">Conectar</string>
     <string name="steps_hint_connect_google_health">Conecte o Health Connect para acompanhar seus passos</string>
     <string name="steps_hint_install_health_connect">Instale o Health Connect para acompanhar seus passos</string>

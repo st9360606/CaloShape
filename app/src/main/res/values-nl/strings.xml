@@ -381,7 +381,7 @@
     <string name="steps_status_hc_not_installed">Niet geïnstalleerd</string>
     <string name="steps_status_hc_unavailable">Niet beschikbaar</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
-    <string name="steps_secondary_no_data_yet">Nog geen gegevens</string>
+    <string name="steps_secondary_no_data_yet">Geen data</string>
     <string name="steps_secondary_connect">Verbinden</string>
     <string name="steps_hint_connect_google_health">Verbind Health Connect om je stappen bij te houden</string>
     <string name="steps_hint_install_health_connect">Installeer Health Connect om je stappen bij te houden</string>

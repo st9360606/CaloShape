@@ -379,7 +379,7 @@
     <string name="steps_status_hc_not_installed">Ei asennettu</string>
     <string name="steps_status_hc_unavailable">Ei saatavilla</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
-    <string name="steps_secondary_no_data_yet">Ei tietoja vielä</string>
+    <string name="steps_secondary_no_data_yet">Ei tietoja</string>
     <string name="steps_secondary_connect">Yhdistä</string>
     <string name="steps_hint_connect_google_health">Yhdistä Health Connect seurataksesi askeliasi</string>
     <string name="steps_hint_install_health_connect">Asenna Health Connect seurataksesi askeliasi</string>

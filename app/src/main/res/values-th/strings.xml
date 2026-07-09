@@ -366,7 +366,7 @@
 
     <!-- HomeCards : Step Card -->
     <string name="steps_card_title">ก้าว</string>
-    <string name="steps_status_permission_not_granted">ยังไม่ได้อนุญาต</string>
+    <string name="steps_status_permission_not_granted">ไม่มีสิทธิ์</string>
     <string name="steps_status_hc_not_installed">ยังไม่ได้ติดตั้ง</string>
     <string name="steps_status_hc_unavailable">ไม่พร้อมใช้งาน</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>

@@ -366,11 +366,11 @@
 
     <!-- HomeCards : Step Card -->
     <string name="steps_card_title">Bước</string>
-    <string name="steps_status_permission_not_granted">Chưa được cấp quyền</string>
-    <string name="steps_status_hc_not_installed">Chưa cài đặt</string>
+    <string name="steps_status_permission_not_granted">Cần quyền</string>
+    <string name="steps_status_hc_not_installed">Chưa cài</string>
     <string name="steps_status_hc_unavailable">Không khả dụng</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
-    <string name="steps_secondary_no_data_yet">Chưa có dữ liệu</string>
+    <string name="steps_secondary_no_data_yet">Chưa có</string>
     <string name="steps_secondary_connect">Kết nối</string>
     <string name="steps_hint_connect_google_health">Kết nối Health Connect để theo dõi số bước</string>
     <string name="steps_hint_install_health_connect">Cài Health Connect để theo dõi số bước</string>

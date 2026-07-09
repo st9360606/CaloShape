@@ -377,11 +377,11 @@ Tetap sesuai rencana setiap hari.</string>
 
     <!-- HomeCards : Step Card -->
     <string name="steps_card_title">Langkah</string>
-    <string name="steps_status_permission_not_granted">Tidak diizinkan</string>
+    <string name="steps_status_permission_not_granted">Tanpa izin</string>
     <string name="steps_status_hc_not_installed">Belum diinstal</string>
     <string name="steps_status_hc_unavailable">Tidak tersedia</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
-    <string name="steps_secondary_no_data_yet">Belum ada data</string>
+    <string name="steps_secondary_no_data_yet">Tanpa data</string>
     <string name="steps_secondary_connect">Hubungkan</string>
     <string name="steps_hint_connect_google_health">Hubungkan Health Connect untuk melacak langkah Anda</string>
     <string name="steps_hint_install_health_connect">Instal Health Connect untuk melacak langkah Anda</string>

@@ -370,7 +370,7 @@
     <string name="steps_status_hc_not_installed">غير مثبت</string>
     <string name="steps_status_hc_unavailable">غير متاح</string>
     <string name="steps_secondary_est_kcal">≈ %1$d kcal</string>
-    <string name="steps_secondary_no_data_yet">لا توجد بيانات بعد</string>
+    <string name="steps_secondary_no_data_yet">لا بيانات بعد</string>
     <string name="steps_secondary_connect">اتصال</string>
     <string name="steps_hint_connect_google_health">اتصل بـ Health Connect لتتبع خطواتك</string>
     <string name="steps_hint_install_health_connect">ثبّت Health Connect لتتبع خطواتك</string>
