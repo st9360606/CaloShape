@@ -222,7 +222,7 @@
     <string name="plan_unit_kcal_day">kcal / dag</string>
 
     <string name="plan_macros_proteins">Protein</string>
-    <string name="plan_macros_carbs">Kolhydrater</string>
+    <string name="plan_macros_carbs">Kolhydr.</string>
     <string name="plan_macros_fat">Fett</string>
     <string name="plan_unit_g">g</string>
 
@@ -347,8 +347,8 @@
     <string name="home_protein_goal_label">Protein</string>
     <string name="home_protein_eaten_label">Protein</string>
 
-    <string name="home_carbs_goal_label">Kolhydrater</string>
-    <string name="home_carbs_eaten_label">Kolhydrater</string>
+    <string name="home_carbs_goal_label">Kolhydr.</string>
+    <string name="home_carbs_eaten_label">Kolhydr.</string>
 
     <string name="home_fats_goal_label">Fett</string>
     <string name="home_fats_eaten_label">Fett</string>
@@ -463,7 +463,7 @@
     <string name="progress_chart_total_calories">Totala kalorier</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Protein</string>
-    <string name="progress_legend_carbs">Kolhydrater</string>
+    <string name="progress_legend_carbs">Kolhydr.</string>
     <string name="progress_legend_fats">Fett</string>
     <string name="progress_keep_it_up">Fortsätt så! Starten är svårast.</string>
 
@@ -477,7 +477,7 @@
 
     <string name="progress_tooltip_calories">Kalorier</string>
     <string name="progress_tooltip_protein">Protein</string>
-    <string name="progress_tooltip_carbs">Kolhydrater</string>
+    <string name="progress_tooltip_carbs">Kolhydr.</string>
     <string name="progress_tooltip_fats">Fett</string>
     <string name="progress_tooltip_label_format">%1$s:</string>
     <string name="progress_tooltip_grams_value">%1$d g</string>
@@ -549,7 +549,7 @@
     <string name="progress_average_loading">Läser in snitt…</string>
     <string name="progress_average_total_calories">Totala kalorier</string>
     <string name="progress_average_protein">Protein</string>
-    <string name="progress_average_carbs">Kolhydrater</string>
+    <string name="progress_average_carbs">Kolhydr.</string>
     <string name="progress_average_fats">Fett</string>
     <string name="progress_average_fiber">Fiber</string>
     <string name="progress_average_sugar">Socker</string>
@@ -770,7 +770,7 @@
     <string name="foodlog_detail_title">Näring</string>
     <string name="foodlog_detail_calories">Kalorier</string>
     <string name="foodlog_detail_protein">Protein</string>
-    <string name="foodlog_detail_carbs">Kolhydrater</string>
+    <string name="foodlog_detail_carbs">Kolhydr.</string>
     <string name="foodlog_detail_fats">Fett</string>
     <string name="foodlog_detail_fiber">Fiber</string>
     <string name="foodlog_detail_sugar">Socker</string>

@@ -224,7 +224,7 @@ e ti aiuta a restare costante</string>
     <string name="plan_unit_kcal_day">kcal/giorno</string>
 
     <string name="plan_macros_proteins">Proteine</string>
-    <string name="plan_macros_carbs">Carboidrati</string>
+    <string name="plan_macros_carbs">Carbo</string>
     <string name="plan_macros_fat">Grassi</string>
     <string name="plan_unit_g">g</string>
 
@@ -355,8 +355,8 @@ Resta sul piano ogni giorno.</string>
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">Proteine</string>
     <string name="home_protein_eaten_label">Proteine</string>
-    <string name="home_carbs_goal_label">Carboidrati</string>
-    <string name="home_carbs_eaten_label">Carboidrati</string>
+    <string name="home_carbs_goal_label">Carbo</string>
+    <string name="home_carbs_eaten_label">Carbo</string>
     <string name="home_fats_goal_label">Grassi</string>
     <string name="home_fats_eaten_label">Grassi</string>
     <string name="home_fiber_goal_label">Fibre</string>
@@ -468,7 +468,7 @@ Resta sul piano ogni giorno.</string>
     <string name="progress_chart_cals">kcal</string>
 
     <string name="progress_legend_protein">Proteine</string>
-    <string name="progress_legend_carbs">Carboidrati</string>
+    <string name="progress_legend_carbs">Carbo</string>
     <string name="progress_legend_fats">Grassi</string>
     <string name="progress_keep_it_up">Continua così! Iniziare è la parte più difficile!</string>
 
@@ -482,7 +482,7 @@ Resta sul piano ogni giorno.</string>
 
     <string name="progress_tooltip_calories">Calorie</string>
     <string name="progress_tooltip_protein">Proteine</string>
-    <string name="progress_tooltip_carbs">Carboidrati</string>
+    <string name="progress_tooltip_carbs">Carbo</string>
     <string name="progress_tooltip_fats">Grassi</string>
     <string name="progress_tooltip_label_format">%1$s:</string>
     <string name="progress_tooltip_grams_value">%1$d g</string>
@@ -555,7 +555,7 @@ Resta sul piano ogni giorno.</string>
 
     <string name="progress_average_total_calories">Calorie totali</string>
     <string name="progress_average_protein">Proteine</string>
-    <string name="progress_average_carbs">Carboidrati</string>
+    <string name="progress_average_carbs">Carbo</string>
     <string name="progress_average_fats">Grassi</string>
     <string name="progress_average_fiber">Fibre</string>
     <string name="progress_average_sugar">Zuccheri</string>
@@ -774,7 +774,7 @@ Resta sul piano ogni giorno.</string>
     <string name="foodlog_detail_title">Nutrizione</string>
     <string name="foodlog_detail_calories">Calorie</string>
     <string name="foodlog_detail_protein">Proteine</string>
-    <string name="foodlog_detail_carbs">Carboidrati</string>
+    <string name="foodlog_detail_carbs">Carbo</string>
     <string name="foodlog_detail_fats">Grassi</string>
     <string name="foodlog_detail_fiber">Fibre</string>
     <string name="foodlog_detail_sugar">Zuccheri</string>

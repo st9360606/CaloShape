@@ -207,9 +207,7 @@ fun HealthPlanScreen(
                 )
             }
 
-            Box(Modifier.offset(y = (-14).dp)) {
-                MacrosRings(plan)
-            }
+            MacrosRings(plan)
 
             Spacer(Modifier.height(10.dp))
 
@@ -372,19 +370,22 @@ private fun MacrosRings(plan: MacroPlan) {
             title = stringResource(R.string.plan_macros_proteins),
             centerText = "${plan.proteinGrams}${stringResource(R.string.plan_unit_g)}",
             color = HealthPlanTokens.ProteinColor,
-            progress = proteinK / total
+            progress = proteinK / total,
+            modifier = Modifier.weight(1f)
         )
         MacroRingItem(
             title = stringResource(R.string.plan_macros_carbs),
             centerText = "${plan.carbsGrams}${stringResource(R.string.plan_unit_g)}",
             color = HealthPlanTokens.CarbColor,
-            progress = carbsK / total
+            progress = carbsK / total,
+            modifier = Modifier.weight(1f)
         )
         MacroRingItem(
             title = stringResource(R.string.plan_macros_fat),
             centerText = "${plan.fatGrams}${stringResource(R.string.plan_unit_g)}",
             color = HealthPlanTokens.FatColor,
-            progress = fatK / total
+            progress = fatK / total,
+            modifier = Modifier.weight(1f)
         )
     }
 }
@@ -441,19 +442,22 @@ private fun HydrationAndWeightRings(
             title = stringResource(R.string.plan_water_daily),
             centerText = "$waterMl ml",
             color = HealthPlanTokens.WaterColor,
-            progress = min(waterMl / 4000f, 1f)
+            progress = min(waterMl / 4000f, 1f),
+            modifier = Modifier.weight(1f)
         )
         MacroRingItem(
             title = stringResource(R.string.plan_weight_current),
             centerText = currText,
             color = HealthPlanTokens.WeightColor,
-            progress = currProgress
+            progress = currProgress,
+            modifier = Modifier.weight(1f)
         )
         MacroRingItem(
             title = stringResource(R.string.plan_weight_delta),
             centerText = deltaText,
             color = HealthPlanTokens.WeightColor.copy(alpha = 0.50f),
-            progress = deltaProgress
+            progress = deltaProgress,
+            modifier = Modifier.weight(1f)
         )
     }
 }
@@ -471,7 +475,8 @@ private fun MacroRingItem(
     title: String,
     centerText: String,
     color: Color,
-    progress: Float
+    progress: Float,
+    modifier: Modifier = Modifier
 ) {
     val ringTrackColor = if (CaloShapeOnboardingColors.isDark()) {
         CaloShapeOnboardingColors.softBorder()
@@ -479,7 +484,10 @@ private fun MacroRingItem(
         HealthPlanTokens.RingTrack
     }
 
-    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+    Column(
+        modifier = modifier,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         Box(
             modifier = Modifier.size(92.dp),
             contentAlignment = Alignment.Center

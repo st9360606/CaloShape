@@ -725,7 +725,7 @@ private fun OnboardSubscriptionIntro(
             enabled = !purchasing,
             modifier = Modifier
                 .align(Alignment.TopEnd)
-                .padding(top = 66.dp, end = 28.dp)
+                .padding(top = 56.dp, end = 28.dp)
                 .size(42.dp)
                 .zIndex(10f)
         ) {
@@ -840,24 +840,23 @@ private fun OnboardDiscountSpinScreen(
             )
 
             BoxWithConstraints(
-                contentAlignment = Alignment.TopCenter,
+                contentAlignment = Alignment.Center,
                 modifier = Modifier
                     .fillMaxWidth()
                     .weight(1f)
             ) {
-                val wheelTopOffset = 40.dp
-                val statusGap = 28.dp
                 val statusAreaHeight = 80.dp
+                val statusGap = 28.dp
                 val wheelSize = minOf(
                     maxWidth,
-                    (maxHeight - wheelTopOffset - statusAreaHeight).coerceAtLeast(0.dp),
+                    (maxHeight - statusAreaHeight).coerceAtLeast(0.dp),
                     330.dp
                 )
 
                 Box(
                     modifier = Modifier
-                        .size(wheelSize)
-                        .offset(y = wheelTopOffset),
+                        .align(Alignment.Center)
+                        .size(wheelSize),
                     contentAlignment = Alignment.Center
                 ) {
                     DiscountWheelMock(
@@ -885,8 +884,8 @@ private fun OnboardDiscountSpinScreen(
                         fontWeight = FontWeight.ExtraBold,
                         textAlign = TextAlign.Center,
                         modifier = Modifier
-                            .align(Alignment.TopCenter)
-                            .offset(y = wheelTopOffset + wheelSize + statusGap)
+                            .align(Alignment.Center)
+                            .offset(y = wheelSize / 2f + statusGap)
                             .fillMaxWidth()
                     )
                 }

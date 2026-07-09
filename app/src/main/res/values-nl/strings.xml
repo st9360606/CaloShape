@@ -222,7 +222,7 @@
     <string name="plan_unit_kcal_day">kcal / dag</string>
 
     <string name="plan_macros_proteins">Eiwit</string>
-    <string name="plan_macros_carbs">Koolhydraten</string>
+    <string name="plan_macros_carbs">Carbs</string>
     <string name="plan_macros_fat">Vetten</string>
     <string name="plan_unit_g">g</string>
 
@@ -347,8 +347,8 @@
     <string name="home_protein_goal_label">Eiwit</string>
     <string name="home_protein_eaten_label">Eiwit</string>
 
-    <string name="home_carbs_goal_label">Koolhydraten</string>
-    <string name="home_carbs_eaten_label">Koolhydraten</string>
+    <string name="home_carbs_goal_label">Carbs</string>
+    <string name="home_carbs_eaten_label">Carbs</string>
 
     <string name="home_fats_goal_label">Vet</string>
     <string name="home_fats_eaten_label">Vet</string>
@@ -463,7 +463,7 @@
     <string name="progress_chart_total_calories">Totale calorieën</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Eiwit</string>
-    <string name="progress_legend_carbs">Koolhydraten</string>
+    <string name="progress_legend_carbs">Carbs</string>
     <string name="progress_legend_fats">Vetten</string>
     <string name="progress_keep_it_up">Goed bezig! Beginnen is het moeilijkste deel.</string>
 
@@ -477,7 +477,7 @@
 
     <string name="progress_tooltip_calories">Calorieën</string>
     <string name="progress_tooltip_protein">Eiwit</string>
-    <string name="progress_tooltip_carbs">Koolhydraten</string>
+    <string name="progress_tooltip_carbs">Carbs</string>
     <string name="progress_tooltip_fats">Vetten</string>
     <string name="progress_tooltip_label_format">%1$s:</string>
     <string name="progress_tooltip_grams_value">%1$d g</string>
@@ -549,7 +549,7 @@
     <string name="progress_average_loading">Gemiddelden laden…</string>
     <string name="progress_average_total_calories">Totale calorieën</string>
     <string name="progress_average_protein">Eiwit</string>
-    <string name="progress_average_carbs">Koolhydraten</string>
+    <string name="progress_average_carbs">Carbs</string>
     <string name="progress_average_fats">Vetten</string>
     <string name="progress_average_fiber">Vezels</string>
     <string name="progress_average_sugar">Suiker</string>
@@ -769,7 +769,7 @@
     <string name="foodlog_detail_title">Voeding</string>
     <string name="foodlog_detail_calories">Calorieën</string>
     <string name="foodlog_detail_protein">Eiwit</string>
-    <string name="foodlog_detail_carbs">Koolhydraten</string>
+    <string name="foodlog_detail_carbs">Carbs</string>
     <string name="foodlog_detail_fats">Vetten</string>
     <string name="foodlog_detail_fiber">Vezels</string>
     <string name="foodlog_detail_sugar">Suiker</string>

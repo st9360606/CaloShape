@@ -126,6 +126,8 @@
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">¿Cuántos años tienes?</string>
     <string name="onboard_age_subtitle">Usamos tu edad solo para mejorar tu experiencia y la precisión de la estimación de calorías.</string>
+
+
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">¿Cuánto mides?</string>
     <string name="onboard_height_subtitle">Usamos tus datos solo para mejorar tu experiencia y nuestras estimaciones de calorías.</string>
@@ -220,13 +222,13 @@
     <string name="plan_unit_kcal_day">kcal / día</string>
 
     <string name="plan_macros_proteins">Proteína</string>
-    <string name="plan_macros_carbs">Carbohidratos</string>
+    <string name="plan_macros_carbs">Hidratos</string>
     <string name="plan_macros_fat">Grasas</string>
     <string name="plan_unit_g">g</string>
 
     <string name="plan_water_daily">Agua diaria</string>
     <string name="plan_weight_current">Peso actual</string>
-    <string name="plan_weight_delta">Hasta el peso objetivo</string>
+    <string name="plan_weight_delta">Objetivo</string>
 
     <string name="plan_goals_title">Cómo alcanzar\ntus objetivos</string>
     <string name="plan_goal_card_health_scores">Tu puntuación de salud te ayuda a crear hábitos</string>
@@ -343,8 +345,8 @@
     <string name="home_protein_goal_label">Proteína</string>
     <string name="home_protein_eaten_label">Proteína</string>
 
-    <string name="home_carbs_goal_label">Carbohidratos</string>
-    <string name="home_carbs_eaten_label">Carbohidratos</string>
+    <string name="home_carbs_goal_label">Hidratos</string>
+    <string name="home_carbs_eaten_label">Hidratos</string>
 
     <string name="home_fats_goal_label">Grasas</string>
     <string name="home_fats_eaten_label">Grasas</string>
@@ -459,7 +461,7 @@
     <string name="progress_chart_total_calories">Calorías totales</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Proteína</string>
-    <string name="progress_legend_carbs">Carbohidratos</string>
+    <string name="progress_legend_carbs">Hidratos</string>
     <string name="progress_legend_fats">Grasas</string>
     <string name="progress_keep_it_up">¡Sigue así! Empezar es la parte más difícil.</string>
 
@@ -473,7 +475,7 @@
 
     <string name="progress_tooltip_calories">Calories</string>
     <string name="progress_tooltip_protein">Proteína</string>
-    <string name="progress_tooltip_carbs">Carbohidratos</string>
+    <string name="progress_tooltip_carbs">Hidratos</string>
     <string name="progress_tooltip_fats">Grasas</string>
     <string name="progress_tooltip_label_format">%1$s:</string>
     <string name="progress_tooltip_grams_value">%1$d g</string>
@@ -545,7 +547,7 @@
     <string name="progress_average_loading">Cargando promedios…</string>
     <string name="progress_average_total_calories">Calorías totales</string>
     <string name="progress_average_protein">Proteína</string>
-    <string name="progress_average_carbs">Carbohidratos</string>
+    <string name="progress_average_carbs">Hidratos</string>
     <string name="progress_average_fats">Grasas</string>
     <string name="progress_average_fiber">Fibra</string>
     <string name="progress_average_sugar">Azúcar</string>
@@ -766,7 +768,7 @@
     <string name="foodlog_detail_title">Nutrición</string>
     <string name="foodlog_detail_calories">Calorías</string>
     <string name="foodlog_detail_protein">Proteína</string>
-    <string name="foodlog_detail_carbs">Carbohidratos</string>
+    <string name="foodlog_detail_carbs">Hidratos</string>
     <string name="foodlog_detail_fats">Grasas</string>
     <string name="foodlog_detail_fiber">Fibra</string>
     <string name="foodlog_detail_sugar">Azúcar</string>

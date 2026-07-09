@@ -220,8 +220,8 @@
     <string name="plan_unit_kcal_day">kcal / päivä</string>
 
     <string name="plan_macros_proteins">Proteiini</string>
-    <string name="plan_macros_carbs">Hiilihydraatit</string>
-    <string name="plan_macros_fat">Rasvat</string>
+    <string name="plan_macros_carbs">Hiilarit</string>
+    <string name="plan_macros_fat">Rasva</string>
     <string name="plan_unit_g">g</string>
 
     <string name="plan_water_daily">Päivittäinen vesi</string>
@@ -336,24 +336,29 @@
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">Kalorit jäljellä</string>
-    <string name="home_calories_eaten_label">Syödyt kalorit</string>
+    <string name="home_calories_goal_label">Kalorit</string>
+    <string name="home_calories_eaten_label">Kalorit</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
-    <string name="home_protein_goal_label">Proteiinia jäljellä</string>
-    <string name="home_protein_eaten_label">Syöty proteiini</string>
-    <string name="home_carbs_goal_label">Hiilareita jäljellä</string>
-    <string name="home_carbs_eaten_label">Syödyt hiilarit</string>
-    <string name="home_fats_goal_label">Rasvaa jäljellä</string>
-    <string name="home_fats_eaten_label">Syöty rasva</string>
-    <string name="home_fiber_goal_label">Kuitua jäljellä</string>
-    <string name="home_fiber_eaten_label">Syöty kuitu</string>
-    <string name="home_sugar_goal_label">Sokeria jäljellä</string>
-    <string name="home_sugar_eaten_label">Syöty sokeri</string>
-    <string name="home_sodium_goal_label">Natriumia jäljellä</string>
-    <string name="home_sodium_eaten_label">Saatu natrium</string>
+    <string name="home_protein_goal_label">Proteiini</string>
+    <string name="home_protein_eaten_label">Proteiini</string>
+
+    <string name="home_carbs_goal_label">Hiilarit</string>
+    <string name="home_carbs_eaten_label">Hiilarit</string>
+
+    <string name="home_fats_goal_label">Rasva</string>
+    <string name="home_fats_eaten_label">Rasva</string>
+
+    <string name="home_fiber_goal_label">Kuitu</string>
+    <string name="home_fiber_eaten_label">Kuitu</string>
+
+    <string name="home_sugar_goal_label">Sokeri</string>
+    <string name="home_sugar_eaten_label">Sokeri</string>
+
+    <string name="home_sodium_goal_label">Natrium</string>
+    <string name="home_sodium_eaten_label">Natrium</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
@@ -456,8 +461,8 @@
     <string name="progress_chart_total_calories">Kalorit yhteensä</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Proteiini</string>
-    <string name="progress_legend_carbs">Hiilihydraatit</string>
-    <string name="progress_legend_fats">Rasvat</string>
+    <string name="progress_legend_carbs">Hiilarit</string>
+    <string name="progress_legend_fats">Rasva</string>
     <string name="progress_keep_it_up">Hyvin menee! Aloittaminen on vaikeinta.</string>
 
     <string name="progress_day_sun">Su</string>
@@ -470,8 +475,8 @@
 
     <string name="progress_tooltip_calories">Kalorit</string>
     <string name="progress_tooltip_protein">Proteiini</string>
-    <string name="progress_tooltip_carbs">Hiilihydraatit</string>
-    <string name="progress_tooltip_fats">Rasvat</string>
+    <string name="progress_tooltip_carbs">Hiilarit</string>
+    <string name="progress_tooltip_fats">Rasva</string>
     <string name="progress_tooltip_label_format">%1$s:</string>
     <string name="progress_tooltip_grams_value">%1$d g</string>
     <string name="progress_tooltip_plain_value">%1$d</string>
@@ -542,8 +547,8 @@
     <string name="progress_average_loading">Ladataan keskiarvoja…</string>
     <string name="progress_average_total_calories">Kalorit yhteensä</string>
     <string name="progress_average_protein">Proteiini</string>
-    <string name="progress_average_carbs">Hiilihydraatit</string>
-    <string name="progress_average_fats">Rasvat</string>
+    <string name="progress_average_carbs">Hiilarit</string>
+    <string name="progress_average_fats">Rasva</string>
     <string name="progress_average_fiber">Kuitu</string>
     <string name="progress_average_sugar">Sokeri</string>
     <string name="progress_average_sodium">Natrium</string>
@@ -763,8 +768,8 @@
     <string name="foodlog_detail_title">Ravinto</string>
     <string name="foodlog_detail_calories">Kalorit</string>
     <string name="foodlog_detail_protein">Proteiini</string>
-    <string name="foodlog_detail_carbs">Hiilihydraatit</string>
-    <string name="foodlog_detail_fats">Rasvat</string>
+    <string name="foodlog_detail_carbs">Hiilarit</string>
+    <string name="foodlog_detail_fats">Rasva</string>
     <string name="foodlog_detail_fiber">Kuitu</string>
     <string name="foodlog_detail_sugar">Sokeri</string>
     <string name="foodlog_detail_sodium">Natrium</string>

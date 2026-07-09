@@ -222,7 +222,7 @@
     <string name="plan_unit_kcal_day">kcal / Tag</string>
 
     <string name="plan_macros_proteins">Protein</string>
-    <string name="plan_macros_carbs">Kohlenhydrate</string>
+    <string name="plan_macros_carbs">Carbs</string>
     <string name="plan_macros_fat">Fett</string>
     <string name="plan_unit_g">g</string>
 
@@ -348,8 +348,8 @@
     <string name="home_protein_goal_label">Protein</string>
     <string name="home_protein_eaten_label">Protein</string>
 
-    <string name="home_carbs_goal_label">Kohlenhydrate</string>
-    <string name="home_carbs_eaten_label">Kohlenhydrate</string>
+    <string name="home_carbs_goal_label">Carbs</string>
+    <string name="home_carbs_eaten_label">Carbs</string>
 
     <string name="home_fats_goal_label">Fett</string>
     <string name="home_fats_eaten_label">Fett</string>
@@ -464,7 +464,7 @@
     <string name="progress_chart_total_calories">Gesamtkalorien</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Protein</string>
-    <string name="progress_legend_carbs">Kohlenhydrate</string>
+    <string name="progress_legend_carbs">Carbs</string>
     <string name="progress_legend_fats">Fett</string>
     <string name="progress_keep_it_up">Weiter so! Der Anfang ist der schwerste Teil!</string>
 
@@ -478,7 +478,7 @@
 
     <string name="progress_tooltip_calories">Kalorien</string>
     <string name="progress_tooltip_protein">Protein</string>
-    <string name="progress_tooltip_carbs">Kohlenhydrate</string>
+    <string name="progress_tooltip_carbs">Carbs</string>
     <string name="progress_tooltip_fats">Fett</string>
     <string name="progress_tooltip_label_format">%1$s:</string>
     <string name="progress_tooltip_grams_value">%1$d g</string>
@@ -550,7 +550,7 @@
     <string name="progress_average_loading">Durchschnittswerte werden geladen…</string>
     <string name="progress_average_total_calories">Gesamtkalorien</string>
     <string name="progress_average_protein">Protein</string>
-    <string name="progress_average_carbs">Kohlenhydrate</string>
+    <string name="progress_average_carbs">Carbs</string>
     <string name="progress_average_fats">Fett</string>
     <string name="progress_average_fiber">Ballaststoffe</string>
     <string name="progress_average_sugar">Zucker</string>
@@ -771,7 +771,7 @@
     <string name="foodlog_detail_title">Ernährung</string>
     <string name="foodlog_detail_calories">Kalorien</string>
     <string name="foodlog_detail_protein">Protein</string>
-    <string name="foodlog_detail_carbs">Kohlenhydrate</string>
+    <string name="foodlog_detail_carbs">Carbs</string>
     <string name="foodlog_detail_fats">Fett</string>
     <string name="foodlog_detail_fiber">Ballaststoffe</string>
     <string name="foodlog_detail_sugar">Zucker</string>

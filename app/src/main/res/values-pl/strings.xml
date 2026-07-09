@@ -220,7 +220,7 @@
     <string name="plan_unit_kcal_day">kcal / dzień</string>
 
     <string name="plan_macros_proteins">Białko</string>
-    <string name="plan_macros_carbs">Węglowodany</string>
+    <string name="plan_macros_carbs">Węgle</string>
     <string name="plan_macros_fat">Tłuszcze</string>
     <string name="plan_unit_g">g</string>
 
@@ -344,8 +344,8 @@
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">Białko</string>
     <string name="home_protein_eaten_label">Białko</string>
-    <string name="home_carbs_goal_label">Węglowodany</string>
-    <string name="home_carbs_eaten_label">Węglowodany</string>
+    <string name="home_carbs_goal_label">Węgle</string>
+    <string name="home_carbs_eaten_label">Węgle</string>
     <string name="home_fats_goal_label">Tłuszcz</string>
     <string name="home_fats_eaten_label">Tłuszcz</string>
     <string name="home_fiber_goal_label">Błonnik</string>
@@ -456,7 +456,7 @@
     <string name="progress_chart_total_calories">Łączne kalorie</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Białko</string>
-    <string name="progress_legend_carbs">Węglowodany</string>
+    <string name="progress_legend_carbs">Węgle</string>
     <string name="progress_legend_fats">Tłuszcze</string>
     <string name="progress_keep_it_up">Tak trzymaj! Najtrudniej jest zacząć!</string>
 
@@ -470,7 +470,7 @@
 
     <string name="progress_tooltip_calories">Kalorie</string>
     <string name="progress_tooltip_protein">Białko</string>
-    <string name="progress_tooltip_carbs">Węglowodany</string>
+    <string name="progress_tooltip_carbs">Węgle</string>
     <string name="progress_tooltip_fats">Tłuszcze</string>
     <string name="progress_tooltip_label_format">%1$s:</string>
     <string name="progress_tooltip_grams_value">%1$d g</string>
@@ -542,7 +542,7 @@
     <string name="progress_average_loading">Ładowanie średnich…</string>
     <string name="progress_average_total_calories">Łączne kalorie</string>
     <string name="progress_average_protein">Białko</string>
-    <string name="progress_average_carbs">Węglowodany</string>
+    <string name="progress_average_carbs">Węgle</string>
     <string name="progress_average_fats">Tłuszcze</string>
     <string name="progress_average_fiber">Błonnik</string>
     <string name="progress_average_sugar">Cukier</string>
@@ -763,7 +763,7 @@
     <string name="foodlog_detail_title">Odżywianie</string>
     <string name="foodlog_detail_calories">Kalorie</string>
     <string name="foodlog_detail_protein">Białko</string>
-    <string name="foodlog_detail_carbs">Węglowodany</string>
+    <string name="foodlog_detail_carbs">Węgle</string>
     <string name="foodlog_detail_fats">Tłuszcze</string>
     <string name="foodlog_detail_fiber">Błonnik</string>
     <string name="foodlog_detail_sugar">Cukier</string>
