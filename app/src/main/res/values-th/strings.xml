@@ -390,8 +390,8 @@
 
     <!-- HomeCards : Fasting Card -->
     <string name="fasting_card_plan_title">แผนฟาสติ้ง</string>
-    <string name="fasting_card_start_time">เวลาเริ่ม</string>
-    <string name="fasting_card_end_time">เวลาสิ้นสุด</string>
+    <string name="fasting_card_start_time">เริ่ม</string>
+    <string name="fasting_card_end_time">สิ้นสุด</string>
 
 
     <!-- HomeCards : Water Card -->

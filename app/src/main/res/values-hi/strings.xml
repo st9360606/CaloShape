@@ -390,8 +390,8 @@
 
     <!-- HomeCards : Fasting Card -->
     <string name="fasting_card_plan_title">फास्टिंग प्लान</string>
-    <string name="fasting_card_start_time">शुरू होने का समय</string>
-    <string name="fasting_card_end_time">समाप्ति समय</string>
+    <string name="fasting_card_start_time">शुरू</string>
+    <string name="fasting_card_end_time">समाप्ति</string>
 
 
     <!-- HomeCards : Water Card -->

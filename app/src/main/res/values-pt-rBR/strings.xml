@@ -390,8 +390,8 @@
 
     <!-- HomeCards : Fasting Card -->
     <string name="fasting_card_plan_title">Plano de jejum</string>
-    <string name="fasting_card_start_time">Hora de início</string>
-    <string name="fasting_card_end_time">Hora de término</string>
+    <string name="fasting_card_start_time">Início</string>
+    <string name="fasting_card_end_time">Fim</string>
 
 
     <!-- HomeCards : Water Card -->

@@ -401,8 +401,8 @@ Tetap sesuai rencana setiap hari.</string>
 
     <!-- HomeCards : Fasting Card -->
     <string name="fasting_card_plan_title">Rencana Puasa</string>
-    <string name="fasting_card_start_time">Waktu mulai</string>
-    <string name="fasting_card_end_time">Waktu selesai</string>
+    <string name="fasting_card_start_time">Mulai</string>
+    <string name="fasting_card_end_time">Selesai</string>
 
 
     <!-- HomeCards : Water Card -->

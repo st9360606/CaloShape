@@ -390,8 +390,8 @@
 
     <!-- HomeCards : Fasting Card -->
     <string name="fasting_card_plan_title">Kế hoạch nhịn ăn</string>
-    <string name="fasting_card_start_time">Giờ bắt đầu</string>
-    <string name="fasting_card_end_time">Giờ kết thúc</string>
+    <string name="fasting_card_start_time">Bắt đầu</string>
+    <string name="fasting_card_end_time">Kết thúc</string>
 
 
     <!-- HomeCards : Water Card -->

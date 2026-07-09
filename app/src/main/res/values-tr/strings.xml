@@ -390,8 +390,8 @@
 
     <!-- HomeCards : Fasting Card -->
     <string name="fasting_card_plan_title">Oruç Planı</string>
-    <string name="fasting_card_start_time">Başlangıç saati</string>
-    <string name="fasting_card_end_time">Bitiş saati</string>
+    <string name="fasting_card_start_time">Başlangıç</string>
+    <string name="fasting_card_end_time">Bitiş</string>
 
 
     <!-- HomeCards : Water Card -->

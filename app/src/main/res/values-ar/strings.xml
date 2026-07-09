@@ -390,8 +390,8 @@
 
     <!-- HomeCards : Fasting Card -->
     <string name="fasting_card_plan_title">خطة الصيام</string>
-    <string name="fasting_card_start_time">وقت البدء</string>
-    <string name="fasting_card_end_time">وقت الانتهاء</string>
+    <string name="fasting_card_start_time">البداية</string>
+    <string name="fasting_card_end_time">النهاية</string>
 
 
     <!-- HomeCards : Water Card -->

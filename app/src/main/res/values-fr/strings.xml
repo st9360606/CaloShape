@@ -401,8 +401,8 @@
 
     <!-- HomeCards : Fasting Card -->
     <string name="fasting_card_plan_title">Programme de jeûne</string>
-    <string name="fasting_card_start_time">Heure de début</string>
-    <string name="fasting_card_end_time">Heure de fin</string>
+    <string name="fasting_card_start_time">Début</string>
+    <string name="fasting_card_end_time">Fin</string>
 
 
     <!-- HomeCards : Water Card -->
