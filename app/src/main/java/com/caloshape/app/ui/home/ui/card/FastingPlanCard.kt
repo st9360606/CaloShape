@@ -19,13 +19,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.caloshape.app.ui.common.haptic.rememberClickWithHaptic
 import com.caloshape.app.ui.home.components.CardStyles
 import com.caloshape.app.ui.home.components.HomeCardStyles
@@ -62,6 +65,30 @@ fun FastingPlanCard(
     rightColumnWeight: Float = 0.8f
 ) {
     val hapticClick = rememberClickWithHaptic(onClick = onClick)
+    val isArabic = LocalContext.current.resources.configuration.locales
+        .get(0)
+        .language
+        .equals("ar", ignoreCase = true)
+    val timeLabelStyle = if (isArabic) {
+        MaterialTheme.typography.labelMedium.copy(
+            fontSize = 11.sp,
+            lineHeight = 12.sp
+        )
+    } else {
+        MaterialTheme.typography.labelMedium
+    }
+    val timeValueStyle = if (isArabic) {
+        MaterialTheme.typography.bodyMedium.copy(
+            fontSize = 15.sp,
+            lineHeight = 16.sp,
+            textDirection = TextDirection.Ltr
+        )
+    } else {
+        MaterialTheme.typography.bodyMedium.copy(
+            textDirection = TextDirection.Ltr
+        )
+    }
+    val timeSpacerHeight = if (isArabic) 2.dp else 6.dp
 
     Card(
         modifier = modifier
@@ -146,11 +173,12 @@ fun FastingPlanCard(
                     modifier = Modifier
                         .weight(rightColumnWeight)
                         .fillMaxHeight(),
+                    verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Text(
                         text = startLabel,
-                        style = MaterialTheme.typography.labelMedium,
+                        style = timeLabelStyle,
                         color = HomeCardStyles.Text.label(),
                         maxLines = 1,
                         textAlign = TextAlign.Center,
@@ -158,17 +186,17 @@ fun FastingPlanCard(
                     )
                     Text(
                         text = startText ?: "—",
-                        style = MaterialTheme.typography.bodyMedium,
+                        style = timeValueStyle,
                         color = HomeCardStyles.Text.primary(),
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
                     )
-                    Spacer(Modifier.height(6.dp))
+                    Spacer(Modifier.height(timeSpacerHeight))
                     Text(
                         text = endLabel,
-                        style = MaterialTheme.typography.labelMedium,
+                        style = timeLabelStyle,
                         color = HomeCardStyles.Text.label(),
                         maxLines = 1,
                         textAlign = TextAlign.Center,
@@ -176,7 +204,7 @@ fun FastingPlanCard(
                     )
                     Text(
                         text = endText ?: "—",
-                        style = MaterialTheme.typography.bodyMedium,
+                        style = timeValueStyle,
                         color = HomeCardStyles.Text.primary(),
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
