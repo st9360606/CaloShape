@@ -166,7 +166,7 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">Was ist dein Zielgewicht?</string>
-    <string name="onboard_goal_weight_subtitle">Basierend auf diesem Ziel erstellen wir eine passendere tägliche Kalorienempfehlung für dich.</string>
+    <string name="onboard_goal_weight_subtitle">Damit berechnen wir deine tägliche Kalorienempfehlung.</string>
     <string name="onboard_goal_weight_hint">Dies wird verwendet, um deinen individuellen Plan zu kalibrieren.</string>
 
 

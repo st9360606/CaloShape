@@ -126,6 +126,8 @@
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">Quantos anos você tem?</string>
     <string name="onboard_age_subtitle">Usamos sua idade apenas para melhorar sua experiência e a precisão da estimativa de calorias.</string>
+
+
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">Qual é a sua altura?</string>
     <string name="onboard_height_subtitle">Usamos seus dados apenas para melhorar sua experiência e nossas estimativas de calorias.</string>
@@ -163,26 +165,28 @@
 
 
     <!-- Onboarding: WeightGoalScreen -->
-    <string name="onboard_goal_weight_title">Qual é seu peso desejado?</string>
-    <string name="onboard_goal_weight_subtitle">Com base nesta meta, criaremos uma recomendação diária de calorias mais adequada para você.</string>
+    <string name="onboard_goal_weight_title">Qual é sua meta de peso?</string>
+    <string name="onboard_goal_weight_subtitle">Essa meta nos ajuda a calcular suas calorias diárias.</string>
     <string name="onboard_goal_weight_hint">Isso será usado para ajustar seu plano personalizado.</string>
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">Usar o CaloShape AI pode triplicar sua eficiência\nna perda de peso</string>
+    <string name="onboard_weight_loss_comparison_title">Usar o CaloShape AI pode triplicar sua eficiência na perda de peso</string>
     <string name="onboard_weight_loss_comparison_without_ai">Sem\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">Com\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">O CaloShape AI simplifica tudo\ne ajuda você a manter a consistência</string>
+    <string name="onboard_weight_loss_comparison_caption">O CaloShape AI simplifica tudo e ajuda você a manter a consistência</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
-    <string name="onboard_notif_title">Faça cada refeição valer a pena!</string>
-    <string name="onboard_notif_subtitle">Ative as notificações para receber lembretes suaves para registrar refeições, assim suas calorias, macros e progresso ficam no caminho certo. Escorregões acontecem; avisos no momento certo ajudam você a se recuperar rápido.</string>
+    <string name="onboard_notif_title">Mantenha suas refeições em dia!</string>
+    <string name="onboard_notif_subtitle">Receba lembretes para registrar suas refeições e acompanhar calorias, macronutrientes e progresso.</string>
     <string name="onboard_allow_notifications_cta">Permitir notificações</string>
     <string name="notification_mock_app_title">Contador de calorias com IA</string>
-    <string name="onboard_notif_title_got_a_sec">Sua refeição não vai se registrar sozinha 😉</string>
+    <string name="onboard_notif_title_got_a_sec">Sua refeição não se registra 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Registre esta refeição para manter suas calorias e macros no caminho certo.</string>
+
+
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">Conectar ao</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
@@ -197,7 +201,7 @@
     <string name="progress_hero_title">Criando seu plano personalizado</string>
     <string name="progress_hero_subtitle">Estamos usando seus objetivos, dados corporais e preferências para adaptar suas metas diárias.</string>
     <string name="progress_footer_hint">Isso leva só um instante</string>
-    <string name="progress_center_caption">Preparando seus resultados</string>
+    <string name="progress_center_caption">Calculando seus\nresultados</string>
     <string name="progress_phase_pill_1">Revisando seu perfil</string>
     <string name="progress_phase_pill_2">Calculando sua meta de calorias</string>
     <string name="progress_phase_pill_3">Equilibrando seus macros diários</string>
@@ -214,11 +218,11 @@
     <string name="plan_cta_start">Vamos começar</string>
     <string name="plan_title_congrats">Parabéns!</string>
     <string name="plan_subtitle_ready">Seu plano de saúde personalizado está pronto!</string>
-    <string name="plan_disclaimer">As fontes estão abaixo: veja todas as referências ›</string>
+    <string name="plan_disclaimer">As fontes estão abaixo: Ver todas as referências ›</string>
     <string name="plan_unit_kcal_day">kcal / dia</string>
 
     <string name="plan_macros_proteins">Proteína</string>
-    <string name="plan_macros_carbs">Carboidratos</string>
+    <string name="plan_macros_carbs">Carbs</string>
     <string name="plan_macros_fat">Gorduras</string>
     <string name="plan_unit_g">g</string>
 
@@ -227,17 +231,17 @@
     <string name="plan_weight_delta">Até o peso desejado</string>
 
     <string name="plan_goals_title">Como alcançar\nseus objetivos</string>
-    <string name="plan_goal_card_health_scores">Pontuações de saúde orientam você para criar hábitos naturalmente</string>
-    <string name="plan_goal_card_track_meals">Registre refeições com um toque e mantenha a consistência com facilidade</string>
-    <string name="plan_goal_card_daily_calories">Veja as calorias diárias com clareza e nunca perca o controle</string>
-    <string name="plan_goal_card_balance_macros">Carboidratos × proteína × gordura, equilíbrio inteligente, melhores resultados</string>
+    <string name="plan_goal_card_health_scores">Sua pontuação ajuda a criar hábitos melhores</string>
+    <string name="plan_goal_card_track_meals">Registre refeições com um toque e mantenha a rotina</string>
+    <string name="plan_goal_card_daily_calories">Acompanhe suas calorias diárias com facilidade</string>
+    <string name="plan_goal_card_balance_macros">Equilibre carboidratos, proteínas e gorduras</string>
     <string name="plan_sources_based_on">Com base em diretrizes alimentares oficiais,\napenas para referência, não é orientação médica.</string>
     <string name="plan_sources_more">Ver todas as referências ›</string>
     <string name="plan_sources_hide">Ocultar fontes</string>
 
 
     <!-- Onboarding: OnboardReferralCodeScreen -->
-    <string name="onboard_referral_code_input">Insira o código de indicação\n(opcional)</string>
+    <string name="onboard_referral_code_input">Insira o código de indicação (opcional)</string>
     <string name="onboard_referral_code_subtitle">Você pode pular esta etapa</string>
     <string name="onboard_referral_code_input_label">Código de indicação</string>
     <string name="onboard_referral_code_placeholder">Código de indicação</string>
@@ -309,7 +313,7 @@
     <string name="subscription_badge_free_trial">Teste grátis</string>
     <string name="subscription_badge_lowest_price_ever">Menor preço de todos</string>
     <string name="subscription_yearly_plan">Plano anual</string>
-    <string name="subscription_yearly_plan_price_format">12 meses · %1$s</string>
+    <string name="subscription_yearly_plan_price_format">1 ano · %1$s</string>
 
     <string name="subscription_start_free_trial">Teste grátis por 3 dias</string>
     <string name="subscription_trial_helper">Sem compromisso — cancele quando quiser</string>
@@ -334,22 +338,29 @@
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">Calorias restantes</string>
-    <string name="home_calories_eaten_label">Calorias consumidas</string>
+    <string name="home_calories_goal_label">Calorias</string>
+    <string name="home_calories_eaten_label">Calorias</string>
+
+
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
-    <string name="home_protein_goal_label">Proteína restante</string>
-    <string name="home_protein_eaten_label">Proteína consumida</string>
-    <string name="home_carbs_goal_label">Carboidratos restantes</string>
-    <string name="home_carbs_eaten_label">Carboidratos consumidos</string>
-    <string name="home_fats_goal_label">Gorduras restantes</string>
-    <string name="home_fats_eaten_label">Gorduras consumidas</string>
-    <string name="home_fiber_goal_label">Fibra restante</string>
-    <string name="home_fiber_eaten_label">Fibra consumida</string>
-    <string name="home_sugar_goal_label">Açúcar restante</string>
-    <string name="home_sugar_eaten_label">Açúcar consumido</string>
-    <string name="home_sodium_goal_label">Sódio restante</string>
-    <string name="home_sodium_eaten_label">Sódio consumido</string>
+    <string name="home_protein_goal_label">Proteína</string>
+    <string name="home_protein_eaten_label">Proteína</string>
+
+    <string name="home_carbs_goal_label">Carbs</string>
+    <string name="home_carbs_eaten_label">Carbs</string>
+
+    <string name="home_fats_goal_label">Gorduras</string>
+    <string name="home_fats_eaten_label">Gorduras</string>
+
+    <string name="home_fiber_goal_label">Fibra</string>
+    <string name="home_fiber_eaten_label">Fibra</string>
+
+    <string name="home_sugar_goal_label">Açúcar</string>
+    <string name="home_sugar_eaten_label">Açúcar</string>
+
+    <string name="home_sodium_goal_label">Sódio</string>
+    <string name="home_sodium_eaten_label">Sódio</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
@@ -403,10 +414,10 @@
          ProgressScreen
          ========================= -->
     <string name="progress_screen_title">Progresso</string>
-    <string name="progress_tab_this_week">Esta semana</string>
-    <string name="progress_tab_last_week">Semana passada</string>
-    <string name="progress_tab_two_weeks_ago">Há 2 sem.</string>
-    <string name="progress_tab_three_weeks_ago">Há 3 sem.</string>
+    <string name="progress_tab_this_week">Esta sem.</string>
+    <string name="progress_tab_last_week">Sem. ant.</string>
+    <string name="progress_tab_two_weeks_ago">2 sem.</string>
+    <string name="progress_tab_three_weeks_ago">3 sem.</string>
     <string name="progress_error_load_failed">Falha ao carregar</string>
     <string name="activity_chart_error_load_failed">Falha ao carregar o gráfico de atividade</string>
     <string name="water_chart_error_load_failed">Falha ao carregar gráfico de água</string>
@@ -452,9 +463,9 @@
     <string name="progress_chart_total_calories">Calorias totais</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Proteína</string>
-    <string name="progress_legend_carbs">Carboidratos</string>
+    <string name="progress_legend_carbs">Carbs</string>
     <string name="progress_legend_fats">Gorduras</string>
-    <string name="progress_keep_it_up">Continue assim! Começar é a parte mais difícil!</string>
+    <string name="progress_keep_it_up">Continue assim! O começo é o mais difícil!</string>
 
     <string name="progress_day_sun">Dom</string>
     <string name="progress_day_mon">Seg</string>
@@ -466,7 +477,7 @@
 
     <string name="progress_tooltip_calories">Calorias</string>
     <string name="progress_tooltip_protein">Proteína</string>
-    <string name="progress_tooltip_carbs">Carboidratos</string>
+    <string name="progress_tooltip_carbs">Carbs</string>
     <string name="progress_tooltip_fats">Gorduras</string>
     <string name="progress_tooltip_label_format">%1$s:</string>
     <string name="progress_tooltip_grams_value">%1$d g</string>
@@ -493,7 +504,7 @@
          ActivityChartCard
          ========================= -->
     <string name="activity_chart_goal_reached">Meta alcançada hoje</string>
-    <string name="activity_chart_goal_left">%1$d kcal restantes para atingir a meta de hoje</string>
+    <string name="activity_chart_goal_left">Faltam %1$d kcal hoje</string>
     <string name="activity_chart_title">Gasto de atividade</string>
     <string name="activity_chart_info_dialog_body">Inclui treinos registrados e calorias de atividade estimadas pelos passos diários.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -511,7 +522,7 @@
          WaterChartCard
          ========================= -->
     <string name="water_chart_goal_reached">Meta de hoje alcançada</string>
-    <string name="water_chart_goal_left_ml">%1$s ml restantes para atingir a meta de hoje</string>
+    <string name="water_chart_goal_left_ml">Faltam %1$s ml hoje</string>
     <string name="water_chart_title">Consumo de água</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Meta</string>
@@ -538,14 +549,14 @@
     <string name="progress_average_loading">Carregando médias…</string>
     <string name="progress_average_total_calories">Calorias totais</string>
     <string name="progress_average_protein">Proteína</string>
-    <string name="progress_average_carbs">Carboidratos</string>
+    <string name="progress_average_carbs">Carbs</string>
     <string name="progress_average_fats">Gorduras</string>
     <string name="progress_average_fiber">Fibra</string>
     <string name="progress_average_sugar">Açúcar</string>
     <string name="progress_average_sodium">Sódio</string>
     <string name="progress_average_activity">Gasto de atividade</string>
     <string name="progress_average_water">Consumo de água</string>
-    <string name="progress_average_health_score">Pontuação de saúde</string>
+    <string name="progress_average_health_score">Score de saúde</string>
     <string name="progress_average_steps">Passos</string>
     <string name="progress_average_health_score_value">%1$.1f / 10</string>
     <string name="progress_average_steps_value">%1$s passos</string>
@@ -557,6 +568,8 @@
     <string name="weight_history_title">Histórico</string>
     <string name="weight_delete_success">Excluído com sucesso!</string>
     <string name="weight_delete_failed">Falha ao excluir. Tente novamente.</string>
+    <string name="weight_delete_dialog_title">Excluir peso?</string>
+    <string name="weight_delete_dialog_message">Tem certeza de que deseja excluir permanentemente este registro de peso? Esta ação não pode ser desfeita.</string>
     <string name="weight_log_weight">Registrar peso</string>
 
 
@@ -567,7 +580,7 @@
     <string name="weight_chart_tab_30_days">30 dias</string>
     <string name="weight_chart_tab_60_days">60 dias</string>
     <string name="weight_chart_tab_90_days">90 dias</string>
-    <string name="weight_chart_tab_all_time">Todo o período</string>
+    <string name="weight_chart_tab_all_time">Tudo</string>
     <string name="weight_chart_title">Tendência de peso</string>
     <string name="weight_chart_goal_progress_badge">%1$s%% da meta</string>
     <string name="weight_chart_goal_label">Meta</string>
@@ -624,8 +637,8 @@
     <string name="workout_history_summary_body">Acompanhe o progresso do gasto de treino de hoje</string>
     <string name="workout_history_today_label">Hoje</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
-    <string name="workout_history_avg_daily_label">Média 7 dias / dia</string>
-    <string name="workout_history_avg_label">Média 7 dias / sessão</string>
+    <string name="workout_history_avg_daily_label">Média 7d / dia</string>
+    <string name="workout_history_avg_label">Média 7d / sessão</string>
     <string name="workout_history_avg_value">%1$d kcal</string>
     <string name="workout_history_unit_kcal">kcal</string>
 
@@ -643,6 +656,8 @@
 
     <string name="workout_history_delete_failed">Falha ao excluir. Tente novamente.</string>
     <string name="workout_history_delete_success">Excluído com sucesso!</string>
+    <string name="workout_history_delete_dialog_title">Excluir treino?</string>
+    <string name="workout_history_delete_dialog_message">Tem certeza de que deseja excluir permanentemente este treino? Esta ação não pode ser desfeita.</string>
     <string name="workout_history_error">Não foi possível carregar o histórico de treinos.</string>
 
 
@@ -714,9 +729,9 @@
 
 
     <!-- CameraScreen -->
-    <string name="camera_mode_food">Escanear alimento</string>
-    <string name="camera_mode_barcode">Código de barras</string>
-    <string name="camera_mode_label">Rótulo do alimento</string>
+    <string name="camera_mode_food">Comida</string>
+    <string name="camera_mode_barcode">Código</string>
+    <string name="camera_mode_label">Rótulo</string>
     <string name="camera_mode_album">Fotos</string>
     <string name="camera_barcode_title">Leitor de código de barras</string>
     <string name="camera_label_title">Leitor de rótulos</string>
@@ -759,7 +774,7 @@
     <string name="foodlog_detail_title">Nutrição</string>
     <string name="foodlog_detail_calories">Calorias</string>
     <string name="foodlog_detail_protein">Proteína</string>
-    <string name="foodlog_detail_carbs">Carboidratos</string>
+    <string name="foodlog_detail_carbs">Carbs</string>
     <string name="foodlog_detail_fats">Gorduras</string>
     <string name="foodlog_detail_fiber">Fibra</string>
     <string name="foodlog_detail_sugar">Açúcar</string>
@@ -817,14 +832,14 @@
     <string name="settings_version">Versão %1$s</string>
 
 
-    <string name="settings_membership_payment">Problema de pagamento</string>
+    <string name="settings_membership_payment">Erro no pagamento</string>
     <string name="settings_membership_update_payment">Atualizar pagamento</string>
     <string name="settings_membership_premium">Premium</string>
-    <string name="settings_membership_active_member">Membro ativo</string>
-    <string name="settings_membership_trial">Teste</string>
-    <string name="settings_membership_access_active">Acesso ativo</string>
+    <string name="settings_membership_active_member">Assinatura ativa</string>
+    <string name="settings_membership_trial">Teste grátis</string>
+    <string name="settings_membership_access_active">Acesso liberado</string>
     <string name="settings_membership_free">Grátis</string>
-    <string name="settings_membership_upgrade">Fazer upgrade</string>
+    <string name="settings_membership_upgrade">Assinar Premium</string>
     <string name="settings_membership_trial_ends_today">O teste termina hoje</string>
     <string name="settings_membership_until_format">Até %1$s</string>
     <plurals name="settings_membership_trial_days_left">
@@ -1031,7 +1046,7 @@
     <string name="ring_colors_green_title">Verde</string>
     <string name="ring_colors_green_body">Na meta (dentro de 100 calorias da meta)</string>
     <string name="ring_colors_yellow_title">Marrom</string>
-    <string name="ring_colors_yellow_body">100-199 calorias acima da sua meta</string>
+    <string name="ring_colors_yellow_body">100–199 calorias acima da sua meta</string>
     <string name="ring_colors_red_title">Vermelho</string>
     <string name="ring_colors_red_body">200+ calorias acima da sua meta</string>
     <string name="ring_colors_dotted_title">Pontilhado</string>
