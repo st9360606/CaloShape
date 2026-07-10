@@ -1034,7 +1034,7 @@
     <string name="ring_colors_green_title">Yeşil</string>
     <string name="ring_colors_green_body">Hedefte (hedeften 100 kalori içinde)</string>
     <string name="ring_colors_yellow_title">Kahverengi</string>
-    <string name="ring_colors_yellow_body">Hedefinizin 100-199 kalori üstünde</string>
+    <string name="ring_colors_yellow_body">Hedefinizin 100–199 kalori üstünde</string>
     <string name="ring_colors_red_title">Kırmızı</string>
     <string name="ring_colors_red_body">Hedefinizin 200+ kalori üstünde</string>
     <string name="ring_colors_dotted_title">Noktalı</string>

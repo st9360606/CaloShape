@@ -1044,7 +1044,7 @@
     <string name="ring_colors_green_title">Verde</string>
     <string name="ring_colors_green_body">En objetivo (dentro de 100 calorías del objetivo)</string>
     <string name="ring_colors_yellow_title">Marrón</string>
-    <string name="ring_colors_yellow_body">100-199 calorías sobre tu objetivo</string>
+    <string name="ring_colors_yellow_body">100–199 calorías sobre tu objetivo</string>
     <string name="ring_colors_red_title">Rojo</string>
     <string name="ring_colors_red_body">200+ calorías sobre tu objetivo</string>
     <string name="ring_colors_dotted_title">Punteado</string>

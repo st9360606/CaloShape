@@ -1040,7 +1040,7 @@
     <string name="ring_colors_green_title">Zielony</string>
     <string name="ring_colors_green_body">W celu (w granicy 100 kalorii od celu)</string>
     <string name="ring_colors_yellow_title">Brązowy</string>
-    <string name="ring_colors_yellow_body">100-199 kalorii ponad Twój cel</string>
+    <string name="ring_colors_yellow_body">100–199 kalorii ponad Twój cel</string>
     <string name="ring_colors_red_title">Czerwony</string>
     <string name="ring_colors_red_body">200+ kalorii ponad Twój cel</string>
     <string name="ring_colors_dotted_title">Kropkowany</string>

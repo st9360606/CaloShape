@@ -1048,7 +1048,7 @@ dengan teman Anda</string>
     <string name="ring_colors_green_title">Hijau</string>
     <string name="ring_colors_green_body">Sesuai target (dalam 100 kalori dari target)</string>
     <string name="ring_colors_yellow_title">Cokelat</string>
-    <string name="ring_colors_yellow_body">100-199 kalori di atas target Anda</string>
+    <string name="ring_colors_yellow_body">100–199 kalori di atas target Anda</string>
     <string name="ring_colors_red_title">Merah</string>
     <string name="ring_colors_red_body">200+ kalori di atas target Anda</string>
     <string name="ring_colors_dotted_title">Bertitik</string>

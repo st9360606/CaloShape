@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">Chụp ảnh, biết calo.</string>
+    <string name="landing_title">Chụp ảnh món ăn, biết ngay lượng calo.</string>
     <string name="choose_language">Chọn ngôn ngữ</string>
     <string name="cta_get_started">Bắt đầu</string>
     <string name="cta_login_prefix">Đã có tài khoản?</string>
@@ -126,6 +126,8 @@
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">Bạn bao nhiêu tuổi?</string>
     <string name="onboard_age_subtitle">Chúng tôi chỉ dùng tuổi của bạn để cải thiện trải nghiệm và độ chính xác khi ước tính calo.</string>
+
+
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">Bạn cao bao nhiêu?</string>
     <string name="onboard_height_subtitle">Chúng tôi chỉ dùng dữ liệu của bạn để cải thiện trải nghiệm và các ước tính calo.</string>
@@ -163,26 +165,28 @@
 
 
     <!-- Onboarding: WeightGoalScreen -->
-    <string name="onboard_goal_weight_title">Cân nặng mục tiêu của bạn là bao nhiêu?</string>
-    <string name="onboard_goal_weight_subtitle">Dựa trên mục tiêu này, chúng tôi sẽ tạo đề xuất calo hằng ngày phù hợp hơn cho bạn.</string>
+    <string name="onboard_goal_weight_title">Cân nặng mục tiêu của bạn?</string>
+    <string name="onboard_goal_weight_subtitle">Mục tiêu này giúp chúng tôi tính lượng calo phù hợp mỗi ngày.</string>
     <string name="onboard_goal_weight_hint">Thông tin này sẽ được dùng để điều chỉnh kế hoạch cá nhân của bạn.</string>
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">Dùng CaloShape AI có thể tăng gấp ba hiệu quả\ngiảm cân của bạn</string>
+    <string name="onboard_weight_loss_comparison_title">Dùng CaloShape AI có thể tăng gấp ba hiệu quả giảm cân của bạn</string>
     <string name="onboard_weight_loss_comparison_without_ai">Không có\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">Có\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI giúp mọi thứ đơn giản hơn\nvà giúp bạn giữ kỷ luật</string>
+    <string name="onboard_weight_loss_comparison_caption">CaloShape AI giúp mọi thứ đơn giản hơn và giúp bạn giữ kỷ luật</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
-    <string name="onboard_notif_title">Hãy để mỗi bữa ăn đều có ý nghĩa!</string>
+    <string name="onboard_notif_title">Đừng quên ghi lại bữa ăn!</string>
     <string name="onboard_notif_subtitle">Bật thông báo để nhận nhắc nhở nhẹ nhàng ghi bữa ăn, giúp calo, macro và tiến độ của bạn luôn đi đúng hướng. Việc lỡ nhịp có thể xảy ra; lời nhắc đúng lúc giúp bạn quay lại nhanh hơn.</string>
     <string name="onboard_allow_notifications_cta">Cho phép thông báo</string>
     <string name="notification_mock_app_title">Bộ đếm calo AI</string>
-    <string name="onboard_notif_title_got_a_sec">Bữa ăn sẽ không tự ghi lại đâu 😉</string>
+    <string name="onboard_notif_title_got_a_sec">Bữa ăn không tự ghi lại đâu 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Ghi lại bữa ăn này để giữ calo và macro đi đúng hướng.</string>
+
+
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">Kết nối với</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
@@ -194,7 +198,7 @@
 
 
     <!-- Onboarding: ComputationProgressScreen -->
-    <string name="progress_hero_title">Đang tạo kế hoạch cá nhân hóa</string>
+    <string name="progress_hero_title">Đang tạo kế hoạch của bạn</string>
     <string name="progress_hero_subtitle">Chúng tôi đang dùng mục tiêu, dữ liệu cơ thể và sở thích của bạn để điều chỉnh mục tiêu hằng ngày.</string>
     <string name="progress_footer_hint">Chỉ mất một chút thời gian</string>
     <string name="progress_center_caption">Đang chuẩn bị kết quả</string>
@@ -214,7 +218,7 @@
     <string name="plan_cta_start">Bắt đầu nào</string>
     <string name="plan_title_congrats">Chúc mừng!</string>
     <string name="plan_subtitle_ready">Kế hoạch sức khỏe cá nhân của bạn đã sẵn sàng!</string>
-    <string name="plan_disclaimer">Nguồn ở bên dưới: xem tất cả tài liệu tham khảo ›</string>
+    <string name="plan_disclaimer">Nguồn ở bên dưới: Xem tất cả tài liệu tham khảo ›</string>
     <string name="plan_unit_kcal_day">kcal / ngày</string>
 
     <string name="plan_macros_proteins">Protein</string>
@@ -230,7 +234,7 @@
     <string name="plan_goal_card_health_scores">Điểm sức khỏe dẫn đường để thói quen hình thành tự nhiên</string>
     <string name="plan_goal_card_track_meals">Ghi bữa ăn chỉ với một chạm, duy trì đều đặn dễ hơn</string>
     <string name="plan_goal_card_daily_calories">Xem calo hằng ngày rõ ràng và không bao giờ mất dấu</string>
-    <string name="plan_goal_card_balance_macros">Carb × protein × chất béo, cân bằng thông minh, kết quả tốt hơn</string>
+    <string name="plan_goal_card_balance_macros">Cân bằng carb, protein và chất béo</string>
     <string name="plan_sources_based_on">Dựa trên hướng dẫn dinh dưỡng chính thức,\nchỉ để tham khảo, không phải lời khuyên y tế.</string>
     <string name="plan_sources_more">Xem tất cả tài liệu tham khảo ›</string>
     <string name="plan_sources_hide">Ẩn nguồn</string>
@@ -301,7 +305,7 @@
     <string name="subscription_urgency_waiting">Bạn còn chờ gì nữa?</string>
 
     <string name="subscription_trial_enabled">Đã bật dùng thử miễn phí</string>
-    <string name="subscription_trial_enable_prompt">Chưa chắc? Bật dùng thử miễn phí</string>
+    <string name="subscription_trial_enable_prompt">Chưa chắc? Thử miễn phí</string>
     <string name="subscription_trial_checking_eligibility">Đang kiểm tra dùng thử…</string>
     <string name="subscription_trial_already_used">Đã dùng thử trước đó</string>
     <string name="subscription_trial_unavailable">Không có dùng thử miễn phí</string>
@@ -336,6 +340,8 @@
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">Calo còn lại</string>
     <string name="home_calories_eaten_label">Calo đã nạp</string>
+
+
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">Protein còn lại</string>
@@ -416,7 +422,7 @@
          BMI Card / BMI Info Dialog
          ========================= -->
     <string name="bmi_card_title">BMI của bạn</string>
-    <string name="bmi_card_subtitle">Cân nặng của bạn là</string>
+    <string name="bmi_card_subtitle">Cân nặng của bạn</string>
 
     <string name="bmi_status_underweight">Thiếu cân</string>
     <string name="bmi_status_healthy">Khỏe mạnh</string>
@@ -494,7 +500,7 @@
          ========================= -->
     <string name="activity_chart_goal_reached">Đã đạt mục tiêu hôm nay</string>
     <string name="activity_chart_goal_left">Còn %1$d kcal để đạt mục tiêu hôm nay</string>
-    <string name="activity_chart_title">Kcal đốt từ hoạt động</string>
+    <string name="activity_chart_title">Calo hoạt động</string>
     <string name="activity_chart_info_dialog_body">Bao gồm bài tập đã ghi lại và kcal hoạt động ước tính từ số bước hằng ngày.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">Mục tiêu</string>
@@ -543,7 +549,7 @@
     <string name="progress_average_fiber">Chất xơ</string>
     <string name="progress_average_sugar">Đường</string>
     <string name="progress_average_sodium">Natri</string>
-    <string name="progress_average_activity">Kcal đốt từ hoạt động</string>
+    <string name="progress_average_activity">Calo hoạt động</string>
     <string name="progress_average_water">Lượng nước uống</string>
     <string name="progress_average_health_score">Điểm sức khỏe</string>
     <string name="progress_average_steps">Bước</string>
@@ -720,7 +726,7 @@
     <!-- CameraScreen -->
     <string name="camera_mode_food">Quét món ăn</string>
     <string name="camera_mode_barcode">Mã vạch</string>
-    <string name="camera_mode_label">Nhãn thực phẩm</string>
+    <string name="camera_mode_label">Nhãn</string>
     <string name="camera_mode_album">Ảnh</string>
     <string name="camera_barcode_title">Máy quét mã vạch</string>
     <string name="camera_label_title">Máy quét nhãn</string>
@@ -802,7 +808,7 @@
     <string name="payment_issue_dialog_update_payment">Cập nhật phương thức thanh toán</string>
     <string name="payment_issue_dialog_badge">Cần chú ý thanh toán</string>
     <string name="payment_issue_dialog_premium_access">Quyền premium</string>
-    <string name="payment_issue_dialog_active_for_now">Tạm thời đang hoạt động</string>
+    <string name="payment_issue_dialog_active_for_now">Hiện vẫn dùng được</string>
     <string name="payment_issue_dialog_next_step">Bước tiếp theo</string>
     <string name="payment_issue_dialog_update_payment_short">Cập nhật thanh toán</string>
 
@@ -969,6 +975,8 @@
     <!-- EditAgeScreen -->
     <string name="edit_age_title">Sửa tuổi của bạn</string>
     <string name="edit_age_privacy_note">Chúng tôi chỉ dùng tuổi của bạn để cải thiện trải nghiệm và độ chính xác khi ước tính calo.</string>
+
+
     <!-- EditGenderScreen -->
     <string name="edit_gender_title">Sửa giới tính của bạn</string>
     <string name="edit_gender_privacy_note">Chỉ dùng để cá nhân hóa và cải thiện độ chính xác ước tính.</string>
@@ -1017,7 +1025,7 @@
 
     <!-- RingColorsExplainedScreen -->
     <string name="ring_colors_explained_title">Màu vòng ngày</string>
-    <string name="ring_colors_explained_intro">Vòng ngày giúp bạn nhanh chóng thấy mỗi ngày so với mục tiêu calo của mình như thế nào.</string>
+    <string name="ring_colors_explained_intro">Vòng ngày cho biết lượng calo mỗi ngày so với mục tiêu.</string>
     <string name="ring_colors_preview_brand">CaloShape AI</string>
     <string name="ring_colors_explained">Xem trước vòng ngày</string>
 
@@ -1033,7 +1041,7 @@
     <string name="ring_colors_green_title">Xanh lá</string>
     <string name="ring_colors_green_body">Đúng mục tiêu (trong vòng 100 calo so với mục tiêu)</string>
     <string name="ring_colors_yellow_title">Nâu</string>
-    <string name="ring_colors_yellow_body">Vượt mục tiêu của bạn 100-199 calo</string>
+    <string name="ring_colors_yellow_body">Vượt mục tiêu của bạn 100–199 calo</string>
     <string name="ring_colors_red_title">Đỏ</string>
     <string name="ring_colors_red_body">Vượt mục tiêu của bạn 200+ calo</string>
     <string name="ring_colors_dotted_title">Nét chấm</string>

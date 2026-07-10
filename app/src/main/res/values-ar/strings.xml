@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- App_Name -->
     <string name="app_name">CaloShape</string>
 
@@ -1038,7 +1038,7 @@
     <string name="ring_colors_green_title">أخضر</string>
     <string name="ring_colors_green_body">ضمن الهدف (بفارق 100 سعرة حرارية من الهدف)</string>
     <string name="ring_colors_yellow_title">بني</string>
-    <string name="ring_colors_yellow_body">100-199 سعرة حرارية فوق هدفك</string>
+    <string name="ring_colors_yellow_body" tools:ignore="TypographyDashes">100-199 سعرة حرارية فوق هدفك</string>
     <string name="ring_colors_red_title">أحمر</string>
     <string name="ring_colors_red_body">200+ سعرة حرارية فوق هدفك</string>
     <string name="ring_colors_dotted_title">منقط</string>

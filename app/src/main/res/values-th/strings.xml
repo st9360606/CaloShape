@@ -1033,7 +1033,7 @@
     <string name="ring_colors_green_title">เขียว</string>
     <string name="ring_colors_green_body">ตรงเป้าหมาย (ภายใน 100 แคลอรีจากเป้าหมาย)</string>
     <string name="ring_colors_yellow_title">น้ำตาล</string>
-    <string name="ring_colors_yellow_body">เกินเป้าหมายของคุณ 100-199 แคลอรี</string>
+    <string name="ring_colors_yellow_body">เกินเป้าหมายของคุณ 100–199 แคลอรี</string>
     <string name="ring_colors_red_title">แดง</string>
     <string name="ring_colors_red_body">เกินเป้าหมายของคุณ 200+ แคลอรี</string>
     <string name="ring_colors_dotted_title">เส้นประ</string>

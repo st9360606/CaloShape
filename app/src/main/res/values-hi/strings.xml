@@ -1034,7 +1034,7 @@
     <string name="ring_colors_green_title">हरा</string>
     <string name="ring_colors_green_body">लक्ष्य पर (लक्ष्य से 100 कैलोरी के भीतर)</string>
     <string name="ring_colors_yellow_title">भूरा</string>
-    <string name="ring_colors_yellow_body">लक्ष्य से 100-199 कैलोरी अधिक</string>
+    <string name="ring_colors_yellow_body">लक्ष्य से 100–199 कैलोरी अधिक</string>
     <string name="ring_colors_red_title">लाल</string>
     <string name="ring_colors_red_body">लक्ष्य से 200+ कैलोरी अधिक</string>
     <string name="ring_colors_dotted_title">डॉटेड</string>

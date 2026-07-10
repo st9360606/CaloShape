@@ -1047,7 +1047,7 @@
     <string name="ring_colors_green_title">초록</string>
     <string name="ring_colors_green_body">목표 달성 (목표와 100칼로리 이내)</string>
     <string name="ring_colors_yellow_title">갈색</string>
-    <string name="ring_colors_yellow_body">목표보다 100-199칼로리 초과</string>
+    <string name="ring_colors_yellow_body">목표보다 100–199칼로리 초과</string>
     <string name="ring_colors_red_title">빨강</string>
     <string name="ring_colors_red_body">목표보다 200+칼로리 초과</string>
     <string name="ring_colors_dotted_title">점선</string>
