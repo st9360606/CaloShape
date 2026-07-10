@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">ถ่ายรูป แล้วรู้แคลอรี</string>
+    <string name="landing_title">แค่ถ่ายรูป ก็รู้แคลอรีและสารอาหารของมื้อนี้</string>
     <string name="choose_language">เลือกภาษา</string>
     <string name="cta_get_started">เริ่มต้น</string>
     <string name="cta_login_prefix">มีบัญชีอยู่แล้ว?</string>
@@ -169,7 +169,7 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">การใช้ CaloShape AI ช่วยเพิ่มประสิทธิภาพ\nการลดน้ำหนักได้ถึง 3 เท่า</string>
+    <string name="onboard_weight_loss_comparison_title">การใช้ CaloShape AI ช่วยเพิ่มประสิทธิภาพ\nการลดน้ำหนักได้ถึง\n3 เท่า</string>
     <string name="onboard_weight_loss_comparison_without_ai">ไม่มี\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">มี\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
@@ -183,6 +183,8 @@
     <string name="notification_mock_app_title">ตัวนับแคลอรี AI</string>
     <string name="onboard_notif_title_got_a_sec">มื้ออาหารจะไม่บันทึกตัวเอง 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">บันทึกมื้อนี้เพื่อให้แคลอรีและมาโครของคุณอยู่ในเส้นทางที่ดี</string>
+
+
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">เชื่อมต่อกับ</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
@@ -214,7 +216,7 @@
     <string name="plan_cta_start">มาเริ่มกันเลย</string>
     <string name="plan_title_congrats">ยินดีด้วย!</string>
     <string name="plan_subtitle_ready">แผนสุขภาพส่วนตัวของคุณพร้อมแล้ว!</string>
-    <string name="plan_disclaimer">แหล่งอ้างอิงอยู่ด้านล่าง: ดูทั้งหมด ›</string>
+    <string name="plan_disclaimer">แหล่งอ้างอิงอยู่ด้านล่าง: ดูแหล่งอ้างอิงทั้งหมด ›</string>
     <string name="plan_unit_kcal_day">kcal / วัน</string>
 
     <string name="plan_macros_proteins">โปรตีน</string>
@@ -227,7 +229,7 @@
     <string name="plan_weight_delta">ถึงน้ำหนักเป้าหมาย</string>
 
     <string name="plan_goals_title">วิธีไปถึง\nเป้าหมายของคุณ</string>
-    <string name="plan_goal_card_health_scores">คะแนนสุขภาพช่วยนำทาง ให้สร้างนิสัยได้อย่างเป็นธรรมชาติ</string>
+    <string name="plan_goal_card_health_scores">คะแนนสุขภาพช่วยสร้างนิสัยที่ดีขึ้น</string>
     <string name="plan_goal_card_track_meals">บันทึกมื้ออาหารในแตะเดียว ทำให้สม่ำเสมอได้ง่าย</string>
     <string name="plan_goal_card_daily_calories">ดูแคลอรีรายวันได้ชัดเจน และไม่พลาดการติดตาม</string>
     <string name="plan_goal_card_balance_macros">คาร์บ × โปรตีน × ไขมัน สมดุลอย่างฉลาด ผลลัพธ์ดียิ่งขึ้น</string>
@@ -324,10 +326,10 @@
 
     <!-- MainBottomBar -->
     <string name="bottom_nav_home">หน้าแรก</string>
-    <string name="bottom_nav_progress">ความคืบหน้า</string>
+    <string name="bottom_nav_progress">สถิติ</string>
     <string name="bottom_nav_weight">น้ำหนัก</string>
     <string name="bottom_nav_fasting">ฟาสติ้ง</string>
-    <string name="bottom_nav_workout">ออกกำลังกาย</string>
+    <string name="bottom_nav_workout">ออกกำลัง</string>
 
 
     <!-- =============   HomeCards  ============= -->
@@ -336,6 +338,8 @@
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">แคลอรีที่เหลือ</string>
     <string name="home_calories_eaten_label">แคลอรีที่กินแล้ว</string>
+
+
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">โปรตีนที่เหลือ</string>
@@ -404,7 +408,7 @@
          ========================= -->
     <string name="progress_screen_title">ความคืบหน้า</string>
     <string name="progress_tab_this_week">สัปดาห์นี้</string>
-    <string name="progress_tab_last_week">สัปดาห์ที่แล้ว</string>
+    <string name="progress_tab_last_week">สัปดาห์ก่อน</string>
     <string name="progress_tab_two_weeks_ago">2 สัปดาห์ก่อน</string>
     <string name="progress_tab_three_weeks_ago">3 สัปดาห์ก่อน</string>
     <string name="progress_error_load_failed">โหลดไม่สำเร็จ</string>
@@ -416,7 +420,7 @@
          BMI Card / BMI Info Dialog
          ========================= -->
     <string name="bmi_card_title">BMI ของคุณ</string>
-    <string name="bmi_card_subtitle">น้ำหนักของคุณอยู่ในระดับ</string>
+    <string name="bmi_card_subtitle">สถานะน้ำหนัก</string>
 
     <string name="bmi_status_underweight">น้ำหนักน้อย</string>
     <string name="bmi_status_healthy">สุขภาพดี</string>
@@ -494,7 +498,7 @@
          ========================= -->
     <string name="activity_chart_goal_reached">ถึงเป้าหมายวันนี้แล้ว</string>
     <string name="activity_chart_goal_left">เหลือ %1$d kcal เพื่อถึงเป้าหมายวันนี้</string>
-    <string name="activity_chart_title">การเผาผลาญจากกิจกรรม</string>
+    <string name="activity_chart_title">แคลอรีจากกิจกรรม</string>
     <string name="activity_chart_info_dialog_body">รวมการออกกำลังกายที่บันทึกไว้ และแคลอรีกิจกรรมที่ประเมินจากจำนวนก้าวรายวัน</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">เป้าหมาย</string>
@@ -543,7 +547,7 @@
     <string name="progress_average_fiber">ไฟเบอร์</string>
     <string name="progress_average_sugar">น้ำตาล</string>
     <string name="progress_average_sodium">โซเดียม</string>
-    <string name="progress_average_activity">การเผาผลาญจากกิจกรรม</string>
+    <string name="progress_average_activity">แคลอรีจากกิจกรรม</string>
     <string name="progress_average_water">ปริมาณน้ำที่ดื่ม</string>
     <string name="progress_average_health_score">คะแนนสุขภาพ</string>
     <string name="progress_average_steps">ก้าว</string>
@@ -622,12 +626,12 @@
 
     <!-- WorkoutHistoryScreen -->
     <string name="workout_history_title">ประวัติการออกกำลังกาย</string>
-    <string name="workout_history_summary_label">แคลอรีจากการออกกำลังกายวันนี้</string>
-    <string name="workout_history_summary_body">ติดตามความคืบหน้าการเผาผลาญจากการออกกำลังกายวันนี้</string>
+    <string name="workout_history_summary_label">แคลอรีที่เผาผลาญวันนี้</string>
+    <string name="workout_history_summary_body">ติดตามแคลอรีที่เผาผลาญจากการออกกำลังกายวันนี้</string>
     <string name="workout_history_today_label">วันนี้</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
-    <string name="workout_history_avg_daily_label">เฉลี่ย 7 วัน / วัน</string>
-    <string name="workout_history_avg_label">เฉลี่ย 7 วัน / ครั้ง</string>
+    <string name="workout_history_avg_daily_label">เฉลี่ย/วัน (7 วัน)</string>
+    <string name="workout_history_avg_label">เฉลี่ย/ครั้ง (7 วัน)</string>
     <string name="workout_history_avg_value">%1$d kcal</string>
     <string name="workout_history_unit_kcal">kcal</string>
 
@@ -706,7 +710,7 @@
 
     <!-- DurationPickerSheet -->
     <string name="workout_duration_sheet_subtitle">เพิ่มระยะเวลาการออกกำลังกายนี้ลงในบันทึกการออกกำลังกาย</string>
-    <string name="workout_duration_hour_short">ชม.</string>
+    <string name="workout_duration_hour_short">hr</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">บันทึก</string>
     <string name="workout_duration_cancel">ยกเลิก</string>

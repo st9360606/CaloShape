@@ -706,7 +706,7 @@
 
     <!-- DurationPickerSheet -->
     <string name="workout_duration_sheet_subtitle">Bu egzersizin süresini egzersiz kaydına ekle</string>
-    <string name="workout_duration_hour_short">sa</string>
+    <string name="workout_duration_hour_short">hr</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">Kaydet</string>
     <string name="workout_duration_cancel">İptal</string>

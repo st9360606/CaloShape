@@ -717,7 +717,7 @@
 
     <!-- DurationPickerSheet -->
     <string name="workout_duration_sheet_subtitle">Lägg till träningspassets längd i träningsloggen</string>
-    <string name="workout_duration_hour_short">tim</string>
+    <string name="workout_duration_hour_short">hr</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">Spara</string>
     <string name="workout_duration_cancel">Avbryt</string>

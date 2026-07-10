@@ -717,7 +717,7 @@
 
     <!-- DurationPickerSheet -->
     <string name="workout_duration_sheet_subtitle">Adicione a duração deste treino ao seu registro de treinos</string>
-    <string name="workout_duration_hour_short">h</string>
+    <string name="workout_duration_hour_short">hr</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">Salvar</string>
     <string name="workout_duration_cancel">Cancelar</string>

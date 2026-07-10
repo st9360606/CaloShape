@@ -712,7 +712,7 @@
 
     <!-- DurationPickerSheet -->
     <string name="workout_duration_sheet_subtitle">Thêm thời lượng bài tập này vào nhật ký tập luyện</string>
-    <string name="workout_duration_hour_short">giờ</string>
+    <string name="workout_duration_hour_short">hr</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">Lưu</string>
     <string name="workout_duration_cancel">Hủy</string>

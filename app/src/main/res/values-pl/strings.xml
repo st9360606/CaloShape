@@ -710,7 +710,7 @@
 
     <!-- DurationPickerSheet -->
     <string name="workout_duration_sheet_subtitle">Dodaj czas tego treningu do dziennika treningów</string>
-    <string name="workout_duration_hour_short">godz.</string>
+    <string name="workout_duration_hour_short">hr</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">Zapisz</string>
     <string name="workout_duration_cancel">Anuluj</string>

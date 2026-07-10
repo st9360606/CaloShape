@@ -716,7 +716,7 @@
 
     <!-- DurationPickerSheet -->
     <string name="workout_duration_sheet_subtitle">Voeg de duur van deze training toe aan je trainingslog</string>
-    <string name="workout_duration_hour_short">u</string>
+    <string name="workout_duration_hour_short">hr</string>
     <string name="workout_duration_minute_short">min</string>
     <string name="workout_duration_save">Opslaan</string>
     <string name="workout_duration_cancel">Annuleren</string>
