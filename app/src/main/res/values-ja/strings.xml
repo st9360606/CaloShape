@@ -509,7 +509,7 @@
     <string name="activity_chart_goal_reached">今日の目標を達成しました</string>
     <string name="activity_chart_goal_left">今日の目標まで残り%1$d kcal</string>
     <string name="activity_chart_title">活動消費</string>
-    <string name="activity_chart_info_dialog_body">記録したワークアウトと、毎日の歩数から推定した活動カロリーが含まれます。</string>
+    <string name="activity_chart_info_dialog_body">記録したワークアウトと、毎日の歩数から推定した活動カロリーが含まれます。\n\n目標 = 1日のワークアウト目標 + 歩数カロリー。歩数カロリー = 最新の体重（kg）× 1日の歩数目標 × 0.0005 を四捨五入します。体重または歩数目標がない場合はワークアウト目標のみを使い、ワークアウト目標も未設定の場合は 450 kcal を使います。</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">目標</string>
     <string name="activity_chart_value_kcal">%1$d kcal</string>

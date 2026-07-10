@@ -506,7 +506,7 @@
     <string name="activity_chart_goal_reached">Meta alcançada hoje</string>
     <string name="activity_chart_goal_left">Faltam %1$d kcal hoje</string>
     <string name="activity_chart_title">Gasto de atividade</string>
-    <string name="activity_chart_info_dialog_body">Inclui treinos registrados e calorias de atividade estimadas pelos passos diários.</string>
+    <string name="activity_chart_info_dialog_body">Inclui treinos registrados e calorias de atividade estimadas pelos passos diários.\n\nMeta = meta diária de treino + calorias dos passos. Calorias dos passos = peso mais recente (kg) × meta diária de passos × 0.0005, arredondado. Se faltar peso ou meta de passos, a meta usa apenas a meta de treino; se não houver meta de treino definida, usa 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">Meta</string>
     <string name="activity_chart_value_kcal">%1$d kcal</string>

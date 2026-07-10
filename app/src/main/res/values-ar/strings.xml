@@ -495,7 +495,7 @@
     <string name="activity_chart_goal_reached">تم الوصول إلى هدف اليوم</string>
     <string name="activity_chart_goal_left">بقي %1$d kcal للوصول إلى هدف اليوم</string>
     <string name="activity_chart_title">حرق النشاط</string>
-    <string name="activity_chart_info_dialog_body">يشمل التمارين المسجلة وسعرات النشاط المقدرة من الخطوات اليومية.</string>
+    <string name="activity_chart_info_dialog_body">يشمل التمارين المسجلة وسعرات النشاط المقدرة من الخطوات اليومية.\n\nالهدف = هدف التمرين اليومي + سعرات الخطوات. سعرات الخطوات = أحدث وزن (kg) × هدف الخطوات اليومي × 0.0005، مع التقريب. إذا لم يتوفر الوزن أو هدف الخطوات، يستخدم الهدف هدف التمرين فقط؛ وإذا لم يتم تعيين هدف تمرين، يستخدم 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">الهدف</string>
     <string name="activity_chart_value_kcal">%1$d kcal</string>

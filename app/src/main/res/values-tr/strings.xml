@@ -495,7 +495,7 @@
     <string name="activity_chart_goal_reached">Bugünkü hedefe ulaşıldı</string>
     <string name="activity_chart_goal_left">Bugünkü hedefe ulaşmak için %1$d kcal kaldı</string>
     <string name="activity_chart_title">Aktivite yakımı</string>
-    <string name="activity_chart_info_dialog_body">Kaydedilen egzersizleri ve günlük adımlardan tahmin edilen aktivite kalorilerini içerir.</string>
+    <string name="activity_chart_info_dialog_body">Kaydedilen egzersizleri ve günlük adımlardan tahmin edilen aktivite kalorilerini içerir.\n\nHedef = günlük egzersiz hedefi + adım kalorileri. Adım kalorileri = en son kilo (kg) × günlük adım hedefi × 0.0005, yuvarlanmış. Kilo veya adım hedefi yoksa hedef yalnızca egzersiz hedefini kullanır; egzersiz hedefi ayarlanmamışsa 450 kcal kullanılır.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">Hedef</string>
     <string name="activity_chart_value_kcal">%1$d kcal</string>

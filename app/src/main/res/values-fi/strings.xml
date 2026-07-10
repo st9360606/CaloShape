@@ -504,7 +504,7 @@
     <string name="activity_chart_goal_reached">Tavoite saavutettu tänään</string>
     <string name="activity_chart_goal_left">%1$d kcal jäljellä tämän päivän tavoitteeseen</string>
     <string name="activity_chart_title">Aktiivisuuskulutus</string>
-    <string name="activity_chart_info_dialog_body">Sisältää kirjatut treenit ja päivittäisistä askeleista arvioidut aktiivisuuden kcal-arvot.</string>
+    <string name="activity_chart_info_dialog_body">Sisältää kirjatut treenit ja päivittäisistä askeleista arvioidut aktiivisuuden kcal-arvot.\n\nTavoite = päivittäinen treenitavoite + askelkalorit. Askelkalorit = uusin paino (kg) × päivittäinen askeltavoite × 0.0005, pyöristettynä. Jos paino tai askeltavoite puuttuu, tavoitteena käytetään vain treenitavoitetta; jos treenitavoitetta ei ole asetettu, käytetään 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">Tavoite</string>
     <string name="activity_chart_value_kcal">%1$d kcal</string>

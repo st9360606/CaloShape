@@ -506,7 +506,7 @@
     <string name="activity_chart_goal_reached">Doel vandaag bereikt</string>
     <string name="activity_chart_goal_left">Nog %1$d kcal tot je doel</string>
     <string name="activity_chart_title">Activiteitsverbruik</string>
-    <string name="activity_chart_info_dialog_body">Inclusief gelogde trainingen en activiteitscalorieën op basis van je dagelijkse stappen.</string>
+    <string name="activity_chart_info_dialog_body">Inclusief gelogde trainingen en activiteitscalorieën op basis van je dagelijkse stappen.\n\nDoel = dagelijks trainingsdoel + stapcalorieën. Stapcalorieën = laatste gewicht (kg) × dagelijks stappendoel × 0.0005, afgerond. Als gewicht of stappendoel ontbreekt, gebruikt het doel alleen het trainingsdoel; als geen trainingsdoel is ingesteld, wordt 450 kcal gebruikt.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">Doel</string>
     <string name="activity_chart_value_kcal">%1$d kcal</string>

@@ -507,7 +507,7 @@
     <string name="activity_chart_goal_reached">Ziel heute erreicht</string>
     <string name="activity_chart_goal_left">Noch %1$d kcal bis zum heutigen Ziel</string>
     <string name="activity_chart_title">Aktive kcal</string>
-    <string name="activity_chart_info_dialog_body">Enthält eingetragene Workouts und Aktivitätskalorien, die aus täglichen Schritten geschätzt werden.</string>
+    <string name="activity_chart_info_dialog_body">Enthält eingetragene Workouts und Aktivitätskalorien, die aus täglichen Schritten geschätzt werden.\n\nZiel = tägliches Workout-Ziel + Schritt-Kalorien. Schritt-Kalorien = neuestes Gewicht (kg) × tägliches Schrittziel × 0.0005, gerundet. Wenn Gewicht oder Schrittziel fehlen, nutzt das Ziel nur das Workout-Ziel; wenn kein Workout-Ziel gesetzt ist, werden 450 kcal verwendet.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">Ziel</string>
     <string name="activity_chart_value_kcal">%1$d kcal</string>

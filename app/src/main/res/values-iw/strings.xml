@@ -349,7 +349,7 @@ CaloShape AI</string>
     <string name="activity_chart_goal_reached">היעד הושג היום</string>
     <string name="activity_chart_goal_left">נותרו %1$d kcal כדי להגיע ליעד היום</string>
     <string name="activity_chart_title">שריפת פעילות</string>
-    <string name="activity_chart_info_dialog_body">כולל אימונים שנרשמו ו-kcal פעילות המוערכים מצעדים יומיים.</string>
+    <string name="activity_chart_info_dialog_body">כולל אימונים שנרשמו ו-kcal פעילות המוערכים מצעדים יומיים.\n\nיעד = יעד אימון יומי + קלוריות צעדים. קלוריות צעדים = המשקל האחרון (kg) × יעד צעדים יומי × 0.0005, מעוגל. אם חסר משקל או יעד צעדים, היעד משתמש רק ביעד האימון; אם לא הוגדר יעד אימון, משתמשים ב-450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">יעד</string>
     <string name="activity_chart_value_kcal">%1$d kcal</string>

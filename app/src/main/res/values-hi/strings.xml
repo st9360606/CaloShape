@@ -495,7 +495,7 @@
     <string name="activity_chart_goal_reached">आज लक्ष्य पूरा हुआ</string>
     <string name="activity_chart_goal_left">आज के लक्ष्य तक पहुंचने के लिए %1$d kcal शेष</string>
     <string name="activity_chart_title">गतिविधि से बर्न</string>
-    <string name="activity_chart_info_dialog_body">इसमें लॉग किए गए वर्कआउट और दैनिक कदमों से अनुमानित गतिविधि kcal शामिल हैं।</string>
+    <string name="activity_chart_info_dialog_body">इसमें लॉग किए गए वर्कआउट और दैनिक कदमों से अनुमानित गतिविधि kcal शामिल हैं।\n\nलक्ष्य = दैनिक वर्कआउट लक्ष्य + कदमों की कैलोरी। कदमों की कैलोरी = नवीनतम वजन (kg) × दैनिक कदम लक्ष्य × 0.0005, राउंड करके। अगर वजन या कदम लक्ष्य उपलब्ध नहीं है, तो लक्ष्य में केवल वर्कआउट लक्ष्य इस्तेमाल होता है; अगर वर्कआउट लक्ष्य सेट नहीं है, तो 450 kcal इस्तेमाल होता है।</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">लक्ष्य</string>
     <string name="activity_chart_value_kcal">%1$d kcal</string>

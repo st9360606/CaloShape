@@ -498,7 +498,7 @@
     <string name="activity_chart_goal_reached">今天已达成目标</string>
     <string name="activity_chart_goal_left">距离今日目标还差 %1$d kcal</string>
     <string name="activity_chart_title">活动消耗</string>
-    <string name="activity_chart_info_dialog_body">此数值包含手动记录的运动，以及步数推估的日常活动消耗。</string>
+    <string name="activity_chart_info_dialog_body">此数值包含手动记录的运动，以及步数推估的日常活动消耗。\n\n目标 = 每日运动目标 + 步数卡路里。步数卡路里 = 最新体重（kg）× 每日步数目标 × 0.0005，并四舍五入。如果没有体重或步数目标，就只使用每日运动目标；如果没有设置每日运动目标，会使用 450 kcal。</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">目标</string>
     <string name="activity_chart_value_kcal">%1$d kcal</string>

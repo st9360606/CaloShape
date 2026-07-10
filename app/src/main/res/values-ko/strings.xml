@@ -505,7 +505,7 @@
     <string name="activity_chart_goal_reached">오늘 목표 달성</string>
     <string name="activity_chart_goal_left">오늘 목표까지 %1$d kcal 남음</string>
     <string name="activity_chart_title">활동 소모량</string>
-    <string name="activity_chart_info_dialog_body">기록한 운동과 일일 걸음 수로 추정한 활동 kcal가 포함됩니다.</string>
+    <string name="activity_chart_info_dialog_body">기록한 운동과 일일 걸음 수로 추정한 활동 kcal가 포함됩니다.\n\n목표 = 일일 운동 목표 + 걸음 칼로리입니다. 걸음 칼로리 = 최신 체중(kg) × 일일 걸음 목표 × 0.0005를 반올림합니다. 체중이나 걸음 목표가 없으면 운동 목표만 사용하고, 운동 목표도 설정되지 않았으면 450 kcal를 사용합니다.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">목표</string>
     <string name="activity_chart_value_kcal">%1$d kcal</string>

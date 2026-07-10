@@ -504,7 +504,7 @@
     <string name="activity_chart_goal_reached">Objetivo alcanzado hoy</string>
     <string name="activity_chart_goal_left">Faltan %1$d kcal hoy</string>
     <string name="activity_chart_title">Gasto de actividad</string>
-    <string name="activity_chart_info_dialog_body">Incluye ejercicios registrados y kcal de actividad estimadas a partir de los pasos diarios.</string>
+    <string name="activity_chart_info_dialog_body">Incluye ejercicios registrados y kcal de actividad estimadas a partir de los pasos diarios.\n\nObjetivo = objetivo diario de ejercicio + calorías por pasos. Calorías por pasos = último peso (kg) × objetivo diario de pasos × 0.0005, redondeado. Si falta el peso o el objetivo de pasos, se usa solo el objetivo de ejercicio; si no hay objetivo de ejercicio, se usan 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">Objetivo</string>
     <string name="activity_chart_value_kcal">%1$d kcal</string>

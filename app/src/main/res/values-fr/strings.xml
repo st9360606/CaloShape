@@ -506,7 +506,7 @@
     <string name="activity_chart_goal_reached">Objectif atteint aujourd’hui</string>
     <string name="activity_chart_goal_left">Encore %1$d kcal pour l’objectif du jour</string>
     <string name="activity_chart_title">Dépense d’activité</string>
-    <string name="activity_chart_info_dialog_body">Comprend les entraînements enregistrés et les calories d’activité estimées à partir des pas quotidiens.</string>
+    <string name="activity_chart_info_dialog_body">Comprend les entraînements enregistrés et les calories d’activité estimées à partir des pas quotidiens.\n\nObjectif = objectif d’entraînement quotidien + calories des pas. Calories des pas = dernier poids (kg) × objectif de pas quotidien × 0.0005, arrondi. Si le poids ou l’objectif de pas manque, l’objectif utilise seulement l’objectif d’entraînement; si aucun objectif d’entraînement n’est défini, il utilise 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">Objectif</string>
     <string name="activity_chart_value_kcal">%1$d kcal</string>

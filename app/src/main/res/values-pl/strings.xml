@@ -499,7 +499,7 @@
     <string name="activity_chart_goal_reached">Cel osiągnięty dziś</string>
     <string name="activity_chart_goal_left">%1$d kcal do dzisiejszego celu</string>
     <string name="activity_chart_title">Aktywność</string>
-    <string name="activity_chart_info_dialog_body">Obejmuje zapisane treningi oraz kalorie aktywności szacowane z dziennych kroków.</string>
+    <string name="activity_chart_info_dialog_body">Obejmuje zapisane treningi oraz kalorie aktywności szacowane z dziennych kroków.\n\nCel = dzienny cel treningu + kalorie z kroków. Kalorie z kroków = najnowsza waga (kg) × dzienny cel kroków × 0.0005, po zaokrągleniu. Jeśli brakuje wagi lub celu kroków, cel używa tylko celu treningu; jeśli celu treningu nie ustawiono, używa 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">Cel</string>
     <string name="activity_chart_value_kcal">%1$d kcal</string>

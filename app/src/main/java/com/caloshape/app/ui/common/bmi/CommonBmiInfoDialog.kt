@@ -108,9 +108,9 @@ fun CommonBmiInfoDialog(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .heightIn(max = 690.dp)
+                        .heightIn(min = 650.dp, max = 730.dp)
                         .verticalScroll(rememberScrollState())
-                        .padding(horizontal = 24.dp, vertical = 24.dp),
+                        .padding(horizontal = 24.dp, vertical = 20.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Box(
@@ -256,7 +256,7 @@ fun CommonBmiInfoDialog(
                         }
                     }
 
-                    Spacer(modifier = Modifier.height(32.dp))
+                    Spacer(modifier = Modifier.height(28.dp))
 
                     Button(
                         onClick = dismissClick,

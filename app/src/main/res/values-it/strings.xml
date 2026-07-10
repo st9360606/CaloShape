@@ -511,7 +511,7 @@ Resta sul piano ogni giorno.</string>
     <string name="activity_chart_goal_reached">Obiettivo raggiunto oggi</string>
     <string name="activity_chart_goal_left">%1$d kcal restanti oggi</string>
     <string name="activity_chart_title">Calorie attività</string>
-    <string name="activity_chart_info_dialog_body">Include gli allenamenti registrati e le kcal da attività stimate dai passi giornalieri.</string>
+    <string name="activity_chart_info_dialog_body">Include gli allenamenti registrati e le kcal da attività stimate dai passi giornalieri.\n\nObiettivo = obiettivo giornaliero di allenamento + calorie dei passi. Calorie dei passi = peso più recente (kg) × obiettivo giornaliero di passi × 0.0005, arrotondato. Se mancano peso o obiettivo passi, l’obiettivo usa solo l’obiettivo di allenamento; se non è impostato, usa 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">Obiettivo</string>
     <string name="activity_chart_value_kcal">%1$d kcal</string>
