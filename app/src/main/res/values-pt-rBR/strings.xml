@@ -749,7 +749,7 @@
 
     <!-- RecentlyUploadedEmptyCard -->
     <string name="recently_uploaded_empty">Enviados recentemente</string>
-    <string name="recently_uploaded_empty_hint">Toque em + para adicionar sua primeira refeição do dia</string>
+    <string name="recently_uploaded_empty_hint">Toque em + para adicionar sua primeira refeição</string>
 
 
     <!-- SavedFoodsScreen -->

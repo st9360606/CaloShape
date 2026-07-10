@@ -3180,10 +3180,12 @@ fun CaloShapeNavHost(
 
             if (!entitlementGateResolved || !allowPaywall) {
                 Box(
-                    modifier = Modifier.fillMaxSize(),
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(Color.White),
                     contentAlignment = Alignment.Center
                 ) {
-                    CircularProgressIndicator()
+                    CircularProgressIndicator(color = Color(0xFF1C1923))
                 }
                 return@composable
             }
