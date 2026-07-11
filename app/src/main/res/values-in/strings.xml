@@ -171,21 +171,32 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">Menggunakan CaloShape AI dapat melipatgandakan efisiensi penurunan berat badan Anda hingga 3X</string>
-    <string name="onboard_weight_loss_comparison_without_ai">Tanpa
-CaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_with_ai">Dengan
-CaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">Pantau makanan dengan mudah dan tetap konsisten</string>
+    <string name="onboard_weight_loss_comparison_title">Cara yang lebih cerdas untuk mencapai target Anda</string>
+    <string name="onboard_weight_loss_comparison_without_ai">Tanpa\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_with_ai">Dengan\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_caption">Catat makanan, lihat estimasi kalori, dan pantau progres dalam satu tempat.</string>
+    <string name="onboard_weight_loss_without_ai_item_1">Catat makan manual</string>
+    <string name="onboard_weight_loss_without_ai_item_2">Perkirakan olahraga sendiri</string>
+    <string name="onboard_weight_loss_without_ai_item_3">Catat nutrisi terpisah</string>
+    <string name="onboard_weight_loss_without_ai_item_4">Catat berat manual</string>
+    <string name="onboard_weight_loss_without_ai_item_5">Rencanakan puasa sendiri</string>
+    <string name="onboard_weight_loss_without_ai_item_6">Lupa minum air</string>
+    <string name="onboard_weight_loss_without_ai_item_7">Tidak tahu langkah harian</string>
+    <string name="onboard_weight_loss_with_ai_item_1">Nutrisi dari foto</string>
+    <string name="onboard_weight_loss_with_ai_item_2">Lacak kalori terbakar</string>
+    <string name="onboard_weight_loss_with_ai_item_3">Kalori dan nutrisi</string>
+    <string name="onboard_weight_loss_with_ai_item_4">Lacak berat</string>
+    <string name="onboard_weight_loss_with_ai_item_5">Rencana puasa</string>
+    <string name="onboard_weight_loss_with_ai_item_6">Lacak air minum</string>
+    <string name="onboard_weight_loss_with_ai_item_7">Lacak langkah</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
-    <string name="onboard_notif_title">Jadikan setiap makanan berarti!</string>
-    <string name="onboard_notif_subtitle">Aktifkan notifikasi untuk pengingat lembut mencatat makanan, agar kalori, makro, dan progres Anda tetap sesuai jalur. Sesekali terlewat itu wajar; pengingat tepat waktu membantu Anda cepat kembali.</string>
+    <string name="onboard_notif_title">Jangan lupa catat makanan!</string>
+    <string name="onboard_notif_subtitle">Aktifkan notifikasi untuk pengingat mencatat makanan agar kalori, makro, dan progres tetap sesuai jalur.</string>
     <string name="onboard_allow_notifications_cta">Izinkan notifikasi</string>
     <string name="notification_mock_app_title">Penghitung Kalori AI</string>
-    <string name="onboard_notif_title_got_a_sec">Makanan Anda tidak akan tercatat sendiri 😉</string>
+    <string name="onboard_notif_title_got_a_sec">Jangan lupa catat makanan 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Catat makanan ini agar kalori dan makro Anda tetap sesuai jalur.</string>
 
 
@@ -234,10 +245,10 @@ CaloShape AI</string>
 
     <string name="plan_goals_title">Cara mencapai
 tujuan Anda</string>
-    <string name="plan_goal_card_health_scores">Skor kesehatan memandu Anda, sehingga kebiasaan terbentuk alami</string>
-    <string name="plan_goal_card_track_meals">Catat makanan dalam satu ketukan, tetap konsisten jadi mudah</string>
-    <string name="plan_goal_card_daily_calories">Lihat kalori harian dengan jelas dan jangan kehilangan arah</string>
-    <string name="plan_goal_card_balance_macros">Karbohidrat × protein × lemak, keseimbangan cerdas, hasil lebih baik</string>
+    <string name="plan_goal_card_health_scores">Skor kesehatan bantu bangun kebiasaan baik</string>
+    <string name="plan_goal_card_track_meals">Catat makanan dengan mudah dan tetap konsisten</string>
+    <string name="plan_goal_card_daily_calories">Pantau kalori harian dan tetap sesuai target</string>
+    <string name="plan_goal_card_balance_macros">Seimbangkan karbohidrat, protein, dan lemak</string>
     <string name="plan_sources_based_on">Berdasarkan pedoman gizi resmi,
 hanya sebagai referensi, bukan nasihat medis.</string>
     <string name="plan_sources_more">Lihat semua referensi ›</string>
