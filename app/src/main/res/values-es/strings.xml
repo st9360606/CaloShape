@@ -171,11 +171,24 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">Usar CaloShape AI puede triplicar tu eficiencia\npara perder peso</string>
+    <string name="onboard_weight_loss_comparison_title">Una forma más inteligente de alcanzar tu meta</string>
     <string name="onboard_weight_loss_comparison_without_ai">Sin\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">Con\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI hace todo más simple\ny te ayuda a mantener el compromiso</string>
+    <string name="onboard_weight_loss_comparison_caption">Registra comidas, consulta estimaciones de calorías y sigue tu progreso en un solo lugar.</string>
+    <string name="onboard_weight_loss_without_ai_item_1">Registra comidas a mano</string>
+    <string name="onboard_weight_loss_without_ai_item_2">Calcula tu ejercicio</string>
+    <string name="onboard_weight_loss_without_ai_item_3">Registra nutrición aparte</string>
+    <string name="onboard_weight_loss_without_ai_item_4">Registra peso a mano</string>
+    <string name="onboard_weight_loss_without_ai_item_5">Planea tu ayuno</string>
+    <string name="onboard_weight_loss_without_ai_item_6">Olvidas beber agua</string>
+    <string name="onboard_weight_loss_without_ai_item_7">No sabes tus pasos</string>
+    <string name="onboard_weight_loss_with_ai_item_1">Nutrición con foto</string>
+    <string name="onboard_weight_loss_with_ai_item_2">Sigue calorías quemadas</string>
+    <string name="onboard_weight_loss_with_ai_item_3">Calorías y nutrientes</string>
+    <string name="onboard_weight_loss_with_ai_item_4">Sigue tu peso</string>
+    <string name="onboard_weight_loss_with_ai_item_5">Plan de ayuno</string>
+    <string name="onboard_weight_loss_with_ai_item_6">Control de agua</string>
+    <string name="onboard_weight_loss_with_ai_item_7">Control de pasos</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
@@ -1143,6 +1156,5 @@
     <string name="premium_rewards_google_defer_success">Extendido por Google Play</string>
     <string name="premium_rewards_google_defer_failed">Fallido</string>
     <string name="premium_rewards_google_defer_not_required">No requerido</string>
-
 
 </resources>

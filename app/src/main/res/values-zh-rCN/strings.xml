@@ -170,11 +170,24 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">使用CaloShape AI的\n减重效果是自己减重的\n三倍</string>
+    <string name="onboard_weight_loss_comparison_title">让日常记录更简单，轻松追踪进度，更聪明地达成目标</string>
     <string name="onboard_weight_loss_comparison_without_ai">没有\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">使用\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI 让一切变得简单并\n督促你履行承诺</string>
+    <string name="onboard_weight_loss_comparison_caption">记录餐食、查看卡路里估算，并在同一处追踪进度。</string>
+    <string name="onboard_weight_loss_without_ai_item_1">手动记录餐食</string>
+    <string name="onboard_weight_loss_without_ai_item_2">自己估算运动</string>
+    <string name="onboard_weight_loss_without_ai_item_3">分开记录营养</string>
+    <string name="onboard_weight_loss_without_ai_item_4">手动记录体重</string>
+    <string name="onboard_weight_loss_without_ai_item_5">自行规划禁食</string>
+    <string name="onboard_weight_loss_without_ai_item_6">常忘记喝水</string>
+    <string name="onboard_weight_loss_without_ai_item_7">不知道每天步数</string>
+    <string name="onboard_weight_loss_with_ai_item_1">拍照看营养</string>
+    <string name="onboard_weight_loss_with_ai_item_2">追踪运动消耗</string>
+    <string name="onboard_weight_loss_with_ai_item_3">卡路里和营养</string>
+    <string name="onboard_weight_loss_with_ai_item_4">追踪体重</string>
+    <string name="onboard_weight_loss_with_ai_item_5">禁食计划</string>
+    <string name="onboard_weight_loss_with_ai_item_6">饮水追踪</string>
+    <string name="onboard_weight_loss_with_ai_item_7">步数追踪</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->

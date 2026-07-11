@@ -169,15 +169,24 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">CaloShape AI를 사용하면 체중
-감량 효율을 3배 높일 수 있습니다</string>
-    <string name="onboard_weight_loss_comparison_without_ai">CaloShape AI
-없이</string>
-    <string name="onboard_weight_loss_comparison_with_ai">CaloShape AI
-사용</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI가 모든 것을 간단하게 만들고
-목표를 꾸준히 지키도록 도와줍니다</string>
+    <string name="onboard_weight_loss_comparison_title">매일의 기록은 더 간편하게, 목표 달성은 더 스마트하게</string>
+    <string name="onboard_weight_loss_comparison_without_ai">CaloShape AI\n없이</string>
+    <string name="onboard_weight_loss_comparison_with_ai">CaloShape AI와\n함께</string>
+    <string name="onboard_weight_loss_comparison_caption">식사를 기록하고, 칼로리 추정치를 확인하고, 한곳에서 진행 상황을 추적하세요.</string>
+    <string name="onboard_weight_loss_without_ai_item_1">식사를 직접 기록</string>
+    <string name="onboard_weight_loss_without_ai_item_2">운동량 직접 계산</string>
+    <string name="onboard_weight_loss_without_ai_item_3">영양을 따로 기록</string>
+    <string name="onboard_weight_loss_without_ai_item_4">체중 직접 기록</string>
+    <string name="onboard_weight_loss_without_ai_item_5">단식 직접 계획</string>
+    <string name="onboard_weight_loss_without_ai_item_6">물 마시기를 잊음</string>
+    <string name="onboard_weight_loss_without_ai_item_7">하루 걸음 수를 모름</string>
+    <string name="onboard_weight_loss_with_ai_item_1">사진으로 영양 확인</string>
+    <string name="onboard_weight_loss_with_ai_item_2">운동 소모 칼로리 추적</string>
+    <string name="onboard_weight_loss_with_ai_item_3">칼로리와 영양 관리</string>
+    <string name="onboard_weight_loss_with_ai_item_4">체중 추적</string>
+    <string name="onboard_weight_loss_with_ai_item_5">단식 플랜</string>
+    <string name="onboard_weight_loss_with_ai_item_6">수분 추적</string>
+    <string name="onboard_weight_loss_with_ai_item_7">걸음 수 추적</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->

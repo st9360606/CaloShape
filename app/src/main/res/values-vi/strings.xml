@@ -171,11 +171,24 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">Dùng CaloShape AI có thể tăng gấp ba hiệu quả giảm cân của bạn</string>
+    <string name="onboard_weight_loss_comparison_title">Cách thông minh hơn để đạt mục tiêu của bạn</string>
     <string name="onboard_weight_loss_comparison_without_ai">Không có\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_with_ai">Có\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI giúp mọi thứ đơn giản hơn và giúp bạn giữ kỷ luật</string>
+    <string name="onboard_weight_loss_comparison_with_ai">Với\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_caption">Ghi lại bữa ăn, xem ước tính calo và theo dõi tiến độ tại một nơi.</string>
+    <string name="onboard_weight_loss_without_ai_item_1">Tự ghi bữa ăn</string>
+    <string name="onboard_weight_loss_without_ai_item_2">Tự ước tính tập luyện</string>
+    <string name="onboard_weight_loss_without_ai_item_3">Theo dõi dinh dưỡng riêng</string>
+    <string name="onboard_weight_loss_without_ai_item_4">Tự ghi cân nặng</string>
+    <string name="onboard_weight_loss_without_ai_item_5">Tự lên kế hoạch nhịn ăn</string>
+    <string name="onboard_weight_loss_without_ai_item_6">Hay quên uống nước</string>
+    <string name="onboard_weight_loss_without_ai_item_7">Không biết số bước mỗi ngày</string>
+    <string name="onboard_weight_loss_with_ai_item_1">Dinh dưỡng từ ảnh</string>
+    <string name="onboard_weight_loss_with_ai_item_2">Theo dõi calo đốt cháy</string>
+    <string name="onboard_weight_loss_with_ai_item_3">Calo và dinh dưỡng</string>
+    <string name="onboard_weight_loss_with_ai_item_4">Theo dõi cân nặng</string>
+    <string name="onboard_weight_loss_with_ai_item_5">Kế hoạch nhịn ăn</string>
+    <string name="onboard_weight_loss_with_ai_item_6">Theo dõi nước uống</string>
+    <string name="onboard_weight_loss_with_ai_item_7">Theo dõi bước chân</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
@@ -1140,6 +1153,5 @@
     <string name="premium_rewards_google_defer_success">Đã được Google Play gia hạn</string>
     <string name="premium_rewards_google_defer_failed">Thất bại</string>
     <string name="premium_rewards_google_defer_not_required">Không bắt buộc</string>
-
 
 </resources>

@@ -171,15 +171,24 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">Con CaloShape AI è più facile
-seguire il piano e restare costante</string>
-    <string name="onboard_weight_loss_comparison_without_ai">Senza
-CaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_with_ai">Con
-CaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI semplifica il monitoraggio
-e ti aiuta a restare costante</string>
+    <string name="onboard_weight_loss_comparison_title">Un modo più intelligente per raggiungere il tuo obiettivo</string>
+    <string name="onboard_weight_loss_comparison_without_ai">Senza\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_with_ai">Con\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_caption">Registra i pasti, consulta stime delle calorie e segui i progressi in un unico posto.</string>
+    <string name="onboard_weight_loss_without_ai_item_1">Registra pasti a mano</string>
+    <string name="onboard_weight_loss_without_ai_item_2">Stima l\'allenamento</string>
+    <string name="onboard_weight_loss_without_ai_item_3">Registra nutrienti a parte</string>
+    <string name="onboard_weight_loss_without_ai_item_4">Registra peso a mano</string>
+    <string name="onboard_weight_loss_without_ai_item_5">Pianifica il digiuno</string>
+    <string name="onboard_weight_loss_without_ai_item_6">Dimentichi di bere</string>
+    <string name="onboard_weight_loss_without_ai_item_7">Non sai i passi giornalieri</string>
+    <string name="onboard_weight_loss_with_ai_item_1">Nutrizione da foto</string>
+    <string name="onboard_weight_loss_with_ai_item_2">Monitora calorie bruciate</string>
+    <string name="onboard_weight_loss_with_ai_item_3">Calorie e nutrienti</string>
+    <string name="onboard_weight_loss_with_ai_item_4">Monitora il peso</string>
+    <string name="onboard_weight_loss_with_ai_item_5">Piano digiuno</string>
+    <string name="onboard_weight_loss_with_ai_item_6">Monitora l\'acqua</string>
+    <string name="onboard_weight_loss_with_ai_item_7">Monitora i passi</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->

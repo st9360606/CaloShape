@@ -169,11 +169,24 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">การใช้ CaloShape AI ช่วยเพิ่มประสิทธิภาพ\nการลดน้ำหนักได้ถึง\n3 เท่า</string>
+    <string name="onboard_weight_loss_comparison_title">วิธีที่ชาญฉลาดกว่าในการบรรลุเป้าหมายของคุณ</string>
     <string name="onboard_weight_loss_comparison_without_ai">ไม่มี\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_with_ai">มี\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI ทำให้ทุกอย่างง่ายขึ้น\nและช่วยให้คุณรักษาวินัย</string>
+    <string name="onboard_weight_loss_comparison_with_ai">ใช้\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_caption">บันทึกมื้ออาหาร ดูค่าประมาณแคลอรี และติดตามความคืบหน้าได้ในที่เดียว</string>
+    <string name="onboard_weight_loss_without_ai_item_1">บันทึกอาหารเอง</string>
+    <string name="onboard_weight_loss_without_ai_item_2">ประเมินการออกกำลังเอง</string>
+    <string name="onboard_weight_loss_without_ai_item_3">บันทึกโภชนาการแยกกัน</string>
+    <string name="onboard_weight_loss_without_ai_item_4">บันทึกน้ำหนักเอง</string>
+    <string name="onboard_weight_loss_without_ai_item_5">วางแผนอดอาหารเอง</string>
+    <string name="onboard_weight_loss_without_ai_item_6">ลืมดื่มน้ำ</string>
+    <string name="onboard_weight_loss_without_ai_item_7">ไม่รู้จำนวนก้าวต่อวัน</string>
+    <string name="onboard_weight_loss_with_ai_item_1">ดูโภชนาการจากภาพ</string>
+    <string name="onboard_weight_loss_with_ai_item_2">ติดตามแคลอรีที่เผาผลาญ</string>
+    <string name="onboard_weight_loss_with_ai_item_3">แคลอรีและโภชนาการ</string>
+    <string name="onboard_weight_loss_with_ai_item_4">ติดตามน้ำหนัก</string>
+    <string name="onboard_weight_loss_with_ai_item_5">แผนการอดอาหาร</string>
+    <string name="onboard_weight_loss_with_ai_item_6">ติดตามการดื่มน้ำ</string>
+    <string name="onboard_weight_loss_with_ai_item_7">ติดตามจำนวนก้าว</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
@@ -1136,6 +1149,5 @@
     <string name="premium_rewards_google_defer_success">ขยายโดย Google Play</string>
     <string name="premium_rewards_google_defer_failed">ไม่สำเร็จ</string>
     <string name="premium_rewards_google_defer_not_required">ไม่จำเป็น</string>
-
 
 </resources>

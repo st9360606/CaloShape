@@ -171,11 +171,24 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">Usar o CaloShape AI pode triplicar sua eficiência na perda de peso</string>
+    <string name="onboard_weight_loss_comparison_title">Uma maneira mais inteligente de alcançar sua meta</string>
     <string name="onboard_weight_loss_comparison_without_ai">Sem\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">Com\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">O CaloShape AI simplifica tudo e ajuda você a manter a consistência</string>
+    <string name="onboard_weight_loss_comparison_caption">Registre refeições, veja estimativas de calorias e acompanhe seu progresso em um só lugar.</string>
+    <string name="onboard_weight_loss_without_ai_item_1">Registre refeições manualmente</string>
+    <string name="onboard_weight_loss_without_ai_item_2">Estime o exercício</string>
+    <string name="onboard_weight_loss_without_ai_item_3">Registre nutrição separadamente</string>
+    <string name="onboard_weight_loss_without_ai_item_4">Registre o peso manualmente</string>
+    <string name="onboard_weight_loss_without_ai_item_5">Planeje o jejum</string>
+    <string name="onboard_weight_loss_without_ai_item_6">Esquece de beber água</string>
+    <string name="onboard_weight_loss_without_ai_item_7">Não sabe os passos diários</string>
+    <string name="onboard_weight_loss_with_ai_item_1">Nutrição por foto</string>
+    <string name="onboard_weight_loss_with_ai_item_2">Acompanhe calorias queimadas</string>
+    <string name="onboard_weight_loss_with_ai_item_3">Calorias e nutrientes</string>
+    <string name="onboard_weight_loss_with_ai_item_4">Acompanhe o peso</string>
+    <string name="onboard_weight_loss_with_ai_item_5">Plano de jejum</string>
+    <string name="onboard_weight_loss_with_ai_item_6">Acompanhe a água</string>
+    <string name="onboard_weight_loss_with_ai_item_7">Acompanhe os passos</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
@@ -1145,6 +1158,5 @@
     <string name="premium_rewards_google_defer_success">Estendido pelo Google Play</string>
     <string name="premium_rewards_google_defer_failed">Falhou</string>
     <string name="premium_rewards_google_defer_not_required">Não necessário</string>
-
 
 </resources>

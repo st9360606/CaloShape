@@ -171,15 +171,24 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">CaloShape AIを使うと減量
-効率が3倍になる可能性があります</string>
-    <string name="onboard_weight_loss_comparison_without_ai">CaloShape AI
-なし</string>
-    <string name="onboard_weight_loss_comparison_with_ai">CaloShape AI
-あり</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AIがすべてを簡単にし
-目標への継続をサポートします</string>
+    <string name="onboard_weight_loss_comparison_title">毎日の記録をもっと簡単に、目標達成をもっとスマートに</string>
+    <string name="onboard_weight_loss_comparison_without_ai">CaloShape AI\nなし</string>
+    <string name="onboard_weight_loss_comparison_with_ai">CaloShape AI\nあり</string>
+    <string name="onboard_weight_loss_comparison_caption">食事を記録し、カロリー推定値を確認して、進捗を一か所で追跡できます。</string>
+    <string name="onboard_weight_loss_without_ai_item_1">食事を手動で記録</string>
+    <string name="onboard_weight_loss_without_ai_item_2">運動を自分で見積もる</string>
+    <string name="onboard_weight_loss_without_ai_item_3">栄養を別々に記録</string>
+    <string name="onboard_weight_loss_without_ai_item_4">体重を手動で記録</string>
+    <string name="onboard_weight_loss_without_ai_item_5">自分で断食を計画</string>
+    <string name="onboard_weight_loss_without_ai_item_6">水を飲み忘れる</string>
+    <string name="onboard_weight_loss_without_ai_item_7">歩数が分からない</string>
+    <string name="onboard_weight_loss_with_ai_item_1">写真で栄養を確認</string>
+    <string name="onboard_weight_loss_with_ai_item_2">消費カロリーを追跡</string>
+    <string name="onboard_weight_loss_with_ai_item_3">カロリーと栄養</string>
+    <string name="onboard_weight_loss_with_ai_item_4">体重を追跡</string>
+    <string name="onboard_weight_loss_with_ai_item_5">断食プラン</string>
+    <string name="onboard_weight_loss_with_ai_item_6">水分を記録</string>
+    <string name="onboard_weight_loss_with_ai_item_7">歩数を記録</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->

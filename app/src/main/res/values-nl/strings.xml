@@ -171,11 +171,24 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">Met CaloShape AI kun je je afvalefficiëntie\nverdrievoudigen</string>
+    <string name="onboard_weight_loss_comparison_title">Een slimmere manier om je doel te bereiken</string>
     <string name="onboard_weight_loss_comparison_without_ai">Zonder\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">Met\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI maakt alles eenvoudig\nen helpt je consequent te blijven</string>
+    <string name="onboard_weight_loss_comparison_caption">Log maaltijden, bekijk calorieramingen en volg je voortgang op één plek.</string>
+    <string name="onboard_weight_loss_without_ai_item_1">Maaltijden handmatig loggen</string>
+    <string name="onboard_weight_loss_without_ai_item_2">Training zelf inschatten</string>
+    <string name="onboard_weight_loss_without_ai_item_3">Voeding apart bijhouden</string>
+    <string name="onboard_weight_loss_without_ai_item_4">Gewicht handmatig loggen</string>
+    <string name="onboard_weight_loss_without_ai_item_5">Vasten zelf plannen</string>
+    <string name="onboard_weight_loss_without_ai_item_6">Vergeet water te drinken</string>
+    <string name="onboard_weight_loss_without_ai_item_7">Dagelijkse stappen onbekend</string>
+    <string name="onboard_weight_loss_with_ai_item_1">Voeding via foto</string>
+    <string name="onboard_weight_loss_with_ai_item_2">Calorieverbruik volgen</string>
+    <string name="onboard_weight_loss_with_ai_item_3">Calorieën en voedingsstoffen</string>
+    <string name="onboard_weight_loss_with_ai_item_4">Gewicht volgen</string>
+    <string name="onboard_weight_loss_with_ai_item_5">Vastenplan</string>
+    <string name="onboard_weight_loss_with_ai_item_6">Water bijhouden</string>
+    <string name="onboard_weight_loss_with_ai_item_7">Stappen bijhouden</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->

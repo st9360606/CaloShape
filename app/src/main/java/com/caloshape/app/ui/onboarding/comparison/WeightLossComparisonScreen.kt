@@ -88,7 +88,7 @@ fun WeightLossComparisonScreen(
                     .padding(start = 36.dp, end = 24.dp),
             )
 
-            Spacer(modifier = Modifier.height(80.dp))
+            Spacer(modifier = Modifier.height(32.dp))
 
             ComparisonCard(
                 modifier = Modifier
@@ -112,6 +112,8 @@ private fun ComparisonCard(
         stringResource(R.string.onboard_weight_loss_without_ai_item_3),
         stringResource(R.string.onboard_weight_loss_without_ai_item_4),
         stringResource(R.string.onboard_weight_loss_without_ai_item_5),
+        stringResource(R.string.onboard_weight_loss_without_ai_item_6),
+        stringResource(R.string.onboard_weight_loss_without_ai_item_7),
     )
     val withAiItems = listOf(
         stringResource(R.string.onboard_weight_loss_with_ai_item_1),
@@ -119,6 +121,8 @@ private fun ComparisonCard(
         stringResource(R.string.onboard_weight_loss_with_ai_item_3),
         stringResource(R.string.onboard_weight_loss_with_ai_item_4),
         stringResource(R.string.onboard_weight_loss_with_ai_item_5),
+        stringResource(R.string.onboard_weight_loss_with_ai_item_6),
+        stringResource(R.string.onboard_weight_loss_with_ai_item_7),
     )
 
     Column(

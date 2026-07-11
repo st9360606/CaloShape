@@ -169,11 +169,24 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">CaloShape AI आपका वजन\nघटाने की दक्षता तीन गुना कर सकता है</string>
+    <string name="onboard_weight_loss_comparison_title">रोज़ाना की ट्रैकिंग आसान बनाएं, अपनी प्रगति पर नज़र रखें और स्मार्ट तरीके से अपने लक्ष्य तक पहुंचें</string>
     <string name="onboard_weight_loss_comparison_without_ai">CaloShape AI\nके बिना</string>
     <string name="onboard_weight_loss_comparison_with_ai">CaloShape AI\nके साथ</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI सब कुछ आसान बनाता है\nऔर आपको लक्ष्य पर बनाए रखता है</string>
+    <string name="onboard_weight_loss_comparison_caption">भोजन लॉग करें, कैलोरी अनुमान देखें और प्रगति एक ही जगह ट्रैक करें।</string>
+    <string name="onboard_weight_loss_without_ai_item_1">खाना खुद दर्ज करें</string>
+    <string name="onboard_weight_loss_without_ai_item_2">व्यायाम का अनुमान लगाएं</string>
+    <string name="onboard_weight_loss_without_ai_item_3">पोषण अलग से दर्ज करें</string>
+    <string name="onboard_weight_loss_without_ai_item_4">वजन खुद दर्ज करें</string>
+    <string name="onboard_weight_loss_without_ai_item_5">उपवास खुद प्लान करें</string>
+    <string name="onboard_weight_loss_without_ai_item_6">पानी पीना भूल जाते हैं</string>
+    <string name="onboard_weight_loss_without_ai_item_7">दैनिक कदम पता नहीं</string>
+    <string name="onboard_weight_loss_with_ai_item_1">फोटो से पोषण</string>
+    <string name="onboard_weight_loss_with_ai_item_2">कैलोरी बर्न ट्रैक करें</string>
+    <string name="onboard_weight_loss_with_ai_item_3">कैलोरी और पोषण</string>
+    <string name="onboard_weight_loss_with_ai_item_4">वजन ट्रैक करें</string>
+    <string name="onboard_weight_loss_with_ai_item_5">उपवास योजना</string>
+    <string name="onboard_weight_loss_with_ai_item_6">पानी ट्रैक करें</string>
+    <string name="onboard_weight_loss_with_ai_item_7">कदम ट्रैक करें</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
@@ -1133,6 +1146,5 @@
     <string name="premium_rewards_google_defer_success">Google Play द्वारा बढ़ाया गया</string>
     <string name="premium_rewards_google_defer_failed">विफल</string>
     <string name="premium_rewards_google_defer_not_required">आवश्यक नहीं</string>
-
 
 </resources>

@@ -170,13 +170,24 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">Using CaloShape AI can triple your weight\nloss efficiency</string>
+    <string name="onboard_weight_loss_comparison_title">A smarter way to reach your goal</string>
     <string name="onboard_weight_loss_comparison_without_ai">Without\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">With\nCaloShape AI</string>
-    <!-- Shared by all locales: keep this fixed percentage only in the default resources. -->
-    <string name="onboard_weight_loss_comparison_twenty_percent" translatable="false" formatted="false">20%</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI makes everything simple\nand keeps you accountable</string>
+    <string name="onboard_weight_loss_comparison_caption">Log meals, see calorie estimates, and track progress in one place.</string>
+    <string name="onboard_weight_loss_without_ai_item_1">Log meals manually</string>
+    <string name="onboard_weight_loss_without_ai_item_2">Estimate workouts</string>
+    <string name="onboard_weight_loss_without_ai_item_3">Separate nutrition logs</string>
+    <string name="onboard_weight_loss_without_ai_item_4">Log weight manually</string>
+    <string name="onboard_weight_loss_without_ai_item_5">Plan fasting yourself</string>
+    <string name="onboard_weight_loss_without_ai_item_6">Forget to drink water</string>
+    <string name="onboard_weight_loss_without_ai_item_7">Don\'t know daily steps</string>
+    <string name="onboard_weight_loss_with_ai_item_1">Snap for nutrition</string>
+    <string name="onboard_weight_loss_with_ai_item_2">Track workout burn</string>
+    <string name="onboard_weight_loss_with_ai_item_3">Calories &amp; nutrients</string>
+    <string name="onboard_weight_loss_with_ai_item_4">Track weight</string>
+    <string name="onboard_weight_loss_with_ai_item_5">Fasting plan</string>
+    <string name="onboard_weight_loss_with_ai_item_6">Water tracking</string>
+    <string name="onboard_weight_loss_with_ai_item_7">Step tracking</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
@@ -1144,6 +1155,5 @@
     <string name="premium_rewards_google_defer_success">Extended by Google Play</string>
     <string name="premium_rewards_google_defer_failed">Failed</string>
     <string name="premium_rewards_google_defer_not_required">Not required</string>
-
 
 </resources>

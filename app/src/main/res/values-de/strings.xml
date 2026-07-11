@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">Foto machen. Kalorien erkennen.</string>
+    <string name="landing_title">Ein Foto. Kalorien im Blick.</string>
     <string name="choose_language">Sprache auswählen</string>
     <string name="cta_get_started">Loslegen</string>
     <string name="cta_login_prefix">Du hast bereits ein Konto?</string>
@@ -171,11 +171,24 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">Mit CaloShape AI kannst du deine Effizienz beim\nAbnehmen verdreifachen</string>
+    <string name="onboard_weight_loss_comparison_title">Ein klügerer Weg zu deinem Ziel</string>
     <string name="onboard_weight_loss_comparison_without_ai">Ohne\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">Mit\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI macht alles einfacher\nund hilft dir, dranzubleiben</string>
+    <string name="onboard_weight_loss_comparison_caption">Protokolliere Mahlzeiten, sieh Kalorienschätzungen und verfolge deinen Fortschritt an einem Ort.</string>
+    <string name="onboard_weight_loss_without_ai_item_1">Mahlzeiten manuell erfassen</string>
+    <string name="onboard_weight_loss_without_ai_item_2">Training selbst schätzen</string>
+    <string name="onboard_weight_loss_without_ai_item_3">Nährwerte getrennt erfassen</string>
+    <string name="onboard_weight_loss_without_ai_item_4">Gewicht manuell erfassen</string>
+    <string name="onboard_weight_loss_without_ai_item_5">Fasten selbst planen</string>
+    <string name="onboard_weight_loss_without_ai_item_6">Trinken vergessen</string>
+    <string name="onboard_weight_loss_without_ai_item_7">Tägliche Schritte unbekannt</string>
+    <string name="onboard_weight_loss_with_ai_item_1">Nährwerte per Foto</string>
+    <string name="onboard_weight_loss_with_ai_item_2">Kalorienverbrauch verfolgen</string>
+    <string name="onboard_weight_loss_with_ai_item_3">Kalorien und Nährwerte</string>
+    <string name="onboard_weight_loss_with_ai_item_4">Gewicht verfolgen</string>
+    <string name="onboard_weight_loss_with_ai_item_5">Fastenplan</string>
+    <string name="onboard_weight_loss_with_ai_item_6">Trink-Tracker</string>
+    <string name="onboard_weight_loss_with_ai_item_7">Schritt-Tracker</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->

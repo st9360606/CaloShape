@@ -169,11 +169,24 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">CaloShape AI auttaa tehostamaan\npainonpudotusta jopa 3×</string>
+    <string name="onboard_weight_loss_comparison_title">Tee päivittäisestä seurannasta helpompaa ja saavuta tavoitteesi älykkäämmin</string>
     <string name="onboard_weight_loss_comparison_without_ai">Ilman\nCaloShape AI:tä</string>
     <string name="onboard_weight_loss_comparison_with_ai">CaloShape AI:n\nkanssa</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI tekee kaikesta yksinkertaista ja auttaa pysymään tavoitteessa</string>
+    <string name="onboard_weight_loss_comparison_caption">Kirjaa ateriat, näe kaloriarviot ja seuraa edistymistäsi yhdessä paikassa.</string>
+    <string name="onboard_weight_loss_without_ai_item_1">Kirjaa ateriat itse</string>
+    <string name="onboard_weight_loss_without_ai_item_2">Arvioi liikunta itse</string>
+    <string name="onboard_weight_loss_without_ai_item_3">Kirjaa ravinto erikseen</string>
+    <string name="onboard_weight_loss_without_ai_item_4">Kirjaa paino itse</string>
+    <string name="onboard_weight_loss_without_ai_item_5">Suunnittele paasto itse</string>
+    <string name="onboard_weight_loss_without_ai_item_6">Unohdat juoda vettä</string>
+    <string name="onboard_weight_loss_without_ai_item_7">Et tiedä askelmääriä</string>
+    <string name="onboard_weight_loss_with_ai_item_1">Ravinto kuvasta</string>
+    <string name="onboard_weight_loss_with_ai_item_2">Seuraa kulutusta</string>
+    <string name="onboard_weight_loss_with_ai_item_3">Kalorit ja ravinteet</string>
+    <string name="onboard_weight_loss_with_ai_item_4">Seuraa painoa</string>
+    <string name="onboard_weight_loss_with_ai_item_5">Paastosuunnitelma</string>
+    <string name="onboard_weight_loss_with_ai_item_6">Vesiseuranta</string>
+    <string name="onboard_weight_loss_with_ai_item_7">Askelten seuranta</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->

@@ -169,11 +169,24 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">استخدام CaloShape AI يمكن أن يضاعف كفاءة\nإنقاص الوزن 3 مرات</string>
+    <string name="onboard_weight_loss_comparison_title">اجعل تتبعك اليومي أسهل وتقدم نحو هدفك بطريقة أذكى</string>
     <string name="onboard_weight_loss_comparison_without_ai">بدون\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">مع\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI يجعل كل شيء بسيطًا\nويساعدك على الالتزام</string>
+    <string name="onboard_weight_loss_comparison_caption">سجّل وجباتك واطّلع على تقديرات السعرات وتابع تقدمك في مكان واحد.</string>
+    <string name="onboard_weight_loss_without_ai_item_1">سجّل الوجبات يدويًا</string>
+    <string name="onboard_weight_loss_without_ai_item_2">قدّر التمرين بنفسك</string>
+    <string name="onboard_weight_loss_without_ai_item_3">سجّل التغذية بشكل منفصل</string>
+    <string name="onboard_weight_loss_without_ai_item_4">سجّل الوزن يدويًا</string>
+    <string name="onboard_weight_loss_without_ai_item_5">خطط للصيام بنفسك</string>
+    <string name="onboard_weight_loss_without_ai_item_6">تنسى شرب الماء</string>
+    <string name="onboard_weight_loss_without_ai_item_7">لا تعرف خطواتك اليومية</string>
+    <string name="onboard_weight_loss_with_ai_item_1">تغذية من صورة</string>
+    <string name="onboard_weight_loss_with_ai_item_2">تتبّع حرق التمرين</string>
+    <string name="onboard_weight_loss_with_ai_item_3">السعرات والعناصر الغذائية</string>
+    <string name="onboard_weight_loss_with_ai_item_4">تتبّع الوزن</string>
+    <string name="onboard_weight_loss_with_ai_item_5">خطة صيام</string>
+    <string name="onboard_weight_loss_with_ai_item_6">تتبّع الماء</string>
+    <string name="onboard_weight_loss_with_ai_item_7">تتبّع الخطوات</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
@@ -1137,6 +1150,5 @@
     <string name="premium_rewards_google_defer_success">تم التمديد بواسطة Google Play</string>
     <string name="premium_rewards_google_defer_failed">فشل</string>
     <string name="premium_rewards_google_defer_not_required">غير مطلوب</string>
-
 
 </resources>

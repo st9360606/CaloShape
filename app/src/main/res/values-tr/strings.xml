@@ -169,11 +169,24 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">CaloShape AI kullanmak kilo verme\nverimliliğini üç katına çıkarabilir</string>
+    <string name="onboard_weight_loss_comparison_title">Günlük takibini kolaylaştır ve hedefine daha akıllı bir şekilde ulaş</string>
     <string name="onboard_weight_loss_comparison_without_ai">CaloShape AI\nolmadan</string>
     <string name="onboard_weight_loss_comparison_with_ai">CaloShape AI\nile</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI her şeyi kolaylaştırır\nve hedeflerine bağlı kalmana yardım eder</string>
+    <string name="onboard_weight_loss_comparison_caption">Öğünlerini kaydet, kalori tahminlerini gör ve ilerlemeni tek yerde takip et.</string>
+    <string name="onboard_weight_loss_without_ai_item_1">Öğünleri elle kaydet</string>
+    <string name="onboard_weight_loss_without_ai_item_2">Egzersizi kendin hesapla</string>
+    <string name="onboard_weight_loss_without_ai_item_3">Beslenmeyi ayrı kaydet</string>
+    <string name="onboard_weight_loss_without_ai_item_4">Kilonu elle kaydet</string>
+    <string name="onboard_weight_loss_without_ai_item_5">Orucu kendin planla</string>
+    <string name="onboard_weight_loss_without_ai_item_6">Su içmeyi unut</string>
+    <string name="onboard_weight_loss_without_ai_item_7">Günlük adımı bilmiyorsun</string>
+    <string name="onboard_weight_loss_with_ai_item_1">Fotoğraftan besin bilgisi</string>
+    <string name="onboard_weight_loss_with_ai_item_2">Yakılan kaloriyi takip et</string>
+    <string name="onboard_weight_loss_with_ai_item_3">Kalori ve besinler</string>
+    <string name="onboard_weight_loss_with_ai_item_4">Kiloyu takip et</string>
+    <string name="onboard_weight_loss_with_ai_item_5">Oruç planı</string>
+    <string name="onboard_weight_loss_with_ai_item_6">Su takibi</string>
+    <string name="onboard_weight_loss_with_ai_item_7">Adım takibi</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
@@ -1133,6 +1146,5 @@
     <string name="premium_rewards_google_defer_success">Google Play tarafından uzatıldı</string>
     <string name="premium_rewards_google_defer_failed">Başarısız</string>
     <string name="premium_rewards_google_defer_not_required">Gerekli değil</string>
-
 
 </resources>

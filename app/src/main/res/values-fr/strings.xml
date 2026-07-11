@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">Une photo, vos calories.</string>
+    <string name="landing_title">Une photo, découvrez vos calories.</string>
     <string name="choose_language">Choisir la langue</string>
     <string name="cta_get_started">Commencer</string>
     <string name="cta_login_prefix">Vous avez déjà un compte ?</string>
@@ -166,16 +166,29 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">Quel est votre poids cible ?</string>
-    <string name="onboard_goal_weight_subtitle">En fonction de cet objectif, nous créerons une recommandation calorique quotidienne plus adaptée pour vous.</string>
+    <string name="onboard_goal_weight_subtitle">Kami akan menyesuaikan rekomendasi kalori harian berdasarkan target Anda.</string>
     <string name="onboard_goal_weight_hint">Ces informations serviront à calibrer votre programme personnalisé.</string>
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">Utiliser CaloShape AI peut tripler l’efficacité\nde votre perte de poids</string>
+    <string name="onboard_weight_loss_comparison_title">Une façon plus intelligente pour atteindre votre objectif</string>
     <string name="onboard_weight_loss_comparison_without_ai">Sans\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">Avec\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI simplifie tout\net vous aide à rester rigoureux</string>
+    <string name="onboard_weight_loss_comparison_caption">Enregistrez vos repas, consultez des estimations de calories et suivez vos progrès au même endroit.</string>
+    <string name="onboard_weight_loss_without_ai_item_1">Saisir les repas à la main</string>
+    <string name="onboard_weight_loss_without_ai_item_2">Estimer l\'exercice</string>
+    <string name="onboard_weight_loss_without_ai_item_3">Suivi nutritionnel séparé</string>
+    <string name="onboard_weight_loss_without_ai_item_4">Saisir le poids à la main</string>
+    <string name="onboard_weight_loss_without_ai_item_5">Planifier le jeûne</string>
+    <string name="onboard_weight_loss_without_ai_item_6">Oublier de boire</string>
+    <string name="onboard_weight_loss_without_ai_item_7">Pas de suivi des pas</string>
+    <string name="onboard_weight_loss_with_ai_item_1">Nutrition par photo</string>
+    <string name="onboard_weight_loss_with_ai_item_2">Suivre les calories brûlées</string>
+    <string name="onboard_weight_loss_with_ai_item_3">Calories et nutriments</string>
+    <string name="onboard_weight_loss_with_ai_item_4">Suivre le poids</string>
+    <string name="onboard_weight_loss_with_ai_item_5">Plan de jeûne</string>
+    <string name="onboard_weight_loss_with_ai_item_6">Suivi de l\'eau</string>
+    <string name="onboard_weight_loss_with_ai_item_7">Suivi des pas</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->

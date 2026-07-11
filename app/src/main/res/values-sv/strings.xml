@@ -171,11 +171,24 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">Med CaloShape AI kan du tredubbla effektiviteten\ni din viktminskning</string>
+    <string name="onboard_weight_loss_comparison_title">Ett enklare och smartare sätt att nå ditt mål</string>
     <string name="onboard_weight_loss_comparison_without_ai">Utan\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">Med\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI gör allt enklare\noch hjälper dig hålla dig ansvarig</string>
+    <string name="onboard_weight_loss_comparison_caption">Logga måltider, se kaloriberäkningar och följ dina framsteg på ett ställe.</string>
+    <string name="onboard_weight_loss_without_ai_item_1">Logga måltider manuellt</string>
+    <string name="onboard_weight_loss_without_ai_item_2">Uppskatta träning själv</string>
+    <string name="onboard_weight_loss_without_ai_item_3">Logga näring separat</string>
+    <string name="onboard_weight_loss_without_ai_item_4">Logga vikt manuellt</string>
+    <string name="onboard_weight_loss_without_ai_item_5">Planera fasta själv</string>
+    <string name="onboard_weight_loss_without_ai_item_6">Glömmer att dricka vatten</string>
+    <string name="onboard_weight_loss_without_ai_item_7">Vet inte dagens steg</string>
+    <string name="onboard_weight_loss_with_ai_item_1">Näring från foto</string>
+    <string name="onboard_weight_loss_with_ai_item_2">Följ kaloriförbränning</string>
+    <string name="onboard_weight_loss_with_ai_item_3">Kalorier och näring</string>
+    <string name="onboard_weight_loss_with_ai_item_4">Följ vikt</string>
+    <string name="onboard_weight_loss_with_ai_item_5">Fasteplan</string>
+    <string name="onboard_weight_loss_with_ai_item_6">Vattenspårning</string>
+    <string name="onboard_weight_loss_with_ai_item_7">Stegspårning</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
@@ -1144,6 +1157,5 @@
     <string name="premium_rewards_google_defer_success">Förlängd av Google Play</string>
     <string name="premium_rewards_google_defer_failed">Misslyckades</string>
     <string name="premium_rewards_google_defer_not_required">Krävs inte</string>
-
 
 </resources>

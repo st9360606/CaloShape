@@ -104,15 +104,24 @@
     <string name="onboard_goal_weight_title">מה משקל היעד שלך?</string>
     <string name="onboard_goal_weight_subtitle">בהתבסס על יעד זה, ניצור עבורך המלצת קלוריות יומית מתאימה יותר.</string>
     <string name="onboard_goal_weight_hint">המידע ישמש לכיול התוכנית האישית שלך.</string>
-    <string name="onboard_weight_loss_comparison_title">השימוש ב-CaloShape AI יכול לשלש את יעילות
-הירידה במשקל שלך</string>
-    <string name="onboard_weight_loss_comparison_without_ai">בלי
-CaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_with_ai">עם
-CaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI הופך הכול לפשוט
-ועוזר לך להישאר מחויב</string>
+    <string name="onboard_weight_loss_comparison_title">להפוך את המעקב היומי לפשוט יותר ולהגיע ליעד שלך בדרך חכמה יותר</string>
+    <string name="onboard_weight_loss_comparison_without_ai">ללא\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_with_ai">עם\nCaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_caption">תעד ארוחות, הצג הערכות קלוריות ועקוב אחר ההתקדמות במקום אחד.</string>
+    <string name="onboard_weight_loss_without_ai_item_1">תעד ארוחות ידנית</string>
+    <string name="onboard_weight_loss_without_ai_item_2">הערך אימון בעצמך</string>
+    <string name="onboard_weight_loss_without_ai_item_3">תעד תזונה בנפרד</string>
+    <string name="onboard_weight_loss_without_ai_item_4">תעד משקל ידנית</string>
+    <string name="onboard_weight_loss_without_ai_item_5">תכנן צום בעצמך</string>
+    <string name="onboard_weight_loss_without_ai_item_6">שוכח לשתות מים</string>
+    <string name="onboard_weight_loss_without_ai_item_7">לא יודע את מספר הצעדים</string>
+    <string name="onboard_weight_loss_with_ai_item_1">תזונה מתמונה</string>
+    <string name="onboard_weight_loss_with_ai_item_2">עקוב אחר קלוריות שנשרפו</string>
+    <string name="onboard_weight_loss_with_ai_item_3">קלוריות ורכיבים תזונתיים</string>
+    <string name="onboard_weight_loss_with_ai_item_4">עקוב אחר המשקל</string>
+    <string name="onboard_weight_loss_with_ai_item_5">תוכנית צום</string>
+    <string name="onboard_weight_loss_with_ai_item_6">מעקב מים</string>
+    <string name="onboard_weight_loss_with_ai_item_7">מעקב צעדים</string>
     <string name="onboard_notif_title">גרום לכל ארוחה להיחשב!</string>
     <string name="onboard_notif_subtitle">הפעל התראות לתזכורות עדינות לרישום ארוחות, כדי שהקלוריות, המאקרו וההתקדמות שלך יישארו במסלול. נפילות קטנות קורות; תזכורות בזמן עוזרות לך לחזור מהר.</string>
     <string name="onboard_allow_notifications_cta">אפשר התראות</string>
@@ -830,4 +839,5 @@ CaloShape AI</string>
     <string name="premium_rewards_google_defer_success">הוארך על ידי Google Play</string>
     <string name="premium_rewards_google_defer_failed">נכשל</string>
     <string name="premium_rewards_google_defer_not_required">לא נדרש</string>
+
 </resources>

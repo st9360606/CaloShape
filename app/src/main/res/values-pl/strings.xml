@@ -169,11 +169,24 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">Łatwiej trzymać się\nplanu z CaloShape AI</string>
+    <string name="onboard_weight_loss_comparison_title">Inteligentniejszy sposób na osiągnięcie celu</string>
     <string name="onboard_weight_loss_comparison_without_ai">Bez\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">Z\nCaloShape AI</string>
-    <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI upraszcza wszystko\ni pomaga trzymać się planu</string>
+    <string name="onboard_weight_loss_comparison_caption">Zapisuj posiłki, sprawdzaj szacunki kalorii i śledź postępy w jednym miejscu.</string>
+    <string name="onboard_weight_loss_without_ai_item_1">Ręcznie zapisuj posiłki</string>
+    <string name="onboard_weight_loss_without_ai_item_2">Szacuj trening samodzielnie</string>
+    <string name="onboard_weight_loss_without_ai_item_3">Zapisuj odżywianie osobno</string>
+    <string name="onboard_weight_loss_without_ai_item_4">Ręcznie zapisuj wagę</string>
+    <string name="onboard_weight_loss_without_ai_item_5">Planuj post samodzielnie</string>
+    <string name="onboard_weight_loss_without_ai_item_6">Zapominasz o wodzie</string>
+    <string name="onboard_weight_loss_without_ai_item_7">Nie znasz liczby kroków</string>
+    <string name="onboard_weight_loss_with_ai_item_1">Odżywianie ze zdjęcia</string>
+    <string name="onboard_weight_loss_with_ai_item_2">Śledź spalone kalorie</string>
+    <string name="onboard_weight_loss_with_ai_item_3">Kalorie i składniki</string>
+    <string name="onboard_weight_loss_with_ai_item_4">Śledź wagę</string>
+    <string name="onboard_weight_loss_with_ai_item_5">Plan postu</string>
+    <string name="onboard_weight_loss_with_ai_item_6">Śledź wodę</string>
+    <string name="onboard_weight_loss_with_ai_item_7">Śledź kroki</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
@@ -1139,6 +1152,5 @@
     <string name="premium_rewards_google_defer_success">Wydłużone przez Google Play</string>
     <string name="premium_rewards_google_defer_failed">Niepowodzenie</string>
     <string name="premium_rewards_google_defer_not_required">Niewymagane</string>
-
 
 </resources>
