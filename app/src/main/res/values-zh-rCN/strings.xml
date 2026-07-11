@@ -894,7 +894,7 @@
     <string name="referral_step_2_subtitle">好友使用你的邀请码开始 CaloShape AI 付费订阅。</string>
     <string name="referral_step_3_title">未退款后发放奖励</string>
     <string name="referral_step_3_subtitle">订阅验证完成且未退款后，你的 Premium 期间将会延长。</string>
-    <string name="referral_share_text">一起使用 CaloShape AI！我的邀请码是：\n%1$s\n\n%2$s</string>
+    <string name="referral_share_text">一起使用 CaloShape AI！我的邀请码是： %1$s\n\n%2$s</string>
     <string name="referral_share_subject">一起使用 CaloShape AI</string>
     <string name="referral_share_chooser_title">选择分享方式</string>
     <string name="referral_unable_to_open_share_options">无法开启分享选项。</string>

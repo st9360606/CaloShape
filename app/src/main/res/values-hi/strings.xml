@@ -895,7 +895,7 @@
     <string name="referral_step_2_subtitle">वे आपके आमंत्रण का उपयोग करके भुगतान किया हुआ CaloShape AI सब्सक्रिप्शन शुरू करते हैं।</string>
     <string name="referral_step_3_title">रिफंड नहीं, फिर इनाम</string>
     <string name="referral_step_3_subtitle">सब्सक्रिप्शन बिना रिफंड सत्यापित होने के बाद, आपकी Premium अवधि बढ़ाई जाती है।</string>
-    <string name="referral_share_text">CaloShape AI पर मेरे साथ जुड़ें! मेरा रेफ़रल कोड है:\n%1$s\n\n%2$s</string>
+    <string name="referral_share_text">CaloShape AI पर मेरे साथ जुड़ें! मेरा रेफ़रल कोड है: %1$s\n\n%2$s</string>
     <string name="referral_share_subject">CaloShape AI पर मेरे साथ जुड़ें</string>
     <string name="referral_share_chooser_title">इसके जरिए शेयर करें</string>
     <string name="referral_unable_to_open_share_options">शेयर विकल्प खोल नहीं सके।</string>

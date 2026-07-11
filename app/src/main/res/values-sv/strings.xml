@@ -906,7 +906,7 @@
     <string name="referral_step_2_subtitle">De startar en betald CaloShape AI-prenumeration med din inbjudan.</string>
     <string name="referral_step_3_title">Ingen återbetalning, sedan belöning</string>
     <string name="referral_step_3_subtitle">När prenumerationen har verifierats utan återbetalning förlängs din premiumperiod.</string>
-    <string name="referral_share_text">Gå med mig på CaloShape AI! Min inbjudningskod är:\n%1$s\n\n%2$s</string>
+    <string name="referral_share_text">Gå med mig på CaloShape AI! Min inbjudningskod är: %1$s\n\n%2$s</string>
     <string name="referral_share_subject">Gå med mig på CaloShape AI</string>
     <string name="referral_share_chooser_title">Dela via</string>
     <string name="referral_unable_to_open_share_options">Kunde inte öppna delningsalternativ.</string>

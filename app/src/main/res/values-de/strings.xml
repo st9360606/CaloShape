@@ -909,7 +909,7 @@
     <string name="referral_step_2_subtitle">Er startet ein kostenpflichtiges CaloShape AI-Abo mit deiner Einladung.</string>
     <string name="referral_step_3_title">Keine Erstattung, dann Belohnung</string>
     <string name="referral_step_3_subtitle">Nachdem das Abo ohne Erstattung bestätigt wurde, wird dein Premium-Zeitraum verlängert.</string>
-    <string name="referral_share_text">Mach mit bei CaloShape AI! Mein Empfehlungscode lautet:\n%1$s\n\n%2$s</string>
+    <string name="referral_share_text">Mach mit bei CaloShape AI! Mein Empfehlungscode lautet: %1$s\n\n%2$s</string>
     <string name="referral_share_subject">Mach mit bei CaloShape AI</string>
     <string name="referral_share_chooser_title">Teilen über</string>
     <string name="referral_unable_to_open_share_options">Teilen-Optionen konnten nicht geöffnet werden.</string>

@@ -907,7 +907,7 @@
     <string name="referral_step_2_subtitle">Ele inicia uma assinatura paga do CaloShape AI usando seu convite.</string>
     <string name="referral_step_3_title">Sem reembolso, então recompensa</string>
     <string name="referral_step_3_subtitle">Depois que a assinatura for verificada sem reembolso, seu período premium será estendido.</string>
-    <string name="referral_share_text">Entre comigo no CaloShape AI! Meu código de indicação é:\n%1$s\n\n%2$s</string>
+    <string name="referral_share_text">Entre comigo no CaloShape AI! Meu código de indicação é: %1$s\n\n%2$s</string>
     <string name="referral_share_subject">Entre comigo no CaloShape AI</string>
     <string name="referral_share_chooser_title">Compartilhar via</string>
     <string name="referral_unable_to_open_share_options">Não foi possível abrir as opções de compartilhamento.</string>

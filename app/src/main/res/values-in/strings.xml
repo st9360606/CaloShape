@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">Ambil foto, ketahui kalorinya.</string>
+    <string name="landing_title">Cukup ambil foto untuk mengetahui kalorinya.</string>
     <string name="choose_language">Pilih bahasa</string>
     <string name="cta_get_started">Mulai</string>
     <string name="cta_login_prefix">Sudah punya akun?</string>
@@ -126,20 +126,22 @@
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">Berapa usia Anda?</string>
     <string name="onboard_age_subtitle">Kami hanya menggunakan usia Anda untuk meningkatkan pengalaman dan akurasi estimasi kalori.</string>
+
+
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">Berapa tinggi badan Anda?</string>
-    <string name="onboard_height_subtitle">Kami hanya menggunakan data Anda untuk meningkatkan pengalaman dan estimasi kalori kami.</string>
+    <string name="onboard_height_subtitle">Data ini hanya digunakan untuk meningkatkan pengalaman dan akurasi estimasi kalori.</string>
     <string name="onboard_height_hint">Ini akan digunakan untuk menyesuaikan rencana khusus Anda.</string>
 
 
     <!-- Onboarding: WeightSelectionScreen -->
     <string name="onboard_weight_title">Berapa berat badan Anda?</string>
-    <string name="onboard_weight_subtitle">Kami hanya menggunakan data Anda untuk meningkatkan pengalaman dan estimasi kalori kami.</string>
+    <string name="onboard_weight_subtitle">Data ini hanya digunakan untuk meningkatkan pengalaman dan akurasi estimasi kalori.</string>
     <string name="onboard_weight_hint">Ini akan digunakan untuk menyesuaikan rencana khusus Anda.</string>
 
 
     <!-- Onboarding: ExerciseFrequencyScreen  -->
-    <string name="onboard_ex_freq_title">Seberapa sering Anda berolahraga setiap minggu?</string>
+    <string name="onboard_ex_freq_title">Berapa kali Anda berolahraga per minggu?</string>
     <string name="onboard_ex_freq_subtitle">Ini akan membantu menyesuaikan rencana personal Anda.</string>
     <string name="ex_freq_0_title">0</string>
     <string name="ex_freq_0_sub">Sedenter</string>
@@ -164,20 +166,18 @@
 
     <!-- Onboarding: WeightGoalScreen -->
     <string name="onboard_goal_weight_title">Berapa berat target Anda?</string>
-    <string name="onboard_goal_weight_subtitle">Berdasarkan tujuan ini, kami akan membuat rekomendasi kalori harian yang lebih sesuai untuk Anda.</string>
+    <string name="onboard_goal_weight_subtitle">Tujuan ini membantu menentukan target kalori harian Anda.</string>
     <string name="onboard_goal_weight_hint">Ini akan digunakan untuk menyesuaikan rencana khusus Anda.</string>
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">Menggunakan CaloShape AI dapat melipatgandakan efisiensi
-penurunan berat badan Anda hingga 3X</string>
+    <string name="onboard_weight_loss_comparison_title">Menggunakan CaloShape AI dapat melipatgandakan efisiensi penurunan berat badan Anda hingga 3X</string>
     <string name="onboard_weight_loss_comparison_without_ai">Tanpa
 CaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">Dengan
 CaloShape AI</string>
     <string name="onboard_weight_loss_comparison_two_times">3X</string>
-    <string name="onboard_weight_loss_comparison_caption">CaloShape AI membuat semuanya sederhana
-dan membantu Anda tetap konsisten</string>
+    <string name="onboard_weight_loss_comparison_caption">Pantau makanan dengan mudah dan tetap konsisten</string>
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
@@ -187,6 +187,8 @@ dan membantu Anda tetap konsisten</string>
     <string name="notification_mock_app_title">Penghitung Kalori AI</string>
     <string name="onboard_notif_title_got_a_sec">Makanan Anda tidak akan tercatat sendiri 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Catat makanan ini agar kalori dan makro Anda tetap sesuai jalur.</string>
+
+
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">Hubungkan ke</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
@@ -222,7 +224,7 @@ dan membantu Anda tetap konsisten</string>
     <string name="plan_unit_kcal_day">kcal / hari</string>
 
     <string name="plan_macros_proteins">Protein</string>
-    <string name="plan_macros_carbs">Karbohidrat</string>
+    <string name="plan_macros_carbs">Karbo</string>
     <string name="plan_macros_fat">Lemak</string>
     <string name="plan_unit_g">g</string>
 
@@ -345,22 +347,31 @@ Tetap sesuai rencana setiap hari.</string>
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">Kalori tersisa</string>
-    <string name="home_calories_eaten_label">Kalori dikonsumsi</string>
+    <string name="home_calories_goal_label">Kalori</string>
+    <string name="home_calories_eaten_label">Kalori</string>
+
+
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
-    <string name="home_protein_goal_label">Protein tersisa</string>
-    <string name="home_protein_eaten_label">Protein dimakan</string>
-    <string name="home_carbs_goal_label">Karbohidrat tersisa</string>
-    <string name="home_carbs_eaten_label">Karbohidrat dimakan</string>
-    <string name="home_fats_goal_label">Lemak tersisa</string>
-    <string name="home_fats_eaten_label">Lemak dimakan</string>
-    <string name="home_fiber_goal_label">Serat tersisa</string>
-    <string name="home_fiber_eaten_label">Serat dimakan</string>
-    <string name="home_sugar_goal_label">Gula tersisa</string>
-    <string name="home_sugar_eaten_label">Gula dimakan</string>
-    <string name="home_sodium_goal_label">Natrium tersisa</string>
-    <string name="home_sodium_eaten_label">Natrium dikonsumsi</string>
+
+    <string name="home_protein_goal_label">Protein</string>
+    <string name="home_protein_eaten_label">Protein</string>
+
+    <string name="home_carbs_goal_label">Karbo</string>
+    <string name="home_carbs_eaten_label">Karbo</string>
+
+    <string name="home_fats_goal_label">Lemak</string>
+    <string name="home_fats_eaten_label">Lemak</string>
+
+    <string name="home_fiber_goal_label">Serat</string>
+    <string name="home_fiber_eaten_label">Serat</string>
+
+    <string name="home_sugar_goal_label">Gula</string>
+    <string name="home_sugar_eaten_label">Gula</string>
+
+    <string name="home_sodium_goal_label">Natrium</string>
+    <string name="home_sodium_eaten_label">Natrium</string>
+
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
@@ -427,7 +438,7 @@ Tetap sesuai rencana setiap hari.</string>
          BMI Card / BMI Info Dialog
          ========================= -->
     <string name="bmi_card_title">BMI Anda</string>
-    <string name="bmi_card_subtitle">Berat Anda adalah</string>
+    <string name="bmi_card_subtitle">Status BMI</string>
 
     <string name="bmi_status_underweight">Berat kurang</string>
     <string name="bmi_status_healthy">Sehat</string>
@@ -454,16 +465,16 @@ Tetap sesuai rencana setiap hari.</string>
     <!-- =========================
          NutritionChartCard
          ========================= -->
-    <string name="progress_chart_7day_avg_calories">Rata-rata 7 hari</string>
+    <string name="progress_chart_7day_avg_calories">Rerata 7 hari</string>
     <string name="progress_chart_value_cals">%1$d kcal</string>
-    <string name="progress_chart_15day_avg_calories">Rata-rata 15 hari</string>
+    <string name="progress_chart_15day_avg_calories">Rerata 15 hari</string>
     <string name="progress_chart_loading_total_calories_text">--.- kcal</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
     <string name="progress_chart_total_calories">Total kalori</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Protein</string>
-    <string name="progress_legend_carbs">Karbohidrat</string>
+    <string name="progress_legend_carbs">Karbo</string>
     <string name="progress_legend_fats">Lemak</string>
     <string name="progress_keep_it_up">Pertahankan! Memulai adalah bagian tersulit!</string>
 
@@ -477,7 +488,7 @@ Tetap sesuai rencana setiap hari.</string>
 
     <string name="progress_tooltip_calories">Kalori</string>
     <string name="progress_tooltip_protein">Protein</string>
-    <string name="progress_tooltip_carbs">Karbohidrat</string>
+    <string name="progress_tooltip_carbs">Karbo</string>
     <string name="progress_tooltip_fats">Lemak</string>
     <string name="progress_tooltip_label_format">%1$s:</string>
     <string name="progress_tooltip_grams_value">%1$d g</string>
@@ -489,7 +500,7 @@ Tetap sesuai rencana setiap hari.</string>
          ========================= -->
     <string name="progress_micronutrients_title">Mikronutrien</string>
     <string name="progress_chart_grams">g</string>
-    <string name="progress_chart_7day_avg">Rata-rata 7 hari</string>
+    <string name="progress_chart_7day_avg">Rerata 7 hari</string>
     <string name="progress_legend_fiber">Serat</string>
     <string name="progress_legend_sugar">Gula</string>
     <string name="progress_legend_sodium">Natrium</string>
@@ -504,13 +515,13 @@ Tetap sesuai rencana setiap hari.</string>
          ActivityChartCard
          ========================= -->
     <string name="activity_chart_goal_reached">Target tercapai hari ini</string>
-    <string name="activity_chart_goal_left">%1$d kcal tersisa untuk mencapai target hari ini</string>
+    <string name="activity_chart_goal_left">Tersisa %1$d kcal hari ini</string>
     <string name="activity_chart_title">Kalori aktivitas</string>
-    <string name="activity_chart_info_dialog_body">Termasuk olahraga yang dicatat dan kcal aktivitas yang diperkirakan dari langkah harian.</string>
+    <string name="activity_chart_info_dialog_body">Termasuk olahraga yang dicatat dan kcal aktivitas yang diperkirakan dari langkah harian.\n\nTarget = target olahraga harian + kalori langkah. Kalori langkah = berat terbaru (kg) × target langkah harian × 0.0005, dibulatkan. Jika berat atau target langkah tidak tersedia, target hanya memakai target olahraga; jika target olahraga belum diatur, digunakan 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
     <string name="activity_chart_goal">Target</string>
     <string name="activity_chart_value_kcal">%1$d kcal</string>
-    <string name="activity_chart_7day_avg">Rata-rata 7 hari</string>
+    <string name="activity_chart_7day_avg">Rerata 7 hari</string>
     <string name="activity_chart_loading">Memuat…</string>
     <string name="activity_legend_burned">Kalori terbakar</string>
     <string name="activity_legend_daily_goal">Target harian</string>
@@ -522,12 +533,12 @@ Tetap sesuai rencana setiap hari.</string>
          WaterChartCard
          ========================= -->
     <string name="water_chart_goal_reached">Target hari ini tercapai</string>
-    <string name="water_chart_goal_left_ml">%1$s ml tersisa untuk mencapai target hari ini</string>
+    <string name="water_chart_goal_left_ml">Tersisa %1$s ml hari ini</string>
     <string name="water_chart_title">Asupan air</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Target</string>
     <string name="water_chart_value_ml">%1$s ml</string>
-    <string name="water_chart_7day_avg">Rata-rata 7 hari</string>
+    <string name="water_chart_7day_avg">Rerata 7 hari</string>
     <string name="water_chart_loading">Memuat…</string>
     <string name="water_legend_intake">Asupan</string>
     <string name="water_legend_daily_goal">Target harian</string>
@@ -549,7 +560,7 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="progress_average_loading">Memuat rata-rata…</string>
     <string name="progress_average_total_calories">Total kalori</string>
     <string name="progress_average_protein">Protein</string>
-    <string name="progress_average_carbs">Karbohidrat</string>
+    <string name="progress_average_carbs">Karbo</string>
     <string name="progress_average_fats">Lemak</string>
     <string name="progress_average_fiber">Serat</string>
     <string name="progress_average_sugar">Gula</string>
@@ -580,13 +591,13 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="weight_chart_tab_30_days">30 hari</string>
     <string name="weight_chart_tab_60_days">60 hari</string>
     <string name="weight_chart_tab_90_days">90 hari</string>
-    <string name="weight_chart_tab_all_time">Sepanjang waktu</string>
+    <string name="weight_chart_tab_all_time">Semua</string>
     <string name="weight_chart_title">Tren berat</string>
     <string name="weight_chart_goal_progress_badge">%1$s%% dari target</string>
     <string name="weight_chart_goal_label">Target</string>
     <string name="weight_chart_to_goal">%1$s menuju target</string>
     <string name="weight_goal_chart_empty_hint">Catat berat untuk memulai tren</string>
-    <string name="weight_chart_motivation">Setiap langkah kecil membawa Anda lebih dekat ke tujuan.</string>
+    <string name="weight_chart_motivation">Setiap langkah mendekatkan Anda ke tujuan.</string>
     <string name="weight_history_weight_label">Berat</string>
     <string name="weight_history_change_label">Perubahan</string>
     <string name="weight_history_trend_loss">TURUN</string>
@@ -637,8 +648,8 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="workout_history_summary_body">Lacak progres pembakaran olahraga hari ini</string>
     <string name="workout_history_today_label">Hari ini</string>
     <string name="workout_history_avg_daily_value">%1$d kcal</string>
-    <string name="workout_history_avg_daily_label">Rata-rata 7 hari / hari</string>
-    <string name="workout_history_avg_label">Rata-rata 7 hari / sesi</string>
+    <string name="workout_history_avg_daily_label">Rerata / hari (7 hari)</string>
+    <string name="workout_history_avg_label">Rerata / sesi (7 hari)</string>
     <string name="workout_history_avg_value">%1$d kcal</string>
     <string name="workout_history_unit_kcal">kcal</string>
 
@@ -729,9 +740,9 @@ Tetap sesuai rencana setiap hari.</string>
 
 
     <!-- CameraScreen -->
-    <string name="camera_mode_food">Pindai makanan</string>
+    <string name="camera_mode_food">Makanan</string>
     <string name="camera_mode_barcode">Barcode</string>
-    <string name="camera_mode_label">Label makanan</string>
+    <string name="camera_mode_label">Label gizi</string>
     <string name="camera_mode_album">Foto</string>
     <string name="camera_barcode_title">Pemindai Barcode</string>
     <string name="camera_label_title">Pemindai Label</string>
@@ -774,7 +785,7 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="foodlog_detail_title">Nutrisi</string>
     <string name="foodlog_detail_calories">Kalori</string>
     <string name="foodlog_detail_protein">Protein</string>
-    <string name="foodlog_detail_carbs">Karbohidrat</string>
+    <string name="foodlog_detail_carbs">Karbo</string>
     <string name="foodlog_detail_fats">Lemak</string>
     <string name="foodlog_detail_fiber">Serat</string>
     <string name="foodlog_detail_sugar">Gula</string>
@@ -814,7 +825,7 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="payment_issue_dialog_badge">Pembayaran perlu perhatian</string>
     <string name="payment_issue_dialog_premium_access">Akses Premium</string>
     <string name="payment_issue_dialog_active_for_now">Aktif untuk saat ini</string>
-    <string name="payment_issue_dialog_next_step">Langkah berikutnya</string>
+    <string name="payment_issue_dialog_next_step">Selanjutnya</string>
     <string name="payment_issue_dialog_update_payment_short">Perbarui pembayaran</string>
 
 
@@ -850,8 +861,7 @@ Tetap sesuai rencana setiap hari.</string>
     <!-- Settings: referral card -->
     <string name="settings_invite_friends">Undang teman</string>
     <string name="settings_premium_reward">Hadiah Premium</string>
-    <string name="settings_share_caloshape_with_friends">Bagikan CaloShape AI
-dengan teman Anda</string>
+    <string name="settings_share_caloshape_with_friends">Bagikan CaloShape AI dengan teman Anda</string>
     <string name="settings_referral_reward_content">Mereka berlangganan. Anda mendapat 30 hari gratis.</string>
     <string name="settings_get_30_days_free">Dapatkan 30 hari gratis</string>
     <string name="settings_days_label">Hari</string>
@@ -906,10 +916,7 @@ dengan teman Anda</string>
     <string name="referral_step_2_subtitle">Mereka memulai langganan CaloShape AI berbayar menggunakan undangan Anda.</string>
     <string name="referral_step_3_title">Tanpa refund, lalu hadiah</string>
     <string name="referral_step_3_subtitle">Setelah langganan diverifikasi tanpa refund, masa premium Anda diperpanjang.</string>
-    <string name="referral_share_text">Bergabunglah dengan saya di CaloShape AI! Kode referral saya:
-%1$s
-
-%2$s</string>
+    <string name="referral_share_text">Bergabunglah dengan saya di CaloShape AI! Kode referral saya: %1$s\n\n%2$s</string>
     <string name="referral_share_subject">Bergabung dengan saya di CaloShape AI</string>
     <string name="referral_share_chooser_title">Bagikan melalui</string>
     <string name="referral_unable_to_open_share_options">Tidak dapat membuka opsi berbagi.</string>

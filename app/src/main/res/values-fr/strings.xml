@@ -907,7 +907,7 @@
     <string name="referral_step_2_subtitle">Il commence un abonnement payant à CaloShape AI en utilisant votre invitation.</string>
     <string name="referral_step_3_title">Période de remboursement passée, puis récompense</string>
     <string name="referral_step_3_subtitle">Une fois l’abonnement validé et sans demande de remboursement, votre période premium est prolongée.</string>
-    <string name="referral_share_text">Rejoignez-moi sur CaloShape AI ! Mon code de parrainage est :\n%1$s\n\n%2$s</string>
+    <string name="referral_share_text">Rejoignez-moi sur CaloShape AI ! Mon code de parrainage est : %1$s\n\n%2$s</string>
     <string name="referral_share_subject">Rejoignez-moi sur CaloShape AI</string>
     <string name="referral_share_chooser_title">Partager via</string>
     <string name="referral_unable_to_open_share_options">Impossible d’ouvrir les options de partage.</string>

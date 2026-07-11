@@ -902,7 +902,7 @@
     <string name="referral_step_2_subtitle">They start a paid CaloShape AI subscription using your invite.</string>
     <string name="referral_step_3_title">No refund, then reward</string>
     <string name="referral_step_3_subtitle">After the subscription is verified with no refund, your premium period is extended.</string>
-    <string name="referral_share_text">Join me on CaloShape AI! My referral code is:\n%1$s\n\n%2$s</string>
+    <string name="referral_share_text">Join me on CaloShape AI! My referral code is: %1$s\n\n%2$s</string>
     <string name="referral_share_subject">Join me on CaloShape AI</string>
     <string name="referral_share_chooser_title">Share via</string>
     <string name="referral_unable_to_open_share_options">Unable to open share options.</string>

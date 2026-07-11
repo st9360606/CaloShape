@@ -895,7 +895,7 @@
     <string name="referral_step_2_subtitle">Davetini kullanarak ücretli CaloShape AI aboneliği başlatır.</string>
     <string name="referral_step_3_title">İade yoksa ödül gelir</string>
     <string name="referral_step_3_subtitle">Abonelik iadesiz olarak doğrulandıktan sonra premium süren uzatılır.</string>
-    <string name="referral_share_text">CaloShape AI’da bana katıl! Referans kodum:\n%1$s\n\n%2$s</string>
+    <string name="referral_share_text">CaloShape AI’da bana katıl! Referans kodum: %1$s\n\n%2$s</string>
     <string name="referral_share_subject">CaloShape AI’da bana katıl</string>
     <string name="referral_share_chooser_title">Şununla paylaş</string>
     <string name="referral_unable_to_open_share_options">Paylaşım seçenekleri açılamadı.</string>

@@ -900,7 +900,7 @@
     <string name="referral_step_2_subtitle">Họ bắt đầu gói CaloShape AI trả phí bằng lời mời của bạn.</string>
     <string name="referral_step_3_title">Không hoàn tiền, rồi nhận thưởng</string>
     <string name="referral_step_3_subtitle">Sau khi gói đăng ký được xác minh không hoàn tiền, thời gian premium của bạn sẽ được gia hạn.</string>
-    <string name="referral_share_text">Tham gia CaloShape AI cùng tôi! Mã giới thiệu của tôi là:\n%1$s\n\n%2$s</string>
+    <string name="referral_share_text">Tham gia CaloShape AI cùng tôi! Mã giới thiệu của tôi là: %1$s\n\n%2$s</string>
     <string name="referral_share_subject">Tham gia CaloShape AI cùng tôi</string>
     <string name="referral_share_chooser_title">Chia sẻ qua</string>
     <string name="referral_unable_to_open_share_options">Không thể mở tùy chọn chia sẻ.</string>
