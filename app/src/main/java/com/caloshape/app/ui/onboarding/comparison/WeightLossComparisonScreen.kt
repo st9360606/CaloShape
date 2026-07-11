@@ -22,6 +22,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Remove
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
@@ -87,7 +88,7 @@ fun WeightLossComparisonScreen(
                     .padding(start = 36.dp, end = 24.dp),
             )
 
-            Spacer(modifier = Modifier.height(28.dp))
+            Spacer(modifier = Modifier.height(80.dp))
 
             ComparisonCard(
                 modifier = Modifier
@@ -175,14 +176,14 @@ private fun ComparisonFeaturePanel(
     val isDark = CaloShapeOnboardingColors.isDark()
     val shape = RoundedCornerShape(22.dp)
     val surfaceColor = when {
-        highlighted && isDark -> Color(0xFF2D2933)
-        highlighted -> Color(0xFFF3F0F5)
+        highlighted && isDark -> Color(0xFF35323A)
+        highlighted -> Color(0xFFF1F3F7)
         isDark -> Color(0xFF24212D)
         else -> Color.White
     }
     val borderColor = when {
-        highlighted && isDark -> Color(0xFF4A4554)
-        highlighted -> Color(0xFFDED7E2)
+        highlighted && isDark -> Color(0xFF625B69)
+        highlighted -> Color(0xFFDFE3E8)
         isDark -> CaloShapeOnboardingColors.softBorder()
         else -> Color(0xFFE7E3E8)
     }
@@ -252,21 +253,19 @@ private fun ComparisonFeatureItem(
         horizontalArrangement = Arrangement.spacedBy(7.dp),
         verticalAlignment = Alignment.Top,
     ) {
-        if (highlighted) {
-            Box(
-                modifier = Modifier
-                    .size(18.dp)
-                    .clip(CircleShape)
-                    .background(contentColor.copy(alpha = 0.14f)),
-                contentAlignment = Alignment.Center,
-            ) {
-                Icon(
-                    imageVector = Icons.Default.Check,
-                    contentDescription = null,
-                    tint = contentColor,
-                    modifier = Modifier.size(11.dp),
-                )
-            }
+        Box(
+            modifier = Modifier
+                .size(18.dp)
+                .clip(CircleShape)
+                .background(contentColor.copy(alpha = if (highlighted) 0.14f else 0.08f)),
+            contentAlignment = Alignment.Center,
+        ) {
+            Icon(
+                imageVector = if (highlighted) Icons.Default.Check else Icons.Default.Remove,
+                contentDescription = null,
+                tint = contentColor,
+                modifier = Modifier.size(11.dp),
+            )
         }
 
         Text(
