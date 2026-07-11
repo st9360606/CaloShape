@@ -5,29 +5,35 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.caloshape.app.R
@@ -41,7 +47,7 @@ import com.caloshape.app.ui.common.design.CaloShapeScreenFrame
 fun WeightLossComparisonScreen(
     onBack: () -> Unit,
     onNext: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     Scaffold(
         modifier = modifier,
@@ -50,24 +56,24 @@ fun WeightLossComparisonScreen(
             CaloShapeOnboardingTopBar(
                 stepIndex = 9,
                 totalSteps = 12,
-                onBack = onBack
+                onBack = onBack,
             )
         },
         bottomBar = {
             CaloShapeOnboardingBottomBar(
                 primaryText = stringResource(R.string.common_continue_btn),
-                onPrimaryClick = onNext
+                onPrimaryClick = onNext,
             )
         },
-    ) { inner ->
+    ) { innerPadding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(inner),
-            horizontalAlignment = Alignment.Start
+                .padding(innerPadding)
+                .verticalScroll(rememberScrollState()),
+            horizontalAlignment = Alignment.Start,
         ) {
-
-            Spacer(Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(10.dp))
 
             Text(
                 text = stringResource(R.string.onboard_weight_loss_comparison_title),
@@ -75,19 +81,21 @@ fun WeightLossComparisonScreen(
                 fontSize = 32.sp,
                 fontWeight = FontWeight.ExtraBold,
                 lineHeight = 38.sp,
+                textAlign = TextAlign.Start,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(start = 36.dp, end = 24.dp),
-                textAlign = TextAlign.Start
             )
 
-            Spacer(Modifier.height(42.dp))
+            Spacer(modifier = Modifier.height(28.dp))
 
             ComparisonCard(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = CaloShapeScreenFrame.contentHorizontalExtraWide)
+                    .padding(horizontal = CaloShapeScreenFrame.contentHorizontalExtraWide),
             )
+
+            Spacer(modifier = Modifier.height(24.dp))
         }
     }
 }
@@ -97,167 +105,177 @@ private fun ComparisonCard(
     modifier: Modifier = Modifier,
 ) {
     val isDark = CaloShapeOnboardingColors.isDark()
-    val comparisonUnitHeight = 50.dp
-    val pillarHeight = comparisonUnitHeight * 3.2f
-    val cardShape = RoundedCornerShape(28.dp)
-    val cardBorderColor = if (isDark) CaloShapeOnboardingColors.softBorder() else Color.Transparent
-    val cardBrush = if (isDark) {
-        Brush.linearGradient(
-            colors = listOf(
-                CaloShapeOnboardingColors.cardSurface(),
-                Color(0xFF1E1B24),
-                Color(0xFF24212D)
-            )
-        )
-    } else {
-        Brush.linearGradient(
-            colors = listOf(
-                Color(0xFFF4F5F5),
-                Color(0xFFF4F4F4),
-                Color(0xFFFFF4F9)
-            )
-        )
-    }
+    val withoutAiItems = listOf(
+        stringResource(R.string.onboard_weight_loss_without_ai_item_1),
+        stringResource(R.string.onboard_weight_loss_without_ai_item_2),
+        stringResource(R.string.onboard_weight_loss_without_ai_item_3),
+        stringResource(R.string.onboard_weight_loss_without_ai_item_4),
+        stringResource(R.string.onboard_weight_loss_without_ai_item_5),
+    )
+    val withAiItems = listOf(
+        stringResource(R.string.onboard_weight_loss_with_ai_item_1),
+        stringResource(R.string.onboard_weight_loss_with_ai_item_2),
+        stringResource(R.string.onboard_weight_loss_with_ai_item_3),
+        stringResource(R.string.onboard_weight_loss_with_ai_item_4),
+        stringResource(R.string.onboard_weight_loss_with_ai_item_5),
+    )
 
-    Box(
-        modifier = modifier
-            .height(380.dp)
-            .clip(cardShape)
-            .background(cardBrush)
-            .border(width = if (isDark) 1.2.dp else 0.dp, color = cardBorderColor, shape = cardShape)
-            .padding(horizontal = 20.dp, vertical = 28.dp)
+    Column(
+        modifier = modifier,
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Column(
-            modifier = Modifier.fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(IntrinsicSize.Min),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalAlignment = Alignment.Top,
         ) {
-            Row(
+            ComparisonFeaturePanel(
+                title = stringResource(R.string.onboard_weight_loss_comparison_without_ai),
+                items = withoutAiItems,
+                highlighted = false,
                 modifier = Modifier
-                    .widthIn(max = 224.dp)
-                    .fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(32.dp),
-                verticalAlignment = Alignment.Top
-            ) {
-                ComparisonPillar(
-                    title = stringResource(R.string.onboard_weight_loss_comparison_without_ai),
-                    value = stringResource(R.string.onboard_weight_loss_comparison_twenty_percent),
-                    valueContainerColor = if (isDark) Color(0xFF4A4558) else Color(0xFFE1E1E1),
-                    valueTextColor = if (isDark) CaloShapeOnboardingColors.title() else Color(0xFF111114),
-                    pillarHeight = pillarHeight,
-                    bottomBlockHeight = comparisonUnitHeight,
-                    modifier = Modifier.weight(1f)
-                )
+                    .weight(1f)
+                    .fillMaxHeight(),
+            )
 
-                ComparisonPillar(
-                    title = stringResource(R.string.onboard_weight_loss_comparison_with_ai),
-                    value = stringResource(R.string.onboard_weight_loss_comparison_two_times),
-                    valueContainerColor = if (isDark) Color(0xFFF7F5FF) else Color(0xFF1C1822),
-                    valueTextColor = if (isDark) Color(0xFF111114) else Color.White,
-                    pillarHeight = pillarHeight,
-                    bottomBlockHeight = comparisonUnitHeight * 2.3f,
-                    modifier = Modifier.weight(1f)
-                )
-            }
-
-            Spacer(Modifier.height(12.dp))
-
-            Text(
-                text = stringResource(R.string.onboard_weight_loss_comparison_caption),
-                color = if (isDark) CaloShapeOnboardingColors.subtitle() else Color(0xFF57575D),
-                fontSize = 16.sp,
-                fontWeight = FontWeight.Medium,
-                lineHeight = 22.sp,
-                textAlign = TextAlign.Center,
-                maxLines = 3,
-                overflow = TextOverflow.Ellipsis,
+            ComparisonFeaturePanel(
+                title = stringResource(R.string.onboard_weight_loss_comparison_with_ai),
+                items = withAiItems,
+                highlighted = true,
                 modifier = Modifier
-                    .widthIn(max = 300.dp)
-                    .heightIn(min = 66.dp)
-                    .fillMaxWidth()
+                    .weight(1f)
+                    .fillMaxHeight(),
             )
         }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Text(
+            text = stringResource(R.string.onboard_weight_loss_comparison_caption),
+            color = if (isDark) CaloShapeOnboardingColors.subtitle() else Color(0xFF57575D),
+            fontSize = 15.sp,
+            fontWeight = FontWeight.Medium,
+            lineHeight = 21.sp,
+            textAlign = TextAlign.Center,
+            maxLines = 3,
+            modifier = Modifier.widthIn(max = 300.dp),
+        )
     }
 }
 
 @Composable
-private fun ComparisonPillar(
+private fun ComparisonFeaturePanel(
     title: String,
-    value: String,
-    valueContainerColor: Color,
-    valueTextColor: Color,
-    pillarHeight: Dp,
-    bottomBlockHeight: Dp,
+    items: List<String>,
+    highlighted: Boolean,
     modifier: Modifier = Modifier,
 ) {
-    val pillarBg = if (CaloShapeOnboardingColors.isDark()) {
-        Color(0xFF24212D)
-    } else {
-        Color.White
+    val isDark = CaloShapeOnboardingColors.isDark()
+    val shape = RoundedCornerShape(22.dp)
+    val surfaceColor = when {
+        highlighted && isDark -> Color(0xFF2D2933)
+        highlighted -> Color(0xFFF3F0F5)
+        isDark -> Color(0xFF24212D)
+        else -> Color.White
     }
-    val titleColor = CaloShapeOnboardingColors.title()
-    val pillarBorderColor = if (CaloShapeOnboardingColors.isDark()) {
-        CaloShapeOnboardingColors.softBorder()
-    } else {
-        Color.Transparent
+    val borderColor = when {
+        highlighted && isDark -> Color(0xFF4A4554)
+        highlighted -> Color(0xFFDED7E2)
+        isDark -> CaloShapeOnboardingColors.softBorder()
+        else -> Color(0xFFE7E3E8)
     }
+    val titleColor = if (isDark) Color(0xFFF7F5FF) else Color(0xFF1C1822)
+    val itemColor = if (highlighted) titleColor else CaloShapeOnboardingColors.subtitle()
 
     Column(
         modifier = modifier
-            .widthIn(max = 96.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+            .clip(shape)
+            .background(surfaceColor)
+            .border(
+                width = 1.dp,
+                color = borderColor,
+                shape = shape,
+            )
+            .padding(horizontal = 12.dp, vertical = 14.dp),
     ) {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(76.dp),
-            contentAlignment = Alignment.Center
+                .heightIn(min = 48.dp),
+            contentAlignment = Alignment.Center,
         ) {
             Text(
                 text = title,
                 color = titleColor,
                 fontSize = 15.sp,
-                fontWeight = FontWeight.ExtraBold,
+                fontWeight = if (highlighted) FontWeight.ExtraBold else FontWeight.Bold,
                 lineHeight = 20.sp,
                 textAlign = TextAlign.Center,
-                maxLines = 3,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 4.dp)
+                modifier = Modifier.fillMaxWidth(),
             )
         }
-
-        Spacer(Modifier.height(8.dp))
 
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(pillarHeight)
-                .clip(RoundedCornerShape(18.dp))
-                .background(pillarBg)
-                .border(
-                    width = if (CaloShapeOnboardingColors.isDark()) 1.dp else 0.dp,
-                    color = pillarBorderColor,
-                    shape = RoundedCornerShape(18.dp)
-                ),
-            contentAlignment = Alignment.BottomCenter
+                .height(1.dp)
+                .background(borderColor),
+        )
+
+        Spacer(modifier = Modifier.height(12.dp))
+
+        Column(
+            verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(bottomBlockHeight)
-                    .clip(RoundedCornerShape(18.dp))
-                    .background(valueContainerColor),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = value,
-                    color = valueTextColor,
-                    fontSize = 18.sp,
-                    fontWeight = FontWeight.SemiBold,
-                    textAlign = TextAlign.Center
+            items.forEach { item ->
+                ComparisonFeatureItem(
+                    text = item,
+                    highlighted = highlighted,
+                    contentColor = itemColor,
                 )
             }
         }
+    }
+}
+
+@Composable
+private fun ComparisonFeatureItem(
+    text: String,
+    highlighted: Boolean,
+    contentColor: Color,
+    modifier: Modifier = Modifier,
+) {
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(7.dp),
+        verticalAlignment = Alignment.Top,
+    ) {
+        if (highlighted) {
+            Box(
+                modifier = Modifier
+                    .size(18.dp)
+                    .clip(CircleShape)
+                    .background(contentColor.copy(alpha = 0.14f)),
+                contentAlignment = Alignment.Center,
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Check,
+                    contentDescription = null,
+                    tint = contentColor,
+                    modifier = Modifier.size(11.dp),
+                )
+            }
+        }
+
+        Text(
+            text = text,
+            color = contentColor,
+            fontSize = 13.sp,
+            fontWeight = if (highlighted) FontWeight.SemiBold else FontWeight.Medium,
+            lineHeight = 17.sp,
+            modifier = Modifier.weight(1f),
+        )
     }
 }
