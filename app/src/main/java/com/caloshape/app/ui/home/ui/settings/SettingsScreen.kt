@@ -434,6 +434,7 @@ private fun SettingsContent(
     val scope = rememberCoroutineScope()
 
     var showDeleteDialog by remember { mutableStateOf(false) }
+    var showLogoutConfirmDialog by remember { mutableStateOf(false) }
     var showPaymentIssueDialog by remember { mutableStateOf(false) }
     var deleting by remember { mutableStateOf(false) }
 
@@ -446,6 +447,10 @@ private fun SettingsContent(
     val deleteDialogDeleteText = stringResource(R.string.common_delete)
     val deleteDialogDeletingText = stringResource(R.string.common_deleting)
     val deleteDialogCloseText = stringResource(R.string.common_close)
+    val logoutDialogTitle = stringResource(R.string.logout_account_dialog_title)
+    val logoutDialogBody = stringResource(R.string.logout_account_dialog_body)
+    val logoutDialogConfirmText = stringResource(R.string.settings_logout)
+    val logoutDialogLoggingOutText = stringResource(R.string.settings_logout_loading)
 
     val restoreDialogTitle = when (restoreSubscriptionUiState.dialogState) {
         RestoreSubscriptionDialogState.Restored ->
@@ -533,6 +538,26 @@ private fun SettingsContent(
                         deleting = false
                     }
                 }
+            }
+        )
+    }
+
+    key(localeKey) {
+        DeleteAccountDialog(
+            visible = showLogoutConfirmDialog,
+            title = logoutDialogTitle,
+            body = logoutDialogBody,
+            cancelText = deleteDialogCancelText,
+            deleteText = logoutDialogConfirmText,
+            deletingText = logoutDialogLoggingOutText,
+            closeContentDescription = deleteDialogCloseText,
+            deleting = logoutLoading,
+            onDismiss = { if (!logoutLoading) showLogoutConfirmDialog = false },
+            onCancel = { if (!logoutLoading) showLogoutConfirmDialog = false },
+            onDelete = {
+                if (logoutLoading) return@DeleteAccountDialog
+                showLogoutConfirmDialog = false
+                onLogout()
             }
         )
     }
@@ -660,7 +685,7 @@ private fun SettingsContent(
 
         LogoutButton(
             loading = logoutLoading,
-            onLogout = onLogout
+            onLogout = { showLogoutConfirmDialog = true }
         )
 
         if (logoutErrorVisible) {

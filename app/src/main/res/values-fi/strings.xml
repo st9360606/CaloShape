@@ -791,6 +791,8 @@
     <string name="settings_choose_language">Valitse kieli</string>
     <string name="delete_account_dialog_title">Poistetaanko tili?</string>
     <string name="delete_account_dialog_body">Haluatko varmasti poistaa tilisi? Tämä poistaa pysyvästi CaloShape-tietosi, mukaan lukien ruokakirjaukset, painomerkinnät ja niihin liittyvät asetukset. Tätä toimintoa ei voi kumota.</string>
+    <string name="logout_account_dialog_title">Kirjaudutaanko ulos?</string>
+    <string name="logout_account_dialog_body">Haluatko varmasti kirjautua ulos tililtäsi? Voit kirjautua takaisin milloin tahansa.</string>
 
 
     <string name="restore_subscription_dialog_success_title">Tilaus palautettu</string>

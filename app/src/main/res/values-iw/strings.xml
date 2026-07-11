@@ -564,6 +564,8 @@ CaloShape AI</string>
     <string name="settings_choose_language">בחר שפה</string>
     <string name="delete_account_dialog_title">למחוק חשבון?</string>
     <string name="delete_account_dialog_body">האם אתה בטוח שברצונך למחוק את החשבון? פעולה זו תמחק לצמיתות את נתוני CaloShape שלך, כולל יומני אוכל, רשומות משקל והגדרות קשורות. אי אפשר לבטל פעולה זו.</string>
+    <string name="logout_account_dialog_title">להתנתק?</string>
+    <string name="logout_account_dialog_body">האם אתה בטוח שברצונך להתנתק מהחשבון? אפשר להתחבר שוב בכל עת.</string>
     <string name="restore_subscription_dialog_success_title">המנוי שוחזר</string>
     <string name="restore_subscription_dialog_payment_issue_title">המנוי שוחזר, אך בעיית התשלום נמשכת</string>
     <string name="restore_subscription_dialog_no_active_title">לא נמצא מנוי Google Play פעיל</string>

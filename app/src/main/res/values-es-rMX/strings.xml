@@ -788,6 +788,8 @@
     <string name="settings_choose_language">Elegir idioma</string>
     <string name="delete_account_dialog_title">¿Eliminar cuenta?</string>
     <string name="delete_account_dialog_body">¿Seguro que quieres eliminar tu cuenta? Esto eliminará permanentemente tus datos de CaloShape, incluidos registros de comida, registros de peso y ajustes relacionados. Esta acción no se puede deshacer.</string>
+    <string name="logout_account_dialog_title">¿Cerrar sesión?</string>
+    <string name="logout_account_dialog_body">¿Seguro que quieres cerrar sesión en tu cuenta? Puedes volver a iniciar sesión en cualquier momento.</string>
 
 
     <string name="restore_subscription_dialog_success_title">Suscripción restaurada</string>

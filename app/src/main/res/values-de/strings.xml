@@ -794,6 +794,8 @@
     <string name="settings_choose_language">Sprache auswählen</string>
     <string name="delete_account_dialog_title">Konto löschen?</string>
     <string name="delete_account_dialog_body">Möchtest du dein Konto wirklich löschen? Dadurch werden deine CaloShape-Daten dauerhaft gelöscht, einschließlich Essensprotokollen, Gewichtseinträgen und zugehörigen Einstellungen. Diese Aktion kann nicht rückgängig gemacht werden.</string>
+    <string name="logout_account_dialog_title">Abmelden?</string>
+    <string name="logout_account_dialog_body">Möchtest du dich wirklich von deinem Konto abmelden? Du kannst dich jederzeit wieder anmelden.</string>
 
 
     <string name="restore_subscription_dialog_success_title">Abo wiederhergestellt</string>

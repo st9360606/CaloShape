@@ -793,6 +793,8 @@
     <string name="settings_choose_language">Välj språk</string>
     <string name="delete_account_dialog_title">Radera konto?</string>
     <string name="delete_account_dialog_body">Är du säker på att du vill radera ditt konto? Detta raderar dina CaloShape-data permanent, inklusive matloggar, viktposter och relaterade inställningar. Åtgärden kan inte ångras.</string>
+    <string name="logout_account_dialog_title">Logga ut?</string>
+    <string name="logout_account_dialog_body">Är du säker på att du vill logga ut från ditt konto? Du kan logga in igen när som helst.</string>
 
 
     <string name="restore_subscription_dialog_success_title">Prenumeration återställd</string>

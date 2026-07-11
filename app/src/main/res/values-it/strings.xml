@@ -797,6 +797,8 @@ Resta sul piano ogni giorno.</string>
     <string name="settings_choose_language">Scegli lingua</string>
     <string name="delete_account_dialog_title">Eliminare l’account?</string>
     <string name="delete_account_dialog_body">Vuoi davvero eliminare il tuo account? Questa azione eliminerà definitivamente i dati CaloShape, inclusi registri dei pasti, dati del peso e impostazioni correlate. Non può essere annullata.</string>
+    <string name="logout_account_dialog_title">Uscire?</string>
+    <string name="logout_account_dialog_body">Vuoi davvero uscire dal tuo account? Puoi accedere di nuovo in qualsiasi momento.</string>
 
 
     <string name="restore_subscription_dialog_success_title">Abbonamento ripristinato</string>

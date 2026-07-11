@@ -793,6 +793,8 @@
 
     <string name="delete_account_dialog_title">Account verwijderen?</string>
     <string name="delete_account_dialog_body">Weet je zeker dat je je account wilt verwijderen? Hiermee worden je CaloShape-gegevens permanent verwijderd, waaronder voedingslogs, gewichtsgegevens en instellingen. Deze actie kan niet ongedaan worden gemaakt.</string>
+    <string name="logout_account_dialog_title">Uitloggen?</string>
+    <string name="logout_account_dialog_body">Weet je zeker dat je wilt uitloggen van je account? Je kunt op elk moment opnieuw inloggen.</string>
 
 
     <string name="restore_subscription_dialog_success_title">Abonnement hersteld</string>

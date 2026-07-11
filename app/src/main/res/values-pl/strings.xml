@@ -786,6 +786,8 @@
     <string name="settings_choose_language">Wybierz język</string>
     <string name="delete_account_dialog_title">Usunąć konto?</string>
     <string name="delete_account_dialog_body">Czy na pewno chcesz usunąć konto? Spowoduje to trwałe usunięcie danych CaloShape, w tym dzienników jedzenia, rekordów wagi i powiązanych ustawień. Tej akcji nie można cofnąć.</string>
+    <string name="logout_account_dialog_title">Wylogować?</string>
+    <string name="logout_account_dialog_body">Czy na pewno chcesz wylogować się z konta? Możesz zalogować się ponownie w dowolnym momencie.</string>
 
 
     <string name="restore_subscription_dialog_success_title">Subskrypcja przywrócona</string>

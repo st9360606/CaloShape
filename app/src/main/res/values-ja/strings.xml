@@ -796,6 +796,8 @@
     <string name="settings_choose_language">言語を選択</string>
     <string name="delete_account_dialog_title">アカウントを削除しますか？</string>
     <string name="delete_account_dialog_body">本当にアカウントを削除しますか？食事ログ、体重記録、関連設定を含むCaloShapeデータが完全に削除されます。この操作は元に戻せません。</string>
+    <string name="logout_account_dialog_title">ログアウトしますか？</string>
+    <string name="logout_account_dialog_body">アカウントからログアウトしてもよろしいですか？いつでも再度ログインできます。</string>
 
 
     <string name="restore_subscription_dialog_success_title">定期購入を復元しました</string>

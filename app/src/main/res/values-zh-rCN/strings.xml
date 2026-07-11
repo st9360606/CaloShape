@@ -783,6 +783,8 @@
     <string name="settings_choose_language">选择语言</string>
     <string name="delete_account_dialog_title">删除账号？</string>
     <string name="delete_account_dialog_body">您确定要删除账号吗？此操作将永久删除您在 CaloShape 中的资料，包括饮食纪录、体重纪录与相关设定，删除后将无法复原。</string>
+    <string name="logout_account_dialog_title">退出登录？</string>
+    <string name="logout_account_dialog_body">您确定要退出登录吗？之后可以随时再次登录。</string>
 
     <!-- Settings : restore_subscription -->
     <string name="restore_subscription_dialog_success_title">订阅已恢复</string>

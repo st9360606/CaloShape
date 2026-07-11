@@ -786,6 +786,8 @@
     <string name="settings_choose_language">เลือกภาษา</string>
     <string name="delete_account_dialog_title">ลบบัญชี?</string>
     <string name="delete_account_dialog_body">คุณแน่ใจหรือไม่ว่าต้องการลบบัญชี? การดำเนินการนี้จะลบข้อมูล CaloShape ของคุณถาวร รวมถึงบันทึกอาหาร บันทึกน้ำหนัก และการตั้งค่าที่เกี่ยวข้อง การกระทำนี้ไม่สามารถย้อนกลับได้</string>
+    <string name="logout_account_dialog_title">ออกจากระบบ?</string>
+    <string name="logout_account_dialog_body">คุณแน่ใจหรือไม่ว่าต้องการออกจากระบบบัญชีของคุณ? คุณสามารถเข้าสู่ระบบอีกครั้งได้ทุกเมื่อ</string>
 
 
     <string name="restore_subscription_dialog_success_title">กู้คืนการสมัครสมาชิกแล้ว</string>

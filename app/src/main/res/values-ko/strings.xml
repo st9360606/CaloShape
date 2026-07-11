@@ -792,6 +792,8 @@
     <string name="settings_choose_language">언어 선택</string>
     <string name="delete_account_dialog_title">계정을 삭제할까요?</string>
     <string name="delete_account_dialog_body">계정을 삭제하시겠습니까? 음식 기록, 체중 기록 및 관련 설정을 포함한 CaloShape 데이터가 영구적으로 삭제됩니다. 이 작업은 되돌릴 수 없습니다.</string>
+    <string name="logout_account_dialog_title">로그아웃할까요?</string>
+    <string name="logout_account_dialog_body">계정에서 로그아웃하시겠습니까? 언제든지 다시 로그인할 수 있습니다.</string>
 
 
     <string name="restore_subscription_dialog_success_title">구독 복원됨</string>
