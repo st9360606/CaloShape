@@ -451,7 +451,7 @@
     <string name="bmi_info_title">BMI là gì?</string>
     <string name="bmi_info_subtitle">Chỉ số khối cơ thể</string>
     <string name="bmi_info_formula_title">Công thức</string>
-    <string name="bmi_info_formula_value">BMI = cân nặng (kg) / chiều cao (m²)</string>
+    <string name="bmi_info_formula_value">BMI = cân nặng (kg) / [chiều cao (m)]²</string>
     <string name="bmi_info_meaning_title">Ý nghĩa</string>
     <string name="bmi_info_meaning_body">BMI giúp ước tính cân nặng của bạn có nằm trong phạm vi thường được xem là khỏe mạnh hay không.</string>
     <string name="bmi_info_note_title">Lưu ý</string>

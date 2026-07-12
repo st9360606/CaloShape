@@ -456,7 +456,7 @@
     <string name="bmi_info_title">Vad är BMI?</string>
     <string name="bmi_info_subtitle">Kroppsmasseindex</string>
     <string name="bmi_info_formula_title">Formel</string>
-    <string name="bmi_info_formula_value">BMI = vikt (kg) / längd (m²)</string>
+    <string name="bmi_info_formula_value">BMI = vikt (kg) / [längd (m)]²</string>
     <string name="bmi_info_meaning_title">Vad det visar</string>
     <string name="bmi_info_meaning_body">BMI hjälper till att uppskatta om kroppsvikten ligger inom ett generellt hälsosamt intervall.</string>
     <string name="bmi_info_note_title">Kom ihåg</string>

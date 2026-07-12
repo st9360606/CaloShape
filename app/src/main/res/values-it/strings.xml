@@ -456,7 +456,7 @@ Resta sul piano ogni giorno.</string>
     <string name="bmi_info_title">Cos’è il BMI?</string>
     <string name="bmi_info_subtitle">Indice di Massa Corporea</string>
     <string name="bmi_info_formula_title">Formula</string>
-    <string name="bmi_info_formula_value">BMI = peso (kg) / altezza² (m²)</string>
+    <string name="bmi_info_formula_value">BMI = peso (kg) / [altezza (m)]²</string>
     <string name="bmi_info_meaning_title">Cosa indica</string>
     <string name="bmi_info_meaning_body">Il BMI aiuta a stimare se il peso corporeo rientra in un intervallo generalmente sano.</string>
     <string name="bmi_info_note_title">Tieni presente</string>

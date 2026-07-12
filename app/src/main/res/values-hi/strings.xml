@@ -451,7 +451,7 @@
     <string name="bmi_info_title">BMI क्या है?</string>
     <string name="bmi_info_subtitle">बॉडी मास इंडेक्स</string>
     <string name="bmi_info_formula_title">फ़ॉर्मूला</string>
-    <string name="bmi_info_formula_value">BMI = वजन (kg) / लंबाई (m²)</string>
+    <string name="bmi_info_formula_value">BMI = वजन (kg) / [लंबाई (m)]²</string>
     <string name="bmi_info_meaning_title">यह क्या बताता है</string>
     <string name="bmi_info_meaning_body">BMI यह अनुमान लगाने में मदद करता है कि आपका शरीर वजन सामान्यतः स्वस्थ सीमा में है या नहीं।</string>
     <string name="bmi_info_note_title">ध्यान रखें</string>

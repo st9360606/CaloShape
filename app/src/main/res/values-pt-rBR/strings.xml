@@ -456,7 +456,7 @@
     <string name="bmi_info_title">O que é IMC?</string>
     <string name="bmi_info_subtitle">Índice de Massa Corporal</string>
     <string name="bmi_info_formula_title">Fórmula</string>
-    <string name="bmi_info_formula_value">IMC = peso (kg) / altura (m²)</string>
+    <string name="bmi_info_formula_value">IMC = peso (kg) / [altura (m)]²</string>
     <string name="bmi_info_meaning_title">O que ele indica</string>
     <string name="bmi_info_meaning_body">O IMC ajuda a estimar se seu peso corporal está em uma faixa geralmente saudável.</string>
     <string name="bmi_info_note_title">Lembre-se</string>

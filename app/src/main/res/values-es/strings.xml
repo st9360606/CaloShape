@@ -454,7 +454,7 @@
     <string name="bmi_info_title">¿Qué es BMI?</string>
     <string name="bmi_info_subtitle">Índice de masa corporal</string>
     <string name="bmi_info_formula_title">Fórmula</string>
-    <string name="bmi_info_formula_value">BMI = peso (kg) / altura (m²)</string>
+    <string name="bmi_info_formula_value">BMI = peso (kg) / [altura (m)]²</string>
     <string name="bmi_info_meaning_title">Qué te indica</string>
     <string name="bmi_info_meaning_body">BMI ayuda a estimar si tu peso corporal está dentro de un rango generalmente saludable.</string>
     <string name="bmi_info_note_title">Ten en cuenta</string>

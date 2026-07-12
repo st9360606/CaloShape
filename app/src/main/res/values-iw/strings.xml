@@ -312,7 +312,7 @@
     <string name="bmi_info_title">מהו BMI?</string>
     <string name="bmi_info_subtitle">מדד מסת גוף</string>
     <string name="bmi_info_formula_title">נוסחה</string>
-    <string name="bmi_info_formula_value">BMI = משקל (kg) / גובה (m²)</string>
+    <string name="bmi_info_formula_value">BMI = משקל (kg) / [גובה (m)]²</string>
     <string name="bmi_info_meaning_title">מה זה אומר לך</string>
     <string name="bmi_info_meaning_body">BMI עוזר להעריך אם משקל הגוף שלך נמצא בטווח בריא באופן כללי.</string>
     <string name="bmi_info_note_title">חשוב לזכור</string>

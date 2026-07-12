@@ -449,7 +449,7 @@
     <string name="bmi_info_title">Czym jest BMI?</string>
     <string name="bmi_info_subtitle">Wskaźnik masy ciała</string>
     <string name="bmi_info_formula_title">Wzór</string>
-    <string name="bmi_info_formula_value">BMI = waga (kg) / wzrost (m²)</string>
+    <string name="bmi_info_formula_value">BMI = waga (kg) / [wzrost (m)]²</string>
     <string name="bmi_info_meaning_title">Co oznacza</string>
     <string name="bmi_info_meaning_body">BMI pomaga oszacować, czy masa ciała mieści się ogólnie w zdrowym zakresie.</string>
     <string name="bmi_info_note_title">Pamiętaj</string>

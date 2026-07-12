@@ -449,7 +449,7 @@
     <string name="bmi_info_title">BMI คืออะไร?</string>
     <string name="bmi_info_subtitle">ดัชนีมวลกาย</string>
     <string name="bmi_info_formula_title">สูตร</string>
-    <string name="bmi_info_formula_value">BMI = น้ำหนัก (kg) / ส่วนสูง (m²)</string>
+    <string name="bmi_info_formula_value">BMI = น้ำหนัก (kg) / [ส่วนสูง (m)]²</string>
     <string name="bmi_info_meaning_title">สิ่งที่บอกคุณ</string>
     <string name="bmi_info_meaning_body">BMI ช่วยประเมินว่าน้ำหนักของคุณอยู่ในช่วงที่ถือว่าเหมาะสมโดยทั่วไปหรือไม่</string>
     <string name="bmi_info_note_title">โปรดทราบ</string>

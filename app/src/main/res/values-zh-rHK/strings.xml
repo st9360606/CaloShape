@@ -452,7 +452,7 @@
     <string name="bmi_info_title">什麼是 BMI？</string>
     <string name="bmi_info_subtitle">身體質量指數</string>
     <string name="bmi_info_formula_title">計算公式</string>
-    <string name="bmi_info_formula_value">BMI = 體重（公斤）/ 身高（公尺）的平方</string>
+    <string name="bmi_info_formula_value">BMI = 體重（公斤）/ [身高（公尺）]²</string>
     <string name="bmi_info_meaning_title">它代表什麼</string>
     <string name="bmi_info_meaning_body">BMI 可用來大致判斷你的體重是否落在相對健康的範圍內。</string>
     <string name="bmi_info_note_title">請注意</string>

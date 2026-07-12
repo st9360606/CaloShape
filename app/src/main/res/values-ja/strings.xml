@@ -455,7 +455,7 @@
     <string name="bmi_info_title">BMIとは？</string>
     <string name="bmi_info_subtitle">体格指数</string>
     <string name="bmi_info_formula_title">計算式</string>
-    <string name="bmi_info_formula_value">BMI = 体重 (kg) / 身長 (m²)</string>
+    <string name="bmi_info_formula_value">BMI = 体重 (kg) / [身長 (m)]²</string>
     <string name="bmi_info_meaning_title">何がわかるか</string>
     <string name="bmi_info_meaning_body">BMIは、体重が一般的に健康的な範囲にあるかを推定するのに役立ちます。</string>
     <string name="bmi_info_note_title">注意点</string>

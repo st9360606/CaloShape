@@ -451,7 +451,7 @@
     <string name="bmi_info_title">BMI란 무엇인가요?</string>
     <string name="bmi_info_subtitle">체질량지수</string>
     <string name="bmi_info_formula_title">공식</string>
-    <string name="bmi_info_formula_value">BMI = 체중 (kg) / 키 (m²)</string>
+    <string name="bmi_info_formula_value">BMI = 체중 (kg) / [키 (m)]²</string>
     <string name="bmi_info_meaning_title">무엇을 알려주나요</string>
     <string name="bmi_info_meaning_body">BMI는 체중이 일반적으로 건강한 범위에 있는지 추정하는 데 도움이 됩니다.</string>
     <string name="bmi_info_note_title">기억해 주세요</string>

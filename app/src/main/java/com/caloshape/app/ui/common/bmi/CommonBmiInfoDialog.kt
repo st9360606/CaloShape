@@ -167,7 +167,7 @@ fun CommonBmiInfoDialog(
                             Text(
                                 text = model.formulaValue,
                                 color = primaryText,
-                                fontSize = 18.sp,
+                                fontSize = 16.sp,
                                 fontWeight = FontWeight.Bold,
                                 textAlign = TextAlign.Center,
                                 modifier = Modifier.fillMaxWidth()

@@ -454,7 +454,7 @@
     <string name="bmi_info_title">Mikä on BMI?</string>
     <string name="bmi_info_subtitle">Painoindeksi</string>
     <string name="bmi_info_formula_title">Kaava</string>
-    <string name="bmi_info_formula_value">BMI = paino (kg) / pituus (m²)</string>
+    <string name="bmi_info_formula_value">BMI = paino (kg) / [pituus (m)]²</string>
     <string name="bmi_info_meaning_title">Mitä se kertoo</string>
     <string name="bmi_info_meaning_body">BMI auttaa arvioimaan, onko painosi yleisesti terveellisellä alueella.</string>
     <string name="bmi_info_note_title">Muista</string>

@@ -126,6 +126,8 @@
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">Kaç yaşındasın?</string>
     <string name="onboard_age_subtitle">Yaşınızı yalnızca deneyiminizi ve kalori tahmini doğruluğunu iyileştirmek için kullanırız.</string>
+
+
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">Boyun kaç?</string>
     <string name="onboard_height_subtitle">Verilerinizi yalnızca deneyiminizi ve kalori tahminlerimizi iyileştirmek için kullanırız.</string>
@@ -190,14 +192,16 @@
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
-    <string name="onboard_notif_title">Her öğün değerli olsun!</string>
-    <string name="onboard_notif_subtitle">Yemekleri kaydetmeniz için nazik hatırlatmalar almak üzere bildirimleri etkinleştirin; böylece kalorileriniz, makrolarınız ve ilerlemeniz yolunda kalır. Aksamalar olabilir; zamanında gelen uyarılar hızlıca toparlanmanıza yardımcı olur.</string>
+    <string name="onboard_notif_title">Hatırlatmaları kaçırma!</string>
+    <string name="onboard_notif_subtitle">Nazik hatırlatmalarla öğünlerini kaydet, kalorilerini, makrolarını ve ilerlemeni yolunda tut. Kaçırırsan, hızlıca geri dön.</string>
     <string name="onboard_allow_notifications_cta">Bildirimlere izin ver</string>
     <string name="notification_mock_app_title">AI Kalori Sayacı</string>
-    <string name="onboard_notif_title_got_a_sec">Öğünün kendini kaydetmeyecek 😉</string>
+    <string name="onboard_notif_title_got_a_sec">Öğünün kaydolmaz 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Kalori ve makrolarınızı yolunda tutmak için bu öğünü kaydedin.</string>
+
+
     <!-- Onboarding: HealthConnectIntroScreen -->
-    <string name="onboard_hc_connect_title_prefix">Bağlan:</string>
+    <string name="onboard_hc_connect_title_prefix">Bağlan</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
     <string name="onboard_hc_connect_body">Daha eksiksiz kayıtlar ve içgörüler için CaloShape AI ile sağlık uygulamaları arasında günlük aktiviteyi senkronize et.</string>
     <string name="onboard_hc_permission_rationale_title_prefix">CaloShape neden kullanır:</string>
@@ -227,11 +231,11 @@
     <string name="plan_cta_start">Hadi başlayalım</string>
     <string name="plan_title_congrats">Tebrikler!</string>
     <string name="plan_subtitle_ready">Kişisel sağlık planın hazır!</string>
-    <string name="plan_disclaimer">Kaynaklar aşağıda: tüm referansları gör ›</string>
+    <string name="plan_disclaimer">Kaynaklar aşağıda: Tüm referansları gör ›</string>
     <string name="plan_unit_kcal_day">kcal / gün</string>
 
     <string name="plan_macros_proteins">Protein</string>
-    <string name="plan_macros_carbs">Karbonhidrat</string>
+    <string name="plan_macros_carbs">Karb.</string>
     <string name="plan_macros_fat">Yağ</string>
     <string name="plan_unit_g">g</string>
 
@@ -240,8 +244,8 @@
     <string name="plan_weight_delta">Hedef kiloya</string>
 
     <string name="plan_goals_title">Hedeflerine\nnasıl ulaşırsın</string>
-    <string name="plan_goal_card_health_scores">Sağlık puanları sana rehberlik eder, alışkanlıklar doğalca oluşur</string>
-    <string name="plan_goal_card_track_meals">Öğünleri tek dokunuşla kaydet, düzenli kalmak kolaylaşır</string>
+    <string name="plan_goal_card_health_scores">Sağlık puanları daha iyi alışkanlıklara rehberlik eder</string>
+    <string name="plan_goal_card_track_meals">Öğünlerini tek dokunuşla kaydet, düzenli kal</string>
     <string name="plan_goal_card_daily_calories">Günlük kalorileri net görün ve takibi asla kaybetmeyin</string>
     <string name="plan_goal_card_balance_macros">Karbonhidrat × protein × yağ, akıllı denge, daha iyi sonuçlar</string>
     <string name="plan_sources_based_on">Resmi beslenme kılavuzlarına dayanır,\nyalnızca referans içindir; tıbbi tavsiye değildir.</string>
@@ -347,22 +351,29 @@
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">Kalan kalori</string>
-    <string name="home_calories_eaten_label">Alınan kalori</string>
+    <string name="home_calories_goal_label">Kalori</string>
+    <string name="home_calories_eaten_label">Kalori</string>
+
+
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
-    <string name="home_protein_goal_label">Kalan protein</string>
-    <string name="home_protein_eaten_label">Alınan protein</string>
-    <string name="home_carbs_goal_label">Kalan karbonhidrat</string>
-    <string name="home_carbs_eaten_label">Alınan karbonhidrat</string>
-    <string name="home_fats_goal_label">Kalan yağ</string>
-    <string name="home_fats_eaten_label">Alınan yağ</string>
-    <string name="home_fiber_goal_label">Kalan lif</string>
-    <string name="home_fiber_eaten_label">Alınan lif</string>
-    <string name="home_sugar_goal_label">Kalan şeker</string>
-    <string name="home_sugar_eaten_label">Alınan şeker</string>
-    <string name="home_sodium_goal_label">Kalan sodyum</string>
-    <string name="home_sodium_eaten_label">Alınan sodyum</string>
+    <string name="home_protein_goal_label">Protein</string>
+    <string name="home_protein_eaten_label">Protein</string>
+
+    <string name="home_carbs_goal_label">Karb.</string>
+    <string name="home_carbs_eaten_label">Karb.</string>
+
+    <string name="home_fats_goal_label">Yağ</string>
+    <string name="home_fats_eaten_label">Yağ</string>
+
+    <string name="home_fiber_goal_label">Lif</string>
+    <string name="home_fiber_eaten_label">Lif</string>
+
+    <string name="home_sugar_goal_label">Şeker</string>
+    <string name="home_sugar_eaten_label">Şeker</string>
+
+    <string name="home_sodium_goal_label">Sodyum</string>
+    <string name="home_sodium_eaten_label">Sodyum</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
@@ -428,26 +439,27 @@
     <!-- =========================
          BMI Card / BMI Info Dialog
          ========================= -->
-    <string name="bmi_card_title">BMI değerin</string>
-    <string name="bmi_card_subtitle">Kilon</string>
 
-    <string name="bmi_status_underweight">Düşük kilo</string>
-    <string name="bmi_status_healthy">Sağlıklı</string>
+    <string name="bmi_card_title">BMI değerin</string>
+    <string name="bmi_card_subtitle">Kilo durumun</string>
+
+    <string name="bmi_status_underweight">Zayıf</string>
+    <string name="bmi_status_healthy">Normal</string>
     <string name="bmi_status_overweight">Fazla kilolu</string>
     <string name="bmi_status_obese">Obez</string>
     <string name="bmi_status_unknown">Bilinmiyor</string>
 
-    <string name="bmi_range_underweight">&lt;18.5</string>
-    <string name="bmi_range_healthy">18.5–24.9</string>
-    <string name="bmi_range_overweight">25.0–29.9</string>
-    <string name="bmi_range_obese">&gt;30.0</string>
+    <string name="bmi_range_underweight">&lt;18,5</string>
+    <string name="bmi_range_healthy">18,5–24,9</string>
+    <string name="bmi_range_overweight">25,0–29,9</string>
+    <string name="bmi_range_obese">≥30,0</string>
 
     <string name="bmi_info_title">BMI nedir?</string>
     <string name="bmi_info_subtitle">Vücut Kitle İndeksi</string>
     <string name="bmi_info_formula_title">Formül</string>
-    <string name="bmi_info_formula_value">BMI = kilo (kg) / boy (m²)</string>
+    <string name="bmi_info_formula_value">BMI = ağırlık (kg) / [boy (m)]²</string>
     <string name="bmi_info_meaning_title">Ne anlatır?</string>
-    <string name="bmi_info_meaning_body">BMI, vücut ağırlığının genel olarak sağlıklı aralıkta olup olmadığını tahmin etmeye yardımcı olur.</string>
+    <string name="bmi_info_meaning_body">BMI, vücut ağırlığının genel olarak sağlıklı bir aralıkta olup olmadığını değerlendirmeye yardımcı olur.</string>
     <string name="bmi_info_note_title">Aklında bulunsun</string>
     <string name="bmi_info_note_body">BMI genel bir göstergedir. Vücut yağını, kas kütlesini veya genel sağlığı doğrudan ölçmez.</string>
     <string name="bmi_info_cta">Anladım</string>
@@ -465,7 +477,7 @@
     <string name="progress_chart_total_calories">Toplam kalori</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Protein</string>
-    <string name="progress_legend_carbs">Karbonhidrat</string>
+    <string name="progress_legend_carbs">Karb.</string>
     <string name="progress_legend_fats">Yağ</string>
     <string name="progress_keep_it_up">Devam et! Başlamak en zor kısımdır!</string>
 
@@ -479,7 +491,7 @@
 
     <string name="progress_tooltip_calories">Kalori</string>
     <string name="progress_tooltip_protein">Protein</string>
-    <string name="progress_tooltip_carbs">Karbonhidrat</string>
+    <string name="progress_tooltip_carbs">Karb.</string>
     <string name="progress_tooltip_fats">Yağ</string>
     <string name="progress_tooltip_label_format">%1$s:</string>
     <string name="progress_tooltip_grams_value">%1$d g</string>
@@ -551,7 +563,7 @@
     <string name="progress_average_loading">Ortalamalar yükleniyor…</string>
     <string name="progress_average_total_calories">Toplam kalori</string>
     <string name="progress_average_protein">Protein</string>
-    <string name="progress_average_carbs">Karbonhidrat</string>
+    <string name="progress_average_carbs">Karb.</string>
     <string name="progress_average_fats">Yağ</string>
     <string name="progress_average_fiber">Lif</string>
     <string name="progress_average_sugar">Şeker</string>
@@ -582,7 +594,7 @@
     <string name="weight_chart_tab_30_days">30 gün</string>
     <string name="weight_chart_tab_60_days">60 gün</string>
     <string name="weight_chart_tab_90_days">90 gün</string>
-    <string name="weight_chart_tab_all_time">Tüm zamanlar</string>
+    <string name="weight_chart_tab_all_time">Tümü</string>
     <string name="weight_chart_title">Kilo eğilimi</string>
     <string name="weight_chart_goal_progress_badge">Hedefin %1$s%%</string>
     <string name="weight_chart_goal_label">Hedef</string>
@@ -726,7 +738,7 @@
 
 
     <!-- HomeQuickActionMenu -->
-    <string name="quick_add_saved_foods">Kaydedilen yiyecekler</string>
+    <string name="quick_add_saved_foods">Kayıtlı öğünler</string>
     <string name="quick_add_scan_food">Yiyecek tara</string>
 
 
@@ -759,7 +771,7 @@
     <string name="saved_foods_unsave_dialog_title">Kaydedilen yiyeceklerden kaldırılsın mı?</string>
     <string name="saved_foods_unsave_dialog_message">Bu öğün Kaydedilen Yiyecekler listesinden kaldırılır, ancak son kayıtlarında kalır.</string>
     <string name="saved_foods_unsave_dialog_confirm">Kaldır</string>
-    <string name="saved_foods_title">Kaydedilen yiyecekler</string>
+    <string name="saved_foods_title">Kayıtlı besinler</string>
     <string name="saved_foods_kcal">🔥 %1$d kcal</string>
     <string name="saved_foods_protein">🥩 %1$dg</string>
     <string name="saved_foods_carbs">🌾 %1$dg</string>
@@ -776,7 +788,7 @@
     <string name="foodlog_detail_title">Beslenme</string>
     <string name="foodlog_detail_calories">Kalori</string>
     <string name="foodlog_detail_protein">Protein</string>
-    <string name="foodlog_detail_carbs">Karbonhidrat</string>
+    <string name="foodlog_detail_carbs">Karb.</string>
     <string name="foodlog_detail_fats">Yağ</string>
     <string name="foodlog_detail_fiber">Lif</string>
     <string name="foodlog_detail_sugar">Şeker</string>

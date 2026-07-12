@@ -457,7 +457,7 @@
     <string name="bmi_info_title">Was ist der BMI?</string>
     <string name="bmi_info_subtitle">Body-Mass-Index</string>
     <string name="bmi_info_formula_title">Formel</string>
-    <string name="bmi_info_formula_value">BMI = Gewicht (kg) / Körpergröße (m²)</string>
+    <string name="bmi_info_formula_value">BMI = Gewicht (kg) / [Körpergröße (m)]²</string>
     <string name="bmi_info_meaning_title">Was der BMI zeigt</string>
     <string name="bmi_info_meaning_body">Der BMI hilft einzuschätzen, ob dein Körpergewicht in einem allgemeinen gesunden Bereich liegt.</string>
     <string name="bmi_info_note_title">Bitte beachten</string>

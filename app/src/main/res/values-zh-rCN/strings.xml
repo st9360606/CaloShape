@@ -448,7 +448,7 @@
     <string name="bmi_info_title">什么是 BMI？</string>
     <string name="bmi_info_subtitle">身体质量指数</string>
     <string name="bmi_info_formula_title">计算公式</string>
-    <string name="bmi_info_formula_value">BMI = 体重（公斤）/ 身高（米）的平方</string>
+    <string name="bmi_info_formula_value">BMI = 体重（公斤）/ [身高（米）]²</string>
     <string name="bmi_info_meaning_title">它代表什么</string>
     <string name="bmi_info_meaning_body">BMI 可用来大致判断你的体重是否落在相对健康的范围内。</string>
     <string name="bmi_info_note_title">请注意</string>

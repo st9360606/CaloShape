@@ -465,7 +465,7 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="bmi_info_title">Apa itu BMI?</string>
     <string name="bmi_info_subtitle">Indeks Massa Tubuh</string>
     <string name="bmi_info_formula_title">Rumus</string>
-    <string name="bmi_info_formula_value">BMI = berat (kg) / tinggi (m²)</string>
+    <string name="bmi_info_formula_value">BMI = berat (kg) / [tinggi (m)]²</string>
     <string name="bmi_info_meaning_title">Apa artinya</string>
     <string name="bmi_info_meaning_body">BMI membantu memperkirakan apakah berat badan Anda berada dalam rentang yang umumnya sehat.</string>
     <string name="bmi_info_note_title">Perlu diingat</string>

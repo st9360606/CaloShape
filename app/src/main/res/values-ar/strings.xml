@@ -445,7 +445,7 @@
     <string name="bmi_info_title">ما هو BMI؟</string>
     <string name="bmi_info_subtitle">مؤشر كتلة الجسم</string>
     <string name="bmi_info_formula_title">المعادلة</string>
-    <string name="bmi_info_formula_value">BMI = الوزن (kg) / الطول (m²)</string>
+    <string name="bmi_info_formula_value">BMI = الوزن (kg) / [الطول (m)]²</string>
     <string name="bmi_info_meaning_title">ماذا يخبرك؟</string>
     <string name="bmi_info_meaning_body">يساعد BMI على تقدير ما إذا كان وزن جسمك ضمن نطاق صحي عام.</string>
     <string name="bmi_info_note_title">تذكّر</string>

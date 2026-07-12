@@ -450,7 +450,7 @@
     <string name="bmi_info_title">What is BMI?</string>
     <string name="bmi_info_subtitle">Body Mass Index</string>
     <string name="bmi_info_formula_title">Formula</string>
-    <string name="bmi_info_formula_value">BMI = weight (kg) / height (m²)</string>
+    <string name="bmi_info_formula_value">BMI = weight (kg) / [height (m)]²</string>
     <string name="bmi_info_meaning_title">What it tells you</string>
     <string name="bmi_info_meaning_body">BMI helps estimate whether your body weight is in a generally healthy range.</string>
     <string name="bmi_info_note_title">Keep in mind</string>

@@ -456,7 +456,7 @@
     <string name="bmi_info_title">Wat is BMI?</string>
     <string name="bmi_info_subtitle">Body Mass Index</string>
     <string name="bmi_info_formula_title">Formule</string>
-    <string name="bmi_info_formula_value">BMI = gewicht (kg) / lengte (m²)</string>
+    <string name="bmi_info_formula_value">BMI = gewicht (kg) / [lengte (m)]²</string>
     <string name="bmi_info_meaning_title">Wat dit betekent</string>
     <string name="bmi_info_meaning_body">BMI helpt inschatten of je gewicht binnen een gezond bereik ligt.</string>
     <string name="bmi_info_note_title">Onthoud</string>
