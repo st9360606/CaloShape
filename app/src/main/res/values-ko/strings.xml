@@ -169,7 +169,7 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">매일의 기록은 더 간편하게, 목표 달성은 더 스마트하게</string>
+    <string name="onboard_weight_loss_comparison_title">목표를 향한 매일을 더 쉽고 간편하게, 꾸준히 이어가세요. 매일의 기록을 목표를 향한 한 걸음으로</string>
     <string name="onboard_weight_loss_comparison_without_ai">CaloShape AI\n없이</string>
     <string name="onboard_weight_loss_comparison_with_ai">CaloShape AI와\n함께</string>
     <string name="onboard_weight_loss_comparison_caption">식사를 기록하고, 칼로리 추정치를 확인하고, 한곳에서 진행 상황을 추적하세요.</string>

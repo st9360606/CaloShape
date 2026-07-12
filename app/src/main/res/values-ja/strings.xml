@@ -171,7 +171,7 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">毎日の記録をもっと簡単に、目標達成をもっとスマートに</string>
+    <string name="onboard_weight_loss_comparison_title">目標達成までの毎日を、もっとシンプルに、続けやすく。理想の自分へ一歩ずつ</string>
     <string name="onboard_weight_loss_comparison_without_ai">CaloShape AI\nなし</string>
     <string name="onboard_weight_loss_comparison_with_ai">CaloShape AI\nあり</string>
     <string name="onboard_weight_loss_comparison_caption">食事を記録し、カロリー推定値を確認して、進捗を一か所で追跡できます。</string>

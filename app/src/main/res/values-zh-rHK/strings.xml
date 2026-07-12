@@ -172,7 +172,7 @@
 
 
     <!-- Onboarding: WeightLossComparisonScreen -->
-    <string name="onboard_weight_loss_comparison_title">讓日常記錄更簡單，輕鬆追蹤進度，更聰明地達成目標</string>
+    <string name="onboard_weight_loss_comparison_title">讓朝向目標的每一天，都變得更簡單，也更容易堅持，讓每一次記錄都成為前進的一步</string>
     <string name="onboard_weight_loss_comparison_without_ai">沒有\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_with_ai">使用\nCaloShape AI</string>
     <string name="onboard_weight_loss_comparison_caption">記錄餐點、查看卡路里估算，並在同一處追蹤進度。</string>
