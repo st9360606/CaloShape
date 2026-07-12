@@ -350,23 +350,28 @@
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">แคลอรีที่เหลือ</string>
-    <string name="home_calories_eaten_label">แคลอรีที่กินแล้ว</string>
+    <string name="home_calories_eaten_label">แคลอรีที่กินไป</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">โปรตีนที่เหลือ</string>
-    <string name="home_protein_eaten_label">โปรตีนที่กินแล้ว</string>
+    <string name="home_protein_eaten_label">โปรตีนที่กินไป</string>
+
     <string name="home_carbs_goal_label">คาร์บที่เหลือ</string>
-    <string name="home_carbs_eaten_label">คาร์บที่กินแล้ว</string>
+    <string name="home_carbs_eaten_label">คาร์บที่กินไป</string>
+
     <string name="home_fats_goal_label">ไขมันที่เหลือ</string>
-    <string name="home_fats_eaten_label">ไขมันที่กินแล้ว</string>
+    <string name="home_fats_eaten_label">ไขมันที่กินไป</string>
+
     <string name="home_fiber_goal_label">ไฟเบอร์ที่เหลือ</string>
-    <string name="home_fiber_eaten_label">ไฟเบอร์ที่กินแล้ว</string>
+    <string name="home_fiber_eaten_label">ไฟเบอร์ที่กินไป</string>
+
     <string name="home_sugar_goal_label">น้ำตาลที่เหลือ</string>
-    <string name="home_sugar_eaten_label">น้ำตาลที่กินแล้ว</string>
+    <string name="home_sugar_eaten_label">น้ำตาลที่กินไป</string>
+
     <string name="home_sodium_goal_label">โซเดียมที่เหลือ</string>
-    <string name="home_sodium_eaten_label">โซเดียมที่กินแล้ว</string>
+    <string name="home_sodium_eaten_label">โซเดียมที่กินไป</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
@@ -444,7 +449,7 @@
     <string name="bmi_range_underweight">&lt;18.5</string>
     <string name="bmi_range_healthy">18.5–24.9</string>
     <string name="bmi_range_overweight">25.0–29.9</string>
-    <string name="bmi_range_obese">&gt;30.0</string>
+    <string name="bmi_range_obese">≥30.0</string>
 
     <string name="bmi_info_title">BMI คืออะไร?</string>
     <string name="bmi_info_subtitle">ดัชนีมวลกาย</string>

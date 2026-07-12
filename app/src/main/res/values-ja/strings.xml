@@ -450,7 +450,7 @@
     <string name="bmi_range_underweight">&lt;18.5</string>
     <string name="bmi_range_healthy">18.5–24.9</string>
     <string name="bmi_range_overweight">25.0–29.9</string>
-    <string name="bmi_range_obese">&gt;30.0</string>
+    <string name="bmi_range_obese">≥30.0</string>
 
     <string name="bmi_info_title">BMIとは？</string>
     <string name="bmi_info_subtitle">体格指数</string>
