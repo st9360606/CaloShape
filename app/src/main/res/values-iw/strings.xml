@@ -126,7 +126,7 @@
     <string name="onboard_notif_subtitle">הפעל התראות לתזכורות עדינות לרישום ארוחות, כדי שהקלוריות, המאקרו וההתקדמות שלך יישארו במסלול. נפילות קטנות קורות; תזכורות בזמן עוזרות לך לחזור מהר.</string>
     <string name="onboard_allow_notifications_cta">אפשר התראות</string>
     <string name="notification_mock_app_title">מונה קלוריות AI</string>
-    <string name="onboard_notif_title_got_a_sec">הארוחה שלך לא תירשם מעצמה 😉</string>
+    <string name="onboard_notif_title_got_a_sec">הארוחה לא תירשם מעצמה 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">רשום את הארוחה הזו כדי לשמור על הקלוריות והמאקרו במסלול.</string>
     <string name="onboard_hc_connect_title_prefix">התחבר אל</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
@@ -292,9 +292,9 @@
     <string name="water_intake_cups_format">(%1$d כוסות)</string>
     <string name="progress_screen_title">התקדמות</string>
     <string name="progress_tab_this_week">השבוע</string>
-    <string name="progress_tab_last_week">השבוע שעבר</string>
-    <string name="progress_tab_two_weeks_ago">לפני 2 שבועות</string>
-    <string name="progress_tab_three_weeks_ago">לפני 3 שבועות</string>
+    <string name="progress_tab_last_week">שעבר</string>
+    <string name="progress_tab_two_weeks_ago">לפני 2 שב׳</string>
+    <string name="progress_tab_three_weeks_ago">לפני 3 שב׳</string>
     <string name="progress_error_load_failed">הטעינה נכשלה</string>
     <string name="activity_chart_error_load_failed">טעינת תרשים הפעילות נכשלה</string>
     <string name="water_chart_error_load_failed">טעינת תרשים המים נכשלה</string>

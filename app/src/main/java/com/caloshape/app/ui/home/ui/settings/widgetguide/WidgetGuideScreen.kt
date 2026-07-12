@@ -1,6 +1,7 @@
 package com.caloshape.app.ui.home.ui.settings.widgetguide
 
 import androidx.annotation.StringRes
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -39,6 +40,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -205,16 +208,15 @@ private fun WidgetGuidePhoneMock() {
                             modifier = Modifier
                                 .size(24.dp)
                                 .clip(CircleShape)
-                                .background(Color(0xFF111114)),
+                                .background(Color.White)
+                                .border(1.dp, Color(0xFFD1D5DB), CircleShape),
                             contentAlignment = Alignment.Center
                         ) {
-                            Text(
-                                text = "B",
-                                style = MaterialTheme.typography.labelSmall.copy(
-                                    color = Color.White,
-                                    fontWeight = FontWeight.Black,
-                                    fontSize = 11.sp
-                                )
+                            Image(
+                                painter = painterResource(R.drawable.ic_focus_spoon_foreground),
+                                contentDescription = null,
+                                modifier = Modifier.size(38.dp),
+                                contentScale = ContentScale.Fit
                             )
                         }
                         Spacer(Modifier.width(8.dp))
