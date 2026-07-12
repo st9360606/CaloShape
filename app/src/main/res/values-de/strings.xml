@@ -753,7 +753,7 @@
 
 
     <!-- RecentUploadCard -->
-    <string name="foodlog_pending_analysis">Dein Essen wird analysiert…</string>
+    <string name="foodlog_pending_analysis">Essen wird analysiert…</string>
     <string name="foodlog_analysis_done">Analyse abgeschlossen</string>
     <string name="recent_upload_kcal_text">🔥 %1$d kcal</string>
     <string name="recent_upload_protein_text">🥩 %1$dg</string>

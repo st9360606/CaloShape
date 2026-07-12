@@ -745,7 +745,7 @@
 
 
     <!-- RecentUploadCard -->
-    <string name="foodlog_pending_analysis">กำลังวิเคราะห์อาหารของคุณ…</string>
+    <string name="foodlog_pending_analysis">กำลังวิเคราะห์อาหาร…</string>
     <string name="foodlog_analysis_done">วิเคราะห์เสร็จแล้ว</string>
     <string name="recent_upload_kcal_text">🔥 %1$d kcal</string>
     <string name="recent_upload_protein_text">🥩 %1$dg</string>
