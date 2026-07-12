@@ -1,5 +1,6 @@
 package com.caloshape.app.ui.home.ui.settings.dialog
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -82,6 +83,7 @@ fun PaymentIssueDialog(
             Surface(
                 shape = RoundedCornerShape(28.dp),
                 color = if (isDark) HomeCardStyles.Dialog.surface() else colors.surface,
+                border = if (isDark) BorderStroke(1.2.dp, HomeCardStyles.Dialog.border()) else null,
                 tonalElevation = 0.dp,
                 shadowElevation = 0.dp,
                 modifier = Modifier.fillMaxWidth()

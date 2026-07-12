@@ -1079,7 +1079,7 @@
 
 
     <!-- WidgetGuideScreen -->
-    <string name="widget_guide_title">Thêm Widget</string>
+    <string name="widget_guide_title">Thêm widget</string>
     <string name="widget_guide_hero_title">Thêm CaloShape vào màn hình chính</string>
     <string name="widget_guide_hero_body">Theo dõi calo, macro và thao tác nhanh mà không cần mở ứng dụng.</string>
     <string name="widget_guide_steps_title">Làm theo các bước này</string>

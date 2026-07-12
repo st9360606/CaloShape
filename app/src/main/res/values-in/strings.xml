@@ -1091,7 +1091,7 @@ Tetap sesuai rencana setiap hari.</string>
 
 
     <!-- WidgetGuideScreen -->
-    <string name="widget_guide_title">Tambah Widget</string>
+    <string name="widget_guide_title">Tambah widget</string>
     <string name="widget_guide_hero_title">Tambahkan CaloShape ke layar Beranda</string>
     <string name="widget_guide_hero_body">Lacak kalori, makro, dan tindakan cepat tanpa membuka aplikasi.</string>
     <string name="widget_guide_steps_title">Ikuti langkah-langkah ini</string>

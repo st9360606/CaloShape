@@ -60,7 +60,7 @@
 
 
     <!-- Landing Screen -->
-    <string name="landing_title">फ़ोटो लें, कैलोरी जानें।</string>
+    <string name="landing_title">एक फ़ोटो लें और तुरंत कैलोरी जानें।</string>
     <string name="choose_language">भाषा चुनें</string>
     <string name="cta_get_started">शुरू करें</string>
     <string name="cta_login_prefix">पहले से खाता है?</string>
@@ -126,6 +126,8 @@
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">आपकी उम्र कितनी है?</string>
     <string name="onboard_age_subtitle">आपकी उम्र का उपयोग केवल आपके अनुभव और कैलोरी अनुमान की सटीकता सुधारने के लिए किया जाता है।</string>
+
+
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">आपकी लंबाई कितनी है?</string>
     <string name="onboard_height_subtitle">आपके डेटा का उपयोग केवल आपके अनुभव और हमारे कैलोरी अनुमानों को सुधारने के लिए किया जाता है।</string>
@@ -190,12 +192,14 @@
 
 
     <!-- Onboarding: NotificationPermissionScreen -->
-    <string name="onboard_notif_title">हर भोजन को मायनेदार बनाएं!</string>
+    <string name="onboard_notif_title">हर निवाला मायने रखता है!</string>
     <string name="onboard_notif_subtitle">भोजन लॉग करने के हल्के रिमाइंडर के लिए नोटिफिकेशन चालू करें, ताकि आपकी कैलोरी, मैक्रो और प्रगति सही दिशा में रहें। चूक हो सकती है; समय पर मिलने वाले संकेत आपको जल्दी वापस पटरी पर लाने में मदद करते हैं।</string>
     <string name="onboard_allow_notifications_cta">नोटिफिकेशन की अनुमति दें</string>
     <string name="notification_mock_app_title">AI कैलोरी काउंटर</string>
     <string name="onboard_notif_title_got_a_sec">आपका भोजन खुद लॉग नहीं होगा 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">इस भोजन को लॉग करें ताकि आपकी कैलोरी और मैक्रो सही दिशा में रहें।</string>
+
+
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">कनेक्ट करें</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
@@ -294,7 +298,7 @@
 
 
     <!-- Onboarding: OnboardDiscountSpinScreen-->
-    <string name="subscription_spin_title">एक विशेष छूट अनलॉक करने के लिए\nस्पिन करें</string>
+    <string name="subscription_spin_title">विशेष छूट अनलॉक करने के लिए स्पिन पर टैप करें</string>
     <string name="subscription_spin_helper_ready">अपना विशेष उपहार देखने के लिए स्पिन पर टैप करें।</string>
     <string name="subscription_spin_button">स्पिन</string>
     <string name="subscription_spinning_button">स्पिन हो रहा है…</string>
@@ -349,6 +353,8 @@
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">बची कैलोरी</string>
     <string name="home_calories_eaten_label">ली गई कैलोरी</string>
+
+
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
     <string name="home_protein_goal_label">प्रोटीन शेष</string>
@@ -741,7 +747,7 @@
 
 
     <!-- RecentUploadCard -->
-    <string name="foodlog_pending_analysis">आपके भोजन का विश्लेषण हो रहा है…</string>
+    <string name="foodlog_pending_analysis">भोजन का विश्लेषण हो रहा है…</string>
     <string name="foodlog_analysis_done">विश्लेषण पूरा हुआ</string>
     <string name="recent_upload_kcal_text">🔥 %1$d kcal</string>
     <string name="recent_upload_protein_text">🥩 %1$dg</string>
@@ -985,6 +991,8 @@
     <!-- EditAgeScreen -->
     <string name="edit_age_title">अपनी उम्र संपादित करें</string>
     <string name="edit_age_privacy_note">आपकी उम्र का उपयोग केवल आपके अनुभव और कैलोरी अनुमान की सटीकता सुधारने के लिए किया जाता है।</string>
+
+
     <!-- EditGenderScreen -->
     <string name="edit_gender_title">अपना लिंग संपादित करें</string>
     <string name="edit_gender_privacy_note">केवल निजीकरण और अनुमान सटीकता सुधारने के लिए उपयोग किया जाता है।</string>
@@ -1072,7 +1080,7 @@
 
 
     <!-- WidgetGuideScreen -->
-    <string name="widget_guide_title">Widget जोड़ें</string>
+    <string name="widget_guide_title">विजेट जोड़ें</string>
     <string name="widget_guide_hero_title">CaloShape को अपनी होम स्क्रीन पर जोड़ें</string>
     <string name="widget_guide_hero_body">ऐप खोले बिना कैलोरी, मैक्रो और त्वरित क्रियाएँ ट्रैक करें।</string>
     <string name="widget_guide_steps_title">इन चरणों का पालन करें</string>

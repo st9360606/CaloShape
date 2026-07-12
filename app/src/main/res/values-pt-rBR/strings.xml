@@ -1084,7 +1084,7 @@
 
 
     <!-- WidgetGuideScreen -->
-    <string name="widget_guide_title">Adicionar Widget</string>
+    <string name="widget_guide_title">Adicionar widget</string>
     <string name="widget_guide_hero_title">Adicione o CaloShape à sua tela inicial</string>
     <string name="widget_guide_hero_body">Acompanhe calorias, macros e ações rápidas sem abrir o app.</string>
     <string name="widget_guide_steps_title">Siga estas etapas</string>

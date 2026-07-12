@@ -1088,7 +1088,7 @@ con i tuoi amici</string>
 
 
     <!-- WidgetGuideScreen -->
-    <string name="widget_guide_title">Aggiungi un widget</string>
+    <string name="widget_guide_title">Aggiungi widget</string>
     <string name="widget_guide_hero_title">Aggiungi CaloShape alla schermata Home</string>
     <string name="widget_guide_hero_body">Monitora calorie, macro e azioni rapide senza aprire l’app.</string>
     <string name="widget_guide_steps_title">Segui questi passaggi</string>
