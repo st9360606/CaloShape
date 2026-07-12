@@ -73,25 +73,28 @@ internal fun ActivityChartCard(
     chart: WorkoutChartUi,
     modifier: Modifier = Modifier
 ) {
-    val footerText = if (chart.reachedGoalToday) {
-        stringResource(R.string.activity_chart_goal_reached)
-    } else {
-        stringResource(R.string.activity_chart_goal_left, chart.remainingKcal)
+    val footerText = when {
+        chart.averageSelectedWeekBurnedKcal == null -> null
+        chart.reachedAverageGoal -> stringResource(R.string.activity_chart_average_goal_reached)
+        else -> stringResource(
+            R.string.activity_chart_average_goal_left,
+            chart.averageGoalRemainingKcal
+        )
     }
 
     ActivityChartCardFrame(
         title = stringResource(R.string.activity_chart_title),
         infoDialogText = stringResource(R.string.activity_chart_info_dialog_body),
         infoButtonContentDescription = "查看運動消耗說明",
-        headlineValue = chart.todayBurnedKcal.toString(),
+        headlineValue = chart.averageSelectedWeekBurnedKcal?.toString(),
         unitText = stringResource(R.string.activity_chart_unit_kcal),
         goalText = stringResource(R.string.activity_chart_goal),
         goalValue = stringResource(R.string.activity_chart_value_kcal, chart.goalKcal),
         avgText = stringResource(R.string.activity_chart_7day_avg),
         avgValue = stringResource(R.string.activity_chart_value_kcal, chart.averageKcal),
         footerText = footerText,
-        footerBackground = if (chart.reachedGoalToday) Color(0xFFEAF5E8) else Color(0xFFFFF3E6),
-        footerTextColor = if (chart.reachedGoalToday) Color(0xFF3C9E45) else WorkoutBarColor,
+        footerBackground = if (chart.reachedAverageGoal) Color(0xFFEAF5E8) else Color(0xFFFFF3E6),
+        footerTextColor = if (chart.reachedAverageGoal) Color(0xFF3C9E45) else WorkoutBarColor,
         modifier = modifier
     ) {
         WorkoutBarChart(
@@ -197,13 +200,13 @@ private fun ActivityChartCardFrame(
     title: String,
     infoDialogText: String,
     infoButtonContentDescription: String,
-    headlineValue: String,
+    headlineValue: String?,
     unitText: String,
     goalText: String,
     goalValue: String,
     avgText: String,
     avgValue: String,
-    footerText: String,
+    footerText: String?,
     footerBackground: Color,
     footerTextColor: Color,
     modifier: Modifier = Modifier,
@@ -280,7 +283,22 @@ private fun ActivityChartCardFrame(
                         }
                     }
 
-                    Row(verticalAlignment = Alignment.Bottom) {
+                    Text(
+                        text = stringResource(R.string.progress_chart_average_label),
+                        color = Color(0xFFF43F5E),
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.SemiBold
+                    )
+
+                    if (headlineValue == null) {
+                        Text(
+                            text = stringResource(R.string.progress_chart_no_records),
+                            color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
+                            fontSize = 22.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            lineHeight = 28.sp
+                        )
+                    } else Row(verticalAlignment = Alignment.Bottom) {
                         Text(
                             text = headlineValue,
                             color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
@@ -333,21 +351,23 @@ private fun ActivityChartCardFrame(
 
             WorkoutLegendRow()
 
-            Spacer(modifier = Modifier.height(14.dp))
+            footerText?.let { text ->
+                Spacer(modifier = Modifier.height(14.dp))
 
-            Box(
-                modifier = Modifier
-                    .align(Alignment.CenterHorizontally)
-                    .background(resolvedFooterBackground, RoundedCornerShape(12.dp))
-                    .padding(horizontal = 12.dp, vertical = 6.dp)
-            ) {
-                Text(
-                    text = footerText,
-                    color = footerTextColor,
-                    fontSize = 14.sp,
-                    fontWeight = FontWeight.Bold,
-                    textAlign = TextAlign.Center
-                )
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.CenterHorizontally)
+                        .background(resolvedFooterBackground, RoundedCornerShape(12.dp))
+                        .padding(horizontal = 8.dp, vertical = 6.dp)
+                ) {
+                    Text(
+                        text = text,
+                        color = footerTextColor,
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.Bold,
+                        textAlign = TextAlign.Center
+                    )
+                }
             }
 
         }

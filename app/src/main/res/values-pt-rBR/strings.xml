@@ -474,6 +474,8 @@
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
     <string name="progress_chart_total_calories">Calorias totais</string>
+    <string name="progress_chart_average_label">Média</string>
+    <string name="progress_chart_no_records">Ainda sem registros</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Proteína</string>
     <string name="progress_legend_carbs">Carbs</string>
@@ -516,6 +518,8 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
+    <string name="activity_chart_average_goal_reached">A média diária de atividade atinge a meta</string>
+    <string name="activity_chart_average_goal_left">A atividade diária média está %1$d kcal abaixo da meta</string>
     <string name="activity_chart_goal_reached">Meta alcançada hoje</string>
     <string name="activity_chart_goal_left">Faltam %1$d kcal hoje</string>
     <string name="activity_chart_title">Gasto de atividade</string>
@@ -534,6 +538,8 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
+    <string name="water_chart_average_goal_reached">A média diária de água atinge a meta</string>
+    <string name="water_chart_average_goal_left_ml">A ingestão média diária de água está %1$s ml abaixo da meta</string>
     <string name="water_chart_goal_reached">Meta de hoje alcançada</string>
     <string name="water_chart_goal_left_ml">Faltam %1$s ml hoje</string>
     <string name="water_chart_title">Consumo de água</string>

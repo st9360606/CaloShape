@@ -472,6 +472,8 @@
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
     <string name="progress_chart_total_calories">Kalorit yhteensä</string>
+    <string name="progress_chart_average_label">Keskiarvo</string>
+    <string name="progress_chart_no_records">Ei vielä merkintöjä</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Proteiini</string>
     <string name="progress_legend_carbs">Hiilarit</string>
@@ -514,6 +516,8 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
+    <string name="activity_chart_average_goal_reached">Keskimääräinen päivittäinen aktiivisuustavoite saavutettu</string>
+    <string name="activity_chart_average_goal_left">Keskimääräinen päivittäinen aktiivisuus on %1$d kcal alle tavoitteen</string>
     <string name="activity_chart_goal_reached">Tavoite saavutettu tänään</string>
     <string name="activity_chart_goal_left">%1$d kcal jäljellä tämän päivän tavoitteeseen</string>
     <string name="activity_chart_title">Aktiivisuuskulutus</string>
@@ -532,6 +536,8 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
+    <string name="water_chart_average_goal_reached">Keskimääräinen päivittäinen juomatavoite saavutettu</string>
+    <string name="water_chart_average_goal_left_ml">Keskimääräinen päivittäinen juonti on %1$s ml alle tavoitteen</string>
     <string name="water_chart_goal_reached">Tämän päivän tavoite saavutettu</string>
     <string name="water_chart_goal_left_ml">%1$s ml jäljellä tämän päivän tavoitteeseen</string>
     <string name="water_chart_title">Veden saanti</string>

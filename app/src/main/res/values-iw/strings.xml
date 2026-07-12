@@ -325,6 +325,8 @@
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
     <string name="progress_chart_total_calories">סך קלוריות</string>
+    <string name="progress_chart_average_label">ממוצע</string>
+    <string name="progress_chart_no_records">אין עדיין רשומות</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">חלבון</string>
     <string name="progress_legend_carbs">פחמימות</string>
@@ -840,4 +842,20 @@
     <string name="premium_rewards_google_defer_failed">נכשל</string>
     <string name="premium_rewards_google_defer_not_required">לא נדרש</string>
 
+
+    <!-- =========================
+         MicronutrientChartCard
+         ========================= -->
+
+    <!-- =========================
+         ActivityChartCard
+         ========================= -->
+    <string name="activity_chart_average_goal_reached">ממוצע הפעילות היומי עומד ביעד</string>
+    <string name="activity_chart_average_goal_left">ממוצע הפעילות היומי נמוך ב-%1$d kcal מהיעד</string>
+
+    <!-- =========================
+         WaterChartCard
+         ========================= -->
+    <string name="water_chart_average_goal_reached">ממוצע השתייה היומי עומד ביעד</string>
+    <string name="water_chart_average_goal_left_ml">ממוצע השתייה היומי נמוך ב-%1$s ml מהיעד</string>
 </resources>

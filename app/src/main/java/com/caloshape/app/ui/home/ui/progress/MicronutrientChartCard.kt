@@ -76,28 +76,17 @@ private val MicronutrientFooterText = Color(0xFFA37FE0)
 @Composable
 internal fun MicronutrientChartCard(
     days: List<ProgressBarDayUi>,
-    weekOffset: Int = 0,
+    averageSelectedWeekMicronutrientG: Float?,
     average7FiberG: Int,
     average7SugarG: Int,
     average7SodiumMg: Int,
     modifier: Modifier = Modifier
 ) {
     val chartDays = normalizeMicronutrientWeekDays(days)
-    val today = LocalDate.now()
-
-    val displayDay = if (weekOffset == 0) {
-        chartDays.firstOrNull { it.date == today.toString() }
-            ?: chartDays.lastOrNull { day ->
-                parseMicronutrientDateOrNull(day.date)?.let { !it.isAfter(today) } == true
-            }
-            ?: emptyMicronutrientDayUi("Sat")
-    } else {
-        chartDays.getOrNull(6) ?: emptyMicronutrientDayUi("Sat")
-    }
 
     MicronutrientChartCardFrame(
         title = stringResource(R.string.progress_micronutrients_title),
-        headlineValue = formatMicronutrientGramPlain(displayDay.micronutrientTotalG()),
+        headlineValue = averageSelectedWeekMicronutrientG?.let(::formatMicronutrientGramPlain),
         unitText = stringResource(R.string.progress_chart_grams),
         average7FiberG = average7FiberG,
         average7SugarG = average7SugarG,
@@ -111,7 +100,7 @@ internal fun MicronutrientChartCard(
 @Composable
 private fun MicronutrientChartCardFrame(
     title: String,
-    headlineValue: String,
+    headlineValue: String?,
     unitText: String,
     average7FiberG: Int,
     average7SugarG: Int,
@@ -156,7 +145,22 @@ private fun MicronutrientChartCardFrame(
                         modifier = Modifier.padding(top = 10.dp)
                     )
 
-                    Row(verticalAlignment = Alignment.Bottom) {
+                    Text(
+                        text = stringResource(R.string.progress_chart_average_label),
+                        color = Color(0xFFF43F5E),
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.SemiBold
+                    )
+
+                    if (headlineValue == null) {
+                        Text(
+                            text = stringResource(R.string.progress_chart_no_records),
+                            color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
+                            fontSize = 22.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            lineHeight = 28.sp
+                        )
+                    } else Row(verticalAlignment = Alignment.Bottom) {
                         Text(
                             text = headlineValue,
                             color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
@@ -174,7 +178,6 @@ private fun MicronutrientChartCardFrame(
                             fontWeight = FontWeight.Medium,
                             modifier = Modifier.padding(bottom = 4.dp)
                         )
-
                     }
                 }
 

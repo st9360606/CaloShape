@@ -467,6 +467,8 @@
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
     <string name="progress_chart_total_calories">Łączne kalorie</string>
+    <string name="progress_chart_average_label">Średnia</string>
+    <string name="progress_chart_no_records">Brak zapisów</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Białko</string>
     <string name="progress_legend_carbs">Węgle</string>
@@ -509,6 +511,8 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
+    <string name="activity_chart_average_goal_reached">Średni dzienny cel aktywności osiągnięty</string>
+    <string name="activity_chart_average_goal_left">Średnia dzienna aktywność jest o %1$d kcal poniżej celu</string>
     <string name="activity_chart_goal_reached">Cel osiągnięty dziś</string>
     <string name="activity_chart_goal_left">%1$d kcal do dzisiejszego celu</string>
     <string name="activity_chart_title">Aktywność</string>
@@ -527,6 +531,8 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
+    <string name="water_chart_average_goal_reached">Średni dzienny cel picia osiągnięty</string>
+    <string name="water_chart_average_goal_left_ml">Średnie dzienne spożycie wody jest o %1$s ml poniżej celu</string>
     <string name="water_chart_goal_reached">Cel na dziś osiągnięty</string>
     <string name="water_chart_goal_left_ml">%1$s ml do dzisiejszego celu</string>
     <string name="water_chart_title">Spożycie wody</string>

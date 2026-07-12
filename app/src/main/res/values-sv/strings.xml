@@ -474,6 +474,8 @@
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
     <string name="progress_chart_total_calories">Totala kalorier</string>
+    <string name="progress_chart_average_label">Genomsnitt</string>
+    <string name="progress_chart_no_records">Inga poster ännu</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Protein</string>
     <string name="progress_legend_carbs">Kolhydr.</string>
@@ -516,6 +518,8 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
+    <string name="activity_chart_average_goal_reached">Genomsnittligt dagligt aktivitetsmål uppnått</string>
+    <string name="activity_chart_average_goal_left">Genomsnittlig daglig aktivitet ligger %1$d kcal under målet</string>
     <string name="activity_chart_goal_reached">Målet nått i dag</string>
     <string name="activity_chart_goal_left">%1$d kcal kvar till dagens mål</string>
     <string name="activity_chart_title">Aktivitet</string>
@@ -534,6 +538,8 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
+    <string name="water_chart_average_goal_reached">Genomsnittligt dagligt drickmål uppnått</string>
+    <string name="water_chart_average_goal_left_ml">Genomsnittligt dagligt vattenintag ligger %1$s ml under målet</string>
     <string name="water_chart_goal_reached">Dagens mål nått</string>
     <string name="water_chart_goal_left_ml">%1$s ml kvar till dagens mål</string>
     <string name="water_chart_title">Vattenintag</string>

@@ -469,6 +469,8 @@
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
     <string name="progress_chart_total_calories">कुल कैलोरी</string>
+    <string name="progress_chart_average_label">औसत</string>
+    <string name="progress_chart_no_records">अभी तक कोई रिकॉर्ड नहीं</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">प्रोटीन</string>
     <string name="progress_legend_carbs">कार्ब्स</string>
@@ -511,6 +513,8 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
+    <string name="activity_chart_average_goal_reached">औसत दैनिक गतिविधि लक्ष्य पूरा हुआ</string>
+    <string name="activity_chart_average_goal_left">औसत दैनिक गतिविधि लक्ष्य से %1$d kcal कम है</string>
     <string name="activity_chart_goal_reached">आज लक्ष्य पूरा हुआ</string>
     <string name="activity_chart_goal_left">आज के लक्ष्य तक पहुंचने के लिए %1$d kcal शेष</string>
     <string name="activity_chart_title">गतिविधि से बर्न</string>
@@ -529,6 +533,8 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
+    <string name="water_chart_average_goal_reached">औसत दैनिक पानी लक्ष्य पूरा हुआ</string>
+    <string name="water_chart_average_goal_left_ml">औसत दैनिक पानी सेवन लक्ष्य से %1$s ml कम है</string>
     <string name="water_chart_goal_reached">आज का लक्ष्य पूरा हुआ</string>
     <string name="water_chart_goal_left_ml">आज के लक्ष्य तक पहुंचने के लिए %1$s ml शेष</string>
     <string name="water_chart_title">पानी का सेवन</string>

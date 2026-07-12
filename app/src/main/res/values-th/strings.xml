@@ -472,6 +472,8 @@
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
     <string name="progress_chart_total_calories">แคลอรีรวม</string>
+    <string name="progress_chart_average_label">เฉลี่ย</string>
+    <string name="progress_chart_no_records">ยังไม่มีบันทึก</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">โปรตีน</string>
     <string name="progress_legend_carbs">คาร์บ</string>
@@ -514,6 +516,8 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
+    <string name="activity_chart_average_goal_reached">ค่าเฉลี่ยกิจกรรมรายวันถึงเป้าหมายแล้ว</string>
+    <string name="activity_chart_average_goal_left">กิจกรรมเฉลี่ยรายวันต่ำกว่าเป้าหมาย %1$d kcal</string>
     <string name="activity_chart_goal_reached">ถึงเป้าหมายวันนี้แล้ว</string>
     <string name="activity_chart_goal_left">เหลือ %1$d kcal เพื่อถึงเป้าหมายวันนี้</string>
     <string name="activity_chart_title">แคลอรีจากกิจกรรม</string>
@@ -532,6 +536,8 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
+    <string name="water_chart_average_goal_reached">ค่าเฉลี่ยการดื่มน้ำรายวันถึงเป้าหมายแล้ว</string>
+    <string name="water_chart_average_goal_left_ml">การดื่มน้ำเฉลี่ยรายวันต่ำกว่าเป้าหมาย %1$s ml</string>
     <string name="water_chart_goal_reached">ถึงเป้าหมายวันนี้แล้ว</string>
     <string name="water_chart_goal_left_ml">เหลือ %1$s ml เพื่อถึงเป้าหมายวันนี้</string>
     <string name="water_chart_title">ปริมาณน้ำที่ดื่ม</string>

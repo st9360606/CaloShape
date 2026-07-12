@@ -483,6 +483,8 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
     <string name="progress_chart_total_calories">Total kalori</string>
+    <string name="progress_chart_average_label">Rata-rata</string>
+    <string name="progress_chart_no_records">Belum ada catatan</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Protein</string>
     <string name="progress_legend_carbs">Karbo</string>
@@ -525,6 +527,8 @@ Tetap sesuai rencana setiap hari.</string>
     <!-- =========================
          ActivityChartCard
          ========================= -->
+    <string name="activity_chart_average_goal_reached">Rata-rata aktivitas harian mencapai target</string>
+    <string name="activity_chart_average_goal_left">Rata-rata aktivitas harian %1$d kcal di bawah target</string>
     <string name="activity_chart_goal_reached">Target tercapai hari ini</string>
     <string name="activity_chart_goal_left">Tersisa %1$d kcal hari ini</string>
     <string name="activity_chart_title">Kalori aktivitas</string>
@@ -543,6 +547,8 @@ Tetap sesuai rencana setiap hari.</string>
     <!-- =========================
          WaterChartCard
          ========================= -->
+    <string name="water_chart_average_goal_reached">Rata-rata minum harian mencapai target</string>
+    <string name="water_chart_average_goal_left_ml">Rata-rata minum harian %1$s ml di bawah target</string>
     <string name="water_chart_goal_reached">Target hari ini tercapai</string>
     <string name="water_chart_goal_left_ml">Tersisa %1$s ml hari ini</string>
     <string name="water_chart_title">Asupan air</string>

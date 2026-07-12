@@ -469,6 +469,8 @@
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
     <string name="progress_chart_total_calories">총 칼로리</string>
+    <string name="progress_chart_average_label">평균</string>
+    <string name="progress_chart_no_records">아직 기록 없음</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">단백질</string>
     <string name="progress_legend_carbs">탄수화물</string>
@@ -511,6 +513,8 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
+    <string name="activity_chart_average_goal_reached">평균 일일 활동 목표를 달성했어요</string>
+    <string name="activity_chart_average_goal_left">평균 일일 활동량이 목표보다 %1$d kcal 부족해요</string>
     <string name="activity_chart_goal_reached">오늘 목표 달성</string>
     <string name="activity_chart_goal_left">오늘 목표까지 %1$d kcal 남음</string>
     <string name="activity_chart_title">활동 소모량</string>
@@ -529,6 +533,8 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
+    <string name="water_chart_average_goal_reached">평균 일일 물 목표를 달성했어요</string>
+    <string name="water_chart_average_goal_left_ml">평균 일일 물 섭취량이 목표보다 %1$s ml 부족해요</string>
     <string name="water_chart_goal_reached">오늘 목표 달성</string>
     <string name="water_chart_goal_left_ml">오늘 목표까지 %1$s ml 남음</string>
     <string name="water_chart_title">물 섭취량</string>

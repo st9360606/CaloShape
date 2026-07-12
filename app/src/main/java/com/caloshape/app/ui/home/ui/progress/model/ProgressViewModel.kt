@@ -64,15 +64,17 @@ data class WaterProgressDayUi(
 )
 
 data class WaterChartUi(
-    val todayMl: Int = 0,
+    val averageSelectedWeekMl: Int? = null,
     val goalMl: Int = 2000,
     val averageMl: Int = 0,
-    val remainingMl: Int = 2000,
     val deltaText: String = "--",
     val days: List<WaterProgressDayUi> = emptyList()
 ) {
-    val reachedGoalToday: Boolean
-        get() = goalMl > 0 && todayMl >= goalMl
+    val reachedAverageGoal: Boolean
+        get() = averageSelectedWeekMl != null && goalMl > 0 && averageSelectedWeekMl >= goalMl
+
+    val averageGoalRemainingMl: Int
+        get() = (goalMl - (averageSelectedWeekMl ?: 0)).coerceAtLeast(0)
 }
 
 data class BmiCardUi(
@@ -93,7 +95,7 @@ enum class BmiStatusTone {
 data class ProgressUiState(
     val loading: Boolean = true,
     val selectedWeekOffset: Int = 0,
-    val totalCaloriesText: String = "0.0",
+    val averageDailyCalories: Int? = null,
     val deltaText: String = "--",
     val deltaDirection: String = "NONE",
     val average7Calories: Int = 0,
@@ -101,6 +103,7 @@ data class ProgressUiState(
     val average7FiberG: Int = 0,
     val average7SugarG: Int = 0,
     val average7SodiumMg: Int = 0,
+    val averageSelectedWeekMicronutrientG: Float? = null,
     val days: List<ProgressBarDayUi> = emptyList(),
     val periodLabel: String = "This Week",
     val bmiCard: BmiCardUi = BmiCardUi(),
@@ -129,15 +132,18 @@ data class WorkoutProgressDayUi(
 )
 
 data class WorkoutChartUi(
-    val todayBurnedKcal: Int = 0,
+    val averageSelectedWeekBurnedKcal: Int? = null,
     val goalKcal: Int = 450,
     val averageKcal: Int = 0,
-    val remainingKcal: Int = 450,
     val deltaText: String = "--",
     val days: List<WorkoutProgressDayUi> = emptyList()
 ) {
-    val reachedGoalToday: Boolean
-        get() = goalKcal > 0 && todayBurnedKcal >= goalKcal
+    val reachedAverageGoal: Boolean
+        get() = averageSelectedWeekBurnedKcal != null &&
+            goalKcal > 0 && averageSelectedWeekBurnedKcal >= goalKcal
+
+    val averageGoalRemainingKcal: Int
+        get() = (goalKcal - (averageSelectedWeekBurnedKcal ?: 0)).coerceAtLeast(0)
 }
 
 @HiltViewModel
@@ -515,16 +521,25 @@ private fun FoodLogWeeklyProgressDto.toUiState(weekOffset: Int): ProgressUiState
         null
     }
 
-    val effectiveTotalCaloriesText = String.format(
-        Locale.getDefault(),
-        "%.1f",
-        displayDay.totalKcal.toDouble()
-    )
+    val loggedDays = normalizedDayUis.filter { it.totalKcal > 0 }
+    val averageDailyCalories = loggedDays
+        .takeIf { it.isNotEmpty() }
+        ?.let { logged ->
+            logged.map { it.totalKcal }.average().roundToInt()
+        }
+    val averageSelectedWeekMicronutrientG = loggedDays
+        .takeIf { it.isNotEmpty() }
+        ?.let { logged ->
+            logged
+                .map { it.fiberG + it.sugarG + (it.sodiumMg / 1000f) }
+                .average()
+                .toFloat()
+        }
 
     return ProgressUiState(
         loading = false,
         selectedWeekOffset = weekOffset,
-        totalCaloriesText = effectiveTotalCaloriesText,
+        averageDailyCalories = averageDailyCalories,
         deltaText = effectiveDeltaValue.toDeltaText(),
         deltaDirection = effectiveDeltaValue.toDeltaDirection(),
         average7Calories = summary.average7Calories.roundToInt().coerceAtLeast(0),
@@ -532,6 +547,7 @@ private fun FoodLogWeeklyProgressDto.toUiState(weekOffset: Int): ProgressUiState
         average7FiberG = summary.average7FiberG.roundToInt().coerceAtLeast(0),
         average7SugarG = summary.average7SugarG.roundToInt().coerceAtLeast(0),
         average7SodiumMg = summary.average7SodiumMg.roundToInt().coerceAtLeast(0),
+        averageSelectedWeekMicronutrientG = averageSelectedWeekMicronutrientG,
         days = normalizedDayUis,
         periodLabel = period.label.toPrettyLabel(),
         error = null
@@ -566,18 +582,20 @@ private fun WaterWeeklyChartDto.toWaterChartUi(weekOffset: Int): WaterChartUi {
     val compareMl = compareDay?.ml ?: 0
 
     val averageMl = this.averageMl.coerceAtLeast(0)
+    val averageSelectedWeekMl = normalizedDayUis
+        .filter { it.ml > 0 }
+        .takeIf { it.isNotEmpty() }
+        ?.let { logged -> logged.map { it.ml }.average().roundToInt() }
 
-    val remainingMl = (resolvedGoalMl - displayMl).coerceAtLeast(0)
     val deltaValue = calculateDayDeltaPercent(
         todayCalories = displayMl,
         yesterdayCalories = compareMl
     )
 
     return WaterChartUi(
-        todayMl = displayMl,
+        averageSelectedWeekMl = averageSelectedWeekMl,
         goalMl = resolvedGoalMl,
         averageMl = averageMl,
-        remainingMl = remainingMl,
         deltaText = deltaValue.toDeltaText(),
         days = normalizedDayUis
     )
@@ -637,14 +655,16 @@ private fun WorkoutWeeklyProgressDto.toWorkoutChartUi(weekOffset: Int): WorkoutC
     val displayKcal = displayDay?.kcal ?: 0
     val compareKcal = compareDay?.kcal ?: 0
     val averageKcal = summary.averageKcal.coerceAtLeast(0)
+    val averageSelectedWeekBurnedKcal = normalizedDayUis
+        .filter { it.kcal > 0 }
+        .takeIf { it.isNotEmpty() }
+        ?.let { logged -> logged.map { it.kcal }.average().roundToInt() }
     val deltaPercent = calculateDayDeltaPercent(displayKcal, compareKcal)
-    val remaining = (summary.goalKcal - displayKcal).coerceAtLeast(0)
 
     return WorkoutChartUi(
-        todayBurnedKcal = displayKcal,
+        averageSelectedWeekBurnedKcal = averageSelectedWeekBurnedKcal,
         goalKcal = summary.goalKcal,
         averageKcal = averageKcal,
-        remainingKcal = remaining,
         deltaText = deltaPercent.toDeltaText(),
         days = normalizedDayUis
     )

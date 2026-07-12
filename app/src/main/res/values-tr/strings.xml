@@ -475,6 +475,8 @@
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
     <string name="progress_chart_total_calories">Toplam kalori</string>
+    <string name="progress_chart_average_label">Ortalama</string>
+    <string name="progress_chart_no_records">Henüz kayıt yok</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Protein</string>
     <string name="progress_legend_carbs">Karb.</string>
@@ -517,6 +519,8 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
+    <string name="activity_chart_average_goal_reached">Ortalama günlük aktivite hedefi karşılandı</string>
+    <string name="activity_chart_average_goal_left">Ortalama günlük aktivite hedeften %1$d kcal düşük</string>
     <string name="activity_chart_goal_reached">Bugünkü hedefe ulaşıldı</string>
     <string name="activity_chart_goal_left">Bugünkü hedefe ulaşmak için %1$d kcal kaldı</string>
     <string name="activity_chart_title">Aktivite yakımı</string>
@@ -535,6 +539,8 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
+    <string name="water_chart_average_goal_reached">Ortalama günlük su hedefi karşılandı</string>
+    <string name="water_chart_average_goal_left_ml">Ortalama günlük su tüketimi hedeften %1$s ml düşük</string>
     <string name="water_chart_goal_reached">Bugünkü hedefe ulaşıldı</string>
     <string name="water_chart_goal_left_ml">Bugünkü hedefe ulaşmak için %1$s ml kaldı</string>
     <string name="water_chart_title">Su tüketimi</string>

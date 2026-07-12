@@ -474,6 +474,8 @@ Resta sul piano ogni giorno.</string>
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
     <string name="progress_chart_total_calories">Calorie totali</string>
+    <string name="progress_chart_average_label">Media</string>
+    <string name="progress_chart_no_records">Nessun dato registrato</string>
     <string name="progress_chart_cals">kcal</string>
 
     <string name="progress_legend_protein">Proteine</string>
@@ -517,6 +519,8 @@ Resta sul piano ogni giorno.</string>
     <!-- =========================
          ActivityChartCard
          ========================= -->
+    <string name="activity_chart_average_goal_reached">L\'obiettivo medio giornaliero di attività è raggiunto</string>
+    <string name="activity_chart_average_goal_left">L\'attività media giornaliera è %1$d kcal sotto l\'obiettivo</string>
     <string name="activity_chart_goal_reached">Obiettivo raggiunto oggi</string>
     <string name="activity_chart_goal_left">%1$d kcal restanti oggi</string>
     <string name="activity_chart_title">Calorie attività</string>
@@ -535,6 +539,8 @@ Resta sul piano ogni giorno.</string>
     <!-- =========================
          WaterChartCard
          ========================= -->
+    <string name="water_chart_average_goal_reached">L\'obiettivo medio giornaliero di acqua è raggiunto</string>
+    <string name="water_chart_average_goal_left_ml">L\'assunzione media giornaliera di acqua è %1$s ml sotto l\'obiettivo</string>
     <string name="water_chart_goal_reached">Obiettivo raggiunto oggi</string>
     <string name="water_chart_goal_left_ml">%1$s ml restanti oggi</string>
     <string name="water_chart_title">Acqua assunta</string>

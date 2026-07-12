@@ -71,14 +71,14 @@ private val FatsColor = Color(0xFF6C93D8)
 
 @Composable
 internal fun NutritionChartCard(
-    totalCaloriesText: String,
+    averageDailyCalories: Int?,
     average7Calories: Int,
     average15Calories: Int,
     days: List<ProgressBarDayUi>,
     modifier: Modifier = Modifier
 ) {
     ProgressChartCardFrame(
-        totalCaloriesText = totalCaloriesText,
+        averageDailyCalories = averageDailyCalories,
         average7Label = stringResource(R.string.progress_chart_7day_avg_calories),
         average7Value = stringResource(R.string.progress_chart_value_cals, average7Calories),
         average15Label = stringResource(R.string.progress_chart_15day_avg_calories),
@@ -94,7 +94,7 @@ internal fun LoadingCard(
     modifier: Modifier = Modifier
 ) {
     ProgressChartCardFrame(
-        totalCaloriesText = stringResource(R.string.progress_chart_loading_total_calories_text),
+        isLoading = true,
         modifier = modifier
     ) {
         LoadingChartPlaceholder()
@@ -151,20 +151,9 @@ internal fun ErrorCard(
     }
 }
 @Composable
-private fun resolveCaloriesValueText(totalCaloriesText: String): String {
-    val localizedCals = stringResource(R.string.progress_chart_cals).trim()
-
-    return remember(totalCaloriesText, localizedCals) {
-        totalCaloriesText
-            .removeSuffix(localizedCals)
-            .removeSuffix("cals")
-            .removeSuffix("cal")
-            .trim()
-    }
-}
-@Composable
 private fun ProgressChartCardFrame(
-    totalCaloriesText: String,
+    averageDailyCalories: Int? = null,
+    isLoading: Boolean = false,
     modifier: Modifier = Modifier,
     average7Label: String? = null,
     average7Value: String? = null,
@@ -172,7 +161,6 @@ private fun ProgressChartCardFrame(
     average15Value: String? = null,
     chartContent: @Composable () -> Unit
 ) {
-    val valueText = resolveCaloriesValueText(totalCaloriesText)
     val colors = CaloShapeColors.current()
     val isDark = colors.background == CaloShapeColors.Dark.background
 
@@ -209,25 +197,53 @@ private fun ProgressChartCardFrame(
                         modifier = Modifier.padding(top = 10.dp)
                     )
 
-                    Row(verticalAlignment = Alignment.Bottom) {
-                        Text(
-                            text = valueText,
-                            color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
-                            fontSize = 36.sp,
-                            fontWeight = FontWeight.Bold,
-                            lineHeight = 36.sp
-                        )
+                    Text(
+                        text = stringResource(R.string.progress_chart_average_label),
+                        color = Color(0xFFF43F5E),
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.SemiBold
+                    )
 
-                        Spacer(modifier = Modifier.width(6.dp))
+                    when {
+                        isLoading -> {
+                            Text(
+                                text = stringResource(R.string.progress_chart_loading_total_calories_text),
+                                color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
+                                fontSize = 36.sp,
+                                fontWeight = FontWeight.Bold,
+                                lineHeight = 36.sp
+                            )
+                        }
 
-                        Text(
-                            text = stringResource(R.string.progress_chart_cals),
-                            color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
-                            fontSize = 18.sp,
-                            fontWeight = FontWeight.Medium,
-                            modifier = Modifier.padding(bottom = 4.dp)
-                        )
+                        averageDailyCalories == null -> {
+                            Text(
+                                text = stringResource(R.string.progress_chart_no_records),
+                                color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
+                                fontSize = 22.sp,
+                                fontWeight = FontWeight.SemiBold,
+                                lineHeight = 28.sp
+                            )
+                        }
 
+                        else -> Row(verticalAlignment = Alignment.Bottom) {
+                            Text(
+                                text = averageDailyCalories.toString(),
+                                color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
+                                fontSize = 36.sp,
+                                fontWeight = FontWeight.Bold,
+                                lineHeight = 36.sp
+                            )
+
+                            Spacer(modifier = Modifier.width(6.dp))
+
+                            Text(
+                                text = stringResource(R.string.progress_chart_cals),
+                                color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
+                                fontSize = 18.sp,
+                                fontWeight = FontWeight.Medium,
+                                modifier = Modifier.padding(bottom = 4.dp)
+                            )
+                        }
                     }
                 }
 

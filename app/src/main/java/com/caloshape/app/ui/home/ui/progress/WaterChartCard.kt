@@ -75,18 +75,18 @@ internal fun WaterChartCard(
     chart: WaterChartUi,
     modifier: Modifier = Modifier
 ) {
-    val footerText = if (chart.reachedGoalToday) {
-        stringResource(R.string.water_chart_goal_reached)
-    } else {
-        stringResource(
-            R.string.water_chart_goal_left_ml,
-            formatMlPlain(chart.remainingMl)
+    val footerText = when {
+        chart.averageSelectedWeekMl == null -> null
+        chart.reachedAverageGoal -> stringResource(R.string.water_chart_average_goal_reached)
+        else -> stringResource(
+            R.string.water_chart_average_goal_left_ml,
+            formatMlPlain(chart.averageGoalRemainingMl)
         )
     }
 
     WaterChartCardFrame(
         title = stringResource(R.string.water_chart_title),
-        headlineValue = formatMlPlain(chart.todayMl),
+        headlineValue = chart.averageSelectedWeekMl?.let(::formatMlPlain),
         unitText = stringResource(R.string.water_chart_unit_ml),
         goalText = stringResource(R.string.water_chart_goal),
         goalValue = stringResource(
@@ -99,8 +99,8 @@ internal fun WaterChartCard(
             formatMlPlain(chart.averageMl)
         ),
         footerText = footerText,
-        footerBackground = if (chart.reachedGoalToday) WaterFooterReachedBg else WaterFooterPendingBg,
-        footerTextColor = if (chart.reachedGoalToday) WaterFooterReachedText else WaterFooterPendingText,
+        footerBackground = if (chart.reachedAverageGoal) WaterFooterReachedBg else WaterFooterPendingBg,
+        footerTextColor = if (chart.reachedAverageGoal) WaterFooterReachedText else WaterFooterPendingText,
         modifier = modifier
     ) {
         WaterBarChart(
@@ -202,13 +202,13 @@ internal fun WaterErrorCard(
 @Composable
 private fun WaterChartCardFrame(
     title: String,
-    headlineValue: String,
+    headlineValue: String?,
     unitText: String,
     goalText: String,
     goalValue: String,
     avgText: String,
     avgValue: String,
-    footerText: String,
+    footerText: String?,
     footerBackground: Color,
     footerTextColor: Color,
     modifier: Modifier = Modifier,
@@ -259,7 +259,22 @@ private fun WaterChartCardFrame(
                         modifier = Modifier.padding(top = 10.dp)
                     )
 
-                    Row(
+                    Text(
+                        text = stringResource(R.string.progress_chart_average_label),
+                        color = Color(0xFFF43F5E),
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.SemiBold
+                    )
+
+                    if (headlineValue == null) {
+                        Text(
+                            text = stringResource(R.string.progress_chart_no_records),
+                            color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
+                            fontSize = 22.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            lineHeight = 28.sp
+                        )
+                    } else Row(
                         verticalAlignment = Alignment.Bottom
                     ) {
                         Text(
@@ -279,7 +294,6 @@ private fun WaterChartCardFrame(
                             fontWeight = FontWeight.Medium,
                             modifier = Modifier.padding(bottom = 4.dp)
                         )
-
                     }
                 }
 
@@ -314,24 +328,26 @@ private fun WaterChartCardFrame(
 
             WaterLegendRow()
 
-            Spacer(modifier = Modifier.height(14.dp))
+            footerText?.let { text ->
+                Spacer(modifier = Modifier.height(14.dp))
 
-            Box(
-                modifier = Modifier
-                    .align(Alignment.CenterHorizontally)
-                    .background(
-                        color = resolvedFooterBackground,
-                        shape = RoundedCornerShape(12.dp)
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.CenterHorizontally)
+                        .background(
+                            color = resolvedFooterBackground,
+                            shape = RoundedCornerShape(12.dp)
+                        )
+                        .padding(horizontal = 8.dp, vertical = 6.dp)
+                ) {
+                    Text(
+                        text = text,
+                        color = footerTextColor,
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.Bold,
+                        textAlign = TextAlign.Center
                     )
-                    .padding(horizontal = 12.dp, vertical = 6.dp)
-            ) {
-                Text(
-                    text = footerText,
-                    color = footerTextColor,
-                    fontSize = 14.sp,
-                    fontWeight = FontWeight.Bold,
-                    textAlign = TextAlign.Center
-                )
+                }
             }
         }
     }

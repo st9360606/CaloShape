@@ -126,6 +126,8 @@
     <!-- Onboarding: AgeSelectionScreen -->
     <string name="onboard_age_title">كم عمرك؟</string>
     <string name="onboard_age_subtitle">نستخدم عمرك فقط لتحسين تجربتك ودقة تقدير السعرات الحرارية.</string>
+
+
     <!-- Onboarding: HeightSelectionScreen -->
     <string name="onboard_height_title">ما طولك؟</string>
     <string name="onboard_height_subtitle">نستخدم بياناتك فقط لتحسين تجربتك وتقديرات السعرات الحرارية.</string>
@@ -193,9 +195,11 @@
     <string name="onboard_notif_title">اجعل كل وجبة مهمة!</string>
     <string name="onboard_notif_subtitle">فعّل الإشعارات للحصول على تذكيرات لطيفة لتسجيل الوجبات، كي تبقى السعرات والعناصر الكبرى وتقدمك على المسار الصحيح. قد تحدث الهفوات؛ وتساعدك التنبيهات في الوقت المناسب على العودة بسرعة.</string>
     <string name="onboard_allow_notifications_cta">السماح بالإشعارات</string>
-    <string name="notification_mock_app_title">عداد السعرات الحرارية بالذكاء الاصطناعي</string>
+    <string name="notification_mock_app_title">عداد السعرات بالذكاء الاصطناعي</string>
     <string name="onboard_notif_title_got_a_sec">وجبتك لن تسجّل نفسها 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">سجّل هذه الوجبة للحفاظ على السعرات والعناصر الكبرى على المسار الصحيح.</string>
+
+
     <!-- Onboarding: HealthConnectIntroScreen -->
     <string name="onboard_hc_connect_title_prefix">الاتصال بـ</string>
     <string name="onboard_hc_connect_title_service">Health Connect</string>
@@ -348,21 +352,28 @@
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
     <string name="home_calories_goal_label">السعرات المتبقية</string>
-    <string name="home_calories_eaten_label">السعرات المتناولة</string>
+    <string name="home_calories_eaten_label">السعرات المستهلكة</string>
+
+
     <!-- HomeCards :  Nutrition Card -->
     <string name="home_nutrition_ratio_grams">%1$d / %2$dg</string>
-    <string name="home_protein_goal_label">البروتين المتبقي</string>
-    <string name="home_protein_eaten_label">البروتين المستهلك</string>
-    <string name="home_carbs_goal_label">الكربوهيدرات المتبقية</string>
-    <string name="home_carbs_eaten_label">الكربوهيدرات المستهلكة</string>
-    <string name="home_fats_goal_label">الدهون المتبقية</string>
-    <string name="home_fats_eaten_label">الدهون المستهلكة</string>
-    <string name="home_fiber_goal_label">الألياف المتبقية</string>
-    <string name="home_fiber_eaten_label">الألياف المستهلكة</string>
-    <string name="home_sugar_goal_label">السكر المتبقي</string>
-    <string name="home_sugar_eaten_label">السكر المستهلك</string>
-    <string name="home_sodium_goal_label">الصوديوم المتبقي</string>
-    <string name="home_sodium_eaten_label">الصوديوم المستهلك</string>
+    <string name="home_protein_goal_label">البروتين</string>
+    <string name="home_protein_eaten_label">البروتين</string>
+
+    <string name="home_carbs_goal_label">الكربوهيدرات</string>
+    <string name="home_carbs_eaten_label">الكربوهيدرات</string>
+
+    <string name="home_fats_goal_label">الدهون</string>
+    <string name="home_fats_eaten_label">الدهون</string>
+
+    <string name="home_fiber_goal_label">الألياف</string>
+    <string name="home_fiber_eaten_label">الألياف</string>
+
+    <string name="home_sugar_goal_label">السكر</string>
+    <string name="home_sugar_eaten_label">السكر</string>
+
+    <string name="home_sodium_goal_label">الصوديوم</string>
+    <string name="home_sodium_eaten_label">الصوديوم</string>
     <string name="home_nutrition_ratio_mg">%1$d / %2$dmg</string>
 
 
@@ -428,19 +439,19 @@
     <!-- =========================
          BMI Card / BMI Info Dialog
          ========================= -->
-    <string name="bmi_card_title">مؤشر BMI الخاص بك</string>
-    <string name="bmi_card_subtitle">وزنك هو</string>
+    <string name="bmi_card_title">مؤشر كتلة الجسم لديك</string>
+    <string name="bmi_card_subtitle">حالة وزنك</string>
 
-    <string name="bmi_status_underweight">نقص وزن</string>
-    <string name="bmi_status_healthy">صحي</string>
-    <string name="bmi_status_overweight">زيادة وزن</string>
+    <string name="bmi_status_underweight">نقص الوزن</string>
+    <string name="bmi_status_healthy">طبيعي</string>
+    <string name="bmi_status_overweight">وزن زائد</string>
     <string name="bmi_status_obese">سمنة</string>
     <string name="bmi_status_unknown">غير معروف</string>
 
     <string name="bmi_range_underweight">&lt;18.5</string>
     <string name="bmi_range_healthy">18.5–24.9</string>
     <string name="bmi_range_overweight">25.0–29.9</string>
-    <string name="bmi_range_obese">&gt;30.0</string>
+    <string name="bmi_range_obese">≥30.0</string>
 
     <string name="bmi_info_title">ما هو BMI؟</string>
     <string name="bmi_info_subtitle">مؤشر كتلة الجسم</string>
@@ -449,7 +460,7 @@
     <string name="bmi_info_meaning_title">ماذا يخبرك؟</string>
     <string name="bmi_info_meaning_body">يساعد BMI على تقدير ما إذا كان وزن جسمك ضمن نطاق صحي عام.</string>
     <string name="bmi_info_note_title">تذكّر</string>
-    <string name="bmi_info_note_body">BMI دليل عام. لا يقيس دهون الجسم أو الكتلة العضلية أو الصحة العامة بشكل مباشر.</string>
+    <string name="bmi_info_note_body">BMI مؤشر عام. لا يقيس دهون الجسم أو الكتلة العضلية أو الصحة العامة بشكل مباشر.</string>
     <string name="bmi_info_cta">فهمت</string>
 
 
@@ -463,6 +474,8 @@
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
     <string name="progress_chart_total_calories">إجمالي السعرات</string>
+    <string name="progress_chart_average_label">متوسط</string>
+    <string name="progress_chart_no_records">لا توجد سجلات بعد</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">البروتين</string>
     <string name="progress_legend_carbs">الكربوهيدرات</string>
@@ -477,12 +490,12 @@
     <string name="progress_day_fri">الجمعة</string>
     <string name="progress_day_sat">السبت</string>
 
-    <string name="progress_tooltip_calories">السعرات الحرارية</string>
+    <string name="progress_tooltip_calories">السعرات</string>
     <string name="progress_tooltip_protein">البروتين</string>
     <string name="progress_tooltip_carbs">الكربوهيدرات</string>
     <string name="progress_tooltip_fats">الدهون</string>
     <string name="progress_tooltip_label_format">%1$s:</string>
-    <string name="progress_tooltip_grams_value">%1$d g</string>
+    <string name="progress_tooltip_grams_value">%1$dg</string>
     <string name="progress_tooltip_plain_value">%1$d</string>
 
 
@@ -505,6 +518,8 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
+    <string name="activity_chart_average_goal_reached">متوسط النشاط اليومي يحقق الهدف</string>
+    <string name="activity_chart_average_goal_left">متوسط النشاط اليومي أقل من الهدف بمقدار %1$d kcal</string>
     <string name="activity_chart_goal_reached">تم الوصول إلى هدف اليوم</string>
     <string name="activity_chart_goal_left">بقي %1$d kcal للوصول إلى هدف اليوم</string>
     <string name="activity_chart_title">حرق النشاط</string>
@@ -523,6 +538,8 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
+    <string name="water_chart_average_goal_reached">متوسط شرب الماء اليومي يحقق الهدف</string>
+    <string name="water_chart_average_goal_left_ml">متوسط شرب الماء اليومي أقل من الهدف بمقدار %1$s ml</string>
     <string name="water_chart_goal_reached">تم الوصول إلى هدف اليوم</string>
     <string name="water_chart_goal_left_ml">بقي %1$s ml للوصول إلى هدف اليوم</string>
     <string name="water_chart_title">مدخول الماء</string>

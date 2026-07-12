@@ -468,6 +468,8 @@
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
     <string name="progress_chart_total_calories">Total calories</string>
+    <string name="progress_chart_average_label">Average</string>
+    <string name="progress_chart_no_records">No records yet</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Protein</string>
     <string name="progress_legend_carbs">Carbs</string>
@@ -510,6 +512,8 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
+    <string name="activity_chart_average_goal_reached">Average daily activity goal met</string>
+    <string name="activity_chart_average_goal_left">Average daily activity is %1$d kcal below goal</string>
     <string name="activity_chart_goal_reached">Goal reached today</string>
     <string name="activity_chart_goal_left">%1$d kcal left to hit today\'s goal</string>
     <string name="activity_chart_title">Activity burn</string>
@@ -528,6 +532,8 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
+    <string name="water_chart_average_goal_reached">Average daily water goal met</string>
+    <string name="water_chart_average_goal_left_ml">Average daily water intake is %1$s ml below goal</string>
     <string name="water_chart_goal_reached">Goal reached for today</string>
     <string name="water_chart_goal_left_ml">%1$s ml left to reach today\'s goal</string>
     <string name="water_chart_title">Water intake</string>

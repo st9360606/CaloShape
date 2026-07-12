@@ -474,6 +474,8 @@
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
     <string name="progress_chart_total_calories">Totale calorieën</string>
+    <string name="progress_chart_average_label">Gemiddelde</string>
+    <string name="progress_chart_no_records">Nog geen gegevens</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Eiwit</string>
     <string name="progress_legend_carbs">Carbs</string>
@@ -516,6 +518,8 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
+    <string name="activity_chart_average_goal_reached">Gemiddeld dagelijks activiteitsdoel bereikt</string>
+    <string name="activity_chart_average_goal_left">Gemiddelde dagelijkse activiteit ligt %1$d kcal onder het doel</string>
     <string name="activity_chart_goal_reached">Doel vandaag bereikt</string>
     <string name="activity_chart_goal_left">Nog %1$d kcal tot je doel</string>
     <string name="activity_chart_title">Activiteitsverbruik</string>
@@ -534,6 +538,8 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
+    <string name="water_chart_average_goal_reached">Gemiddeld dagelijks drinkdoel bereikt</string>
+    <string name="water_chart_average_goal_left_ml">Gemiddelde dagelijkse waterinname ligt %1$s ml onder het doel</string>
     <string name="water_chart_goal_reached">Doel vandaag bereikt</string>
     <string name="water_chart_goal_left_ml">Nog %1$s ml tot je doel</string>
     <string name="water_chart_title">Waterinname</string>

@@ -473,6 +473,8 @@
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
     <string name="progress_chart_total_calories">合計カロリー</string>
+    <string name="progress_chart_average_label">平均</string>
+    <string name="progress_chart_no_records">記録はまだありません</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">タンパク質</string>
     <string name="progress_legend_carbs">炭水化物</string>
@@ -515,6 +517,8 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
+    <string name="activity_chart_average_goal_reached">平均の1日活動目標を達成</string>
+    <string name="activity_chart_average_goal_left">平均の1日活動量は目標より%1$d kcal不足</string>
     <string name="activity_chart_goal_reached">今日の目標を達成しました</string>
     <string name="activity_chart_goal_left">今日の目標まで残り%1$d kcal</string>
     <string name="activity_chart_title">活動消費</string>
@@ -533,6 +537,8 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
+    <string name="water_chart_average_goal_reached">平均の1日水分目標を達成</string>
+    <string name="water_chart_average_goal_left_ml">平均の1日水分摂取量は目標より%1$s ml不足</string>
     <string name="water_chart_goal_reached">今日の目標を達成しました</string>
     <string name="water_chart_goal_left_ml">今日の目標まで残り%1$s ml</string>
     <string name="water_chart_title">水分摂取</string>

@@ -469,6 +469,8 @@
     <string name="progress_chart_loading_delta">↑ --%%</string>
     <string name="progress_chart_delta_placeholder">--%%</string>
     <string name="progress_chart_total_calories">Tổng calo</string>
+    <string name="progress_chart_average_label">Trung bình</string>
+    <string name="progress_chart_no_records">Chưa có dữ liệu</string>
     <string name="progress_chart_cals">kcal</string>
     <string name="progress_legend_protein">Protein</string>
     <string name="progress_legend_carbs">Carb</string>
@@ -511,6 +513,8 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
+    <string name="activity_chart_average_goal_reached">Hoạt động trung bình hằng ngày đạt mục tiêu</string>
+    <string name="activity_chart_average_goal_left">Hoạt động trung bình hằng ngày thấp hơn mục tiêu %1$d kcal</string>
     <string name="activity_chart_goal_reached">Đã đạt mục tiêu hôm nay</string>
     <string name="activity_chart_goal_left">Còn %1$d kcal để đạt mục tiêu hôm nay</string>
     <string name="activity_chart_title">Calo hoạt động</string>
@@ -529,6 +533,8 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
+    <string name="water_chart_average_goal_reached">Lượng nước trung bình hằng ngày đạt mục tiêu</string>
+    <string name="water_chart_average_goal_left_ml">Lượng nước uống trung bình hằng ngày thấp hơn mục tiêu %1$s ml</string>
     <string name="water_chart_goal_reached">Đã đạt mục tiêu hôm nay</string>
     <string name="water_chart_goal_left_ml">Còn %1$s ml để đạt mục tiêu hôm nay</string>
     <string name="water_chart_title">Lượng nước uống</string>

@@ -123,7 +123,7 @@ fun ProgressScreen(
                 else -> {
                     item {
                         NutritionChartCard(
-                            totalCaloriesText = ui.totalCaloriesText,
+                            averageDailyCalories = ui.averageDailyCalories,
                             average7Calories = ui.average7Calories,
                             average15Calories = ui.average15Calories,
                             days = ui.days,
@@ -134,7 +134,7 @@ fun ProgressScreen(
                     item {
                         MicronutrientChartCard(
                             days = ui.days,
-                            weekOffset = ui.selectedWeekOffset,
+                            averageSelectedWeekMicronutrientG = ui.averageSelectedWeekMicronutrientG,
                             average7FiberG = ui.average7FiberG,
                             average7SugarG = ui.average7SugarG,
                             average7SodiumMg = ui.average7SodiumMg,
