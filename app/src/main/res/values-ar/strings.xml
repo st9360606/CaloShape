@@ -518,10 +518,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_average_goal_reached">متوسط النشاط اليومي يحقق الهدف</string>
-    <string name="activity_chart_average_goal_left">متوسط النشاط اليومي أقل من الهدف بمقدار %1$d kcal</string>
-    <string name="activity_chart_goal_reached">تم الوصول إلى هدف اليوم</string>
-    <string name="activity_chart_goal_left">بقي %1$d kcal للوصول إلى هدف اليوم</string>
+    <string name="activity_chart_encouragement">كل حركة تقرّبك من صحة أفضل، واصل التقدم!</string>
     <string name="activity_chart_title">حرق النشاط</string>
     <string name="activity_chart_info_dialog_body">يشمل التمارين المسجلة وسعرات النشاط المقدرة من الخطوات اليومية.\n\nالهدف = هدف التمرين اليومي + سعرات الخطوات. سعرات الخطوات = أحدث وزن (kg) × هدف الخطوات اليومي × 0.0005، مع التقريب. إذا لم يتوفر الوزن أو هدف الخطوات، يستخدم الهدف هدف التمرين فقط؛ وإذا لم يتم تعيين هدف تمرين، يستخدم 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -538,10 +535,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_average_goal_reached">متوسط شرب الماء اليومي يحقق الهدف</string>
-    <string name="water_chart_average_goal_left_ml">متوسط شرب الماء اليومي أقل من الهدف بمقدار %1$s ml</string>
-    <string name="water_chart_goal_reached">تم الوصول إلى هدف اليوم</string>
-    <string name="water_chart_goal_left_ml">بقي %1$s ml للوصول إلى هدف اليوم</string>
+    <string name="water_chart_encouragement">تذكّر شرب الماء بانتظام للحفاظ على نشاط جسمك!</string>
     <string name="water_chart_title">مدخول الماء</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">الهدف</string>

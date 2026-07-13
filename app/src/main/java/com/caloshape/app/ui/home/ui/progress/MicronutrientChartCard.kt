@@ -156,9 +156,9 @@ private fun MicronutrientChartCardFrame(
                         Text(
                             text = stringResource(R.string.progress_chart_no_records),
                             color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
-                            fontSize = 22.sp,
+                            fontSize = 16.sp,
                             fontWeight = FontWeight.SemiBold,
-                            lineHeight = 28.sp
+                            lineHeight = 20.sp
                         )
                     } else Row(verticalAlignment = Alignment.Bottom) {
                         Text(

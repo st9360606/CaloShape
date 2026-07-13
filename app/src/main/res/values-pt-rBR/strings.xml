@@ -518,10 +518,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_average_goal_reached">A média diária de atividade atinge a meta</string>
-    <string name="activity_chart_average_goal_left">A atividade diária média está %1$d kcal abaixo da meta</string>
-    <string name="activity_chart_goal_reached">Meta alcançada hoje</string>
-    <string name="activity_chart_goal_left">Faltam %1$d kcal hoje</string>
+    <string name="activity_chart_encouragement">Cada atividade contribui para sua saúde. Continue se movimentando!</string>
     <string name="activity_chart_title">Gasto de atividade</string>
     <string name="activity_chart_info_dialog_body">Inclui treinos registrados e calorias de atividade estimadas pelos passos diários.\n\nMeta = meta diária de treino + calorias dos passos. Calorias dos passos = peso mais recente (kg) × meta diária de passos × 0.0005, arredondado. Se faltar peso ou meta de passos, a meta usa apenas a meta de treino; se não houver meta de treino definida, usa 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -538,10 +535,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_average_goal_reached">A média diária de água atinge a meta</string>
-    <string name="water_chart_average_goal_left_ml">A ingestão média diária de água está %1$s ml abaixo da meta</string>
-    <string name="water_chart_goal_reached">Meta de hoje alcançada</string>
-    <string name="water_chart_goal_left_ml">Faltam %1$s ml hoje</string>
+    <string name="water_chart_encouragement">Hidrate-se regularmente para manter seu corpo no seu melhor!</string>
     <string name="water_chart_title">Consumo de água</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Meta</string>

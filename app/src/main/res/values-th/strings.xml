@@ -516,10 +516,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_average_goal_reached">ค่าเฉลี่ยกิจกรรมรายวันถึงเป้าหมายแล้ว</string>
-    <string name="activity_chart_average_goal_left">กิจกรรมเฉลี่ยรายวันต่ำกว่าเป้าหมาย %1$d kcal</string>
-    <string name="activity_chart_goal_reached">ถึงเป้าหมายวันนี้แล้ว</string>
-    <string name="activity_chart_goal_left">เหลือ %1$d kcal เพื่อถึงเป้าหมายวันนี้</string>
+    <string name="activity_chart_encouragement">ทุกกิจกรรมช่วยเสริมสุขภาพของคุณ เคลื่อนไหวต่อไปนะ!</string>
     <string name="activity_chart_title">แคลอรีจากกิจกรรม</string>
     <string name="activity_chart_info_dialog_body">รวมการออกกำลังกายที่บันทึกไว้ และแคลอรีกิจกรรมที่ประเมินจากจำนวนก้าวรายวัน\n\nเป้าหมาย = เป้าหมายออกกำลังกายรายวัน + แคลอรีจากก้าว แคลอรีจากก้าว = น้ำหนักล่าสุด (kg) × เป้าหมายก้าวรายวัน × 0.0005 แล้วปัดเศษ หากไม่มีน้ำหนักหรือเป้าหมายก้าว จะใช้เฉพาะเป้าหมายออกกำลังกาย; หากไม่ได้ตั้งเป้าหมายออกกำลังกาย จะใช้ 450 kcal</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -536,10 +533,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_average_goal_reached">ค่าเฉลี่ยการดื่มน้ำรายวันถึงเป้าหมายแล้ว</string>
-    <string name="water_chart_average_goal_left_ml">การดื่มน้ำเฉลี่ยรายวันต่ำกว่าเป้าหมาย %1$s ml</string>
-    <string name="water_chart_goal_reached">ถึงเป้าหมายวันนี้แล้ว</string>
-    <string name="water_chart_goal_left_ml">เหลือ %1$s ml เพื่อถึงเป้าหมายวันนี้</string>
+    <string name="water_chart_encouragement">อย่าลืมดื่มน้ำเป็นประจำเพื่อให้ร่างกายพร้อมที่สุด!</string>
     <string name="water_chart_title">ปริมาณน้ำที่ดื่ม</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">เป้าหมาย</string>

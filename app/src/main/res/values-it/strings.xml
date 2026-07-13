@@ -519,10 +519,7 @@ Resta sul piano ogni giorno.</string>
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_average_goal_reached">L\'obiettivo medio giornaliero di attività è raggiunto</string>
-    <string name="activity_chart_average_goal_left">L\'attività media giornaliera è %1$d kcal sotto l\'obiettivo</string>
-    <string name="activity_chart_goal_reached">Obiettivo raggiunto oggi</string>
-    <string name="activity_chart_goal_left">%1$d kcal restanti oggi</string>
+    <string name="activity_chart_encouragement">Ogni attività fa bene alla tua salute. Continua a muoverti!</string>
     <string name="activity_chart_title">Calorie attività</string>
     <string name="activity_chart_info_dialog_body">Include gli allenamenti registrati e le kcal da attività stimate dai passi giornalieri.\n\nObiettivo = obiettivo giornaliero di allenamento + calorie dei passi. Calorie dei passi = peso più recente (kg) × obiettivo giornaliero di passi × 0.0005, arrotondato. Se mancano peso o obiettivo passi, l’obiettivo usa solo l’obiettivo di allenamento; se non è impostato, usa 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -539,10 +536,7 @@ Resta sul piano ogni giorno.</string>
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_average_goal_reached">L\'obiettivo medio giornaliero di acqua è raggiunto</string>
-    <string name="water_chart_average_goal_left_ml">L\'assunzione media giornaliera di acqua è %1$s ml sotto l\'obiettivo</string>
-    <string name="water_chart_goal_reached">Obiettivo raggiunto oggi</string>
-    <string name="water_chart_goal_left_ml">%1$s ml restanti oggi</string>
+    <string name="water_chart_encouragement">Ricordati di bere regolarmente per mantenere il corpo al meglio!</string>
     <string name="water_chart_title">Acqua assunta</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Obiettivo</string>

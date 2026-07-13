@@ -357,8 +357,6 @@
     <string name="progress_tooltip_sugar">סוכר</string>
     <string name="progress_tooltip_sodium">נתרן</string>
     <string name="progress_tooltip_mg_value">%1$d mg</string>
-    <string name="activity_chart_goal_reached">היעד הושג היום</string>
-    <string name="activity_chart_goal_left">נותרו %1$d kcal כדי להגיע ליעד היום</string>
     <string name="activity_chart_title">שריפת פעילות</string>
     <string name="activity_chart_info_dialog_body">כולל אימונים שנרשמו ו-kcal פעילות המוערכים מצעדים יומיים.\n\nיעד = יעד אימון יומי + קלוריות צעדים. קלוריות צעדים = המשקל האחרון (kg) × יעד צעדים יומי × 0.0005, מעוגל. אם חסר משקל או יעד צעדים, היעד משתמש רק ביעד האימון; אם לא הוגדר יעד אימון, משתמשים ב-450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -370,8 +368,6 @@
     <string name="activity_legend_daily_goal">יעד יומי</string>
     <string name="activity_tooltip_burned">נשרף</string>
     <string name="activity_tooltip_kcal_value">%1$d kcal</string>
-    <string name="water_chart_goal_reached">היעד הושג היום</string>
-    <string name="water_chart_goal_left_ml">נותרו %1$s ml כדי להגיע ליעד היום</string>
     <string name="water_chart_title">צריכת מים</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">יעד</string>
@@ -850,12 +846,10 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_average_goal_reached">ממוצע הפעילות היומי עומד ביעד</string>
-    <string name="activity_chart_average_goal_left">ממוצע הפעילות היומי נמוך ב-%1$d kcal מהיעד</string>
+    <string name="activity_chart_encouragement">כל פעילות תורמת לבריאות. המשיכו לנוע!</string>
 
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_average_goal_reached">ממוצע השתייה היומי עומד ביעד</string>
-    <string name="water_chart_average_goal_left_ml">ממוצע השתייה היומי נמוך ב-%1$s ml מהיעד</string>
+    <string name="water_chart_encouragement">זכרו לשתות מים באופן קבוע כדי שהגוף ירגיש במיטבו!</string>
 </resources>

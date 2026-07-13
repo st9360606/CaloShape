@@ -518,10 +518,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_average_goal_reached">Gemiddeld dagelijks activiteitsdoel bereikt</string>
-    <string name="activity_chart_average_goal_left">Gemiddelde dagelijkse activiteit ligt %1$d kcal onder het doel</string>
-    <string name="activity_chart_goal_reached">Doel vandaag bereikt</string>
-    <string name="activity_chart_goal_left">Nog %1$d kcal tot je doel</string>
+    <string name="activity_chart_encouragement">Elke beweging draagt bij aan je gezondheid. Blijf in beweging!</string>
     <string name="activity_chart_title">Activiteitsverbruik</string>
     <string name="activity_chart_info_dialog_body">Inclusief gelogde trainingen en activiteitscalorieën op basis van je dagelijkse stappen.\n\nDoel = dagelijks trainingsdoel + stapcalorieën. Stapcalorieën = laatste gewicht (kg) × dagelijks stappendoel × 0.0005, afgerond. Als gewicht of stappendoel ontbreekt, gebruikt het doel alleen het trainingsdoel; als geen trainingsdoel is ingesteld, wordt 450 kcal gebruikt.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -538,10 +535,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_average_goal_reached">Gemiddeld dagelijks drinkdoel bereikt</string>
-    <string name="water_chart_average_goal_left_ml">Gemiddelde dagelijkse waterinname ligt %1$s ml onder het doel</string>
-    <string name="water_chart_goal_reached">Doel vandaag bereikt</string>
-    <string name="water_chart_goal_left_ml">Nog %1$s ml tot je doel</string>
+    <string name="water_chart_encouragement">Blijf goed gehydrateerd zodat je lichaam zich optimaal voelt!</string>
     <string name="water_chart_title">Waterinname</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Doel</string>

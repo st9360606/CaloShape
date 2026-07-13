@@ -527,10 +527,7 @@ Tetap sesuai rencana setiap hari.</string>
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_average_goal_reached">Rata-rata aktivitas harian mencapai target</string>
-    <string name="activity_chart_average_goal_left">Rata-rata aktivitas harian %1$d kcal di bawah target</string>
-    <string name="activity_chart_goal_reached">Target tercapai hari ini</string>
-    <string name="activity_chart_goal_left">Tersisa %1$d kcal hari ini</string>
+    <string name="activity_chart_encouragement">Setiap aktivitas menambah kesehatanmu. Terus bergerak!</string>
     <string name="activity_chart_title">Kalori aktivitas</string>
     <string name="activity_chart_info_dialog_body">Termasuk olahraga yang dicatat dan kcal aktivitas yang diperkirakan dari langkah harian.\n\nTarget = target olahraga harian + kalori langkah. Kalori langkah = berat terbaru (kg) × target langkah harian × 0.0005, dibulatkan. Jika berat atau target langkah tidak tersedia, target hanya memakai target olahraga; jika target olahraga belum diatur, digunakan 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -547,10 +544,7 @@ Tetap sesuai rencana setiap hari.</string>
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_average_goal_reached">Rata-rata minum harian mencapai target</string>
-    <string name="water_chart_average_goal_left_ml">Rata-rata minum harian %1$s ml di bawah target</string>
-    <string name="water_chart_goal_reached">Target hari ini tercapai</string>
-    <string name="water_chart_goal_left_ml">Tersisa %1$s ml hari ini</string>
+    <string name="water_chart_encouragement">Ingat minum cukup air agar tubuh tetap prima!</string>
     <string name="water_chart_title">Asupan air</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Target</string>

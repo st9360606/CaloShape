@@ -512,10 +512,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_average_goal_reached">Average daily activity goal met</string>
-    <string name="activity_chart_average_goal_left">Average daily activity is %1$d kcal below goal</string>
-    <string name="activity_chart_goal_reached">Goal reached today</string>
-    <string name="activity_chart_goal_left">%1$d kcal left to hit today\'s goal</string>
+    <string name="activity_chart_encouragement">Every bit of activity boosts your health. Keep moving!</string>
     <string name="activity_chart_title">Activity burn</string>
     <string name="activity_chart_info_dialog_body">Includes logged workouts and activity calories estimated from daily steps.\n\nGoal = daily workout goal + step calories. Step calories = latest weight (kg) × daily step goal × 0.0005, rounded. If weight or step goal is missing, the goal uses only the workout goal; if no workout goal is set, it uses 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -532,10 +529,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_average_goal_reached">Average daily water goal met</string>
-    <string name="water_chart_average_goal_left_ml">Average daily water intake is %1$s ml below goal</string>
-    <string name="water_chart_goal_reached">Goal reached for today</string>
-    <string name="water_chart_goal_left_ml">%1$s ml left to reach today\'s goal</string>
+    <string name="water_chart_encouragement">Stay hydrated to keep your body feeling its best!</string>
     <string name="water_chart_title">Water intake</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Goal</string>

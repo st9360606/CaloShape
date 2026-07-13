@@ -519,10 +519,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_average_goal_reached">Durchschnittliches Aktivitätsziel erreicht</string>
-    <string name="activity_chart_average_goal_left">Durchschnittliche Aktivität liegt %1$d kcal unter dem Ziel</string>
-    <string name="activity_chart_goal_reached">Ziel heute erreicht</string>
-    <string name="activity_chart_goal_left">Noch %1$d kcal bis zum heutigen Ziel</string>
+    <string name="activity_chart_encouragement">Jede Bewegung zählt – bleib aktiv!</string>
     <string name="activity_chart_title">Aktive kcal</string>
     <string name="activity_chart_info_dialog_body">Enthält eingetragene Workouts und Aktivitätskalorien, die aus täglichen Schritten geschätzt werden.\n\nZiel = tägliches Workout-Ziel + Schritt-Kalorien. Schritt-Kalorien = neuestes Gewicht (kg) × tägliches Schrittziel × 0.0005, gerundet. Wenn Gewicht oder Schrittziel fehlen, nutzt das Ziel nur das Workout-Ziel; wenn kein Workout-Ziel gesetzt ist, werden 450 kcal verwendet.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -539,10 +536,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_average_goal_reached">Durchschnittliches Trinkziel erreicht</string>
-    <string name="water_chart_average_goal_left_ml">Durchschnittliche Trinkmenge liegt %1$s ml unter dem Ziel</string>
-    <string name="water_chart_goal_reached">Ziel für heute erreicht</string>
-    <string name="water_chart_goal_left_ml">Noch %1$s ml bis zum heutigen Ziel</string>
+    <string name="water_chart_encouragement">Regelmäßig trinken und fit bleiben!</string>
     <string name="water_chart_title">Wasseraufnahme</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Ziel</string>

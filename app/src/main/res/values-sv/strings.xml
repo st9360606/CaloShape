@@ -518,10 +518,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_average_goal_reached">Genomsnittligt dagligt aktivitetsmål uppnått</string>
-    <string name="activity_chart_average_goal_left">Genomsnittlig daglig aktivitet ligger %1$d kcal under målet</string>
-    <string name="activity_chart_goal_reached">Målet nått i dag</string>
-    <string name="activity_chart_goal_left">%1$d kcal kvar till dagens mål</string>
+    <string name="activity_chart_encouragement">Varje aktivitet stärker din hälsa. Fortsätt röra på dig!</string>
     <string name="activity_chart_title">Aktivitet</string>
     <string name="activity_chart_info_dialog_body">Inkluderar loggade träningspass och aktivitetskalorier uppskattade från dagliga steg.\n\nMål = dagligt träningsmål + stegkalorier. Stegkalorier = senaste vikt (kg) × dagligt stegmål × 0.0005, avrundat. Om vikt eller stegmål saknas används bara träningsmålet; om inget träningsmål är inställt används 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -538,10 +535,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_average_goal_reached">Genomsnittligt dagligt drickmål uppnått</string>
-    <string name="water_chart_average_goal_left_ml">Genomsnittligt dagligt vattenintag ligger %1$s ml under målet</string>
-    <string name="water_chart_goal_reached">Dagens mål nått</string>
-    <string name="water_chart_goal_left_ml">%1$s ml kvar till dagens mål</string>
+    <string name="water_chart_encouragement">Kom ihåg att dricka regelbundet så att kroppen mår som bäst!</string>
     <string name="water_chart_title">Vattenintag</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Mål</string>

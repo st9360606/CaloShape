@@ -75,14 +75,7 @@ internal fun WaterChartCard(
     chart: WaterChartUi,
     modifier: Modifier = Modifier
 ) {
-    val footerText = when {
-        chart.averageSelectedWeekMl == null -> null
-        chart.reachedAverageGoal -> stringResource(R.string.water_chart_average_goal_reached)
-        else -> stringResource(
-            R.string.water_chart_average_goal_left_ml,
-            formatMlPlain(chart.averageGoalRemainingMl)
-        )
-    }
+    val footerText = stringResource(R.string.water_chart_encouragement)
 
     WaterChartCardFrame(
         title = stringResource(R.string.water_chart_title),
@@ -234,23 +227,25 @@ private fun WaterChartCardFrame(
                 if (isDark) HomeCardStyles.Chart.border() else colors.border,
                 RoundedCornerShape(28.dp)
             )
-            .padding(horizontal = 26.dp, vertical = 26.dp)
     ) {
         val metricChipWidth = 102.dp
 
         Column(
             modifier = Modifier.fillMaxWidth()
         ) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.Top
+            Column(
+                modifier = Modifier.padding(start = 26.dp, top = 26.dp, end = 26.dp)
             ) {
-                Column(
-                    modifier = Modifier.weight(1f),
-                    horizontalAlignment = Alignment.Start,
-                    verticalArrangement = Arrangement.spacedBy(6.dp)
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.Top
                 ) {
+                    Column(
+                        modifier = Modifier.weight(1f),
+                        horizontalAlignment = Alignment.Start,
+                        verticalArrangement = Arrangement.spacedBy(6.dp)
+                    ) {
                     Text(
                         text = title,
                         color = if (isDark) HomeCardStyles.Text.primary() else colors.textPrimary,
@@ -270,9 +265,9 @@ private fun WaterChartCardFrame(
                         Text(
                             text = stringResource(R.string.progress_chart_no_records),
                             color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
-                            fontSize = 22.sp,
+                            fontSize = 16.sp,
                             fontWeight = FontWeight.SemiBold,
-                            lineHeight = 28.sp
+                            lineHeight = 20.sp
                         )
                     } else Row(
                         verticalAlignment = Alignment.Bottom
@@ -295,60 +290,65 @@ private fun WaterChartCardFrame(
                             modifier = Modifier.padding(bottom = 4.dp)
                         )
                     }
+                    }
+
+                    Spacer(modifier = Modifier.width(12.dp))
+
+                    Column(
+                        modifier = Modifier.offset(x = 12.dp),
+                        horizontalAlignment = Alignment.End,
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        WaterMetricChip(
+                            label = goalText,
+                            value = goalValue,
+                            accentColor = WaterGoalLineColor,
+                            modifier = Modifier.width(metricChipWidth)
+                        )
+
+                        WaterMetricChip(
+                            label = avgText,
+                            value = avgValue,
+                            accentColor = WaterBarColor,
+                            modifier = Modifier.width(metricChipWidth)
+                        )
+                    }
                 }
 
-                Spacer(modifier = Modifier.width(12.dp))
+                Spacer(modifier = Modifier.height(18.dp))
 
-                Column(
-                    modifier = Modifier.offset(x = 12.dp),
-                    horizontalAlignment = Alignment.End,
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    WaterMetricChip(
-                        label = goalText,
-                        value = goalValue,
-                        accentColor = WaterGoalLineColor,
-                        modifier = Modifier.width(metricChipWidth)
-                    )
+                chartContent()
 
-                    WaterMetricChip(
-                        label = avgText,
-                        value = avgValue,
-                        accentColor = WaterBarColor,
-                        modifier = Modifier.width(metricChipWidth)
-                    )
-                }
+                Spacer(modifier = Modifier.height(18.dp))
+
+                WaterLegendRow()
             }
-
-            Spacer(modifier = Modifier.height(18.dp))
-
-            chartContent()
-
-            Spacer(modifier = Modifier.height(18.dp))
-
-            WaterLegendRow()
 
             footerText?.let { text ->
                 Spacer(modifier = Modifier.height(14.dp))
 
                 Box(
                     modifier = Modifier
-                        .align(Alignment.CenterHorizontally)
+                        .fillMaxWidth()
+                        .padding(horizontal = 12.dp)
                         .background(
                             color = resolvedFooterBackground,
                             shape = RoundedCornerShape(12.dp)
                         )
-                        .padding(horizontal = 8.dp, vertical = 6.dp)
+                        .padding(horizontal = 6.dp, vertical = 6.dp)
                 ) {
                     Text(
                         text = text,
                         color = footerTextColor,
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        textAlign = TextAlign.Center
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth()
                     )
                 }
             }
+
+            Spacer(modifier = Modifier.height(26.dp))
         }
     }
 }

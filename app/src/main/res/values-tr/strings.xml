@@ -519,10 +519,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_average_goal_reached">Ortalama günlük aktivite hedefi karşılandı</string>
-    <string name="activity_chart_average_goal_left">Ortalama günlük aktivite hedeften %1$d kcal düşük</string>
-    <string name="activity_chart_goal_reached">Bugünkü hedefe ulaşıldı</string>
-    <string name="activity_chart_goal_left">Bugünkü hedefe ulaşmak için %1$d kcal kaldı</string>
+    <string name="activity_chart_encouragement">Her hareket sağlığına katkı sağlar. Hareket etmeye devam et!</string>
     <string name="activity_chart_title">Aktivite yakımı</string>
     <string name="activity_chart_info_dialog_body">Kaydedilen egzersizleri ve günlük adımlardan tahmin edilen aktivite kalorilerini içerir.\n\nHedef = günlük egzersiz hedefi + adım kalorileri. Adım kalorileri = en son kilo (kg) × günlük adım hedefi × 0.0005, yuvarlanmış. Kilo veya adım hedefi yoksa hedef yalnızca egzersiz hedefini kullanır; egzersiz hedefi ayarlanmamışsa 450 kcal kullanılır.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -539,10 +536,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_average_goal_reached">Ortalama günlük su hedefi karşılandı</string>
-    <string name="water_chart_average_goal_left_ml">Ortalama günlük su tüketimi hedeften %1$s ml düşük</string>
-    <string name="water_chart_goal_reached">Bugünkü hedefe ulaşıldı</string>
-    <string name="water_chart_goal_left_ml">Bugünkü hedefe ulaşmak için %1$s ml kaldı</string>
+    <string name="water_chart_encouragement">Vücudunun en iyi durumda kalması için düzenli su içmeyi unutma!</string>
     <string name="water_chart_title">Su tüketimi</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Hedef</string>

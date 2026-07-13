@@ -73,14 +73,7 @@ internal fun ActivityChartCard(
     chart: WorkoutChartUi,
     modifier: Modifier = Modifier
 ) {
-    val footerText = when {
-        chart.averageSelectedWeekBurnedKcal == null -> null
-        chart.reachedAverageGoal -> stringResource(R.string.activity_chart_average_goal_reached)
-        else -> stringResource(
-            R.string.activity_chart_average_goal_left,
-            chart.averageGoalRemainingKcal
-        )
-    }
+    val footerText = stringResource(R.string.activity_chart_encouragement)
 
     ActivityChartCardFrame(
         title = stringResource(R.string.activity_chart_title),
@@ -233,23 +226,25 @@ private fun ActivityChartCardFrame(
                 if (isDark) HomeCardStyles.Chart.border() else colors.border,
                 RoundedCornerShape(28.dp)
             )
-            .padding(horizontal = 26.dp, vertical = 26.dp)
     ) {
         val metricChipWidth = 102.dp
 
         Column(
             modifier = Modifier.fillMaxWidth()
         ) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.Top
+            Column(
+                modifier = Modifier.padding(start = 26.dp, top = 26.dp, end = 26.dp)
             ) {
-                Column(
-                    modifier = Modifier.weight(1f),
-                    horizontalAlignment = Alignment.Start,
-                    verticalArrangement = Arrangement.spacedBy(6.dp)
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.Top
                 ) {
+                    Column(
+                        modifier = Modifier.weight(1f),
+                        horizontalAlignment = Alignment.Start,
+                        verticalArrangement = Arrangement.spacedBy(6.dp)
+                    ) {
                     Row(
                         modifier = Modifier.padding(top = 10.dp),
                         verticalAlignment = Alignment.CenterVertically,
@@ -294,9 +289,9 @@ private fun ActivityChartCardFrame(
                         Text(
                             text = stringResource(R.string.progress_chart_no_records),
                             color = if (isDark) HomeCardStyles.Text.secondary() else colors.textSecondary,
-                            fontSize = 22.sp,
+                            fontSize = 16.sp,
                             fontWeight = FontWeight.SemiBold,
-                            lineHeight = 28.sp
+                            lineHeight = 20.sp
                         )
                     } else Row(verticalAlignment = Alignment.Bottom) {
                         Text(
@@ -318,58 +313,62 @@ private fun ActivityChartCardFrame(
                         )
 
                     }
+                    }
+
+                    Spacer(modifier = Modifier.width(12.dp))
+
+                    Column(
+                        modifier = Modifier.offset(x = 12.dp),
+                        horizontalAlignment = Alignment.End,
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        WorkoutMetricChip(
+                            label = goalText,
+                            value = goalValue,
+                            accentColor = WorkoutGoalLineColor,
+                            modifier = Modifier.width(metricChipWidth)
+                        )
+
+                        WorkoutMetricChip(
+                            label = avgText,
+                            value = avgValue,
+                            accentColor = WorkoutBarColor,
+                            modifier = Modifier.width(metricChipWidth)
+                        )
+                    }
                 }
 
-                Spacer(modifier = Modifier.width(12.dp))
+                Spacer(modifier = Modifier.height(18.dp))
 
-                Column(
-                    modifier = Modifier.offset(x = 12.dp),
-                    horizontalAlignment = Alignment.End,
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    WorkoutMetricChip(
-                        label = goalText,
-                        value = goalValue,
-                        accentColor = WorkoutGoalLineColor,
-                        modifier = Modifier.width(metricChipWidth)
-                    )
+                chartContent()
 
-                    WorkoutMetricChip(
-                        label = avgText,
-                        value = avgValue,
-                        accentColor = WorkoutBarColor,
-                        modifier = Modifier.width(metricChipWidth)
-                    )
-                }
+                Spacer(modifier = Modifier.height(18.dp))
+
+                WorkoutLegendRow()
             }
-
-            Spacer(modifier = Modifier.height(18.dp))
-
-            chartContent()
-
-            Spacer(modifier = Modifier.height(18.dp))
-
-            WorkoutLegendRow()
 
             footerText?.let { text ->
                 Spacer(modifier = Modifier.height(14.dp))
 
                 Box(
                     modifier = Modifier
-                        .align(Alignment.CenterHorizontally)
+                        .fillMaxWidth()
+                        .padding(horizontal = 12.dp)
                         .background(resolvedFooterBackground, RoundedCornerShape(12.dp))
-                        .padding(horizontal = 8.dp, vertical = 6.dp)
+                        .padding(horizontal = 6.dp, vertical = 6.dp)
                 ) {
                     Text(
                         text = text,
                         color = footerTextColor,
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        textAlign = TextAlign.Center
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth()
                     )
                 }
             }
 
+            Spacer(modifier = Modifier.height(26.dp))
         }
     }
 

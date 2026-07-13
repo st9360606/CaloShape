@@ -510,10 +510,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_average_goal_reached">平均每天达到活动目标</string>
-    <string name="activity_chart_average_goal_left">平均每天还差 %1$d kcal</string>
-    <string name="activity_chart_goal_reached">今天已达成目标</string>
-    <string name="activity_chart_goal_left">距离今日目标还差 %1$d kcal</string>
+    <string name="activity_chart_encouragement">每一次活动都在为健康加分，继续动起来！</string>
     <string name="activity_chart_title">活动消耗</string>
     <string name="activity_chart_info_dialog_body">此数值包含手动记录的运动，以及步数推估的日常活动消耗。\n\n目标 = 每日运动目标 + 步数卡路里。步数卡路里 = 最新体重（kg）× 每日步数目标 × 0.0005，并四舍五入。如果没有体重或步数目标，就只使用每日运动目标；如果没有设置每日运动目标，会使用 450 kcal。</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -530,10 +527,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_average_goal_reached">平均每天达到喝水目标</string>
-    <string name="water_chart_average_goal_left_ml">平均每天还差 %1$s ml</string>
-    <string name="water_chart_goal_reached">今日已达成目标</string>
-    <string name="water_chart_goal_left_ml">距离今日目标还差 %1$s ml</string>
+    <string name="water_chart_encouragement">记得适时补充水分，让身体保持最佳状态！</string>
     <string name="water_chart_title">喝水量</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">目标</string>

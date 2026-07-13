@@ -513,10 +513,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_average_goal_reached">औसत दैनिक गतिविधि लक्ष्य पूरा हुआ</string>
-    <string name="activity_chart_average_goal_left">औसत दैनिक गतिविधि लक्ष्य से %1$d kcal कम है</string>
-    <string name="activity_chart_goal_reached">आज लक्ष्य पूरा हुआ</string>
-    <string name="activity_chart_goal_left">आज के लक्ष्य तक पहुंचने के लिए %1$d kcal शेष</string>
+    <string name="activity_chart_encouragement">हर गतिविधि आपके स्वास्थ्य को बेहतर बनाती है। चलते रहें!</string>
     <string name="activity_chart_title">गतिविधि से बर्न</string>
     <string name="activity_chart_info_dialog_body">इसमें लॉग किए गए वर्कआउट और दैनिक कदमों से अनुमानित गतिविधि kcal शामिल हैं।\n\nलक्ष्य = दैनिक वर्कआउट लक्ष्य + कदमों की कैलोरी। कदमों की कैलोरी = नवीनतम वजन (kg) × दैनिक कदम लक्ष्य × 0.0005, राउंड करके। अगर वजन या कदम लक्ष्य उपलब्ध नहीं है, तो लक्ष्य में केवल वर्कआउट लक्ष्य इस्तेमाल होता है; अगर वर्कआउट लक्ष्य सेट नहीं है, तो 450 kcal इस्तेमाल होता है।</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -533,10 +530,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_average_goal_reached">औसत दैनिक पानी लक्ष्य पूरा हुआ</string>
-    <string name="water_chart_average_goal_left_ml">औसत दैनिक पानी सेवन लक्ष्य से %1$s ml कम है</string>
-    <string name="water_chart_goal_reached">आज का लक्ष्य पूरा हुआ</string>
-    <string name="water_chart_goal_left_ml">आज के लक्ष्य तक पहुंचने के लिए %1$s ml शेष</string>
+    <string name="water_chart_encouragement">अपने शरीर को बेहतर रखने के लिए समय-समय पर पानी पीते रहें!</string>
     <string name="water_chart_title">पानी का सेवन</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">लक्ष्य</string>

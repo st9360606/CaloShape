@@ -516,10 +516,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_average_goal_reached">Keskimääräinen päivittäinen aktiivisuustavoite saavutettu</string>
-    <string name="activity_chart_average_goal_left">Keskimääräinen päivittäinen aktiivisuus on %1$d kcal alle tavoitteen</string>
-    <string name="activity_chart_goal_reached">Tavoite saavutettu tänään</string>
-    <string name="activity_chart_goal_left">%1$d kcal jäljellä tämän päivän tavoitteeseen</string>
+    <string name="activity_chart_encouragement">Jokainen liikuntahetki tukee terveyttäsi – jatka liikkumista!</string>
     <string name="activity_chart_title">Aktiivisuuskulutus</string>
     <string name="activity_chart_info_dialog_body">Sisältää kirjatut treenit ja päivittäisistä askeleista arvioidut aktiivisuuden kcal-arvot.\n\nTavoite = päivittäinen treenitavoite + askelkalorit. Askelkalorit = uusin paino (kg) × päivittäinen askeltavoite × 0.0005, pyöristettynä. Jos paino tai askeltavoite puuttuu, tavoitteena käytetään vain treenitavoitetta; jos treenitavoitetta ei ole asetettu, käytetään 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -536,10 +533,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_average_goal_reached">Keskimääräinen päivittäinen juomatavoite saavutettu</string>
-    <string name="water_chart_average_goal_left_ml">Keskimääräinen päivittäinen juonti on %1$s ml alle tavoitteen</string>
-    <string name="water_chart_goal_reached">Tämän päivän tavoite saavutettu</string>
-    <string name="water_chart_goal_left_ml">%1$s ml jäljellä tämän päivän tavoitteeseen</string>
+    <string name="water_chart_encouragement">Muista juoda säännöllisesti, jotta kehosi voi hyvin!</string>
     <string name="water_chart_title">Veden saanti</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Tavoite</string>
