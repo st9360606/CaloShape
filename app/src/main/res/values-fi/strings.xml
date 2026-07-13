@@ -349,8 +349,8 @@
 
     <!-- HomeCards :  Calories Card -->
     <string name="home_calories_nutrition_ratio">%1$d / %2$d</string>
-    <string name="home_calories_goal_label">Kaloreita jäljellä</string>
-    <string name="home_calories_eaten_label">Syödyt kalorit</string>
+    <string name="home_calories_goal_label">Kalorit jäljellä</string>
+    <string name="home_calories_eaten_label">Kalorit syöty</string>
 
 
     <!-- HomeCards :  Nutrition Card -->
