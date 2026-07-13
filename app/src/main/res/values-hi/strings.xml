@@ -530,7 +530,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_encouragement">अपने शरीर को बेहतर रखने के लिए समय-समय पर पानी पीते रहें!</string>
+    <string name="water_chart_encouragement">नियमित पानी पिएँ और स्वस्थ रहें!</string>
     <string name="water_chart_title">पानी का सेवन</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">लक्ष्य</string>

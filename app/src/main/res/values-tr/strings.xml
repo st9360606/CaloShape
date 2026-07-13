@@ -481,7 +481,7 @@
     <string name="progress_legend_protein">Protein</string>
     <string name="progress_legend_carbs">Karb.</string>
     <string name="progress_legend_fats">Yağ</string>
-    <string name="progress_keep_it_up">Devam et! Başlamak en zor kısımdır!</string>
+    <string name="progress_keep_it_up">Devam et ! Başlamak en zor kısımdır !</string>
 
     <string name="progress_day_sun">Paz</string>
     <string name="progress_day_mon">Pzt</string>
@@ -519,7 +519,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_encouragement">Her hareket sağlığına katkı sağlar. Hareket etmeye devam et!</string>
+    <string name="activity_chart_encouragement">Her hareket önemli. Devam et !</string>
     <string name="activity_chart_title">Aktivite yakımı</string>
     <string name="activity_chart_info_dialog_body">Kaydedilen egzersizleri ve günlük adımlardan tahmin edilen aktivite kalorilerini içerir.\n\nHedef = günlük egzersiz hedefi + adım kalorileri. Adım kalorileri = en son kilo (kg) × günlük adım hedefi × 0.0005, yuvarlanmış. Kilo veya adım hedefi yoksa hedef yalnızca egzersiz hedefini kullanır; egzersiz hedefi ayarlanmamışsa 450 kcal kullanılır.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -536,7 +536,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_encouragement">Vücudunun en iyi durumda kalması için düzenli su içmeyi unutma!</string>
+    <string name="water_chart_encouragement">Düzenli su iç, kendini iyi hisset !</string>
     <string name="water_chart_title">Su tüketimi</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Hedef</string>

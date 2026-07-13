@@ -480,7 +480,7 @@
     <string name="progress_legend_protein">البروتين</string>
     <string name="progress_legend_carbs">الكربوهيدرات</string>
     <string name="progress_legend_fats">الدهون</string>
-    <string name="progress_keep_it_up">استمر! البداية هي أصعب جزء!</string>
+    <string name="progress_keep_it_up">استمر! البداية هي الأصعب!</string>
 
     <string name="progress_day_sun">الأحد</string>
     <string name="progress_day_mon">الاثنين</string>
@@ -508,7 +508,7 @@
     <string name="progress_legend_fiber">الألياف</string>
     <string name="progress_legend_sugar">السكر</string>
     <string name="progress_legend_sodium">الصوديوم</string>
-    <string name="progress_micronutrients_keep_it_up">حافظ على توازن الألياف والسكر والصوديوم.</string>
+    <string name="progress_micronutrients_keep_it_up">وازن الألياف والسكر والصوديوم.</string>
     <string name="progress_tooltip_fiber">الألياف</string>
     <string name="progress_tooltip_sugar">السكر</string>
     <string name="progress_tooltip_sodium">الصوديوم</string>

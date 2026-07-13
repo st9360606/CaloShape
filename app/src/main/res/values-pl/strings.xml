@@ -473,7 +473,7 @@
     <string name="progress_legend_protein">Białko</string>
     <string name="progress_legend_carbs">Węgle</string>
     <string name="progress_legend_fats">Tłuszcze</string>
-    <string name="progress_keep_it_up">Tak trzymaj! Najtrudniej jest zacząć!</string>
+    <string name="progress_keep_it_up">Tak trzymaj! Najtrudniej jest zacząć !</string>
 
     <string name="progress_day_sun">Nd</string>
     <string name="progress_day_mon">Pn</string>
@@ -511,7 +511,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_encouragement">Każda aktywność wspiera Twoje zdrowie. Ruszaj się dalej!</string>
+    <string name="activity_chart_encouragement">Każdy ruch się liczy. Ruszaj się dalej !</string>
     <string name="activity_chart_title">Aktywność</string>
     <string name="activity_chart_info_dialog_body">Obejmuje zapisane treningi oraz kalorie aktywności szacowane z dziennych kroków.\n\nCel = dzienny cel treningu + kalorie z kroków. Kalorie z kroków = najnowsza waga (kg) × dzienny cel kroków × 0.0005, po zaokrągleniu. Jeśli brakuje wagi lub celu kroków, cel używa tylko celu treningu; jeśli celu treningu nie ustawiono, używa 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -528,7 +528,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_encouragement">Pamiętaj o regularnym piciu wody, aby Twoje ciało czuło się jak najlepiej!</string>
+    <string name="water_chart_encouragement">Pij regularnie i czuj się dobrze !</string>
     <string name="water_chart_title">Spożycie wody</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Cel</string>

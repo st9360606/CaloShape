@@ -475,7 +475,7 @@
     <string name="progress_legend_protein">Protein</string>
     <string name="progress_legend_carbs">Carbs</string>
     <string name="progress_legend_fats">Fats</string>
-    <string name="progress_keep_it_up">Keep it up! Getting started is the hardest part!</string>
+    <string name="progress_keep_it_up">Great start. Keep the momentum going !</string>
 
     <string name="progress_day_sun">Sun</string>
     <string name="progress_day_mon">Mon</string>
@@ -513,7 +513,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_encouragement">Every move counts. Keep moving!</string>
+    <string name="activity_chart_encouragement">Every move counts. Keep moving !</string>
     <string name="activity_chart_title">Activity burn</string>
     <string name="activity_chart_info_dialog_body">Includes logged workouts and activity calories estimated from daily steps.\n\nGoal = daily workout goal + step calories. Step calories = latest weight (kg) × daily step goal × 0.0005, rounded. If weight or step goal is missing, the goal uses only the workout goal; if no workout goal is set, it uses 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -530,7 +530,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_encouragement">Stay hydrated to keep your body feeling its best!</string>
+    <string name="water_chart_encouragement">Stay hydrated to keep your body feeling its best !</string>
     <string name="water_chart_title">Water intake</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Goal</string>

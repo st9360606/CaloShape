@@ -481,7 +481,7 @@
     <string name="progress_legend_protein">Protein</string>
     <string name="progress_legend_carbs">Carbs</string>
     <string name="progress_legend_fats">Fett</string>
-    <string name="progress_keep_it_up">Weiter so! Der Anfang ist der schwerste Teil!</string>
+    <string name="progress_keep_it_up">Weiter so! Der Anfang ist der schwerste Teil !</string>
 
     <string name="progress_day_sun">So</string>
     <string name="progress_day_mon">Mo</string>
@@ -519,7 +519,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_encouragement">Jede Bewegung zählt – bleib aktiv!</string>
+    <string name="activity_chart_encouragement">Jede Bewegung zählt – bleib aktiv !</string>
     <string name="activity_chart_title">Aktive kcal</string>
     <string name="activity_chart_info_dialog_body">Enthält eingetragene Workouts und Aktivitätskalorien, die aus täglichen Schritten geschätzt werden.\n\nZiel = tägliches Workout-Ziel + Schritt-Kalorien. Schritt-Kalorien = neuestes Gewicht (kg) × tägliches Schrittziel × 0.0005, gerundet. Wenn Gewicht oder Schrittziel fehlen, nutzt das Ziel nur das Workout-Ziel; wenn kein Workout-Ziel gesetzt ist, werden 450 kcal verwendet.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -536,7 +536,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_encouragement">Regelmäßig trinken und fit bleiben!</string>
+    <string name="water_chart_encouragement">Regelmäßig trinken und fit bleiben !</string>
     <string name="water_chart_title">Wasseraufnahme</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Ziel</string>

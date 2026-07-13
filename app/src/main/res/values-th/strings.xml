@@ -516,7 +516,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_encouragement">ทุกกิจกรรมช่วยเสริมสุขภาพของคุณ เคลื่อนไหวต่อไปนะ!</string>
+    <string name="activity_chart_encouragement">ทุกการเคลื่อนไหวดีต่อสุขภาพ ขยับต่อไปนะ!</string>
     <string name="activity_chart_title">แคลอรีจากกิจกรรม</string>
     <string name="activity_chart_info_dialog_body">รวมการออกกำลังกายที่บันทึกไว้ และแคลอรีกิจกรรมที่ประเมินจากจำนวนก้าวรายวัน\n\nเป้าหมาย = เป้าหมายออกกำลังกายรายวัน + แคลอรีจากก้าว แคลอรีจากก้าว = น้ำหนักล่าสุด (kg) × เป้าหมายก้าวรายวัน × 0.0005 แล้วปัดเศษ หากไม่มีน้ำหนักหรือเป้าหมายก้าว จะใช้เฉพาะเป้าหมายออกกำลังกาย; หากไม่ได้ตั้งเป้าหมายออกกำลังกาย จะใช้ 450 kcal</string>
     <string name="activity_chart_unit_kcal">kcal</string>

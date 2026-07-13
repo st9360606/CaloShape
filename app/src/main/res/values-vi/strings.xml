@@ -513,7 +513,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_encouragement">Mỗi hoạt động đều góp phần cải thiện sức khỏe. Hãy tiếp tục vận động!</string>
+    <string name="activity_chart_encouragement">Mỗi vận động đều có ích. Hãy tiếp tục!</string>
     <string name="activity_chart_title">Calo hoạt động</string>
     <string name="activity_chart_info_dialog_body">Bao gồm bài tập đã ghi lại và kcal hoạt động ước tính từ số bước hằng ngày.\n\nMục tiêu = mục tiêu tập luyện hằng ngày + calo từ bước chân. Calo từ bước chân = cân nặng mới nhất (kg) × mục tiêu bước hằng ngày × 0.0005, làm tròn. Nếu thiếu cân nặng hoặc mục tiêu bước, mục tiêu chỉ dùng mục tiêu tập luyện; nếu chưa đặt mục tiêu tập luyện, dùng 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -530,7 +530,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_encouragement">Hãy uống nước đều đặn để cơ thể luôn ở trạng thái tốt nhất!</string>
+    <string name="water_chart_encouragement">Uống nước đều đặn để luôn khỏe khoắn!</string>
     <string name="water_chart_title">Lượng nước uống</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Mục tiêu</string>

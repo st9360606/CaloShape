@@ -480,7 +480,7 @@
     <string name="progress_legend_protein">Proteína</string>
     <string name="progress_legend_carbs">Carbs</string>
     <string name="progress_legend_fats">Gorduras</string>
-    <string name="progress_keep_it_up">Continue assim! O começo é o mais difícil!</string>
+    <string name="progress_keep_it_up">Continue assim ! O começo é o mais difícil !</string>
 
     <string name="progress_day_sun">Dom</string>
     <string name="progress_day_mon">Seg</string>
@@ -518,7 +518,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_encouragement">Cada atividade contribui para sua saúde. Continue se movimentando!</string>
+    <string name="activity_chart_encouragement">Cada movimento conta. Continue ativo !</string>
     <string name="activity_chart_title">Gasto de atividade</string>
     <string name="activity_chart_info_dialog_body">Inclui treinos registrados e calorias de atividade estimadas pelos passos diários.\n\nMeta = meta diária de treino + calorias dos passos. Calorias dos passos = peso mais recente (kg) × meta diária de passos × 0.0005, arredondado. Se faltar peso ou meta de passos, a meta usa apenas a meta de treino; se não houver meta de treino definida, usa 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -535,7 +535,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_encouragement">Hidrate-se regularmente para manter seu corpo no seu melhor!</string>
+    <string name="water_chart_encouragement">Hidrate-se e sinta-se bem !</string>
     <string name="water_chart_title">Consumo de água</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Meta</string>

@@ -518,7 +518,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_encouragement">Varje aktivitet stärker din hälsa. Fortsätt röra på dig!</string>
+    <string name="activity_chart_encouragement">Varje rörelse räknas. Fortsätt vara aktiv !</string>
     <string name="activity_chart_title">Aktivitet</string>
     <string name="activity_chart_info_dialog_body">Inkluderar loggade träningspass och aktivitetskalorier uppskattade från dagliga steg.\n\nMål = dagligt träningsmål + stegkalorier. Stegkalorier = senaste vikt (kg) × dagligt stegmål × 0.0005, avrundat. Om vikt eller stegmål saknas används bara träningsmålet; om inget träningsmål är inställt används 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -535,7 +535,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_encouragement">Kom ihåg att dricka regelbundet så att kroppen mår som bäst!</string>
+    <string name="water_chart_encouragement">Drick regelbundet och må som bäst !</string>
     <string name="water_chart_title">Vattenintag</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Mål</string>

@@ -535,7 +535,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_encouragement">Hydratez-vous régulièrement pour rester en forme !</string>
+    <string name="water_chart_encouragement">Hydratez-vous pour rester en forme !</string>
     <string name="water_chart_title">Apport en eau</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Objectif</string>

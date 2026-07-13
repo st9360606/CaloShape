@@ -481,7 +481,7 @@ Resta sul piano ogni giorno.</string>
     <string name="progress_legend_protein">Proteine</string>
     <string name="progress_legend_carbs">Carbo</string>
     <string name="progress_legend_fats">Grassi</string>
-    <string name="progress_keep_it_up">Continua così! Iniziare è la parte più difficile!</string>
+    <string name="progress_keep_it_up">Continua così! Iniziare è la parte più difficile !</string>
 
     <string name="progress_day_sun">Dom</string>
     <string name="progress_day_mon">Lun</string>
@@ -519,7 +519,7 @@ Resta sul piano ogni giorno.</string>
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_encouragement">Ogni attività fa bene alla tua salute. Continua a muoverti!</string>
+    <string name="activity_chart_encouragement">Ogni movimento conta. Continua così !</string>
     <string name="activity_chart_title">Calorie attività</string>
     <string name="activity_chart_info_dialog_body">Include gli allenamenti registrati e le kcal da attività stimate dai passi giornalieri.\n\nObiettivo = obiettivo giornaliero di allenamento + calorie dei passi. Calorie dei passi = peso più recente (kg) × obiettivo giornaliero di passi × 0.0005, arrotondato. Se mancano peso o obiettivo passi, l’obiettivo usa solo l’obiettivo di allenamento; se non è impostato, usa 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -536,7 +536,7 @@ Resta sul piano ogni giorno.</string>
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_encouragement">Ricordati di bere regolarmente per mantenere il corpo al meglio!</string>
+    <string name="water_chart_encouragement">Bevi regolarmente per sentirti al meglio !</string>
     <string name="water_chart_title">Acqua assunta</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Obiettivo</string>

@@ -516,7 +516,7 @@
     <!-- =========================
          ActivityChartCard
          ========================= -->
-    <string name="activity_chart_encouragement">Jokainen liikuntahetki tukee terveyttäsi – jatka liikkumista!</string>
+    <string name="activity_chart_encouragement">Jokainen liike tekee hyvää. Jatka liikkumista !</string>
     <string name="activity_chart_title">Aktiivisuuskulutus</string>
     <string name="activity_chart_info_dialog_body">Sisältää kirjatut treenit ja päivittäisistä askeleista arvioidut aktiivisuuden kcal-arvot.\n\nTavoite = päivittäinen treenitavoite + askelkalorit. Askelkalorit = uusin paino (kg) × päivittäinen askeltavoite × 0.0005, pyöristettynä. Jos paino tai askeltavoite puuttuu, tavoitteena käytetään vain treenitavoitetta; jos treenitavoitetta ei ole asetettu, käytetään 450 kcal.</string>
     <string name="activity_chart_unit_kcal">kcal</string>
@@ -533,7 +533,7 @@
     <!-- =========================
          WaterChartCard
          ========================= -->
-    <string name="water_chart_encouragement">Muista juoda säännöllisesti, jotta kehosi voi hyvin!</string>
+    <string name="water_chart_encouragement">Juo säännöllisesti ja voi hyvin !</string>
     <string name="water_chart_title">Veden saanti</string>
     <string name="water_chart_unit_ml">ml</string>
     <string name="water_chart_goal">Tavoite</string>
