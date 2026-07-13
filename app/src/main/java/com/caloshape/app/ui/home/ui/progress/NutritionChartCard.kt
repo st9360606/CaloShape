@@ -322,7 +322,7 @@ private fun ProgressChartCardFrame(
                         color = if (isDark) HomeCardStyles.Chart.footerSurface() else Color(0xFFEAF5E8),
                         shape = RoundedCornerShape(12.dp)
                     )
-                    .padding(horizontal = 12.dp, vertical = 6.dp)
+                    .padding(horizontal = 10.dp, vertical = 6.dp)
             ) {
                 Text(
                     text = stringResource(R.string.progress_keep_it_up),

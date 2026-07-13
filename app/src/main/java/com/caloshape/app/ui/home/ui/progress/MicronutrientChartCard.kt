@@ -240,7 +240,7 @@ private fun MicronutrientChartCardFrame(
                         color = footerBg,
                         shape = RoundedCornerShape(12.dp)
                     )
-                    .padding(horizontal = 12.dp, vertical = 6.dp)
+                    .padding(horizontal = 10.dp, vertical = 6.dp)
             ) {
                 Text(
                     text = stringResource(R.string.progress_micronutrients_keep_it_up),

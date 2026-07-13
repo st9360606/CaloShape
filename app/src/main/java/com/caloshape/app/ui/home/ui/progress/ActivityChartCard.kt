@@ -354,17 +354,21 @@ private fun ActivityChartCardFrame(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = 12.dp)
-                        .background(resolvedFooterBackground, RoundedCornerShape(12.dp))
-                        .padding(horizontal = 6.dp, vertical = 6.dp)
                 ) {
-                    Text(
-                        text = text,
-                        color = footerTextColor,
-                        fontSize = 14.sp,
-                        fontWeight = FontWeight.Bold,
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.fillMaxWidth()
-                    )
+                    Box(
+                        modifier = Modifier
+                            .align(Alignment.Center)
+                            .background(resolvedFooterBackground, RoundedCornerShape(12.dp))
+                            .padding(horizontal = 10.dp, vertical = 6.dp)
+                    ) {
+                        Text(
+                            text = text,
+                            color = footerTextColor,
+                            fontSize = 14.sp,
+                            fontWeight = FontWeight.Bold,
+                            textAlign = TextAlign.Center
+                        )
+                    }
                 }
             }
 
