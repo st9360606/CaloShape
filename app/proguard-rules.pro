@@ -34,7 +34,6 @@
 #-renamesourcefileattribute SourceFile
 
 # 保�?你�?資�?模�?（若??@SerializedName�?
--keep class com.caloshape.** { *; }
 -keepattributes Signature, *Annotation*
 
 # ?��??��?些�?必�??�警??

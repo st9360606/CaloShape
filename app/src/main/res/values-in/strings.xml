@@ -195,6 +195,7 @@
     <string name="onboard_notif_title">Jangan lupa catat makanan!</string>
     <string name="onboard_notif_subtitle">Aktifkan notifikasi untuk pengingat mencatat makanan agar kalori, makro, dan progres tetap sesuai jalur.</string>
     <string name="onboard_allow_notifications_cta">Izinkan notifikasi</string>
+    <string name="onboard_open_notification_settings_cta">Buka setelan notifikasi</string>
     <string name="notification_mock_app_title">Penghitung Kalori AI</string>
     <string name="onboard_notif_title_got_a_sec">Jangan lupa catat makanan 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Catat makanan ini agar kalori dan makro Anda tetap sesuai jalur.</string>
@@ -814,6 +815,12 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="settings_choose_language">Pilih bahasa</string>
     <string name="delete_account_dialog_title">Hapus akun?</string>
     <string name="delete_account_dialog_body">Anda yakin ingin menghapus akun? Ini akan menghapus data CaloShape Anda secara permanen, termasuk log makanan, catatan berat, dan setelan terkait. Tindakan ini tidak dapat dibatalkan.</string>
+    <string name="delete_account_preview_error_title">Akun tidak dapat diperiksa</string>
+    <string name="delete_account_preview_error_body">Status langganan tidak dapat diverifikasi. Demi keamanan, akun belum dihapus. Periksa koneksi lalu coba lagi.</string>
+    <string name="delete_account_subscription_warning_title">Langganan akan tetap aktif</string>
+    <string name="delete_account_subscription_warning_body">Menghapus akun CaloShape tidak membatalkan langganan atau uji coba Google Play. Google Play dapat terus menagih sampai Anda membatalkannya.</string>
+    <string name="delete_account_manage_subscription">Kelola langganan</string>
+    <string name="delete_account_continue_deletion">Lanjutkan penghapusan</string>
     <string name="logout_account_dialog_title">Keluar?</string>
     <string name="logout_account_dialog_body">Anda yakin ingin keluar dari akun? Anda dapat masuk kembali kapan saja.</string>
 
@@ -852,6 +859,9 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="settings_privacy_policy">Kebijakan Privasi</string>
     <string name="settings_support_email">Email Dukungan</string>
     <string name="settings_delete_account">Hapus akun?</string>
+    <string name="settings_guest_name">Tamu</string>
+    <string name="settings_age_years">%1$d tahun</string>
+    <string name="delete_account_failed">Akun gagal dihapus. Masuk kembali lalu coba lagi.</string>
     <string name="settings_version">Versi %1$s</string>
 
 

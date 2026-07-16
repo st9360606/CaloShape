@@ -194,6 +194,7 @@
     <string name="onboard_notif_title">Make every meal count!</string>
     <string name="onboard_notif_subtitle">Enable notifications for gentle reminders to log meals—so your calories, macros, and progress stay on track. Slip-ups happen; timely nudges help you bounce back fast.</string>
     <string name="onboard_allow_notifications_cta">Allow notifications</string>
+    <string name="onboard_open_notification_settings_cta">Open notification settings</string>
     <string name="notification_mock_app_title">AI Calorie Counter</string>
     <string name="onboard_notif_title_got_a_sec">Your meal won’t log itself 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Log this meal to keep your calories and macros on track.</string>
@@ -799,6 +800,12 @@
     <string name="settings_choose_language">Choose language</string>
     <string name="delete_account_dialog_title">Delete account?</string>
     <string name="delete_account_dialog_body">Are you sure you want to delete your account? This will permanently delete your CaloShape data, including food logs, weight records, and related settings. This action cannot be undone.</string>
+    <string name="delete_account_preview_error_title">Unable to check your account</string>
+    <string name="delete_account_preview_error_body">We couldn’t verify your subscription status. For your protection, your account has not been deleted. Check your connection and try again.</string>
+    <string name="delete_account_subscription_warning_title">Your subscription will remain active</string>
+    <string name="delete_account_subscription_warning_body">Deleting your CaloShape account does not cancel your Google Play subscription or trial. Google Play may continue charging until you cancel it in Google Play. You can manage the subscription now, or continue deleting only your CaloShape account.</string>
+    <string name="delete_account_manage_subscription">Manage subscription</string>
+    <string name="delete_account_continue_deletion">Continue deleting</string>
     <string name="logout_account_dialog_title">Log out?</string>
     <string name="logout_account_dialog_body">Are you sure you want to log out of your account? You can log back in at any time.</string>
 
@@ -837,6 +844,9 @@
     <string name="settings_privacy_policy">Privacy Policy</string>
     <string name="settings_support_email">Support Email</string>
     <string name="settings_delete_account">Delete account?</string>
+    <string name="settings_guest_name">Guest</string>
+    <string name="settings_age_years">%1$d years old</string>
+    <string name="delete_account_failed">Delete account failed. Please sign in again and retry.</string>
     <string name="settings_version">Version %1$s</string>
 
 

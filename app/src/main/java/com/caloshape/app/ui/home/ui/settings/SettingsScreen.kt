@@ -98,6 +98,7 @@ import coil.compose.SubcomposeAsyncImageContent
 import coil.request.ImageRequest
 import com.caloshape.app.BuildConfig
 import com.caloshape.app.R
+import com.caloshape.app.data.account.api.AccountDeletionPreviewResponse
 import com.caloshape.app.data.foodlog.repo.HomeTodayNutritionSummary
 import com.caloshape.app.data.home.repo.HomeSummary
 import com.caloshape.app.i18n.currentLocaleKey
@@ -138,6 +139,21 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.material.icons.rounded.KeyboardArrowDown
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.window.DialogProperties
+
+internal enum class AccountDeletionNextStep {
+    ERROR,
+    SUBSCRIPTION_WARNING,
+    FINAL_CONFIRMATION
+}
+
+internal fun resolveAccountDeletionNextStep(
+    preview: AccountDeletionPreviewResponse?
+): AccountDeletionNextStep = when {
+    preview == null || !preview.canDelete -> AccountDeletionNextStep.ERROR
+    preview.requiresSubscriptionWarning || preview.hasActiveGooglePlaySubscription ->
+        AccountDeletionNextStep.SUBSCRIPTION_WARNING
+    else -> AccountDeletionNextStep.FINAL_CONFIRMATION
+}
 
 /**
  * ✅ Personal => Settings（你圖上的那個）
@@ -183,7 +199,11 @@ fun SettingsScreen(
     onRestoreSubscription: () -> Unit = {},
     onDismissRestoreSubscription: () -> Unit = {},
     onMaybeLaterRestoreSubscription: () -> Unit = {},
-    onDeleteAccount: (subscriptionWarningAcknowledged: Boolean) -> Unit = {},
+    onLoadDeletionPreview: suspend () -> Result<AccountDeletionPreviewResponse> = {
+        Result.failure(IllegalStateException("ACCOUNT_DELETION_PREVIEW_UNAVAILABLE"))
+    },
+    onOpenSubscriptionManagement: (String) -> Unit = {},
+    onDeleteAccount: suspend (subscriptionWarningAcknowledged: Boolean) -> Boolean = { false },
     logoutLoading: Boolean = false,
     logoutErrorVisible: Boolean = false,
     onLogout: () -> Unit = {}
@@ -326,6 +346,8 @@ fun SettingsScreen(
                 onRestoreSubscription = onRestoreSubscription,
                 onDismissRestoreSubscription = onDismissRestoreSubscription,
                 onMaybeLaterRestoreSubscription = onMaybeLaterRestoreSubscription,
+                onLoadDeletionPreview = onLoadDeletionPreview,
+                onOpenSubscriptionManagement = onOpenSubscriptionManagement,
                 onDeleteAccount = onDeleteAccount,
                 logoutLoading = logoutLoading,
                 logoutErrorVisible = logoutErrorVisible,
@@ -425,7 +447,9 @@ private fun SettingsContent(
     onRestoreSubscription: () -> Unit,
     onDismissRestoreSubscription: () -> Unit,
     onMaybeLaterRestoreSubscription: () -> Unit,
-    onDeleteAccount: (subscriptionWarningAcknowledged: Boolean) -> Unit,
+    onLoadDeletionPreview: suspend () -> Result<AccountDeletionPreviewResponse>,
+    onOpenSubscriptionManagement: (String) -> Unit,
+    onDeleteAccount: suspend (subscriptionWarningAcknowledged: Boolean) -> Boolean,
     logoutLoading: Boolean,
     logoutErrorVisible: Boolean,
     onLogout: () -> Unit
@@ -434,9 +458,16 @@ private fun SettingsContent(
     val scope = rememberCoroutineScope()
 
     var showDeleteDialog by remember { mutableStateOf(false) }
+    var showDeletionPreviewErrorDialog by remember { mutableStateOf(false) }
+    var showSubscriptionWarningDialog by remember { mutableStateOf(false) }
     var showLogoutConfirmDialog by remember { mutableStateOf(false) }
     var showPaymentIssueDialog by remember { mutableStateOf(false) }
     var deleting by remember { mutableStateOf(false) }
+    var deletionPreviewLoading by remember { mutableStateOf(false) }
+    var subscriptionWarningAcknowledged by remember { mutableStateOf(false) }
+    var subscriptionManagementUrl by remember {
+        mutableStateOf("https://play.google.com/store/account/subscriptions")
+    }
 
 // ✅ 不要讓 Dialog 內部自己抓 stringResource。
 // 先在 SettingsContent 的 locale scope 解析文字，再傳給 Dialog。
@@ -447,6 +478,12 @@ private fun SettingsContent(
     val deleteDialogDeleteText = stringResource(R.string.common_delete)
     val deleteDialogDeletingText = stringResource(R.string.common_deleting)
     val deleteDialogCloseText = stringResource(R.string.common_close)
+    val deletionPreviewErrorTitle = stringResource(R.string.delete_account_preview_error_title)
+    val deletionPreviewErrorBody = stringResource(R.string.delete_account_preview_error_body)
+    val subscriptionWarningTitle = stringResource(R.string.delete_account_subscription_warning_title)
+    val subscriptionWarningBody = stringResource(R.string.delete_account_subscription_warning_body)
+    val manageSubscriptionText = stringResource(R.string.delete_account_manage_subscription)
+    val continueDeletionText = stringResource(R.string.delete_account_continue_deletion)
     val logoutDialogTitle = stringResource(R.string.logout_account_dialog_title)
     val logoutDialogBody = stringResource(R.string.logout_account_dialog_body)
     val logoutDialogConfirmText = stringResource(R.string.settings_logout)
@@ -509,7 +546,70 @@ private fun SettingsContent(
     val paymentIssueNextStepText = stringResource(R.string.payment_issue_dialog_next_step)
     val paymentIssueUpdatePaymentShortText = stringResource(R.string.payment_issue_dialog_update_payment_short)
 
+    fun loadDeletionPreview() {
+        if (deletionPreviewLoading || deleting) return
+
+        deletionPreviewLoading = true
+        showDeletionPreviewErrorDialog = false
+        scope.launch {
+            val preview = onLoadDeletionPreview().getOrNull()
+            deletionPreviewLoading = false
+
+            when (resolveAccountDeletionNextStep(preview)) {
+                AccountDeletionNextStep.ERROR -> showDeletionPreviewErrorDialog = true
+                AccountDeletionNextStep.SUBSCRIPTION_WARNING -> {
+                    subscriptionManagementUrl = preview!!.subscriptionManagementUrl
+                    subscriptionWarningAcknowledged = false
+                    showSubscriptionWarningDialog = true
+                }
+                AccountDeletionNextStep.FINAL_CONFIRMATION -> {
+                    subscriptionWarningAcknowledged = false
+                    showDeleteDialog = true
+                }
+            }
+        }
+    }
+
     // ✅ Dialog 放外層（不受 scroll 影響）
+    key(localeKey) {
+        DeleteAccountDialog(
+            visible = showDeletionPreviewErrorDialog,
+            title = deletionPreviewErrorTitle,
+            body = deletionPreviewErrorBody,
+            cancelText = deleteDialogCancelText,
+            deleteText = stringResource(R.string.common_retry),
+            deletingText = deleteDialogDeletingText,
+            closeContentDescription = deleteDialogCloseText,
+            deleting = deletionPreviewLoading,
+            onDismiss = { if (!deletionPreviewLoading) showDeletionPreviewErrorDialog = false },
+            onCancel = { if (!deletionPreviewLoading) showDeletionPreviewErrorDialog = false },
+            onDelete = ::loadDeletionPreview
+        )
+    }
+
+    key(localeKey) {
+        DeleteAccountDialog(
+            visible = showSubscriptionWarningDialog,
+            title = subscriptionWarningTitle,
+            body = subscriptionWarningBody,
+            cancelText = manageSubscriptionText,
+            deleteText = continueDeletionText,
+            deletingText = deleteDialogDeletingText,
+            closeContentDescription = deleteDialogCloseText,
+            deleting = false,
+            onDismiss = { showSubscriptionWarningDialog = false },
+            onCancel = {
+                showSubscriptionWarningDialog = false
+                onOpenSubscriptionManagement(subscriptionManagementUrl)
+            },
+            onDelete = {
+                subscriptionWarningAcknowledged = true
+                showSubscriptionWarningDialog = false
+                showDeleteDialog = true
+            }
+        )
+    }
+
     key(localeKey) {
         DeleteAccountDialog(
             visible = showDeleteDialog,
@@ -527,16 +627,16 @@ private fun SettingsContent(
 
                 // 先鎖 UI + 關 dialog，避免使用者連點
                 deleting = true
-                showDeleteDialog = false
 
                 scope.launch {
-                    try {
+                    val succeeded = try {
                         // 後端目前仍收 subscriptionWarningAcknowledged 參數。
                         // Dialog 已不顯示訂閱提示，所以這裡固定 true，避免 PREMIUM/TRIAL 用戶刪帳被後端擋下。
-                        onDeleteAccount(true)
+                        onDeleteAccount(subscriptionWarningAcknowledged)
                     } finally {
                         deleting = false
                     }
+                    if (succeeded) showDeleteDialog = false
                 }
             }
         )
@@ -677,7 +777,7 @@ private fun SettingsContent(
             SettingsRow(
                 icon = Icons.Outlined.Person,
                 title = stringResource(R.string.settings_delete_account),
-                onClick = { if (!deleting) showDeleteDialog = true }
+                onClick = ::loadDeletionPreview
             )
         }
 

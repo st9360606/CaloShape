@@ -195,6 +195,7 @@
     <string name="onboard_notif_title">Un recordatorio a tiempo</string>
     <string name="onboard_notif_subtitle">Activa recordatorios suaves para registrar tus comidas y mantener tus calorías, macros y progreso en buen camino. Si te despistas, te ayudamos a retomar rápido.</string>
     <string name="onboard_allow_notifications_cta">Permitir notificaciones</string>
+    <string name="onboard_open_notification_settings_cta">Abrir ajustes de notificaciones</string>
     <string name="notification_mock_app_title">Contador de calorías con IA</string>
     <string name="onboard_notif_title_got_a_sec">Tu comida no se registra sola 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Registra esta comida para mantener tus calorías y macros en buen camino.</string>
@@ -805,6 +806,12 @@
     <string name="settings_choose_language">Elegir idioma</string>
     <string name="delete_account_dialog_title">¿Eliminar cuenta?</string>
     <string name="delete_account_dialog_body">¿Seguro que quieres eliminar tu cuenta? Esto eliminará permanentemente tus datos de CaloShape, incluidos registros de comida, registros de peso y ajustes relacionados. Esta acción no se puede deshacer.</string>
+    <string name="delete_account_preview_error_title">No se pudo comprobar tu cuenta</string>
+    <string name="delete_account_preview_error_body">No pudimos verificar el estado de tu suscripción. Para protegerte, tu cuenta no se eliminó. Comprueba la conexión e inténtalo de nuevo.</string>
+    <string name="delete_account_subscription_warning_title">Tu suscripción seguirá activa</string>
+    <string name="delete_account_subscription_warning_body">Eliminar tu cuenta de CaloShape no cancela la suscripción ni la prueba de Google Play. Google Play puede seguir cobrando hasta que la canceles allí.</string>
+    <string name="delete_account_manage_subscription">Gestionar suscripción</string>
+    <string name="delete_account_continue_deletion">Continuar eliminando</string>
     <string name="logout_account_dialog_title">¿Cerrar sesión?</string>
     <string name="logout_account_dialog_body">¿Seguro que quieres cerrar sesión en tu cuenta? Puedes volver a iniciar sesión en cualquier momento.</string>
 
@@ -843,6 +850,9 @@
     <string name="settings_privacy_policy">Política de privacidad</string>
     <string name="settings_support_email">Correo de soporte</string>
     <string name="settings_delete_account">¿Eliminar cuenta?</string>
+    <string name="settings_guest_name">Invitado</string>
+    <string name="settings_age_years">%1$d años</string>
+    <string name="delete_account_failed">No se pudo eliminar la cuenta. Inicia sesión de nuevo y vuelve a intentarlo.</string>
     <string name="settings_version">Versión %1$s</string>
 
 

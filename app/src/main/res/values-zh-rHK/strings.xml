@@ -196,6 +196,7 @@
     <string name="onboard_notif_title">每一餐都算數</string>
     <string name="onboard_notif_subtitle">開啟通知後，我們會在合適的時間給你溫柔提醒，協助你養成餐點紀錄的節奏，讓你的卡路里、三大營養素與進度保持在正軌，偶爾忘記很正常；及時提醒能幫你更快回到節奏。</string>
     <string name="onboard_allow_notifications_cta">允許通知</string>
+    <string name="onboard_open_notification_settings_cta">開啟通知設定</string>
     <string name="notification_mock_app_title">AI 卡路里計算器</string>
     <string name="onboard_notif_title_got_a_sec">現在有 10 秒嗎？</string>
     <string name="onboard_notif_subtitle_log_meal_goal">記下這餐，卡路里和三大營養素會立刻更新，進度一眼就懂。</string>
@@ -799,6 +800,12 @@
     <string name="settings_choose_language">選擇語言</string>
     <string name="delete_account_dialog_title">刪除帳號？</string>
     <string name="delete_account_dialog_body">您確定要刪除帳號嗎？此操作將永久刪除您在 CaloShape 中的資料，包括飲食紀錄、體重紀錄與相關設定，刪除後將無法復原。</string>
+    <string name="delete_account_preview_error_title">無法檢查您的帳號</string>
+    <string name="delete_account_preview_error_body">目前無法確認您的訂閱狀態。為保障您的權益，帳號尚未刪除。請檢查網路連線後重試。</string>
+    <string name="delete_account_subscription_warning_title">您的訂閱仍會保持有效</string>
+    <string name="delete_account_subscription_warning_body">刪除 CaloShape 帳號不會取消 Google Play 訂閱或試用，Google Play 可能會持續扣款，直到您在 Google Play 取消為止。您可以先管理訂閱，或只繼續刪除 CaloShape 帳號。</string>
+    <string name="delete_account_manage_subscription">管理訂閱</string>
+    <string name="delete_account_continue_deletion">繼續刪除</string>
     <string name="logout_account_dialog_title">登出帳號？</string>
     <string name="logout_account_dialog_body">您確定要登出帳號嗎？您之後可以隨時再次登入。</string>
 
@@ -837,6 +844,9 @@
     <string name="settings_privacy_policy">隱私權政策</string>
     <string name="settings_support_email">客服信箱</string>
     <string name="settings_delete_account">刪除帳號？</string>
+    <string name="settings_guest_name">訪客</string>
+    <string name="settings_age_years">%1$d 歲</string>
+    <string name="delete_account_failed">刪除帳號失敗，請重新登入後再試一次。</string>
     <string name="settings_version">版本 %1$s</string>
 
 

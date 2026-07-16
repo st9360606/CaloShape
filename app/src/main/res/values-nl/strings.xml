@@ -195,6 +195,7 @@
     <string name="onboard_notif_title">Laat elke maaltijd meetellen!</string>
     <string name="onboard_notif_subtitle">Ontvang subtiele herinneringen om maaltijden bij te houden en op koers te blijven met je calorieën, macro’s en voortgang.</string>
     <string name="onboard_allow_notifications_cta">Meldingen toestaan</string>
+    <string name="onboard_open_notification_settings_cta">Meldingsinstellingen openen</string>
     <string name="notification_mock_app_title">AI-calorieteller</string>
     <string name="onboard_notif_title_got_a_sec">Je maaltijd logt zichzelf niet 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Log deze maaltijd om je calorieën en macro’s op schema te houden.</string>
@@ -805,6 +806,12 @@
 
     <string name="delete_account_dialog_title">Account verwijderen?</string>
     <string name="delete_account_dialog_body">Weet je zeker dat je je account wilt verwijderen? Hiermee worden je CaloShape-gegevens permanent verwijderd, waaronder voedingslogs, gewichtsgegevens en instellingen. Deze actie kan niet ongedaan worden gemaakt.</string>
+    <string name="delete_account_preview_error_title">Je account kan niet worden gecontroleerd</string>
+    <string name="delete_account_preview_error_body">We konden je abonnementsstatus niet verifiëren. Voor je bescherming is je account niet verwijderd. Controleer je verbinding en probeer opnieuw.</string>
+    <string name="delete_account_subscription_warning_title">Je abonnement blijft actief</string>
+    <string name="delete_account_subscription_warning_body">Het verwijderen van je CaloShape-account annuleert je Google Play-abonnement of proefperiode niet. Google Play kan kosten blijven rekenen totdat je opzegt.</string>
+    <string name="delete_account_manage_subscription">Abonnement beheren</string>
+    <string name="delete_account_continue_deletion">Doorgaan met verwijderen</string>
     <string name="logout_account_dialog_title">Uitloggen?</string>
     <string name="logout_account_dialog_body">Weet je zeker dat je wilt uitloggen van je account? Je kunt op elk moment opnieuw inloggen.</string>
 
@@ -844,6 +851,9 @@
     <string name="settings_privacy_policy">Privacybeleid</string>
     <string name="settings_support_email">Supportmail</string>
     <string name="settings_delete_account">Account verwijderen</string>
+    <string name="settings_guest_name">Gast</string>
+    <string name="settings_age_years">%1$d jaar</string>
+    <string name="delete_account_failed">Account verwijderen mislukt. Log opnieuw in en probeer het nogmaals.</string>
     <string name="settings_version">Versie %1$s</string>
 
 

@@ -193,6 +193,7 @@
     <string name="onboard_notif_title">ให้ทุกมื้อมีความหมาย!</string>
     <string name="onboard_notif_subtitle">เปิดการแจ้งเตือนเพื่อรับการเตือนเบา ๆ ให้บันทึกมื้ออาหาร เพื่อให้แคลอรี มาโคร และความคืบหน้าของคุณอยู่ในเส้นทางที่ดี การพลาดเกิดขึ้นได้ การเตือนที่เหมาะเวลาช่วยให้คุณกลับมาได้เร็ว</string>
     <string name="onboard_allow_notifications_cta">อนุญาตการแจ้งเตือน</string>
+    <string name="onboard_open_notification_settings_cta">เปิดการตั้งค่าการแจ้งเตือน</string>
     <string name="notification_mock_app_title">ตัวนับแคลอรี AI</string>
     <string name="onboard_notif_title_got_a_sec">มื้ออาหารจะไม่บันทึกตัวเอง 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">บันทึกมื้อนี้เพื่อให้แคลอรีและมาโครของคุณอยู่ในเส้นทางที่ดี</string>
@@ -803,6 +804,12 @@
     <string name="settings_choose_language">เลือกภาษา</string>
     <string name="delete_account_dialog_title">ลบบัญชี?</string>
     <string name="delete_account_dialog_body">คุณแน่ใจหรือไม่ว่าต้องการลบบัญชี? การดำเนินการนี้จะลบข้อมูล CaloShape ของคุณถาวร รวมถึงบันทึกอาหาร บันทึกน้ำหนัก และการตั้งค่าที่เกี่ยวข้อง การกระทำนี้ไม่สามารถย้อนกลับได้</string>
+    <string name="delete_account_preview_error_title">ไม่สามารถตรวจสอบบัญชีได้</string>
+    <string name="delete_account_preview_error_body">เราไม่สามารถยืนยันสถานะการสมัครได้ เพื่อความปลอดภัย บัญชียังไม่ถูกลบ โปรดตรวจสอบการเชื่อมต่อแล้วลองใหม่</string>
+    <string name="delete_account_subscription_warning_title">การสมัครของคุณจะยังคงใช้งานอยู่</string>
+    <string name="delete_account_subscription_warning_body">การลบบัญชี CaloShape ไม่ได้ยกเลิกการสมัครหรือช่วงทดลองใช้ Google Play และอาจมีการเรียกเก็บเงินต่อจนกว่าจะยกเลิกใน Google Play</string>
+    <string name="delete_account_manage_subscription">จัดการการสมัคร</string>
+    <string name="delete_account_continue_deletion">ดำเนินการลบต่อ</string>
     <string name="logout_account_dialog_title">ออกจากระบบ?</string>
     <string name="logout_account_dialog_body">คุณแน่ใจหรือไม่ว่าต้องการออกจากระบบบัญชีของคุณ? คุณสามารถเข้าสู่ระบบอีกครั้งได้ทุกเมื่อ</string>
 
@@ -841,6 +848,9 @@
     <string name="settings_privacy_policy">นโยบายความเป็นส่วนตัว</string>
     <string name="settings_support_email">อีเมลฝ่ายช่วยเหลือ</string>
     <string name="settings_delete_account">ลบบัญชี?</string>
+    <string name="settings_guest_name">ผู้เยี่ยมชม</string>
+    <string name="settings_age_years">อายุ %1$d ปี</string>
+    <string name="delete_account_failed">ลบบัญชีไม่สำเร็จ โปรดลงชื่อเข้าใช้อีกครั้งแล้วลองใหม่</string>
     <string name="settings_version">เวอร์ชัน %1$s</string>
 
 

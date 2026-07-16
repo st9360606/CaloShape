@@ -195,6 +195,7 @@
     <string name="onboard_notif_title">हर निवाला मायने रखता है!</string>
     <string name="onboard_notif_subtitle">भोजन लॉग करने के हल्के रिमाइंडर के लिए नोटिफिकेशन चालू करें, ताकि आपकी कैलोरी, मैक्रो और प्रगति सही दिशा में रहें। चूक हो सकती है; समय पर मिलने वाले संकेत आपको जल्दी वापस पटरी पर लाने में मदद करते हैं।</string>
     <string name="onboard_allow_notifications_cta">नोटिफिकेशन की अनुमति दें</string>
+    <string name="onboard_open_notification_settings_cta">सूचना सेटिंग खोलें</string>
     <string name="notification_mock_app_title">AI कैलोरी काउंटर</string>
     <string name="onboard_notif_title_got_a_sec">आपका भोजन खुद लॉग नहीं होगा 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">इस भोजन को लॉग करें ताकि आपकी कैलोरी और मैक्रो सही दिशा में रहें।</string>
@@ -800,6 +801,12 @@
     <string name="settings_choose_language">भाषा चुनें</string>
     <string name="delete_account_dialog_title">खाता हटाएं?</string>
     <string name="delete_account_dialog_body">क्या आप वाकई अपना खाता हटाना चाहते हैं? इससे आपके CaloShape डेटा, भोजन लॉग, वजन रिकॉर्ड और संबंधित सेटिंग्स स्थायी रूप से हट जाएंगी। यह कार्रवाई वापस नहीं की जा सकती।</string>
+    <string name="delete_account_preview_error_title">आपके खाते की जाँच नहीं हो सकी</string>
+    <string name="delete_account_preview_error_body">सदस्यता की स्थिति सत्यापित नहीं हो सकी। आपकी सुरक्षा के लिए खाता हटाया नहीं गया। कनेक्शन जाँचें और फिर प्रयास करें।</string>
+    <string name="delete_account_subscription_warning_title">आपकी सदस्यता सक्रिय रहेगी</string>
+    <string name="delete_account_subscription_warning_body">CaloShape खाता हटाने से Google Play सदस्यता या ट्रायल रद्द नहीं होता। Google Play में रद्द करने तक शुल्क लग सकता है।</string>
+    <string name="delete_account_manage_subscription">सदस्यता प्रबंधित करें</string>
+    <string name="delete_account_continue_deletion">हटाना जारी रखें</string>
     <string name="logout_account_dialog_title">लॉग आउट करें?</string>
     <string name="logout_account_dialog_body">क्या आप वाकई अपने खाते से लॉग आउट करना चाहते हैं? आप कभी भी फिर से लॉग इन कर सकते हैं।</string>
 
@@ -838,6 +845,9 @@
     <string name="settings_privacy_policy">गोपनीयता नीति</string>
     <string name="settings_support_email">सपोर्ट ईमेल</string>
     <string name="settings_delete_account">खाता हटाएं?</string>
+    <string name="settings_guest_name">अतिथि</string>
+    <string name="settings_age_years">%1$d वर्ष</string>
+    <string name="delete_account_failed">खाता हटाया नहीं जा सका। दोबारा साइन इन करके फिर प्रयास करें।</string>
     <string name="settings_version">संस्करण %1$s</string>
 
 

@@ -195,6 +195,7 @@
     <string name="onboard_notif_title">Mantenha suas refeições em dia!</string>
     <string name="onboard_notif_subtitle">Receba lembretes para registrar suas refeições e acompanhar calorias, macronutrientes e progresso.</string>
     <string name="onboard_allow_notifications_cta">Permitir notificações</string>
+    <string name="onboard_open_notification_settings_cta">Abrir configurações de notificação</string>
     <string name="notification_mock_app_title">Contador de calorias com IA</string>
     <string name="onboard_notif_title_got_a_sec">Sua refeição não se registra 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Registre esta refeição para manter suas calorias e macros no caminho certo.</string>
@@ -805,6 +806,12 @@
     <string name="settings_choose_language">Escolher idioma</string>
     <string name="delete_account_dialog_title">Excluir conta?</string>
     <string name="delete_account_dialog_body">Tem certeza de que deseja excluir sua conta? Isso excluirá permanentemente seus dados do CaloShape, incluindo registros de alimentos, peso e configurações relacionadas. Esta ação não pode ser desfeita.</string>
+    <string name="delete_account_preview_error_title">Não foi possível verificar sua conta</string>
+    <string name="delete_account_preview_error_body">Não foi possível verificar sua assinatura. Para sua proteção, a conta não foi excluída. Verifique a conexão e tente novamente.</string>
+    <string name="delete_account_subscription_warning_title">Sua assinatura continuará ativa</string>
+    <string name="delete_account_subscription_warning_body">Excluir sua conta CaloShape não cancela a assinatura ou o teste do Google Play. O Google Play pode continuar cobrando até você cancelar por lá.</string>
+    <string name="delete_account_manage_subscription">Gerenciar assinatura</string>
+    <string name="delete_account_continue_deletion">Continuar exclusão</string>
     <string name="logout_account_dialog_title">Sair?</string>
     <string name="logout_account_dialog_body">Tem certeza de que deseja sair da sua conta? Você pode entrar novamente a qualquer momento.</string>
 
@@ -843,6 +850,9 @@
     <string name="settings_privacy_policy">Política de Privacidade</string>
     <string name="settings_support_email">Email de suporte</string>
     <string name="settings_delete_account">Excluir conta?</string>
+    <string name="settings_guest_name">Visitante</string>
+    <string name="settings_age_years">%1$d anos</string>
+    <string name="delete_account_failed">Falha ao excluir a conta. Entre novamente e tente de novo.</string>
     <string name="settings_version">Versão %1$s</string>
 
 

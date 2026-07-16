@@ -195,6 +195,7 @@
     <string name="onboard_notif_title">毎食を大切に</string>
     <string name="onboard_notif_subtitle">通知を有効にすると、食事記録のやさしいリマインダーを受け取れます。カロリー、マクロ、進捗を管理しやすくなります。記録忘れは誰にでもあります。タイムリーな通知がすぐに立て直す助けになります。</string>
     <string name="onboard_allow_notifications_cta">通知を許可</string>
+    <string name="onboard_open_notification_settings_cta">通知設定を開く</string>
     <string name="notification_mock_app_title">AIカロリーカウンター</string>
     <string name="onboard_notif_title_got_a_sec">食事は自動では記録されません 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">この食事を記録して、カロリーとマクロを目標に沿って管理しましょう。</string>
@@ -804,6 +805,12 @@
     <string name="settings_choose_language">言語を選択</string>
     <string name="delete_account_dialog_title">アカウントを削除しますか？</string>
     <string name="delete_account_dialog_body">本当にアカウントを削除しますか？食事ログ、体重記録、関連設定を含むCaloShapeデータが完全に削除されます。この操作は元に戻せません。</string>
+    <string name="delete_account_preview_error_title">アカウントを確認できません</string>
+    <string name="delete_account_preview_error_body">サブスクリプションの状態を確認できませんでした。安全のため、アカウントは削除されていません。接続を確認して再試行してください。</string>
+    <string name="delete_account_subscription_warning_title">サブスクリプションは有効なままです</string>
+    <string name="delete_account_subscription_warning_body">CaloShapeアカウントを削除しても、Google Playのサブスクリプションや試用は解約されません。Google Playで解約するまで請求が続く場合があります。</string>
+    <string name="delete_account_manage_subscription">サブスクリプションを管理</string>
+    <string name="delete_account_continue_deletion">削除を続ける</string>
     <string name="logout_account_dialog_title">ログアウトしますか？</string>
     <string name="logout_account_dialog_body">アカウントからログアウトしてもよろしいですか？いつでも再度ログインできます。</string>
 
@@ -842,6 +849,9 @@
     <string name="settings_privacy_policy">プライバシーポリシー</string>
     <string name="settings_support_email">サポートメール</string>
     <string name="settings_delete_account">アカウントを削除しますか？</string>
+    <string name="settings_guest_name">ゲスト</string>
+    <string name="settings_age_years">%1$d歳</string>
+    <string name="delete_account_failed">アカウントを削除できませんでした。再度ログインしてお試しください。</string>
     <string name="settings_version">バージョン %1$s</string>
 
 

@@ -1588,10 +1588,13 @@ fun CaloShapeNavHost(
             val avatar = avatarFromUsersApi ?: homeUi.summary?.avatarUrl
 
             // ✅ 3) UsersApi 的 name
-            val nameText = pUi.name?.trim()?.takeIf { it.isNotBlank() } ?: "Guest"
+            val guestName = stringResource(R.string.settings_guest_name)
+            val nameText = pUi.name?.trim()?.takeIf { it.isNotBlank() } ?: guestName
 
             // ✅ 4) age 先用 ProfileApi 回來的
-            val ageText = pUi.profile?.age?.let { "$it years old" } ?: "—"
+            val ageText = pUi.profile?.age?.let {
+                stringResource(R.string.settings_age_years, it)
+            } ?: "—"
 
             // ✅ URLs (Privacy Policy 內會包含 Data Deletion Policy)
             val uriHandler = LocalUriHandler.current
@@ -1770,22 +1773,24 @@ fun CaloShapeNavHost(
                         },
                         onDismissRestoreSubscription = restoreSubscriptionVm::closeDialog,
                         onMaybeLaterRestoreSubscription = restoreSubscriptionVm::dismissForSession,
+                        onLoadDeletionPreview = accountRepo::getDeletionPreview,
+                        onOpenSubscriptionManagement = { url -> uriHandler.openUri(url) },
                         onDeleteAccount = { subscriptionWarningAcknowledged ->
-                            scope.launch {
-                                val r = accountRepo.deleteAccount(
-                                    subscriptionWarningAcknowledged = subscriptionWarningAcknowledged
-                                )
-                                if (r.isSuccess) {
-                                    nav.navigate(Routes.LANDING) {
-                                        popUpTo(0) { inclusive = true }
-                                        launchSingleTop = true
-                                        restoreState = false
-                                    }
-                                } else {
-                                    backStackEntry.savedStateHandle[NavResults.ERROR_TOAST] =
-                                        (r.exceptionOrNull()?.message ?: "Delete account failed. Please sign in again and retry.")
+                            val r = accountRepo.deleteAccount(
+                                subscriptionWarningAcknowledged = subscriptionWarningAcknowledged
+                            )
+                            if (r.isSuccess) {
+                                nav.navigate(Routes.LANDING) {
+                                    popUpTo(0) { inclusive = true }
+                                    launchSingleTop = true
+                                    restoreState = false
                                 }
+                            } else {
+                                backStackEntry.savedStateHandle[NavResults.ERROR_TOAST] =
+                                    (r.exceptionOrNull()?.message
+                                        ?: activity.getString(R.string.delete_account_failed))
                             }
+                            r.isSuccess
                         },
                         logoutLoading = pUi.logoutLoading,
                         logoutErrorVisible = pUi.logoutError,

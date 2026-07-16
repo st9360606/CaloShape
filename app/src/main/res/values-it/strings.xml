@@ -195,6 +195,7 @@
     <string name="onboard_notif_title">Fai contare ogni pasto!</string>
     <string name="onboard_notif_subtitle">Attiva le notifiche per ricevere promemoria delicati per registrare i pasti, così calorie, macro e progressi restano in linea. Gli errori capitano; i promemoria al momento giusto aiutano a riprendere subito.</string>
     <string name="onboard_allow_notifications_cta">Consenti le notifiche</string>
+    <string name="onboard_open_notification_settings_cta">Apri impostazioni notifiche</string>
     <string name="notification_mock_app_title">Contacalorie AI</string>
     <string name="onboard_notif_title_got_a_sec">Registra il pasto 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Registra questo pasto per mantenere calorie e macro in linea.</string>
@@ -805,6 +806,12 @@ Resta sul piano ogni giorno.</string>
     <string name="settings_choose_language">Scegli lingua</string>
     <string name="delete_account_dialog_title">Eliminare l’account?</string>
     <string name="delete_account_dialog_body">Vuoi davvero eliminare il tuo account? Questa azione eliminerà definitivamente i dati CaloShape, inclusi registri dei pasti, dati del peso e impostazioni correlate. Non può essere annullata.</string>
+    <string name="delete_account_preview_error_title">Impossibile controllare il tuo account</string>
+    <string name="delete_account_preview_error_body">Non è stato possibile verificare lo stato dell’abbonamento. Per sicurezza, l’account non è stato eliminato. Controlla la connessione e riprova.</string>
+    <string name="delete_account_subscription_warning_title">L’abbonamento resterà attivo</string>
+    <string name="delete_account_subscription_warning_body">Eliminare l’account CaloShape non annulla l’abbonamento o la prova Google Play. Google Play può continuare ad addebitare costi finché non lo annulli.</string>
+    <string name="delete_account_manage_subscription">Gestisci abbonamento</string>
+    <string name="delete_account_continue_deletion">Continua eliminazione</string>
     <string name="logout_account_dialog_title">Uscire?</string>
     <string name="logout_account_dialog_body">Vuoi davvero uscire dal tuo account? Puoi accedere di nuovo in qualsiasi momento.</string>
 
@@ -844,6 +851,9 @@ Resta sul piano ogni giorno.</string>
     <string name="settings_privacy_policy">Informativa sulla privacy</string>
     <string name="settings_support_email">Email assistenza</string>
     <string name="settings_delete_account">Elimina account</string>
+    <string name="settings_guest_name">Ospite</string>
+    <string name="settings_age_years">%1$d anni</string>
+    <string name="delete_account_failed">Eliminazione dell’account non riuscita. Accedi di nuovo e riprova.</string>
     <string name="settings_version">Versione %1$s</string>
 
 

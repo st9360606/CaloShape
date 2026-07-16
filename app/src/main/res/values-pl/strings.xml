@@ -193,6 +193,7 @@
     <string name="onboard_notif_title">Nie zapomnij o posiłku!</string>
     <string name="onboard_notif_subtitle">Włącz przypomnienia, aby łatwiej zapisywać posiłki, trzymać kalorie i makro pod kontrolą oraz nie gubić codziennego rytmu.</string>
     <string name="onboard_allow_notifications_cta">Zezwól na powiadomienia</string>
+    <string name="onboard_open_notification_settings_cta">Otwórz ustawienia powiadomień</string>
     <string name="notification_mock_app_title">Licznik kalorii AI</string>
     <string name="onboard_notif_title_got_a_sec">Posiłek sam się nie zapisze 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Zapisz posiłek, aby utrzymać kalorie i makro pod kontrolą.</string>
@@ -798,6 +799,12 @@
     <string name="settings_choose_language">Wybierz język</string>
     <string name="delete_account_dialog_title">Usunąć konto?</string>
     <string name="delete_account_dialog_body">Czy na pewno chcesz usunąć konto? Spowoduje to trwałe usunięcie danych CaloShape, w tym dzienników jedzenia, rekordów wagi i powiązanych ustawień. Tej akcji nie można cofnąć.</string>
+    <string name="delete_account_preview_error_title">Nie można sprawdzić konta</string>
+    <string name="delete_account_preview_error_body">Nie udało się potwierdzić stanu subskrypcji. Dla bezpieczeństwa konto nie zostało usunięte. Sprawdź połączenie i spróbuj ponownie.</string>
+    <string name="delete_account_subscription_warning_title">Subskrypcja pozostanie aktywna</string>
+    <string name="delete_account_subscription_warning_body">Usunięcie konta CaloShape nie anuluje subskrypcji ani okresu próbnego Google Play. Opłaty mogą być naliczane do czasu anulowania w Google Play.</string>
+    <string name="delete_account_manage_subscription">Zarządzaj subskrypcją</string>
+    <string name="delete_account_continue_deletion">Kontynuuj usuwanie</string>
     <string name="logout_account_dialog_title">Wylogować?</string>
     <string name="logout_account_dialog_body">Czy na pewno chcesz wylogować się z konta? Możesz zalogować się ponownie w dowolnym momencie.</string>
 
@@ -836,6 +843,9 @@
     <string name="settings_privacy_policy">Polityka prywatności</string>
     <string name="settings_support_email">Email pomocy</string>
     <string name="settings_delete_account">Usunąć konto?</string>
+    <string name="settings_guest_name">Gość</string>
+    <string name="settings_age_years">%1$d lat</string>
+    <string name="delete_account_failed">Nie udało się usunąć konta. Zaloguj się ponownie i spróbuj jeszcze raz.</string>
     <string name="settings_version">Wersja %1$s</string>
 
 

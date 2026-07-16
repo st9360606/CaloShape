@@ -3,8 +3,11 @@ package com.caloshape.app.ui.onboarding.notifications
 import android.app.Activity
 import android.content.Context
 import android.content.ContextWrapper
+import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Build
+import android.provider.Settings
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.LocalActivityResultRegistryOwner
@@ -75,6 +78,7 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.app.NotificationManagerCompat
+import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.caloshape.app.BuildConfig
@@ -140,7 +144,7 @@ fun NotificationPermissionScreen(
             val effectiveOwner: ActivityResultRegistryOwner? =
                 ownerFromLocal ?: ownerFromLifecycle ?: bottomActivity
 
-            val permissionUiState = resolveNotificationPermissionUiState(bottomCtx)
+            val permissionUiState = resolveNotificationPermissionUiState(bottomCtx, bottomActivity)
 
             if (BuildConfig.DEBUG) {
                 Log.d(
@@ -159,6 +163,7 @@ fun NotificationPermissionScreen(
                         val launcher = rememberLauncherForActivityResult(
                             contract = ActivityResultContracts.RequestPermission()
                         ) { _ ->
+                            markNotificationPermissionRequested(bottomCtx)
                             onNext()
                         }
 
@@ -173,7 +178,13 @@ fun NotificationPermissionScreen(
                 else -> {
                     NotifBottomBar(
                         permissionUiState = permissionUiState,
-                        onClick = { onNext() },
+                        onClick = {
+                            if (permissionUiState == NotificationPermissionUiState.CANNOT_REQUEST) {
+                                openNotificationSettings(bottomCtx)
+                            } else {
+                                onNext()
+                            }
+                        },
                         onSkip = { onNext() }
                     )
                 }
@@ -282,7 +293,10 @@ private fun NotifBottomBar(
             text = when {
                 granted -> verifyTitle(R.string.common_continue_btn, "Continue")
                 canRequest -> verifyTitle(R.string.onboard_allow_notifications_cta, "Allow notifications")
-                else -> verifyTitle(R.string.common_continue_btn, "Continue")
+                else -> verifyTitle(
+                    R.string.onboard_open_notification_settings_cta,
+                    "Open notification settings"
+                )
             },
             onClick = onClick
         )
@@ -720,7 +734,10 @@ private tailrec fun Context.findActivity(): Activity? = when (this) {
     else -> null
 }
 
-private fun resolveNotificationPermissionUiState(context: Context): NotificationPermissionUiState {
+private fun resolveNotificationPermissionUiState(
+    context: Context,
+    activity: Activity?
+): NotificationPermissionUiState {
     val granted = isNotificationsEnabled(context)
 
     if (granted) {
@@ -733,9 +750,42 @@ private fun resolveNotificationPermissionUiState(context: Context): Notification
                 ContextCompat.checkSelfPermission(context, PERM_POST_NOTIFICATIONS) !=
                 PackageManager.PERMISSION_GRANTED
 
-    return if (canRequestRuntimePermission) {
-        NotificationPermissionUiState.CAN_REQUEST
-    } else {
+    if (!canRequestRuntimePermission) return NotificationPermissionUiState.CANNOT_REQUEST
+
+    val permanentlyDenied =
+        wasNotificationPermissionRequested(context) &&
+                activity != null &&
+                !ActivityCompat.shouldShowRequestPermissionRationale(
+                    activity,
+                    PERM_POST_NOTIFICATIONS
+                )
+
+    return if (permanentlyDenied) {
         NotificationPermissionUiState.CANNOT_REQUEST
+    } else {
+        NotificationPermissionUiState.CAN_REQUEST
     }
 }
+
+private fun markNotificationPermissionRequested(context: Context) {
+    context.getSharedPreferences(NOTIFICATION_PERMISSION_PREFS, Context.MODE_PRIVATE)
+        .edit()
+        .putBoolean(KEY_NOTIFICATION_PERMISSION_REQUESTED, true)
+        .apply()
+}
+
+private fun wasNotificationPermissionRequested(context: Context): Boolean =
+    context.getSharedPreferences(NOTIFICATION_PERMISSION_PREFS, Context.MODE_PRIVATE)
+        .getBoolean(KEY_NOTIFICATION_PERMISSION_REQUESTED, false)
+
+private fun openNotificationSettings(context: Context) {
+    val intent = Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).apply {
+        putExtra(Settings.EXTRA_APP_PACKAGE, context.packageName)
+        data = Uri.parse("package:${context.packageName}")
+        addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+    }
+    context.startActivity(intent)
+}
+
+private const val NOTIFICATION_PERMISSION_PREFS = "notification_permission"
+private const val KEY_NOTIFICATION_PERMISSION_REQUESTED = "requested"

@@ -38,6 +38,10 @@ jobs:
           echo "== storeFile in props ==" && grep -E '^storeFile=' keystore/keystore.properties || true
           test -f keystore/caloshape-release.jks || (echo "::error::JKS missing at keystore/caloshape-release.jks"; ls -la keystore; exit 1)
 
+      - name: Run prod release unit tests and lint
+        run: |
+          ./gradlew :app:testProdReleaseUnitTest :app:lintProdRelease --stacktrace
+
       - name: Build prodRelease (APK & AAB)
         run: |
           ./gradlew :app:clean :app:assembleProdRelease :app:bundleProdRelease --stacktrace

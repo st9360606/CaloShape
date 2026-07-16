@@ -195,6 +195,7 @@
     <string name="onboard_notif_title">Hatırlatmaları kaçırma!</string>
     <string name="onboard_notif_subtitle">Nazik hatırlatmalarla öğünlerini kaydet, kalorilerini, makrolarını ve ilerlemeni yolunda tut. Kaçırırsan, hızlıca geri dön.</string>
     <string name="onboard_allow_notifications_cta">Bildirimlere izin ver</string>
+    <string name="onboard_open_notification_settings_cta">Bildirim ayarlarını aç</string>
     <string name="notification_mock_app_title">AI Kalori Sayacı</string>
     <string name="onboard_notif_title_got_a_sec">Öğünün kaydolmaz 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Kalori ve makrolarınızı yolunda tutmak için bu öğünü kaydedin.</string>
@@ -806,6 +807,12 @@
     <string name="settings_choose_language">Dil seç</string>
     <string name="delete_account_dialog_title">Hesap silinsin mi?</string>
     <string name="delete_account_dialog_body">Hesabını silmek istediğine emin misin? Bu işlem yiyecek kayıtları, kilo kayıtları ve ilgili ayarlar dahil CaloShape verilerini kalıcı olarak siler. Bu işlem geri alınamaz.</string>
+    <string name="delete_account_preview_error_title">Hesabınız kontrol edilemedi</string>
+    <string name="delete_account_preview_error_body">Abonelik durumunuz doğrulanamadı. Güvenliğiniz için hesabınız silinmedi. Bağlantınızı kontrol edip tekrar deneyin.</string>
+    <string name="delete_account_subscription_warning_title">Aboneliğiniz etkin kalacak</string>
+    <string name="delete_account_subscription_warning_body">CaloShape hesabını silmek Google Play aboneliğini veya denemeyi iptal etmez. Google Play üzerinden iptal edene kadar ücret alınabilir.</string>
+    <string name="delete_account_manage_subscription">Aboneliği yönet</string>
+    <string name="delete_account_continue_deletion">Silmeye devam et</string>
     <string name="logout_account_dialog_title">Çıkış yapılsın mı?</string>
     <string name="logout_account_dialog_body">Hesabından çıkış yapmak istediğine emin misin? İstediğin zaman tekrar giriş yapabilirsin.</string>
 
@@ -844,6 +851,9 @@
     <string name="settings_privacy_policy">Gizlilik Politikası</string>
     <string name="settings_support_email">Destek e-postası</string>
     <string name="settings_delete_account">Hesap silinsin mi?</string>
+    <string name="settings_guest_name">Misafir</string>
+    <string name="settings_age_years">%1$d yaşında</string>
+    <string name="delete_account_failed">Hesap silinemedi. Tekrar giriş yapıp yeniden deneyin.</string>
     <string name="settings_version">Sürüm %1$s</string>
 
 

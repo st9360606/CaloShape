@@ -73,7 +73,7 @@ jobs:
       # --- Push to main: optional devDebug build artifact ---
       - name: Assemble devDebug (push to main)
         if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/heads/') }}
-        run: ./gradlew --stacktrace :app:assembleDevDebug
+        run: ./gradlew --stacktrace :app:testDevDebugUnitTest :app:lintDevDebug :app:assembleDevDebug
 
       - name: Upload devDebug APK (push to main)
         if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/heads/') }}
@@ -85,7 +85,7 @@ jobs:
       # --- Tag build: prodRelease APK + AAB ---
       - name: Build prodRelease (tag)
         if: startsWith(github.ref, 'refs/tags/v')
-        run: ./gradlew --stacktrace :app:assembleProdRelease :app:bundleProdRelease
+        run: ./gradlew --stacktrace :app:testProdReleaseUnitTest :app:lintProdRelease :app:assembleProdRelease :app:bundleProdRelease
 
       - name: Upload prodRelease artifacts (tag)
         if: startsWith(github.ref, 'refs/tags/v')

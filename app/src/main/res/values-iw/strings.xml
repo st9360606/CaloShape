@@ -122,9 +122,11 @@
     <string name="onboard_weight_loss_with_ai_item_5">תוכנית צום</string>
     <string name="onboard_weight_loss_with_ai_item_6">מעקב מים</string>
     <string name="onboard_weight_loss_with_ai_item_7">מעקב צעדים</string>
+    <!-- Onboarding: NotificationPermissionScreen -->
     <string name="onboard_notif_title">גרום לכל ארוחה להיחשב!</string>
     <string name="onboard_notif_subtitle">הפעל התראות לתזכורות עדינות לרישום ארוחות, כדי שהקלוריות, המאקרו וההתקדמות שלך יישארו במסלול. נפילות קטנות קורות; תזכורות בזמן עוזרות לך לחזור מהר.</string>
     <string name="onboard_allow_notifications_cta">אפשר התראות</string>
+    <string name="onboard_open_notification_settings_cta">פתיחת הגדרות התראות</string>
     <string name="notification_mock_app_title">מונה קלוריות AI</string>
     <string name="onboard_notif_title_got_a_sec">הארוחה לא תירשם מעצמה 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">רשום את הארוחה הזו כדי לשמור על הקלוריות והמאקרו במסלול.</string>
@@ -572,10 +574,17 @@
     <string name="foodlog_delete_dialog_title">למחוק רשומה?</string>
     <string name="foodlog_delete_dialog_message">האם למחוק לצמיתות את רשומת הארוחה הזו? אי אפשר לבטל פעולה זו.</string>
     <string name="foodlog_delete_dialog_confirm">מחק</string>
+    <!-- Settings -->
     <string name="settings_title">הגדרות</string>
     <string name="settings_choose_language">בחר שפה</string>
     <string name="delete_account_dialog_title">למחוק חשבון?</string>
     <string name="delete_account_dialog_body">האם אתה בטוח שברצונך למחוק את החשבון? פעולה זו תמחק לצמיתות את נתוני CaloShape שלך, כולל יומני אוכל, רשומות משקל והגדרות קשורות. אי אפשר לבטל פעולה זו.</string>
+    <string name="delete_account_preview_error_title">לא ניתן לבדוק את החשבון</string>
+    <string name="delete_account_preview_error_body">לא הצלחנו לאמת את מצב המינוי. להגנתך החשבון לא נמחק. בדוק את החיבור ונסה שוב.</string>
+    <string name="delete_account_subscription_warning_title">המינוי יישאר פעיל</string>
+    <string name="delete_account_subscription_warning_body">מחיקת חשבון CaloShape אינה מבטלת מינוי או ניסיון של Google Play. החיוב עשוי להימשך עד לביטול ב-Google Play.</string>
+    <string name="delete_account_manage_subscription">ניהול המינוי</string>
+    <string name="delete_account_continue_deletion">המשך מחיקה</string>
     <string name="logout_account_dialog_title">להתנתק?</string>
     <string name="logout_account_dialog_body">האם אתה בטוח שברצונך להתנתק מהחשבון? אפשר להתחבר שוב בכל עת.</string>
     <string name="restore_subscription_dialog_success_title">המנוי שוחזר</string>
@@ -606,6 +615,9 @@
     <string name="settings_privacy_policy">מדיניות פרטיות</string>
     <string name="settings_support_email">אימייל תמיכה</string>
     <string name="settings_delete_account">למחוק חשבון?</string>
+    <string name="settings_guest_name">אורח</string>
+    <string name="settings_age_years">גיל %1$d</string>
+    <string name="delete_account_failed">מחיקת החשבון נכשלה. התחבר שוב ונסה שנית.</string>
     <string name="settings_version">גרסה %1$s</string>
     <string name="settings_membership_payment">בעיית תשלום</string>
     <string name="settings_membership_update_payment">עדכן תשלום</string>

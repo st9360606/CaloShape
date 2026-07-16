@@ -195,6 +195,7 @@
     <string name="onboard_notif_title">Låt varje måltid räknas!</string>
     <string name="onboard_notif_subtitle">Få diskreta påminnelser om att logga måltider och hålla koll på kalorier, makron och framsteg.</string>
     <string name="onboard_allow_notifications_cta">Tillåt notiser</string>
+    <string name="onboard_open_notification_settings_cta">Öppna aviseringsinställningar</string>
     <string name="notification_mock_app_title">AI-kaloriräknare</string>
     <string name="onboard_notif_title_got_a_sec">Måltiden loggar inte sig själv 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Logga måltiden för att hålla koll på kalorier och makron.</string>
@@ -805,6 +806,12 @@
     <string name="settings_choose_language">Välj språk</string>
     <string name="delete_account_dialog_title">Radera konto?</string>
     <string name="delete_account_dialog_body">Är du säker på att du vill radera ditt konto? Detta raderar dina CaloShape-data permanent, inklusive matloggar, viktposter och relaterade inställningar. Åtgärden kan inte ångras.</string>
+    <string name="delete_account_preview_error_title">Det gick inte att kontrollera kontot</string>
+    <string name="delete_account_preview_error_body">Vi kunde inte verifiera din prenumeration. För din säkerhet har kontot inte raderats. Kontrollera anslutningen och försök igen.</string>
+    <string name="delete_account_subscription_warning_title">Din prenumeration förblir aktiv</string>
+    <string name="delete_account_subscription_warning_body">Att radera ditt CaloShape-konto avslutar inte din Google Play-prenumeration eller provperiod. Google Play kan fortsätta debitera tills du avslutar den.</string>
+    <string name="delete_account_manage_subscription">Hantera prenumeration</string>
+    <string name="delete_account_continue_deletion">Fortsätt radera</string>
     <string name="logout_account_dialog_title">Logga ut?</string>
     <string name="logout_account_dialog_body">Är du säker på att du vill logga ut från ditt konto? Du kan logga in igen när som helst.</string>
 
@@ -843,6 +850,9 @@
     <string name="settings_privacy_policy">Integritetspolicy</string>
     <string name="settings_support_email">Supportmejl</string>
     <string name="settings_delete_account">Radera konto?</string>
+    <string name="settings_guest_name">Gäst</string>
+    <string name="settings_age_years">%1$d år</string>
+    <string name="delete_account_failed">Kontot kunde inte raderas. Logga in igen och försök på nytt.</string>
     <string name="settings_version">Version %1$s</string>
 
 

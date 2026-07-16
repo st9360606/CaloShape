@@ -193,6 +193,7 @@
     <string name="onboard_notif_title">식사 기록을 놓치지 마세요!</string>
     <string name="onboard_notif_subtitle">알림을 켜면 식사 기록을 부드럽게 알려 주어 칼로리, 매크로, 진행 상황을 계속 관리할 수 있습니다. 실수는 누구나 할 수 있습니다. 적절한 알림이 빠르게 다시 시작하는 데 도움이 됩니다.</string>
     <string name="onboard_allow_notifications_cta">알림 허용</string>
+    <string name="onboard_open_notification_settings_cta">알림 설정 열기</string>
     <string name="notification_mock_app_title">AI 칼로리 카운터</string>
     <string name="onboard_notif_title_got_a_sec">식사는 저절로 기록되지 않아요 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">이 식사를 기록해 칼로리와 매크로를 계속 관리하세요.</string>
@@ -800,6 +801,12 @@
     <string name="settings_choose_language">언어 선택</string>
     <string name="delete_account_dialog_title">계정을 삭제할까요?</string>
     <string name="delete_account_dialog_body">계정을 삭제하시겠습니까? 음식 기록, 체중 기록 및 관련 설정을 포함한 CaloShape 데이터가 영구적으로 삭제됩니다. 이 작업은 되돌릴 수 없습니다.</string>
+    <string name="delete_account_preview_error_title">계정을 확인할 수 없습니다</string>
+    <string name="delete_account_preview_error_body">구독 상태를 확인하지 못했습니다. 보호를 위해 계정은 삭제되지 않았습니다. 연결을 확인한 후 다시 시도하세요.</string>
+    <string name="delete_account_subscription_warning_title">구독은 계속 활성 상태입니다</string>
+    <string name="delete_account_subscription_warning_body">CaloShape 계정을 삭제해도 Google Play 구독이나 체험은 취소되지 않습니다. Google Play에서 취소할 때까지 요금이 청구될 수 있습니다.</string>
+    <string name="delete_account_manage_subscription">구독 관리</string>
+    <string name="delete_account_continue_deletion">삭제 계속</string>
     <string name="logout_account_dialog_title">로그아웃할까요?</string>
     <string name="logout_account_dialog_body">계정에서 로그아웃하시겠습니까? 언제든지 다시 로그인할 수 있습니다.</string>
 
@@ -838,6 +845,9 @@
     <string name="settings_privacy_policy">개인정보처리방침</string>
     <string name="settings_support_email">지원 이메일</string>
     <string name="settings_delete_account">계정을 삭제할까요?</string>
+    <string name="settings_guest_name">게스트</string>
+    <string name="settings_age_years">%1$d세</string>
+    <string name="delete_account_failed">계정을 삭제하지 못했습니다. 다시 로그인한 후 재시도하세요.</string>
     <string name="settings_version">버전 %1$s</string>
 
 

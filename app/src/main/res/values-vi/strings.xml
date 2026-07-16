@@ -195,6 +195,7 @@
     <string name="onboard_notif_title">Đừng quên ghi lại bữa ăn!</string>
     <string name="onboard_notif_subtitle">Bật thông báo để nhận nhắc nhở nhẹ nhàng ghi bữa ăn, giúp calo, macro và tiến độ của bạn luôn đi đúng hướng. Việc lỡ nhịp có thể xảy ra; lời nhắc đúng lúc giúp bạn quay lại nhanh hơn.</string>
     <string name="onboard_allow_notifications_cta">Cho phép thông báo</string>
+    <string name="onboard_open_notification_settings_cta">Mở cài đặt thông báo</string>
     <string name="notification_mock_app_title">Bộ đếm calo AI</string>
     <string name="onboard_notif_title_got_a_sec">Bữa ăn không tự ghi lại đâu 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Ghi lại bữa ăn này để giữ calo và macro đi đúng hướng.</string>
@@ -800,6 +801,12 @@
     <string name="settings_choose_language">Chọn ngôn ngữ</string>
     <string name="delete_account_dialog_title">Xóa tài khoản?</string>
     <string name="delete_account_dialog_body">Bạn có chắc muốn xóa tài khoản không? Dữ liệu CaloShape của bạn sẽ bị xóa vĩnh viễn, bao gồm nhật ký món ăn, bản ghi cân nặng và cài đặt liên quan. Thao tác này không thể hoàn tác.</string>
+    <string name="delete_account_preview_error_title">Không thể kiểm tra tài khoản</string>
+    <string name="delete_account_preview_error_body">Không thể xác minh trạng thái gói đăng ký. Để bảo vệ bạn, tài khoản chưa bị xóa. Hãy kiểm tra kết nối và thử lại.</string>
+    <string name="delete_account_subscription_warning_title">Gói đăng ký vẫn sẽ hoạt động</string>
+    <string name="delete_account_subscription_warning_body">Xóa tài khoản CaloShape không hủy gói đăng ký hoặc dùng thử Google Play. Google Play có thể tiếp tục tính phí cho đến khi bạn hủy tại đó.</string>
+    <string name="delete_account_manage_subscription">Quản lý gói đăng ký</string>
+    <string name="delete_account_continue_deletion">Tiếp tục xóa</string>
     <string name="logout_account_dialog_title">Đăng xuất?</string>
     <string name="logout_account_dialog_body">Bạn có chắc muốn đăng xuất khỏi tài khoản không? Bạn có thể đăng nhập lại bất cứ lúc nào.</string>
 
@@ -838,6 +845,9 @@
     <string name="settings_privacy_policy">Chính sách Quyền riêng tư</string>
     <string name="settings_support_email">Email hỗ trợ</string>
     <string name="settings_delete_account">Xóa tài khoản?</string>
+    <string name="settings_guest_name">Khách</string>
+    <string name="settings_age_years">%1$d tuổi</string>
+    <string name="delete_account_failed">Xóa tài khoản không thành công. Hãy đăng nhập lại và thử lần nữa.</string>
     <string name="settings_version">Phiên bản %1$s</string>
 
 

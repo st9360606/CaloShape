@@ -195,6 +195,7 @@
     <string name="onboard_notif_title">اجعل كل وجبة مهمة!</string>
     <string name="onboard_notif_subtitle">فعّل الإشعارات للحصول على تذكيرات لطيفة لتسجيل الوجبات، كي تبقى السعرات والعناصر الكبرى وتقدمك على المسار الصحيح. قد تحدث الهفوات؛ وتساعدك التنبيهات في الوقت المناسب على العودة بسرعة.</string>
     <string name="onboard_allow_notifications_cta">السماح بالإشعارات</string>
+    <string name="onboard_open_notification_settings_cta">فتح إعدادات الإشعارات</string>
     <string name="notification_mock_app_title">عداد السعرات بالذكاء الاصطناعي</string>
     <string name="onboard_notif_title_got_a_sec">وجبتك لن تسجّل نفسها 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">سجّل هذه الوجبة للحفاظ على السعرات والعناصر الكبرى على المسار الصحيح.</string>
@@ -805,6 +806,12 @@
     <string name="settings_choose_language">اختيار اللغة</string>
     <string name="delete_account_dialog_title">حذف الحساب؟</string>
     <string name="delete_account_dialog_body">هل أنت متأكد أنك تريد حذف حسابك؟ سيؤدي ذلك إلى حذف بيانات CaloShape نهائيًا، بما في ذلك سجلات الطعام وسجلات الوزن والإعدادات ذات الصلة. لا يمكن التراجع عن هذا الإجراء.</string>
+    <string name="delete_account_preview_error_title">تعذر التحقق من حسابك</string>
+    <string name="delete_account_preview_error_body">تعذر التحقق من حالة اشتراكك. لحمايتك، لم يتم حذف الحساب. تحقق من الاتصال وحاول مجددًا.</string>
+    <string name="delete_account_subscription_warning_title">سيظل اشتراكك نشطًا</string>
+    <string name="delete_account_subscription_warning_body">حذف حساب CaloShape لا يلغي اشتراك Google Play أو الفترة التجريبية. قد يستمر Google Play في تحصيل الرسوم حتى تلغيه هناك.</string>
+    <string name="delete_account_manage_subscription">إدارة الاشتراك</string>
+    <string name="delete_account_continue_deletion">متابعة الحذف</string>
     <string name="logout_account_dialog_title">تسجيل الخروج؟</string>
     <string name="logout_account_dialog_body">هل أنت متأكد أنك تريد تسجيل الخروج من حسابك؟ يمكنك تسجيل الدخول مرة أخرى في أي وقت.</string>
 
@@ -843,6 +850,9 @@
     <string name="settings_privacy_policy">سياسة الخصوصية</string>
     <string name="settings_support_email">البريد الإلكتروني للدعم</string>
     <string name="settings_delete_account">حذف الحساب؟</string>
+    <string name="settings_guest_name">ضيف</string>
+    <string name="settings_age_years">العمر %1$d</string>
+    <string name="delete_account_failed">تعذر حذف الحساب. سجل الدخول مجددًا وحاول مرة أخرى.</string>
     <string name="settings_version">الإصدار %1$s</string>
 
 

@@ -195,6 +195,7 @@
     <string name="onboard_notif_title">Chaque repas compte !</string>
     <string name="onboard_notif_subtitle">Activez les notifications pour recevoir des rappels discrets afin d’enregistrer vos repas, pour garder vos calories, macros et progrès sur la bonne voie. Les écarts arrivent ; des rappels au bon moment vous aident à repartir vite.</string>
     <string name="onboard_allow_notifications_cta">Autoriser les notifications</string>
+    <string name="onboard_open_notification_settings_cta">Ouvrir les paramètres de notification</string>
     <string name="notification_mock_app_title">Compteur de calories IA</string>
     <string name="onboard_notif_title_got_a_sec">N’oubliez pas vos repas 😉</string>
     <string name="onboard_notif_subtitle_log_meal_goal">Enregistrez ce repas pour garder vos calories et macros sur la bonne voie.</string>
@@ -805,6 +806,12 @@
     <string name="settings_choose_language">Choisir la langue</string>
     <string name="delete_account_dialog_title">Supprimer le compte ?</string>
     <string name="delete_account_dialog_body">Voulez-vous vraiment supprimer votre compte ? Cela effacera définitivement vos données CaloShape, y compris vos repas enregistrés, vos suivis de poids et les paramètres associés. Cette action est irréversible.</string>
+    <string name="delete_account_preview_error_title">Impossible de vérifier votre compte</string>
+    <string name="delete_account_preview_error_body">Nous n’avons pas pu vérifier votre abonnement. Par sécurité, votre compte n’a pas été supprimé. Vérifiez votre connexion et réessayez.</string>
+    <string name="delete_account_subscription_warning_title">Votre abonnement restera actif</string>
+    <string name="delete_account_subscription_warning_body">Supprimer votre compte CaloShape n’annule pas votre abonnement ou essai Google Play. Google Play peut continuer à vous facturer jusqu’à son annulation.</string>
+    <string name="delete_account_manage_subscription">Gérer l’abonnement</string>
+    <string name="delete_account_continue_deletion">Continuer la suppression</string>
     <string name="logout_account_dialog_title">Se déconnecter ?</string>
     <string name="logout_account_dialog_body">Voulez-vous vraiment vous déconnecter de votre compte ? Vous pourrez vous reconnecter à tout moment.</string>
 
@@ -843,6 +850,9 @@
     <string name="settings_privacy_policy">Politique de confidentialité</string>
     <string name="settings_support_email">E-mail d’assistance</string>
     <string name="settings_delete_account">Supprimer le compte ?</string>
+    <string name="settings_guest_name">Invité</string>
+    <string name="settings_age_years">%1$d ans</string>
+    <string name="delete_account_failed">Échec de la suppression du compte. Reconnectez-vous et réessayez.</string>
     <string name="settings_version">Version %1$s</string>
 
 
