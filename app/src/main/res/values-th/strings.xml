@@ -107,7 +107,7 @@
     <string name="err_generic">มีบางอย่างผิดพลาด โปรดลองอีกครั้ง</string>
 
     <string name="confirm_email_title">ยืนยันอีเมลของคุณ</string>
-    <string name="confirm_email_hint">กรุณาใส่รหัส 4 หลักที่เราเพิ่งส่งไปที่</string>
+    <string name="confirm_email_hint">กรุณาใส่รหัส 6 หลักที่เราเพิ่งส่งไปที่</string>
     <string name="didnt_receive_code">ไม่ได้รับรหัส?</string>
 
 
@@ -281,7 +281,6 @@
     <!-- Onboarding: OnboardSubscriptionIntro -->
     <string name="subscription_intro_title">ปลดล็อก CaloShape AI\nเพื่อไปถึงเป้าหมายเร็วขึ้น</string>
     <string name="subscription_intro_helper_format">เพียง %1$s ต่อปี (%2$s)</string>
-    <string name="subscription_start_three_day_free_trial">ทดลองใช้ฟรี 3 วัน</string>
     <string name="subscription_three_day_trial_helper_format">เพียง %1$s/ปี (%2$s/เดือน)</string>
     <string name="subscription_already_owned_restore_required">บัญชี Google Play ของคุณมีการสมัครสมาชิก CaloShape ที่ใช้งานอยู่แล้ว โปรดกู้คืนมายังบัญชี CaloShape นี้ก่อนใช้ฟีเจอร์พรีเมียม</string>
     <string name="subscription_error_no_active_purchase">ไม่พบการซื้อที่ใช้งานอยู่</string>
@@ -325,8 +324,8 @@
     <string name="subscription_badge_lowest_price_ever">ราคาต่ำสุดเท่าที่เคยมี</string>
     <string name="subscription_yearly_plan">แผนรายปี</string>
     <string name="subscription_yearly_plan_price_format">12 เดือน · %1$s</string>
+    <string name="subscription_start_free_trial">ทดลองใช้ฟรี %1$d วัน</string>
 
-    <string name="subscription_start_free_trial">ทดลองใช้ฟรี 3 วัน</string>
     <string name="subscription_trial_helper">ไม่มีข้อผูกมัด — ยกเลิกได้ทุกเมื่อ</string>
     <string name="subscription_discount_terms_format">เพียง %1$s/ปี (%2$s/เดือน)</string>
     <string name="subscription_discount_trial_terms_format">ไม่มีข้อผูกมัด — ยกเลิกได้ทุกเมื่อ</string>

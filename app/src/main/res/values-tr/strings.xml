@@ -107,7 +107,7 @@
     <string name="err_generic">Bir şeyler ters gitti. Lütfen tekrar deneyin.</string>
 
     <string name="confirm_email_title">E-postanı doğrula</string>
-    <string name="confirm_email_hint">Az önce gönderdiğimiz 4 haneli kodu girin:</string>
+    <string name="confirm_email_hint">Az önce gönderdiğimiz 6 haneli kodu girin:</string>
     <string name="didnt_receive_code">Kodu almadınız mı?</string>
 
 
@@ -283,7 +283,6 @@
     <!-- Onboarding: OnboardSubscriptionIntro -->
     <string name="subscription_intro_title">Hedeflerine daha hızlı ulaşmak için\nCaloShape AI kilidini aç.</string>
     <string name="subscription_intro_helper_format">Yılda sadece %1$s (%2$s)</string>
-    <string name="subscription_start_three_day_free_trial">3 gün ücretsiz dene</string>
     <string name="subscription_three_day_trial_helper_format">Sadece %1$s/yıl (%2$s/ay)</string>
     <string name="subscription_already_owned_restore_required">Google Play hesabında zaten aktif bir CaloShape aboneliği var. Premium özellikleri kullanmadan önce bunu bu CaloShape hesabına geri yükle.</string>
     <string name="subscription_error_no_active_purchase">Aktif satın alma bulunamadı.</string>
@@ -327,8 +326,8 @@
     <string name="subscription_badge_lowest_price_ever">Şimdiye kadarki en düşük fiyat</string>
     <string name="subscription_yearly_plan">Yıllık Plan</string>
     <string name="subscription_yearly_plan_price_format">12 ay · %1$s</string>
+    <string name="subscription_start_free_trial">%1$d gün ücretsiz dene</string>
 
-    <string name="subscription_start_free_trial">3 gün ücretsiz dene</string>
     <string name="subscription_trial_helper">Taahhüt yok — istediğin zaman iptal et</string>
     <string name="subscription_discount_terms_format">Sadece %1$s/yıl (%2$s/ay)</string>
     <string name="subscription_discount_trial_terms_format">Taahhüt yok — istediğin zaman iptal et</string>

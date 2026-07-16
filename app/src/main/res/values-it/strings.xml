@@ -107,7 +107,7 @@
     <string name="err_generic">Qualcosa è andato storto. Riprova.</string>
 
     <string name="confirm_email_title">Verifica la tua email</string>
-    <string name="confirm_email_hint">Inserisci il codice a 4 cifre che abbiamo appena inviato a</string>
+    <string name="confirm_email_hint">Inserisci il codice a 6 cifre che abbiamo appena inviato a</string>
     <string name="didnt_receive_code">Non hai ricevuto il codice?</string>
 
 
@@ -286,7 +286,6 @@ Riprova più tardi.</string>
     <string name="subscription_intro_title">Sblocca CaloShape AI per
 restare più facilmente sui tuoi obiettivi.</string>
     <string name="subscription_intro_helper_format">Solo %1$s all’anno (%2$s)</string>
-    <string name="subscription_start_three_day_free_trial">Prova gratis per 3 giorni</string>
     <string name="subscription_three_day_trial_helper_format">Solo %1$s/anno (%2$s/mese)</string>
     <string name="subscription_already_owned_restore_required">Hai già un abbonamento CaloShape attivo su Google Play. Ripristinalo su questo account per usare Premium.</string>
     <string name="subscription_error_no_active_purchase">Nessun acquisto attivo trovato.</string>
@@ -332,8 +331,8 @@ Resta sul piano ogni giorno.</string>
     <string name="subscription_badge_lowest_price_ever">Prezzo più basso di sempre</string>
     <string name="subscription_yearly_plan">Annuale</string>
     <string name="subscription_yearly_plan_price_format">%1$s/anno</string>
+    <string name="subscription_start_free_trial">Prova gratis per %1$d giorni</string>
 
-    <string name="subscription_start_free_trial">Prova gratis per 3 giorni</string>
     <string name="subscription_trial_helper">Annulla quando vuoi</string>
     <string name="subscription_discount_terms_format">Solo %1$s/anno (%2$s/mese)</string>
     <string name="subscription_discount_trial_terms_format">Annulla quando vuoi</string>

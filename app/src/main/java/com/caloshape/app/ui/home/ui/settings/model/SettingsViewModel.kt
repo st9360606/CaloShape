@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.caloshape.app.data.auth.repo.AuthRepository
+import com.caloshape.app.data.auth.repo.LocalUserDataPurger
 import com.caloshape.app.data.profile.api.UserProfileDto
 import com.caloshape.app.data.profile.repo.ProfileRepository
 import com.caloshape.app.data.users.repo.UsersRepository
@@ -22,7 +23,8 @@ import javax.inject.Inject
 class SettingsViewModel @Inject constructor(
     private val usersRepo: UsersRepository,
     private val profileRepo: ProfileRepository,
-    private val authRepo: AuthRepository
+    private val authRepo: AuthRepository,
+    private val localUserDataPurger: LocalUserDataPurger
 ) : ViewModel() {
 
     data class UiState(
@@ -59,8 +61,6 @@ class SettingsViewModel @Inject constructor(
                 }
                 meDeferred.await() to profileDeferred.await()
             }
-
-            Log.d("PersonalVM", "me.name=${me?.name}, me.picture=${me?.picture}, profile.age=${profile?.age}")
 
             _ui.update {
                 it.copy(
@@ -127,6 +127,7 @@ class SettingsViewModel @Inject constructor(
 
         val result = authRepo.logoutRemoteThenClear()
         if (result.isSuccess) {
+            localUserDataPurger.purge()
             _ui.update { it.copy(logoutLoading = false, logoutError = false) }
             _events.tryEmit(Event.LogoutSuccess)
         } else {

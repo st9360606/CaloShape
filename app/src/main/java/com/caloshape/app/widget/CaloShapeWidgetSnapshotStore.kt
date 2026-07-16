@@ -1,5 +1,7 @@
 package com.caloshape.app.widget
 
+import android.appwidget.AppWidgetManager
+import android.content.ComponentName
 import android.content.Context
 import androidx.core.content.edit
 import com.caloshape.app.data.foodlog.repo.HomeTodayNutritionSummary
@@ -108,13 +110,30 @@ object CaloShapeWidgetSnapshotStore {
         )
     }
 
-    private const val DEFAULT_GOAL_KCAL = 2430
+    fun clearAndRefresh(context: Context) {
+        val appContext = context.applicationContext
+        appContext.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE).edit {
+            clear()
+        }
+
+        val manager = AppWidgetManager.getInstance(appContext)
+        manager.getAppWidgetIds(ComponentName(appContext, CaloShapeCaloriesWidgetReceiver::class.java))
+            .forEach { appWidgetId ->
+                CaloShapeCaloriesWidgetReceiver.updateAppWidget(appContext, manager, appWidgetId)
+            }
+        manager.getAppWidgetIds(ComponentName(appContext, CaloShapeMacroActionsWidgetReceiver::class.java))
+            .forEach { appWidgetId ->
+                CaloShapeMacroActionsWidgetReceiver.updateAppWidget(appContext, manager, appWidgetId)
+            }
+    }
+
+    private const val DEFAULT_GOAL_KCAL = 0
     private const val DEFAULT_EATEN_KCAL = 0
-    private const val DEFAULT_PROTEIN_GOAL_G = 152
+    private const val DEFAULT_PROTEIN_GOAL_G = 0
     private const val DEFAULT_EATEN_PROTEIN_G = 0
-    private const val DEFAULT_CARBS_GOAL_G = 273
+    private const val DEFAULT_CARBS_GOAL_G = 0
     private const val DEFAULT_EATEN_CARBS_G = 0
-    private const val DEFAULT_FATS_GOAL_G = 81
+    private const val DEFAULT_FATS_GOAL_G = 0
     private const val DEFAULT_EATEN_FATS_G = 0
 }
 

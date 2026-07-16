@@ -54,7 +54,14 @@ class FakeBillingGateway(
             productId = productId,
             offerTag = offerTag,
             formattedPrice = if (isDiscountOffer) "DEV\$649.00" else "DEV\$999.00",
-            formattedMonthlyEquivalent = if (isDiscountOffer) "DEV\$54.08" else "DEV\$83.25"
+            formattedMonthlyEquivalent = if (isDiscountOffer) "DEV\$54.08" else "DEV\$83.25",
+            freeTrialDays = if (
+                offerTag == CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_DISCOUNT_YEARLY
+            ) {
+                3
+            } else {
+                null
+            }
         )
     }
 
@@ -74,10 +81,7 @@ class FakeBillingGateway(
         }
 
         val phase =
-            if (
-                offerTag == CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_YEARLY ||
-                offerTag == CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_DISCOUNT_YEARLY
-            ) {
+            if (offerTag == CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_DISCOUNT_YEARLY) {
                 "trial"
             } else {
                 "paid"
@@ -103,7 +107,7 @@ class FakeBillingGateway(
     }
 
     override suspend fun acknowledgePurchase(purchaseToken: String): Boolean {
-        Log.d(TAG, "FAKE acknowledgePurchase purchaseToken=$purchaseToken")
+        Log.d(TAG, "FAKE acknowledgePurchase")
 
         delay(100)
 

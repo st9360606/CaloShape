@@ -1,6 +1,5 @@
 package com.caloshape.app.data.profile.repo
 
-import android.util.Log
 import com.caloshape.app.data.common.RepoInvalidationBus
 import com.caloshape.app.data.profile.api.ProfileApi
 import com.caloshape.app.data.profile.api.UpdateGoalWeightRequest
@@ -126,8 +125,6 @@ class ProfileRepository @Inject constructor(
             UserProfileStore.WeightUnit.KG -> rawGoalKg to null
             UserProfileStore.WeightUnit.LBS -> null to rawGoalLbs
         }
-
-        Log.d("ProfileRepo", "upsert heightUnit=${p.heightUnit} heightCm(raw)=${p.heightCm} heightCmToSend=$heightCmToSend ft=$feet in=$inches")
 
         val req = UpsertProfileRequest(
             gender = p.gender,

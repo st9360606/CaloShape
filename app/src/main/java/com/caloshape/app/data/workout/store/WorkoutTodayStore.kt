@@ -33,4 +33,8 @@ class WorkoutTodayStore @Inject constructor(
     suspend fun setFromServer(resp: TodayWorkoutResponse) = withContext(Dispatchers.IO) {
         _today.value = resp
     }
+
+    fun clear() {
+        _today.value = null
+    }
 }

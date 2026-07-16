@@ -16,7 +16,7 @@ interface AuthApi {
     suspend fun googleLogin(@Body body: GoogleSignInExchangeRequest): AuthResponse
 
     @POST("auth/refresh")
-    fun refresh(@Body body: RefreshRequest): Call<AuthResponse> // Authenticator ?�要�?�?Call
+    fun refresh(@Body body: RefreshRequest): Call<AuthResponse> // Authenticator ?閬?甇?Call
 
     @POST("auth/logout")
     suspend fun logout(
@@ -25,9 +25,12 @@ interface AuthApi {
     )
 
     @POST("auth/email/start")
-    suspend fun startEmail(@Body body: StartEmailReq): StartEmailRes
+    suspend fun startEmail(
+        @Body body: StartEmailReq,
+        @Header("X-Device-Id") deviceId: String? = null
+    ): StartEmailRes
 
-    /** 夾帶 X-Device-Id（可??null）�?後端?��??�在 token 審�? */
+    /** 憭曉葆 X-Device-Id嚗??null嚗?敺垢??? token 撖抵? */
     @POST("auth/email/verify")
     suspend fun verifyEmail(
         @Body body: VerifyEmailReq,

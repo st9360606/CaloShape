@@ -204,15 +204,6 @@ class WeightViewModel @Inject constructor(
                     ?: summary.currentLbs
                     ?: snapshot.profileWeightLbs
 
-            Log.d(
-                "WeightVM",
-                "summary range=$range " +
-                        "goalKg=${summary.goalKg}, goalLbs=${summary.goalLbs}, " +
-                        "currentKg=${summary.currentKg}, currentLbs=${summary.currentLbs}, " +
-                        "profileWeightKg=${summary.profileWeightKg}, profileWeightLbs=${summary.profileWeightLbs}, " +
-                        "currentFromSeriesKg=${currentFromSeries?.weightKg}, currentFromSeriesLbs=${currentFromSeries?.weightLbs}"
-            )
-
             _ui.update { state ->
                 state.copy(
                     goal = effectiveGoalKg,

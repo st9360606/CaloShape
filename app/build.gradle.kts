@@ -131,6 +131,14 @@ android {
     }
     kotlinOptions { jvmTarget = "21" }
 
+    // The app provides an in-app language picker. Keep all translations in the
+    // installed bundle so switching languages does not depend on Play delivery.
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+
     buildFeatures {
         compose = true
         buildConfig = true // ✅ 你已經有，保留
@@ -238,7 +246,7 @@ dependencies {
     implementation("androidx.camera:camera-view:1.4.1")
 
     // Google Play Billing (KTX) ✅ 一定要有，不然 com.android.billingclient.* 全紅
-    implementation("com.android.billingclient:billing-ktx:7.1.1")
+    implementation("com.android.billingclient:billing:9.1.0")
 
     // ML Kit Barcode :barcode-scanning
     implementation("com.google.mlkit:barcode-scanning:17.3.0")

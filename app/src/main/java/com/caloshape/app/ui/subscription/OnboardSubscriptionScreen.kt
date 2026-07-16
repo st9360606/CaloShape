@@ -91,20 +91,6 @@ private enum class OnboardPaywallStep {
     OneTimeOffer
 }
 
-internal enum class OnboardIntroVariant {
-    Trial,
-    Standard
-}
-
-internal fun resolveOnboardIntroVariant(
-    trialEligible: Boolean,
-    trialOfferAvailable: Boolean
-): OnboardIntroVariant = if (trialEligible && trialOfferAvailable) {
-    OnboardIntroVariant.Trial
-} else {
-    OnboardIntroVariant.Standard
-}
-
 internal fun resolveOneTimeOfferTag(
     trialEnabled: Boolean,
     trialEligible: Boolean,
@@ -113,6 +99,21 @@ internal fun resolveOneTimeOfferTag(
     CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_DISCOUNT_YEARLY
 } else {
     CaloShapeBillingProducts.OfferTags.ONBOARD_DISCOUNT_YEARLY
+}
+
+internal fun resolveTrialStatusTextResource(
+    trialEligibilityLoaded: Boolean,
+    trialEligibilityCheckFailed: Boolean,
+    trialEligible: Boolean,
+    trialOfferAvailable: Boolean,
+    trialEnabled: Boolean
+): Int = when {
+    !trialEligibilityLoaded -> R.string.subscription_trial_checking_eligibility
+    trialEligibilityCheckFailed -> R.string.subscription_trial_unavailable
+    !trialEligible -> R.string.subscription_trial_already_used
+    !trialOfferAvailable -> R.string.subscription_trial_unavailable
+    trialEnabled -> R.string.subscription_trial_enabled
+    else -> R.string.subscription_trial_enable_prompt
 }
 
 @Composable
@@ -141,8 +142,8 @@ fun OnboardSubscriptionScreen(
     val subscriptionPriceUnavailable =
         ui.subscriptionOffersLoaded &&
                 (ui.subscriptionOfferPriceLoadFailed || !requiredOfferPricesAvailable)
-    val baseTrialOfferAvailable = ui.yearlyBaseTrialOfferAvailable
-    val discountTrialOfferAvailable = ui.yearlyDiscountTrialOfferAvailable
+    val discountTrialDays = ui.yearlyDiscountTrialDays
+    val discountTrialOfferAvailable = discountTrialDays != null
 
     LaunchedEffect(
         ui.trialEligibilityLoaded,
@@ -173,40 +174,7 @@ fun OnboardSubscriptionScreen(
             )
         } else when (step) {
             OnboardPaywallStep.Intro -> {
-                if (
-                    resolveOnboardIntroVariant(
-                        trialEligible = ui.trialEligible,
-                        trialOfferAvailable = baseTrialOfferAvailable
-                    ) == OnboardIntroVariant.Trial
-                ) {
-                    OnboardTrialIntro(
-                        purchasing = ui.purchasing,
-                        helperText = stringResource(
-                            R.string.subscription_three_day_trial_helper_format,
-                            ui.yearlyBasePrice.orEmpty(),
-                            ui.yearlyBaseMonthlyEquivalent.orEmpty()
-                        ),
-                        onClose = {
-                            step = OnboardPaywallStep.Spin
-                        },
-                        onContinue = {
-                            if (shouldBypassInitialGooglePlaywallForDev()) {
-                                step = OnboardPaywallStep.Spin
-                            } else {
-                                vm.purchaseProduct(
-                                    activity = activity,
-                                    productId = CaloShapeBillingProducts.YEARLY,
-                                    offerTag = CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_YEARLY,
-                                    onSuccess = onPurchased,
-                                    onCancelled = {
-                                        step = OnboardPaywallStep.Spin
-                                    }
-                                )
-                            }
-                        }
-                    )
-                } else {
-                    val yearlyBaseMonthlyEquivalentText = localizedMonthlyEquivalentText(
+                val yearlyBaseMonthlyEquivalentText = localizedMonthlyEquivalentText(
                     monthlyEquivalent = ui.yearlyBaseMonthlyEquivalent.orEmpty()
                 )
 
@@ -242,8 +210,7 @@ fun OnboardSubscriptionScreen(
                             )
                         }
                     }
-                    )
-                }
+                )
             }
 
             OnboardPaywallStep.Spin -> {
@@ -259,8 +226,9 @@ fun OnboardSubscriptionScreen(
                     purchasing = ui.purchasing,
                     trialEnabled = trialEnabled,
                     trialEligible = ui.trialEligible,
-                    trialOfferAvailable = discountTrialOfferAvailable,
+                    trialDays = discountTrialDays,
                     trialEligibilityLoaded = ui.trialEligibilityLoaded,
+                    trialEligibilityCheckFailed = ui.trialEligibilityCheckFailed,
                     originalYearlyPrice = ui.yearlyBasePrice.orEmpty(),
                     offerYearlyPrice = ui.yearlyDiscountPrice.orEmpty(),
                     monthlyEquivalent = ui.yearlyDiscountMonthlyEquivalent.orEmpty(),
@@ -300,7 +268,13 @@ fun OnboardSubscriptionScreen(
             }
         }
 
-        val errorText = when (ui.errorKind) {
+        val displayedErrorKind = ui.errorKind ?: if (ui.trialEligibilityCheckFailed) {
+            SubscriptionErrorKind.TrialEligibilityCheckFailed
+        } else {
+            null
+        }
+
+        val errorText = when (displayedErrorKind) {
             SubscriptionErrorKind.AlreadyOwnedRestoreRequired -> {
                 stringResource(R.string.subscription_already_owned_restore_required)
             }
@@ -338,7 +312,7 @@ fun OnboardSubscriptionScreen(
                     !restoreRequiredDismissedThisSession
 
         val showGenericErrorBanner =
-            ui.errorKind != SubscriptionErrorKind.AlreadyOwnedRestoreRequired &&
+            displayedErrorKind != SubscriptionErrorKind.AlreadyOwnedRestoreRequired &&
                     !errorText.isNullOrBlank()
 
         if (showRestoreRequiredDialog) {
@@ -362,7 +336,21 @@ fun OnboardSubscriptionScreen(
 
         if (showGenericErrorBanner) {
             OnboardSubscriptionErrorBanner(
-                errorText = errorText.orEmpty()
+                errorText = errorText.orEmpty(),
+                retryText = if (
+                    displayedErrorKind == SubscriptionErrorKind.TrialEligibilityCheckFailed
+                ) {
+                    stringResource(R.string.common_retry)
+                } else {
+                    null
+                },
+                onRetry = if (
+                    displayedErrorKind == SubscriptionErrorKind.TrialEligibilityCheckFailed
+                ) {
+                    vm::retryTrialEligibility
+                } else {
+                    null
+                }
             )
         }
     }
@@ -537,7 +525,9 @@ private fun BoxScope.RestoreSubscriptionRequiredDialog(
 
 @Composable
 private fun BoxScope.OnboardSubscriptionErrorBanner(
-    errorText: String
+    errorText: String,
+    retryText: String?,
+    onRetry: (() -> Unit)?
 ) {
     Column(
         modifier = Modifier
@@ -559,6 +549,27 @@ private fun BoxScope.OnboardSubscriptionErrorBanner(
             fontWeight = FontWeight.SemiBold,
             textAlign = TextAlign.Center
         )
+
+        if (retryText != null && onRetry != null) {
+            Spacer(Modifier.height(6.dp))
+
+            Button(
+                onClick = rememberClickWithHaptic(onClick = onRetry),
+                shape = RoundedCornerShape(10.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFFB91C1C),
+                    contentColor = Color.White
+                ),
+                contentPadding = PaddingValues(horizontal = 14.dp, vertical = 4.dp)
+            ) {
+                Text(
+                    text = retryText,
+                    fontSize = 13.sp,
+                    lineHeight = 17.sp,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+        }
     }
 }
 
@@ -654,22 +665,6 @@ private fun OnboardSubscriptionPriceUnavailable(
             }
         }
     }
-}
-
-@Composable
-private fun OnboardTrialIntro(
-    purchasing: Boolean,
-    helperText: String,
-    onClose: () -> Unit,
-    onContinue: () -> Unit
-) {
-    OnboardSubscriptionIntro(
-        purchasing = purchasing,
-        buttonText = stringResource(R.string.subscription_start_three_day_free_trial),
-        helperText = helperText,
-        onClose = onClose,
-        onContinue = onContinue
-    )
 }
 
 @Composable
@@ -940,8 +935,9 @@ private fun OnboardOneTimeOfferScreen(
     purchasing: Boolean,
     trialEnabled: Boolean,
     trialEligible: Boolean,
-    trialOfferAvailable: Boolean,
+    trialDays: Int?,
     trialEligibilityLoaded: Boolean,
+    trialEligibilityCheckFailed: Boolean,
     originalYearlyPrice: String,
     offerYearlyPrice: String,
     monthlyEquivalent: String,
@@ -950,8 +946,12 @@ private fun OnboardOneTimeOfferScreen(
     onContinue: () -> Unit
 ) {
     val scrollState = rememberScrollState()
+    val trialOfferAvailable = trialDays != null
     val useDiscountTrialOffer =
         trialEnabled && trialEligible && trialOfferAvailable
+    val trialCtaText = trialDays?.let { days ->
+        stringResource(R.string.subscription_start_free_trial, days)
+    }
     val purchaseTerms = if (useDiscountTrialOffer) {
         stringResource(R.string.subscription_discount_trial_terms_format)
     } else {
@@ -1005,6 +1005,7 @@ private fun OnboardOneTimeOfferScreen(
                 trialEligible = trialEligible,
                 trialOfferAvailable = trialOfferAvailable,
                 trialEligibilityLoaded = trialEligibilityLoaded,
+                trialEligibilityCheckFailed = trialEligibilityCheckFailed,
                 purchasing = purchasing,
                 offerYearlyPrice = offerYearlyPrice,
                 monthlyEquivalent = monthlyEquivalent,
@@ -1013,8 +1014,8 @@ private fun OnboardOneTimeOfferScreen(
         }
 
         OnboardPaywallBottomCta(
-            buttonText = if (useDiscountTrialOffer) {
-                stringResource(R.string.subscription_start_free_trial)
+            buttonText = if (useDiscountTrialOffer && trialCtaText != null) {
+                trialCtaText
             } else {
                 stringResource(R.string.common_continue_btn)
             },
@@ -1380,6 +1381,7 @@ private fun OneTimeOfferTrialCard(
     trialEligible: Boolean,
     trialOfferAvailable: Boolean,
     trialEligibilityLoaded: Boolean,
+    trialEligibilityCheckFailed: Boolean,
     purchasing: Boolean,
     offerYearlyPrice: String,
     monthlyEquivalent: String,
@@ -1407,13 +1409,15 @@ private fun OneTimeOfferTrialCard(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                text = when {
-                    !trialEligibilityLoaded -> stringResource(R.string.subscription_trial_checking_eligibility)
-                    !trialEligible -> stringResource(R.string.subscription_trial_already_used)
-                    !trialOfferAvailable -> stringResource(R.string.subscription_trial_unavailable)
-                    trialEnabled -> stringResource(R.string.subscription_trial_enabled)
-                    else -> stringResource(R.string.subscription_trial_enable_prompt)
-                },
+                text = stringResource(
+                    resolveTrialStatusTextResource(
+                        trialEligibilityLoaded = trialEligibilityLoaded,
+                        trialEligibilityCheckFailed = trialEligibilityCheckFailed,
+                        trialEligible = trialEligible,
+                        trialOfferAvailable = trialOfferAvailable,
+                        trialEnabled = trialEnabled
+                    )
+                ),
                 color = Color(0xFF111111),
                 fontSize = 21.sp,
                 lineHeight = 26.sp,

@@ -1,7 +1,6 @@
 import com.caloshape.app.data.account.api.AccountApi
 import com.caloshape.app.data.account.repo.AccountRepository
-import com.caloshape.app.data.auth.repo.TokenStore
-import com.caloshape.app.data.profile.repo.UserProfileStore
+import com.caloshape.app.data.auth.repo.LocalUserDataPurger
 import io.mockk.coVerify
 import io.mockk.mockk
 import kotlinx.coroutines.runBlocking
@@ -12,8 +11,8 @@ import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
-import org.junit.Assert.assertTrue
 import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
 import retrofit2.Retrofit
 import retrofit2.create
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
@@ -23,8 +22,7 @@ class AccountRepositoryTest {
     private lateinit var server: MockWebServer
     private lateinit var api: AccountApi
 
-    private lateinit var tokenStore: TokenStore
-    private lateinit var profileStore: UserProfileStore
+    private lateinit var localUserDataPurger: LocalUserDataPurger
 
     @Before
     fun setUp() {
@@ -39,8 +37,7 @@ class AccountRepositoryTest {
             .build()
             .create()
 
-        tokenStore = mockk(relaxed = true)
-        profileStore = mockk(relaxed = true)
+        localUserDataPurger = mockk(relaxed = true)
     }
 
     @After
@@ -57,19 +54,17 @@ class AccountRepositoryTest {
                 .setBody("""{"ok":true}""")
         )
 
-        val repo = AccountRepository(api, tokenStore, profileStore)
+        val repo = AccountRepository(api, localUserDataPurger)
 
         val r = repo.deleteAccount()
 
         assertTrue(r.isSuccess)
 
-        coVerify(exactly = 1) { tokenStore.clear() }
-        coVerify(exactly = 1) { profileStore.clearHasServerProfile() }
-        coVerify(exactly = 1) { profileStore.clearOnboarding() }
+        coVerify(exactly = 1) { localUserDataPurger.purge() }
     }
 
     @Test
-    fun deleteAccount_when401_should_still_clear_local_and_success() = runBlocking {
+    fun deleteAccount_when401_should_fail_without_clearing_local_auth() = runBlocking {
         server.enqueue(
             MockResponse()
                 .setResponseCode(401)
@@ -77,19 +72,17 @@ class AccountRepositoryTest {
                 .setBody("""{"code":"UNAUTHORIZED"}""")
         )
 
-        val repo = AccountRepository(api, tokenStore, profileStore)
+        val repo = AccountRepository(api, localUserDataPurger)
 
         val r = repo.deleteAccount()
 
-        assertTrue(r.isSuccess)
+        assertTrue(r.isFailure)
 
-        coVerify(exactly = 1) { tokenStore.clear() }
-        coVerify(exactly = 1) { profileStore.clearHasServerProfile() }
-        coVerify(exactly = 1) { profileStore.clearOnboarding() }
+        coVerify(exactly = 0) { localUserDataPurger.purge() }
     }
 
     @Test
-    fun deleteAccount_when403_should_still_clear_local_and_success() = runBlocking {
+    fun deleteAccount_when403_should_fail_without_clearing_local_auth() = runBlocking {
         server.enqueue(
             MockResponse()
                 .setResponseCode(403)
@@ -97,15 +90,13 @@ class AccountRepositoryTest {
                 .setBody("""{"code":"FORBIDDEN"}""")
         )
 
-        val repo = AccountRepository(api, tokenStore, profileStore)
+        val repo = AccountRepository(api, localUserDataPurger)
 
         val r = repo.deleteAccount()
 
-        assertTrue(r.isSuccess)
+        assertTrue(r.isFailure)
 
-        coVerify(exactly = 1) { tokenStore.clear() }
-        coVerify(exactly = 1) { profileStore.clearHasServerProfile() }
-        coVerify(exactly = 1) { profileStore.clearOnboarding() }
+        coVerify(exactly = 0) { localUserDataPurger.purge() }
     }
 
     @Test
@@ -117,11 +108,12 @@ class AccountRepositoryTest {
                 .setBody("""{"code":"INTERNAL"}""")
         )
 
-        val repo = AccountRepository(api, tokenStore, profileStore)
+        val repo = AccountRepository(api, localUserDataPurger)
 
         val r = repo.deleteAccount()
 
         assertFalse(r.isSuccess)
         assertTrue(r.isFailure)
+        coVerify(exactly = 0) { localUserDataPurger.purge() }
     }
 }

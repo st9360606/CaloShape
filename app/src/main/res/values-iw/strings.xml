@@ -67,7 +67,7 @@
     <string name="err_server_unavailable">השירות אינו זמין זמנית. נסה שוב מאוחר יותר.</string>
     <string name="err_generic">משהו השתבש. נסה שוב.</string>
     <string name="confirm_email_title">אשר את האימייל שלך</string>
-    <string name="confirm_email_hint">הזן את הקוד בן 4 הספרות ששלחנו זה עתה אל</string>
+    <string name="confirm_email_hint">הזן את הקוד בן 6 הספרות ששלחנו זה עתה אל</string>
     <string name="didnt_receive_code">לא קיבלת את הקוד?</string>
     <string name="onboard_gender_title">בחר את המגדר שלך</string>
     <string name="onboard_gender_subtitle">המידע ישמש לכיול התוכנית האישית שלך.</string>
@@ -196,7 +196,6 @@
     <string name="subscription_intro_title">פתח את CaloShape AI כדי
 להגיע ליעדים מהר יותר.</string>
     <string name="subscription_intro_helper_format">רק %1$s לשנה (%2$s)</string>
-    <string name="subscription_start_three_day_free_trial">נסה חינם למשך 3 ימים</string>
     <string name="subscription_three_day_trial_helper_format">רק %1$s/שנה (%2$s/חודש)</string>
     <string name="subscription_already_owned_restore_required">בחשבון Google Play שלך כבר יש מנוי CaloShape פעיל. שחזר אותו לחשבון CaloShape זה לפני שימוש בתכונות Premium.</string>
     <string name="subscription_error_no_active_purchase">לא נמצאה רכישה פעילה.</string>
@@ -234,7 +233,7 @@
     <string name="subscription_badge_lowest_price_ever">המחיר הנמוך ביותר אי פעם</string>
     <string name="subscription_yearly_plan">תוכנית שנתית</string>
     <string name="subscription_yearly_plan_price_format">12 חודשים · %1$s</string>
-    <string name="subscription_start_free_trial">נסה חינם למשך 3 ימים</string>
+    <string name="subscription_start_free_trial">נסה חינם למשך %1$d ימים</string>
     <string name="subscription_trial_helper">ללא התחייבות — אפשר לבטל בכל זמן</string>
     <string name="subscription_discount_terms_format">רק %1$s/שנה (%2$s/חודש)</string>
     <string name="subscription_discount_trial_terms_format">ללא התחייבות - אפשר לבטל בכל זמן</string>

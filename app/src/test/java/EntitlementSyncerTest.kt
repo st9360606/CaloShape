@@ -5,7 +5,6 @@ import com.caloshape.app.data.billing.BillingPurchaseResult
 import com.caloshape.app.data.billing.SubscriptionOfferPriceText
 import com.caloshape.app.data.entitlement.EntitlementSyncer
 import com.caloshape.app.data.entitlement.api.EntitlementApi
-import com.caloshape.app.data.entitlement.api.EntitlementSyncRequest
 import com.caloshape.app.data.entitlement.api.EntitlementSyncResponse
 import com.caloshape.app.data.membership.api.MembershipApi
 import com.caloshape.app.data.membership.api.MembershipSummaryDto
@@ -49,7 +48,7 @@ class EntitlementSyncerTest {
     }
 
     @Test
-    fun sync_whenHasSubs_shouldCallSyncOnceAndNotCallMe() = runBlocking {
+    fun sync_whenDeviceHasSubs_shouldStillUseServerSummaryWithoutPlaySync() = runBlocking {
         val billing = FakeBillingGateway(
             activeSubs = listOf(
                 ActiveSub(
@@ -63,7 +62,7 @@ class EntitlementSyncerTest {
         val api = mockk<EntitlementApi>()
         val membershipApi = mockk<MembershipApi>()
 
-        coEvery { api.sync(any()) } returns EntitlementSyncResponse(
+        coEvery { api.me() } returns EntitlementSyncResponse(
             status = "ACTIVE",
             entitlementType = "MONTHLY",
             premiumStatus = "PREMIUM",
@@ -78,15 +77,11 @@ class EntitlementSyncerTest {
 
         syncer.syncAfterLoginSilently()
 
-        coVerify(exactly = 1) {
-            api.sync(match { req: EntitlementSyncRequest ->
-                req.purchases.size == 1 &&
-                        req.purchases[0].productId == "monthly" &&
-                        req.purchases[0].purchaseToken == "tok123"
-            })
+        coVerify(exactly = 0) {
+            api.sync(any())
         }
 
-        coVerify(exactly = 0) {
+        coVerify(exactly = 1) {
             api.me()
         }
     }

@@ -1704,6 +1704,7 @@ fun HistoryRow(
     item: WeightItemDto,
     unit: UserProfileStore.WeightUnit,
     previous: WeightItemDto?,
+    onPhotoClick: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val shape = RoundedCornerShape(18.dp)
@@ -1777,11 +1778,14 @@ fun HistoryRow(
                 modifier = Modifier.size(58.dp),
                 contentAlignment = Alignment.Center
             ) {
-                if (item.photoUrl != null) {
+                if (imgUrl != null) {
                     AsyncImage(
                         model = imgUrl,
-                        contentDescription = null,
-                        modifier = Modifier.size(58.dp).clip(imageShape),
+                        contentDescription = stringResource(R.string.weight_history_title),
+                        modifier = Modifier
+                            .size(58.dp)
+                            .clip(imageShape)
+                            .caloShapeClickable { onPhotoClick(imgUrl) },
                         contentScale = ContentScale.Crop
                     )
                 } else {

@@ -131,7 +131,7 @@ fun EmailCodeScreen(
 
             Spacer(Modifier.height(24.dp))
 
-            // === 4 格 OTP ===
+            // === 6 格 OTP ===
             BasicTextField(
                 value = ui?.code.orEmpty(),
                 onValueChange = { vm.onCodeChange(it) },
@@ -154,7 +154,7 @@ fun EmailCodeScreen(
                         horizontalArrangement = Arrangement.spacedBy(12.dp)
                     ) {
                         val code = ui?.code.orEmpty()
-                        repeat(4) { idx ->
+                        repeat(EMAIL_OTP_LENGTH) { idx ->
                             val char = code.getOrNull(idx)?.toString().orEmpty()
                             Box(
                                 modifier = Modifier
@@ -184,9 +184,9 @@ fun EmailCodeScreen(
                 textStyle = LocalTextStyle.current.copy(color = Color.Transparent)
             )
 
-            // 輸入滿 4 碼就自動送驗
+            // 輸入滿 6 碼就自動送驗
             LaunchedEffect(ui?.code) {
-                if ((ui?.code?.length ?: 0) == 4) {
+                if ((ui?.code?.length ?: 0) == EMAIL_OTP_LENGTH) {
                     kb?.hide()
                     vm.verify { onSuccess() }
                 }

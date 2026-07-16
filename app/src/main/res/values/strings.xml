@@ -106,7 +106,7 @@
     <string name="err_generic">Something went wrong. Please try again.</string>
 
     <string name="confirm_email_title">Confirm your email</string>
-    <string name="confirm_email_hint">Please enter the 4-digit code we\'ve just sent to</string>
+    <string name="confirm_email_hint">Please enter the 6-digit code we\'ve just sent to</string>
     <string name="didnt_receive_code">Didn’t receive the code?</string>
 
 
@@ -282,7 +282,6 @@
     <!-- Onboarding: OnboardSubscriptionIntro -->
     <string name="subscription_intro_title">Unlock CaloShape AI to\nreach your goals faster.</string>
     <string name="subscription_intro_helper_format">Just %1$s per year (%2$s)</string>
-    <string name="subscription_start_three_day_free_trial">Try free for 3 days</string>
     <string name="subscription_three_day_trial_helper_format">Just %1$s/year (%2$s/mo)</string>
     <string name="subscription_already_owned_restore_required">Your Google Play account already has an active CaloShape subscription. Restore it to this CaloShape account before using premium features.</string>
     <string name="subscription_error_no_active_purchase">No active purchase found.</string>
@@ -326,8 +325,8 @@
     <string name="subscription_badge_lowest_price_ever">Lowest price ever</string>
     <string name="subscription_yearly_plan">Yearly Plan</string>
     <string name="subscription_yearly_plan_price_format">12mo · %1$s</string>
+    <string name="subscription_start_free_trial">Try free for %1$d days</string>
 
-    <string name="subscription_start_free_trial">Try free for 3 days</string>
     <string name="subscription_trial_helper">No commitment — cancel anytime</string>
     <string name="subscription_discount_terms_format">Just %1$s/year (%2$s/mo)</string>
     <string name="subscription_discount_trial_terms_format">No Commitment - Cancel Anytime</string>

@@ -107,7 +107,7 @@
     <string name="err_generic">Er is iets misgegaan. Probeer het opnieuw.</string>
 
     <string name="confirm_email_title">Bevestig je e-mail</string>
-    <string name="confirm_email_hint">Voer de 4-cijferige code in die we zojuist hebben verzonden naar</string>
+    <string name="confirm_email_hint">Voer de 6-cijferige code in die we zojuist hebben verzonden naar</string>
     <string name="didnt_receive_code">Geen code ontvangen?</string>
 
 
@@ -283,7 +283,6 @@
     <!-- Onboarding: OnboardSubscriptionIntro -->
     <string name="subscription_intro_title">Ontgrendel CaloShape AI om\nje doelen sneller te bereiken.</string>
     <string name="subscription_intro_helper_format">Slechts %1$s per jaar (%2$s)</string>
-    <string name="subscription_start_three_day_free_trial">Probeer 3 dagen gratis</string>
     <string name="subscription_three_day_trial_helper_format">%1$s/jaar · %2$s/maand</string>
     <string name="subscription_already_owned_restore_required">Je Google Play-account heeft al een actief CaloShape-abonnement. Herstel dit naar dit CaloShape-account voordat je premiumfuncties gebruikt.</string>
     <string name="subscription_error_no_active_purchase">Geen actieve aankoop gevonden.</string>
@@ -327,8 +326,8 @@
     <string name="subscription_badge_lowest_price_ever">Laagste prijs ooit</string>
     <string name="subscription_yearly_plan">Jaarplan</string>
     <string name="subscription_yearly_plan_price_format">12 mnd · %1$s</string>
+    <string name="subscription_start_free_trial">Probeer %1$d dagen gratis</string>
 
-    <string name="subscription_start_free_trial">Probeer 3 dagen gratis</string>
     <string name="subscription_trial_helper">Geen verplichting — op elk moment opzegbaar</string>
     <string name="subscription_discount_terms_format">%1$s/jaar · %2$s/maand</string>
     <string name="subscription_discount_trial_terms_format">Geen verplichting - op elk moment opzegbaar</string>

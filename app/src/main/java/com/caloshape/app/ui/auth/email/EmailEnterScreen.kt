@@ -125,9 +125,18 @@ fun EmailEnterScreen(
 
             
 
-            ui.error?.let {
+            ui.error?.let { error ->
+                val message = when (error) {
+                    EmailCodeError.TOO_MANY_ATTEMPTS -> {
+                        stringResource(R.string.err_otp_too_many_attempts)
+                    }
+                    EmailCodeError.NETWORK -> stringResource(R.string.err_network_io)
+                    EmailCodeError.SERVER -> stringResource(R.string.err_server_unavailable)
+                    EmailCodeError.INVALID_CODE,
+                    EmailCodeError.UNKNOWN -> stringResource(R.string.err_generic)
+                }
                 Spacer(Modifier.height(12.dp))
-                Text(it, color = MaterialTheme.colorScheme.error)
+                Text(message, color = MaterialTheme.colorScheme.error)
             }
 
             Spacer(Modifier.weight(1f))

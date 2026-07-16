@@ -93,13 +93,11 @@ fun HealthConnectIntroScreen(
                 val launcher = rememberLauncherForActivityResult(
                     contract = PermissionController.createRequestPermissionResultContract()
                 ) { granted: Set<String> ->
-                    Log.d(TAG, "onActivityResult granted=${granted.joinToString()}")
-
                     if (granted.containsAll(requiredPermissions)) {
                         onConnected()
                     } else {
                         val missing = requiredPermissions - granted
-                        Log.d(TAG, "Not all permissions granted, missing=$missing")
+                        Log.d(TAG, "Not all permissions granted, missingCount=${missing.size}")
                         onSkip()
                     }
                 }
@@ -123,8 +121,7 @@ fun HealthConnectIntroScreen(
 
                             val grantedNow: Set<String> =
                                 client.permissionController.getGrantedPermissions()
-                            Log.d(TAG, "granted(now)=${grantedNow.joinToString()}")
-                            Log.d(TAG, "required=${requiredPermissions.joinToString()}")
+                            Log.d(TAG, "permission state grantedCount=${grantedNow.size} requiredCount=${requiredPermissions.size}")
 
                             val missing = requiredPermissions - grantedNow
                             Log.d(TAG, "missingPerms=$missing")
@@ -133,7 +130,7 @@ fun HealthConnectIntroScreen(
                                 Log.d(TAG, "All required permissions already granted → onConnected()")
                                 onConnected()
                             } else {
-                                Log.d(TAG, "Requesting permissions via launcher: $missing")
+                                Log.d(TAG, "Requesting permissions via launcher, missingCount=${missing.size}")
                                 launcher.launch(missing)
                             }
                         }

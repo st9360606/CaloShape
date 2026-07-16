@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.caloshape.app.data.auth.repo.EmailAuthRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -13,14 +14,14 @@ import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
 
-private const val OTP_LEN = 4
+internal const val EMAIL_OTP_LENGTH = 6
 private const val RESEND_SEC = 60
 
 data class EmailEnterUiState(
     val email: String = "",
     val isValid: Boolean = false,
     val loading: Boolean = false,
-    val error: String? = null
+    val error: EmailCodeError? = null
 )
 
 /** 用 enum 表示錯誤種類，畫面再用 stringResource 對應文字 */
@@ -65,12 +66,13 @@ class EmailSignInViewModel @Inject constructor(
     }
 
     fun sendCode(onSent: (String) -> Unit) {
+        if (_enter.value.loading) return
         val email = _enter.value.email.trim()
         if (!EmailAddressValidator.isValid(email)) {
             _enter.value = _enter.value.copy(
                 loading = false,
                 isValid = false,
-                error = "Invalid email format"
+                error = EmailCodeError.UNKNOWN
             )
             return
         }
@@ -84,10 +86,18 @@ class EmailSignInViewModel @Inject constructor(
                     startResendTimer(forceRestart = true)
                     onSent(email)
                 } else {
-                    _enter.value = _enter.value.copy(loading = false, error = "Send failed")
+                    _enter.value = _enter.value.copy(
+                        loading = false,
+                        error = EmailCodeError.UNKNOWN
+                    )
                 }
+            } catch (cancellation: CancellationException) {
+                throw cancellation
             } catch (t: Throwable) {
-                _enter.value = _enter.value.copy(loading = false, error = t.message)
+                _enter.value = _enter.value.copy(
+                    loading = false,
+                    error = t.toStartError()
+                )
             }
         }
     }
@@ -95,29 +105,31 @@ class EmailSignInViewModel @Inject constructor(
     /* ---------------- 驗證碼畫面 ---------------- */
 
     fun onCodeChange(text: String) {
-        val clean = text.filter { it.isDigit() }.take(OTP_LEN)
+        val clean = text.filter { it.isDigit() }.take(EMAIL_OTP_LENGTH)
         _code.value = _code.value?.copy(code = clean, error = null, errorMsg = null) // 輸入時清錯誤
     }
 
     fun verify(onSuccess: () -> Unit) {
         val s = _code.value ?: return
-        if (s.code.length != OTP_LEN) return
+        if (s.loading || s.code.length != EMAIL_OTP_LENGTH) return
         viewModelScope.launch {
             try {
                 _code.value = s.copy(loading = true, error = null, errorMsg = null)
                 repo.verify(s.email, s.code)
                 _code.value = s.copy(loading = false)
                 onSuccess()
+            } catch (cancellation: CancellationException) {
+                throw cancellation
             } catch (t: Throwable) {
                 val (err, clear, detail) = when (t) {
                     is HttpException -> when (t.code()) {
                         400 -> Triple(EmailCodeError.INVALID_CODE, true, null)
                         429 -> Triple(EmailCodeError.TOO_MANY_ATTEMPTS, false, null)
                         in 500..599 -> Triple(EmailCodeError.SERVER, false, null)
-                        else -> Triple(EmailCodeError.UNKNOWN, false, "HTTP ${t.code()}")
+                        else -> Triple(EmailCodeError.UNKNOWN, false, null)
                     }
                     is IOException -> Triple(EmailCodeError.NETWORK, false, null)
-                    else -> Triple(EmailCodeError.UNKNOWN, false, t.message)
+                    else -> Triple(EmailCodeError.UNKNOWN, false, null)
                 }
                 _code.value = s.copy(
                     loading = false,
@@ -131,7 +143,7 @@ class EmailSignInViewModel @Inject constructor(
 
     fun resend() {
         val s = _code.value ?: return
-        if (s.canResendInSec > 0) return
+        if (s.loading || s.canResendInSec > 0) return
         viewModelScope.launch {
             try {
                 _code.value = s.copy(loading = true, error = null, errorMsg = null, code = "")
@@ -139,10 +151,20 @@ class EmailSignInViewModel @Inject constructor(
                     _code.value = s.copy(loading = false, canResendInSec = RESEND_SEC, code = "")
                     startResendTimer(forceRestart = true)
                 } else {
-                    _code.value = s.copy(loading = false, error = EmailCodeError.UNKNOWN, errorMsg = "Resend failed")
+                    _code.value = s.copy(
+                        loading = false,
+                        error = EmailCodeError.UNKNOWN,
+                        errorMsg = null
+                    )
                 }
+            } catch (cancellation: CancellationException) {
+                throw cancellation
             } catch (t: Throwable) {
-                _code.value = s.copy(loading = false, error = EmailCodeError.UNKNOWN, errorMsg = t.message)
+                _code.value = s.copy(
+                    loading = false,
+                    error = t.toStartError(),
+                    errorMsg = null
+                )
             }
         }
     }
@@ -175,4 +197,14 @@ class EmailSignInViewModel @Inject constructor(
         timerJob?.cancel()
         super.onCleared()
     }
+}
+
+private fun Throwable.toStartError(): EmailCodeError = when (this) {
+    is HttpException -> when (code()) {
+        429 -> EmailCodeError.TOO_MANY_ATTEMPTS
+        in 500..599 -> EmailCodeError.SERVER
+        else -> EmailCodeError.UNKNOWN
+    }
+    is IOException -> EmailCodeError.NETWORK
+    else -> EmailCodeError.UNKNOWN
 }

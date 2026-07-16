@@ -452,6 +452,12 @@ class UserProfileStore @Inject constructor(
         )
     }
 
+    suspend fun clearAllUserData() {
+        context.userProfileDataStore.edit { preferences ->
+            preferences.clear()
+        }
+    }
+
     suspend fun clearOnboarding() {
         context.userProfileDataStore.edit { p ->
             p.remove(Keys.GENDER)

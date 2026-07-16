@@ -3,8 +3,7 @@ package com.caloshape.app.data.account.repo
 
 import com.caloshape.app.data.account.api.AccountApi
 import com.caloshape.app.data.account.api.AccountDeletionRequest
-import com.caloshape.app.data.auth.repo.TokenStore
-import com.caloshape.app.data.profile.repo.UserProfileStore
+import com.caloshape.app.data.auth.repo.LocalUserDataPurger
 import retrofit2.HttpException
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -12,8 +11,7 @@ import javax.inject.Singleton
 @Singleton
 class AccountRepository @Inject constructor(
     private val api: AccountApi,
-    private val tokenStore: TokenStore,
-    private val profileStore: UserProfileStore,
+    private val localUserDataPurger: LocalUserDataPurger,
 ) {
 
     /**
@@ -36,7 +34,7 @@ class AccountRepository @Inject constructor(
             )
             if (!res.ok) throw IllegalStateException("DELETE_ACCOUNT_FAILED")
 
-            clearLocalAuth()
+            localUserDataPurger.purge()
             Unit
         }.recoverCatching { e ->
             if (e is HttpException && (e.code() == 401 || e.code() == 403)) {
@@ -56,11 +54,5 @@ class AccountRepository @Inject constructor(
 
     suspend fun getDeletionPreview() = runCatching {
         api.deletionPreview()
-    }
-
-    private suspend fun clearLocalAuth() {
-        tokenStore.clear()
-        runCatching { profileStore.clearHasServerProfile() }
-        runCatching { profileStore.clearOnboarding() }
     }
 }

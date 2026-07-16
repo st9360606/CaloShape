@@ -37,10 +37,10 @@ data class SubscriptionUiState(
     val canRestorePurchase: Boolean = false,
     val trialEligible: Boolean = false,
     val trialEligibilityLoaded: Boolean = false,
+    val trialEligibilityCheckFailed: Boolean = false,
     val subscriptionOffersLoaded: Boolean = false,
     val subscriptionOfferPriceLoadFailed: Boolean = false,
-    val yearlyBaseTrialOfferAvailable: Boolean = false,
-    val yearlyDiscountTrialOfferAvailable: Boolean = false,
+    val yearlyDiscountTrialDays: Int? = null,
     val yearlyBasePrice: String? = null,
     val yearlyBaseMonthlyEquivalent: String? = null,
     val yearlyDiscountPrice: String? = null,
@@ -71,6 +71,7 @@ class SubscriptionViewModel @Inject constructor(
                     it.copy(
                         trialEligible = summary.trialEligible,
                         trialEligibilityLoaded = true,
+                        trialEligibilityCheckFailed = false,
                         error = null,
                         errorKind = null
                     )
@@ -80,12 +81,29 @@ class SubscriptionViewModel @Inject constructor(
                     it.copy(
                         trialEligible = false,
                         trialEligibilityLoaded = true,
+                        trialEligibilityCheckFailed = true,
                         error = null,
                         errorKind = SubscriptionErrorKind.TrialEligibilityCheckFailed
                     )
                 }
             }
         }
+    }
+
+    fun retryTrialEligibility() {
+        if (_ui.value.busy) return
+
+        _ui.update {
+            it.copy(
+                trialEligible = false,
+                trialEligibilityLoaded = false,
+                trialEligibilityCheckFailed = false,
+                error = null,
+                errorKind = null
+            )
+        }
+
+        loadTrialEligibility()
     }
 
     fun loadSubscriptionOfferPrices() {
@@ -111,13 +129,6 @@ class SubscriptionViewModel @Inject constructor(
                 )
             }.getOrNull()
 
-            val baseTrial = runCatching {
-                billingGateway.querySubscriptionOfferPrice(
-                    productId = CaloShapeBillingProducts.YEARLY,
-                    offerTag = CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_YEARLY
-                )
-            }.getOrNull()
-
             val discountTrial = runCatching {
                 billingGateway.querySubscriptionOfferPrice(
                     productId = CaloShapeBillingProducts.YEARLY,
@@ -128,15 +139,18 @@ class SubscriptionViewModel @Inject constructor(
             val baseReady = base?.formattedMonthlyEquivalent != null
             val discountReady = discount?.formattedMonthlyEquivalent != null
             val requiredPricesReady = baseReady && discountReady
-            val baseTrialReady = baseTrial.hasSamePaidPriceAs(base)
             val discountTrialReady = discountTrial.hasSamePaidPriceAs(discount)
+            val discountTrialDays = if (discountTrialReady) {
+                discountTrial?.freeTrialDays?.takeIf { it > 0 }
+            } else {
+                null
+            }
 
             _ui.update {
                 it.copy(
                     subscriptionOffersLoaded = true,
                     subscriptionOfferPriceLoadFailed = !requiredPricesReady,
-                    yearlyBaseTrialOfferAvailable = baseTrialReady,
-                    yearlyDiscountTrialOfferAvailable = discountTrialReady,
+                    yearlyDiscountTrialDays = discountTrialDays,
                     yearlyBasePrice = base?.formattedPrice,
                     yearlyBaseMonthlyEquivalent = base?.formattedMonthlyEquivalent,
                     yearlyDiscountPrice = discount?.formattedPrice,
@@ -208,7 +222,8 @@ class SubscriptionViewModel @Inject constructor(
                         errorKind = null,
                         canRestorePurchase = false,
                         trialEligible = result.response.trialEligible,
-                        trialEligibilityLoaded = true
+                        trialEligibilityLoaded = true,
+                        trialEligibilityCheckFailed = false
                     )
                 }
                 onSuccess(result.response)
@@ -241,7 +256,9 @@ class SubscriptionViewModel @Inject constructor(
                     errorKind = errorKind,
                     canRestorePurchase = shouldShowRestore,
                     trialEligible = result.response?.trialEligible ?: it.trialEligible,
-                    trialEligibilityLoaded = if (result.response != null) true else it.trialEligibilityLoaded
+                    trialEligibilityLoaded = if (result.response != null) true else it.trialEligibilityLoaded,
+                    trialEligibilityCheckFailed =
+                        if (result.response != null) false else it.trialEligibilityCheckFailed
                 )
             }
         }
@@ -302,7 +319,8 @@ class SubscriptionViewModel @Inject constructor(
                     purchasing = false,
                     errorKind = null,
                     trialEligible = response.trialEligible,
-                    trialEligibilityLoaded = true
+                    trialEligibilityLoaded = true,
+                    trialEligibilityCheckFailed = false
                 )
             }
 

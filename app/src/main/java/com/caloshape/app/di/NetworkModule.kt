@@ -88,6 +88,16 @@ object NetworkModule {
             .readTimeout(20, TimeUnit.SECONDS)
             .build()
 
+    @Provides @Singleton @Named("imageClient")
+    fun provideImageOkHttp(
+        authInterceptor: AuthInterceptor
+    ): OkHttpClient =
+        OkHttpClient.Builder()
+            .addInterceptor(authInterceptor)
+            .connectTimeout(10, TimeUnit.SECONDS)
+            .readTimeout(20, TimeUnit.SECONDS)
+            .build()
+
     @Provides @Singleton @Named("authRetrofit")
     fun provideAuthRetrofit(@Named("authClient") client: OkHttpClient): Retrofit =
         Retrofit.Builder()

@@ -107,7 +107,7 @@
     <string name="err_generic">Jokin meni pieleen. Yritä uudelleen.</string>
 
     <string name="confirm_email_title">Vahvista sähköpostisi</string>
-    <string name="confirm_email_hint">Syötä juuri lähettämämme 4-numeroinen koodi osoitteeseen</string>
+    <string name="confirm_email_hint">Syötä juuri lähettämämme 6-numeroinen koodi osoitteeseen</string>
     <string name="didnt_receive_code">Etkö saanut koodia?</string>
 
 
@@ -281,7 +281,6 @@
     <!-- Onboarding: OnboardSubscriptionIntro -->
     <string name="subscription_intro_title">Avaa CaloShape AI ja\nsaavuta tavoitteesi nopeammin.</string>
     <string name="subscription_intro_helper_format">Vain %1$s vuodessa (%2$s)</string>
-    <string name="subscription_start_three_day_free_trial">Kokeile ilmaiseksi 3 päivää</string>
     <string name="subscription_three_day_trial_helper_format">Vain %1$s/vuosi (%2$s/kk)</string>
     <string name="subscription_already_owned_restore_required">Google Play -tililläsi on jo aktiivinen CaloShape-tilaus. Palauta se tälle CaloShape-tilille ennen Premium-ominaisuuksien käyttöä.</string>
     <string name="subscription_error_no_active_purchase">Aktiivista ostoa ei löytynyt.</string>
@@ -325,8 +324,8 @@
     <string name="subscription_badge_lowest_price_ever">Kaikkien aikojen alin hinta</string>
     <string name="subscription_yearly_plan">Vuosipaketti</string>
     <string name="subscription_yearly_plan_price_format">12 kk · %1$s</string>
+    <string name="subscription_start_free_trial">Kokeile ilmaiseksi %1$d päivää</string>
 
-    <string name="subscription_start_free_trial">Kokeile ilmaiseksi 3 päivää</string>
     <string name="subscription_trial_helper">Ei sitoutumista — peruuta milloin tahansa</string>
     <string name="subscription_discount_terms_format">Vain %1$s/vuosi (%2$s/kk)</string>
     <string name="subscription_discount_trial_terms_format">Ei sitoutumista — peruuta milloin tahansa</string>

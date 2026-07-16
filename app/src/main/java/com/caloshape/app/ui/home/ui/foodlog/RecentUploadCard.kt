@@ -37,8 +37,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -64,6 +66,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.caloshape.app.R
+import com.caloshape.app.ui.common.ZoomableImagePreviewDialog
 import com.caloshape.app.ui.common.haptic.caloShapeClickable
 import com.caloshape.app.ui.common.haptic.rememberClickWithHaptic
 import com.caloshape.app.ui.home.components.HomeCardStyles
@@ -115,6 +118,8 @@ fun RecentUploadCard(
     onClick: () -> Unit,
     onDeleteClick: () -> Unit
 ) {
+    var previewImageUri by remember(item.foodLogId) { mutableStateOf<String?>(null) }
+
     BoxWithConstraints(
         modifier = modifier.fillMaxWidth()
     ) {
@@ -179,6 +184,9 @@ fun RecentUploadCard(
 
             RecentUploadCardContent(
                 item = item,
+                onImageClick = { imageUri ->
+                    previewImageUri = imageUri
+                },
                 modifier = Modifier
                     .fillMaxWidth()
                     .graphicsLayer {
@@ -229,11 +237,18 @@ fun RecentUploadCard(
             )
         }
     }
+
+    ZoomableImagePreviewDialog(
+        imageModel = previewImageUri,
+        contentDescription = stringResource(R.string.recently_uploaded),
+        onDismiss = { previewImageUri = null }
+    )
 }
 
 @Composable
 private fun RecentUploadCardContent(
     item: HomeRecentUploadUi,
+    onImageClick: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val isLoadingLike = item is HomeRecentUploadUi.Pending || item is HomeRecentUploadUi.Delayed
@@ -261,6 +276,7 @@ private fun RecentUploadCardContent(
                 is HomeRecentUploadUi.Pending -> {
                     LoadingThumb(
                         previewUri = item.previewUri,
+                        onImageClick = onImageClick,
                         modifier = Modifier.size(ThumbSize)
                     )
                 }
@@ -268,6 +284,7 @@ private fun RecentUploadCardContent(
                 is HomeRecentUploadUi.Delayed -> {
                     LoadingThumb(
                         previewUri = item.previewUri,
+                        onImageClick = onImageClick,
                         modifier = Modifier.size(ThumbSize)
                     )
                 }
@@ -275,6 +292,7 @@ private fun RecentUploadCardContent(
                 is HomeRecentUploadUi.Success -> {
                     SuccessThumb(
                         previewUri = item.previewUri,
+                        onImageClick = onImageClick,
                         modifier = Modifier.size(ThumbSize)
                     )
                 }
@@ -308,6 +326,7 @@ private fun RecentUploadCardContent(
 @Composable
 private fun LoadingThumb(
     previewUri: String?,
+    onImageClick: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val ringColor = HomeCardStyles.Loading.ring()
@@ -328,6 +347,7 @@ private fun LoadingThumb(
     ) {
         ThumbImage(
             previewUri = previewUri,
+            onImageClick = onImageClick,
             modifier = Modifier.matchParentSize()
         )
 
@@ -355,6 +375,7 @@ private fun LoadingThumb(
 @Composable
 private fun SuccessThumb(
     previewUri: String?,
+    onImageClick: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     Box(
@@ -363,6 +384,7 @@ private fun SuccessThumb(
     ) {
         ThumbImage(
             previewUri = previewUri,
+            onImageClick = onImageClick,
             modifier = Modifier.matchParentSize()
         )
     }
@@ -371,6 +393,7 @@ private fun SuccessThumb(
 @Composable
 private fun ThumbImage(
     previewUri: String?,
+    onImageClick: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val placeholderColor = HomeCardStyles.Loading.thumbPlaceholder()
@@ -384,8 +407,10 @@ private fun ThumbImage(
         if (!previewUri.isNullOrBlank()) {
             AsyncImage(
                 model = previewUri,
-                contentDescription = null,
-                modifier = Modifier.matchParentSize(),
+                contentDescription = stringResource(R.string.recently_uploaded),
+                modifier = Modifier
+                    .matchParentSize()
+                    .caloShapeClickable { onImageClick(previewUri) },
                 contentScale = ContentScale.Crop
             )
         } else {

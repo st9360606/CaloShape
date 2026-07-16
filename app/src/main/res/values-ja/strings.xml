@@ -107,7 +107,7 @@
     <string name="err_generic">問題が発生しました。もう一度お試しください。</string>
 
     <string name="confirm_email_title">メールを確認</string>
-    <string name="confirm_email_hint">送信された4桁のコードを入力してください</string>
+    <string name="confirm_email_hint">送信された6桁のコードを入力してください</string>
     <string name="didnt_receive_code">コードが届きませんか？</string>
 
 
@@ -287,7 +287,6 @@
     <string name="subscription_intro_title">CaloShape AI をアンロックして
 目標達成を早めましょう</string>
     <string name="subscription_intro_helper_format">年額わずか%1$s（%2$s）</string>
-    <string name="subscription_start_three_day_free_trial">3日間無料で試す</string>
     <string name="subscription_three_day_trial_helper_format">年額わずか%1$s（%2$s/月）</string>
     <string name="subscription_already_owned_restore_required">Google Playアカウントには有効なCaloShapeの定期購入があります。Premium機能を使用する前に、このCaloShapeアカウントへ復元してください。</string>
     <string name="subscription_error_no_active_purchase">有効な購入が見つかりません。</string>
@@ -333,8 +332,8 @@
     <string name="subscription_badge_lowest_price_ever">過去最安値</string>
     <string name="subscription_yearly_plan">年間プラン</string>
     <string name="subscription_yearly_plan_price_format">12か月 · %1$s</string>
+    <string name="subscription_start_free_trial">%1$d日間無料で試す</string>
 
-    <string name="subscription_start_free_trial">3日間無料で試す</string>
     <string name="subscription_trial_helper">契約の縛りなし — いつでも解約できます</string>
     <string name="subscription_discount_terms_format">年額わずか%1$s（%2$s/月）</string>
     <string name="subscription_discount_trial_terms_format">契約の縛りなし - いつでも解約できます</string>

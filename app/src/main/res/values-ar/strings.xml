@@ -107,7 +107,7 @@
     <string name="err_generic">حدث خطأ ما. يرجى المحاولة مرة أخرى.</string>
 
     <string name="confirm_email_title">تأكيد بريدك الإلكتروني</string>
-    <string name="confirm_email_hint">يرجى إدخال الرمز المكوّن من 4 أرقام الذي أرسلناه للتو إلى</string>
+    <string name="confirm_email_hint">يرجى إدخال الرمز المكوّن من 6 أرقام الذي أرسلناه للتو إلى</string>
     <string name="didnt_receive_code">لم يصلك الرمز؟</string>
 
 
@@ -283,7 +283,6 @@
     <!-- Onboarding: OnboardSubscriptionIntro -->
     <string name="subscription_intro_title">افتح CaloShape AI\nلتصل إلى أهدافك أسرع.</string>
     <string name="subscription_intro_helper_format">فقط %1$s في السنة (%2$s)</string>
-    <string name="subscription_start_three_day_free_trial">جرّب مجانًا لمدة 3 أيام</string>
     <string name="subscription_three_day_trial_helper_format">فقط %1$s/year (%2$s/mo)</string>
     <string name="subscription_already_owned_restore_required">لدى حساب Google Play الخاص بك اشتراك CaloShape نشط بالفعل. استعده إلى حساب CaloShape هذا قبل استخدام ميزات Premium.</string>
     <string name="subscription_error_no_active_purchase">لم يتم العثور على عملية شراء نشطة.</string>
@@ -327,8 +326,8 @@
     <string name="subscription_badge_lowest_price_ever">أقل سعر على الإطلاق</string>
     <string name="subscription_yearly_plan">الخطة السنوية</string>
     <string name="subscription_yearly_plan_price_format">12mo · %1$s</string>
+    <string name="subscription_start_free_trial">جرّب مجانًا لمدة %1$d أيام</string>
 
-    <string name="subscription_start_free_trial">جرّب مجانًا لمدة 3 أيام</string>
     <string name="subscription_trial_helper">بدون التزام — يمكنك الإلغاء في أي وقت</string>
     <string name="subscription_discount_terms_format">فقط %1$s/year (%2$s/mo)</string>
     <string name="subscription_discount_trial_terms_format">بدون التزام - يمكنك الإلغاء في أي وقت</string>

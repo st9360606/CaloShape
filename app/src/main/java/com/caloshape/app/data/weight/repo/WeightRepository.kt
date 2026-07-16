@@ -44,7 +44,7 @@ class WeightRepository @Inject constructor(
 
         val part = photoFile?.let { f ->
             val mime = guessImageMime(f).toMediaType()
-            Log.d("WeightRepo", "upload photo name=${f.name} mime=$mime size=${f.length()}")
+            Log.d("WeightRepo", "upload photo prepared")
 
             MultipartBody.Part.createFormData(
                 name = "photo",

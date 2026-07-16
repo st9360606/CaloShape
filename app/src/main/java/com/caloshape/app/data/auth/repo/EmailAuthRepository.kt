@@ -16,7 +16,10 @@ class EmailAuthRepository @Inject constructor(
     private val deviceId: DeviceIdProvider
 ) {
     suspend fun start(email: String): Boolean {
-        val res = api.startEmail(StartEmailReq(email.trim().lowercase()))
+        val res = api.startEmail(
+            body = StartEmailReq(email.trim().lowercase()),
+            deviceId = deviceId.get()
+        )
         return res.sent
     }
 

@@ -108,7 +108,7 @@
     <string name="err_generic">發生錯誤，請稍後再試</string>
 
     <string name="confirm_email_title">確認你的 Email</string>
-    <string name="confirm_email_hint">請輸入我們剛剛寄出的 4 位數驗證碼</string>
+    <string name="confirm_email_hint">請輸入我們剛剛寄出的 6 位數驗證碼</string>
     <string name="didnt_receive_code">沒有收到驗證碼？</string>
 
 
@@ -284,7 +284,6 @@
     <!-- Onboarding: OnboardSubscriptionIntro -->
     <string name="subscription_intro_title">解鎖 CaloShape AI\n更快達成你的目標</string>
     <string name="subscription_intro_helper_format">每年只要 %1$s（約 %2$s）</string>
-    <string name="subscription_start_three_day_free_trial">免費試用 3 天</string>
     <string name="subscription_three_day_trial_helper_format">每年只要 %1$s（約 %2$s/月）</string>
     <string name="subscription_already_owned_restore_required">目前這個 Google Play 帳號已經有有效的 CaloShape 訂閱，請先將訂閱恢復到目前登入的 CaloShape 帳號，才能使用付費功能。</string>
     <string name="subscription_error_no_active_purchase">找不到有效的購買項目。</string>
@@ -328,8 +327,8 @@
     <string name="subscription_badge_lowest_price_ever">史上最低價</string>
     <string name="subscription_yearly_plan">年度方案</string>
     <string name="subscription_yearly_plan_price_format">12 個月 · %1$s</string>
+    <string name="subscription_start_free_trial">免費試用 %1$d 天</string>
 
-    <string name="subscription_start_free_trial">免費試用 3 天</string>
     <string name="subscription_trial_helper">無承諾，可隨時取消</string>
     <string name="subscription_discount_terms_format">每年只要 %1$s（%2$s/月）</string>
     <string name="subscription_discount_trial_terms_format">無需承諾－可隨時取消</string>

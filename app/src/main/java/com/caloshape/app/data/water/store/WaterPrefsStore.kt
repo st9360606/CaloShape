@@ -34,4 +34,10 @@ class WaterPrefsStore @Inject constructor(
             prefs[KEY_UNIT] = unit.name
         }
     }
+
+    suspend fun clear() {
+        context.waterPrefsDataStore.edit { preferences ->
+            preferences.clear()
+        }
+    }
 }

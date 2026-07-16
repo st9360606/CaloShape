@@ -45,6 +45,7 @@ class PlayBillingGateway(
                     .enablePrepaidPlans()
                     .build()
             )
+            .enableAutoServiceReconnection()
             .build()
     }
 
@@ -169,7 +170,11 @@ class PlayBillingGateway(
             )
         }
 
-        return deferred.await()
+        return try {
+            deferred.await()
+        } finally {
+            pendingPurchaseResult.compareAndSet(deferred, null)
+        }
     }
 
     override suspend fun acknowledgePurchase(purchaseToken: String): Boolean {
@@ -244,9 +249,25 @@ class PlayBillingGateway(
         offerTag: String?,
         offerDetails: ProductDetails.SubscriptionOfferDetails
     ): SubscriptionOfferPriceText? {
-        val paidPhase = offerDetails.pricingPhases.pricingPhaseList
+        val pricingPhases = offerDetails.pricingPhases.pricingPhaseList
+        val requiresFreeTrial =
+            offerTag == CaloShapeBillingProducts.OfferTags.ONBOARD_TRIAL_DISCOUNT_YEARLY
+        val freeTrialDays = pricingPhases.firstNotNullOfOrNull { phase ->
+            extractFreeTrialDays(
+                priceAmountMicros = phase.priceAmountMicros,
+                recurrenceMode = phase.recurrenceMode,
+                billingCycleCount = phase.billingCycleCount,
+                billingPeriod = phase.billingPeriod
+            )
+        }
+
+        if (requiresFreeTrial && freeTrialDays == null) {
+            return null
+        }
+
+        val paidPhase = pricingPhases
             .firstOrNull { it.priceAmountMicros > 0L }
-            ?: offerDetails.pricingPhases.pricingPhaseList.firstOrNull()
+            ?: pricingPhases.firstOrNull()
             ?: return null
 
         val formattedPrice = paidPhase.formattedPrice.takeIf { it.isNotBlank() }
@@ -261,7 +282,8 @@ class PlayBillingGateway(
                 currencyCode = paidPhase.priceCurrencyCode,
                 billingPeriod = paidPhase.billingPeriod,
                 fallbackFormattedPrice = formattedPrice
-            )
+            ),
+            freeTrialDays = freeTrialDays
         )
     }
 
@@ -395,10 +417,10 @@ class PlayBillingGateway(
 
         val resultPair =
             suspendCancellableCoroutine<Pair<BillingResult, List<ProductDetails>>> { cont ->
-                client.queryProductDetailsAsync(params) { billingResult, productDetailsList ->
+                client.queryProductDetailsAsync(params) { billingResult, queryResult ->
                     if (!cont.isActive) return@queryProductDetailsAsync
                     cont.resume(
-                        billingResult to productDetailsList
+                        billingResult to queryResult.productDetailsList
                     ) { _ -> }
                 }
             }
@@ -456,3 +478,34 @@ class PlayBillingGateway(
         }
     }
 }
+
+internal fun extractFreeTrialDays(
+    priceAmountMicros: Long,
+    recurrenceMode: Int,
+    billingCycleCount: Int,
+    billingPeriod: String
+): Int? {
+    if (
+        priceAmountMicros != 0L ||
+        recurrenceMode != ProductDetails.RecurrenceMode.FINITE_RECURRING ||
+        billingCycleCount <= 0
+    ) {
+        return null
+    }
+
+    val match = EXACT_DAY_OR_WEEK_PERIOD.matchEntire(billingPeriod) ?: return null
+    val duration = match.groupValues[1].toLongOrNull()?.takeIf { it > 0L } ?: return null
+    val daysPerCycle = when (match.groupValues[2]) {
+        "D" -> duration
+        "W" -> duration * DAYS_PER_WEEK
+        else -> return null
+    }
+    val totalDays = daysPerCycle * billingCycleCount.toLong()
+
+    return totalDays
+        .takeIf { it in 1L..Int.MAX_VALUE.toLong() }
+        ?.toInt()
+}
+
+private val EXACT_DAY_OR_WEEK_PERIOD = Regex("""^P(\d+)([DW])$""")
+private const val DAYS_PER_WEEK = 7L

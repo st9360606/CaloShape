@@ -66,6 +66,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.caloshape.app.R
 import com.caloshape.app.ui.common.CaloShapeConfirmDialog
+import com.caloshape.app.ui.common.ZoomableImagePreviewDialog
 import com.caloshape.app.ui.common.haptic.caloShapeClickableWithoutRipple
 import com.caloshape.app.data.profile.repo.UserProfileStore
 import com.caloshape.app.data.weight.api.WeightItemDto
@@ -105,6 +106,7 @@ fun WeightScreen(
     val isDark = colors.background == CaloShapeColors.Dark.background
     var deleteTargetItem by remember { mutableStateOf<WeightItemDto?>(null) }
     var deleteRequested by remember { mutableStateOf(false) }
+    var previewPhotoUrl by remember { mutableStateOf<String?>(null) }
 
     val historySorted = remember(ui.history7) {
         ui.history7.sortedByDescending { dto ->
@@ -228,6 +230,9 @@ fun WeightScreen(
                             unit = ui.unit,
                             previous = previous,
                             deleting = ui.deletingLogDates.contains(item.logDate),
+                            onPhotoClick = { photoUrl ->
+                                previewPhotoUrl = photoUrl
+                            },
                             onDeleteClick = {
                                 deleteTargetItem = item
                             }
@@ -260,6 +265,12 @@ fun WeightScreen(
             deleting = targetItem?.logDate?.let { logDate ->
                 deleteRequested && ui.deletingLogDates.contains(logDate)
             } == true
+        )
+
+        ZoomableImagePreviewDialog(
+            imageModel = previewPhotoUrl,
+            contentDescription = stringResource(R.string.weight_history_title),
+            onDismiss = { previewPhotoUrl = null }
         )
 
         when {
@@ -345,6 +356,7 @@ private fun SwipeToDeleteHistoryRow(
     unit: UserProfileStore.WeightUnit,
     previous: WeightItemDto?,
     deleting: Boolean,
+    onPhotoClick: (String) -> Unit,
     onDeleteClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -410,6 +422,7 @@ private fun SwipeToDeleteHistoryRow(
                 item = item,
                 unit = unit,
                 previous = previous,
+                onPhotoClick = onPhotoClick,
                 modifier = Modifier
                     .fillMaxWidth()
                     .graphicsLayer {

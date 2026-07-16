@@ -107,7 +107,7 @@
     <string name="err_generic">Något gick fel. Försök igen.</string>
 
     <string name="confirm_email_title">Bekräfta din e-post</string>
-    <string name="confirm_email_hint">Ange den fyrsiffriga koden vi just skickade till</string>
+    <string name="confirm_email_hint">Ange den sexsiffriga koden vi just skickade till</string>
     <string name="didnt_receive_code">Fick du ingen kod?</string>
 
 
@@ -283,7 +283,6 @@
     <!-- Onboarding: OnboardSubscriptionIntro -->
     <string name="subscription_intro_title">Lås upp CaloShape AI\nför att nå dina mål snabbare.</string>
     <string name="subscription_intro_helper_format">Bara %1$s per år (%2$s)</string>
-    <string name="subscription_start_three_day_free_trial">Prova gratis i 3 dagar</string>
     <string name="subscription_three_day_trial_helper_format">Endast %1$s/år (%2$s/mån)</string>
     <string name="subscription_already_owned_restore_required">Ditt Google Play-konto har redan en aktiv CaloShape-prenumeration. Återställ den till detta CaloShape-konto innan du använder premiumfunktioner.</string>
     <string name="subscription_error_no_active_purchase">Inget aktivt köp hittades.</string>
@@ -327,8 +326,8 @@
     <string name="subscription_badge_lowest_price_ever">Lägsta priset någonsin</string>
     <string name="subscription_yearly_plan">Årsplan</string>
     <string name="subscription_yearly_plan_price_format">12 mån · %1$s</string>
+    <string name="subscription_start_free_trial">Prova gratis i %1$d dagar</string>
 
-    <string name="subscription_start_free_trial">Prova gratis i 3 dagar</string>
     <string name="subscription_trial_helper">Ingen bindning — avbryt när som helst</string>
     <string name="subscription_discount_terms_format">Endast %1$s/år (%2$s/mån)</string>
     <string name="subscription_discount_trial_terms_format">Ingen bindning — avbryt när som helst</string>

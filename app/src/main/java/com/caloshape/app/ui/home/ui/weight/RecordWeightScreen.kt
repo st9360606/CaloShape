@@ -257,7 +257,7 @@ private fun RecordWeightScreenContent(
                     val file = bitmapToCacheFile(context, bitmap)
                     // 會是 file://...
                     photoUriString = Uri.fromFile(file).toString()
-                    Log.d("RecordWeightScreen", "camera photo file=$file")
+                    Log.d("RecordWeightScreen", "camera photo prepared")
                 } else {
                     Log.d("RecordWeightScreen", "camera returned null bitmap")
                 }

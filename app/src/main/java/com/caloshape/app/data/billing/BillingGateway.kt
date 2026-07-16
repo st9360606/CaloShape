@@ -12,7 +12,8 @@ data class SubscriptionOfferPriceText(
     val productId: String,
     val offerTag: String?,
     val formattedPrice: String,
-    val formattedMonthlyEquivalent: String?
+    val formattedMonthlyEquivalent: String?,
+    val freeTrialDays: Int? = null
 )
 
 sealed interface BillingPurchaseResult {

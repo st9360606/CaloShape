@@ -107,7 +107,7 @@
     <string name="err_generic">Đã xảy ra lỗi. Vui lòng thử lại.</string>
 
     <string name="confirm_email_title">Xác nhận email</string>
-    <string name="confirm_email_hint">Nhập mã 4 chữ số chúng tôi vừa gửi tới</string>
+    <string name="confirm_email_hint">Nhập mã 6 chữ số chúng tôi vừa gửi tới</string>
     <string name="didnt_receive_code">Không nhận được mã?</string>
 
 
@@ -283,7 +283,6 @@
     <!-- Onboarding: OnboardSubscriptionIntro -->
     <string name="subscription_intro_title">Mở khóa CaloShape AI\nđể đạt mục tiêu nhanh hơn.</string>
     <string name="subscription_intro_helper_format">Chỉ %1$s mỗi năm (%2$s)</string>
-    <string name="subscription_start_three_day_free_trial">Dùng thử miễn phí 3 ngày</string>
     <string name="subscription_three_day_trial_helper_format">Chỉ %1$s/năm (%2$s/tháng)</string>
     <string name="subscription_already_owned_restore_required">Tài khoản Google Play của bạn đã có gói CaloShape đang hoạt động. Hãy khôi phục vào tài khoản CaloShape này trước khi dùng tính năng premium.</string>
     <string name="subscription_error_no_active_purchase">Không tìm thấy giao dịch mua đang hoạt động.</string>
@@ -327,8 +326,8 @@
     <string name="subscription_badge_lowest_price_ever">Giá thấp nhất từ trước đến nay</string>
     <string name="subscription_yearly_plan">Gói hằng năm</string>
     <string name="subscription_yearly_plan_price_format">12 tháng · %1$s</string>
+    <string name="subscription_start_free_trial">Dùng thử miễn phí %1$d ngày</string>
 
-    <string name="subscription_start_free_trial">Dùng thử miễn phí 3 ngày</string>
     <string name="subscription_trial_helper">Không ràng buộc — hủy bất cứ lúc nào</string>
     <string name="subscription_discount_terms_format">Chỉ %1$s/năm (%2$s/tháng)</string>
     <string name="subscription_discount_trial_terms_format">Không ràng buộc — hủy bất cứ lúc nào</string>

@@ -107,7 +107,7 @@
     <string name="err_generic">Ada yang salah. Silakan coba lagi.</string>
 
     <string name="confirm_email_title">Konfirmasi email Anda</string>
-    <string name="confirm_email_hint">Masukkan kode 4 digit yang baru saja kami kirim ke</string>
+    <string name="confirm_email_hint">Masukkan kode 6 digit yang baru saja kami kirim ke</string>
     <string name="didnt_receive_code">Tidak menerima kode?</string>
 
 
@@ -288,7 +288,6 @@ Coba lagi nanti.</string>
     <string name="subscription_intro_title">Buka CaloShape AI untuk
 mencapai tujuan lebih cepat.</string>
     <string name="subscription_intro_helper_format">Hanya %1$s per tahun (%2$s)</string>
-    <string name="subscription_start_three_day_free_trial">Coba gratis 3 hari</string>
     <string name="subscription_three_day_trial_helper_format">Hanya %1$s/tahun (%2$s/bln)</string>
     <string name="subscription_already_owned_restore_required">Akun Google Play Anda sudah memiliki langganan CaloShape aktif. Pulihkan ke akun CaloShape ini sebelum menggunakan fitur premium.</string>
     <string name="subscription_error_no_active_purchase">Tidak ada pembelian aktif ditemukan.</string>
@@ -334,8 +333,8 @@ Tetap sesuai rencana setiap hari.</string>
     <string name="subscription_badge_lowest_price_ever">Harga terendah sepanjang masa</string>
     <string name="subscription_yearly_plan">Paket Tahunan</string>
     <string name="subscription_yearly_plan_price_format">12 bln · %1$s</string>
+    <string name="subscription_start_free_trial">Coba gratis %1$d hari</string>
 
-    <string name="subscription_start_free_trial">Coba gratis 3 hari</string>
     <string name="subscription_trial_helper">Tanpa komitmen — batalkan kapan saja</string>
     <string name="subscription_discount_terms_format">Hanya %1$s/tahun (%2$s/bln)</string>
     <string name="subscription_discount_trial_terms_format">Tanpa komitmen - batalkan kapan saja</string>

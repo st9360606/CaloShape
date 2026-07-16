@@ -107,7 +107,7 @@
     <string name="err_generic">Etwas ist schiefgelaufen. Bitte versuche es erneut.</string>
 
     <string name="confirm_email_title">E-Mail bestätigen</string>
-    <string name="confirm_email_hint">Bitte gib den 4-stelligen Code ein, den wir gerade gesendet haben an</string>
+    <string name="confirm_email_hint">Bitte gib den 6-stelligen Code ein, den wir gerade gesendet haben an</string>
     <string name="didnt_receive_code">Keinen Code erhalten?</string>
 
 
@@ -283,7 +283,6 @@
     <!-- Onboarding: OnboardSubscriptionIntro -->
     <string name="subscription_intro_title">Mit CaloShape AI\nschneller ans Ziel</string>
     <string name="subscription_intro_helper_format">Nur %1$s pro Jahr (%2$s)</string>
-    <string name="subscription_start_three_day_free_trial">3 Tage kostenlos testen</string>
     <string name="subscription_three_day_trial_helper_format">Nur %1$s/Jahr (%2$s/Mo.)</string>
     <string name="subscription_already_owned_restore_required">Dein Google Play-Konto hat bereits ein aktives CaloShape-Abo. Stelle es in diesem CaloShape-Konto wieder her, bevor du Premium-Funktionen nutzt.</string>
     <string name="subscription_error_no_active_purchase">Kein aktiver Kauf gefunden.</string>
@@ -327,8 +326,8 @@
     <string name="subscription_badge_lowest_price_ever">Niedrigster Preis aller Zeiten</string>
     <string name="subscription_yearly_plan">Jahresplan</string>
     <string name="subscription_yearly_plan_price_format">12 Mo. %1$s</string>
+    <string name="subscription_start_free_trial">%1$d Tage kostenlos testen</string>
 
-    <string name="subscription_start_free_trial">3 Tage kostenlos testen</string>
     <string name="subscription_trial_helper">Keine Verpflichtung — jederzeit kündbar</string>
     <string name="subscription_discount_terms_format">Nur %1$s/Jahr (%2$s/Mo.)</string>
     <string name="subscription_discount_trial_terms_format">Keine Verpflichtung - jederzeit kündbar</string>

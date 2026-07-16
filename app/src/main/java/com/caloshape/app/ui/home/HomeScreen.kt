@@ -7,7 +7,6 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.provider.Settings
-import android.util.Log
 import androidx.activity.compose.LocalActivityResultRegistryOwner
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -196,22 +195,6 @@ fun HomeScreen(
 
 
 
-    // （可選）把 debug log 改成同時印 kg/lbs，才不會誤判
-    LaunchedEffect(weightUnit, currentKg, currentLbs, goalKg, goalLbs) {
-        Log.d(
-            "weightDebug",
-            String.format(
-                Locale.US,
-                "unit=%s currentKg=%.3f currentLbs=%s goalKg=%s goalLbs=%s",
-                weightUnit,
-                (currentKg ?: Double.NaN),
-                (currentLbs?.let { String.format(Locale.US, "%.3f", it) } ?: "null"),
-                (goalKg?.let { String.format(Locale.US, "%.3f", it) } ?: "null"),
-                (goalLbs?.let { String.format(Locale.US, "%.3f", it) } ?: "null"),
-            )
-        )
-    }
-
     val weightProgressKg: Float = computeWeightProgress(
         timeSeries = weightUi.series,
         currentKg = currentKg,
@@ -341,8 +324,7 @@ fun HomeScreen(
         if (registryOwner != null) {
             rememberLauncherForActivityResult(
                 contract = PermissionController.createRequestPermissionResultContract()
-            ) { granted: Set<String> ->
-                Log.e("HC_UI", "HC permission result granted=${granted.size} $granted")
+            ) { _: Set<String> ->
                 vm.refreshDailyActivity(force = true) // ✅ 授權後立刻更新，不吃 debounce
             }
         } else null
@@ -369,7 +351,6 @@ fun HomeScreen(
         when (dailyStatus) {
             DailyActivityStatus.PERMISSION_NOT_GRANTED -> {
                 val deniedCount = HealthConnectPermissionPrefs.getDeniedCount(ctx)
-                Log.d("HC_UI", "onStepsCardClick status=$dailyStatus deniedCount=$deniedCount sdkInt=${Build.VERSION.SDK_INT}")
                 if (deniedCount >= 2) {
                     // ✅ 第三次（已拒絕兩次）→ 直接導設定頁
                     HealthConnectPermissionIntents.openHealthPermissionsSettings(ctx)
