@@ -12,6 +12,7 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Test
 import org.junit.Assert.assertFalse
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import retrofit2.Retrofit
 import retrofit2.create
@@ -61,6 +62,60 @@ class AccountRepositoryTest {
         assertTrue(r.isSuccess)
 
         coVerify(exactly = 1) { localUserDataPurger.purge() }
+    }
+
+    @Test
+    fun deletionPreview_when200_returnsSubscriptionWarningDetails() = runBlocking {
+        server.enqueue(
+            MockResponse()
+                .setResponseCode(200)
+                .setHeader("Content-Type", "application/json")
+                .setBody(
+                    """{"canDelete":true,"hasActiveGooglePlaySubscription":true,"premiumStatus":"PREMIUM","entitlementType":"YEARLY","currentPremiumUntil":"2027-01-01T00:00:00Z","requiresSubscriptionWarning":true}"""
+                )
+        )
+        val repo = AccountRepository(api, localUserDataPurger)
+
+        val preview = repo.getDeletionPreview().getOrThrow()
+
+        assertTrue(preview.hasActiveGooglePlaySubscription)
+        assertTrue(preview.requiresSubscriptionWarning)
+        assertEquals("YEARLY", preview.entitlementType)
+        assertEquals("/api/v1/account/deletion-preview", server.takeRequest().path)
+    }
+
+    @Test
+    fun deletionPreview_whenServerFails_returnsFailureWithoutClearingLocalData() = runBlocking {
+        server.enqueue(MockResponse().setResponseCode(500))
+        val repo = AccountRepository(api, localUserDataPurger)
+
+        val result = repo.getDeletionPreview()
+
+        assertTrue(result.isFailure)
+        coVerify(exactly = 0) { localUserDataPurger.purge() }
+    }
+
+    @Test
+    fun deleteAccount_withActiveSubscriptionAcknowledgement_sendsTheRequiredWarningFields() = runBlocking {
+        server.enqueue(
+            MockResponse()
+                .setResponseCode(200)
+                .setHeader("Content-Type", "application/json")
+                .setBody("""{"ok":true}""")
+        )
+        val repo = AccountRepository(api, localUserDataPurger)
+
+        val result = repo.deleteAccount(
+            subscriptionWarningAcknowledged = true,
+            userRequestedGooglePlayCancel = true
+        )
+
+        assertTrue(result.isSuccess)
+        val request = server.takeRequest()
+        assertEquals("/api/v1/account/deletion-request", request.path)
+        val requestBody = request.body.readUtf8()
+        assertTrue(requestBody.contains("\"subscriptionWarningAcknowledged\":true"))
+        assertTrue(requestBody.contains("\"userRequestedGooglePlayCancel\":true"))
     }
 
     @Test
@@ -114,6 +169,22 @@ class AccountRepositoryTest {
 
         assertFalse(r.isSuccess)
         assertTrue(r.isFailure)
+        coVerify(exactly = 0) { localUserDataPurger.purge() }
+    }
+
+    @Test
+    fun deleteAccount_whenActiveSubscriptionWarningIsMissing_keepsLocalData() = runBlocking {
+        server.enqueue(
+            MockResponse()
+                .setResponseCode(409)
+                .setHeader("Content-Type", "application/json")
+                .setBody("""{"code":"ACTIVE_GOOGLE_PLAY_SUBSCRIPTION_ACK_REQUIRED"}""")
+        )
+        val repo = AccountRepository(api, localUserDataPurger)
+
+        val result = repo.deleteAccount()
+
+        assertTrue(result.isFailure)
         coVerify(exactly = 0) { localUserDataPurger.purge() }
     }
 }

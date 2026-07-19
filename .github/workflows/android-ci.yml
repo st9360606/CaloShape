@@ -95,6 +95,7 @@ jobs:
           path: |
             app/build/outputs/apk/prod/release/*.apk
             app/build/outputs/bundle/prodRelease/*.aab
+            app/build/outputs/mapping/**/mapping.txt
 
       # --- Slack notification (always) ---
       - name: Notify Slack

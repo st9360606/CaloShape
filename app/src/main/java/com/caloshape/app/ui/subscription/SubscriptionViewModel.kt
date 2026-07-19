@@ -38,6 +38,7 @@ data class SubscriptionUiState(
     val trialEligible: Boolean = false,
     val trialEligibilityLoaded: Boolean = false,
     val trialEligibilityCheckFailed: Boolean = false,
+    val trialEligibilityErrorDismissed: Boolean = false,
     val subscriptionOffersLoaded: Boolean = false,
     val subscriptionOfferPriceLoadFailed: Boolean = false,
     val yearlyDiscountTrialDays: Int? = null,
@@ -64,28 +65,22 @@ class SubscriptionViewModel @Inject constructor(
         if (_ui.value.trialEligibilityLoaded) return
 
         viewModelScope.launch {
-            runCatching {
-                membershipRepository.getSummary()
-            }.onSuccess { summary ->
+            try {
+                val summary = membershipRepository.getSummary()
                 _ui.update {
                     it.copy(
                         trialEligible = summary.trialEligible,
                         trialEligibilityLoaded = true,
                         trialEligibilityCheckFailed = false,
+                        trialEligibilityErrorDismissed = false,
                         error = null,
                         errorKind = null
                     )
                 }
-            }.onFailure {
-                _ui.update {
-                    it.copy(
-                        trialEligible = false,
-                        trialEligibilityLoaded = true,
-                        trialEligibilityCheckFailed = true,
-                        error = null,
-                        errorKind = SubscriptionErrorKind.TrialEligibilityCheckFailed
-                    )
-                }
+            } catch (error: kotlinx.coroutines.CancellationException) {
+                throw error
+            } catch (_: Exception) {
+                markTrialEligibilityCheckFailed()
             }
         }
     }
@@ -98,12 +93,46 @@ class SubscriptionViewModel @Inject constructor(
                 trialEligible = false,
                 trialEligibilityLoaded = false,
                 trialEligibilityCheckFailed = false,
+                trialEligibilityErrorDismissed = false,
                 error = null,
                 errorKind = null
             )
         }
 
         loadTrialEligibility()
+    }
+
+    fun dismissTrialEligibilityError() {
+        _ui.update {
+            if (!it.trialEligibilityCheckFailed) {
+                it
+            } else {
+                it.copy(
+                    trialEligibilityErrorDismissed = true,
+                    error = null,
+                    errorKind = if (
+                        it.errorKind == SubscriptionErrorKind.TrialEligibilityCheckFailed
+                    ) {
+                        null
+                    } else {
+                        it.errorKind
+                    }
+                )
+            }
+        }
+    }
+
+    private fun markTrialEligibilityCheckFailed() {
+        _ui.update {
+            it.copy(
+                trialEligible = false,
+                trialEligibilityLoaded = true,
+                trialEligibilityCheckFailed = true,
+                trialEligibilityErrorDismissed = false,
+                error = null,
+                errorKind = SubscriptionErrorKind.TrialEligibilityCheckFailed
+            )
+        }
     }
 
     fun loadSubscriptionOfferPrices() {

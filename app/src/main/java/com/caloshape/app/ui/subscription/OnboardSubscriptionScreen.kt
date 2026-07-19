@@ -268,7 +268,9 @@ fun OnboardSubscriptionScreen(
             }
         }
 
-        val displayedErrorKind = ui.errorKind ?: if (ui.trialEligibilityCheckFailed) {
+        val trialEligibilityErrorVisible =
+            ui.trialEligibilityCheckFailed && !ui.trialEligibilityErrorDismissed
+        val displayedErrorKind = ui.errorKind ?: if (trialEligibilityErrorVisible) {
             SubscriptionErrorKind.TrialEligibilityCheckFailed
         } else {
             null
@@ -350,7 +352,15 @@ fun OnboardSubscriptionScreen(
                     vm::retryTrialEligibility
                 } else {
                     null
-                }
+                },
+                onDismiss = if (
+                    displayedErrorKind == SubscriptionErrorKind.TrialEligibilityCheckFailed
+                ) {
+                    vm::dismissTrialEligibilityError
+                } else {
+                    null
+                },
+                dismissContentDescription = stringResource(R.string.common_close)
             )
         }
     }
@@ -527,7 +537,9 @@ private fun BoxScope.RestoreSubscriptionRequiredDialog(
 private fun BoxScope.OnboardSubscriptionErrorBanner(
     errorText: String,
     retryText: String?,
-    onRetry: (() -> Unit)?
+    onRetry: (() -> Unit)?,
+    onDismiss: (() -> Unit)?,
+    dismissContentDescription: String
 ) {
     Column(
         modifier = Modifier
@@ -541,14 +553,33 @@ private fun BoxScope.OnboardSubscriptionErrorBanner(
             .padding(horizontal = 12.dp, vertical = 8.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(
-            text = errorText,
-            color = Color(0xFFB91C1C),
-            fontSize = 13.sp,
-            lineHeight = 17.sp,
-            fontWeight = FontWeight.SemiBold,
-            textAlign = TextAlign.Center
-        )
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = errorText,
+                modifier = Modifier.weight(1f),
+                color = Color(0xFFB91C1C),
+                fontSize = 13.sp,
+                lineHeight = 17.sp,
+                fontWeight = FontWeight.SemiBold,
+                textAlign = TextAlign.Center
+            )
+
+            if (onDismiss != null) {
+                IconButton(
+                    onClick = rememberClickWithHaptic(onClick = onDismiss),
+                    modifier = Modifier.size(48.dp)
+                ) {
+                    Icon(
+                        imageVector = Icons.Filled.Close,
+                        contentDescription = dismissContentDescription,
+                        tint = Color(0xFFB91C1C)
+                    )
+                }
+            }
+        }
 
         if (retryText != null && onRetry != null) {
             Spacer(Modifier.height(6.dp))

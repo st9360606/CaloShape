@@ -131,7 +131,7 @@ class EntitlementSyncer(
                 api.me()
             }
 
-            // Acknowledge ä¹Ÿæ”¾??restore pathï¼šå??œå?ä¸€æ¬?acknowledge ? ç¶²è·¯å¤±?—ï??»å…¥/?Ÿå?å¾Œé??½è??Ÿé?è©¦ã€?
+            // Acknowledge ä¹Ÿæ”¾??restore pathï¼šï¿½??ï¿½ï¿½?ä¸€ï¿½?acknowledge ?ï¿½ç¶²è·¯å¤±?ï¿½ï¿½??ï¿½å…¥/?ï¿½ï¿½?å¾Œï¿½??ï¿½ï¿½??ï¿½ï¿½?è©¦ï¿½?
             subs.filter { !it.acknowledged }
                 .forEach { acknowledgeWithRetry(it.purchaseToken) }
 
@@ -269,7 +269,7 @@ class EntitlementSyncer(
                     if (!acknowledged) {
                         Log.w(
                             TAG,
-                            "acknowledge failed after retry. purchaseToken=${sub.purchaseToken.take(16)}***"
+                            "acknowledge failed after retry"
                         )
                     }
                 }

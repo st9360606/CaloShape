@@ -12,6 +12,7 @@ import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk
 import kotlinx.coroutines.runBlocking
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class EntitlementSyncerTest {
@@ -84,6 +85,47 @@ class EntitlementSyncerTest {
         coVerify(exactly = 1) {
             api.me()
         }
+    }
+
+    @Test
+    fun explicitReconciliation_afterProcessRecreation_syncsDevicePurchaseAndAcknowledgesIt() = runBlocking {
+        val billing = mockk<BillingGateway>()
+        val api = mockk<EntitlementApi>()
+        val membershipApi = mockk<MembershipApi>()
+        val devicePurchase = ActiveSub(
+            productId = "caloshape_yearly",
+            purchaseToken = "test-purchase-token",
+            acknowledged = false
+        )
+        val activeResponse = EntitlementSyncResponse(
+            status = "ACTIVE",
+            entitlementType = "YEARLY",
+            premiumStatus = "PREMIUM",
+            currentPremiumUntil = "2027-01-01T00:00:00Z"
+        )
+
+        coEvery { billing.queryActiveSubscriptions() } returns listOf(devicePurchase)
+        coEvery { api.sync(any()) } returns activeResponse
+        coEvery { membershipApi.me() } returns MembershipSummaryDto(
+            premiumStatus = "PREMIUM",
+            currentPremiumUntil = "2027-01-01T00:00:00Z"
+        )
+        coEvery { billing.acknowledgePurchase("test-purchase-token") } returns true
+
+        val response = EntitlementSyncer(billing, api, membershipApi).refreshEntitlementSummary()
+
+        assertEquals(activeResponse, response)
+        coVerify(exactly = 1) {
+            api.sync(match { request ->
+                request.purchases == listOf(
+                    com.caloshape.app.data.entitlement.api.PurchaseTokenPayload(
+                        productId = "caloshape_yearly",
+                        purchaseToken = "test-purchase-token"
+                    )
+                )
+            })
+        }
+        coVerify(exactly = 1) { billing.acknowledgePurchase("test-purchase-token") }
     }
 
     private class FakeBillingGateway(
