@@ -358,7 +358,7 @@ fun OnboardSubscriptionScreen(
                 ) {
                     vm::dismissTrialEligibilityError
                 } else {
-                    null
+                    vm::dismissSubscriptionError
                 },
                 dismissContentDescription = stringResource(R.string.common_close)
             )

@@ -6,7 +6,7 @@ import retrofit2.http.*
 
 interface FastingApi {
     @GET("/api/v1/fasting-plan/me")
-    suspend fun getMine(): Response<FastingPlanDto>   // ??Response ?…èµ·ä¾†ï?å¥½è¾¨è­?404
+    suspend fun getMine(): Response<FastingPlanDto>
 
     @PUT("/api/v1/fasting-plan/me")
     suspend fun upsert(@Body req: UpsertFastingPlanReq): FastingPlanDto
@@ -23,7 +23,7 @@ interface FastingApi {
 data class FastingPlanDto(
     val planCode: String,
     val startTime: String,   // "HH:mm"
-    val endTime: String,     // "HH:mm"ï¼ˆå?é¡¯ç¤º?¨ï?
+    val endTime: String,
     val enabled: Boolean,
     val timeZone: String
 )
@@ -41,4 +41,3 @@ data class NextTriggersResp(
     val nextStartUtc: String, // ISO-8601 Instant
     val nextEndUtc: String
 )
-

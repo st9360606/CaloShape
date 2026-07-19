@@ -122,6 +122,21 @@ class SubscriptionViewModel @Inject constructor(
         }
     }
 
+    /** Hides a non-blocking subscription error without changing entitlement state. */
+    fun dismissSubscriptionError() {
+        _ui.update {
+            if (it.purchasing) {
+                it
+            } else {
+                it.copy(
+                    error = null,
+                    errorKind = null,
+                    canRestorePurchase = false
+                )
+            }
+        }
+    }
+
     private fun markTrialEligibilityCheckFailed() {
         _ui.update {
             it.copy(

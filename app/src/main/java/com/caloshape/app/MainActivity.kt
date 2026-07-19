@@ -9,7 +9,10 @@ import androidx.activity.compose.setContent
 import androidx.compose.runtime.mutableStateOf
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.lifecycleScope
+import com.caloshape.app.data.entitlement.EntitlementForegroundRefresher
+import com.caloshape.app.di.AppEntryPoint
 import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.EntryPointAccessors
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import androidx.compose.runtime.Composable
@@ -26,6 +29,7 @@ class MainActivity : ComponentActivity() {
     private var fuseJob: Job? = null
     private var widgetNavigationRequestSeq = 0L
     private val widgetNavigationRequestState = mutableStateOf<CaloShapeWidgetNavigationRequest?>(null)
+    private lateinit var entitlementForegroundRefresher: EntitlementForegroundRefresher
 
     private fun logPoint(tag: String) {
         Log.d("BootTrace", "${SystemClock.uptimeMillis()} : $tag")
@@ -38,6 +42,15 @@ class MainActivity : ComponentActivity() {
         splash.setKeepOnScreenCondition { !splashUnlocked }
 
         super.onCreate(savedInstanceState)
+        val entryPoint = EntryPointAccessors.fromApplication(
+            applicationContext,
+            AppEntryPoint::class.java
+        )
+        entitlementForegroundRefresher = EntitlementForegroundRefresher(
+            scope = lifecycleScope,
+            authState = entryPoint.authState(),
+            entitlementSyncer = entryPoint.entitlementSyncer()
+        )
         logPoint("after super.onCreate")
         consumeWidgetDestination(intent)
 
@@ -75,6 +88,7 @@ class MainActivity : ComponentActivity() {
     override fun onResume() {
         super.onResume()
         if (!splashUnlocked) unlockSplash("onResume-fallback")
+        entitlementForegroundRefresher.onForeground()
     }
 
     override fun onDestroy() {

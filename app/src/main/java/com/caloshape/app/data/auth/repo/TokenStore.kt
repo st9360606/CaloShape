@@ -22,7 +22,7 @@ class TokenStore @Inject constructor(
     private val KEY_ACCESS = stringPreferencesKey("access")
     private val KEY_REFRESH = stringPreferencesKey("refresh")
 
-    // ?∞Â?ÔºàÈÅ∏?®Ô?ÔºöÂ? access ?∞Ê???epoch ÁßíÊï∏
+
     private val KEY_ACCESS_EXPIRES_AT = longPreferencesKey("access_expires_at")
 
     val accessTokenFlow: Flow<String?> = appContext.dataStore.data.safeMap { it[KEY_ACCESS] }
@@ -30,16 +30,16 @@ class TokenStore @Inject constructor(
     val accessExpiresAtFlow: Flow<Long?> =
         appContext.dataStore.data.safeMap { it[KEY_ACCESS_EXPIRES_AT] }
 
-    /** ‰Ω†Â??¨Á??©Â??∏Á?Ôºà‰??ôÁõ∏ÂÆπÔ? */
+    
     suspend fun save(access: String, refresh: String?) {
         appContext.dataStore.edit {
             it[KEY_ACCESS] = access
             refresh?.let { rt -> it[KEY_REFRESH] = rt }
-            it.remove(KEY_ACCESS_EXPIRES_AT) // ?©Â??∏Á?‰∏çÂØ´?∞Ê?Ôºà‰??™Ô?
+            it.remove(KEY_ACCESS_EXPIRES_AT)
         }
     }
 
-    /** ?∞Â??õÂ??∏Á?ÔºàÂèØÂ∏∂Âà∞?üÁ??∏Ë?‰º∫Ê??®Ê??ìÁ??∏Ô?Ê≤íÊ?Â∞±ÂøΩ?•Ô? */
+    
     suspend fun save(
         access: String,
         refresh: String?,
@@ -63,7 +63,7 @@ class TokenStore @Inject constructor(
         appContext.dataStore.edit { it.clear() }
     }
 
-    // Áµ?OkHttp Authenticator Á≠âÂ?Ê≠•Â???
+
     fun getAccessBlocking(): String? = runBlockingNoCrash { accessTokenFlow.first() }
     fun getRefreshBlocking(): String? = runBlockingNoCrash { refreshTokenFlow.first() }
     fun getAccessExpiresAtBlocking(): Long? = runBlockingNoCrash { accessExpiresAtFlow.first() }

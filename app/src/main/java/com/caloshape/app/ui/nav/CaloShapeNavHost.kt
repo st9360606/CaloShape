@@ -1794,7 +1794,8 @@ fun CaloShapeNavHost(
                         },
                         logoutLoading = pUi.logoutLoading,
                         logoutErrorVisible = pUi.logoutError,
-                        onLogout = settingsVm::logout
+                        onLogout = settingsVm::logout,
+                        onDismissLogoutError = settingsVm::dismissLogoutError
                     )
                 }
 

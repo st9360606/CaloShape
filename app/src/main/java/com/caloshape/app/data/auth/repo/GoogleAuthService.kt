@@ -1,4 +1,3 @@
-// app/src/main/java/com/caloshape/app/data/auth/GoogleAuthService.kt
 package com.caloshape.app.data.auth
 
 import android.content.Context
@@ -15,15 +14,15 @@ import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-/** 裝置沒�?任�??�用??Google ?��?（�??�入帳�??�未?��?�?*/
+/** No usable Google credential is available on this device. */
 class NoGoogleCredentialAvailableException : Exception()
 
-/** ?��??��?流�??�通用?�誤（避??IllegalStateException ?�歧義�? */
+/** A credential-manager failure that the UI can handle as a sign-in error. */
 class CredentialFlowException(message: String) : Exception(message)
 
 class GoogleAuthService(private val context: Context) {
 
-    /** �?Credential Manager ??Google ID Token；若?��?證�???NoGoogleCredentialAvailableException */
+    /** Obtains a Google ID token through Credential Manager. */
     suspend fun getIdToken(): String = withContext(Dispatchers.Main) {
         try {
             val serverClientId = context.getString(R.string.google_web_client_id)
@@ -38,24 +37,30 @@ class GoogleAuthService(private val context: Context) {
                 .addCredentialOption(googleIdOption)
                 .build()
 
-            val cm = CredentialManager.create(context)
-            val response = cm.getCredential(context, request) //?�到google login
-
-            val cred: Credential = response.credential
-            if (cred is CustomCredential &&
-                cred.type == GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL
+            val credentialManager = CredentialManager.create(context)
+            val response = credentialManager.getCredential(context, request)
+            val credential: Credential = response.credential
+            if (
+                credential is CustomCredential &&
+                (
+                    credential.type == GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL ||
+                        credential.type == GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_SIWG_CREDENTIAL
+                    )
             ) {
-                val tokenCred = GoogleIdTokenCredential.createFrom(cred.data)
-                tokenCred.idToken ?: throw CredentialFlowException("Google ?�傳空�? ID Token")
+                val tokenCredential = GoogleIdTokenCredential.createFrom(credential.data)
+                tokenCredential.idToken
+                    ?: throw CredentialFlowException("Google did not return an ID token.")
             } else {
-                throw CredentialFlowException("Unexpected credential type: ${cred::class.java.simpleName}")
+                throw CredentialFlowException(
+                    "Unexpected credential type: ${credential::class.java.simpleName}"
+                )
             }
-        } catch (e: NoCredentialException) {
+        } catch (error: NoCredentialException) {
             throw NoGoogleCredentialAvailableException()
-        } catch (e: GetCredentialCancellationException) {
-            throw e // 交由上層顯示?�已?��???
-        } catch (e: GetCredentialException) {
-            throw CredentialFlowException((e.errorMessage ?: "?��??��?失�?") as String)
+        } catch (error: GetCredentialCancellationException) {
+            throw error
+        } catch (error: GetCredentialException) {
+            throw CredentialFlowException(error.errorMessage?.toString() ?: "Google sign-in failed.")
         }
     }
 }

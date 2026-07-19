@@ -134,4 +134,8 @@ class SettingsViewModel @Inject constructor(
             _ui.update { it.copy(logoutLoading = false, logoutError = true) }
         }
     }
+
+    fun dismissLogoutError() {
+        _ui.update { it.copy(logoutError = false) }
+    }
 }

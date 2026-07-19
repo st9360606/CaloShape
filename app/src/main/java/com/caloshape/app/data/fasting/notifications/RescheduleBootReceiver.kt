@@ -18,7 +18,7 @@ class RescheduleBootReceiver : BroadcastReceiver() {
                 .setInitialDelay(Duration.ofMinutes(1))
                 .build()
 
-            // ???»é?ï¼šboot / ?´æ–° ?¯èƒ½???è§¸ç™¼ï¼Œé¿?å?å¤šå€?worker
+
             WorkManager.getInstance(context).enqueueUniqueWork(
                 UNIQUE_WORK_NAME,
                 ExistingWorkPolicy.REPLACE,

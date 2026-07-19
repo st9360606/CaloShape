@@ -16,9 +16,7 @@ class FastingRepository(
 ) {
     private val fmt = DateTimeFormatter.ofPattern("HH:mm")
 
-    /**
-     * ?ªè?ï¼šä?å­˜åœ¨?å? nullï¼?04ï¼‰ï??¶ä? HTTP ?¯èª¤?´æ¥ä¸Ÿå‡º
-     */
+    
     suspend fun getMineOrNull(): FastingPlanDto? {
         val resp = api.getMine()
         if (resp.isSuccessful) return resp.body()
@@ -26,10 +24,7 @@ class FastingRepository(
         throw HttpException(resp)
     }
 
-    /**
-     * ?ªåœ¨?Œç??„ä?å­˜åœ¨(404)?æ?å»ºç??è¨­
-     * ??ä¸è???5xx ?‚å¯«?é?è¨­ï??¿å?è¦†è??¨æˆ¶è¨­å?
-     */
+    
     suspend fun ensureDefaultIfMissing(): FastingPlanDto {
         val exist = getMineOrNull()
         if (exist != null) return exist

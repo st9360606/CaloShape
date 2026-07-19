@@ -22,7 +22,7 @@ import java.io.File
 class LocalUserDataPurgerProcessRecreationTest {
 
     @Test
-    fun purge_doesNotRestorePersistentAccountDataAfterStoresAreRecreated() = runBlocking {
+    fun logoutAccountA_thenLoginAccountB_doesNotRestoreAccountADataAfterProcessRecreation() = runBlocking {
         val context = ApplicationProvider.getApplicationContext<Context>()
         val tokenStore = TokenStore(context)
         val profileStore = UserProfileStore(context)
@@ -63,6 +63,18 @@ class LocalUserDataPurgerProcessRecreationTest {
         assertTrue(recreatedWaterStore.unitFlow.first() == WaterUnit.ML)
         assertTrue(fastingPreferences.all.isEmpty())
         assertFalse(cacheFile.exists())
+
+        recreatedTokenStore.save(access = "account-b-access", refresh = "account-b-refresh")
+        recreatedProfileStore.setGender("male")
+        recreatedWaterStore.setUnit(WaterUnit.OZ)
+
+        val accountBTokenStore = TokenStore(context)
+        val accountBProfileStore = UserProfileStore(context)
+        val accountBWaterStore = WaterPrefsStore(context)
+
+        assertTrue(accountBTokenStore.accessTokenFlow.first() == "account-b-access")
+        assertTrue(accountBProfileStore.gender() == "male")
+        assertTrue(accountBWaterStore.unitFlow.first() == WaterUnit.OZ)
     }
 
     private companion object {

@@ -107,6 +107,21 @@ class SubscriptionViewModelTest {
     }
 
     @Test
+    fun dismissSubscriptionError_hidesTheBannerWithoutChangingEntitlement() = runTest(dispatcher) {
+        coEvery { syncer.purchaseSubscriptionAndSync(activity, "yearly", any()) } returns
+            PurchaseEntitlementResult(success = false, message = "Purchase is pending")
+        val viewModel = createViewModel()
+
+        viewModel.purchaseProduct(activity, "yearly", onSuccess = {})
+        advanceUntilIdle()
+        viewModel.dismissSubscriptionError()
+
+        assertNull(viewModel.ui.value.errorKind)
+        assertFalse(viewModel.ui.value.canRestorePurchase)
+        assertFalse(viewModel.ui.value.purchasing)
+    }
+
+    @Test
     fun duplicatePurchaseTapOnlyStartsOneBillingFlow() = runTest(dispatcher) {
         val gate = CompletableDeferred<PurchaseEntitlementResult>()
         coEvery { syncer.purchaseSubscriptionAndSync(activity, "yearly", any()) } coAnswers {

@@ -12,14 +12,14 @@ import javax.inject.Singleton
 
 @Singleton
 class AuthRepository @Inject constructor(
-    @Named("authApi") private val api: AuthApi,   // ???‡å? auth å°ˆç”¨ Retrofit
+    @Named("authApi") private val api: AuthApi,
     private val tokenStore: TokenStore
 ) {
     suspend fun loginWithGoogle(idToken: String, clientId: String? = null): AuthResponse {
         val resp = api.googleLogin(
             GoogleSignInExchangeRequest(idToken = idToken, clientId = clientId)
         )
-        // ä½ ç›®?ç? AuthResponse ?¥æ???expiresIn / serverTimeï¼Œå¯?ˆç”¨?©å??¸ç???
+
         tokenStore.save(resp.accessToken, resp.refreshToken)
         return resp
     }
@@ -57,18 +57,14 @@ class AuthRepository @Inject constructor(
         )
     }
 
-    /**
-     * ?¯å¦å·²ç™»?¥ï?
-     * - access token ä¸ç‚ºç©?
-     * - ä¸”ï?å¦‚æ?è¨­å?ï¼‰æœª?Žæ?ï¼ˆå? 5 ç§’ç·©è¡é¿?è‡¨?Œé?ï¼?
-     */
+    
     suspend fun isSignedIn(): Boolean {
         val access = tokenStore.accessTokenFlow.firstOrNull()
         if (access.isNullOrBlank()) return false
 
         val expiresAtSec = tokenStore.accessExpiresAtFlow.firstOrNull()
         val nowSec = System.currentTimeMillis() / 1000
-        // ?¥æ??‰è??„åˆ°?Ÿæ??“ï?å°±ä»¥?Œå???access token?è??ºå·²?»å…¥
+
         return expiresAtSec == null || expiresAtSec > (nowSec + 5)
     }
 }

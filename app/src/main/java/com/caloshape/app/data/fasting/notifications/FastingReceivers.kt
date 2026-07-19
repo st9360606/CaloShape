@@ -20,7 +20,7 @@ import com.caloshape.app.data.fasting.notifications.FastingAlarmScheduler.Compan
 class FastingReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        // ???¥é€šçŸ¥ç¸½é???æ¬Šé?è¢«é?ï¼šç??»æœ¬?°æ”¶?‚ï??¿å?æ¯å¤©è¢?alarm ?šé?
+
         if (!NotificationPermission.isGranted(context)) {
             FastingAlarmScheduler(context).cancel()
             return
@@ -67,7 +67,7 @@ class FastingReceiver : BroadcastReceiver() {
                 else
                     context.getString(R.string.fasting_endsoon_body, endTime)
 
-                // ??endSoon ?å‡ºå¾Œï??’ä?ä¸€è¼ªï??Žå¤©???çµ„ï?
+
                 Quad(2002, title, body, true)
             }
 
@@ -84,7 +84,7 @@ class FastingReceiver : BroadcastReceiver() {
 
         nm.notify(id, n)
 
-        // ???»é? enqueueï¼šé¿??endSoon è¢«è§¸?¼å?æ¬¡æ???worker
+
         if (shouldReschedule) enqueueRescheduleUnique(context)
     }
 
@@ -102,7 +102,7 @@ class FastingReceiver : BroadcastReceiver() {
         private const val UNIQUE_WORK_NAME = "fasting_reschedule"
 
         fun ensureChannel(context: Context) {
-            // ??Android 8.0+ ?é?è¦?NotificationChannel
+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 val nm = context.getSystemService(NotificationManager::class.java)
                 if (nm.getNotificationChannel(CHANNEL_ID) == null) {

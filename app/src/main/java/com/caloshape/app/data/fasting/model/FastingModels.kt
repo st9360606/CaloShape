@@ -13,7 +13,7 @@ enum class FastingPlan(val code: String, val eatingHours: Int) {
     companion object {
         fun of(code: String): FastingPlan = entries.first { it.code == code }
 
-        // ??ä¸è??Œæ™¯ worker ? ç‚º?ªçŸ¥ code ?´æ¥å´?
+
         fun ofOrDefault(code: String, fallback: FastingPlan = P16_8): FastingPlan =
             entries.firstOrNull { it.code == code } ?: fallback
     }

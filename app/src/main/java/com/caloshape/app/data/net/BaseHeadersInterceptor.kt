@@ -1,7 +1,6 @@
 package com.caloshape.app.data.net
 
 import android.content.Context
-import android.provider.Settings
 import dagger.hilt.android.qualifiers.ApplicationContext
 import okhttp3.Interceptor
 import okhttp3.Response
@@ -44,11 +43,7 @@ class BaseHeadersInterceptor @Inject constructor(
         val cached = prefs.getString("device_id", null)
         if (!cached.isNullOrBlank()) return cached
 
-        val androidId = runCatching {
-            Settings.Secure.getString(context.contentResolver, Settings.Secure.ANDROID_ID)
-        }.getOrNull()
-
-        val generated = androidId?.takeIf { it.isNotBlank() } ?: UUID.randomUUID().toString()
+        val generated = UUID.randomUUID().toString()
         prefs.edit().putString("device_id", generated).apply()
         return generated
     }

@@ -131,7 +131,6 @@ class EntitlementSyncer(
                 api.me()
             }
 
-            // Acknowledge 也放??restore path：�??��?一�?acknowledge ?�網路失?��??�入/?��?後�??��??��?試�?
             subs.filter { !it.acknowledged }
                 .forEach { acknowledgeWithRetry(it.purchaseToken) }
 

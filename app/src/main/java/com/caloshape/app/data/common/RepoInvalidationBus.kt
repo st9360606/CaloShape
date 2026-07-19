@@ -5,11 +5,7 @@ import kotlinx.coroutines.flow.SharedFlow
 import javax.inject.Inject
 import javax.inject.Singleton
 
-/**
- * ?¨å? cache-invalidate busï¼?
- * - ä»»ä??Œå¯«?¥æ??Ÿã€ç??°æ–¹ emit invalidate
- * - ViewModel ?¶åˆ°å¾Œå? force refreshï¼ˆä?è¢?throttle ?‹ï?
- */
+
 @Singleton
 class RepoInvalidationBus @Inject constructor() {
 

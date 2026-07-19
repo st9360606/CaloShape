@@ -6,9 +6,7 @@ import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 import javax.inject.Singleton
 
-/**
- * å°è??»å…¥?€?‹ï???TokenStore ??accessToken ?¯å¦å­˜åœ¨?¤æ–·??
- */
+
 @Singleton
 class AuthState @Inject constructor(
     tokenStore: TokenStore

@@ -206,7 +206,8 @@ fun SettingsScreen(
     onDeleteAccount: suspend (subscriptionWarningAcknowledged: Boolean) -> Boolean = { false },
     logoutLoading: Boolean = false,
     logoutErrorVisible: Boolean = false,
-    onLogout: () -> Unit = {}
+    onLogout: () -> Unit = {},
+    onDismissLogoutError: () -> Unit = {}
 ) {
     val ctx = LocalContext.current
     val screenHeight = LocalConfiguration.current.screenHeightDp.dp
@@ -351,7 +352,8 @@ fun SettingsScreen(
                 onDeleteAccount = onDeleteAccount,
                 logoutLoading = logoutLoading,
                 logoutErrorVisible = logoutErrorVisible,
-                onLogout = onLogout
+                onLogout = onLogout,
+                onDismissLogoutError = onDismissLogoutError
             )
         }
     }
@@ -452,7 +454,8 @@ private fun SettingsContent(
     onDeleteAccount: suspend (subscriptionWarningAcknowledged: Boolean) -> Boolean,
     logoutLoading: Boolean,
     logoutErrorVisible: Boolean,
-    onLogout: () -> Unit
+    onLogout: () -> Unit,
+    onDismissLogoutError: () -> Unit
 ) {
     val scroll = rememberScrollState()
     val scope = rememberCoroutineScope()
@@ -792,7 +795,8 @@ private fun SettingsContent(
             Spacer(Modifier.height(10.dp))
             LogoutErrorMessage(
                 retryEnabled = !logoutLoading,
-                onRetry = onLogout
+                onRetry = onLogout,
+                onDismiss = onDismissLogoutError
             )
         }
 
@@ -2579,9 +2583,11 @@ private fun LogoutButton(
 @Composable
 private fun LogoutErrorMessage(
     retryEnabled: Boolean,
-    onRetry: () -> Unit
+    onRetry: () -> Unit,
+    onDismiss: () -> Unit
 ) {
     val retryClick = rememberClickWithHaptic(enabled = retryEnabled, onClick = onRetry)
+    val dismissClick = rememberClickWithHaptic(onClick = onDismiss)
 
     Row(
         modifier = Modifier.fillMaxWidth(),
@@ -2597,8 +2603,13 @@ private fun LogoutErrorMessage(
         )
         CaloShapeSecondaryOutlinedButton(
             text = stringResource(R.string.common_retry),
-            onClick = onRetry,
+            onClick = retryClick,
             enabled = retryEnabled,
+            height = 40.dp,
+        )
+        CaloShapeSecondaryOutlinedButton(
+            text = stringResource(R.string.common_close),
+            onClick = dismissClick,
             height = 40.dp,
         )
     }

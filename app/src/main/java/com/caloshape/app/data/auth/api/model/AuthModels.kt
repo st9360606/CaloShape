@@ -12,7 +12,7 @@ data class GoogleSignInExchangeRequest(
 @Serializable data class StartEmailRes(val sent: Boolean)
 @Serializable data class VerifyEmailReq(val email: String, val code: String)
 
-/** å¾Œç«¯?‡ç??ˆï?App ç«¯æ?ä½ç??¯ç‚º null ä»¥ä??ç›¸å®?*/
+
 @Serializable
 data class AuthResponse(
     val accessToken: String,

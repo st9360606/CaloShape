@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
-    <!-- 你的開發機私網 IP；用模擬器時改成 10.0.2.2 -->
-    <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="false">172.20.10.3</domain>
-    </domain-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
 </network-security-config>

@@ -24,11 +24,10 @@ class CaloShape : Application(), Configuration.Provider, ImageLoaderFactory {
             .respectCacheHeaders(true)
             .build()
 
-    // ??WorkManager 2.9.x 以屬?��?�?
     override val workManagerConfiguration: Configuration
         get() = Configuration.Builder()
             .setWorkerFactory(workerFactory)
-            .setMinimumLoggingLevel(Log.INFO) // ?�調??VERBOSE 以除??
+            .setMinimumLoggingLevel(Log.INFO)
             .build()
 
     override fun onCreate() {

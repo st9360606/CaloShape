@@ -12,9 +12,7 @@ import okhttp3.Route
 import javax.inject.Inject
 import javax.inject.Named
 
-/**
- * ?¨å? Session äº‹ä»¶?¯æ??’ï???refresh ?ç¢ºå¤±æ?ï¼ˆæ??´é??ƒè©±å¤±æ?ï¼‰æ??¼å‡º?šçŸ¥ï¼Œè? UI å°å??»å…¥??
- */
+
 object SessionBus {
     private val _expired = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
     val expired = _expired.asSharedFlow()
@@ -23,17 +21,17 @@ object SessionBus {
 
 class TokenAuthenticator @Inject constructor(
     private val tokenStore: TokenStore,
-    @Named("authApi") private val authApi: AuthApi // ä½¿ç”¨ä¸æ? authenticator ??Retrofitï¼Œé¿?ä?è³´å¾ª??
+    @Named("authApi") private val authApi: AuthApi
 ) : Authenticator {
 
     private val lock = Any()
 
     override fun authenticate(route: Route?, response: Response): Request? {
-        // ?¿å??¡é??è©¦
+
         if (responseCount(response) >= 2) return null
 
         synchronized(lock) {
-            // ?¯èƒ½?¶ä?è«‹æ?å·²ç? refresh ?å?äº†ï??´æ¥å¸¶æ–° token ?é€?
+
             tokenStore.getAccessBlocking()?.let { existing ->
                 val authOnReq = response.request.header("Authorization")
                 if (authOnReq != "Bearer $existing" && existing.isNotBlank()) {
@@ -55,7 +53,7 @@ class TokenAuthenticator @Inject constructor(
                     )
                 ).execute()
             } catch (t: Throwable) {
-                // ?«æ??§ç¶²è·??å??…é?ï¼Œä?è¦ç›´?¥ç™»?ºä½¿?¨è€?
+
                 return failSoft()
             }
 
@@ -80,14 +78,14 @@ class TokenAuthenticator @Inject constructor(
     }
 
     private fun failHard(): Request? {
-        // refresh token ?ç¢ºå¤±æ? / è¢«æ?çµ•ï??æ? session ä¸¦é€šçŸ¥ UI ?ç™»??
+
         tokenStore.saveBlocking(access = "", refresh = null)
         SessionBus.emitExpired()
         return null
     }
 
     private fun failSoft(): Request? {
-        // ?«æ??§æ??œï?ä¿ç? sessionï¼Œè??¶å?è«‹æ?å¤±æ??³å¯
+
         return null
     }
 

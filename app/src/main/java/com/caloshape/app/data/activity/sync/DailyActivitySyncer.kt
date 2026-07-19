@@ -20,7 +20,7 @@ data class DailyActivityDayResult(
     val localDate: LocalDate,
     val timezone: String,
     val steps: Long?,
-    val activeKcal: Int?,              // ????server ?å¡«ï¼ˆå?ç«¯ç”¨é«”é?+stepsè¨ˆç?ï¼?
+    val activeKcal: Int?,
     val dataOriginPackage: String?,
     val dataOriginName: String?
 )
@@ -41,24 +41,24 @@ class DailyActivitySyncer @Inject constructor(
         byOrigin: Map<String, Long>,
         preferred: List<String>
     ): String? {
-        //?¹æ?ï¼šå??‘å?å¥½ä¸­ >0 ?„ï??½æ???>0 ?é€€??0 / max
+
         if (byOrigin.isEmpty()) return null
 
         fun stepsOf(pkg: String) = byOrigin[pkg]
 
-        // 1) ?ˆä??å¥½?¾ï?Google Fit > Samsung Healthï¼ˆä?å¿…é? >0ï¼?
+
         for (pkg in preferred) {
             if (pkg == DataOriginPrefs.ON_DEVICE_ANDROID) continue
             val v = stepsOf(pkg)
             if (v != null && v > 0L) return pkg
         }
 
-        // 2) ?è¨±ä»»ä?ä¾†æ?ï¼šé¸ steps ?€å¤§ï??¯èƒ½??0ï¼?
+
         if (preferred.contains(DataOriginPrefs.ON_DEVICE_ANDROID)) {
             return byOrigin.maxByOrNull { it.value }?.key
         }
 
-        // 3) ä¸å?è¨?any-sourceï¼šé‚£å°±æ??å¥½å­˜åœ¨?„ï??³ä½¿ 0ï¼‰ï??€å¾Œæ? null
+
         for (pkg in preferred) {
             if (pkg == DataOriginPrefs.ON_DEVICE_ANDROID) continue
             if (byOrigin.containsKey(pkg)) return pkg
@@ -71,7 +71,7 @@ class DailyActivitySyncer @Inject constructor(
     suspend fun syncLast7DaysWithStatus(nowZone: ZoneId): Result<DailyActivitySyncResult> {
         DailyActivityDebug.logSyncEnter(nowZone)
 
-        // ???°å?/æ¬Šé?ï¼šä?æ¬¡å°æ¸…æ?
+
         (reader as? HealthConnectDailyReader)?.debugDumpEnvDetailed()
 
         val status = reader.getStatus()
@@ -95,7 +95,7 @@ class DailyActivitySyncer @Inject constructor(
                         emptyMap()
                     }
 
-                // ???´æ¥?°ï??¶å¤©?„ä?æºç?è©³ç´°ï¼ˆrecords/time-rangeï¼?
+
                 if (DailyActivityDebugConfig.enabled) {
                     (reader as? HealthConnectDailyReader)?.debugDumpStepsOriginsDetailed(d, nowZone)
                 }
@@ -115,7 +115,7 @@ class DailyActivitySyncer @Inject constructor(
 
                 val originName = reader.resolveOriginName(chosen)
 
-                // ?ˆæ??¬æ?è®€?°ç?çµæ??¾é€?outï¼ˆä?ä¾è³´å¾Œç«¯?å?ï¼?
+
                 out += DailyActivityDayResult(
                     localDate = d,
                     timezone = nowZone.id,
@@ -149,7 +149,7 @@ class DailyActivitySyncer @Inject constructor(
                 }
             }
 
-            // ?ªæ??³å?ä¸€æ¬?upsert ?å??æ? server merge
+
             if (!anyUpsertSucceeded) {
                 return Result.success(DailyActivitySyncResult(status = status, days = out))
             }

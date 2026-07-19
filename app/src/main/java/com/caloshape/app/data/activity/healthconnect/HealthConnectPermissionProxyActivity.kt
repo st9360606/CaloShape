@@ -7,14 +7,7 @@ import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.health.connect.client.PermissionController
 
-/**
- * ?¨ä??Œä?è­‰ã€æ???Health Connect ??App-specific æ¬Šé??ã€?
- * ä¸ä?è³?Compose ??LocalActivityResultRegistryOwner??
- *
- * ???™è£¡?†æ?ç¶­è­·?Œæ?çµ•æ¬¡?¸ã€ï?
- * - ?¥æ­¤æ¬?request å¾Œä??ªå??´æ?æ¬???deniedCount + 1
- * - ?¥å??´æ?æ¬???deniedCount reset
- */
+
 class HealthConnectPermissionProxyActivity : ComponentActivity() {
 
     private var requiredPerms: Set<String> = emptySet()
@@ -27,7 +20,7 @@ class HealthConnectPermissionProxyActivity : ComponentActivity() {
             if (allGranted) {
                 HealthConnectPermissionPrefs.resetDeniedCount(this)
             } else {
-                // ä½¿ç”¨?…æ?çµ?/ ?–æ? / ?¨å??ˆæ?ï¼Œéƒ½ç®—ä?æ¬¡ã€Œæœª?å??ˆæ???
+
                 HealthConnectPermissionPrefs.incrementDeniedCount(this)
             }
 

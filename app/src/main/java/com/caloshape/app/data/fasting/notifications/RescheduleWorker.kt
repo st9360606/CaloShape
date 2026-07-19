@@ -24,7 +24,7 @@ class RescheduleWorker @AssistedInject constructor(
     override suspend fun doWork(): Result {
         Log.d(TAG, "doWork() start")
 
-        // ???šçŸ¥è¢«é?ï¼šæœ¬?°æ”¶?‚ï??¿å?å¤©å¤©è¢?alarm ?šé?
+
         if (!NotificationPermission.isGranted(applicationContext)) {
             Log.w(TAG, "notification not granted -> cancel alarms")
             scheduler.cancel()
@@ -32,7 +32,7 @@ class RescheduleWorker @AssistedInject constructor(
         }
 
         val dto = try {
-            // ???Œæ™¯?ªè?ï¼šä?è¦è‡ª?•å»ºç«‹é?è¨­ï??´ä?è¦å¯«??enabled=falseï¼?
+
             repo.getMineOrNull()
         } catch (t: Throwable) {
             Log.e(TAG, "getMineOrNull failed", t)
@@ -48,7 +48,7 @@ class RescheduleWorker @AssistedInject constructor(
         val plan = FastingPlan.ofOrDefault(dto.planCode)
         val startLocal = LocalTime.parse(dto.startTime)
 
-        // ???ªå?å¾Œç«¯ triggersï¼›å¤±??fallback ?¬åœ°ç®?
+
         val times: TriggerTimes = try {
             val tr = repo.nextTriggers(plan, startLocal)
             val nextStart = Instant.parse(tr.nextStartUtc)
