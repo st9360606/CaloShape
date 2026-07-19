@@ -3,13 +3,14 @@ name: Android CI
 on:
   pull_request:
   push:
-    branches: [ main, master ]
-    tags:
-      - "v*.*.*"
+    branches: [main, master]
+
+permissions:
+  contents: read
 
 jobs:
   build:
-    name: Build & Test
+    name: Build and test
     runs-on: ubuntu-latest
     env:
       ORG_GRADLE_JAVA_HOME: /usr/lib/jvm/temurin-21-jdk
@@ -29,77 +30,41 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Restore keystore & keystore.properties
-        shell: bash
-        env:
-          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
-          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
-          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
-          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
-        run: |
-          mkdir -p keystore
-          if [ -n "$ANDROID_KEYSTORE_BASE64" ]; then
-            echo "$ANDROID_KEYSTORE_BASE64" | base64 -d > keystore/caloshape-release.jks
-            cat > keystore/keystore.properties <<EOF
-          storeFile=keystore/caloshape-release.jks
-          storePassword=${ANDROID_KEYSTORE_PASSWORD}
-          keyAlias=${ANDROID_KEY_ALIAS}
-          keyPassword=${ANDROID_KEY_PASSWORD}
-          EOF
-          else
-            echo "No keystore secret available. Release signing will be skipped."
-          fi
-
-      - name: Make gradlew executable
+      - name: Make Gradle wrapper executable
         run: chmod +x ./gradlew
 
-      - name: Verify Java & Gradle
+      - name: Verify Java and Gradle
         run: |
           ./gradlew -v
           java -version
 
-      # --- PR: test + lint + assembleDevDebug ---
-      - name: Unit tests & Lint (PR)
-        if: ${{ github.event_name == 'pull_request' }}
-        run: ./gradlew --stacktrace test lint :app:assembleDevDebug
-
-      - name: Upload devDebug APK (PR)
-        if: ${{ github.event_name == 'pull_request' }}
-        uses: actions/upload-artifact@v4
-        with:
-          name: devDebug-apk
-          path: app/build/outputs/apk/dev/debug/*.apk
-
-      # --- Push to main: optional devDebug build artifact ---
-      - name: Assemble devDebug (push to main)
-        if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/heads/') }}
+      - name: Run dev unit tests, lint, and assemble
         run: ./gradlew --stacktrace :app:testDevDebugUnitTest :app:lintDevDebug :app:assembleDevDebug
 
-      - name: Upload devDebug APK (push to main)
-        if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/heads/') }}
+      - name: Upload devDebug APK
+        if: ${{ success() }}
         uses: actions/upload-artifact@v4
         with:
           name: devDebug-apk
           path: app/build/outputs/apk/dev/debug/*.apk
+          if-no-files-found: error
+          retention-days: 30
 
-      # --- Tag build: prodRelease APK + AAB ---
-      - name: Build prodRelease (tag)
-        if: startsWith(github.ref, 'refs/tags/v')
-        run: ./gradlew --stacktrace :app:testProdReleaseUnitTest :app:lintProdRelease :app:assembleProdRelease :app:bundleProdRelease
-
-      - name: Upload prodRelease artifacts (tag)
-        if: startsWith(github.ref, 'refs/tags/v')
+      - name: Upload test and lint reports
+        if: ${{ always() }}
         uses: actions/upload-artifact@v4
         with:
-          name: prodRelease
+          name: android-ci-reports
           path: |
-            app/build/outputs/apk/prod/release/*.apk
-            app/build/outputs/bundle/prodRelease/*.aab
-            app/build/outputs/mapping/**/mapping.txt
+            app/build/test-results/**/*.xml
+            app/build/reports/tests/**
+            app/build/reports/lint-results-*.html
+            app/build/reports/lint-results-*.xml
+          if-no-files-found: warn
+          retention-days: 30
 
-      # --- Slack notification (always) ---
       - name: Notify Slack
-        if: always() && env.SLACK_WEBHOOK_URL != ''
+        if: ${{ always() && env.SLACK_WEBHOOK_URL != '' }}
         shell: bash
         run: |
           STATUS="${{ job.status }}"
@@ -109,31 +74,27 @@ jobs:
           RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           ACTOR="${{ github.actor }}"
           if [ "$STATUS" = "success" ]; then
-            EMOJI="✅"
+            EMOJI=":white_check_mark:"
             COLOR="#2eb886"
             TITLE="Build succeeded"
           else
-            EMOJI="❌"
+            EMOJI=":x:"
             COLOR="#e01e5a"
             TITLE="Build failed"
           fi
-
-          # 簡單文字訊息
-          # curl -X POST -H 'Content-type: application/json' --data "{\"text\":\"${EMOJI} *${TITLE}*  \nRepo: ${REPO}\nEvent: ${EVENT} (${REF})\nActor: ${ACTOR}\nRun: ${RUN_URL}\"}" "$SLACK_WEBHOOK_URL"
-
-          # Rich 附件訊息（Block Kit）
-          PAYLOAD=$(cat << EOF
+          PAYLOAD=$(cat <<EOF
           {
             "attachments": [{
               "color": "${COLOR}",
-              "blocks": [
-                { "type": "section",
-                  "text": { "type": "mrkdwn",
-                    "text": "${EMOJI} *${TITLE}*\n*Repo*: ${REPO}\n*Event*: ${EVENT} (\`${REF}\`)\n*By*: ${ACTOR}\n*Run*: <${RUN_URL}|Open workflow>" }
+              "blocks": [{
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "${EMOJI} *${TITLE}*\\n*Repo*: ${REPO}\\n*Event*: ${EVENT} (${REF})\\n*By*: ${ACTOR}\\n*Run*: <${RUN_URL}|Open workflow>"
                 }
-              ]
+              }]
             }]
           }
           EOF
           )
-          curl -s -X POST -H 'Content-type: application/json' --data "$PAYLOAD" "$SLACK_WEBHOOK_URL"
+          curl -sS -X POST -H 'Content-type: application/json' --data "$PAYLOAD" "$SLACK_WEBHOOK_URL"

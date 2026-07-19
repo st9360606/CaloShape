@@ -2,87 +2,77 @@ name: Android Release
 
 on:
   push:
-    tags:
-      - "v*"
+    tags: ["v*"]
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   build-release:
+    name: Build signed prod release
     runs-on: ubuntu-latest
     timeout-minutes: 30
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Java 21 (Temurin)
+      - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '21'
+          distribution: temurin
+          java-version: "21"
+          cache: gradle
 
-      - name: Make gradlew executable
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Make Gradle wrapper executable
         run: chmod +x ./gradlew
 
-      - name: Gradle cache
-        uses: gradle/actions/setup-gradle@v3
-
-      # ★ 把檔案還原到 repo 根的 keystore/，對齊 storeFile=keystore/caloshape-release.jks
-      - name: Restore keystore & props
+      - name: Restore release signing material
         shell: bash
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: |
           set -euo pipefail
+          for secret_name in ANDROID_KEYSTORE_BASE64 ANDROID_KEYSTORE_PASSWORD ANDROID_KEY_ALIAS ANDROID_KEY_PASSWORD; do
+            if [ -z "${!secret_name}" ]; then
+              echo "::error::Required GitHub Actions secret $secret_name is not configured."
+              exit 1
+            fi
+          done
           mkdir -p keystore
-          printf "%s" "${{ secrets.KEYSTORE_PROPERTIES }}" > keystore/keystore.properties
-          printf "%s" "${{ secrets.KEYSTORE_JKS_BASE64 }}" | base64 -d > keystore/caloshape-release.jks
-          echo "== storeFile in props ==" && grep -E '^storeFile=' keystore/keystore.properties || true
-          test -f keystore/caloshape-release.jks || (echo "::error::JKS missing at keystore/caloshape-release.jks"; ls -la keystore; exit 1)
+          printf "%s" "$ANDROID_KEYSTORE_BASE64" | base64 -d > keystore/caloshape-release.jks
+          cat > keystore/keystore.properties <<EOF
+          storeFile=keystore/caloshape-release.jks
+          storePassword=${ANDROID_KEYSTORE_PASSWORD}
+          keyAlias=${ANDROID_KEY_ALIAS}
+          keyPassword=${ANDROID_KEY_PASSWORD}
+          EOF
+          test -s keystore/caloshape-release.jks
 
-      - name: Run prod release unit tests and lint
-        run: |
-          ./gradlew :app:testProdReleaseUnitTest :app:lintProdRelease --stacktrace
+      - name: Run prod checks and build signed APK and AAB
+        run: ./gradlew --stacktrace :app:clean :app:testProdReleaseUnitTest :app:lintProdRelease :app:assembleProdRelease :app:bundleProdRelease
 
-      - name: Build prodRelease (APK & AAB)
-        run: |
-          ./gradlew :app:clean :app:assembleProdRelease :app:bundleProdRelease --stacktrace
-
-      # 可選的驗簽：找得到 apksigner 就印證書；找不到不會讓 job fail
-      - name: Verify signatures & print certs
+      - name: Verify signatures
         shell: bash
         run: |
           set -euo pipefail
           APK=$(ls app/build/outputs/apk/prod/release/*.apk | head -n 1)
           AAB=$(ls app/build/outputs/bundle/prodRelease/*.aab | head -n 1)
-
-          find_apksigner() {
-            if command -v apksigner >/dev/null 2>&1; then command -v apksigner; return; fi
-            CANDS=()
-            [ -n "${ANDROID_SDK_ROOT:-}" ] && CANDS+=("$ANDROID_SDK_ROOT")
-            [ -n "${ANDROID_HOME:-}" ] && CANDS+=("$ANDROID_HOME")
-            [ -d "$HOME/Android/Sdk" ] && CANDS+=("$HOME/Android/Sdk")
-            [ -d "/usr/local/lib/android/sdk" ] && CANDS+=("/usr/local/lib/android/sdk")
-            [ -d "/opt/android-sdk" ] && CANDS+=("/opt/android-sdk")
-            for SDK in "${CANDS[@]}"; do
-              C=$(find "$SDK/build-tools" -type f -name apksigner 2>/dev/null | sort | tail -n 1 || true)
-              [ -n "$C" ] && echo "$C" && return
-            done
-          }
-
-          APKSIGNER="$(find_apksigner || true)"
-          if [ -n "$APKSIGNER" ]; then
-            echo "== APK sign info =="
-            if ! "$APKSIGNER" verify --print-certs "$APK"; then
-              echo "::warning::APK signature verification failed. Listing META-INF:"
-              unzip -l "$APK" | sed -n '1,10p;/META-INF/p' || true
-            fi
+          keytool -printcert -jarfile "$AAB"
+          if command -v apksigner >/dev/null 2>&1; then
+            apksigner verify --print-certs "$APK"
           else
-            echo "::warning::apksigner not found. Skipping APK cert print."
+            echo "::warning::apksigner was not found; APK signature verification was skipped."
           fi
 
-          echo "== AAB sign info =="
-          keytool -printcert -jarfile "$AAB" || echo "::warning::keytool printcert failed for AAB."
-
-      - name: Upload prodRelease artifacts
+      - name: Upload signed prodRelease artifacts
+        if: ${{ success() }}
         uses: actions/upload-artifact@v4
         with:
           name: prodRelease
@@ -91,4 +81,17 @@ jobs:
             app/build/outputs/bundle/prodRelease/*.aab
             app/build/outputs/mapping/**/mapping.txt
           if-no-files-found: error
-          retention-days: 14
+          retention-days: 30
+
+      - name: Upload prodRelease test and lint reports
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: prodRelease-reports
+          path: |
+            app/build/test-results/**/*.xml
+            app/build/reports/tests/**
+            app/build/reports/lint-results-*.html
+            app/build/reports/lint-results-*.xml
+          if-no-files-found: warn
+          retention-days: 30
