@@ -186,7 +186,7 @@ object HomeCardStyles {
         val Shape = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp)
 
         @Composable
-        fun container(): Color = if (HomeCardStyles.isDark()) Color(0xFF211D2A) else Container
+        fun container(): Color = if (HomeCardStyles.isDark()) Color(0xFF282331) else Container
 
         @Composable
         fun content(): Color = if (HomeCardStyles.isDark()) Color(0xFFF7F5FF) else Content
