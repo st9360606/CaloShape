@@ -75,14 +75,14 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="34dp"
+            android:baselineAligned="false"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <FrameLayout
                 android:layout_width="34dp"
-                android:layout_height="34dp"
-                android:layout_marginTop="2dp">
+                android:layout_height="34dp">
 
                 <ImageView
                     android:id="@+id/widget_protein_ring"
@@ -104,17 +104,18 @@
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="34dp"
                 android:layout_marginStart="10dp"
                 android:layout_weight="1"
+                android:gravity="center_vertical"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/widget_protein_value"
-                    android:layout_width="46dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="56dp"
+                    android:layout_height="19dp"
                     android:fontFamily="sans-serif"
-                    android:gravity="start"
+                    android:gravity="start|center_vertical"
                     android:includeFontPadding="false"
                     android:text="@string/widget_preview_protein"
                     android:textColor="#FF111114"
@@ -123,11 +124,12 @@
 
                 <TextView
                     android:id="@+id/widget_protein_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"
                     android:layout_marginTop="1dp"
                     android:ellipsize="end"
                     android:fontFamily="sans-serif-medium"
+                    android:gravity="start|center_vertical"
                     android:includeFontPadding="false"
                     android:maxLines="1"
                     android:text="@string/widget_protein_left"
@@ -138,15 +140,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="14dp"
+            android:baselineAligned="false"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <FrameLayout
                 android:layout_width="34dp"
-                android:layout_height="34dp"
-                android:layout_marginTop="2dp">
+                android:layout_height="34dp">
 
                 <ImageView
                     android:id="@+id/widget_carbs_ring"
@@ -168,17 +170,18 @@
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="34dp"
                 android:layout_marginStart="10dp"
                 android:layout_weight="1"
+                android:gravity="center_vertical"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/widget_carbs_value"
-                    android:layout_width="46dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="56dp"
+                    android:layout_height="19dp"
                     android:fontFamily="sans-serif"
-                    android:gravity="start"
+                    android:gravity="start|center_vertical"
                     android:includeFontPadding="false"
                     android:text="@string/widget_preview_carbs"
                     android:textColor="#FF111114"
@@ -187,11 +190,12 @@
 
                 <TextView
                     android:id="@+id/widget_carbs_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"
                     android:layout_marginTop="1dp"
                     android:ellipsize="end"
                     android:fontFamily="sans-serif-medium"
+                    android:gravity="start|center_vertical"
                     android:includeFontPadding="false"
                     android:maxLines="1"
                     android:text="@string/widget_carbs_left"
@@ -202,15 +206,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="14dp"
+            android:baselineAligned="false"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <FrameLayout
                 android:layout_width="34dp"
-                android:layout_height="34dp"
-                android:layout_marginTop="2dp">
+                android:layout_height="34dp">
 
                 <ImageView
                     android:id="@+id/widget_fats_ring"
@@ -226,23 +230,24 @@
                     android:layout_gravity="center"
                     android:background="@drawable/widget_circle_fats_bg"
                     android:contentDescription="@null"
-                    android:padding="4dp"
+                    android:padding="3dp"
                     android:src="@drawable/ic_widget_fats" />
             </FrameLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="34dp"
                 android:layout_marginStart="10dp"
                 android:layout_weight="1"
+                android:gravity="center_vertical"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/widget_fats_value"
-                    android:layout_width="46dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="56dp"
+                    android:layout_height="19dp"
                     android:fontFamily="sans-serif"
-                    android:gravity="start"
+                    android:gravity="start|center_vertical"
                     android:includeFontPadding="false"
                     android:text="@string/widget_preview_fats"
                     android:textColor="#FF111114"
@@ -251,11 +256,12 @@
 
                 <TextView
                     android:id="@+id/widget_fats_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"
                     android:layout_marginTop="1dp"
                     android:ellipsize="end"
                     android:fontFamily="sans-serif-medium"
+                    android:gravity="start|center_vertical"
                     android:includeFontPadding="false"
                     android:maxLines="1"
                     android:text="@string/widget_fats_left"

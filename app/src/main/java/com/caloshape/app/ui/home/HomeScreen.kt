@@ -725,8 +725,8 @@ fun HomeScreen(
                     onWorkoutCardClick = { onOpenActivityHistory() }
                 )
                 // ===== Fourth block: 最近上傳
-                val recentSectionTopGap = 20.dp
-                val recentSectionTitleBottomGap = 16.dp
+                val recentSectionTopGap = 16.dp
+                val recentSectionTitleBottomGap = 14.dp
                 val recentSectionTitleStart = 2.dp
 
                 Spacer(Modifier.height(recentSectionTopGap))
@@ -737,7 +737,7 @@ fun HomeScreen(
                             text = stringResource(R.string.recently_uploaded),
                             style = TextStyle(
                                 fontSize = 22.sp,
-                                lineHeight = 30.sp,
+                                lineHeight = 27.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = HomeCardStyles.Text.primary()
                             ),
